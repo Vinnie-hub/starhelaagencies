@@ -497,7 +497,7 @@
         font-size: 0.65rem;
       }
 
-      /* ===== DISCLAIMER POPUP (slide-down from top) ===== */
+      /* ===== DISCLAIMER POPUP ===== */
       #disclaimerPopup {
         position: fixed;
         top: 0;
@@ -617,7 +617,6 @@
         color: #f43f5e;
         border-color: rgba(244, 63, 94, 0.4);
       }
-      /* Progress bar inside disclaimer */
       .dp-timer-bar {
         height: 2px;
         background: rgba(255, 255, 255, 0.08);
@@ -641,13 +640,13 @@
         }
       }
 
-      /* ===== OFFERWALL MODAL — GEO-AWARE ===== */
+      /* ===== OFFERWALL MODAL — COMPACT & REFINED ===== */
       #offerwallOv {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.92);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
+        background: rgba(0, 0, 0, 0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         z-index: 10020;
         display: none;
         align-items: center;
@@ -669,18 +668,18 @@
       .ow-modal {
         background: linear-gradient(160deg, #0e0c25 0%, #130f2e 100%);
         border: 1px solid rgba(139, 92, 246, 0.3);
-        border-radius: 28px;
+        border-radius: 22px;
         width: 100%;
-        max-width: 480px;
+        max-width: 400px;
         overflow: hidden;
         box-shadow:
-          0 40px 80px rgba(0, 0, 0, 0.7),
-          0 0 0 1px rgba(139, 92, 246, 0.15) inset;
-        animation: owPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+          0 32px 64px rgba(0, 0, 0, 0.7),
+          0 0 0 1px rgba(139, 92, 246, 0.12) inset;
+        animation: owPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
       @keyframes owPop {
         from {
-          transform: scale(0.88) translateY(24px);
+          transform: scale(0.9) translateY(20px);
           opacity: 0;
         }
         to {
@@ -692,11 +691,11 @@
         background: linear-gradient(
           145deg,
           #3b0f8a 0%,
-          #5b21b6 40%,
-          #7c3aed 80%,
+          #5b21b6 45%,
+          #7c3aed 85%,
           #8b5cf6 100%
         );
-        padding: 32px 28px 28px;
+        padding: 22px 22px 18px;
         position: relative;
         overflow: hidden;
       }
@@ -704,38 +703,38 @@
         position: absolute;
         inset: 0;
         background-image:
-          linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-        background-size: 28px 28px;
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 24px 24px;
         pointer-events: none;
       }
       .ow-header-orb {
         position: absolute;
-        right: -50px;
-        top: -50px;
-        width: 200px;
-        height: 200px;
+        right: -40px;
+        top: -40px;
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          rgba(255, 255, 255, 0.18),
+          rgba(255, 255, 255, 0.16),
           transparent 70%
         );
-        filter: blur(6px);
+        filter: blur(4px);
         pointer-events: none;
       }
       .ow-close {
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 12px;
+        right: 12px;
         z-index: 5;
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.2);
         color: rgba(255, 255, 255, 0.85);
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -753,117 +752,117 @@
       .ow-eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        gap: 5px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 30px;
-        padding: 4px 14px;
-        font-size: 0.65rem;
+        padding: 3px 11px;
+        font-size: 0.6rem;
         font-weight: 800;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 12px;
+        color: rgba(255, 255, 255, 0.88);
+        margin-bottom: 8px;
       }
       .ow-hd-title {
         font-family: "Outfit", sans-serif;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 800;
         color: #fff;
         line-height: 1.15;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         position: relative;
         z-index: 2;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       }
       .ow-hd-sub {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.78);
         position: relative;
         z-index: 2;
-        line-height: 1.5;
+        line-height: 1.45;
+        margin-bottom: 14px;
       }
-      /* Geo country badge */
       .ow-country-badge {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        background: rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        gap: 7px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 30px;
-        padding: 6px 16px;
-        margin-bottom: 10px;
+        padding: 5px 13px;
+        margin-bottom: 8px;
         backdrop-filter: blur(8px);
         position: relative;
         z-index: 2;
       }
       .ow-country-flag {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       .ow-country-name {
-        font-size: 0.72rem;
+        font-size: 0.68rem;
         font-weight: 800;
         color: #fff;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
       }
       .ow-country-detected {
-        font-size: 0.58rem;
-        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.54rem;
+        color: rgba(255, 255, 255, 0.48);
         font-weight: 600;
       }
       .ow-proof-row {
         display: flex;
-        gap: 10px;
-        margin-top: 18px;
+        gap: 8px;
+        margin-top: 0;
         position: relative;
         z-index: 2;
       }
       .ow-proof-stat {
-        background: rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 14px;
-        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 12px;
+        padding: 8px 10px;
         text-align: center;
         backdrop-filter: blur(8px);
         flex: 1;
       }
       .ow-proof-val {
         font-family: "JetBrains Mono", monospace;
-        font-size: 1rem;
+        font-size: 0.88rem;
         font-weight: 800;
         color: #fff;
       }
       .ow-proof-lbl {
-        font-size: 0.57rem;
-        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.52rem;
+        color: rgba(255, 255, 255, 0.6);
         font-weight: 700;
-        letter-spacing: 0.07em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
-        margin-top: 3px;
+        margin-top: 2px;
       }
       .ow-body {
-        padding: 24px 28px 28px;
+        padding: 18px 20px 20px;
       }
       .ow-fee-box {
         background: linear-gradient(
           135deg,
-          rgba(109, 40, 217, 0.18),
-          rgba(16, 185, 129, 0.08)
+          rgba(109, 40, 217, 0.16),
+          rgba(16, 185, 129, 0.07)
         );
-        border: 1px solid rgba(139, 92, 246, 0.35);
-        border-radius: 18px;
-        padding: 18px 22px;
-        margin-bottom: 22px;
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 14px;
+        padding: 14px 16px;
+        margin-bottom: 14px;
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 13px;
       }
       .ow-fee-icon {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         flex-shrink: 0;
       }
       .ow-fee-label {
-        font-size: 0.72rem;
+        font-size: 0.65rem;
         font-weight: 700;
         color: rgba(224, 215, 255, 0.8);
         text-transform: uppercase;
@@ -872,53 +871,52 @@
       }
       .ow-fee-val {
         font-family: "JetBrains Mono", monospace;
-        font-size: 1.8rem;
+        font-size: 1.55rem;
         font-weight: 800;
         color: #c4b5fd;
         line-height: 1;
         letter-spacing: -1px;
       }
       .ow-fee-sub {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         color: #a5b4fc;
-        margin-top: 4px;
+        margin-top: 3px;
         font-weight: 500;
       }
-      /* Payment method chips per country */
       .ow-payment-chips {
         display: flex;
-        gap: 6px;
+        gap: 5px;
         flex-wrap: wrap;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
       }
       .ow-chip {
         background: rgba(167, 139, 250, 0.1);
         border: 1px solid rgba(167, 139, 250, 0.2);
-        border-radius: 8px;
-        padding: 4px 10px;
-        font-size: 0.65rem;
+        border-radius: 7px;
+        padding: 3px 9px;
+        font-size: 0.62rem;
         font-weight: 700;
         color: #c4b5fd;
       }
       .ow-cta-btn {
         display: flex;
         width: 100%;
-        padding: 18px 12px;
+        padding: 15px 12px;
         background: linear-gradient(90deg, #059669, #10b981);
         color: #fff;
         border: none;
-        border-radius: 60px;
+        border-radius: 50px;
         font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 1.05rem;
+        font-size: 0.95rem;
         font-weight: 800;
         cursor: pointer;
         transition: all 0.25s ease;
-        box-shadow: 0 10px 28px rgba(16, 185, 129, 0.4);
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.38);
         text-align: center;
         letter-spacing: 0.02em;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
         position: relative;
         overflow: hidden;
       }
@@ -932,7 +930,7 @@
         background: linear-gradient(
           90deg,
           transparent,
-          rgba(255, 255, 255, 0.22),
+          rgba(255, 255, 255, 0.2),
           transparent
         );
         transition: left 0.5s ease;
@@ -941,16 +939,15 @@
         left: 100%;
       }
       .ow-cta-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 16px 36px rgba(16, 185, 129, 0.55);
-        background: linear-gradient(90deg, #047857, #059669);
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(16, 185, 129, 0.5);
       }
       .ow-cta-btn:active {
         transform: translateY(1px);
         transition: 0.05s;
       }
       .ow-cta-arrow {
-        font-size: 1.1rem;
+        font-size: 1rem;
         transition: transform 0.2s;
       }
       .ow-cta-btn:hover .ow-cta-arrow {
@@ -959,26 +956,25 @@
       .ow-trust-strip {
         display: flex;
         justify-content: center;
-        gap: 14px;
-        margin-top: 14px;
+        gap: 12px;
+        margin-top: 11px;
         flex-wrap: wrap;
       }
       .ow-trust-item {
         display: flex;
         align-items: center;
-        gap: 5px;
-        font-size: 0.65rem;
+        gap: 4px;
+        font-size: 0.6rem;
         color: #9ca3af;
         font-weight: 600;
       }
-      /* Loading state for geo */
       .ow-geo-loading {
         display: flex;
         align-items: center;
-        gap: 8px;
-        font-size: 0.72rem;
+        gap: 7px;
+        font-size: 0.68rem;
         color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         position: relative;
         z-index: 2;
       }
@@ -990,7 +986,7 @@
         animation: blink 1.2s ease-in-out infinite;
       }
 
-      /* ===== COUNTRIES MOBILE SECTION ===== */
+      /* ===== COUNTRIES SECTION — FULLY REVISED ===== */
       .countries-mobile-panel {
         display: none;
       }
@@ -1061,39 +1057,255 @@
         transform: translateX(3px);
         color: var(--brand-lt);
       }
-      .countries-collapse-btn {
-        width: 100%;
+
+      /* Countries cards grid — unified layout for all screen sizes */
+      .countries-unified-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      @media (max-width: 1200px) {
+        .countries-unified-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .countries-unified-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+      }
+      @media (max-width: 480px) {
+        .countries-unified-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 7px;
+        }
+      }
+      @media (max-width: 360px) {
+        .countries-unified-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .country-card {
+        background: var(--surface);
+        border: 1px solid var(--border-2);
+        border-radius: var(--radius-sm);
+        padding: 12px 11px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 10px 14px;
-        background: var(--bg-3);
-        border: 1px solid var(--border-2);
-        border-radius: 12px;
+        gap: 9px;
+        transition:
+          transform var(--t),
+          border-color var(--t),
+          box-shadow var(--t),
+          background var(--t);
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        overflow: hidden;
+      }
+      .country-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(124, 58, 237, 0.07),
+          transparent
+        );
+        opacity: 0;
+        transition: opacity var(--t);
+        pointer-events: none;
+      }
+      .country-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(167, 139, 250, 0.3);
+        box-shadow: var(--shadow);
+        background: var(--surface-2);
+      }
+      .country-card:hover::after {
+        opacity: 1;
+      }
+      .country-card.featured {
+        border-color: rgba(167, 139, 250, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(109, 40, 217, 0.1),
+          rgba(124, 58, 237, 0.04)
+        );
+      }
+      .cc-flag {
+        font-size: 1.45rem;
+        flex-shrink: 0;
+        line-height: 1;
+      }
+      .cc-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .cc-name {
+        font-size: 0.76rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--txt);
+      }
+      .cc-label {
+        font-size: 0.55rem;
+        font-weight: 600;
+        color: var(--txt-3);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-top: 1px;
+      }
+      .cc-fee {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--brand-lt);
+        flex-shrink: 0;
+        text-align: right;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+      .cc-arrow {
         font-size: 0.75rem;
+        color: var(--txt-3);
+        flex-shrink: 0;
+        transition:
+          transform var(--t),
+          color var(--t);
+        margin-left: 2px;
+      }
+      .country-card:hover .cc-arrow {
+        transform: translateX(3px);
+        color: var(--brand-lt);
+      }
+
+      /* Countries section header */
+      .countries-hero {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px 24px 20px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 14px;
+        transition: background var(--t-slow);
+      }
+      .countries-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 65% 80% at 95% 10%,
+            rgba(124, 58, 237, 0.14),
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 40% 60% at 5% 95%,
+            rgba(124, 58, 237, 0.07),
+            transparent 60%
+          );
+        pointer-events: none;
+      }
+      .ch-inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .ch-text {
+        flex: 1;
+        min-width: 0;
+      }
+      .ch-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--brand-lt);
+        background: rgba(167, 139, 250, 0.1);
+        border: 1px solid rgba(167, 139, 250, 0.2);
+        padding: 4px 12px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+      }
+      .ch-title {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 6px;
+      }
+      .ch-sub {
+        font-size: 0.79rem;
+        color: var(--txt-2);
+        font-weight: 400;
+        line-height: 1.55;
+        max-width: 440px;
+        margin-bottom: 12px;
+      }
+      .ch-perks {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+      }
+      .ch-perk {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.67rem;
         font-weight: 700;
         color: var(--txt-2);
-        cursor: pointer;
-        transition: all 0.2s;
-        margin-bottom: 4px;
-      }
-      .countries-collapse-btn:hover {
         background: var(--bg-4);
+        border: 1px solid var(--border-2);
+        padding: 4px 10px;
+        border-radius: 7px;
+        transition: border-color var(--t);
       }
-      .countries-collapse-icon {
-        transition: transform 0.3s;
-        font-size: 0.8rem;
+      .ch-perk:hover {
+        border-color: var(--brand-lt);
       }
-      .countries-collapse-btn.open .countries-collapse-icon {
-        transform: rotate(180deg);
+      .ch-badge {
+        background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+        border-radius: 14px;
+        padding: 16px 18px;
+        text-align: center;
+        flex-shrink: 0;
       }
-      .countries-collapsible {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      .chb-icon {
+        font-size: 1.8rem;
+        margin-bottom: 3px;
       }
-      .countries-collapsible.open {
-        max-height: 600px;
+      .chb-val {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: #fff;
+      }
+      .chb-label {
+        font-size: 0.57rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 2px;
+      }
+      @media (max-width: 480px) {
+        .ch-badge {
+          display: none;
+        }
+        .ch-title {
+          font-size: 1.1rem;
+        }
       }
 
       /* ===== FLOATING WA BUTTON ===== */
@@ -2220,7 +2432,7 @@
         }
       }
       .act-foot {
-        padding: 14px 14px 14px;
+        padding: 14px;
         display: flex;
         flex-direction: column;
         gap: 6px;
@@ -2254,7 +2466,7 @@
         margin-top: 10px;
       }
       .act-btn {
-        padding: 10px 10px;
+        padding: 10px;
         border-radius: 30px;
         font-size: 0.7rem;
         font-weight: 800;
@@ -2343,226 +2555,137 @@
         }
       }
 
-      /* ===== PRICING ===== */
-      .pricing-hero {
-        background: var(--surface);
-        border: 1px solid var(--border);
+      /* ===== WHY JOIN ===== */
+      .why-section {
+        background: linear-gradient(
+          140deg,
+          rgba(109, 40, 217, 0.08),
+          rgba(124, 58, 237, 0.04)
+        );
+        border: 1px solid rgba(167, 139, 250, 0.15);
         border-radius: var(--radius);
         padding: 28px;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 16px;
         transition: background var(--t-slow);
       }
-      .pricing-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(
-            ellipse 65% 80% at 95% 10%,
-            rgba(124, 58, 237, 0.14),
-            transparent 60%
-          ),
-          radial-gradient(
-            ellipse 40% 60% at 5% 95%,
-            rgba(124, 58, 237, 0.07),
-            transparent 60%
-          );
-        pointer-events: none;
-      }
-      .ph-inner {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        gap: 24px;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-      .ph-text {
-        flex: 1;
-        min-width: 200px;
-      }
-      .ph-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 0.6rem;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--brand-lt);
-        background: rgba(167, 139, 250, 0.1);
-        border: 1px solid rgba(167, 139, 250, 0.2);
-        padding: 4px 12px;
-        border-radius: 8px;
-        margin-bottom: 10px;
-      }
-      .ph-title {
+      .why-title {
         font-family: "Outfit", sans-serif;
-        font-size: 1.45rem;
+        font-size: 1.2rem;
         font-weight: 800;
-        line-height: 1.15;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
-      .ph-sub {
-        font-size: 0.82rem;
+      .why-sub {
+        font-size: 0.8rem;
         color: var(--txt-2);
-        font-weight: 400;
-        line-height: 1.6;
-        max-width: 420px;
+        margin-bottom: 22px;
+        line-height: 1.5;
       }
-      .ph-perks {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 14px;
-      }
-      .ph-perk {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 0.69rem;
-        font-weight: 700;
-        color: var(--txt-2);
-        background: var(--bg-4);
-        border: 1px solid var(--border-2);
-        padding: 5px 11px;
-        border-radius: 8px;
-        transition: border-color var(--t);
-      }
-      .ph-perk:hover {
-        border-color: var(--brand-lt);
-      }
-      .ph-badge {
-        background: linear-gradient(135deg, #5b21b6, #8b5cf6);
-        border-radius: 14px;
-        padding: 18px 22px;
-        text-align: center;
-        flex-shrink: 0;
-      }
-      .phb-icon {
-        font-size: 2rem;
-        margin-bottom: 4px;
-      }
-      .phb-val {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 1rem;
-        font-weight: 800;
-        color: #fff;
-      }
-      .phb-label {
-        font-size: 0.6rem;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.65);
-        margin-top: 2px;
-      }
-      .pricing-grid {
+      .why-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
       }
-      .price-card {
+      .why-card {
         background: var(--surface);
         border: 1px solid var(--border-2);
         border-radius: var(--radius-sm);
-        padding: 14px 12px;
+        padding: 16px;
         display: flex;
-        align-items: center;
-        gap: 10px;
+        gap: 12px;
+        align-items: flex-start;
         transition:
-          transform var(--t),
           border-color var(--t),
-          box-shadow var(--t);
-        cursor: pointer;
+          background var(--t-slow);
       }
-      .price-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(167, 139, 250, 0.3);
-        box-shadow: var(--shadow);
-      }
-      .price-card.featured {
+      .why-card:hover {
         border-color: rgba(167, 139, 250, 0.3);
         background: var(--surface-2);
       }
-      .price-flag {
+      .why-icon {
         font-size: 1.5rem;
         flex-shrink: 0;
+        margin-top: 2px;
       }
-      .price-country {
-        font-size: 0.76rem;
-        font-weight: 700;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-bottom: 1px;
+      .why-card-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        margin-bottom: 4px;
       }
-      .price-label {
-        font-size: 0.57rem;
-        font-weight: 600;
-        color: var(--txt-3);
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
+      .why-card-desc {
+        font-size: 0.7rem;
+        color: var(--txt-2);
+        line-height: 1.5;
       }
-      .price-fee {
-        font-family: "JetBrains Mono", monospace;
+
+      /* ===== HOW IT WORKS ===== */
+      .how-section {
+        background: var(--surface);
+        border: 1px solid var(--border-2);
+        border-radius: var(--radius);
+        padding: 28px;
+        transition: background var(--t-slow);
+      }
+      .how-title {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .how-sub {
         font-size: 0.8rem;
-        font-weight: 700;
-        color: var(--brand-lt);
-        flex-shrink: 0;
-        text-align: right;
-        margin-left: auto;
+        color: var(--txt-2);
+        margin-bottom: 24px;
+        line-height: 1.5;
       }
-      .pricing-guarantee {
+      .how-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        position: relative;
+      }
+      .how-steps::before {
+        content: "";
+        position: absolute;
+        top: 28px;
+        left: calc(16.66% + 8px);
+        right: calc(16.66% + 8px);
+        height: 2px;
+        background: linear-gradient(90deg, var(--brand), var(--brand-lt));
+        border-radius: 2px;
+        z-index: 0;
+      }
+      .how-step {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .how-num {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #6d28d9, #a78bfa);
         display: flex;
         align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
-        background: linear-gradient(
-          135deg,
-          rgba(16, 185, 129, 0.07),
-          rgba(124, 58, 237, 0.05)
-        );
-        border: 1px solid rgba(16, 185, 129, 0.2);
-        border-radius: var(--radius-sm);
-        padding: 14px 18px;
-        margin-top: 12px;
-      }
-      .pg-icon {
-        font-size: 1.4rem;
-        flex-shrink: 0;
-      }
-      .pg-text {
-        flex: 1;
-        min-width: 160px;
-      }
-      .pg-title {
-        font-size: 0.82rem;
-        font-weight: 700;
-        margin-bottom: 3px;
-      }
-      .pg-sub {
-        font-size: 0.68rem;
-        color: var(--txt-2);
-        line-height: 1.45;
-      }
-      .pg-cta {
-        background: linear-gradient(90deg, #059669, #10b981);
+        justify-content: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 1.1rem;
+        font-weight: 800;
         color: #fff;
-        border-radius: 10px;
-        padding: 9px 18px;
-        font-size: 0.76rem;
-        font-weight: 700;
-        font-family: "Plus Jakarta Sans", sans-serif;
-        cursor: pointer;
-        transition: all var(--t);
-        white-space: nowrap;
-        display: inline-block;
-        border: none;
+        margin: 0 auto 14px;
+        box-shadow: 0 4px 18px rgba(109, 40, 217, 0.35);
       }
-      .pg-cta:hover {
-        transform: scale(1.04);
-        box-shadow: 0 5px 18px rgba(16, 185, 129, 0.3);
+      .how-step-icon {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+      .how-step-title {
+        font-size: 0.82rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .how-step-desc {
+        font-size: 0.7rem;
+        color: var(--txt-2);
+        line-height: 1.5;
       }
 
       /* ===== TRANSACTIONS ===== */
@@ -3081,139 +3204,6 @@
         border-radius: 10px;
       }
 
-      /* ===== HOW IT WORKS ===== */
-      .how-section {
-        background: var(--surface);
-        border: 1px solid var(--border-2);
-        border-radius: var(--radius);
-        padding: 28px;
-        transition: background var(--t-slow);
-      }
-      .how-title {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 800;
-        margin-bottom: 6px;
-      }
-      .how-sub {
-        font-size: 0.8rem;
-        color: var(--txt-2);
-        margin-bottom: 24px;
-        line-height: 1.5;
-      }
-      .how-steps {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        position: relative;
-      }
-      .how-steps::before {
-        content: "";
-        position: absolute;
-        top: 28px;
-        left: calc(16.66% + 8px);
-        right: calc(16.66% + 8px);
-        height: 2px;
-        background: linear-gradient(90deg, var(--brand), var(--brand-lt));
-        border-radius: 2px;
-        z-index: 0;
-      }
-      .how-step {
-        text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-      .how-num {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #6d28d9, #a78bfa);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 1.1rem;
-        font-weight: 800;
-        color: #fff;
-        margin: 0 auto 14px;
-        box-shadow: 0 4px 18px rgba(109, 40, 217, 0.35);
-      }
-      .how-step-icon {
-        font-size: 1.5rem;
-        margin-bottom: 8px;
-      }
-      .how-step-title {
-        font-size: 0.82rem;
-        font-weight: 800;
-        margin-bottom: 6px;
-      }
-      .how-step-desc {
-        font-size: 0.7rem;
-        color: var(--txt-2);
-        line-height: 1.5;
-      }
-
-      /* ===== WHY JOIN ===== */
-      .why-section {
-        background: linear-gradient(
-          140deg,
-          rgba(109, 40, 217, 0.08),
-          rgba(124, 58, 237, 0.04)
-        );
-        border: 1px solid rgba(167, 139, 250, 0.15);
-        border-radius: var(--radius);
-        padding: 28px;
-        transition: background var(--t-slow);
-      }
-      .why-title {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 800;
-        margin-bottom: 6px;
-      }
-      .why-sub {
-        font-size: 0.8rem;
-        color: var(--txt-2);
-        margin-bottom: 22px;
-        line-height: 1.5;
-      }
-      .why-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-      .why-card {
-        background: var(--surface);
-        border: 1px solid var(--border-2);
-        border-radius: var(--radius-sm);
-        padding: 16px;
-        display: flex;
-        gap: 12px;
-        align-items: flex-start;
-        transition:
-          border-color var(--t),
-          background var(--t-slow);
-      }
-      .why-card:hover {
-        border-color: rgba(167, 139, 250, 0.3);
-        background: var(--surface-2);
-      }
-      .why-icon {
-        font-size: 1.5rem;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-      .why-card-title {
-        font-size: 0.82rem;
-        font-weight: 800;
-        margin-bottom: 4px;
-      }
-      .why-card-desc {
-        font-size: 0.7rem;
-        color: var(--txt-2);
-        line-height: 1.5;
-      }
-
       /* ===== FAQ ===== */
       .faq-section {
         background: var(--surface);
@@ -3364,6 +3354,59 @@
         margin-top: 14px;
         position: relative;
         z-index: 2;
+      }
+
+      /* ===== COUNTRIES GUARANTEE ===== */
+      .countries-guarantee {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.07),
+          rgba(124, 58, 237, 0.05)
+        );
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: var(--radius-sm);
+        padding: 14px 18px;
+        margin-top: 12px;
+      }
+      .pg-icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+      }
+      .pg-text {
+        flex: 1;
+        min-width: 160px;
+      }
+      .pg-title {
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .pg-sub {
+        font-size: 0.68rem;
+        color: var(--txt-2);
+        line-height: 1.45;
+      }
+      .pg-cta {
+        background: linear-gradient(90deg, #059669, #10b981);
+        color: #fff;
+        border-radius: 10px;
+        padding: 9px 18px;
+        font-size: 0.76rem;
+        font-weight: 700;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        cursor: pointer;
+        transition: all var(--t);
+        white-space: nowrap;
+        display: inline-block;
+        border: none;
+      }
+      .pg-cta:hover {
+        transform: scale(1.04);
+        box-shadow: 0 5px 18px rgba(16, 185, 129, 0.3);
       }
 
       /* ===== FOOTER ===== */
@@ -3669,9 +3712,6 @@
         .act-grid {
           grid-template-columns: repeat(2, 1fr);
         }
-        .pricing-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
         .footer-grid {
           grid-template-columns: 1fr 1fr;
         }
@@ -3695,9 +3735,6 @@
         }
         .payout-strip {
           grid-column: 1/-1;
-        }
-        .pricing-grid {
-          grid-template-columns: repeat(2, 1fr);
         }
         .stat-row {
           grid-template-columns: repeat(3, 1fr);
@@ -3755,16 +3792,6 @@
           grid-template-columns: 1fr 1fr;
           gap: 11px;
         }
-        .pricing-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 9px;
-        }
-        .ph-badge {
-          display: none;
-        }
-        .ph-title {
-          font-size: 1.2rem;
-        }
         .mobile-nav {
           display: block;
         }
@@ -3811,14 +3838,6 @@
           grid-template-columns: 1fr;
           gap: 6px;
         }
-        .pricing-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 8px;
-        }
-        .price-card {
-          padding: 11px 10px;
-          gap: 8px;
-        }
         .sc-val {
           font-size: 1.35rem;
         }
@@ -3849,9 +3868,6 @@
         .wc-stats {
           grid-template-columns: 1fr;
         }
-        .pricing-grid {
-          grid-template-columns: 1fr;
-        }
         .goal-labels {
           display: none;
         }
@@ -3869,7 +3885,6 @@
     </style>
   </head>
   <body>
-    <!-- PAGE LOADER -->
     <div id="pageLoader" role="status" aria-label="Loading Starhela">
       <div class="loader-star"></div>
       <div class="loader-brand">STARHELA</div>
@@ -3877,12 +3892,10 @@
       <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     </div>
 
-    <!-- CLICK LOADER -->
     <div id="clickLoader" aria-hidden="true">
       <div class="cl-spinner"></div>
     </div>
 
-    <!-- PAGE TRANSITION -->
     <div id="page-transition" aria-hidden="true">
       <div class="pt-panel pt-panel-1"></div>
       <div class="pt-panel pt-panel-2"></div>
@@ -3901,7 +3914,6 @@
       </div>
     </div>
 
-    <!-- ===== DISCLAIMER SLIDE-DOWN POPUP (shows after 30s) ===== -->
     <div
       id="disclaimerPopup"
       role="dialog"
@@ -3942,7 +3954,7 @@
       </div>
     </div>
 
-    <!-- ===== GEO-AWARE OFFERWALL MODAL ===== -->
+    <!-- ===== COMPACT GEO-AWARE OFFERWALL MODAL ===== -->
     <div
       id="offerwallOv"
       role="dialog"
@@ -3954,12 +3966,10 @@
           <div class="ow-header-grid"></div>
           <div class="ow-header-orb"></div>
           <button class="ow-close" id="owClose" aria-label="Close">✕</button>
-          <!-- Geo loading state -->
           <div class="ow-geo-loading" id="owGeoLoading">
             <div class="ow-geo-dot"></div>
-            <span>Detecting your location…</span>
+            <span>Detecting location…</span>
           </div>
-          <!-- Country badge (filled by JS) -->
           <div
             class="ow-country-badge"
             id="owCountryBadge"
@@ -3983,7 +3993,7 @@
           <div class="ow-proof-row">
             <div class="ow-proof-stat">
               <div class="ow-proof-val">120K+</div>
-              <div class="ow-proof-lbl">Active Members</div>
+              <div class="ow-proof-lbl">Members</div>
             </div>
             <div class="ow-proof-stat">
               <div class="ow-proof-val">$2.4M+</div>
@@ -3991,7 +4001,7 @@
             </div>
             <div class="ow-proof-stat">
               <div class="ow-proof-val">12+</div>
-              <div class="ow-proof-lbl">Earning Tasks</div>
+              <div class="ow-proof-lbl">Tasks</div>
             </div>
           </div>
         </div>
@@ -4008,7 +4018,6 @@
               </div>
             </div>
           </div>
-          <!-- Payment method chips -->
           <div class="ow-payment-chips" id="owPaymentChips">
             <span class="ow-chip">📱 M-Pesa</span>
             <span class="ow-chip">🏦 Bank Transfer</span>
@@ -4022,18 +4031,15 @@
             🚀 Register on Starhela Now <span class="ow-cta-arrow">→</span>
           </button>
           <div class="ow-trust-strip">
-            <div class="ow-trust-item">🔒 Secure Payment</div>
+            <div class="ow-trust-item">🔒 Secure</div>
             <div class="ow-trust-item">⚡ Instant Access</div>
-            <div class="ow-trust-item" id="owTrustPayment">
-              📱 M-Pesa Supported
-            </div>
-            <div class="ow-trust-item">🛡️ Legit Platform</div>
+            <div class="ow-trust-item" id="owTrustPayment">📱 M-Pesa</div>
+            <div class="ow-trust-item">🛡️ Legit</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- FLOATING WA BUTTON -->
     <div class="float-wa-wrap">
       <span class="float-wa-label">Chat with Agent</span>
       <a
@@ -4048,7 +4054,6 @@
 
     <div class="overlay" id="overlay"></div>
 
-    <!-- ANNOUNCEMENT BAR -->
     <div class="announce-bar go-register" role="banner">
       <span>🔥 LIMITED SLOTS</span>
       Join 120,000+ earners across Africa — Register on Starhela today &amp;
@@ -4056,7 +4061,6 @@
     </div>
 
     <div class="app-shell">
-      <!-- SIDEBAR -->
       <aside
         class="sidebar"
         id="sidebar"
@@ -4112,13 +4116,13 @@
                   >Earning Activities</a
                 >
               </li>
-              <li data-sec="Pricing">
-                <a href="#Pricing"
+              <li data-sec="countries">
+                <a href="#countries"
                   ><svg class="n-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path
-                      d="M20.59 13.41L11 3.83A2 2 0 0 0 9.59 3H4a1 1 0 0 0-1 1v5.59a2 2 0 0 0 .59 1.41l9.59 9.59a2 2 0 0 0 2.83 0l4.58-4.58a2 2 0 0 0 0-2.83zM7.5 8A1.5 1.5 0 1 1 9 6.5 1.5 1.5 0 0 1 7.5 8z"
+                      d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm6.93 6h-3.12a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8zM12 4.07A13.3 13.3 0 0 1 13.74 8h-3.48A13.3 13.3 0 0 1 12 4.07zM4.26 14A8.03 8.03 0 0 1 3.07 10h3.12a15.7 15.7 0 0 0 1.38 3.56A8.03 8.03 0 0 1 4.26 14zm1.81-6H3.07a8.03 8.03 0 0 1 4.5-3.56A15.7 15.7 0 0 0 6.07 8zM12 19.93A13.3 13.3 0 0 1 10.26 16h3.48A13.3 13.3 0 0 1 12 19.93zM14.43 14h-4.86A13.32 13.32 0 0 1 8.07 10h7.86A13.32 13.32 0 0 1 14.43 14zm.5-.44A15.7 15.7 0 0 0 17.81 10h3.12a8.03 8.03 0 0 1-4.5 3.56z"
                     /></svg
-                  >Starhela Pricing</a
+                  >All Supported Countries</a
                 >
               </li>
               <li data-sec="tasks">
@@ -4179,188 +4183,17 @@
               </li>
             </ul>
           </div>
-          <!-- DESKTOP COUNTRIES (hidden on mobile, replaced by collapsible below) -->
           <div class="nav-section countries-desktop">
             <div class="nav-label">Countries</div>
             <ul>
               <li><a href="kenya.html">🇰🇪 Starhela Kenya</a></li>
-              <li>
-                <a href="uganda.html">🇺🇬 Starhela Uganda</a>
-              </li>
-              <li>
-                <a href="nigeria.html">🇳🇬 Starhela Nigeria</a>
-              </li>
-              <li>
-                <a href="tanzania.html">🇹🇿 Starhela Tanzania</a>
-              </li>
+              <li><a href="uganda.html">🇺🇬 Starhela Uganda</a></li>
+              <li><a href="nigeria.html">🇳🇬 Starhela Nigeria</a></li>
+              <li><a href="tanzania.html">🇹🇿 Starhela Tanzania</a></li>
               <li><a href="ghana.html">🇬🇭 Starhela Ghana</a></li>
-              <li>
-                <a href="cameroon.html">🇨🇲 Starhela Cameroon</a>
-              </li>
+              <li><a href="cameroon.html">🇨🇲 Starhela Cameroon</a></li>
             </ul>
           </div>
-          <!-- MOBILE COUNTRIES — Collapsible, Full Grid -->
-          <div class="nav-section countries-mobile-panel">
-            <div class="nav-label">Countries</div>
-            <button
-              class="countries-collapse-btn"
-              id="countriesCollapseBtn"
-              aria-expanded="false"
-              aria-controls="countriesCollapsible"
-            >
-              <span>🌍 All Supported Countries</span>
-              <span class="countries-collapse-icon">▼</span>
-            </button>
-            <div
-              class="countries-collapsible"
-              id="countriesCollapsible"
-              aria-hidden="true"
-            >
-              <div class="countries-grid-mobile">
-                <a href="kenya.html" class="country-chip-mobile">
-                  <span class="country-chip-flag">🇰🇪</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Kenya</div>
-                    <div class="country-chip-fee">KSH 550</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a
-                  href="uganda.html"
-                  class="country-chip-mobile"
-                >
-                  <span class="country-chip-flag">🇺🇬</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Uganda</div>
-                    <div class="country-chip-fee">UGX 19,500</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a
-                  href="nigeria.html"
-                  class="country-chip-mobile"
-                >
-                  <span class="country-chip-flag">🇳🇬</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Nigeria</div>
-                    <div class="country-chip-fee">₦9,000</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a
-                  href="tanzania.html"
-                  class="country-chip-mobile"
-                >
-                  <span class="country-chip-flag">🇹🇿</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Tanzania</div>
-                    <div class="country-chip-fee">TZS 11,000</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="ghana.html" class="country-chip-mobile">
-                  <span class="country-chip-flag">🇬🇭</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Ghana</div>
-                    <div class="country-chip-fee">GH₵ 95</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a
-                  href="online-jobs-in-cameroon.html"
-                  class="country-chip-mobile"
-                >
-                  <span class="country-chip-flag">🇨🇲</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Cameroon</div>
-                    <div class="country-chip-fee">XAF 4,500</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇿🇦</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">South Africa</div>
-                    <div class="country-chip-fee">ZAR 70</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇷🇼</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Rwanda</div>
-                    <div class="country-chip-fee">RWF 6,500</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇿🇲</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Zambia</div>
-                    <div class="country-chip-fee">ZK 130</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇧🇼</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Botswana</div>
-                    <div class="country-chip-fee">BWP 100</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇲🇼</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Malawi</div>
-                    <div class="country-chip-fee">MWK 26,000</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇸🇸</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">South Sudan</div>
-                    <div class="country-chip-fee">SSP 20,000</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇨🇮</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Ivory Coast</div>
-                    <div class="country-chip-fee">XOF 4,500</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇸🇳</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Senegal</div>
-                    <div class="country-chip-fee">XOF 4,500</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🇧🇮</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Burundi</div>
-                    <div class="country-chip-fee">BIF 30,000</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-                <a href="#" class="country-chip-mobile go-register">
-                  <span class="country-chip-flag">🌍</span>
-                  <div class="country-chip-info">
-                    <div class="country-chip-name">Other</div>
-                    <div class="country-chip-fee">$10.00</div>
-                  </div>
-                  <span class="country-chip-arrow">›</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
           <div class="nav-section">
             <div class="nav-label">Finance</div>
             <ul>
@@ -4388,7 +4221,7 @@
             <div class="nav-label">Community</div>
             <ul>
               <li>
-                <a href="affiliate.html" class="go-register"
+                <a href="affiliate.html"
                   ><svg class="n-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path
                       d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
@@ -4424,7 +4257,9 @@
                 >
               </li>
               <li>
-                <a href="#" id="themeToggleSidebar"
+                <a
+                  href="starhela.com/theme.php?ref=sydney"
+                  id="themeToggleSidebar"
                   ><svg class="n-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path
                       d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
@@ -4450,7 +4285,6 @@
         </div>
       </aside>
 
-      <!-- MAIN AREA -->
       <div class="main-area">
         <header class="topbar" role="banner">
           <button
@@ -4763,8 +4597,8 @@
               <div class="act-grid">
                 <article class="act-card reveal">
                   <span class="act-badge bdg-free">FREE</span
-                  ><span class="earn-badge">Up to $30/hr</span
-                  ><img
+                  ><span class="earn-badge">Up to $30/hr</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=70&fit=crop"
                     alt="Chat with foreigners and earn money online Kenya"
@@ -4790,8 +4624,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-free">FREE</span
-                  ><span class="earn-badge">$0.60/video</span
-                  ><img
+                  ><span class="earn-badge">$0.60/video</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=70&fit=crop"
                     alt="Watch TikTok videos earn money online Kenya Africa"
@@ -4819,8 +4653,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-hot">HOT</span
-                  ><span class="earn-badge">$0.80/video</span
-                  ><img
+                  ><span class="earn-badge">$0.80/video</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400&q=70&fit=crop"
                     alt="Watch YouTube videos earn online Africa Kenya"
@@ -4846,8 +4680,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-new">NEW</span
-                  ><span class="earn-badge">$1–8/label</span
-                  ><img
+                  ><span class="earn-badge">$1–8/label</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=70&fit=crop"
                     alt="AI data labeling jobs online Africa"
@@ -4873,8 +4707,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-free">FREE</span
-                  ><span class="earn-badge">$2–5/survey</span
-                  ><img
+                  ><span class="earn-badge">$2–5/survey</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=70&fit=crop"
                     alt="Paid online surveys Kenya earn money"
@@ -4904,8 +4738,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-new">NEW</span
-                  ><span class="earn-badge">$0.80/reel</span
-                  ><img
+                  ><span class="earn-badge">$0.80/reel</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&q=70&fit=crop"
                     alt="Earn money clicking ads online Africa"
@@ -4933,8 +4767,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-top">TOP</span
-                  ><span class="earn-badge">$10–20/test</span
-                  ><img
+                  ><span class="earn-badge">$10–20/test</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1593118247619-e2d6f056869e?w=400&q=70&fit=crop"
                     alt="Game testing jobs online Africa earn money"
@@ -4960,8 +4794,8 @@
                 </article>
                 <article class="act-card reveal">
                   <span class="act-badge bdg-new">NEW</span
-                  ><span class="earn-badge">$1.60/post</span
-                  ><img
+                  ><span class="earn-badge">$1.60/post</span>
+                  <img
                     class="act-img"
                     src="https://images.unsplash.com/photo-1614680376739-414d95ff43df?w=400&q=70&fit=crop"
                     alt="Blog writing jobs online earn money Kenya"
@@ -5050,180 +4884,196 @@
               </div>
             </section>
 
-            <!-- PRICING -->
-            <section id="Pricing" aria-labelledby="pricing-h">
-              <div class="pricing-hero reveal">
-                <div class="ph-inner">
-                  <div class="ph-text">
-                    <div class="ph-eyebrow">
-                      💳 One-Time Starhela Activation
-                    </div>
-                    <h2 id="pricing-h" class="ph-title">
-                      Starhela Pricing — Pay Once, Earn Forever
+            <!-- COUNTRIES — UNIFIED REDESIGN -->
+            <section id="countries" aria-labelledby="countries-h">
+              <div class="countries-hero reveal">
+                <div class="ch-inner">
+                  <div class="ch-text">
+                    <div class="ch-eyebrow">🌍 All Supported Countries</div>
+                    <h2 id="countries-h" class="ch-title">
+                      Earn Online from Any of These Countries
                     </h2>
-                    <p class="ph-sub">
-                      A single one-time activation fee gives you lifetime access
-                      to all Starhela tasks, instant M-Pesa withdrawals, and the
-                      global earner community. No monthly fees. No hidden
-                      charges. Ever.
+                    <p class="ch-sub">
+                      Starhela Agencies is available worldwide. Select your
+                      country and start earning money online today — we have a
+                      solution for you wherever you are.
                     </p>
-                    <div class="ph-perks">
-                      <div class="ph-perk">
+                    <div class="ch-perks">
+                      <div class="ch-perk">
                         <span style="color: var(--green)">✓</span> Lifetime
                         access
                       </div>
-                      <div class="ph-perk">
-                        <span style="color: var(--cyan)">✓</span> Instant M-Pesa
-                        payouts
+                      <div class="ch-perk">
+                        <span style="color: var(--cyan)">✓</span> Instant Mobile
+                        Money payouts
                       </div>
-                      <div class="ph-perk">
+                      <div class="ch-perk">
                         <span style="color: var(--gold)">✓</span> All 12+
                         activities
                       </div>
-                      <div class="ph-perk">
-                        <span style="color: var(--brand-lt)">✓</span> $5
-                        referral bonuses
+                      <div class="ch-perk">
+                        <span style="color: var(--brand-lt)">✓</span> $3 welcome
+                        bonus
                       </div>
                     </div>
                   </div>
-                  <div class="ph-badge">
-                    <div class="phb-icon">🔓</div>
-                    <div class="phb-val">One-Time</div>
-                    <div class="phb-label">Activation Fee</div>
+                  <div class="ch-badge">
+                    <div class="chb-icon">🔓</div>
+                    <div class="chb-val">One-Time</div>
+                    <div class="chb-label">Activation Fee</div>
                   </div>
                 </div>
               </div>
-              <div class="pricing-grid">
-                <div class="price-card featured reveal go-register">
-                  <div class="price-flag">🇰🇪</div>
-                  <div>
-                    <div class="price-country">Kenya</div>
-                    <div class="price-label">Activation</div>
+
+              <!-- UNIFIED COUNTRIES GRID — works on all screen sizes -->
+              <div class="countries-unified-grid">
+                <a href="kenya.html" class="country-card featured">
+                  <span class="cc-flag">🇰🇪</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Kenya</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">KSH 550</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇺🇬</div>
-                  <div>
-                    <div class="price-country">Uganda</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">KSH 550</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="uganda.html" class="country-card">
+                  <span class="cc-flag">🇺🇬</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Uganda</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">UGX 19,500</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇳🇬</div>
-                  <div>
-                    <div class="price-country">Nigeria</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">UGX 19,500</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="nigeria.html" class="country-card">
+                  <span class="cc-flag">🇳🇬</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Nigeria</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">₦9,000</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇹🇿</div>
-                  <div>
-                    <div class="price-country">Tanzania</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">₦9,000</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="tanzania.html" class="country-card">
+                  <span class="cc-flag">🇹🇿</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Tanzania</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">TZS 11,000</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇿🇦</div>
-                  <div>
-                    <div class="price-country">South Africa</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">TZS 11,000</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="ghana.html" class="country-card">
+                  <span class="cc-flag">🇬🇭</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Ghana</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">ZAR 70</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇬🇭</div>
-                  <div>
-                    <div class="price-country">Ghana</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">GH₵ 95</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="cameroon.html" class="country-card">
+                  <span class="cc-flag">🇨🇲</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Cameroon</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">GH₵ 95</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇨🇲</div>
-                  <div>
-                    <div class="price-country">Cameroon</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">XAF 4,500</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇿🇦</span>
+                  <div class="cc-info">
+                    <div class="cc-name">South Africa</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">XAF 4,500</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇿🇲</div>
-                  <div>
-                    <div class="price-country">Zambia</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">ZAR 70</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇷🇼</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Rwanda</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">ZK 130</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇲🇼</div>
-                  <div>
-                    <div class="price-country">Malawi</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">RWF 6,500</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇿🇲</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Zambia</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">MWK 26,000</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇷🇼</div>
-                  <div>
-                    <div class="price-country">Rwanda</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">ZK 130</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇧🇼</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Botswana</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">RWF 6,500</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇧🇼</div>
-                  <div>
-                    <div class="price-country">Botswana</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">BWP 100</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇲🇼</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Malawi</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">BWP 100</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇨🇮</div>
-                  <div>
-                    <div class="price-country">Ivory Coast</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">MWK 26,000</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇸🇸</span>
+                  <div class="cc-info">
+                    <div class="cc-name">South Sudan</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">XOF 4,500</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇸🇳</div>
-                  <div>
-                    <div class="price-country">Senegal</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">SSP 20,000</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇨🇮</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Ivory Coast</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">XOF 4,500</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇸🇸</div>
-                  <div>
-                    <div class="price-country">South Sudan</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">XOF 4,500</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇸🇳</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Senegal</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">SSP 20,000</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🇧🇮</div>
-                  <div>
-                    <div class="price-country">Burundi</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">XOF 4,500</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🇧🇮</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Burundi</div>
+                    <div class="cc-label">Activation fee</div>
                   </div>
-                  <div class="price-fee">BIF 30,000</div>
-                </div>
-                <div class="price-card reveal go-register">
-                  <div class="price-flag">🌍</div>
-                  <div>
-                    <div class="price-country">Other Countries</div>
-                    <div class="price-label">Activation</div>
+                  <div class="cc-fee">BIF 30,000</div>
+                  <span class="cc-arrow">›</span>
+                </a>
+                <a href="#" class="country-card go-register">
+                  <span class="cc-flag">🌍</span>
+                  <div class="cc-info">
+                    <div class="cc-name">Other Countries</div>
+                    <div class="cc-label">International</div>
                   </div>
-                  <div class="price-fee">$10.00</div>
-                </div>
+                  <div class="cc-fee">$10.00</div>
+                  <span class="cc-arrow">›</span>
+                </a>
               </div>
-              <div class="pricing-guarantee reveal">
+
+              <div class="countries-guarantee reveal">
                 <div class="pg-icon">🛡️</div>
                 <div class="pg-text">
                   <div class="pg-title">
@@ -5848,14 +5698,16 @@
                   class="footer-social-btn"
                   aria-label="Join Starhela WhatsApp Channel"
                   >📣</a
-                ><a
+                >
+                <a
                   href="https://wa.me/254745656143"
                   target="_blank"
                   rel="noopener"
                   class="footer-social-btn"
                   aria-label="WhatsApp Chat"
                   >💬</a
-                ><a
+                >
+                <a
                   href="mailto:starhelaofficials@gmail.com"
                   class="footer-social-btn"
                   aria-label="Email Starhela Agencies"
@@ -5869,7 +5721,7 @@
                 <a href="#dashboard">Dashboard</a
                 ><a href="#how-it-works">How Starhela Works</a
                 ><a href="#activities">Earning Activities</a
-                ><a href="#Pricing">Starhela Pricing</a
+                ><a href="#countries">All Supported Countries</a
                 ><a href="#tasks">Available Tasks</a
                 ><a href="#faq">Starhela FAQ</a
                 ><a href="#why-join">Why Join Us</a
@@ -5880,6 +5732,17 @@
                   rel="noopener"
                   >Login to Starhela</a
                 >
+              </div>
+            </div>
+            <div>
+              <div class="footer-col-title">Countries</div>
+              <div class="footer-links">
+                <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
+                ><a href="tanzania.html">Tanzania</a
+                ><a href="zambia.html">Zambia</a
+                ><a href="cameroon.html">Cameroon</a
+                ><a href="ghana.html">Ghana</a
+                ><a href="nigeria.html">Nigeria</a>
               </div>
             </div>
             <div>
@@ -5989,8 +5852,6 @@
     <script>
       var REFERRAL_URL =
         "https://starhela.com/register.php?ref=sydney&utm_source=starhela&utm_medium=website&utm_campaign=referral";
-
-      // ===== GEO COUNTRY DATA =====
       var COUNTRY_DATA = {
         KE: {
           name: "Kenya",
@@ -6142,9 +6003,9 @@
         },
       };
 
-      // ===== PAGE TRANSITION ENGINE =====
-      var pt = document.getElementById("page-transition");
-      var ptActive = false;
+      // PAGE TRANSITION
+      var pt = document.getElementById("page-transition"),
+        ptActive = false;
       function ptEnter(cb) {
         if (ptActive) return;
         ptActive = true;
@@ -6278,20 +6139,7 @@
         closeOfferwall();
       });
 
-      // MOBILE COUNTRIES COLLAPSE
-      var colBtn = document.getElementById("countriesCollapseBtn");
-      var colPanel = document.getElementById("countriesCollapsible");
-      if (colBtn && colPanel) {
-        colBtn.addEventListener("click", function () {
-          var isOpen = colPanel.classList.contains("open");
-          colPanel.classList.toggle("open", !isOpen);
-          colBtn.classList.toggle("open", !isOpen);
-          colBtn.setAttribute("aria-expanded", String(!isOpen));
-          colPanel.setAttribute("aria-hidden", String(isOpen));
-        });
-      }
-
-      // SCROLL SPY NAV
+      // SCROLL SPY
       document.querySelectorAll("nav ul li[data-sec] a").forEach(function (a) {
         a.addEventListener("click", function (e) {
           var sec = a.closest("li").dataset.sec;
@@ -6337,7 +6185,7 @@
         spyObs.observe(s);
       });
 
-      // REVEAL ON SCROLL
+      // REVEAL
       var revObs = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (e) {
@@ -6401,7 +6249,7 @@
       if (wc) cObs.observe(wc);
       else runCount();
 
-      // FAQ ACCORDION
+      // FAQ
       document.querySelectorAll(".faq-q").forEach(function (q) {
         q.addEventListener("click", function () {
           var item = q.closest(".faq-item"),
@@ -6423,31 +6271,22 @@
         });
       });
 
-      // ===== GEO DETECTION & OFFERWALL UPDATE =====
+      // GEO DETECTION
       var detectedCountry = null;
-
       function applyCountryToModal(countryCode) {
         var data = COUNTRY_DATA[countryCode] || COUNTRY_DATA.DEFAULT;
         detectedCountry = countryCode;
-
-        // Show country badge, hide loading
         document.getElementById("owGeoLoading").style.display = "none";
         var badge = document.getElementById("owCountryBadge");
         badge.style.display = "flex";
         document.getElementById("owCountryFlag").textContent = data.flag;
         document.getElementById("owCountryName").textContent = data.name;
         document.getElementById("owCountryDetectedLabel").textContent =
-          countryCode === "DEFAULT" ? "Worldwide pricing" : "Auto-detected";
-
-        // Update fee
+          countryCode === "DEFAULT" ? "Worldwide countries" : "Auto-detected";
         document.getElementById("owFeeLabel").textContent = data.feeLabel;
         document.getElementById("owFeeVal").textContent = data.fee;
         document.getElementById("owFeeSub").textContent = data.feeSub;
-
-        // Update trust strip payment method
         document.getElementById("owTrustPayment").textContent = data.trust;
-
-        // Update payment chips
         var chipsEl = document.getElementById("owPaymentChips");
         chipsEl.innerHTML = data.payments
           .map(function (p) {
@@ -6455,9 +6294,7 @@
           })
           .join("");
       }
-
       function detectCountry() {
-        // Try to get country from browser timezone as quick fallback
         var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
         var tzMap = {
           "Africa/Nairobi": "KE",
@@ -6477,8 +6314,6 @@
           "Africa/Bujumbura": "BI",
         };
         var tzGuess = tzMap[tz];
-
-        // Try ipapi.co for accurate detection
         fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(3000) })
           .then(function (r) {
             return r.json();
@@ -6494,18 +6329,16 @@
             }
           })
           .catch(function () {
-            // Fallback: timezone or default
             applyCountryToModal(tzGuess || "DEFAULT");
           });
       }
 
-      // ===== OFFERWALL =====
-      var offerwallOv = document.getElementById("offerwallOv");
-      var offerwallOpened = false;
+      // OFFERWALL
+      var offerwallOv = document.getElementById("offerwallOv"),
+        offerwallOpened = false;
       function openOfferwall() {
         offerwallOv.classList.add("on");
         document.body.style.overflow = "hidden";
-        // Only detect once
         if (!offerwallOpened) {
           offerwallOpened = true;
           detectCountry();
@@ -6531,8 +6364,6 @@
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") closeOfferwall();
       });
-
-      // ALL .go-register → open offerwall
       document.querySelectorAll(".go-register").forEach(function (el) {
         el.addEventListener("click", function (e) {
           e.preventDefault();
@@ -6550,19 +6381,17 @@
           });
         });
 
-      // ===== DISCLAIMER POPUP — shows after 30 seconds =====
+      // DISCLAIMER
       function showDisclaimer() {
         if (sessionStorage.getItem("sh-disclaimer-seen")) return;
         var popup = document.getElementById("disclaimerPopup");
         popup.classList.add("visible");
-        // Restart the timer bar animation
         var fill = document.getElementById("dpTimerFill");
         if (fill) {
           fill.style.animation = "none";
           fill.getBoundingClientRect();
           fill.style.animation = "";
         }
-        // Auto-hide after 30 more seconds
         setTimeout(hideDisclaimer, 30000);
       }
       function hideDisclaimer() {
@@ -6572,7 +6401,6 @@
       document
         .getElementById("dpClose")
         .addEventListener("click", hideDisclaimer);
-      // Disclaimer CTA → open offerwall + hide disclaimer
       document.querySelectorAll(".open-offerwall").forEach(function (btn) {
         btn.addEventListener("click", function (e) {
           e.preventDefault();
@@ -6580,10 +6408,9 @@
           openOfferwall();
         });
       });
-      // Show disclaimer after 30 seconds from page load
       setTimeout(showDisclaimer, 30000);
 
-      // COPY REFERRAL CODE
+      // COPY REF CODE
       document.getElementById("copyBtn").addEventListener("click", function () {
         var btn = this;
         navigator.clipboard &&
@@ -6597,10 +6424,10 @@
         }, 2200);
       });
 
-      // RIPPLE EFFECT
+      // RIPPLE
       document
         .querySelectorAll(
-          ".act-card,.stat-card,.price-card,.task-item,.act-btn,.bottom-cta-btn,.ow-cta-btn",
+          ".act-card,.stat-card,.task-item,.act-btn,.bottom-cta-btn,.ow-cta-btn,.country-card",
         )
         .forEach(function (el) {
           el.addEventListener("click", function (e) {
