@@ -1,0 +1,3279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="StarHela Agencies Kenya – Pata pesa ukiChat na wazungu wa nje. Toa pesa mara moja kwa M-Pesa. Jiunge na Wakenya zaidi ya 120,000 wanaopata mapato kila siku. Usajili KSH 550 tu."
+    />
+    <meta
+      name="keywords"
+      content="StarHela Kenya, pata pesa online Kenya, kazi M-Pesa, online chatting jobs Kenya, affiliate marketing Kenya, StarHela usajili, work from home Kenya, earn online Kenya 2025"
+    />
+    <meta name="author" content="StarHela Agencies Kenya" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="StarHela Kenya | Pata Pesa Ukiongea – Toa kwa M-Pesa Mara Moja"
+    />
+    <meta
+      property="og:description"
+      content="Chat na wazungu, kamilisha kazi ndogo, toa pesa kwa M-Pesa. Jiunge StarHela leo!"
+    />
+    <meta property="og:url" content="https://starhelaagencies.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>
+      StarHela Kenya | Pata Pesa UkiChat na wazungu – M-Pesa Withdrawals
+    </title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      /* ─────────────────────────────────────────
+       DESIGN TOKENS — KENYAN PURPLE PALETTE
+    ───────────────────────────────────────── */
+      :root {
+        /* Core brand */
+        --brand: #6025c0;
+        --brand-mid: #7c3aed;
+        --brand-lt: #a78bfa;
+        --brand-glow: rgba(96, 37, 192, 0.25);
+        --brand-bg: #f6f2ff;
+
+        /* Accents — Kenyan inspired */
+        --kea-green: #16a34a; /* Kenyan flag green */
+        --kea-red: #dc2626; /* Kenyan flag red */
+        --kea-gold: #d97706; /* savanna gold */
+        --mpesa-green: #00a651;
+        --mpesa-dark: #007a3c;
+
+        /* Neutrals */
+        --ink: #0f0b1e;
+        --ink-2: #1e1640;
+        --txt: #2d2060;
+        --txt-2: #5b5280;
+        --txt-3: #9090b0;
+        --surface: #ffffff;
+        --surface-2: #f8f5ff;
+        --border: #eae4ff;
+        --border-2: #d5ccff;
+
+        /* Shadows */
+        --sh-sm: 0 4px 16px rgba(96, 37, 192, 0.08);
+        --sh-md: 0 12px 32px rgba(96, 37, 192, 0.14);
+        --sh-lg: 0 24px 60px rgba(96, 37, 192, 0.18);
+
+        /* Radii */
+        --r-sm: 0.75rem;
+        --r-md: 1.25rem;
+        --r-lg: 1.75rem;
+        --r-xl: 2.25rem;
+        --r-full: 9999px;
+
+        /* Type */
+        --font-display: "Syne", sans-serif;
+        --font-body: "DM Sans", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+
+        --t: 0.2s ease;
+      }
+
+      /* ─── RESET ─── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        font-family: var(--font-body);
+        background: var(--surface-2);
+        color: var(--txt);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      /* ─── PAGE LOADER ─── */
+      #pageLoader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: linear-gradient(145deg, #0b0718, #180f35);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        transition:
+          opacity 0.5s ease,
+          visibility 0.5s ease;
+      }
+      #pageLoader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .pl-ring {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 3px solid rgba(167, 139, 250, 0.2);
+        border-top-color: #a78bfa;
+        animation: spin 0.9s linear infinite;
+      }
+      .pl-logo {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+        background: linear-gradient(90deg, #a78bfa, #c4b5fd);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .pl-sub {
+        font-size: 0.65rem;
+        color: rgba(167, 139, 250, 0.6);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .pl-bar {
+        width: 160px;
+        height: 3px;
+        background: rgba(167, 139, 250, 0.15);
+        border-radius: 999px;
+        overflow: hidden;
+        margin-top: 0.5rem;
+      }
+      .pl-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #6025c0, #a78bfa);
+        border-radius: 999px;
+        animation: loadBar 1.4s ease forwards;
+      }
+      @keyframes loadBar {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ─── LAYOUT ─── */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* ─── TOPBAR ─── */
+      .topbar {
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 0.85rem 0;
+        transition: box-shadow var(--t);
+      }
+      .topbar.scrolled {
+        box-shadow: 0 4px 24px rgba(96, 37, 192, 0.08);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .nav-mark {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-lt));
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+        flex-shrink: 0;
+      }
+      .nav-brand-name {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.75rem;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--txt-2);
+        position: relative;
+        padding-bottom: 2px;
+        transition: color var(--t);
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--brand-mid);
+        border-radius: 999px;
+        transition: width 0.25s ease;
+      }
+      .nav-links a:hover {
+        color: var(--brand-mid);
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+      .nav-cta {
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        color: #fff;
+        padding: 0.55rem 1.25rem;
+        border-radius: var(--r-full);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        box-shadow: 0 4px 14px var(--brand-glow);
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+      .nav-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px var(--brand-glow);
+      }
+      .nav-wa {
+        background: #00a651;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: var(--r-full);
+        font-size: 0.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: all 0.2s;
+      }
+      .nav-wa:hover {
+        background: #007a3c;
+        transform: translateY(-2px);
+      }
+
+      /* ─── HERO ─── */
+      .hero {
+        padding: 5rem 0 3.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background:
+          radial-gradient(
+            ellipse 80% 60% at 50% -10%,
+            rgba(96, 37, 192, 0.12),
+            transparent
+          ),
+          radial-gradient(
+            ellipse 50% 40% at 80% 80%,
+            rgba(124, 58, 237, 0.07),
+            transparent
+          );
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: linear-gradient(
+          135deg,
+          rgba(96, 37, 192, 0.1),
+          rgba(167, 139, 250, 0.1)
+        );
+        border: 1px solid rgba(96, 37, 192, 0.2);
+        border-radius: var(--r-full);
+        padding: 0.35rem 1rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--brand);
+        margin-bottom: 1.5rem;
+        animation: fadeUp 0.6s ease both;
+      }
+      .hero-badge .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #16a34a;
+        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+        animation: pulse-dot 1.8s infinite;
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+        }
+        50% {
+          box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.1);
+        }
+      }
+      .hero h1 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.15;
+        color: var(--ink-2);
+        max-width: 800px;
+        margin: 0 auto 0.75rem;
+        animation: fadeUp 0.7s 0.1s ease both;
+      }
+      .hero h1 .grad {
+        background: linear-gradient(
+          135deg,
+          var(--brand) 0%,
+          var(--brand-lt) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-sub {
+        font-size: 1.05rem;
+        max-width: 580px;
+        margin: 0 auto 2rem;
+        color: var(--txt-2);
+        line-height: 1.65;
+        animation: fadeUp 0.7s 0.2s ease both;
+      }
+      .hero-sub strong {
+        color: var(--brand-mid);
+      }
+      .hero-ctas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        flex-wrap: wrap;
+        animation: fadeUp 0.7s 0.3s ease both;
+      }
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--brand) 0%,
+          var(--brand-mid) 100%
+        );
+        color: #fff;
+        padding: 0.9rem 2rem;
+        border-radius: var(--r-full);
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        box-shadow: 0 8px 24px var(--brand-glow);
+        transition: all 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15),
+          transparent
+        );
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px var(--brand-glow);
+      }
+      .btn-primary:hover::before {
+        opacity: 1;
+      }
+      .btn-primary:active {
+        transform: translateY(0);
+      }
+      .btn-wa {
+        background: #00a651;
+        color: #fff;
+        padding: 0.88rem 1.75rem;
+        border-radius: var(--r-full);
+        font-size: 0.95rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 8px 22px rgba(0, 166, 81, 0.3);
+        transition: all 0.25s;
+      }
+      .btn-wa:hover {
+        background: #007a3c;
+        transform: translateY(-3px);
+      }
+      .btn-outline {
+        background: transparent;
+        border: 2px solid var(--border-2);
+        color: var(--brand-mid);
+        padding: 0.85rem 1.75rem;
+        border-radius: var(--r-full);
+        font-size: 0.95rem;
+        font-weight: 700;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-outline:hover {
+        border-color: var(--brand-mid);
+        background: var(--brand-bg);
+      }
+
+      /* trust stats */
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        margin: 2.25rem 0 0;
+        animation: fadeUp 0.7s 0.4s ease both;
+      }
+      .h-stat {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-full);
+        padding: 0.45rem 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--txt-2);
+        box-shadow: var(--sh-sm);
+      }
+      .h-stat .ico {
+        color: var(--brand-mid);
+        font-size: 0.9rem;
+      }
+      .h-stat .ico.g {
+        color: var(--mpesa-green);
+      }
+
+      /* ─── SOCIAL PROOF TICKER ─── */
+      .ticker-wrap {
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        padding: 0.6rem 0;
+        overflow: hidden;
+        position: relative;
+      }
+      .ticker-track {
+        display: flex;
+        gap: 3rem;
+        white-space: nowrap;
+        animation: ticker 30s linear infinite;
+      }
+      .ticker-item {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+      }
+      .ticker-item .dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+      }
+      @keyframes ticker {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ─── SECTION HEADERS ─── */
+      .sec-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .sec-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--brand-mid);
+        margin-bottom: 0.75rem;
+      }
+      .sec-eyebrow::before,
+      .sec-eyebrow::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border-2);
+        width: 28px;
+      }
+      .sec-title {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+        font-weight: 800;
+        color: var(--ink-2);
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+      }
+      .sec-sub {
+        font-size: 0.95rem;
+        color: var(--txt-2);
+        max-width: 560px;
+        margin: 0 auto;
+      }
+      section {
+        padding: 4.5rem 0;
+      }
+
+      /* ─── MAIN EARN CTA BANNER ─── */
+      .earn-banner {
+        background: linear-gradient(
+          135deg,
+          #0d0820 0%,
+          #1e0f45 50%,
+          #0d0820 100%
+        );
+        border-radius: var(--r-xl);
+        padding: 3rem 2.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin: 0 0 3rem;
+      }
+      .earn-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 60% at 20% 50%,
+            rgba(124, 58, 237, 0.25),
+            transparent
+          ),
+          radial-gradient(
+            ellipse 40% 50% at 80% 50%,
+            rgba(22, 163, 74, 0.12),
+            transparent
+          );
+        pointer-events: none;
+      }
+      .earn-banner-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 32px 32px;
+        pointer-events: none;
+      }
+      .earn-banner h2 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 0.75rem;
+        position: relative;
+        z-index: 1;
+      }
+      .earn-banner h2 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #a78bfa, #34d399);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .earn-banner p {
+        color: rgba(255, 255, 255, 0.75);
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        position: relative;
+        z-index: 1;
+      }
+      .eb-stats {
+        display: flex;
+        justify-content: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+      .eb-stat {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--r-md);
+        padding: 0.85rem 1.25rem;
+        text-align: center;
+        min-width: 100px;
+        backdrop-filter: blur(8px);
+      }
+      .eb-stat-val {
+        font-family: var(--font-mono);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .eb-stat-lbl {
+        font-size: 0.6rem;
+        color: rgba(255, 255, 255, 0.55);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-top: 2px;
+      }
+
+      /* ─── ACTIVITIES GRID ─── */
+      .act-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        gap: 1.5rem;
+      }
+      .act-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+        position: relative;
+      }
+      .act-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--sh-lg);
+        border-color: var(--brand-lt);
+      }
+      .act-img-wrap {
+        position: relative;
+        height: 180px;
+        overflow: hidden;
+      }
+      .act-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+      .act-card:hover .act-img-wrap img {
+        transform: scale(1.05);
+      }
+      .act-badge {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 2;
+        font-size: 0.6rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.65rem;
+        border-radius: var(--r-full);
+      }
+      .bdg-free {
+        background: #16a34a;
+        color: #fff;
+      }
+      .bdg-hot {
+        background: #dc2626;
+        color: #fff;
+      }
+      .bdg-new {
+        background: var(--brand-mid);
+        color: #fff;
+      }
+      .bdg-top {
+        background: var(--kea-gold);
+        color: #fff;
+      }
+      .earn-badge {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.75);
+        color: #fff;
+        font-size: 0.62rem;
+        font-weight: 700;
+        padding: 0.25rem 0.65rem;
+        border-radius: var(--r-full);
+        backdrop-filter: blur(6px);
+      }
+      .act-foot {
+        padding: 1.25rem;
+      }
+      .act-name {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: var(--ink-2);
+        margin-bottom: 0.25rem;
+        letter-spacing: 0.02em;
+      }
+      .act-sub {
+        font-size: 0.72rem;
+        color: var(--txt-3);
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+      }
+      .act-earn {
+        font-size: 0.75rem;
+        color: var(--brand-mid);
+        font-weight: 700;
+        background: var(--brand-bg);
+        border-radius: var(--r-sm);
+        padding: 0.3rem 0.6rem;
+        display: inline-block;
+        margin-bottom: 0.85rem;
+      }
+      .act-btn-row {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .act-btn {
+        flex: 1;
+        padding: 0.55rem 0.4rem;
+        border-radius: var(--r-sm);
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+        transition: all 0.2s;
+        min-width: 80px;
+      }
+      .act-btn-task {
+        background: var(--surface-2);
+        border: 1px solid var(--border-2);
+        color: var(--brand-mid);
+      }
+      .act-btn-task:hover {
+        background: var(--brand-bg);
+        border-color: var(--brand-mid);
+      }
+      .act-btn-reg {
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        color: #fff;
+        box-shadow: 0 4px 12px var(--brand-glow);
+      }
+      .act-btn-reg:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px var(--brand-glow);
+      }
+
+      /* ─── COMMISSION SECTION ─── */
+      .commission-wrap {
+        background: linear-gradient(135deg, var(--brand-bg), var(--surface));
+        border: 1px solid var(--border);
+        border-radius: var(--r-xl);
+        padding: 2.5rem;
+      }
+      .comm-levels {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      .comm-level {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-md);
+        padding: 1.1rem 1.4rem;
+        transition: all 0.2s;
+      }
+      .comm-level:hover {
+        border-color: var(--brand-lt);
+        box-shadow: var(--sh-sm);
+      }
+      .comm-lvl-badge {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+        font-family: "Outfit", sans-serif;
+      }
+      .cl-1 {
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        color: #fff;
+      }
+      .cl-2 {
+        background: linear-gradient(135deg, #7c3aed, #a78bfa);
+        color: #fff;
+      }
+      .cl-3 {
+        background: linear-gradient(135deg, #a78bfa, #c4b5fd);
+        color: #fff;
+      }
+      .comm-lvl-info {
+        flex: 1;
+      }
+      .comm-lvl-title {
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--ink-2);
+      }
+      .comm-lvl-desc {
+        font-size: 0.72rem;
+        color: var(--txt-2);
+        margin-top: 0.15rem;
+      }
+      .comm-ksh {
+        font-family: var(--font-mono);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--brand-mid);
+        white-space: nowrap;
+      }
+
+      /* ─── HOW IT WORKS ─── */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+      .step-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        position: relative;
+        transition: all 0.25s;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--sh-md);
+      }
+      .step-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        border-radius: 0 0 999px 999px;
+        background: linear-gradient(90deg, var(--brand), var(--brand-mid));
+      }
+      .step-num {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        color: #fff;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        box-shadow: 0 8px 20px var(--brand-glow);
+      }
+      .step-card h3 {
+        font-family: "Outfit", sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--ink-2);
+        margin-bottom: 0.5rem;
+      }
+      .step-card p {
+        font-size: 0.82rem;
+        color: var(--txt-2);
+        line-height: 1.6;
+      }
+      .step-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--border-2);
+        font-size: 1.5rem;
+      }
+
+      /* ─── MPESA SECTION ─── */
+      .mpesa-section {
+        background: linear-gradient(135deg, #0d0820, #180f45);
+        border-radius: var(--r-xl);
+        padding: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      .mpesa-content {
+        flex: 1.2;
+        min-width: 260px;
+      }
+      .mpesa-content h2 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      .mpesa-check-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+        margin-bottom: 1.5rem;
+      }
+      .mpesa-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.65rem;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .mpesa-check .ck {
+        width: 20px;
+        height: 20px;
+        background: var(--mpesa-green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .mpesa-tip {
+        background: rgba(22, 163, 74, 0.12);
+        border: 1px solid rgba(22, 163, 74, 0.25);
+        border-radius: var(--r-md);
+        padding: 1rem 1.25rem;
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.6;
+      }
+      .mpesa-tip strong {
+        color: #34d399;
+      }
+      .mpesa-visual {
+        flex: 1;
+        min-width: 240px;
+        text-align: center;
+      }
+      .mpesa-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.04)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--r-lg);
+        padding: 1.75rem;
+        backdrop-filter: blur(12px);
+      }
+      .mpesa-logo-text {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--mpesa-green);
+        margin-bottom: 1rem;
+      }
+      .mpesa-amount {
+        font-family: var(--font-mono);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.25rem;
+      }
+      .mpesa-amnt-lbl {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .mpesa-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 1rem 0;
+      }
+      .mpesa-detail {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 0.4rem;
+      }
+      .mpesa-detail strong {
+        color: #fff;
+      }
+      .mpesa-success-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(22, 163, 74, 0.2);
+        border: 1px solid rgba(22, 163, 74, 0.35);
+        border-radius: var(--r-full);
+        padding: 0.45rem 1rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #34d399;
+        margin-top: 1rem;
+      }
+
+      /* ─── TESTIMONIALS ─── */
+      .test-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .test-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        padding: 1.75rem;
+        border-left: 4px solid var(--brand-mid);
+        transition: all 0.25s;
+      }
+      .test-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--sh-md);
+      }
+      .test-stars {
+        color: var(--kea-gold);
+        font-size: 0.85rem;
+        margin-bottom: 0.85rem;
+        letter-spacing: 0.1em;
+      }
+      .test-text {
+        font-size: 0.875rem;
+        color: var(--txt);
+        line-height: 1.7;
+        margin-bottom: 1.1rem;
+      }
+      .test-author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .test-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brand), var(--brand-lt));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Outfit", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: #fff;
+        flex-shrink: 0;
+      }
+      .test-name {
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: var(--ink-2);
+      }
+      .test-meta {
+        font-size: 0.68rem;
+        color: var(--txt-3);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-top: 0.15rem;
+      }
+      .test-verified {
+        color: var(--mpesa-green);
+        font-size: 0.7rem;
+      }
+
+      /* ─── TRUST BAR ─── */
+      .trust-bar {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-xl);
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: var(--sh-sm);
+      }
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        min-width: 160px;
+      }
+      .trust-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--r-sm);
+        background: var(--brand-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .trust-label {
+        font-weight: 700;
+        font-size: 0.82rem;
+        color: var(--ink-2);
+      }
+      .trust-sub {
+        font-size: 0.68rem;
+        color: var(--txt-3);
+      }
+
+      /* ─── FAQ ─── */
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-md);
+        overflow: hidden;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .faq-item.open {
+        border-color: var(--brand-lt);
+        box-shadow: var(--sh-sm);
+      }
+      .faq-q {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.1rem 1.4rem;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--ink-2);
+      }
+      .faq-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--brand-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: var(--brand-mid);
+        flex-shrink: 0;
+        transition:
+          transform 0.25s,
+          background 0.2s;
+      }
+      .faq-item.open .faq-icon {
+        background: var(--brand-mid);
+        color: #fff;
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.3s;
+        padding: 0 1.4rem;
+        font-size: 0.85rem;
+        color: var(--txt-2);
+        line-height: 1.7;
+      }
+      .faq-item.open .faq-a {
+        max-height: 200px;
+        padding-bottom: 1.25rem;
+      }
+
+      /* ─── CTA FINAL ─── */
+      .final-cta {
+        background: linear-gradient(
+          135deg,
+          #0d0820 0%,
+          #2d0f6b 50%,
+          #0d0820 100%
+        );
+        border-radius: var(--r-xl);
+        padding: 4rem 2.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .final-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 70% at 50% 100%,
+          rgba(124, 58, 237, 0.3),
+          transparent
+        );
+        pointer-events: none;
+      }
+      .final-cta h2 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 0.75rem;
+        position: relative;
+        z-index: 1;
+      }
+      .final-cta p {
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        position: relative;
+        z-index: 1;
+      }
+      .final-cta-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+      .btn-lg {
+        padding: 1rem 2.25rem;
+        font-size: 1.05rem;
+      }
+      .final-secure {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 1.25rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ─── OFFERWALL MODAL ─── */
+      #offerwallOv {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 10020;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      #offerwallOv.on {
+        display: flex;
+        animation: owFade 0.2s ease;
+      }
+      @keyframes owFade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .ow-modal {
+        background: linear-gradient(160deg, #0e0c25, #130f2e);
+        border: 1px solid rgba(124, 58, 237, 0.3);
+        border-radius: var(--r-xl);
+        width: 100%;
+        max-width: 460px;
+        overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+        animation: owPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      @keyframes owPop {
+        from {
+          transform: scale(0.88) translateY(24px);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1) translateY(0);
+          opacity: 1;
+        }
+      }
+      .ow-header {
+        background: linear-gradient(145deg, #3b0f8a, #5b21b6, #7c3aed, #8b5cf6);
+        padding: 2rem 1.75rem 1.75rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .ow-grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+      .ow-orb {
+        position: absolute;
+        right: -60px;
+        top: -60px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.15),
+          transparent 70%
+        );
+        filter: blur(8px);
+        pointer-events: none;
+      }
+      .ow-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 5;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        backdrop-filter: blur(4px);
+      }
+      .ow-close:hover {
+        background: #f43f5e;
+        color: #fff;
+        border-color: #f43f5e;
+        transform: scale(1.1);
+      }
+      .ow-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        padding: 0.2rem 0.85rem;
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 0.75rem;
+      }
+      .ow-title {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 2;
+      }
+      .ow-sub {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        z-index: 2;
+        line-height: 1.5;
+      }
+      .ow-stats {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1.1rem;
+        position: relative;
+        z-index: 2;
+      }
+      .ow-stat {
+        flex: 1;
+        background: rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 0.85rem;
+        padding: 0.75rem 0.6rem;
+        text-align: center;
+        backdrop-filter: blur(8px);
+      }
+      .ow-stat-val {
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: #fff;
+      }
+      .ow-stat-lbl {
+        font-size: 0.55rem;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-top: 0.15rem;
+      }
+      .ow-body {
+        padding: 1.5rem 1.75rem 1.75rem;
+      }
+      .ow-fee {
+        background: linear-gradient(
+          135deg,
+          rgba(96, 37, 192, 0.15),
+          rgba(22, 163, 74, 0.08)
+        );
+        border: 1px solid rgba(124, 58, 237, 0.3);
+        border-radius: var(--r-md);
+        padding: 1.1rem 1.4rem;
+        margin-bottom: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .ow-fee-ico {
+        font-size: 2rem;
+        flex-shrink: 0;
+      }
+      .ow-fee-lbl {
+        font-size: 0.65rem;
+        font-weight: 700;
+        color: rgba(196, 181, 253, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.15rem;
+      }
+      .ow-fee-val {
+        font-family: var(--font-mono);
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #c4b5fd;
+        letter-spacing: -0.5px;
+      }
+      .ow-fee-sub {
+        font-size: 0.62rem;
+        color: #a5b4fc;
+        margin-top: 0.2rem;
+      }
+      .ow-cta {
+        width: 100%;
+        padding: 1.1rem;
+        background: linear-gradient(90deg, var(--kea-green), #16a34a);
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        box-shadow: 0 10px 28px rgba(22, 163, 74, 0.4);
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .ow-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+      }
+      .ow-cta:hover::before {
+        transform: translateX(100%);
+      }
+      .ow-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px rgba(22, 163, 74, 0.55);
+      }
+      .ow-trust {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.85rem;
+        margin-top: 1rem;
+      }
+      .ow-trust span {
+        font-size: 0.62rem;
+        color: #9ca3af;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      /* ─── FLOATING WA ─── */
+      .float-wa-wrap {
+        position: fixed;
+        bottom: 80px;
+        right: 1.25rem;
+        z-index: 794;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.35rem;
+      }
+      .float-wa {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: var(--mpesa-green);
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+        color: #fff;
+        box-shadow: 0 6px 20px rgba(0, 166, 81, 0.4);
+        animation:
+          floatY 3.5s ease-in-out infinite,
+          waPulse 2.8s infinite;
+        transition: all 0.2s;
+      }
+      .float-wa:hover {
+        background: var(--mpesa-dark);
+        animation: none;
+        transform: scale(1.1);
+      }
+      .float-wa-label {
+        background: rgba(13, 10, 26, 0.92);
+        border: 1px solid rgba(0, 166, 81, 0.3);
+        color: #fff;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.65rem;
+        border-radius: 0.4rem;
+        white-space: nowrap;
+        backdrop-filter: blur(8px);
+        pointer-events: none;
+        opacity: 0;
+        transform: translateX(6px);
+        transition: all 0.2s;
+      }
+      .float-wa-wrap:hover .float-wa-label {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @keyframes floatY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      @keyframes waPulse {
+        0% {
+          box-shadow:
+            0 6px 20px rgba(0, 166, 81, 0.4),
+            0 0 0 0 rgba(0, 166, 81, 0.3);
+        }
+        70% {
+          box-shadow:
+            0 6px 20px rgba(0, 166, 81, 0.4),
+            0 0 0 14px transparent;
+        }
+        100% {
+          box-shadow:
+            0 6px 20px rgba(0, 166, 81, 0.4),
+            0 0 0 0 transparent;
+        }
+      }
+
+      /* ─── MOBILE NAV ─── */
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 900;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(16px);
+        border-top: 1px solid var(--border);
+        padding: 0.5rem 0 calc(0.5rem + env(safe-area-inset-bottom));
+      }
+      .mbn-inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0 0.5rem;
+      }
+      .mbn-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        font-size: 0.58rem;
+        font-weight: 700;
+        color: var(--txt-3);
+        padding: 0.35rem 0.5rem;
+        border-radius: var(--r-sm);
+        transition: all 0.2s;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-family: inherit;
+        min-width: 52px;
+        text-align: center;
+      }
+      .mbn-icon {
+        font-size: 1.15rem;
+      }
+      .mbn-item.active,
+      .mbn-item:hover {
+        color: var(--brand-mid);
+      }
+      .mbn-item.reg {
+        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
+        color: #fff;
+        border-radius: var(--r-md);
+        padding: 0.45rem 0.9rem;
+      }
+
+      /* ─── FOOTER ─── */
+      .site-footer {
+        background: var(--ink);
+        padding: 3rem 0 2rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr 1fr;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+      .footer-brand-name-f {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        color: #fff;
+        margin-bottom: 0.75rem;
+      }
+      .footer-desc-f {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        max-width: 260px;
+      }
+      .footer-contact-f {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .footer-contact-item a {
+        color: rgba(255, 255, 255, 0.5);
+        transition: color var(--t);
+      }
+      .footer-contact-item a:hover {
+        color: var(--brand-lt);
+      }
+      .footer-socials {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .footer-soc-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 0.6rem;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      .footer-soc-btn:hover {
+        border-color: var(--brand-lt);
+        background: rgba(124, 58, 237, 0.2);
+      }
+      .footer-col-title {
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.35);
+        margin-bottom: 0.85rem;
+      }
+      .footer-links-f {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .footer-links-f a {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color var(--t);
+        cursor: pointer;
+      }
+      .footer-links-f a:hover {
+        color: var(--brand-lt);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+      }
+      .footer-copy {
+        font-size: 0.62rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .footer-copy a {
+        color: rgba(255, 255, 255, 0.3);
+        transition: color var(--t);
+      }
+      .footer-copy a:hover {
+        color: var(--brand-lt);
+      }
+      .footer-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.6rem;
+        color: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 0.5rem;
+        padding: 0.3rem 0.75rem;
+      }
+
+      /* ─── UTILS ─── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 900px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .mobile-nav {
+          display: block;
+        }
+        .hero {
+          padding: 3.5rem 0 2.5rem;
+        }
+        .mpesa-section {
+          flex-direction: column;
+          padding: 2rem 1.5rem;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        body {
+          padding-bottom: 70px;
+        }
+        .earn-banner {
+          padding: 2rem 1.5rem;
+        }
+        .commission-wrap {
+          padding: 1.5rem;
+        }
+        .final-cta {
+          padding: 2.5rem 1.5rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-ctas {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .btn-primary,
+        .btn-wa,
+        .btn-outline {
+          text-align: center;
+          justify-content: center;
+        }
+        .eb-stats {
+          flex-direction: column;
+          align-items: center;
+        }
+        .eb-stat {
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+
+      /* inline promo bar */
+      .promo-bar {
+        background: linear-gradient(90deg, var(--kea-green), #22c55e);
+        text-align: center;
+        padding: 0.55rem 1rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.04em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+      }
+      .promo-bar a {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .promo-close {
+        background: none;
+        border: none;
+        color: #fff;
+        opacity: 0.7;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+      }
+
+      /* notification toast */
+      .notif-toast {
+        position: fixed;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        z-index: 9000;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-md);
+        padding: 0.85rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--ink-2);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s ease;
+        white-space: nowrap;
+      }
+      .notif-toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+      }
+      .notif-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--brand), var(--brand-lt));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: #fff;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ─── PAGE LOADER ─── -->
+    <div id="pageLoader" role="status" aria-label="Loading StarHela">
+      <div class="pl-ring"></div>
+      <div class="pl-logo">STARHELA</div>
+      <div class="pl-sub">StarHela Kenya · Pata Pesa Online</div>
+      <div class="pl-bar"><div class="pl-bar-fill"></div></div>
+    </div>
+
+    <!-- ─── PROMO BAR ─── -->
+    <div class="promo-bar" id="promoBanner">
+      🎉 <strong>Jiunge Leo!</strong> — Wakenya 47 wamesajili leo hii ·
+      <a href="https://starhela.com/register.php?ref=sydney" target="_blank"
+        >Usajili Sasa →</a
+      >
+      <button
+        class="promo-close"
+        onclick="this.parentElement.remove()"
+        aria-label="Funga"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- ─── NOTIFICATION TOASTS ─── -->
+    <div class="notif-toast" id="notifToast">
+      <div class="notif-avatar" id="notifAvatar">LM</div>
+      <span id="notifText"
+        >Lillian M. from Nairobi alitoa KSH 850 sasa hivi</span
+      >
+    </div>
+
+    <!-- ─── OFFERWALL MODAL ─── -->
+    <div
+      id="offerwallOv"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="owTitle"
+    >
+      <div class="ow-modal">
+        <div class="ow-header">
+          <div class="ow-grid"></div>
+          <div class="ow-orb"></div>
+          <button class="ow-close" id="owClose" aria-label="Funga">✕</button>
+          <div class="ow-eyebrow">⭐ Usajili Rasmi</div>
+          <h2 class="ow-title" id="owTitle">
+            Fungua Uwezo<br />Wako wa Kupata Pesa
+          </h2>
+          <p class="ow-sub">
+            Jiunge na Wakenya 120,000+ wanaopata pesa kila siku. Malipo moja.
+            Ufikiaji wa maisha yote.
+          </p>
+          <div class="ow-stats">
+            <div class="ow-stat">
+              <div class="ow-stat-val">120K+</div>
+              <div class="ow-stat-lbl">Wanachama</div>
+            </div>
+            <div class="ow-stat">
+              <div class="ow-stat-val">KSH 2M+</div>
+              <div class="ow-stat-lbl">Imetolewa</div>
+            </div>
+            <div class="ow-stat">
+              <div class="ow-stat-val">24/7</div>
+              <div class="ow-stat-lbl">Kazi Zipo</div>
+            </div>
+          </div>
+        </div>
+        <div class="ow-body">
+          <div class="ow-fee">
+            <div class="ow-fee-ico">🔓</div>
+            <div>
+              <div class="ow-fee-lbl">Ada ya Kuanzisha — Kenya</div>
+              <div class="ow-fee-val">KSH 550</div>
+              <div class="ow-fee-sub">
+                Hakuna ada za kila mwezi · Hakuna gharama zilizofichwa ·
+                Ufikiaji wa maisha yote
+              </div>
+            </div>
+          </div>
+          <button
+            class="ow-cta"
+            id="owProceedBtn"
+            aria-label="Sajili kwa StarHela sasa"
+          >
+            🚀 Sajili kwa StarHela Sasa <span style="font-size: 1.1rem">→</span>
+          </button>
+          <div class="ow-trust">
+            <span>🔒 Malipo Salama</span>
+            <span>⚡ Ufikiaji wa Haraka</span>
+            <span>📱 M-Pesa Inakubalika</span>
+            <span>🛡️ Jukwaa Halisi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── FLOATING WHATSAPP ─── -->
+    <div class="float-wa-wrap">
+      <span class="float-wa-label">Zungumza na Wakala</span>
+      <a
+        href="https://wa.me/254745656143"
+        class="float-wa"
+        target="_blank"
+        rel="noopener"
+        aria-label="Zungumza nasi kwa WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- ─── TOPBAR ─── -->
+    <nav class="topbar" id="topbar" role="navigation" aria-label="Menyu Kuu">
+      <div class="container nav-inner">
+        <a
+          href="index.html"
+          class="nav-brand"
+          aria-label="StarHela Agencies Nyumbani"
+        >
+          <div class="nav-mark" aria-hidden="true"></div>
+          <span class="nav-brand-name">STARHELA KENYA</span>
+        </a>
+        <div class="nav-links">
+          <a href="#activities">Kazi</a>
+          <a href="#how-it-works">Jinsi Inavyofanya Kazi</a>
+          <a href="#testimonials">Mafanikio</a>
+          <a href="#faq">Maswali</a>
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            target="_blank"
+            class="nav-cta go-register"
+            >🚀 Sajili — KSH 550</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ─── SOCIAL PROOF TICKER ─── -->
+      <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker-track">
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Brian O. Mombasa alitoa KSH 1,200
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Grace W. Eldoret alitoa KSH 850
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Lillian M. Nairobi alitoa KSH 2,300
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>🔥 James K. Kisumu ameChat na wazungu 3 leo
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Mercy N. Thika alitoa KSH 600
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>🎉 Wanachama wapya 47 waliosajili leo
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Samuel A. Nakuru alitoa KSH 1,500
+          </div>
+          <!-- duplicate for infinite scroll -->
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Brian O. Mombasa alitoa KSH 1,200
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Grace W. Eldoret alitoa KSH 850
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Lillian M. Nairobi alitoa KSH 2,300
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>🔥 James K. Kisumu ameChat na wazungu 3 leo
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Mercy N. Thika alitoa KSH 600
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>🎉 Wanachama wapya 47 waliosajili leo
+          </div>
+          <div class="ticker-item">
+            <span class="dot"></span>✅ Samuel A. Nakuru alitoa KSH 1,500
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── HERO ─── -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container" style="position: relative; z-index: 1">
+          <div class="hero-badge">
+            <span class="dot"></span> Inatoa Mapato • Verified • M-Pesa
+          </div>
+          <h1>
+            Geuza Simu Yako Kuwa<br />
+            <span class="grad">Chanzo cha Pesa 🇰🇪</span>
+          </h1>
+          <p class="hero-sub">
+            <strong>Chat na wazungu wa nje</strong> — kazi kuu inayolipwa zaidi.
+            Kamilisha kazi ndogo, toa pesa kwa M-Pesa mara moja. Jiunge na
+            <strong>Wakenya 2,500+ wanaopata mapato</strong> kila siku.
+          </p>
+          <div class="hero-ctas">
+            <a
+              href="https://starhela.com/register.php?ref=sydney"
+              class="btn-primary go-register"
+              target="_blank"
+            >
+              <i class="fas fa-bolt"></i> Sajili Sasa – KSH 550 Tu
+            </a>
+
+          </div>
+          <div class="hero-stats">
+            <span class="h-stat"
+              ><i class="fas fa-check-circle ico g"></i> M-Pesa ya Moja kwa
+              Moja</span
+            >
+            <span class="h-stat"
+              ><i class="fas fa-comments ico"></i> Chat na wazungu 24/7</span
+            >
+            <span class="h-stat"
+              ><i class="fas fa-users ico"></i> Wanachama 120,000+</span
+            >
+            <span class="h-stat"
+              ><i class="fas fa-shield-alt ico"></i> Salama & Halisi</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- ─── MAIN EARN BANNER ─── -->
+        <div class="earn-banner reveal">
+          <div class="earn-banner-grid"></div>
+          <h2>Kazi Kuu: <em>Chat na wazungu</em></h2>
+          <p>
+            Kazi ya kuChat na wazungu wa nje ni chanzo kikuu cha mapato —
+            hailazimiki kuwa na uzoefu. Jifunza hata ukiwa nyumbani.
+          </p>
+          <div class="eb-stats">
+            <div class="eb-stat">
+              <div class="eb-stat-val">$200</div>
+              <div class="eb-stat-lbl">Kwa Siku Inayowezekana</div>
+            </div>
+            <div class="eb-stat">
+              <div class="eb-stat-val">24/7</div>
+              <div class="eb-stat-lbl">Kazi Zinapatikana</div>
+            </div>
+            <div class="eb-stat">
+              <div class="eb-stat-val">KSH 600</div>
+              <div class="eb-stat-lbl">Min. Kutoa Pesa</div>
+            </div>
+            <div class="eb-stat">
+              <div class="eb-stat-val">2 min</div>
+              <div class="eb-stat-lbl">Pesa Inafika</div>
+            </div>
+          </div>
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            class="btn-primary go-register"
+            target="_blank"
+            style="display: inline-flex"
+          >
+            💬 Anza Kuongea — Pata Pesa <span style="font-size: 1.1rem">→</span>
+          </a>
+        </div>
+
+        <!-- ─── ACTIVITIES ─── -->
+        <section id="activities">
+          <div class="sec-header">
+            <div class="sec-eyebrow">Njia za Kupata Pesa</div>
+            <h2 class="sec-title">Pata Pesa Online na StarHela</h2>
+            <p class="sec-sub">
+              Kazi mbalimbali zinazolingana na muda wako na uwezo wako — anza
+              leo hata bila uzoefu.
+            </p>
+          </div>
+          <div class="act-grid">
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-hot">KAZI KUU</span>
+                <span class="earn-badge">Hadi $200/siku</span>
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=70&fit=crop"
+                  alt="Chat na wazungu na upate pesa Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">Chat na wazungu</h3>
+                <div class="act-sub">Chat & Pata — Kazi Kuu Inayolipwa</div>
+                <div class="act-earn">Hadi $200/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a href="chatting.html" class="act-btn act-btn-task"
+                    >💬 Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-free">BURE</span>
+                <span class="earn-badge">$0.60/video</span>
+                <img
+                  src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=70&fit=crop"
+                  alt="Angalia TikTok upate pesa Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">VIDEO ZA TIKTOK</h3>
+                <div class="act-sub">Angalia & Pata — Kazi ya Kuanza</div>
+                <div class="act-earn">Hadi $50/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="videos.html"
+                    class="act-btn act-btn-task"
+                    >▶️ Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-top">BORA SANA</span>
+                <span class="earn-badge">$0.80/video</span>
+                <img
+                  src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400&q=70&fit=crop"
+                  alt="Angalia YouTube upate pesa Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">VIDEO ZA YOUTUBE</h3>
+                <div class="act-sub">Angalia & Pata — Inapendwa Sana</div>
+                <div class="act-earn">Hadi $55/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="videos.html"
+                    class="act-btn act-btn-task"
+                    >▶️ Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-new">MPYA</span>
+                <span class="earn-badge">$1–8/kazi</span>
+                <img
+                  src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=70&fit=crop"
+                  alt="AI data labeling kazi online Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">UWEKAJI LEBO WA AI</h3>
+                <div class="act-sub">Fundisha AI & Pata — Malipo Mazuri</div>
+                <div class="act-earn">Hadi $50/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="training-ai.html"
+                    class="act-btn act-btn-task"
+                    >🤖 Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-free">BURE</span>
+                <span class="earn-badge">$2–5/dodoso</span>
+                <img
+                  src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=70&fit=crop"
+                  alt="Maswali ya malipo Kenya upate pesa"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">MASWALI YA MALIPO</h3>
+                <div class="act-sub">Jibu & Pata — Rahisi kwa Wanaoanza</div>
+                <div class="act-earn">Hadi $35/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="surveys.html"
+                    class="act-btn act-btn-task"
+                    >📋 Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-new">MPYA</span>
+                <span class="earn-badge">$0.80/tangazo</span>
+                <img
+                  src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&q=70&fit=crop"
+                  alt="Bonyeza matangazo upate pesa Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">KUBONYEZA MATANGAZO</h3>
+                <div class="act-sub">Bonyeza & Pata — Haraka na Rahisi</div>
+                <div class="act-earn">Hadi $45/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="ads.html"
+                    class="act-btn act-btn-task"
+                    >🎯 Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-top">BORA ZAIDI</span>
+                <span class="earn-badge">$10–20/mchezo</span>
+                <img
+                  src="https://images.unsplash.com/photo-1593118247619-e2d6f056869e?w=400&q=70&fit=crop"
+                  alt="Jaribu michezo upate pesa Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">KUJARIBU MICHEZO</h3>
+                <div class="act-sub">Cheza & Pata — Kazi ya Kufurahisha</div>
+                <div class="act-earn">Hadi $40/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="games.html"
+                    class="act-btn act-btn-task"
+                    >🎮 Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="act-card reveal">
+              <div class="act-img-wrap">
+                <span class="act-badge bdg-new">MPYA</span>
+                <span class="earn-badge">$1.60/makala</span>
+                <img
+                  src="https://images.unsplash.com/photo-1614680376739-414d95ff43df?w=400&q=70&fit=crop"
+                  alt="Andika blogi upate pesa Kenya"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="act-foot">
+                <h3 class="act-name">KUANDIKA BLOGI</h3>
+                <div class="act-sub">Andika & Pata — Kazi ya Ubunifu</div>
+                <div class="act-earn">Hadi $65/siku kulingana na shughuli</div>
+                <div class="act-btn-row">
+                  <a
+                    href="blogging.html"
+                    class="act-btn act-btn-task"
+                    >✍️ Jifunza Zaidi</a
+                  >
+                  <button class="act-btn act-btn-reg go-register">
+                    🚀 Sajili Sasa
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ─── COMMISSIONS ─── -->
+        <section id="earn">
+          <div class="sec-header">
+            <div class="sec-eyebrow">Mapato ya Ziada</div>
+            <h2 class="sec-title">Mapato ya Ziada kwa Kualika Marafiki</h2>
+            <p class="sec-sub">
+              Kazi ya kuongea ndiyo kuu — lakini unaweza pia kupata mapato ya
+              ziada ukialika wengine.
+            </p>
+          </div>
+          <div class="commission-wrap reveal">
+            <div class="comm-levels">
+              <div class="comm-level">
+                <div class="comm-lvl-badge cl-1">L1</div>
+                <div class="comm-lvl-info">
+                  <div class="comm-lvl-title">
+                    🎯 Ngazi ya 1 — Mwaliko wa Moja kwa Moja
+                  </div>
+                  <div class="comm-lvl-desc">
+                    Kwa kila mtu unayewasilisha moja kwa moja
+                  </div>
+                </div>
+                <div class="comm-ksh">KSH 300</div>
+              </div>
+              <div class="comm-level">
+                <div class="comm-lvl-badge cl-2">L2</div>
+                <div class="comm-lvl-info">
+                  <div class="comm-lvl-title">
+                    🎯 Ngazi ya 2 — Mwaliko wa Pili
+                  </div>
+                  <div class="comm-lvl-desc">
+                    Wakati walioalikwa wako wanaalika wengine
+                  </div>
+                </div>
+                <div class="comm-ksh">KSH 150</div>
+              </div>
+              <div class="comm-level">
+                <div class="comm-lvl-badge cl-3">L3</div>
+                <div class="comm-lvl-info">
+                  <div class="comm-lvl-title">
+                    🎯 Ngazi ya 3 — Mapato ya Kupumzika
+                  </div>
+                  <div class="comm-lvl-desc">Pata mapato hata ukipumzika</div>
+                </div>
+                <div class="comm-ksh">KSH 50</div>
+              </div>
+            </div>
+            <p
+              style="font-size: 0.8rem; color: var(--txt-3); text-align: center"
+            >
+              <i class="fas fa-info-circle"></i> Wakala wa juu wanaopata KSH
+              2,000–10,000 kwa wiki kupitia WhatsApp, TikTok na Telegram —
+              lakini kazi ya kuongea peke yake inakutosha.
+            </p>
+          </div>
+        </section>
+
+        <!-- ─── HOW IT WORKS ─── -->
+        <section id="how-it-works">
+          <div class="sec-header">
+            <div class="sec-eyebrow">Jinsi Inavyofanya Kazi</div>
+            <h2 class="sec-title">Mfumo Rahisi wa Hatua 3</h2>
+            <p class="sec-sub">
+              Anza kupata pesa leo hii kwa hatua tatu rahisi.
+            </p>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card reveal">
+              <div class="step-num">1</div>
+              <h3>Sajili Bure</h3>
+              <p>
+                Tumia kiungo chetu kuunda akaunti —
+                <strong>bila gharama yoyote</strong>. Huchukua dakika 2 tu.
+              </p>
+            </div>
+            <div class="step-card reveal">
+              <div class="step-num">2</div>
+              <h3>Lipia Uanzishaji (KSH 550)</h3>
+              <p>
+                Lipia ada moja ya mara moja ndani ya dashibodi yako → inafungua
+                kazi zote na kiungo chako cha wakala.
+              </p>
+            </div>
+            <div class="step-card reveal">
+              <div class="step-num">3</div>
+              <h3>Pata Pesa & Toa kwa M-Pesa</h3>
+              <p>
+                Ongea + kazi → kutoa kwa kiwango cha chini cha KSH 600 → pesa
+                inafika simu yako mara moja.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── TRUST BAR ─── -->
+        <div class="trust-bar reveal">
+          <div class="trust-item">
+            <div class="trust-icon">🔒</div>
+            <div>
+              <div class="trust-label">Malipo Salama</div>
+              <div class="trust-sub">SSL iliyosimbwa</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">⚡</div>
+            <div>
+              <div class="trust-label">Kutoa Haraka</div>
+              <div class="trust-sub">Chini ya dakika 2</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">📱</div>
+            <div>
+              <div class="trust-label">M-Pesa Inakubalika</div>
+              <div class="trust-sub">Pia Airtel Money</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div>
+              <div class="trust-label">Jukwaa Halisi</div>
+              <div class="trust-sub">Verified & Trusted</div>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🌍</div>
+            <div>
+              <div class="trust-label">Africa-Wide</div>
+              <div class="trust-sub">Kenya, Uganda, Ghana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /container -->
+
+      <!-- ─── MPESA SECTION ─── -->
+      <section style="padding: 4rem 0; background: var(--ink)">
+        <div class="container">
+          <div class="mpesa-section reveal">
+            <div class="mpesa-content">
+              <h2>💚 Kutoa kwa M-Pesa — Mara Moja</h2>
+              <div class="mpesa-check-list">
+                <div class="mpesa-check">
+                  <span class="ck">✓</span> Kiwango cha chini cha kutoa:
+                  <strong style="color: #fff; margin-left: 0.3rem"
+                    >KSH 600</strong
+                  >
+                </div>
+                <div class="mpesa-check">
+                  <span class="ck">✓</span> Toa wakati wowote (24/7) → pesa
+                  inafika
+                  <strong style="color: #fff; margin-left: 0.3rem"
+                    >chini ya dakika 2</strong
+                  >
+                </div>
+                <div class="mpesa-check">
+                  <span class="ck">✓</span> Inakubalika pia kwa Airtel Money
+                </div>
+                <div class="mpesa-check">
+                  <span class="ck">✓</span> Hakuna ada zilizofichwa, ufuatiliaji
+                  wa dashibodi wa wakati halisi
+                </div>
+              </div>
+              <div class="mpesa-tip">
+                <strong>💡 Kidokezo cha Pro:</strong> Kuchanganya kazi za
+                mazungumzo + kazi ndogo kunaweza kukupata KSH 600 ndani ya siku
+                1–2 hata bila kualika mtu yeyote.
+              </div>
+            </div>
+            <div class="mpesa-visual">
+              <div class="mpesa-card">
+                <div class="mpesa-logo-text">M-PESA</div>
+                <div class="mpesa-amount">KSH 1,200</div>
+                <div class="mpesa-amnt-lbl">Kiasi Kilichotolewa</div>
+                <div class="mpesa-divider"></div>
+                <div class="mpesa-detail">
+                  <span>Mpokeaji</span><strong>+254 7XX XXX XXX</strong>
+                </div>
+                <div class="mpesa-detail">
+                  <span>Wakati</span><strong>Leo, 14:32</strong>
+                </div>
+                <div class="mpesa-detail">
+                  <span>Hali</span
+                  ><strong style="color: #34d399">✓ Imefaulu</strong>
+                </div>
+                <div class="mpesa-success-badge">
+                  ✅ Pesa Imetumwa Kikamilifu
+                </div>
+              </div>
+              <p
+                style="
+                  color: rgba(255, 255, 255, 0.45);
+                  font-size: 0.7rem;
+                  margin-top: 1rem;
+                  text-align: center;
+                "
+              >
+                <i class="fas fa-mobile-screen-button"></i> Ushahidi wa kutoa wa
+                kweli wa Wakenya unashirikiwa kila siku
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- ─── TESTIMONIALS ─── -->
+        <section id="testimonials">
+          <div class="sec-header">
+            <div class="sec-eyebrow">Mafanikio ya Kweli</div>
+            <h2 class="sec-title">🌟 Wakenya wa Kweli, Matokeo ya Kweli</h2>
+            <p class="sec-sub">
+              Sikiliza kutoka kwa watu wanaotumia StarHela kila siku.
+            </p>
+          </div>
+          <div class="test-grid">
+            <div class="test-card reveal">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-text">
+                "Nilikuwa bila kazi Ruiru. StarHela ilibadilisha maisha yangu —
+                sasa napata KSH 1,500 kwa wiki kutoka kwa mazungumzo na KSH 700
+                ya ziada. Nimetoa kwa M-Pesa mara 6!"
+              </p>
+              <div class="test-author">
+                <div class="test-avatar">LM</div>
+                <div>
+                  <div class="test-name">Lillian M.</div>
+                  <div class="test-meta">
+                    <i class="fas fa-check-circle test-verified"></i> Kutoa
+                    Kuliothibitishwa · Ruiru
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="test-card reveal">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-text">
+                "Nililipa KSH 550 kwa wasiwasi, lakini baada ya siku 3 nilikuwa
+                na KSH 900. Sasa ninafundisha timu yangu kupitia Telegram.
+                Nimepata KSH 3,400 mwezi uliopita!"
+              </p>
+              <div class="test-author">
+                <div class="test-avatar">BO</div>
+                <div>
+                  <div class="test-name">Brian O.</div>
+                  <div class="test-meta">
+                    <i class="fas fa-chart-line test-verified"></i> Wakala wa
+                    Juu · Mombasa
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="test-card reveal">
+              <div class="test-stars">★★★★★</div>
+              <p class="test-text">
+                "Napenda kazi ndogo — kuweka lebo picha na kuangalia video
+                nikinywa chai. Nilipata KSH 2,200 katika wiki zangu 2 za kwanza.
+                Kikundi cha msaada kinajibu haraka sana!"
+              </p>
+              <div class="test-author">
+                <div class="test-avatar">GW</div>
+                <div>
+                  <div class="test-name">Grace W.</div>
+                  <div class="test-meta">
+                    <i class="fab fa-whatsapp test-verified"></i> Mwanafunzi wa
+                    WhatsApp · Eldoret
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── PROMO CHANNELS ─── -->
+        <div
+          class="card reveal"
+          style="
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+          "
+        >
+          <h3
+            style="
+              font-family: "Outfit", sans-serif;
+              font-size: 1.1rem;
+              font-weight: 800;
+              color: var(--ink-2);
+              margin-bottom: 0.5rem;
+            "
+          >
+            <i class="fab fa-tiktok"></i> <i class="fab fa-whatsapp"></i> Njia
+            Ambazo Wakala Wanaeneza StarHela
+          </h3>
+          <p
+            style="
+              font-size: 0.82rem;
+              color: var(--txt-2);
+              margin-bottom: 1.25rem;
+            "
+          >
+            Wakala wa StarHela wanakuza kupitia:
+          </p>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.6rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <span class="h-stat"
+              ><i class="fab fa-whatsapp ico g"></i> Vikundi vya WhatsApp</span
+            >
+            <span class="h-stat"
+              ><i class="fab fa-tiktok ico"></i> Klipu za TikTok</span
+            >
+            <span class="h-stat"
+              ><i class="fab fa-facebook ico"></i> Vikundi vya Facebook</span
+            >
+            <span class="h-stat"
+              ><i class="fab fa-telegram ico"></i> Njia za Telegram</span
+            >
+          </div>
+          <p style="font-size: 0.8rem; color: var(--txt-2)">
+            Tunatoa mafunzo ya jinsi ya kuvutia watu na kuongeza kazi za
+            mazungumzo ya kila siku. Jiunge na mtandao wetu wa wakala.
+          </p>
+        </div>
+
+        <!-- ─── FAQ ─── -->
+        <section id="faq">
+          <div class="sec-header">
+            <div class="sec-eyebrow">Maswali ya Kawaida</div>
+            <h2 class="sec-title">❓ Maswali Yanayoulizwa Mara kwa Mara</h2>
+            <p class="sec-sub">Jibu la haraka kwa maswali yako yote.</p>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-q">
+                📌 Je, StarHela ni halisi Kenya?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                Ndiyo, maelfu ya Wakenya, Waganda, Wagana wametoa pesa kwa
+                M-Pesa. Jukwaa linafanya kazi kama mtandao wa kupata pesa wa
+                kijamii. Tunashiriki ushahidi wa kutoa wa moja kwa moja kila
+                siku kwenye kikundi chetu cha WhatsApp.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                💰 Ninaweza kupata kiasi gani kwa kweli kwa siku?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                Mtumiaji wa wastani anayefanya kazi anapata KSH 400–800 kutoka
+                kwa mazungumzo + kazi ndogo. Kazi ya kuChat na wazungu ndiyo
+                chanzo kikuu — unaweza kupata hadi $200/siku ukifanya kwa bidii.
+                Hakuna kikomo cha juu.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                📱 Ni kazi zipi zinazolipa zaidi?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                KuChat na wazungu wa nje ndiyo kazi inayolipa zaidi. Pia uwekaji
+                lebo wa data ya AI na maswali ya bei ya juu yanayotoa hadi KSH
+                200 kila moja. Hizi ndizo zinazoweza kukupata KSH 600 ndani ya
+                siku moja.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                ⏱️ Muda gani hadi kutoa kwangu kwa kwanza?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                Watumiaji wengi wapya hutoa ndani ya masaa 48 baada ya
+                uanzishaji. Kamilisha masaa 3–4 ya kazi za mazungumzo / kazi
+                ndogo na utafikia KSH 600 kwa urahisi.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                🤝 Je, ninahitaji kualika watu ili kupata pesa?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                Kabisa hapana! Kualika kunaongeza mapato yako lakini kazi za
+                mazungumzo na moduli za kazi ni vyanzo huru vya mapato. Unaweza
+                kupata pesa kama mtaalamu wa kujitegemea tu.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                🛡️ Je, ada ya KSH 550 inarudishwa?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                Ada ya uanzishaji inafungua dashibodi ya kupata pesa — si
+                ununuzi bali leseni. Hata hivyo, wanachama wanaipata tena ndani
+                ya masaa 48 ya kwanza. Wengi wanapata tena ndani ya siku 1
+                kupitia kazi.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q">
+                📢 Ninawezaje kukuza kama wakala?
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="faq-a">
+                Unapata kiungo chako cha kualika. Tangaza kwa hali ya WhatsApp,
+                TikTok, vikundi vya Facebook, Telegram. Tunatoa nyenzo za masoko
+                na mafunzo bila malipo ndani ya kikundi cha wakala cha WhatsApp.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── FINAL CTA ─── -->
+        <section>
+          <div class="final-cta reveal">
+            <h2>Uko Tayari Kuanza Safari Yako ya Kupata Pesa Online?</h2>
+            <p>
+              Jiunge na Wakenya mamia waliosajili. Lipia KSH 550 mara moja, anza
+              kupata pesa mara moja kupitia mazungumzo na kazi. Toa kwa M-Pesa
+              mara moja.
+            </p>
+            <div class="final-cta-btns">
+              <a
+                href="https://starhela.com/register.php?ref=sydney"
+                class="btn-primary btn-lg go-register"
+                target="_blank"
+              >
+                <i class="fas fa-arrow-right-to-bracket"></i> Sajili Sasa —
+                Pokea Kiungo cha Wakala
+              </a>
+            </div>
+            <p class="final-secure">
+              <i class="fas fa-lock"></i> Malipo salama kupitia lango rasmi la
+              StarHela
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name-f">STARHELA AGENCIES</div>
+            <p class="footer-desc-f">
+              <strong style="color: rgba(255, 255, 255, 0.7)"
+                >Starhela Agencies</strong
+              >
+              — Jukwaa la #1 la kuaminika la kupata pesa online Kenya. Maelfu
+              wanaopata pesa kila siku. Tunatoa mafunzo kamili, mwongozo wa
+              hatua kwa hatua, na fursa za kweli za kupata pesa kwa Wakenya na
+              Waafrika.
+            </p>
+            <div class="footer-contact-f">
+              <div class="footer-contact-item">
+                <span>📞</span><a href="tel:+254745656143">+254 745 656 143</a>
+              </div>
+              <div class="footer-contact-item">
+                <span>✉️</span
+                ><a href="mailto:starhelaofficials@gmail.com"
+                  >starhelaofficials@gmail.com</a
+                >
+              </div>
+              <div class="footer-contact-item">
+                <span>💬</span
+                ><a
+                  href="https://wa.me/254745656143"
+                  target="_blank"
+                  rel="noopener"
+                  >Msaada wa WhatsApp</a
+                >
+              </div>
+            </div>
+            <div class="footer-socials">
+              <a
+                href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
+                target="_blank"
+                rel="noopener"
+                class="footer-soc-btn"
+                aria-label="Jiunge na Njia ya WhatsApp"
+                >📣</a
+              >
+              <a
+                href="https://wa.me/254745656143"
+                target="_blank"
+                rel="noopener"
+                class="footer-soc-btn"
+                aria-label="Mazungumzo ya WhatsApp"
+                >💬</a
+              >
+              <a
+                href="mailto:starhelaofficials@gmail.com"
+                class="footer-soc-btn"
+                aria-label="Barua pepe StarHela"
+                >✉️</a
+              >
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Viungo vya Haraka</div>
+            <div class="footer-links-f">
+              <a href="#how-it-works">Jinsi StarHela Inavyofanya Kazi</a>
+              <a href="#activities">Shughuli za Kupata Pesa</a>
+              <a href="#faq">Maswali ya StarHela</a>
+              <a href="#" class="go-register">Sajili kwa StarHela</a>
+              <a
+                href="https://starhela.com/login.php"
+                target="_blank"
+                rel="noopener"
+                >Ingia kwa StarHela</a
+              >
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Unganika & Anza Kupata Pesa</div>
+            <div class="footer-links-f">
+              <a href="#" class="go-register">🚀 Sajili kwa StarHela</a>
+              <a
+                href="https://starhela.com/login.php"
+                target="_blank"
+                rel="noopener"
+                >🔑 Ingia kwa StarHela</a
+              >
+              <a
+                href="https://wa.me/254745656143"
+                target="_blank"
+                rel="noopener"
+                >💬 Tutumie WhatsApp</a
+              >
+              <a
+                href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
+                target="_blank"
+                rel="noopener"
+                >📣 Jiunge na Njia Yetu</a
+              >
+              <a href="mailto:starhelaofficials@gmail.com"
+                >✉️ Tutumie Barua Pepe</a
+              >
+              <a href="tel:+254745656143">📞 Tupigie Simu</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">
+            © 2025 Starhela Agencies · Haki zote zimehifadhiwa ·
+            <a href="#" class="go-register">Sajili StarHela</a> ·
+            <a
+              href="https://starhela.com/login.php"
+              target="_blank"
+              rel="noopener"
+              >Ingia StarHela</a
+            >
+          </div>
+          <div class="footer-badge">
+            <span>ℹ️</span> StarHela Agencies · 🌍 Kenya & Afrika
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ─── MOBILE NAV ─── -->
+    <nav class="mobile-nav" aria-label="Urambazaji wa Simu">
+      <div class="mbn-inner">
+        <a href="#" class="mbn-item active"
+          ><span class="mbn-icon">🏠</span>Nyumbani</a
+        >
+        <a href="#activities" class="mbn-item"
+          ><span class="mbn-icon">💼</span>Kazi</a
+        >
+        <a href="#faq" class="mbn-item"><span class="mbn-icon">❓</span>FAQ</a>
+        <a href="https://wa.me/254745656143" class="mbn-item" target="_blank"
+          ><span class="mbn-icon">💬</span>WhatsApp</a
+        >
+        <button class="mbn-item reg go-register">
+          <span class="mbn-icon">🚀</span>Sajili
+        </button>
+      </div>
+    </nav>
+
+    <script>
+      /* ─── PAGE LOADER ─── */
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("pageLoader").classList.add("hidden");
+        }, 1200);
+      });
+
+      /* ─── SCROLL TOPBAR SHADOW ─── */
+      const topbar = document.getElementById("topbar");
+      window.addEventListener(
+        "scroll",
+        () => {
+          topbar.classList.toggle("scrolled", window.scrollY > 20);
+        },
+        { passive: true },
+      );
+
+      /* ─── SCROLL REVEAL ─── */
+      const revealEls = document.querySelectorAll(".reveal");
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+              revealObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+      revealEls.forEach((el) => revealObs.observe(el));
+
+      /* ─── FAQ ─── */
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.querySelector(".faq-q").addEventListener("click", () => {
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      /* ─── OFFERWALL ─── */
+      const ow = document.getElementById("offerwallOv");
+      const owClose = document.getElementById("owClose");
+      const owProceed = document.getElementById("owProceedBtn");
+
+      function openOW() {
+        ow.classList.add("on");
+        document.body.style.overflow = "hidden";
+      }
+      function closeOW() {
+        ow.classList.remove("on");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".go-register").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          openOW();
+        });
+      });
+      owClose.addEventListener("click", closeOW);
+      ow.addEventListener("click", (e) => {
+        if (e.target === ow) closeOW();
+      });
+      owProceed.addEventListener("click", () => {
+        closeOW();
+        window.open("https://starhela.com/register.php?ref=sydney", "_blank");
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeOW();
+      });
+
+      /* ─── NOTIFICATION TOASTS ─── */
+      const toasts = [
+        {
+          name: "Lillian M.",
+          city: "Nairobi",
+          text: "alitoa KSH 850 sasa hivi",
+          init: "LM",
+        },
+        {
+          name: "Brian O.",
+          city: "Mombasa",
+          text: "alitoa KSH 1,200 saa moja iliyopita",
+          init: "BO",
+        },
+        {
+          name: "Grace W.",
+          city: "Eldoret",
+          text: "alimalizia kazi ya mazungumzo",
+          init: "GW",
+        },
+        {
+          name: "James K.",
+          city: "Kisumu",
+          text: "alitoa KSH 650 leo asubuhi",
+          init: "JK",
+        },
+        {
+          name: "Mercy N.",
+          city: "Thika",
+          text: "alisajili na kulipa KSH 550",
+          init: "MN",
+        },
+        {
+          name: "Samuel A.",
+          city: "Nakuru",
+          text: "alitoa KSH 1,500 jana usiku",
+          init: "SA",
+        },
+        {
+          name: "Faith M.",
+          city: "Nairobi",
+          text: "alimaliza maswali 5 leo",
+          init: "FM",
+        },
+      ];
+      let tIdx = 0;
+      const toast = document.getElementById("notifToast");
+      const toastAvt = document.getElementById("notifAvatar");
+      const toastTxt = document.getElementById("notifText");
+
+      function showToast() {
+        const t = toasts[tIdx % toasts.length];
+        toastAvt.textContent = t.init;
+        toastTxt.textContent = `${t.name} kutoka ${t.city} ${t.text}`;
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 4000);
+        tIdx++;
+      }
+      setTimeout(() => {
+        showToast();
+        setInterval(showToast, 8000);
+      }, 4000);
+
+      /* ─── MOBILE NAV ACTIVE ─── */
+      const mbnItems = document.querySelectorAll(".mbn-item:not(.reg)");
+      mbnItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          mbnItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
