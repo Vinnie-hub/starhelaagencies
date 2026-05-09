@@ -1728,33 +1728,6 @@
       .faq-item.open .faq-a {
         display: block;
       }
-
-      /* ═══════════════════════════════════════════
-       DISCLAIMER
-    ═══════════════════════════════════════════ */
-      .disclaimer {
-        background: var(--bg-2);
-        border-top: 1px solid var(--border);
-        padding: 16px 24px;
-      }
-      .disclaimer-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-      }
-      .disclaimer-icon {
-        font-size: 1rem;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-      .disclaimer-text {
-        font-size: 0.73rem;
-        color: var(--txt-3);
-        line-height: 1.6;
-      }
-
       /* ═══════════════════════════════════════════
        FINAL CTA
     ═══════════════════════════════════════════ */
@@ -2360,6 +2333,37 @@
         font-size: 0.82rem;
         color: var(--txt-2);
       }
+      /* NAV BETWEEN SECTIONS */
+      .about-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-0);
+        border-bottom: 1px solid var(--border-0);
+      }
+      .nav-about {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 24px;
+        background: var(--card-0);
+        color: var(--text-1);
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.22s;
+        border: 1px solid var(--border-1);
+        box-shadow: var(--shadow-sm);
+      }
+      .nav-about:hover {
+        background: var(--violet-dim);
+        color: var(--violet-4);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-violet);
+        border-color: var(--border-3);
+      }
 
       /* ═══════════════════════════════════════════
        REVEAL ANIMATION
@@ -2625,9 +2629,7 @@
             <button class="btn-primary open-modal">
               💬 Start Earning Today
             </button>
-            <a href="#referral-system" class="btn-secondary">
-              View Referral Plan →
-            </a>
+            <a href="#how-it-works" class="btn-secondary"> How It Works → </a>
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
@@ -2668,7 +2670,7 @@
             <div class="hero-earn-row">
               <div>
                 <div class="hero-earn-lbl">Chat Earnings</div>
-                <div class="hero-earn-val">+₦350</div>
+                <div class="hero-earn-val">+₦3,500</div>
               </div>
               <div style="font-size: 0.75rem; color: var(--txt-3)">
                 Per conversation ✓
@@ -2775,8 +2777,8 @@
             <div class="step-num">03</div>
             <div class="step-title">💬 Start Chatting Daily</div>
             <div class="step-desc">
-              Chat with foreigners from US, UK, Canada & Europe. Earn ₦150–₦500
-              per successful conversation!
+              Chat with foreigners from US, UK, Canada & Europe. Earn
+              ₦1,500–₦5,000 per successful conversation!
             </div>
             <div class="step-connector">→</div>
           </div>
@@ -2830,7 +2832,7 @@
             <div class="act-body">
               <div class="act-name">CHAT WITH FOREIGNERS</div>
               <div class="act-sub">Chat & Earn — Primary Task</div>
-              <div class="act-earn">₦150 – ₦500 per conversation</div>
+              <div class="act-earn">₦1,500 – ₦5,000 per conversation</div>
               <div class="act-btns">
                 <a href="chatting.html" class="act-btn act-btn-info"
                   >💬 Learn More</a
@@ -2845,7 +2847,7 @@
             <div class="act-badges">
               <span class="act-badge bdg-free">FREE</span>
             </div>
-            <span class="earn-badge">₦50/video</span>
+            <span class="earn-badge">₦500/video</span>
             <img
               class="act-img"
               src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&q=70&fit=crop"
@@ -2859,7 +2861,9 @@
               <div class="act-sub">Watch & Earn — Easy Starter Task</div>
               <div class="act-earn">Earn up to ₦15,000/day</div>
               <div class="act-btns">
-                <a href="videos.html" class="act-btn act-btn-info">▶️ Learn More</a>
+                <a href="videos.html" class="act-btn act-btn-info"
+                  >▶️ Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -2870,7 +2874,7 @@
             <div class="act-badges">
               <span class="act-badge bdg-hot">HOT</span>
             </div>
-            <span class="earn-badge">₦120/video</span>
+            <span class="earn-badge">₦1,200–₦17,000/video</span>
             <img
               class="act-img"
               src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400&q=70&fit=crop"
@@ -2884,7 +2888,9 @@
               <div class="act-sub">Watch & Earn — Top Rated</div>
               <div class="act-earn">Earn up to ₦17,000/day</div>
               <div class="act-btns">
-                <a href="videos.html" class="act-btn act-btn-info">▶️ Learn More</a>
+                <a href="videos.html" class="act-btn act-btn-info"
+                  >▶️ Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -2909,7 +2915,9 @@
               <div class="act-sub">Train AI & Earn — High Paying</div>
               <div class="act-earn">Earn up to ₦16,000/day</div>
               <div class="act-btns">
-                <a href="training-ai.html" class="act-btn act-btn-info">🤖 Learn More</a>
+                <a href="training-ai.html" class="act-btn act-btn-info"
+                  >🤖 Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -2934,7 +2942,9 @@
               <div class="act-sub">Answer & Earn — Beginner Friendly</div>
               <div class="act-earn">Earn up to ₦11,000/day</div>
               <div class="act-btns">
-                <a href="surveys.html" class="act-btn act-btn-info">📋 Learn More</a>
+                <a href="surveys.html" class="act-btn act-btn-info"
+                  >📋 Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -2945,7 +2955,7 @@
             <div class="act-badges">
               <span class="act-badge bdg-new">NEW</span>
             </div>
-            <span class="earn-badge">₦120/reel</span>
+            <span class="earn-badge">₦1,200–₦17,000/reel</span>
             <img
               class="act-img"
               src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&q=70&fit=crop"
@@ -2959,7 +2969,9 @@
               <div class="act-sub">Click & Earn — Quick & Easy</div>
               <div class="act-earn">Earn up to ₦14,000/day</div>
               <div class="act-btns">
-                <a href="ads.html" class="act-btn act-btn-info">🎯 Learn More</a>
+                <a href="ads.html" class="act-btn act-btn-info"
+                  >🎯 Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -2984,7 +2996,9 @@
               <div class="act-sub">Play & Earn — Fun Task</div>
               <div class="act-earn">Earn up to ₦12,000/day</div>
               <div class="act-btns">
-                <a href="games.html" class="act-btn act-btn-info">🎮 Learn More</a>
+                <a href="games.html" class="act-btn act-btn-info"
+                  >🎮 Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -3009,7 +3023,9 @@
               <div class="act-sub">Write & Earn — Creative Task</div>
               <div class="act-earn">Earn up to ₦20,000/day</div>
               <div class="act-btns">
-                <a href="blogging.html" class="act-btn act-btn-info">✍️ Learn More</a>
+                <a href="blogging.html" class="act-btn act-btn-info"
+                  >✍️ Learn More</a
+                >
                 <button class="act-btn act-btn-reg open-modal">
                   🚀 Register Now
                 </button>
@@ -3041,10 +3057,12 @@
               <div class="chat-feature reveal">
                 <div class="chat-feat-icon">💰</div>
                 <div>
-                  <div class="chat-feat-title">Pay Per Chat: ₦150 – ₦500</div>
+                  <div class="chat-feat-title">
+                    Pay Per Chat: ₦1,500 – ₦5,000
+                  </div>
                   <div class="chat-feat-desc">
                     Earn for every successful conversation. Active chatters make
-                    ₦3,000–₦8,000 daily!
+                    ₦30,000–₦80,000 daily!
                   </div>
                 </div>
               </div>
@@ -3104,7 +3122,7 @@
                 <div style="font-weight: 700; font-size: 0.92rem">
                   Average earner makes
                   <span style="color: var(--green-lt)"
-                    >₦3,000 – ₦8,000 daily</span
+                    >₦30,000 – ₦80,000 daily</span
                   >
                   from chatting alone!
                 </div>
@@ -3158,7 +3176,7 @@
               </div>
               <div class="chat-earn-pill">
                 <div><div class="chat-earn-lbl">This chat earned you</div></div>
-                <div class="chat-earn-amt">+₦350 ✓</div>
+                <div class="chat-earn-amt">+₦3,500 ✓</div>
               </div>
             </div>
             <div
@@ -3176,7 +3194,7 @@
               >
                 Daily Total
               </div>
-              <div class="chat-float-val">₦6,650</div>
+              <div class="chat-float-val">₦66,500</div>
             </div>
           </div>
         </div>
@@ -3251,135 +3269,6 @@
             <div class="ref-note">
               💡 The bigger your network, the more you earn
             </div>
-          </div>
-        </div>
-
-        <div class="ref-info-box reveal">
-          <div>
-            <h3
-              style="
-                font-family: "Outfit", sans-serif;
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-              "
-            >
-              📢 Free Training for Nigerian Agents
-            </h3>
-            <p
-              style="
-                font-size: 0.85rem;
-                color: var(--txt-2);
-                margin-bottom: 16px;
-              "
-            >
-              StarHela provides ready-to-use WhatsApp status templates, TikTok
-              scripts, Facebook posts, and Telegram guides. Join our Nigerian
-              community group for daily tips and training!
-            </p>
-            <div
-              style="
-                display: flex;
-                gap: 8px;
-                flex-wrap: wrap;
-                margin-bottom: 16px;
-              "
-            >
-              <span
-                style="
-                  background: #25d366;
-                  color: #fff;
-                  font-size: 0.7rem;
-                  font-weight: 700;
-                  padding: 4px 10px;
-                  border-radius: 99px;
-                "
-                >💬 WhatsApp</span
-              >
-              <span
-                style="
-                  background: #000;
-                  color: #fff;
-                  font-size: 0.7rem;
-                  font-weight: 700;
-                  padding: 4px 10px;
-                  border-radius: 99px;
-                "
-                >🎵 TikTok</span
-              >
-              <span
-                style="
-                  background: #1877f2;
-                  color: #fff;
-                  font-size: 0.7rem;
-                  font-weight: 700;
-                  padding: 4px 10px;
-                  border-radius: 99px;
-                "
-                >👤 Facebook</span
-              >
-              <span
-                style="
-                  background: #0088cc;
-                  color: #fff;
-                  font-size: 0.7rem;
-                  font-weight: 700;
-                  padding: 4px 10px;
-                  border-radius: 99px;
-                "
-                >✈️ Telegram</span
-              >
-            </div>
-            <a
-              href="https://wa.me/254745656143"
-              target="_blank"
-              rel="noopener"
-              class="btn-secondary"
-              style="
-                font-size: 0.82rem;
-                padding: 10px 20px;
-                border-radius: 10px;
-              "
-              >💬 Chat Support on WhatsApp</a
-            >
-          </div>
-          <div>
-            <div
-              style="
-                font-size: 0.75rem;
-                font-weight: 700;
-                color: var(--txt-3);
-                text-transform: uppercase;
-                letter-spacing: 0.08em;
-                margin-bottom: 8px;
-              "
-            >
-              Your Referral Link
-            </div>
-            <div class="ref-link-code">
-              https://starhela.com/register.php?ref=sydney
-            </div>
-            <div
-              style="
-                font-size: 0.72rem;
-                color: var(--txt-3);
-                margin-bottom: 16px;
-              "
-            >
-              Share this link on WhatsApp, Facebook, Instagram and start
-              earning!
-            </div>
-            <a
-              href="https://starhela.com/register.php?ref=sydney"
-              target="_blank"
-              class="btn-primary"
-              style="
-                font-size: 0.85rem;
-                padding: 12px 24px;
-                border-radius: 10px;
-                display: inline-flex;
-              "
-              >🔗 Get My Referral Link</a
-            >
           </div>
         </div>
       </div>
@@ -3557,21 +3446,6 @@
       </div>
     </section>
 
-    <!-- DISCLAIMER -->
-    <div class="disclaimer">
-      <div class="disclaimer-inner">
-        <span class="disclaimer-icon">ℹ️</span>
-        <div class="disclaimer-text">
-          <strong>Important Notice:</strong> StarHela is an affiliate/network
-          earning model. Chatting provides daily active income, but the highest
-          earning potential comes from building a referral team. Please fully
-          understand the model before paying the ₦9,000 activation fee. Earnings
-          vary based on activity, availability, and referral network size.
-          Results are not guaranteed.
-        </div>
-      </div>
-    </div>
-
     <!-- FAQ -->
     <section class="section section-alt" id="faq">
       <div class="section-inner">
@@ -3605,9 +3479,9 @@
             </button>
             <div class="faq-a">
               Most active chatters earn ₦3,000–₦8,000 daily. Each chat pays
-              ₦150–₦500 depending on conversation length and quality. You can do
-              20–50 chats per day depending on your availability. Top earners
-              combine chatting with referrals for ₦15,000+ daily!
+              ₦1,500–₦5,000 depending on conversation length and quality. You
+              can do 20–50 chats per day depending on your availability. Top
+              earners combine chatting with referrals for ₦15,000+ daily!
             </div>
           </div>
           <div class="faq-item reveal">
@@ -3661,22 +3535,6 @@
             </div>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 40px">
-          <p
-            style="font-size: 0.88rem; color: var(--txt-3); margin-bottom: 16px"
-          >
-            Still have questions? Our support team is ready to help!
-          </p>
-          <a
-            href="https://wa.me/254745656143"
-            target="_blank"
-            rel="noopener"
-            class="btn-secondary"
-            style="border-radius: 12px; padding: 12px 28px"
-          >
-            💬 Chat with Support on WhatsApp
-          </a>
-        </div>
       </div>
     </section>
 
@@ -3700,6 +3558,19 @@
         </div>
       </div>
     </section>
+    <!-- NAVIGATION -->
+    <div
+      class="about-navigation"
+      style="max-width: 1200px; margin: 50px auto; padding: 20px 1.25rem"
+      aria-label="Post navigation"
+    >
+      <a class="nav-about" href="kenya.html"
+        ><i class="fas fa-arrow-left"></i> Back: Kenya</a
+      >
+      <a class="nav-about" href="tanzania.html"
+        >Next: Tanzania<i class="fas fa-arrow-right"></i
+      ></a>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -3776,6 +3647,16 @@
                 rel="noopener"
                 >Login to StarHela</a
               >
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Countries</div>
+            <div class="footer-links">
+              <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
+              ><a href="tanzania.html">Tanzania</a
+              ><a href="zambia.html">Zambia</a
+              ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
+              ><a href="nigeria.html">Nigeria</a>
             </div>
           </div>
           <div>

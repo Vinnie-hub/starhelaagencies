@@ -1990,6 +1990,37 @@
         );
         margin: 60px 0;
       }
+      /* NAV BETWEEN SECTIONS */
+      .about-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-0);
+        border-bottom: 1px solid var(--border-0);
+      }
+      .nav-about {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 24px;
+        background: var(--card-0);
+        color: var(--text-1);
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.22s;
+        border: 1px solid var(--border-1);
+        box-shadow: var(--shadow-sm);
+      }
+      .nav-about:hover {
+        background: var(--violet-dim);
+        color: var(--violet-4);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-violet);
+        border-color: var(--border-3);
+      }
 
       /* ── ANIMATIONS ── */
       .reveal {
@@ -2178,13 +2209,6 @@
           <a href="#temoignages">Témoignages</a>
           <a href="#faq">FAQ</a>
           <a
-            href="https://wa.me/254745656143"
-            class="nav-wa"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-whatsapp"></i> Support</a
-          >
-          <a
             href="https://starhela.com/register.php?ref=sydney"
             class="nav-cta"
             target="_blank"
@@ -2205,9 +2229,6 @@
         <a href="#gains">Gains</a>
         <a href="#temoignages">Témoignages</a>
         <a href="#faq">FAQ</a>
-        <a href="https://wa.me/254745656143" target="_blank"
-          ><i class="fab fa-whatsapp"></i> WhatsApp Support</a
-        >
         <a
           href="https://starhela.com/register.php?ref=sydney"
           target="_blank"
@@ -2246,13 +2267,8 @@
             >
               <i class="fas fa-bolt"></i> Rejoindre Starhela Agencies
             </a>
-            <a
-              href="https://wa.me/254745656143"
-              class="btn-wa"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-whatsapp"></i> Contacter l'agent
+            <a href="#comment-ca-marche" class="btn-wa">
+              <i class="fab ft-earn-val"></i> Comment ça marche
             </a>
           </div>
           <div class="hero-stats">
@@ -3163,6 +3179,19 @@
           </div>
         </div>
       </div>
+      <!-- NAVIGATION -->
+      <div
+        class="about-navigation"
+        style="max-width: 1200px; margin: 50px auto; padding: 20px 1.25rem"
+        aria-label="Post navigation"
+      >
+        <a class="nav-about" href="ads.html"
+          ><i class="fas fa-arrow-left"></i> Back: Click Ads</a
+        >
+        <a class="nav-about" href="ghana.html"
+          >Next: Ghana<i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
     </main>
 
     <!-- ── FOOTER ── -->
@@ -3205,6 +3234,15 @@
             <a href="mailto:starhelaofficials@gmail.com" aria-label="Email"
               >✉️</a
             >
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Countries</div>
+          <div class="footer-links">
+            <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
+            ><a href="tanzania.html">Tanzania</a><a href="zambia.html">Zambia</a
+            ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
+            ><a href="nigeria.html">Nigeria</a>
           </div>
         </div>
         <div>

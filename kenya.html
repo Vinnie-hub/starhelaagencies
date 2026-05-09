@@ -273,7 +273,7 @@
       .nav-links a {
         font-size: 0.85rem;
         font-weight: 600;
-        color: var(--txt-2);
+        color: var(--txt);
         position: relative;
         padding-bottom: 2px;
         transition: color var(--t);
@@ -533,45 +533,6 @@
       }
       .h-stat .ico.g {
         color: var(--mpesa-green);
-      }
-
-      /* ─── SOCIAL PROOF TICKER ─── */
-      .ticker-wrap {
-        background: linear-gradient(135deg, var(--brand), var(--brand-mid));
-        padding: 0.6rem 0;
-        overflow: hidden;
-        position: relative;
-      }
-      .ticker-track {
-        display: flex;
-        gap: 3rem;
-        white-space: nowrap;
-        animation: ticker 30s linear infinite;
-      }
-      .ticker-item {
-        font-size: 0.72rem;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.9);
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        flex-shrink: 0;
-      }
-      .ticker-item .dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
-      }
-      @keyframes ticker {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
-        }
       }
 
       /* ─── SECTION HEADERS ─── */
@@ -1856,6 +1817,37 @@
         border-radius: 0.5rem;
         padding: 0.3rem 0.75rem;
       }
+      /* NAV BETWEEN SECTIONS */
+      .about-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-0);
+        border-bottom: 1px solid var(--border-0);
+      }
+      .nav-about {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 24px;
+        background: var(--card-0);
+        color: var(--text-1);
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.22s;
+        border: 1px solid var(--border-1);
+        box-shadow: var(--shadow-sm);
+      }
+      .nav-about:hover {
+        background: var(--violet-dim);
+        color: var(--violet-4);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-violet);
+        border-color: var(--border-3);
+      }
 
       /* ─── UTILS ─── */
       @keyframes fadeUp {
@@ -1965,48 +1957,6 @@
         font-size: 0.9rem;
         margin-left: 0.5rem;
       }
-
-      /* notification toast */
-      .notif-toast {
-        position: fixed;
-        bottom: 90px;
-        left: 50%;
-        transform: translateX(-50%) translateY(20px);
-        z-index: 9000;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--r-md);
-        padding: 0.85rem 1.25rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: var(--ink-2);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.4s ease;
-        white-space: nowrap;
-      }
-      .notif-toast.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-        pointer-events: auto;
-      }
-      .notif-avatar {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--brand), var(--brand-lt));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.75rem;
-        font-weight: 800;
-        color: #fff;
-        flex-shrink: 0;
-      }
     </style>
   </head>
   <body>
@@ -2031,14 +1981,6 @@
       >
         ✕
       </button>
-    </div>
-
-    <!-- ─── NOTIFICATION TOASTS ─── -->
-    <div class="notif-toast" id="notifToast">
-      <div class="notif-avatar" id="notifAvatar">LM</div>
-      <span id="notifText"
-        >Lillian M. from Nairobi alitoa KSH 850 sasa hivi</span
-      >
     </div>
 
     <!-- ─── OFFERWALL MODAL ─── -->
@@ -2146,55 +2088,6 @@
     </nav>
 
     <main>
-      <!-- ─── SOCIAL PROOF TICKER ─── -->
-      <div class="ticker-wrap" aria-hidden="true">
-        <div class="ticker-track">
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Brian O. Mombasa alitoa KSH 1,200
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Grace W. Eldoret alitoa KSH 850
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Lillian M. Nairobi alitoa KSH 2,300
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>🔥 James K. Kisumu ameChat na wazungu 3 leo
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Mercy N. Thika alitoa KSH 600
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>🎉 Wanachama wapya 47 waliosajili leo
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Samuel A. Nakuru alitoa KSH 1,500
-          </div>
-          <!-- duplicate for infinite scroll -->
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Brian O. Mombasa alitoa KSH 1,200
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Grace W. Eldoret alitoa KSH 850
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Lillian M. Nairobi alitoa KSH 2,300
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>🔥 James K. Kisumu ameChat na wazungu 3 leo
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Mercy N. Thika alitoa KSH 600
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>🎉 Wanachama wapya 47 waliosajili leo
-          </div>
-          <div class="ticker-item">
-            <span class="dot"></span>✅ Samuel A. Nakuru alitoa KSH 1,500
-          </div>
-        </div>
-      </div>
-
       <!-- ─── HERO ─── -->
       <section class="hero">
         <div class="hero-bg"></div>
@@ -2219,7 +2112,6 @@
             >
               <i class="fas fa-bolt"></i> Sajili Sasa – KSH 550 Tu
             </a>
-
           </div>
           <div class="hero-stats">
             <span class="h-stat"
@@ -2333,9 +2225,7 @@
                 <div class="act-sub">Angalia & Pata — Kazi ya Kuanza</div>
                 <div class="act-earn">Hadi $50/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="videos.html"
-                    class="act-btn act-btn-task"
+                  <a href="videos.html" class="act-btn act-btn-task"
                     >▶️ Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2363,9 +2253,7 @@
                 <div class="act-sub">Angalia & Pata — Inapendwa Sana</div>
                 <div class="act-earn">Hadi $55/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="videos.html"
-                    class="act-btn act-btn-task"
+                  <a href="videos.html" class="act-btn act-btn-task"
                     >▶️ Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2393,9 +2281,7 @@
                 <div class="act-sub">Fundisha AI & Pata — Malipo Mazuri</div>
                 <div class="act-earn">Hadi $50/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="training-ai.html"
-                    class="act-btn act-btn-task"
+                  <a href="training-ai.html" class="act-btn act-btn-task"
                     >🤖 Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2423,9 +2309,7 @@
                 <div class="act-sub">Jibu & Pata — Rahisi kwa Wanaoanza</div>
                 <div class="act-earn">Hadi $35/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="surveys.html"
-                    class="act-btn act-btn-task"
+                  <a href="surveys.html" class="act-btn act-btn-task"
                     >📋 Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2453,9 +2337,7 @@
                 <div class="act-sub">Bonyeza & Pata — Haraka na Rahisi</div>
                 <div class="act-earn">Hadi $45/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="ads.html"
-                    class="act-btn act-btn-task"
+                  <a href="ads.html" class="act-btn act-btn-task"
                     >🎯 Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2483,9 +2365,7 @@
                 <div class="act-sub">Cheza & Pata — Kazi ya Kufurahisha</div>
                 <div class="act-earn">Hadi $40/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="games.html"
-                    class="act-btn act-btn-task"
+                  <a href="games.html" class="act-btn act-btn-task"
                     >🎮 Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2513,9 +2393,7 @@
                 <div class="act-sub">Andika & Pata — Kazi ya Ubunifu</div>
                 <div class="act-earn">Hadi $65/siku kulingana na shughuli</div>
                 <div class="act-btn-row">
-                  <a
-                    href="blogging.html"
-                    class="act-btn act-btn-task"
+                  <a href="blogging.html" class="act-btn act-btn-task"
                     >✍️ Jifunza Zaidi</a
                   >
                   <button class="act-btn act-btn-reg go-register">
@@ -2813,7 +2691,7 @@
         >
           <h3
             style="
-              font-family: "Outfit", sans-serif;
+              font-family: &quot;Outfit&quot;, sans-serif;
               font-size: 1.1rem;
               font-weight: 800;
               color: var(--ink-2);
@@ -2983,6 +2861,19 @@
           </div>
         </section>
       </div>
+      <!-- NAVIGATION -->
+      <div
+        class="about-navigation"
+        style="max-width: 1200px; margin: 50px auto; padding: 20px 1.25rem"
+        aria-label="Post navigation"
+      >
+        <a class="nav-about" href="ghana.html"
+          ><i class="fas fa-arrow-left"></i> Back: Ghana</a
+        >
+        <a class="nav-about" href="nigeria.html"
+          >Next: Nigeria<i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
       <!-- /container -->
     </main>
 
@@ -3062,6 +2953,18 @@
             </div>
           </div>
           <div>
+            <div class="footer-col-title">Countries</div>
+            <div class="footer-links-f">
+              <a href="kenya.html">Kenya</a>
+              <a href="uganda.html">Uganda</a>
+              <a href="tanzania.html">Tanzania</a>
+              <a href="zambia.html">Zambia</a>
+              <a href="cameroon.html">Cameroon</a>
+              <a href="ghana.html">Ghana</a>
+              <a href="nigeria.html">Nigeria</a>
+            </div>
+          </div>
+          <div>
             <div class="footer-col-title">Unganika & Anza Kupata Pesa</div>
             <div class="footer-links-f">
               <a href="#" class="go-register">🚀 Sajili kwa StarHela</a>
@@ -3118,9 +3021,6 @@
           ><span class="mbn-icon">💼</span>Kazi</a
         >
         <a href="#faq" class="mbn-item"><span class="mbn-icon">❓</span>FAQ</a>
-        <a href="https://wa.me/254745656143" class="mbn-item" target="_blank"
-          ><span class="mbn-icon">💬</span>WhatsApp</a
-        >
         <button class="mbn-item reg go-register">
           <span class="mbn-icon">🚀</span>Sajili
         </button>
@@ -3202,69 +3102,6 @@
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeOW();
       });
-
-      /* ─── NOTIFICATION TOASTS ─── */
-      const toasts = [
-        {
-          name: "Lillian M.",
-          city: "Nairobi",
-          text: "alitoa KSH 850 sasa hivi",
-          init: "LM",
-        },
-        {
-          name: "Brian O.",
-          city: "Mombasa",
-          text: "alitoa KSH 1,200 saa moja iliyopita",
-          init: "BO",
-        },
-        {
-          name: "Grace W.",
-          city: "Eldoret",
-          text: "alimalizia kazi ya mazungumzo",
-          init: "GW",
-        },
-        {
-          name: "James K.",
-          city: "Kisumu",
-          text: "alitoa KSH 650 leo asubuhi",
-          init: "JK",
-        },
-        {
-          name: "Mercy N.",
-          city: "Thika",
-          text: "alisajili na kulipa KSH 550",
-          init: "MN",
-        },
-        {
-          name: "Samuel A.",
-          city: "Nakuru",
-          text: "alitoa KSH 1,500 jana usiku",
-          init: "SA",
-        },
-        {
-          name: "Faith M.",
-          city: "Nairobi",
-          text: "alimaliza maswali 5 leo",
-          init: "FM",
-        },
-      ];
-      let tIdx = 0;
-      const toast = document.getElementById("notifToast");
-      const toastAvt = document.getElementById("notifAvatar");
-      const toastTxt = document.getElementById("notifText");
-
-      function showToast() {
-        const t = toasts[tIdx % toasts.length];
-        toastAvt.textContent = t.init;
-        toastTxt.textContent = `${t.name} kutoka ${t.city} ${t.text}`;
-        toast.classList.add("show");
-        setTimeout(() => toast.classList.remove("show"), 4000);
-        tIdx++;
-      }
-      setTimeout(() => {
-        showToast();
-        setInterval(showToast, 8000);
-      }, 4000);
 
       /* ─── MOBILE NAV ACTIVE ─── */
       const mbnItems = document.querySelectorAll(".mbn-item:not(.reg)");

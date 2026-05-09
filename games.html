@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Play Games, Earn Real Money | Starhela Agencies Kenya</title>
+    <title>Play Games, Earn Real Money | Starhela Agencies</title>
     <meta
       name="description"
       content="Play Chess, Aviator, Soccer and more on Starhela. Earn real money instantly via M-Pesa. Join 50,000+ African gamers earning daily. Kenya's #1 gaming platform."
@@ -31,17 +31,24 @@
     />
     <meta
       property="og:url"
-      content="https://starhela.com/earn-by-playing-games.html"
+      content="https://starhelaagencies.com/games/games.html"
     />
     <meta property="og:site_name" content="Starhela Agencies" />
-    <meta property="og:image" content="https://starhela.com/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dovhxt8ye/image/upload/v1777814668/starheladesign_pc7nvp.jpg"
+    />
     <meta property="og:locale" content="en_KE" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Play Games, Earn Real Money | Starhela"
+      content="Play Games, Earn Real Money | Starhela Agencies"
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dovhxt8ye/image/upload/v1777814668/starheladesign_pc7nvp.jpg"
     />
     <meta
       name="twitter:description"
@@ -54,11 +61,11 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Starhela Agencies",
-        "url": "https://starhela.com",
+        "url": "https://starhelaagencies.com",
         "description": "Kenya's #1 online gaming platform where players earn real money via M-Pesa",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://starhela.com/search?q={search_term_string}",
+          "target": "https://starhelaagencies.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
@@ -68,8 +75,8 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Starhela Agencies",
-        "url": "https://starhela.com",
-        "logo": "https://starhela.com/logo.png",
+        "url": "https://starhelaagencies.com",
+        "logo": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1777814668/starheladesign_pc7nvp.jpg",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+254745656143",
@@ -106,7 +113,7 @@
         href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap"
     /></noscript>
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome — fixed typo: was <linko>, now <link> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -412,10 +419,10 @@
         color: var(--p1);
         font-style: normal;
       }
-      .logo-text{
-        display:flex;
-        flex-direction:column;
-        line-height:1.1;
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
       }
       .logo-sub {
         display: block;
@@ -511,6 +518,7 @@
         overflow: hidden;
         padding: 100px 0 70px;
       }
+      /* Background is now purely gradient/mesh — no video overlay */
       .hero-bg {
         position: absolute;
         inset: 0;
@@ -531,15 +539,6 @@
             rgba(88, 28, 135, 0.15) 0%,
             transparent 50%
           );
-      }
-      .hero-bg-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.06;
-        mix-blend-mode: luminosity;
       }
       .hero-mesh {
         position: absolute;
@@ -588,7 +587,7 @@
         margin: 0 auto;
         padding: 0 24px;
         display: grid;
-        grid-template-columns: 1fr 460px;
+        grid-template-columns: 1fr 480px;
         gap: 56px;
         align-items: center;
       }
@@ -764,32 +763,54 @@
         transform: translateY(-2px);
       }
 
-      /* ── HERO VISUAL ── */
+      /* ═══════════════════════════════════════════════
+         HERO VIDEO FRAME — right-side video section
+         ═══════════════════════════════════════════════ */
       .hero-visual {
         position: relative;
       }
-      .phone-frame {
-        background: var(--surface);
-        border: 1px solid var(--line2);
-        border-radius: 28px;
-        overflow: hidden;
-        box-shadow:
-          0 40px 80px rgba(0, 0, 0, 0.5),
-          0 0 0 1px var(--line) inset;
+
+      /* Outer glow ring */
+      .hero-video-frame {
         position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid var(--line2);
+        box-shadow:
+          0 40px 80px rgba(0, 0, 0, 0.55),
+          0 0 0 1px var(--line) inset,
+          0 0 60px rgba(168, 85, 247, 0.12);
+        background: var(--surface);
+        transition: box-shadow 0.4s ease;
       }
-      .phone-top {
-        padding: 14px 18px;
+      .hero-video-frame:hover {
+        box-shadow:
+          0 48px 96px rgba(0, 0, 0, 0.6),
+          0 0 0 1px var(--line2) inset,
+          0 0 80px rgba(168, 85, 247, 0.22);
+      }
+
+      /* Top HUD bar */
+      .hvf-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 13px 16px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid var(--line);
-        background: var(--surface2);
+        background: linear-gradient(
+          to bottom,
+          rgba(8, 4, 18, 0.82) 60%,
+          transparent
+        );
       }
-      .phone-top-left {
+      .hvf-top-left {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 9px;
       }
       .avatar-sm {
         width: 32px;
@@ -802,22 +823,24 @@
         font-size: 0.68rem;
         font-weight: 800;
         color: #fff;
+        flex-shrink: 0;
       }
-      .phone-user-name {
+      .hvf-user-name {
         font-size: 0.8rem;
         font-weight: 700;
+        color: #fff;
       }
-      .phone-user-sub {
-        font-size: 0.66rem;
-        color: var(--text3);
+      .hvf-user-sub {
+        font-size: 0.63rem;
+        color: rgba(255, 255, 255, 0.5);
         font-family: var(--fm);
       }
       .live-pill {
         display: flex;
         align-items: center;
         gap: 5px;
-        background: rgba(244, 63, 94, 0.12);
-        border: 1px solid rgba(244, 63, 94, 0.28);
+        background: rgba(244, 63, 94, 0.18);
+        border: 1px solid rgba(244, 63, 94, 0.38);
         color: #fb7185;
         padding: 4px 10px;
         border-radius: 50px;
@@ -832,78 +855,94 @@
         border-radius: 50%;
         animation: blink 1.3s ease-in-out infinite;
       }
-      .phone-video {
+
+      /* The actual <video> element */
+      .hvf-video {
+        display: block;
         width: 100%;
-        aspect-ratio: 16/10;
-        background: linear-gradient(135deg, #08050f, #130b2e);
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        background: #08050f;
+      }
+
+      /* Bottom earnings bar */
+      .hvf-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 14px 18px;
+        background: linear-gradient(
+          to top,
+          rgba(8, 4, 18, 0.88) 70%,
+          transparent
+        );
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .hvf-bottom-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .hvf-bottom-lbl {
+        font-size: 0.63rem;
+        color: rgba(255, 255, 255, 0.45);
+        font-family: var(--fm);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .hvf-bottom-val {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 500;
+      }
+      .hvf-earn-badge {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.55rem;
+        font-weight: 800;
+        color: var(--p1);
+        line-height: 1;
+      }
+      .hvf-earn-sub {
+        font-size: 0.62rem;
+        color: rgba(255, 255, 255, 0.4);
+        text-align: right;
+        font-family: var(--fm);
+      }
+
+      /* Play button overlay (visible before video starts) */
+      .hvf-play-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
-        overflow: hidden;
-        text-decoration: none;
-        cursor: pointer;
+        pointer-events: none;
       }
-      .phone-video-bg {
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(
-            circle at 30% 50%,
-            rgba(168, 85, 247, 0.12),
-            transparent 60%
-          ),
-          radial-gradient(
-            circle at 70% 30%,
-            rgba(139, 92, 246, 0.08),
-            transparent 50%
-          );
-      }
-      .play-cta {
-        text-align: center;
-        z-index: 1;
-        position: relative;
-      }
-      .play-cta .play-ring {
-        width: 60px;
-        height: 60px;
+      .hvf-play-ring {
+        width: 58px;
+        height: 58px;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--p2), var(--p1));
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 12px;
-        font-size: 1.1rem;
         color: #fff;
-        box-shadow: 0 8px 24px var(--p-glow);
-        transition: 0.25s;
+        font-size: 1.1rem;
+        box-shadow: 0 8px 28px var(--p-glow2);
+        opacity: 0;
+        transition: opacity 0.3s;
       }
-      .phone-video:hover .play-ring {
-        transform: scale(1.1);
-        box-shadow: 0 12px 32px var(--p-glow2);
+      /* Show play icon while video is paused */
+      .hero-video-frame.paused .hvf-play-ring {
+        opacity: 1;
       }
-      .play-cta p {
-        font-size: 0.76rem;
-        color: var(--text2);
-      }
-      .phone-bottom {
-        padding: 13px 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--surface2);
-        border-top: 1px solid var(--line);
-      }
-      .earn-badge {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.35rem;
-        font-weight: 800;
-        color: var(--p1);
-      }
-      .earn-sub {
-        font-size: 0.66rem;
-        color: var(--text3);
-      }
+
+      /* Floating cards */
       .floating-cards {
         position: absolute;
         pointer-events: none;
@@ -2478,7 +2517,7 @@
           </div>
           <div class="logo-text">
             <span class="logo-name">STARHELA<em>AGENCIES</em></span>
-            <div class="logo-sub">Paid blogs · Earn Online</div>
+            <div class="logo-sub">Paid Games · Earn Online</div>
           </div>
         </a>
         <nav class="nav-links" aria-label="Primary navigation">
@@ -2523,19 +2562,14 @@
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="heroTitle">
+      <!-- Background: gradient + mesh only (video moved to right-side panel) -->
       <div class="hero-bg">
-        <img
-          src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=55"
-          alt=""
-          class="hero-bg-img"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        />
         <div class="hero-mesh"></div>
       </div>
       <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+
       <div class="hero-wrap">
+        <!-- LEFT: copy + stats + buttons -->
         <div>
           <div class="hero-eyebrow">
             <span class="eyebrow-dot"></span>#1 Gaming Platform in Africa
@@ -2572,99 +2606,104 @@
               ><i class="fas fa-play-circle" aria-hidden="true"></i> Start
               Playing Now</a
             >
-              <a href="#games" class="btn btn-secondary">
-                <i class="fas fa-eye" aria-hidden="true"></i> WATCH SAMPLES
-              </a>
+            <a href="#games" class="btn btn-secondary">
+              <i class="fas fa-eye" aria-hidden="true"></i> Watch Samples
+            </a>
           </div>
         </div>
+
+        <!-- RIGHT: hero video section -->
         <div class="hero-visual">
-          <div class="phone-frame">
-            <div class="phone-top">
-              <div class="phone-top-left">
+          <div class="hero-video-frame" id="heroVideoFrame">
+            <!-- Top HUD bar -->
+            <div class="hvf-top">
+              <div class="hvf-top-left">
                 <div class="avatar-sm" aria-hidden="true">PG</div>
                 <div>
-                  <div class="phone-user-name">ProGamer_254</div>
-                  <div class="phone-user-sub">Aviator Tournament</div>
+                  <div class="hvf-user-name">ProGamer_254</div>
+                  <div class="hvf-user-sub">Aviator Tournament</div>
                 </div>
               </div>
               <div class="live-pill"><span class="live-dot"></span>LIVE</div>
             </div>
-            <a
-              href="https://starhela.com/register.php?ref=sydney&utm_source=starhela&utm_medium=website&utm_campaign=referral"
-              class="phone-video"
-              aria-label="Start earning on Starhela"
+
+            <!-- The video -->
+            <video
+              class="hvf-video"
+              id="heroVid"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Starhela gaming platform preview"
             >
-              <div class="phone-video-bg"></div>
-              <div class="play-cta">
-                <div class="play-ring">
-                  <i class="fas fa-play" aria-hidden="true"></i>
-                </div>
-                <p>
-                  TAP TO START EARNING<br /><span
-                    style="font-size: 0.66rem; color: var(--text3)"
-                    >Join thousands earning daily</span
-                  >
-                </p>
-              </div>
-            </a>
-            <div class="phone-bottom">
-              <div>
-                <div style="font-size: 0.68rem; color: var(--text3)">
-                  Top daily earner
-                </div>
-                <div
-                  style="
-                    font-size: 0.8rem;
-                    color: var(--text2);
-                    font-weight: 500;
-                  "
-                >
-                  No experience needed
-                </div>
-              </div>
-              <div style="text-align: right">
-                <div class="earn-badge">$500+</div>
-                <div class="earn-sub">Per day</div>
+              <source
+                src="https://res.cloudinary.com/dovhxt8ye/video/upload/v1778242744/spin_a9hrnf.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <!-- Play overlay (shown if video is paused / fails) -->
+            <div class="hvf-play-overlay" aria-hidden="true">
+              <div class="hvf-play-ring">
+                <i class="fas fa-play"></i>
               </div>
             </div>
-            <div class="floating-cards">
-              <div class="fc1">
-                <div class="fc-icon">
-                  <i class="fas fa-trophy" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <div class="fc-label">Tournament Win</div>
-                  <div class="fc-val">+$1,200</div>
-                </div>
+
+            <!-- Bottom earnings bar -->
+            <div class="hvf-bottom">
+              <div class="hvf-bottom-left">
+                <span class="hvf-bottom-lbl">Top daily earner</span>
+                <span class="hvf-bottom-val">No experience needed</span>
               </div>
-              <div class="fc2">
-                <div
-                  style="
-                    font-size: 0.68rem;
-                    color: var(--text3);
-                    margin-bottom: 3px;
-                    font-family: var(--fm);
-                  "
-                >
-                  M-Pesa Payout
-                </div>
-                <div
-                  style="
-                    font-family: "Outfit", sans-serif;
-                    font-size: 1.1rem;
-                    font-weight: 800;
-                    color: var(--p1);
-                  "
-                >
-                  KSH 12,500
-                </div>
-                <div style="font-size: 0.6rem; color: var(--text3)">
-                  Just now · Confirmed
-                </div>
+              <div style="text-align: right">
+                <div class="hvf-earn-badge">$500+</div>
+                <div class="hvf-earn-sub">Per day</div>
               </div>
             </div>
           </div>
+          <!-- /.hero-video-frame -->
+
+          <!-- Floating cards anchored to the visual container -->
+          <div class="floating-cards">
+            <div class="fc1">
+              <div class="fc-icon">
+                <i class="fas fa-trophy" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="fc-label">Tournament Win</div>
+                <div class="fc-val">+$1,200</div>
+              </div>
+            </div>
+            <div class="fc2">
+              <div
+                style="
+                  font-size: 0.68rem;
+                  color: var(--text3);
+                  margin-bottom: 3px;
+                  font-family: var(--fm);
+                "
+              >
+                M-Pesa Payout
+              </div>
+              <div
+                style="
+                  font-family: &quot;Outfit&quot;, sans-serif;
+                  font-size: 1.1rem;
+                  font-weight: 800;
+                  color: var(--p1);
+                "
+              >
+                KSH 12,500
+              </div>
+              <div style="font-size: 0.6rem; color: var(--text3)">
+                Just now · Confirmed
+              </div>
+            </div>
+          </div>
+          <!-- /.floating-cards -->
         </div>
+        <!-- /.hero-visual -->
       </div>
     </section>
 
@@ -2693,7 +2732,7 @@
         </div>
         <div class="marquee-item">
           <div class="m-ico"><i class="fas fa-sync-alt"></i></div>
-          <span class="m-txt">Spin & Win</span
+          <span class="m-txt">Spin &amp; Win</span
           ><span class="m-earn">$50–750</span>
         </div>
         <div class="marquee-item">
@@ -2734,7 +2773,7 @@
         </div>
         <div class="marquee-item">
           <div class="m-ico"><i class="fas fa-sync-alt"></i></div>
-          <span class="m-txt">Spin & Win</span
+          <span class="m-txt">Spin &amp; Win</span
           ><span class="m-earn">$50–750</span>
         </div>
         <div class="marquee-item">
@@ -2899,7 +2938,7 @@
             </div>
             <div class="feat-body">
               <div class="feat-top">
-                <div class="feat-name">Spin & Win</div>
+                <div class="feat-name">Spin &amp; Win</div>
                 <div class="feat-reward">$750+</div>
               </div>
               <p class="feat-desc">
@@ -3085,7 +3124,7 @@
             </div>
             <div class="game-body">
               <div class="game-header">
-                <div class="game-title">Spin & Win</div>
+                <div class="game-title">Spin &amp; Win</div>
                 <div class="game-earn">$50–750</div>
               </div>
               <p class="game-desc">
@@ -3268,7 +3307,7 @@
             <div class="step-icon">
               <i class="fas fa-user-plus" aria-hidden="true"></i>
             </div>
-            <h3>Sign Up & Activate</h3>
+            <h3>Sign Up &amp; Activate</h3>
             <p>
               Create your Starhela account and activate with a one-time fee. No
               recurring subscriptions — ever.
@@ -3290,7 +3329,7 @@
             <div class="step-icon">
               <i class="fas fa-trophy" aria-hidden="true"></i>
             </div>
-            <h3>Play & Win</h3>
+            <h3>Play &amp; Win</h3>
             <p>
               Compete in solo challenges, tournaments, or multiplayer matches to
               earn points and real cash.
@@ -3622,8 +3661,8 @@
             <div class="faq-a" role="region">
               <div class="faq-a-inner">
                 We offer strategy games (Chess, Checkers), luck-based games
-                (Aviator, Spin & Win, Coin Flip), skill games (Puzzle Match, Car
-                Racer), and tournament competitions. New games are added
+                (Aviator, Spin &amp; Win, Coin Flip), skill games (Puzzle Match,
+                Car Racer), and tournament competitions. New games are added
                 monthly.
               </div>
             </div>
@@ -3704,12 +3743,12 @@
               withdrawals</span
             >
             <span class="cta-check"
-              ><i class="fas fa-check" aria-hidden="true"></i>100% legitimate &
-              registered</span
+              ><i class="fas fa-check" aria-hidden="true"></i>100% legitimate
+              &amp; registered</span
             >
             <span class="cta-check"
-              ><i class="fas fa-check" aria-hidden="true"></i>24/7 gaming & live
-              support</span
+              ><i class="fas fa-check" aria-hidden="true"></i>24/7 gaming &amp;
+              live support</span
             >
             <span class="cta-check"
               ><i class="fas fa-check" aria-hidden="true"></i>50,000+ active
@@ -3718,13 +3757,12 @@
           </div>
         </div>
         <div class="page-nav">
-          <a href="earn-by-completing-surveys.html" class="pnav-link"
-            ><i class="fas fa-arrow-left" aria-hidden="true"></i> Back: Answer
-            Surveys</a
+          <a href="chatting.html" class="pnav-link"
+            ><i class="fas fa-arrow-left" aria-hidden="true"></i> Back:
+            Chatting</a
           >
-          <a href="earn-by-chatting.html" class="pnav-link"
-            >Next: Chat with Foreigners
-            <i class="fas fa-arrow-right" aria-hidden="true"></i
+          <a href="surveys.html" class="pnav-link"
+            >Next: Surveys <i class="fas fa-arrow-right" aria-hidden="true"></i
           ></a>
         </div>
       </div>
@@ -3816,6 +3854,16 @@
             </ul>
           </div>
           <div>
+            <div class="footer-col-title">Countries</div>
+            <div class="footer-links">
+              <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
+              ><a href="tanzania.html">Tanzania</a
+              ><a href="zambia.html">Zambia</a
+              ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
+              ><a href="nigeria.html">Nigeria</a>
+            </div>
+          </div>
+          <div>
             <div class="footer-col-title">Start Earning</div>
             <ul class="footer-links">
               <li>
@@ -3885,7 +3933,9 @@
               >Login Starhela</a
             >
           </div>
-          <div class="footer-copy">Starhela Agencies · 🌍 Kenya & Africa</div>
+          <div class="footer-copy">
+            Starhela Agencies · 🌍 Kenya &amp; Africa
+          </div>
         </div>
       </div>
     </footer>
@@ -3919,6 +3969,30 @@
           p.style.animationDelay = Math.random() * 8 + "s";
           c.appendChild(p);
         }
+      })();
+
+      /* ── VIDEO PLAY/PAUSE TOGGLE + paused-state indicator ── */
+      (function () {
+        var vid = document.getElementById("heroVid");
+        var frame = document.getElementById("heroVideoFrame");
+        if (!vid || !frame) return;
+
+        function syncPaused() {
+          frame.classList.toggle("paused", vid.paused);
+        }
+
+        vid.addEventListener("play", syncPaused);
+        vid.addEventListener("pause", syncPaused);
+        vid.addEventListener("ended", syncPaused);
+
+        // Click on video to toggle play/pause
+        vid.addEventListener("click", function () {
+          vid.paused ? vid.play() : vid.pause();
+        });
+        vid.style.cursor = "pointer";
+
+        // Initial sync after a tick
+        setTimeout(syncPaused, 200);
       })();
 
       /* ── THEME TOGGLE ── */

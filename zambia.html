@@ -1408,6 +1408,37 @@
         font-size: 0.62rem;
         color: rgba(255, 255, 255, 0.35);
       }
+      /* NAV BETWEEN SECTIONS */
+      .about-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-0);
+        border-bottom: 1px solid var(--border-0);
+      }
+      .nav-about {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 24px;
+        background: var(--card-0);
+        color: var(--text-1);
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.22s;
+        border: 1px solid var(--border-1);
+        box-shadow: var(--shadow-sm);
+      }
+      .nav-about:hover {
+        background: var(--violet-dim);
+        color: var(--violet-4);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-violet);
+        border-color: var(--border-3);
+      }
 
       /* ── FLOATING WA ── */
       .float-wa-wrap {
@@ -2027,8 +2058,8 @@
             >
               <i class="fas fa-rocket"></i> Activate Now
             </a>
-            <a href="#referral-system" class="btn-secondary-zm">
-              View Referral Plan →
+            <a href="#earn-options" class="btn-secondary-zm">
+              Ways to Earn →
             </a>
           </div>
           <div class="hero-stats">
@@ -2769,11 +2800,23 @@
           </a>
         </div>
         <div class="final-cta-note">
-          Use referral code: sydney · One-time fee · Lifetime access · Chat,
-          Tasks &amp; Referral income
+          One-time fee · Lifetime access · Chat, Tasks &amp; Referral income
         </div>
       </div>
     </section>
+    <!-- NAVIGATION -->
+    <div
+      class="about-navigation"
+      style="max-width: 1200px; margin: 50px auto; padding: 20px 1.25rem"
+      aria-label="Post navigation"
+    >
+      <a class="nav-about" href="uganda.html"
+        ><i class="fas fa-arrow-left"></i> Back: Uganda</a
+      >
+      <a class="nav-about" href="index.html"
+        >Next: Home <i class="fas fa-arrow-right"></i
+      ></a>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -2848,6 +2891,15 @@
               rel="noopener"
               >Login to StarHela</a
             >
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Countries</div>
+          <div class="footer-links">
+            <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
+            ><a href="tanzania.html">Tanzania</a><a href="zambia.html">Zambia</a
+            ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
+            ><a href="nigeria.html">Nigeria</a>
           </div>
         </div>
         <div>
