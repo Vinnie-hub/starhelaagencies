@@ -1144,100 +1144,6 @@
         box-shadow: 0 8px 20px var(--mpesa-glow);
       }
 
-      /* ===== AFFILIATE CARD ===== */
-      .affiliate-card {
-        background: linear-gradient(135deg, var(--brand) 0%, #4c1d95 100%);
-        border-radius: var(--radius-xl);
-        padding: 40px;
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-      }
-      .affiliate-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-        background-size: 32px 32px;
-        pointer-events: none;
-      }
-      .affiliate-title {
-        font-family: var(--fm);
-        font-size: 1.6rem;
-        font-weight: 900;
-        margin-bottom: 8px;
-        position: relative;
-        z-index: 1;
-      }
-      .affiliate-sub {
-        font-size: 0.9rem;
-        opacity: 0.85;
-        margin-bottom: 28px;
-        position: relative;
-        z-index: 1;
-      }
-      .commission-tiers {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        position: relative;
-        z-index: 1;
-      }
-      .tier {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        background: rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 14px;
-        padding: 16px 20px;
-        transition: all var(--t);
-      }
-      .tier:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateX(4px);
-      }
-      .tier-icon {
-        font-size: 1.8rem;
-        flex-shrink: 0;
-      }
-      .tier-label {
-        font-family: var(--fm);
-        font-size: 0.78rem;
-        font-weight: 700;
-        opacity: 0.8;
-        margin-bottom: 2px;
-      }
-      .tier-amount {
-        font-family: var(--fm-mono);
-        font-size: 1.4rem;
-        font-weight: 800;
-        color: #fcd34d;
-      }
-      .tier-per {
-        font-size: 0.68rem;
-        opacity: 0.7;
-        margin-top: 2px;
-      }
-      .tier-desc {
-        margin-left: auto;
-        text-align: right;
-      }
-      .tier-badge {
-        background: rgba(252, 211, 77, 0.2);
-        color: #fcd34d;
-        border: 1px solid rgba(252, 211, 77, 0.3);
-        border-radius: 99px;
-        padding: 3px 10px;
-        font-size: 0.6rem;
-        font-weight: 800;
-        letter-spacing: 0.07em;
-      }
-
       /* ===== STEPS ===== */
       .steps-grid {
         display: grid;
@@ -2216,9 +2122,6 @@
           padding: 28px;
           gap: 28px;
         }
-        .affiliate-card {
-          padding: 28px;
-        }
         .cta-banner {
           padding: 40px 24px;
         }
@@ -2755,98 +2658,8 @@
               </div>
             </article>
           </div>
-
-          <!-- AFFILIATE SECTION -->
-          <div class="affiliate-card" style="margin-top: 32px">
-            <div class="affiliate-title">👥 Mfumo wa Wanachama (Affiliate)</div>
-            <div class="affiliate-sub">
-              Karibisha marafiki na upate tuzo za passiv kila wakati wanafanya
-              kazi — viwango 3 vya mapato.
-            </div>
-            <div class="commission-tiers">
-              <div class="tier">
-                <div class="tier-icon">🥇</div>
-                <div>
-                  <div class="tier-label">Kiwango cha 1</div>
-                  <div class="tier-amount">TZS 6,000</div>
-                  <div class="tier-per">kwa kila mnunuzi wa moja kwa moja</div>
-                </div>
-                <div class="tier-desc">
-                  <span class="tier-badge">JUU ZAIDI</span>
-                </div>
-              </div>
-              <div class="tier">
-                <div class="tier-icon">🥈</div>
-                <div>
-                  <div class="tier-label">Kiwango cha 2</div>
-                  <div class="tier-amount">TZS 3,000</div>
-                  <div class="tier-per">kwa kila kiungo cha pili</div>
-                </div>
-                <div class="tier-desc">
-                  <span class="tier-badge">PASSIV</span>
-                </div>
-              </div>
-              <div class="tier">
-                <div class="tier-icon">🥉</div>
-                <div>
-                  <div class="tier-label">Kiwango cha 3</div>
-                  <div class="tier-amount">TZS 1,000</div>
-                  <div class="tier-per">kwa kila kiungo cha tatu</div>
-                </div>
-                <div class="tier-desc">
-                  <span class="tier-badge">ZIADA</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
-
-      <!-- ===== HOW IT WORKS ===== -->
-      <section
-        style="
-          background: linear-gradient(135deg, var(--brand-pale), var(--bg));
-        "
-      >
-        <div class="container">
-          <div class="sec-label">⚡ Hatua Rahisi</div>
-          <h2 class="sec-title">Anza Kupata Pesa kwa Hatua 3</h2>
-          <p class="sec-sub">
-            Mchakato mzima unachukua chini ya dakika 10. Watu wengi wanatoa pesa
-            zao za kwanza ndani ya masaa 48.
-          </p>
-          <div class="steps-grid">
-            <div class="step-card reveal">
-              <div class="step-num">1</div>
-              <div class="step-title">Jisajili (Bure)</div>
-              <p class="step-desc">
-                Weka akaunti kwa kutumia kiungo chetu. Usajili ni wa bure kabisa
-                — unahitaji tu simu yako na nambari ya M-Pesa.
-              </p>
-              <span class="step-tag">⏱️ Dakika 2 pekee</span>
-            </div>
-            <div class="step-card reveal">
-              <div class="step-num">2</div>
-              <div class="step-title">Lipa Ada (TZS 11,000)</div>
-              <p class="step-desc">
-                Lipa ada ya mara moja ndani ya dashibodi yako. Inafungua kazi
-                zote na kiungo chako cha rufaa. M-Pesa, Airtel au Tigo.
-              </p>
-              <span class="step-tag">🔓 Ufikiaji wa Papo Hapo</span>
-            </div>
-            <div class="step-card reveal">
-              <div class="step-num">3</div>
-              <div class="step-title">Pata Pesa & Toa M-Pesa</div>
-              <p class="step-desc">
-                Fanya kazi za mazungumzo, tazama video, au karibisha wengine.
-                Kima cha chini TZS 12,000. Fedha hufika ndani ya dakika 2.
-              </p>
-              <span class="step-tag">💚 Fedha kwa M-Pesa</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ===== WITHDRAWALS ===== -->
       <section id="mapato">
         <div class="container">
