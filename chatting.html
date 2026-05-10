@@ -292,7 +292,6 @@
           background 0.3s,
           color 0.3s;
       }
-      /* PAGE LOADER */
       #pageLoader {
         position: fixed;
         inset: 0;
@@ -432,7 +431,6 @@
         transition: width 0.2s;
         box-shadow: 0 0 8px var(--violet-glow);
       }
-      /* NAV */
       .nav {
         position: fixed;
         top: 0;
@@ -688,7 +686,6 @@
       .mob-cta:hover {
         filter: brightness(1.08);
       }
-      /* LAYOUT */
       .wrap {
         width: 100%;
         max-width: 1200px;
@@ -708,7 +705,6 @@
           padding: 3.5rem 0;
         }
       }
-      /* TOKENS */
       .pill {
         display: inline-flex;
         align-items: center;
@@ -777,7 +773,6 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
-      /* BUTTONS */
       .btn {
         display: inline-flex;
         align-items: center;
@@ -877,7 +872,78 @@
             0 0 0 0 transparent;
         }
       }
-      /* ANIMATIONS */
+
+      /* ── CHANGE 3: Eye-catching Meet People button ── */
+      #meetBtn {
+        background: linear-gradient(
+          135deg,
+          #059669 0%,
+          #10b981 55%,
+          #34d399 100%
+        );
+        color: #fff !important;
+        border: 2px solid rgba(52, 211, 153, 0.5) !important;
+        font-weight: 800 !important;
+        font-size: 1rem !important;
+        letter-spacing: 0.01em;
+        position: relative;
+        box-shadow:
+          0 5px 28px rgba(16, 185, 129, 0.45),
+          0 1px 0 rgba(255, 255, 255, 0.18) inset;
+        animation: meetPulse 2.6s ease-in-out infinite;
+      }
+      #meetBtn:hover {
+        filter: brightness(1.1);
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 10px 36px rgba(16, 185, 129, 0.55);
+        animation: none;
+      }
+      #meetBtn .meet-live-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        flex-shrink: 0;
+        display: inline-block;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        animation: blink 1.4s ease-in-out infinite;
+      }
+      #meetBtn .meet-badge {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        background: #ef4444;
+        color: #fff;
+        font-family: var(--font-m);
+        font-size: 0.45rem;
+        font-weight: 800;
+        padding: 0.2rem 0.5rem;
+        border-radius: 999px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1.5px solid var(--bg-0);
+        pointer-events: none;
+        z-index: 5;
+        animation: blink 1.6s ease-in-out infinite;
+      }
+      @keyframes meetPulse {
+        0% {
+          box-shadow:
+            0 5px 28px rgba(16, 185, 129, 0.45),
+            0 0 0 0 rgba(16, 185, 129, 0.35);
+        }
+        70% {
+          box-shadow:
+            0 5px 28px rgba(16, 185, 129, 0.45),
+            0 0 0 14px transparent;
+        }
+        100% {
+          box-shadow:
+            0 5px 28px rgba(16, 185, 129, 0.45),
+            0 0 0 0 transparent;
+        }
+      }
+
       @keyframes fadeUp {
         from {
           opacity: 0;
@@ -1033,7 +1099,6 @@
         animation: blink 2.2s infinite;
         display: inline-block;
       }
-      /* TICKER */
       .ticker {
         background: linear-gradient(
           90deg,
@@ -1073,7 +1138,6 @@
         margin-left: 1.5rem;
         font-size: 0.45rem;
       }
-      /* HERO */
       .hero {
         min-height: calc(100vh - var(--nav-h) - 34px);
         display: flex;
@@ -1359,18 +1423,6 @@
         margin-bottom: 1.75rem;
         animation: fadeUp 0.65s 0.36s var(--ease) both;
       }
-      #meetBtn {
-        background: var(--violet-dim);
-        border: 1px solid var(--border-2);
-        color: var(--text-1);
-        font-weight: 700;
-      }
-      #meetBtn:hover {
-        background: var(--violet-dim-2);
-        border-color: var(--border-3);
-        color: var(--text-0);
-        transform: translateY(-2px);
-      }
       .hero-proof {
         display: flex;
         flex-wrap: wrap;
@@ -1391,7 +1443,6 @@
       .hero-right {
         animation: fadeUp 0.8s 0.12s var(--ease) both;
       }
-      /* CHAT WIDGET */
       .chat-widget {
         background: var(--card-0);
         border: 1px solid var(--border-1);
@@ -1612,7 +1663,6 @@
         color: var(--text-0);
         background: var(--violet-dim);
       }
-      /* SECTION HEADS */
       .shead {
         margin-bottom: 3.5rem;
       }
@@ -1623,7 +1673,6 @@
         margin: 0 auto;
         max-width: 480px;
       }
-      /* PROFILE CARDS */
       .pcard {
         background: var(--card-0);
         border: 1px solid var(--border-1);
@@ -1764,7 +1813,6 @@
         color: #fff;
         border-color: var(--red);
       }
-      /* HOW IT WORKS */
       .how-sec {
         background: var(--bg-1);
       }
@@ -1867,7 +1915,6 @@
       .step-title-link:hover {
         color: var(--violet-4);
       }
-      /* EARN METHODS */
       .earn-sec {
         background: var(--bg-0);
       }
@@ -1988,7 +2035,6 @@
           grid-column: span 2;
         }
       }
-      /* TOPICS */
       .topics-sec {
         background: var(--bg-1);
       }
@@ -2122,7 +2168,6 @@
         border-color: rgba(245, 158, 11, 0.24);
         color: var(--gold);
       }
-      /* LIVE REQUESTS */
       .req-sec {
         background: var(--bg-2);
       }
@@ -2349,7 +2394,6 @@
         transform: translateY(-2px);
         box-shadow: var(--shadow-violet-lg);
       }
-      /* TESTIMONIALS */
       .proof-sec {
         background: var(--bg-1);
       }
@@ -2491,7 +2535,6 @@
         color: var(--green-2);
         margin-top: 0.1rem;
       }
-      /* TRUST */
       .trust-sec {
         background: var(--bg-2);
       }
@@ -2548,7 +2591,6 @@
         color: var(--text-2);
         line-height: 1.75;
       }
-      /* FAQ */
       .faq-sec {
         background: var(--bg-1);
       }
@@ -2609,7 +2651,6 @@
         padding: 1rem 1.25rem;
         border-top: 1px solid var(--border-0);
       }
-      /* LEGAL */
       .legal-sec {
         background: var(--bg-0);
       }
@@ -2759,7 +2800,6 @@
         color: var(--violet-4);
         font-size: 0.62rem;
       }
-      /* CTA */
       .cta-sec {
         background: var(--bg-1);
         position: relative;
@@ -2804,7 +2844,6 @@
         gap: 0.875rem;
         justify-content: center;
       }
-      /* CLIENTS */
       .clients-sec {
         background: var(--bg-1);
         position: relative;
@@ -3097,7 +3136,6 @@
         color: var(--text-2);
         line-height: 1.75;
       }
-      /* FOOTER */
       .footer {
         background: var(--bg-0);
         border-top: 1px solid var(--border-0);
@@ -3248,7 +3286,6 @@
         align-items: center;
         gap: 0.35rem;
       }
-      /* STICKY BAR */
       .sticky-bar {
         position: fixed;
         bottom: 0;
@@ -3283,7 +3320,6 @@
         font-size: 0.7rem;
         color: var(--text-3);
       }
-      /* FLOATING WA */
       .float-wa-wrap {
         position: fixed;
         bottom: 70px;
@@ -3337,7 +3373,6 @@
         opacity: 1;
         transform: translateX(0);
       }
-      /* NOTIFICATIONS */
       .notif {
         position: fixed;
         top: 74px;
@@ -3393,7 +3428,6 @@
         color: var(--violet-4);
         flex-shrink: 0;
       }
-      /* COOKIE BAR */
       .cookie-bar {
         position: fixed;
         bottom: 16px;
@@ -3443,7 +3477,6 @@
         color: var(--text-2);
         border: 1px solid var(--border-1);
       }
-      /* OFFER MODAL */
       .ov {
         position: fixed;
         inset: 0;
@@ -3637,25 +3670,6 @@
         justify-content: center;
         margin-bottom: 1.25rem;
       }
-      .om-feats {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-        margin-bottom: 1.5rem;
-      }
-      .om-feats li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.82rem;
-        color: var(--text-1);
-      }
-      .om-feats li i {
-        color: var(--green-2);
-        font-size: 0.68rem;
-        flex-shrink: 0;
-      }
       .om-foot {
         display: flex;
         justify-content: center;
@@ -3675,7 +3689,6 @@
       .om-trust i {
         color: var(--violet-4);
       }
-      /* ACCOUNT MODAL */
       .acct-ov {
         position: fixed;
         inset: 0;
@@ -3896,7 +3909,6 @@
         background: #1da851;
         transform: translateY(-2px);
       }
-      /* CHAT MODAL */
       .chat-ov {
         position: fixed;
         inset: 0;
@@ -4111,7 +4123,6 @@
         filter: brightness(1.08);
         transform: scale(1.08);
       }
-      /* LEGAL MODAL */
       .lm-ov {
         position: fixed;
         inset: 0;
@@ -4289,7 +4300,6 @@
         font-size: 0.62rem;
         color: var(--text-3);
       }
-      /* NAV BETWEEN SECTIONS */
       .about-navigation {
         display: flex;
         justify-content: space-between;
@@ -4359,7 +4369,6 @@
     </style>
   </head>
   <body>
-    <!-- PAGE LOADER -->
     <div id="pageLoader" role="status" aria-label="Loading Starhela">
       <div class="loader-star-wrap">
         <div class="loader-ring-outer"></div>
@@ -4372,8 +4381,6 @@
       </div>
       <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     </div>
-
-    <!-- PROGRESS BAR -->
     <div id="nprog" aria-hidden="true"></div>
 
     <!-- OFFER MODAL -->
@@ -4409,36 +4416,15 @@
             <div class="op-was" id="opOld">KSH 650</div>
             <div class="op-now" id="opNow">KSH 550</div>
             <div class="op-lbl">Your Price Today</div>
-            <span class="op-badge" id="opDisc">Save 23% Today</span>
+            <span class="op-badge" id="opDisc">Save 15% Today</span>
             <div class="op-save" id="opSave">
-              ✅ You save KSH 150 — limited time!
+              ✅ You save KSH 100 — limited time!
             </div>
           </div>
           <div class="om-timer">
             <i class="fas fa-clock"></i
             ><span id="omUrgency">⏳ Offer expires soon — grab it now!</span>
           </div>
-          <ul class="om-feats">
-            <li>
-              <i class="fas fa-check-circle"></i> One-time fee — no
-              subscriptions ever
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i> 5 ways to earn — up to $8/hour
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i> Daily withdrawals via
-              <span id="omPayment">M-Pesa</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i> Tips &amp; bonuses from
-              satisfied clients
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i> 24/7 WhatsApp support from day
-              one
-            </li>
-          </ul>
           <button
             class="btn btn-g btn-xl pulse"
             id="offerCta"
@@ -4646,13 +4632,11 @@
       </div>
     </div>
 
-    <!-- NOTIFICATIONS -->
     <div class="notif" id="notif" role="status" aria-live="polite">
       <i class="fas fa-check-circle"></i><span id="notifTxt"></span>
     </div>
     <div class="sp-wrap" id="spWrap" aria-hidden="true"></div>
 
-    <!-- COOKIE BAR -->
     <div
       class="cookie-bar"
       id="cookieBar"
@@ -4664,12 +4648,11 @@
         our policy.
       </p>
       <div class="cookie-btns">
-        <button class="cookie-btn no" id="cookieNo">Decline</button>
-        <button class="cookie-btn ok" id="cookieOk">Accept All</button>
+        <button class="cookie-btn no" id="cookieNo">Decline</button
+        ><button class="cookie-btn ok" id="cookieOk">Accept All</button>
       </div>
     </div>
 
-    <!-- FLOATING WA -->
     <div class="float-wa-wrap">
       <span class="float-wa-label">Chat with Agent</span>
       <a
@@ -4682,7 +4665,7 @@
       ></a>
     </div>
 
-    <!-- STICKY BAR -->
+    <!-- STICKY BAR — direct link, no modal -->
     <div class="sticky-bar" id="stickyBar" role="banner">
       <div class="wrap">
         <div class="sticky-in">
@@ -4691,16 +4674,17 @@
             <p class="sticky-sub">Join 15,000+ earners · 5 ways to earn</p>
           </div>
           <a
-            href="javascript:void(0)"
-            class="btn btn-g register-link"
-            data-url="https://Starhela.com/register.php?ref=sydney"
+            href="https://Starhela.com/register.php?ref=sydney"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-g"
             >Start Earning <i class="fas fa-arrow-right"></i
           ></a>
         </div>
       </div>
     </div>
 
-    <!-- NAV -->
+    <!-- NAV — direct links, no modal -->
     <header class="nav" id="nav" role="navigation">
       <div class="wrap">
         <div class="nav-inner">
@@ -4709,24 +4693,24 @@
             <span class="logo-name">STAR<em>HELA</em></span>
           </a>
           <nav class="nav-links" aria-label="Main navigation">
-            <a href="#how">How It Works</a>
-            <a href="#earn">Ways to Earn</a>
-            <a href="#clients">For Clients</a>
-            <a href="#topics">Topics</a>
-            <a href="#faq">FAQ</a>
+            <a href="#how">How It Works</a><a href="#earn">Ways to Earn</a
+            ><a href="#clients">For Clients</a><a href="#topics">Topics</a
+            ><a href="#faq">FAQ</a>
           </nav>
           <div class="nav-right">
             <a
-              href="javascript:void(0)"
-              class="nav-btn-ghost register-link"
-              data-url="https://Starhela.com/login.php"
+              href="https://Starhela.com/login.php"
+              target="_blank"
+              rel="noopener"
+              class="nav-btn-ghost"
               ><i class="fas fa-user"></i
               ><span class="reg-label"> Login</span></a
             >
             <a
-              href="javascript:void(0)"
-              class="nav-cta register-link"
-              data-url="https://Starhela.com/register.php?ref=sydney"
+              href="https://Starhela.com/register.php?ref=sydney"
+              target="_blank"
+              rel="noopener"
+              class="nav-cta"
               ><i class="fas fa-user-plus"></i
               ><span class="reg-label"> Register</span></a
             >
@@ -4743,29 +4727,29 @@
       </div>
     </header>
 
+    <!-- MOB NAV — direct links, no modal -->
     <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
-      <a href="#how">How It Works</a>
-      <a href="#earn">5 Ways to Earn</a>
-      <a href="#clients">For Clients</a>
-      <a href="#topics">Topics</a>
-      <a href="#faq">FAQ</a>
+      <a href="#how">How It Works</a><a href="#earn">5 Ways to Earn</a
+      ><a href="#clients">For Clients</a><a href="#topics">Topics</a
+      ><a href="#faq">FAQ</a>
       <div class="mob-hr"></div>
       <a
-        href="javascript:void(0)"
-        class="mob-cta register-link"
-        data-url="https://Starhela.com/login.php"
+        href="https://Starhela.com/login.php"
+        target="_blank"
+        rel="noopener"
+        class="mob-cta"
         ><i class="fas fa-user"></i> Login to Your Account</a
       >
       <div class="mob-hr"></div>
       <a
-        href="javascript:void(0)"
-        class="mob-cta register-link"
-        data-url="https://Starhela.com/register.php?ref=sydney"
+        href="https://Starhela.com/register.php?ref=sydney"
+        target="_blank"
+        rel="noopener"
+        class="mob-cta"
         ><i class="fas fa-rocket"></i> Start Earning Now</a
       >
     </nav>
 
-    <!-- TICKER -->
     <div class="ticker" aria-hidden="true">
       <div style="overflow: hidden">
         <div class="ticker-track" id="tickerTrack"></div>
@@ -4799,11 +4783,11 @@
             <div class="hero-rate-info">
               <span class="hero-rate-lbl">per hour · 5 ways to earn</span>
               <div class="hero-methods">
-                <span class="method-tag">Per Hour</span>
-                <span class="method-tag">Per Message</span>
-                <span class="method-tag">Per Session</span>
-                <span class="method-tag">Tips</span>
-                <span class="method-tag">Daily Rewards</span>
+                <span class="method-tag">Per Hour</span
+                ><span class="method-tag">Per Message</span
+                ><span class="method-tag">Per Session</span
+                ><span class="method-tag">Tips</span
+                ><span class="method-tag">Daily Rewards</span>
               </div>
             </div>
           </div>
@@ -4841,15 +4825,21 @@
             <span class="flag-chip">🌍 +100 more</span>
           </div>
           <div class="hero-btns">
-            <button class="btn btn-ghost btn-xl" id="meetBtn">
-              <i class="fas fa-users"></i> Meet People Ready to Chat
+            <!-- CHANGE 3: Eye-catching Meet People button with live dot + badge -->
+            <button class="btn btn-xl" id="meetBtn" style="position: relative">
+              <span class="meet-live-dot"></span>
+              <span id="meetBtnTxt">Meet People Ready to Chat</span>
+              <span class="meet-badge">LIVE</span>
             </button>
-            <button
-              class="btn btn-g btn-xl register-link"
-              data-url="https://Starhela.com/register.php?ref=sydney"
+            <!-- CHANGE 2: Direct link — no modal -->
+            <a
+              href="https://Starhela.com/register.php?ref=sydney"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-g btn-xl"
             >
               <i class="fas fa-user-plus"></i> Create Account
-            </button>
+            </a>
           </div>
           <div id="pCardWrap" style="margin-bottom: 1.5rem"></div>
           <div class="hero-proof">
@@ -5194,8 +5184,9 @@
             What do you <span class="g-text">chat about?</span>
           </h2>
           <p class="sub">
-            All chats are friendly, safe, and text-only. No adult content — just
-            real conversations people pay for.
+            Many users join to build international friendships, learn about
+            different cultures, share life experiences, and sometimes create
+            meaningful long-term relationships.
           </p>
         </div>
         <div class="topics-grid">
@@ -5282,24 +5273,28 @@
                 <strong style="color: var(--text-0)"
                   >genuine text conversations</strong
                 >
-                with verified chatters in Africa — about culture, travel, daily
-                life, and companionship.
+                with verified chatters in Africa. Many users join to build
+                international friendships, learn about different cultures, share
+                life experiences, and sometimes create meaningful long-term
+                relationships that can grow naturally over time.
               </p>
+
               <p style="margin-top: 0.625rem">
                 All conversations are
                 <strong style="color: var(--text-0)"
                   >text-only, moderated, and appropriate</strong
-                >. No adult content, ever.
+                >to ensure a safe and comfortable experience for everyone.
               </p>
               <div class="cl-intro-badges">
                 <span class="cl-badge blue"
                   ><i class="fas fa-shield-halved"></i> Verified Profiles</span
                 >
                 <span class="cl-badge green"
-                  ><i class="fas fa-eye-slash"></i> Privacy Protected</span
+                  ><i class="fas fa-eye-slash"></i> International
+                  Connections</span
                 >
                 <span class="cl-badge red"
-                  ><i class="fas fa-ban"></i> No Adult Content</span
+                  ><i class="fas fa-ban"></i> Meaningful Conversations</span
                 >
               </div>
             </div>
@@ -5321,9 +5316,10 @@
                     margin-bottom: 0.3rem;
                   "
                   >Please note:</strong
-                >This service is <strong>not</strong> for adult content,
-                romantic relationships, or financial transactions. These are
-                strictly friendly, cultural text conversations.
+                >This platform is designed for respectful conversations,
+                friendships, cultural exchange, and genuine human connections.
+                Any inappropriate behavior, scams, or explicit adult content is
+                strictly prohibited.
               </div>
             </div>
           </div>
@@ -5585,16 +5581,17 @@
               >earn money</strong
             >
             by chatting?
+            <!-- CHANGE 2: Direct link — no modal -->
             <a
-              href="javascript:void(0)"
-              class="register-link"
+              href="https://Starhela.com/register.php?ref=sydney"
+              target="_blank"
+              rel="noopener"
               style="
                 color: var(--violet-4);
                 font-weight: 700;
                 text-decoration: underline;
                 text-underline-offset: 3px;
               "
-              data-url="https://Starhela.com/register.php?ref=sydney"
               >Register as an Earner →</a
             >
           </p>
@@ -5680,12 +5677,16 @@
               </div>
             </div>
             <div class="req-panel-cta">
-              <button
-                class="req-panel-cta-btn register-link"
-                data-url="https://Starhela.com/register.php?ref=sydney"
+              <!-- CHANGE 2: Direct link — no modal -->
+              <a
+                href="https://Starhela.com/register.php?ref=sydney"
+                target="_blank"
+                rel="noopener"
+                class="req-panel-cta-btn"
+                style="text-decoration: none"
               >
                 <i class="fas fa-rocket"></i> Start Accepting Requests
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -5958,7 +5959,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA — direct link, no modal -->
     <section class="cta-sec">
       <div class="cta-inner fu">
         <div class="pill" style="display: inline-flex">
@@ -5973,16 +5974,16 @@
         </p>
         <div class="cta-btns">
           <a
-            href="javascript:void(0)"
-            class="btn btn-g btn-xl register-link"
-            data-url="https://Starhela.com/register.php?ref=sydney"
+            href="https://Starhela.com/register.php?ref=sydney"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-g btn-xl"
             ><i class="fas fa-rocket"></i> Start Chatting Now</a
           >
         </div>
       </div>
     </section>
 
-    <!-- NAVIGATION -->
     <div
       class="about-navigation"
       style="max-width: 1200px; margin: 50px auto; padding: 20px 1.25rem"
@@ -5996,7 +5997,7 @@
       ></a>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER — direct links, no modal -->
     <footer role="contentinfo" class="footer">
       <div class="footer-grid">
         <div>
@@ -6055,10 +6056,8 @@
         <div>
           <div class="footer-col-title">Quick Links</div>
           <div class="footer-links">
-            <a href="#how">How It Works</a>
-            <a href="#earn">Earning Methods</a>
-            <a href="#topics">Chat Topics</a>
-            <a href="#faq">FAQ</a>
+            <a href="#how">How It Works</a><a href="#earn">Earning Methods</a
+            ><a href="#topics">Chat Topics</a><a href="#faq">FAQ</a>
             <a
               href="https://starhela.com/register.php?ref=sydney"
               target="_blank"
@@ -6111,9 +6110,10 @@
           </div>
           <div style="margin-top: 20px">
             <a
-              href="javascript:void(0)"
-              class="footer-cta-btn register-link"
-              data-url="https://Starhela.com/register.php?ref=sydney"
+              href="https://Starhela.com/register.php?ref=sydney"
+              target="_blank"
+              rel="noopener"
+              class="footer-cta-btn"
               >🚀 Register on Starhela Today</a
             >
           </div>
@@ -6142,7 +6142,6 @@
       </div>
     </footer>
 
-    <!-- Chatway widget -->
     <script
       id="chatway"
       async
@@ -6159,7 +6158,7 @@
         const rand = (a) => a[Math.floor(Math.random() * a.length)];
         const fmt = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-        /* ─── PAGE LOADER ─── */
+        /* PAGE LOADER */
         window.addEventListener("load", () => {
           setTimeout(() => {
             const l = $("pageLoader");
@@ -6167,15 +6166,15 @@
           }, 800);
         });
 
-        /* ─── COUNTRIES DATA (renamed from countryData so all references work) ─── */
+        /* COUNTRIES DATA */
         const COUNTRIES = [
           {
             name: "Kenya",
             flag: "🇰🇪",
             old: "KSH 650",
             fee: "KSH 550",
-            save: "KSH 150",
-            disc: "23%",
+            save: "KSH 100",
+            disc: "15%",
             pay: "M-Pesa",
             urg: "⏳ Offer expires soon!",
             img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
@@ -6186,7 +6185,7 @@
             old: "UGX 24,500",
             fee: "UGX 19,500",
             save: "UGX 5,000",
-            disc: "21%",
+            disc: "20%",
             pay: "MTN Money / Airtel Money",
             urg: "⏳ Limited spots!",
             img: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=800&q=80",
@@ -6208,7 +6207,7 @@
             old: "TZS 14,000",
             fee: "TZS 11,000",
             save: "TZS 3,000",
-            disc: "20%",
+            disc: "21%",
             pay: "M-Pesa Tanzania",
             urg: "⏳ Grab it before it's gone!",
             img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
@@ -6219,7 +6218,7 @@
             old: "ZAR 100",
             fee: "ZAR 70",
             save: "ZAR 30",
-            disc: "33%",
+            disc: "30%",
             pay: "Bank Transfer / PayPal",
             urg: "⏳ Offer expires soon!",
             img: "https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=800&q=80",
@@ -6229,7 +6228,7 @@
             flag: "🇬🇭",
             old: "GH₵ 120",
             fee: "GH₵ 95",
-            save: "GH₵ 14",
+            save: "GH₵ 25",
             disc: "20%",
             pay: "MTN MoMo",
             urg: "⏳ Limited time!",
@@ -6241,7 +6240,7 @@
             old: "XAF 6,000",
             fee: "XAF 4,500",
             save: "XAF 1,500",
-            disc: "28%",
+            disc: "25%",
             pay: "MTN Money",
             urg: "⏳ Limited spots!",
             img: "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=800&q=80",
@@ -6274,7 +6273,7 @@
             old: "$12.00",
             fee: "$10.00",
             save: "$2.00",
-            disc: "20%",
+            disc: "17%",
             pay: "EcoCash",
             urg: "⏳ Grab it now!",
             img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80",
@@ -6285,7 +6284,7 @@
             old: "MWK 30,000",
             fee: "MWK 26,000",
             save: "MWK 4,000",
-            disc: "20%",
+            disc: "13%",
             pay: "Airtel Money",
             urg: "⏳ Grab it now!",
             img: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=800&q=80",
@@ -6307,28 +6306,23 @@
             old: "$12.00",
             fee: "$10.00",
             save: "$2.00",
-            disc: "20%",
+            disc: "17%",
             pay: "PayPal / Bank Transfer",
             urg: "⏳ Limited offer!",
             img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
           },
         ];
 
-        /* ─── GEO-DETECT: set selC immediately to Kenya default,
-             then update if IP detection succeeds ─── */
         let selC = COUNTRIES[0];
-
         fetch("https://ipapi.co/json/")
-          .then((res) => res.json())
-          .then((data) => {
-            const match = COUNTRIES.find((c) => c.name === data.country_name);
-            if (match) selC = match;
+          .then((r) => r.json())
+          .then((d) => {
+            const m = COUNTRIES.find((c) => c.name === d.country_name);
+            if (m) selC = m;
           })
-          .catch(() => {
-            /* silently keep Kenya default */
-          });
+          .catch(() => {});
 
-        /* ─── CHAT PROFILES ─── */
+        /* CHAT PROFILES */
         const CHAT_PROFILES = [
           {
             name: "James, 52",
@@ -6373,7 +6367,6 @@
           },
         ];
 
-        /* ─── FAQS ─── */
         const FAQS = [
           {
             q: "How do I get paid?",
@@ -6389,7 +6382,7 @@
           },
           {
             q: "What kinds of chats will I have?",
-            a: "Culture, travel, daily life, companionship, and advice — with clients from UK, USA, Canada, Qatar, Malaysia and more. All chats are friendly, text-only, and appropriate. No adult content.",
+            a: "Culture, travel, daily life, companionship, and advice — with clients from UK, USA, Canada, Qatar, Malaysia and more. All chats are friendly, text-only, and appropriate. No misleading content.",
           },
           {
             q: "How much time do I need to commit?",
@@ -6405,7 +6398,6 @@
           },
         ];
 
-        /* ─── LEGAL ─── */
         const LEGAL = {
           terms: {
             icon: "📄",
@@ -6424,7 +6416,6 @@
           },
         };
 
-        /* ─── PROFILES ─── */
         const PROFILES = [
           {
             id: 1,
@@ -6538,7 +6529,7 @@
           nT = setTimeout(() => n.classList.remove("show"), 3500);
         }
 
-        /* ─── OFFER MODAL ─── */
+        /* OFFER MODAL */
         const offerOv = $("offerOv");
         function openOffer(c) {
           c = c || COUNTRIES[0];
@@ -6552,7 +6543,6 @@
           $("opSave").textContent =
             "✅ You save " + c.save + " — limited time!";
           $("omUrgency").textContent = c.urg;
-          $("omPayment").textContent = c.pay;
           $("offerCtaTxt").textContent = "Register Now — " + c.fee;
           $("omBg").style.backgroundImage = "url('" + c.img + "')";
           offerOv.classList.add("on");
@@ -6574,7 +6564,14 @@
             setTimeout(() => (window.location.href = REG), 300);
           });
 
-        /* ─── ACCOUNT MODAL ─── */
+        /* CHANGE 1: Auto-show offer modal after 30 seconds */
+        setTimeout(() => {
+          if (offerOv && !offerOv.classList.contains("on")) {
+            openOffer(selC);
+          }
+        }, 30000);
+
+        /* ACCOUNT MODAL */
         window.openAcctModal = function () {
           $("acctOv").classList.add("on");
           document.body.style.overflow = "hidden";
@@ -6592,7 +6589,7 @@
             }
           });
 
-        /* ─── MOBILE NAV ─── */
+        /* MOBILE NAV */
         const ham = $("ham"),
           mobNav = $("mobNav");
         function closeMob() {
@@ -6629,15 +6626,7 @@
             closeMob();
         });
 
-        /* ─── REGISTER LINKS — uses geo-detected selC ─── */
-        document.addEventListener("click", (e) => {
-          const el = e.target.closest(".register-link");
-          if (!el) return;
-          e.preventDefault();
-          openOffer(selC);
-        });
-
-        /* ─── ESC KEY ─── */
+        /* ESC KEY */
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") {
             closeChat();
@@ -6648,7 +6637,7 @@
           }
         });
 
-        /* ─── CALCULATOR ─── */
+        /* CALCULATOR */
         const cChats = $("cChats"),
           cRate = $("cRate"),
           cRes = $("cResult");
@@ -6674,7 +6663,7 @@
         cRate && cRate.addEventListener("input", upCalc);
         upCalc();
 
-        /* ─── LIVE COUNTERS ─── */
+        /* LIVE COUNTERS */
         let todayBase = 3240;
         setInterval(() => {
           if (!document.hidden) {
@@ -6703,7 +6692,7 @@
           }
         }, 12000);
 
-        /* ─── SCROLL ─── */
+        /* SCROLL */
         let lastY = 0,
           sTick = false;
         function onScroll() {
@@ -6732,7 +6721,7 @@
           { passive: true },
         );
 
-        /* ─── INTERSECTION OBSERVER ─── */
+        /* INTERSECTION OBSERVER */
         const io = new IntersectionObserver(
           (entries) => {
             entries.forEach((e) => {
@@ -6761,7 +6750,7 @@
           .querySelectorAll(".fu,[data-count]")
           .forEach((el) => io.observe(el));
 
-        /* ─── TICKER ─── */
+        /* TICKER */
         const tItems = [
           "✓ 15,000+ Verified Earners",
           "✓ $890K+ Paid Out",
@@ -6786,7 +6775,7 @@
           });
         }
 
-        /* ─── LIVE REQUESTS ─── */
+        /* LIVE REQUESTS */
         const rl = $("reqList");
         let rData = [
           {
@@ -6820,6 +6809,8 @@
             img: "https://i.pravatar.cc/92?img=47",
           },
         ];
+
+        /* CHANGE 2 (live requests): After accepting, redirect to offer modal */
         function accReq(btn, name) {
           if (btn.disabled) return;
           btn.disabled = true;
@@ -6829,7 +6820,11 @@
           setTimeout(() => {
             btn.innerHTML = '<i class="fas fa-check"></i> Accepted';
             btn.style.opacity = ".55";
-            showNotif("Chat accepted! Log in to start chatting.");
+            showNotif(
+              "🚀 You don’t have an account yet. Register now to start chatting with " +
+                name +
+                ".",
+            );
             setTimeout(() => {
               const c = btn.closest(".req-card");
               if (c) {
@@ -6840,6 +6835,8 @@
                   addRandReq();
                 }, 300);
               }
+              /* Open offer modal after accept */
+              openOffer(selC);
             }, 1200);
           }, 1000);
         }
@@ -6856,6 +6853,7 @@
         }
         window.accReq = accReq;
         window.skpReq = skpReq;
+
         function buildRC(r) {
           const d = document.createElement("div");
           d.className = "req-card";
@@ -6929,7 +6927,7 @@
           if (!document.hidden && Math.random() > 0.45) addRandReq();
         }, 20000);
 
-        /* ─── CHAT MODAL ─── */
+        /* CHAT MODAL */
         const chatOv = $("chatOv"),
           cmMsgs = $("cmMsgs"),
           cmInp = $("cmInp");
@@ -7025,19 +7023,18 @@
         $("openDemo") &&
           $("openDemo").addEventListener("click", () => openChat(chatIdx++));
 
-        /* ─── PROFILE CARDS ─── */
+        /* PROFILE CARDS */
         function renderPCard(idx) {
           const w = $("pCardWrap");
           if (!w) return;
           const p = PROFILES[idx];
-          w.innerHTML = `<div class="pcard"><button class="pcard-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="pcard-img-wrap"><img src="${p.img}" class="pcard-img" alt="${p.name}" loading="lazy"><div class="pcard-badge"><i class="fas ${p.icon}"></i> ${p.badge}</div><div class="pcard-overlay"><div class="pcard-name">${p.name}</div><div class="pcard-info"><span><i class="fas fa-birthday-cake"></i> ${p.age}</span><span><i class="fas fa-map-marker-alt"></i> ${p.loc}</span></div></div></div><div class="pcard-body"><p class="pcard-desc">${p.desc}</p><div class="pcard-foot"><div class="pcard-price">$${p.price}<span>/ hour</span></div><button class="pcard-cta" data-id="${p.id}"><i class="fas fa-comment"></i> View Profile</button></div><a href="javascript:void(0)" class="register-link" data-url="${REG}" style="display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;margin-top:.625rem;padding:.65rem;border-radius:8px;background:var(--grad-brand);color:#fff;font-family:var(--font-b);font-weight:800;font-size:.8rem"><i class="fas fa-th-list"></i> View All Profiles</a></div></div>`;
+          w.innerHTML = `<div class="pcard"><button class="pcard-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="pcard-img-wrap"><img src="${p.img}" class="pcard-img" alt="${p.name}" loading="lazy"><div class="pcard-badge"><i class="fas ${p.icon}"></i> ${p.badge}</div><div class="pcard-overlay"><div class="pcard-name">${p.name}</div><div class="pcard-info"><span><i class="fas fa-birthday-cake"></i> ${p.age}</span><span><i class="fas fa-map-marker-alt"></i> ${p.loc}</span></div></div></div><div class="pcard-body"><p class="pcard-desc">${p.desc}</p><div class="pcard-foot"><div class="pcard-price">$${p.price}<span>/ hour</span></div><button class="pcard-cta" data-id="${p.id}"><i class="fas fa-comment"></i> View Profile</button></div><a href="${REG}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;margin-top:.625rem;padding:.65rem;border-radius:8px;background:var(--grad-brand);color:#fff;font-family:var(--font-b);font-weight:800;font-size:.8rem"><i class="fas fa-th-list"></i> View All Profiles</a></div></div>`;
           w.querySelector(".pcard-close").addEventListener("click", () => {
             w.innerHTML = "";
             const b = $("meetBtn");
             if (b) {
               b.innerHTML =
-                '<i class="fas fa-users"></i> Meet People Ready to Chat';
-              b.dataset.u = "";
+                '<span class="meet-live-dot"></span><span id="meetBtnTxt">Meet People Ready to Chat</span><span class="meet-badge">LIVE</span>';
               pcLast = -1;
             }
           });
@@ -7059,7 +7056,7 @@
           ov.className = "pmod";
           ov.style.cssText =
             "position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(20px);z-index:10010;display:flex;align-items:center;justify-content:center;padding:1rem;animation:fadeUp .25s ease";
-          ov.innerHTML = `<div style="background:var(--card-0);border:1px solid var(--border-2);border-radius:18px;width:100%;max-width:600px;max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-lg);animation:pop .3s var(--spring);position:relative"><button onclick="this.closest('.pmod').remove();document.body.style.overflow=''" style="position:absolute;top:.875rem;right:.875rem;z-index:5;width:30px;height:30px;border-radius:50%;background:var(--bg-0);border:1px solid var(--border-0);cursor:pointer;display:grid;place-items:center;font-size:.73rem;color:var(--text-2)"><i class="fas fa-times"></i></button><div style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:var(--card-1);border-radius:18px 18px 0 0;border-bottom:1px solid var(--border-0)"><img src="${p.img}" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid var(--border-2);flex-shrink:0" loading="lazy"><div><div style="font-size:1.35rem;font-weight:800;color:var(--text-0)">${p.name}, ${p.age}</div><div style="font-size:.82rem;color:var(--text-2);margin-top:.18rem"><i class="fas fa-map-marker-alt"></i> ${p.loc}</div><div style="font-size:1.15rem;font-weight:800;color:var(--violet-4);margin-top:.28rem">$${p.price}<span style="font-size:.75rem;font-weight:400;color:var(--text-3)">/hour</span></div></div></div><div style="padding:1.5rem;border-bottom:1px solid var(--border-0)"><p style="font-size:.875rem;color:var(--text-2);line-height:1.75">${p.full}</p><div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.875rem">${p.tags.map((t) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.22rem .65rem;border-radius:6px;font-size:.76rem;font-weight:700;border:1px solid var(--border-2)">${t}</span>`).join("")}</div></div><div style="padding:1.25rem;border-bottom:1px solid var(--border-0)"><div style="font-size:.54rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:.35rem">Languages</div>${p.langs.map((l) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.2rem .58rem;border-radius:6px;font-size:.74rem;font-weight:700;border:1px solid var(--border-2);margin-right:.22rem">${l}</span>`).join("")}</div><div style="padding:1.25rem;background:var(--card-1);border-radius:0 0 18px 18px"><div style="display:flex;align-items:center;gap:.5rem;background:var(--bg-0);border:1px solid var(--border-0);border-radius:8px;padding:.75rem;font-size:.82rem;color:var(--text-2);margin-bottom:.875rem"><i class="fas fa-info-circle" style="color:var(--violet-4);flex-shrink:0"></i> To chat with ${p.name}, create your account first</div><div style="display:flex;gap:.75rem;flex-wrap:wrap"><a href="javascript:void(0)" class="register-link" data-url="${REG}" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:var(--grad-brand);color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-user-plus"></i> Create Account</a><a href="https://Starhela.com/login.php" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:#25d350;color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-sign-in-alt"></i> Login</a></div></div></div>`;
+          ov.innerHTML = `<div style="background:var(--card-0);border:1px solid var(--border-2);border-radius:18px;width:100%;max-width:600px;max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-lg);animation:pop .3s var(--spring);position:relative"><button onclick="this.closest('.pmod').remove();document.body.style.overflow=''" style="position:absolute;top:.875rem;right:.875rem;z-index:5;width:30px;height:30px;border-radius:50%;background:var(--bg-0);border:1px solid var(--border-0);cursor:pointer;display:grid;place-items:center;font-size:.73rem;color:var(--text-2)"><i class="fas fa-times"></i></button><div style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:var(--card-1);border-radius:18px 18px 0 0;border-bottom:1px solid var(--border-0)"><img src="${p.img}" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid var(--border-2);flex-shrink:0" loading="lazy"><div><div style="font-size:1.35rem;font-weight:800;color:var(--text-0)">${p.name}, ${p.age}</div><div style="font-size:.82rem;color:var(--text-2);margin-top:.18rem"><i class="fas fa-map-marker-alt"></i> ${p.loc}</div><div style="font-size:1.15rem;font-weight:800;color:var(--violet-4);margin-top:.28rem">$${p.price}<span style="font-size:.75rem;font-weight:400;color:var(--text-3)">/hour</span></div></div></div><div style="padding:1.5rem;border-bottom:1px solid var(--border-0)"><p style="font-size:.875rem;color:var(--text-2);line-height:1.75">${p.full}</p><div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.875rem">${p.tags.map((t) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.22rem .65rem;border-radius:6px;font-size:.76rem;font-weight:700;border:1px solid var(--border-2)">${t}</span>`).join("")}</div></div><div style="padding:1.25rem;border-bottom:1px solid var(--border-0)"><div style="font-size:.54rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:.35rem">Languages</div>${p.langs.map((l) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.2rem .58rem;border-radius:6px;font-size:.74rem;font-weight:700;border:1px solid var(--border-2);margin-right:.22rem">${l}</span>`).join("")}</div><div style="padding:1.25rem;background:var(--card-1);border-radius:0 0 18px 18px"><div style="display:flex;align-items:center;gap:.5rem;background:var(--bg-0);border:1px solid var(--border-0);border-radius:8px;padding:.75rem;font-size:.82rem;color:var(--text-2);margin-bottom:.875rem"><i class="fas fa-info-circle" style="color:var(--violet-4);flex-shrink:0"></i> To chat with ${p.name}, create your account first</div><div style="display:flex;gap:.75rem;flex-wrap:wrap"><a href="${REG}" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:var(--grad-brand);color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-user-plus"></i> Create Account</a><a href="https://Starhela.com/login.php" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:#25d350;color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-sign-in-alt"></i> Login</a></div></div></div>`;
           ov.addEventListener("click", (e) => {
             if (e.target === ov) {
               ov.remove();
@@ -7069,20 +7066,19 @@
           document.body.appendChild(ov);
           document.body.style.overflow = "hidden";
         }
+
+        /* CHANGE 3: Meet button click handler — updates button text with new markup */
         const meetBtn = $("meetBtn");
         meetBtn &&
           meetBtn.addEventListener("click", function () {
             const idx = pickRandom();
             pcLast = idx;
             renderPCard(idx);
-            if (!this.dataset.u) {
-              this.dataset.u = "1";
-              this.innerHTML =
-                '<i class="fas fa-rotate"></i> Meet Someone Else';
-            }
+            const txtEl = $("meetBtnTxt");
+            if (txtEl) txtEl.textContent = "Meet Someone Else";
           });
 
-        /* ─── FAQ ─── */
+        /* FAQ */
         const fw = $("faqWrap");
         if (fw) {
           const fr = document.createDocumentFragment();
@@ -7110,7 +7106,7 @@
           fw.appendChild(fr);
         }
 
-        /* ─── LEGAL ─── */
+        /* LEGAL */
         window.openLegal = function (type) {
           switchLegal(type);
           $("lmOv") && $("lmOv").classList.add("on");
@@ -7147,7 +7143,7 @@
           });
         });
 
-        /* ─── SOCIAL PROOF POPUPS ─── */
+        /* SOCIAL PROOF POPUPS */
         const spNames = [
           "Sarah from Nairobi",
           "John from Lagos",
@@ -7187,7 +7183,7 @@
         setTimeout(showSP, 12000);
         setInterval(showSP, 15000);
 
-        /* ─── COOKIES ─── */
+        /* COOKIES */
         const hasCk = () => {
           try {
             return !!localStorage.getItem("Starhela_ck");
@@ -7216,7 +7212,7 @@
             $("cookieBar") && $("cookieBar").classList.remove("show");
           });
 
-        /* ─── SMOOTH SCROLL ─── */
+        /* SMOOTH SCROLL */
         document.querySelectorAll('a[href^="#"]').forEach((a) => {
           a.addEventListener("click", (e) => {
             const id = a.getAttribute("href").slice(1),
@@ -7229,7 +7225,7 @@
           });
         });
 
-        /* ─── TESTIMONIAL DOTS ─── */
+        /* TESTIMONIAL DOTS */
         (function () {
           const tg = document.querySelector(".tgrid"),
             dots = document.querySelectorAll(".tdot");
@@ -7250,7 +7246,6 @@
           );
         })();
 
-        /* ─── INIT LEGAL ─── */
         window.switchLegal("terms");
       })();
     </script>
