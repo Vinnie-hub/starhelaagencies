@@ -3033,90 +3033,6 @@
         font-size: 0.52rem;
         color: var(--gold);
       }
-
-      /* ===== REFERRAL CARD ===== */
-      .ref-card {
-        background: var(--surface);
-        border: 1px solid rgba(124, 58, 237, 0.2);
-        border-radius: var(--radius);
-        padding: 18px;
-        position: relative;
-        overflow: hidden;
-        transition:
-          border-color var(--t),
-          background var(--t-slow);
-      }
-      .ref-card:hover {
-        border-color: rgba(167, 139, 250, 0.35);
-      }
-      .ref-orb {
-        position: absolute;
-        right: -30px;
-        bottom: -30px;
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-        background: radial-gradient(
-          circle,
-          rgba(124, 58, 237, 0.1),
-          transparent 70%
-        );
-        pointer-events: none;
-      }
-      .ref-icon {
-        font-size: 1.6rem;
-        margin-bottom: 8px;
-      }
-      .ref-title {
-        font-family: "Outfit", sans-serif;
-        font-size: 0.92rem;
-        font-weight: 800;
-        margin-bottom: 6px;
-      }
-      .ref-desc {
-        font-size: 0.71rem;
-        color: var(--txt-2);
-        line-height: 1.5;
-        margin-bottom: 13px;
-      }
-      .ref-code-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: var(--bg-4);
-        border: 1px solid var(--border-2);
-        border-radius: 10px;
-        padding: 9px 13px;
-        margin-bottom: 9px;
-      }
-      .ref-code {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 0.76rem;
-        font-weight: 700;
-        color: var(--brand-lt);
-        letter-spacing: 0.07em;
-      }
-      .copy-btn {
-        font-size: 0.65rem;
-        font-weight: 700;
-        color: var(--brand-lt);
-        background: rgba(124, 58, 237, 0.1);
-        border: 1px solid rgba(124, 58, 237, 0.2);
-        padding: 4px 10px;
-        border-radius: 7px;
-        transition: all var(--t);
-        font-family: "Plus Jakarta Sans", sans-serif;
-        cursor: pointer;
-      }
-      .copy-btn:hover {
-        background: rgba(124, 58, 237, 0.2);
-      }
-      .ref-earned {
-        font-size: 0.68rem;
-        color: var(--green);
-        font-weight: 700;
-      }
-
       /* ===== LEADERBOARD ===== */
       .lb-list {
         padding: 8px 12px 12px;
@@ -5189,13 +5105,15 @@
                   </div>
                   <div class="txn-body">
                     <div class="txn-title">
-                      Starhela Referral Bonus — James K.
+                      Starhela Chatting Bonus — James K.
                     </div>
-                    <div class="txn-meta">Referral joined · 2 days ago</div>
+                    <div class="txn-meta">
+                      Completed a chat session · 2 days ago
+                    </div>
                   </div>
                   <div class="txn-right">
                     <div class="txn-amt pos">+KSH 650</div>
-                    <div class="txn-time">Referral Bonus</div>
+                    <div class="txn-time">Chatting Bonus</div>
                   </div>
                 </div>
               </div>
@@ -5319,7 +5237,7 @@
                       role="button"
                       aria-expanded="false"
                     >
-                      <span>Can I earn from Starhela referrals?</span
+                      <span>Can I earn from agent work?</span
                       ><svg
                         class="faq-chevron"
                         viewBox="0 0 24 24"
@@ -5332,12 +5250,12 @@
                     </div>
                     <div class="faq-a">
                       <div class="faq-a-inner">
-                        Yes! Once your Starhela account is active, you get a
-                        personal referral link. Earn $5 for every person you
-                        refer who joins and activates their account. Many top
-                        Starhela earners across Kenya and Africa grow their
-                        income significantly through the referral program. No
-                        limit on referrals.
+                        Yes, Once your Starhela account is active, you’ll get a
+                        personal invite link. Members who choose to learn the
+                        Starhela Agent system can earn bonuses when people they
+                        introduce activate their accounts. Becoming an agent is
+                        optional — many users earn simply by chatting with
+                        foreigners.
                       </div>
                     </div>
                   </div>
@@ -5577,23 +5495,6 @@
                 </div>
               </div>
             </section>
-            <div class="ref-card reveal">
-              <div class="ref-orb"></div>
-              <div class="ref-icon">🤝</div>
-              <h3 class="ref-title">Starhela Referral — Earn $5 Per Friend</h3>
-              <p class="ref-desc">
-                Invite anyone in Kenya, Uganda, Nigeria or worldwide to Starhela
-                and earn $5 for every friend who registers and activates their
-                account. No limit on referrals.
-              </p>
-              <div class="ref-code-row">
-                <span class="ref-code">STAR-OW-7742</span
-                ><button class="copy-btn" id="copyBtn">Copy</button>
-              </div>
-              <div class="ref-earned">
-                💰 $150 earned from Starhela referrals
-              </div>
-            </div>
             <div class="panel reveal">
               <div class="panel-header">
                 <h3>🏆 Top Starhela Earners This Week</h3>
