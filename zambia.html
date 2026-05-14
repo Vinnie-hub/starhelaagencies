@@ -7,26 +7,25 @@
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
     <title>
-      StarHela Zambia | Earn Online – Chat, Tasks & 3-Level Referrals | Airtel &
-      MTN Zambia
+      StarHela Zambia | Chat With Foreigners & Earn Online | Airtel & MTN Zambia
     </title>
     <meta
       name="description"
-      content="Join StarHela Zambia today. One-time activation 130 ZMW. Chat with foreigners, complete micro tasks, AI labeling, surveys, data entry, and earn Level 1: 50 ZMW, Level 2: 30 ZMW, Level 3: 20 ZMW per active referral. Withdraw to Airtel Money & MTN Mobile Money."
+      content="Join StarHela Zambia. One-time activation 130 ZMW. Chat with foreigners online and earn up to 1,000 ZMW/day. Plus micro tasks, AI labeling, surveys & more. Withdraw to Airtel Money & MTN Mobile Money."
     />
     <meta
       name="keywords"
-      content="StarHela Zambia, earn online Zambia, chatting jobs Zambia, referral income Zambia, Airtel Zambia, MTN Mobile Money, micro tasks Zambia, AI tasks Zambia"
+      content="StarHela Zambia, chat with foreigners earn money Zambia, earn online Zambia, chatting jobs Zambia, Airtel Zambia, MTN Mobile Money, micro tasks Zambia"
     />
     <meta name="author" content="StarHela Zambia" />
     <meta name="robots" content="index, follow" />
     <meta
       property="og:title"
-      content="StarHela Zambia | Earn via Chatting + Tasks + 3-Level Referrals"
+      content="StarHela Zambia | Chat With Foreigners & Earn Online"
     />
     <meta
       property="og:description"
-      content="Activation 130 ZMW. Chat with foreigners, complete tasks, earn 50/30/20 ZMW referral bonuses. Withdraw to Airtel & MTN Zambia."
+      content="Activation 130 ZMW. Chat with foreigners & complete tasks. Withdraw to Airtel & MTN Zambia."
     />
     <meta property="og:url" content="https://starhelaagencies.com/zm" />
     <link rel="canonical" href="https://starhelaagencies.com/zm" />
@@ -51,6 +50,8 @@
         --zm-green: #1a7c1a;
         --zm-orange: #e07010;
         --zm-red: #c01020;
+        --chat-blue: #0e6fd8;
+        --chat-teal: #0aa3a3;
         --gold: #f0a500;
         --white: #ffffff;
         --gray-1: #f8f7fd;
@@ -90,7 +91,7 @@
         overflow-x: hidden;
       }
 
-      /* ── PAGE LOADER ── */
+      /* PAGE LOADER */
       #pageLoader {
         position: fixed;
         inset: 0;
@@ -156,7 +157,7 @@
         }
       }
 
-      /* ── NAVBAR ── */
+      /* NAVBAR */
       nav.top-nav {
         position: fixed;
         top: 0;
@@ -300,13 +301,13 @@
         box-shadow: 0 6px 20px rgba(91, 47, 207, 0.3);
       }
 
-      /* ── HERO ── */
+      /* HERO */
       .hero {
         padding: 120px clamp(16px, 5vw, 64px) 80px;
         background: linear-gradient(
           160deg,
           #f5f0ff 0%,
-          #fffaf0 60%,
+          #e8f4ff 50%,
           #f0fff4 100%
         );
         position: relative;
@@ -321,7 +322,7 @@
         height: 600px;
         background: radial-gradient(
           circle,
-          rgba(124, 77, 255, 0.12) 0%,
+          rgba(14, 111, 216, 0.1) 0%,
           transparent 70%
         );
         pointer-events: none;
@@ -352,9 +353,9 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(91, 47, 207, 0.1);
-        border: 1px solid rgba(91, 47, 207, 0.2);
-        color: var(--pu-2);
+        background: rgba(14, 111, 216, 0.1);
+        border: 1px solid rgba(14, 111, 216, 0.2);
+        color: var(--chat-blue);
         font-size: 0.72rem;
         font-weight: 700;
         letter-spacing: 0.08em;
@@ -374,8 +375,8 @@
       .hero h1 .accent {
         color: var(--zm-orange);
       }
-      .hero h1 .accent-green {
-        color: var(--zm-green);
+      .hero h1 .accent-blue {
+        color: var(--chat-blue);
       }
       .hero-desc {
         font-size: 1rem;
@@ -471,10 +472,12 @@
       .hero-stat i {
         color: var(--zm-green);
       }
+
+      /* CHAT SHOWCASE VISUAL */
       .hero-visual {
-        background: linear-gradient(135deg, var(--pu-1), var(--pu-3));
+        background: linear-gradient(135deg, #0e2a5c, #1a4fa8, #0e6fd8);
         border-radius: var(--radius-lg);
-        padding: 40px 32px;
+        padding: 36px 28px;
         box-shadow: var(--shadow-lg);
         position: relative;
         overflow: hidden;
@@ -491,46 +494,152 @@
       }
       .hv-title {
         font-family: var(--ff-head);
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 800;
         color: #fff;
-        margin-bottom: 24px;
-      }
-      .hv-level {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: var(--radius-sm);
-        padding: 14px 18px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        backdrop-filter: blur(8px);
+        gap: 8px;
       }
-      .hv-level-name {
+      .hv-online-dot {
+        width: 8px;
+        height: 8px;
+        background: #4ade80;
+        border-radius: 50%;
+        animation: pulse-dot 2s infinite;
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.6;
+          transform: scale(1.4);
+        }
+      }
+
+      /* CHAT BUBBLES */
+      .chat-thread {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .chat-msg {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+      }
+      .chat-msg.foreign {
+        flex-direction: row;
+      }
+      .chat-msg.you {
+        flex-direction: row-reverse;
+      }
+      .chat-avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        flex-shrink: 0;
         font-size: 0.8rem;
+        display: grid;
+        place-items: center;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.85);
       }
-      .hv-level-amt {
-        font-family: var(--ff-mono);
-        font-size: 1.2rem;
-        font-weight: 800;
+      .chat-msg.foreign .chat-avatar {
+        background: rgba(255, 255, 255, 0.2);
         color: #fff;
       }
+      .chat-msg.you .chat-avatar {
+        background: #4ade80;
+        color: #0a3a0a;
+      }
+      .chat-bubble {
+        max-width: 78%;
+        padding: 10px 14px;
+        border-radius: 16px;
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+      .chat-msg.foreign .chat-bubble {
+        background: rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.92);
+        border-bottom-left-radius: 4px;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .chat-msg.you .chat-bubble {
+        background: #22c55e;
+        color: #fff;
+        border-bottom-right-radius: 4px;
+      }
+      .chat-flag {
+        font-size: 0.65rem;
+      }
+      .chat-earn-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(240, 165, 0, 0.25);
+        border: 1px solid rgba(240, 165, 0, 0.4);
+        color: #fde68a;
+        font-size: 0.62rem;
+        font-weight: 800;
+        padding: 3px 10px;
+        border-radius: 99px;
+        margin-top: 6px;
+      }
+
       .hv-divider {
         border: none;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin: 16px 0;
       }
-      .hv-total {
+      .hv-earn-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .hv-earn-box {
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        padding: 12px 14px;
+        backdrop-filter: blur(8px);
+      }
+      .hv-earn-lbl {
+        font-size: 0.6rem;
+        color: rgba(255, 255, 255, 0.55);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 4px;
+      }
+      .hv-earn-val {
+        font-family: var(--ff-mono);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+      }
+      .hv-earn-val.green {
+        color: #4ade80;
+      }
+      .hv-total-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        padding: 14px 18px;
         text-align: center;
+        margin-top: 12px;
       }
       .hv-total-lbl {
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.65rem;
+        color: rgba(255, 255, 255, 0.6);
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        margin-bottom: 4px;
       }
       .hv-total-val {
         font-family: var(--ff-mono);
@@ -544,17 +653,17 @@
         gap: 6px;
         background: rgba(240, 165, 0, 0.2);
         border: 1px solid rgba(240, 165, 0, 0.35);
-        color: var(--gold);
+        color: #fde68a;
         font-size: 0.65rem;
         font-weight: 800;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         padding: 4px 12px;
         border-radius: 99px;
-        margin-top: 10px;
+        margin-top: 8px;
       }
 
-      /* ── TRUST STRIP ── */
+      /* TRUST STRIP */
       .trust-strip {
         background: #fff;
         border-bottom: 1px solid var(--gray-2);
@@ -595,7 +704,7 @@
         color: var(--text-3);
       }
 
-      /* ── SECTION WRAPPER ── */
+      /* SECTION WRAPPER */
       .section {
         padding: 80px clamp(16px, 5vw, 64px);
       }
@@ -636,7 +745,7 @@
         margin: 0 auto;
       }
 
-      /* ── HOW IT WORKS ── */
+      /* HOW IT WORKS */
       .steps-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -690,7 +799,207 @@
         line-height: 1.6;
       }
 
-      /* ── ACTIVITIES GRID ── */
+      /* CHATTING DEEP DIVE */
+      .chat-section {
+        background: linear-gradient(160deg, #e8f4ff 0%, #f5f0ff 100%);
+      }
+      .chat-deep-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: start;
+      }
+      .chat-deep-h2 {
+        font-family: var(--ff-head);
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        font-weight: 800;
+        color: var(--text-1);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .chat-deep-lead {
+        font-size: 1rem;
+        color: var(--text-2);
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .chat-feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+      .chat-feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .cf-icon {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, var(--chat-blue), #3b82f6);
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        font-size: 0.9rem;
+        color: #fff;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .cf-text strong {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text-1);
+        margin-bottom: 3px;
+      }
+      .cf-text span {
+        font-size: 0.78rem;
+        color: var(--text-3);
+        line-height: 1.5;
+      }
+
+      /* CHAT EARNINGS VISUAL PANEL */
+      .chat-earnings-panel {
+        background: #fff;
+        border: 1px solid var(--gray-2);
+        border-radius: var(--radius-lg);
+        padding: 32px;
+        box-shadow: var(--shadow-md);
+      }
+      .cep-title {
+        font-family: var(--ff-head);
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--text-1);
+        margin-bottom: 20px;
+      }
+      .cep-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        background: var(--gray-1);
+        border: 1px solid var(--gray-2);
+        border-radius: 12px;
+        margin-bottom: 10px;
+      }
+      .cep-row-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .cep-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .cep-dot.blue {
+        background: var(--chat-blue);
+      }
+      .cep-dot.teal {
+        background: var(--chat-teal);
+      }
+      .cep-dot.orange {
+        background: var(--zm-orange);
+      }
+      .cep-dot.green {
+        background: var(--zm-green);
+      }
+      .cep-name {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--text-2);
+      }
+      .cep-amt {
+        font-family: var(--ff-mono);
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--text-1);
+      }
+      .cep-divider {
+        border: none;
+        border-top: 1px solid var(--gray-2);
+        margin: 16px 0;
+      }
+      .cep-total-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 18px;
+        background: linear-gradient(
+          135deg,
+          rgba(26, 124, 26, 0.08),
+          rgba(26, 124, 26, 0.03)
+        );
+        border: 1px solid rgba(26, 124, 26, 0.2);
+        border-radius: 14px;
+      }
+      .cep-total-label {
+        font-family: var(--ff-head);
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--zm-green);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .cep-total-amt {
+        font-family: var(--ff-mono);
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--zm-green);
+      }
+      .cep-note {
+        margin-top: 14px;
+        font-size: 0.73rem;
+        color: var(--text-3);
+        text-align: center;
+      }
+
+      /* COUNTRIES STRIP */
+      .countries-strip {
+        background: linear-gradient(135deg, #0e2a5c, #1a4fa8);
+        padding: 28px clamp(16px, 5vw, 64px);
+      }
+      .cs-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 24px;
+        justify-content: center;
+      }
+      .cs-label {
+        font-family: var(--ff-head);
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        flex-shrink: 0;
+      }
+      .cs-flags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+      .cs-flag-chip {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 99px;
+        padding: 6px 14px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* ACTIVITIES */
       .acts-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -749,10 +1058,6 @@
       .bdg-new {
         background: var(--pu-bg);
         color: var(--pu-2);
-      }
-      .bdg-top {
-        background: #fce4ec;
-        color: #c01020;
       }
       .earn-badge {
         background: rgba(0, 0, 0, 0.7);
@@ -826,7 +1131,7 @@
         box-shadow: 0 8px 20px rgba(91, 47, 207, 0.35);
       }
 
-      /* ── DETAIL ACTIVITIES ── */
+      /* DETAIL TASKS */
       .detail-acts-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -871,73 +1176,7 @@
         line-height: 1.6;
       }
 
-      /* ── REFERRAL LEVELS ── */
-      .ref-section {
-        background: linear-gradient(160deg, var(--pu-1) 0%, #2d1060 100%);
-      }
-      .ref-section .section-head h2 {
-        color: #fff;
-      }
-      .ref-section .section-head p {
-        color: rgba(255, 255, 255, 0.7);
-      }
-      .ref-section .section-eyebrow {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.2);
-        color: rgba(255, 255, 255, 0.9);
-      }
-      .ref-levels {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        margin-bottom: 40px;
-      }
-      .ref-card {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: var(--radius-md);
-        padding: 32px 24px;
-        text-align: center;
-        backdrop-filter: blur(12px);
-        transition: all var(--t);
-      }
-      .ref-card:hover {
-        background: rgba(255, 255, 255, 0.13);
-        transform: translateY(-4px);
-      }
-      .ref-card-icon {
-        font-size: 2rem;
-        margin-bottom: 12px;
-      }
-      .ref-card-title {
-        font-family: var(--ff-head);
-        font-size: 0.9rem;
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 8px;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-      }
-      .ref-card-amt {
-        font-family: var(--ff-mono);
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #fff;
-        line-height: 1;
-        margin-bottom: 12px;
-      }
-      .ref-card-amt span {
-        font-size: 1rem;
-        font-family: var(--ff-body);
-        color: rgba(255, 255, 255, 0.6);
-      }
-      .ref-card-desc {
-        font-size: 0.78rem;
-        color: rgba(255, 255, 255, 0.65);
-        line-height: 1.6;
-      }
-
-      /* ── TESTIMONIALS ── */
+      /* TESTIMONIALS */
       .testi-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -980,7 +1219,7 @@
         margin-top: 4px;
       }
 
-      /* ── WITHDRAW ── */
+      /* WITHDRAW */
       .withdraw-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1097,7 +1336,7 @@
         font-family: var(--ff-mono);
       }
 
-      /* ── ALERT BANNER ── */
+      /* ALERT BANNER */
       .alert-banner {
         background: linear-gradient(135deg, #fff8e1, #fff3cd);
         border: 1px solid #ffe082;
@@ -1129,7 +1368,7 @@
         color: var(--text-2);
       }
 
-      /* ── FAQ ── */
+      /* FAQ */
       .faq-list {
         max-width: 720px;
         margin: 0 auto;
@@ -1203,7 +1442,7 @@
         line-height: 1.7;
       }
 
-      /* ── FINAL CTA ── */
+      /* FINAL CTA */
       .final-cta {
         background: linear-gradient(160deg, var(--pu-1), var(--pu-2));
         padding: 80px clamp(16px, 5vw, 64px);
@@ -1266,7 +1505,7 @@
         color: rgba(255, 255, 255, 0.55);
       }
 
-      /* ── FOOTER ── */
+      /* FOOTER */
       footer {
         background: #0e0820;
         border-top: 1px solid rgba(255, 255, 255, 0.07);
@@ -1408,6 +1647,7 @@
         font-size: 0.62rem;
         color: rgba(255, 255, 255, 0.35);
       }
+
       /* NAV BETWEEN SECTIONS */
       .about-navigation {
         display: flex;
@@ -1415,32 +1655,33 @@
         align-items: center;
         margin: 50px 0;
         padding: 20px 0;
-        border-top: 1px solid var(--border-0);
-        border-bottom: 1px solid var(--border-0);
+        border-top: 1px solid var(--gray-2);
+        border-bottom: 1px solid var(--gray-2);
       }
       .nav-about {
         display: flex;
         align-items: center;
         gap: 10px;
         padding: 12px 24px;
-        background: var(--card-0);
+        background: #fff;
         color: var(--text-1);
         border-radius: var(--radius-sm);
         font-weight: 600;
         font-size: 0.875rem;
         transition: all 0.22s;
-        border: 1px solid var(--border-1);
+        border: 1px solid var(--gray-2);
         box-shadow: var(--shadow-sm);
+        text-decoration: none;
       }
       .nav-about:hover {
-        background: var(--violet-dim);
-        color: var(--violet-4);
+        background: var(--pu-bg);
+        color: var(--pu-2);
         transform: translateY(-3px);
-        box-shadow: var(--shadow-violet);
-        border-color: var(--border-3);
+        box-shadow: var(--shadow-md);
+        border-color: var(--pu-5);
       }
 
-      /* ── FLOATING WA ── */
+      /* FLOATING WA */
       .float-wa-wrap {
         position: fixed;
         bottom: 24px;
@@ -1519,7 +1760,7 @@
         transform: translateX(0);
       }
 
-      /* ── OFFERWALL MODAL ── */
+      /* OFFERWALL MODAL */
       #offerwallOv {
         position: fixed;
         inset: 0;
@@ -1782,7 +2023,7 @@
         font-weight: 600;
       }
 
-      /* ── ZAMBIA FLAG STRIP ── */
+      /* ZAMBIA FLAG STRIP */
       .zm-flag-strip {
         height: 5px;
         background: linear-gradient(
@@ -1793,7 +2034,7 @@
         );
       }
 
-      /* ── BG VARIANTS ── */
+      /* BG VARIANTS */
       .bg-light-pu {
         background: var(--pu-bg);
       }
@@ -1804,66 +2045,7 @@
         background: #fff;
       }
 
-      /* ── RESPONSIVE ── */
-      @media (max-width: 900px) {
-        .hero-inner {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-        .hero-visual {
-          order: -1;
-        }
-        .steps-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .acts-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .detail-acts-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .ref-levels {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .testi-grid {
-          grid-template-columns: 1fr;
-        }
-        .withdraw-grid {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-        .footer-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 600px) {
-        .nav-links {
-          display: none;
-        }
-        .nav-hamburger {
-          display: flex;
-        }
-        .steps-grid {
-          grid-template-columns: 1fr;
-        }
-        .acts-grid {
-          grid-template-columns: 1fr;
-        }
-        .detail-acts-grid {
-          grid-template-columns: 1fr;
-        }
-        .ref-levels {
-          grid-template-columns: 1fr;
-        }
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
-        .trust-inner {
-          gap: 20px;
-        }
-      }
-
-      /* ── ANIMATIONS ── */
+      /* ANIMATIONS */
       .reveal {
         opacity: 0;
         transform: translateY(28px);
@@ -1897,6 +2079,66 @@
         opacity: 1;
         transform: translateX(0);
       }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-visual {
+          order: -1;
+        }
+        .steps-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .acts-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-acts-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .testi-grid {
+          grid-template-columns: 1fr;
+        }
+        .withdraw-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .chat-deep-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-hamburger {
+          display: flex;
+        }
+        .steps-grid {
+          grid-template-columns: 1fr;
+        }
+        .acts-grid {
+          grid-template-columns: 1fr;
+        }
+        .detail-acts-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .trust-inner {
+          gap: 20px;
+        }
+        .hv-earn-row {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1904,7 +2146,7 @@
     <div id="pageLoader">
       <div class="loader-ring"></div>
       <div class="loader-brand">STARHELA</div>
-      <div class="loader-sub">StarHela Zambia · Earn Online · 🇿🇲</div>
+      <div class="loader-sub">StarHela Zambia · Chat & Earn · 🇿🇲</div>
       <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     </div>
 
@@ -1979,7 +2221,7 @@
     <div class="float-wa-wrap">
       <span class="float-wa-label">Chat with Agent</span>
       <a
-        href="https://wa.me/254102861720"
+        href="https://wa.me/254729743223"
         class="float-wa"
         target="_blank"
         rel="noopener"
@@ -2000,9 +2242,8 @@
       </a>
       <ul class="nav-links">
         <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#earn-options">Ways to Earn</a></li>
-        <li><a href="#activities">Activities</a></li>
-        <li><a href="#referral-system">Referral Levels</a></li>
+        <li><a href="#chatting">Chat &amp; Earn</a></li>
+        <li><a href="#other-tasks">More Tasks</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li>
           <a
@@ -2019,9 +2260,8 @@
     </nav>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#how-it-works">How It Works</a>
-      <a href="#earn-options">Ways to Earn</a>
-      <a href="#activities">Activities</a>
-      <a href="#referral-system">Referral Levels</a>
+      <a href="#chatting">Chat &amp; Earn</a>
+      <a href="#other-tasks">More Tasks</a>
       <a href="#faq">FAQ</a>
       <a
         href="https://starhela.com/register.php?ref=sydney"
@@ -2031,20 +2271,20 @@
       >
     </div>
 
-    <!-- HERO -->
+    <!-- ═══════════════ HERO ═══════════════ -->
     <section class="hero">
       <div class="hero-inner">
         <div class="reveal-left">
-          <div class="hero-badge">🇿🇲 Trusted by 5,000+ Zambians</div>
+          <div class="hero-badge">💬 #1 Chat-to-Earn Platform in Zambia</div>
           <h1>
-            Earn Online in Zambia <br />with
-            <span class="accent">StarHela</span>
+            Earn Online in Zambia by <span class="accent-blue">Chatting</span
+            ><br />
+            with <span class="accent">Foreigners</span>
           </h1>
           <p class="hero-desc">
-            Chat with foreigners, complete micro tasks, AI labeling, surveys,
-            data entry &amp; earn
-            <strong>3-level referral bonuses.</strong> Works on any smartphone
-            with Airtel or MTN.
+            Get paid to have real conversations with people from around the
+            world — no experience needed. Chat in English, earn per session, and
+            withdraw straight to your Airtel or MTN wallet anytime.
           </p>
           <div class="hero-price">
             <span class="lbl">One-time activation:</span>
@@ -2056,11 +2296,11 @@
               target="_blank"
               class="btn-primary-zm"
             >
-              <i class="fas fa-rocket"></i> Activate Now
+              <i class="fas fa-rocket"></i> Start Chatting & Earning
             </a>
-            <a href="#earn-options" class="btn-secondary-zm">
-              Ways to Earn →
-            </a>
+            <a href="#chatting" class="btn-secondary-zm"
+              >How Chatting Works →</a
+            >
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
@@ -2076,30 +2316,70 @@
         </div>
         <div class="reveal-right">
           <div class="hero-visual">
-            <div class="hv-title">💬 Earn Money by Chatting Online</div>
-            <div class="hv-level">
-              <span class="hv-level-name">💬 Earnings Per Chat Session</span>
-              <span class="hv-level-amt">50 ZMW</span>
+            <div class="hv-title">
+              <div class="hv-online-dot"></div>
+              Live Chat Session — Earn as You Talk
             </div>
-            <div class="hv-level">
-              <span class="hv-level-name"
-                >⏰ Earnings Per Hour of Chatting</span
-              >
-              <span class="hv-level-amt">30 ZMW</span>
-            </div>
-            <div class="hv-level">
-              <span class="hv-level-name">👥 Invite Friends & Earn 50%</span>
-              <span class="hv-level-amt">25 ZMW</span>
+            <!-- SIMULATED CHAT THREAD -->
+            <div class="chat-thread">
+              <div class="chat-msg foreign">
+                <div class="chat-avatar"><span class="chat-flag">🇺🇸</span></div>
+                <div>
+                  <div class="chat-bubble">
+                    Hi! Can you tell me about Zambian culture and traditions? 😊
+                  </div>
+                </div>
+              </div>
+              <div class="chat-msg you">
+                <div class="chat-avatar">Z</div>
+                <div>
+                  <div class="chat-bubble">
+                    Of course! Zambia has over 70 ethnic groups, each with
+                    unique traditions. The most popular is the Kuomboka
+                    ceremony...
+                  </div>
+                  <div class="chat-earn-pill">
+                    💰 +5 ZMW earned this message
+                  </div>
+                </div>
+              </div>
+              <div class="chat-msg foreign">
+                <div class="chat-avatar"><span class="chat-flag">🇬🇧</span></div>
+                <div>
+                  <div class="chat-bubble">
+                    That's fascinating! What's the best time to visit Victoria
+                    Falls?
+                  </div>
+                </div>
+              </div>
+              <div class="chat-msg you">
+                <div class="chat-avatar">Z</div>
+                <div>
+                  <div class="chat-bubble">
+                    February to May is peak flow season — the falls are most
+                    powerful then! 🌊
+                  </div>
+                  <div class="chat-earn-pill">
+                    💰 +5 ZMW earned this message
+                  </div>
+                </div>
+              </div>
             </div>
             <hr class="hv-divider" />
-            <div class="hv-total">
-              <div class="hv-total-lbl">
-                Estimated Daily Earnings from Chatting
+            <div class="hv-earn-row">
+              <div class="hv-earn-box">
+                <div class="hv-earn-lbl">Per Chat Session</div>
+                <div class="hv-earn-val green">50 ZMW</div>
               </div>
+              <div class="hv-earn-box">
+                <div class="hv-earn-lbl">Per Hour Chatting</div>
+                <div class="hv-earn-val green">30 ZMW</div>
+              </div>
+            </div>
+            <div class="hv-total-box">
+              <div class="hv-total-lbl">Estimated Daily Earnings</div>
               <div class="hv-total-val">1,000 ZMW</div>
-              <div class="hv-badge">
-                🔥 Main Income Comes From Chatting Online
-              </div>
+              <div class="hv-badge">🔥 Main Income from Chatting</div>
             </div>
           </div>
         </div>
@@ -2117,17 +2397,17 @@
           </div>
         </div>
         <div class="trust-item reveal">
+          <div class="trust-icon"><i class="fas fa-comments"></i></div>
+          <div class="trust-item-text">
+            <p>Real Conversations</p>
+            <span>Chat with people worldwide</span>
+          </div>
+        </div>
+        <div class="trust-item reveal">
           <div class="trust-icon"><i class="fas fa-clock"></i></div>
           <div class="trust-item-text">
             <p>24/7 Support</p>
             <span>WhatsApp &amp; Email</span>
-          </div>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-icon"><i class="fas fa-users"></i></div>
-          <div class="trust-item-text">
-            <p>Active Community</p>
-            <span>Telegram &amp; WhatsApp Groups</span>
           </div>
         </div>
         <div class="trust-item reveal">
@@ -2179,11 +2459,11 @@
           </div>
           <div class="step-card reveal">
             <div class="step-num">3</div>
-            <div class="step-icon">🎯</div>
-            <div class="step-title">Unlock Tasks &amp; Dashboard</div>
+            <div class="step-icon">💬</div>
+            <div class="step-title">Start Chatting</div>
             <div class="step-desc">
-              Access chatting, micro tasks, AI labeling, surveys, and your
-              personal referral link.
+              Access the chatting dashboard and begin earning immediately from
+              conversations with foreigners worldwide.
             </div>
           </div>
           <div class="step-card reveal">
@@ -2191,7 +2471,7 @@
             <div class="step-icon">💰</div>
             <div class="step-title">Earn &amp; Withdraw</div>
             <div class="step-desc">
-              Complete tasks daily, refer friends, and withdraw to Airtel or MTN
+              Chat daily, complete bonus tasks, and withdraw to Airtel or MTN
               Zambia instantly.
             </div>
           </div>
@@ -2208,44 +2488,282 @@
       </div>
     </section>
 
-    <!-- ACTIVITIES — MAIN CARDS -->
-    <section id="earn-options" class="section bg-soft">
+    <!-- COUNTRIES CHATTERS STRIP -->
+    <div class="countries-strip">
+      <div class="cs-inner">
+        <div class="cs-label">You'll chat with people from</div>
+        <div class="cs-flags">
+          <div class="cs-flag-chip">🇺🇸 United States</div>
+          <div class="cs-flag-chip">🇬🇧 United Kingdom</div>
+          <div class="cs-flag-chip">🇩🇪 Germany</div>
+          <div class="cs-flag-chip">🇨🇦 Canada</div>
+          <div class="cs-flag-chip">🇦🇺 Australia</div>
+          <div class="cs-flag-chip">🇫🇷 France</div>
+          <div class="cs-flag-chip">🇳🇱 Netherlands</div>
+          <div class="cs-flag-chip">🇯🇵 Japan</div>
+          <div class="cs-flag-chip">+ many more</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════ CHATTING DEEP-DIVE ═══════════════ -->
+    <section id="chatting" class="section chat-section">
       <div class="section-inner">
         <div class="section-head reveal">
-          <div class="section-eyebrow">💼 Earning Activities</div>
-          <h2>Ways to Earn Money Online with StarHela</h2>
+          <div class="section-eyebrow">💬 Main Earning Activity</div>
+          <h2>Get Paid to Chat with Foreigners</h2>
           <p>
-            Over 10 different income streams — pick what suits your skills and
-            schedule.
+            This is the heart of StarHela — real conversations, real money, from
+            your smartphone in Zambia.
           </p>
         </div>
-        <div class="acts-grid">
-          <div class="act-card reveal">
-            <div class="act-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=70&fit=crop"
-                alt="Chat with foreigners earn money Zambia"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <div class="act-badges">
-                <span class="act-badge bdg-free">MAIN</span
-                ><span class="earn-badge">Up to $30/hr</span>
+        <div class="chat-deep-grid">
+          <div class="reveal-left">
+            <h2 class="chat-deep-h2">How the Chatting Job Works</h2>
+            <p class="chat-deep-lead">
+              StarHela connects you with foreigners from the US, UK, Europe, and
+              beyond who want to chat about African culture, travel, languages,
+              life, and more. You get paid for every conversation you have — the
+              more you chat, the more you earn.
+            </p>
+            <div class="chat-feature-list">
+              <div class="chat-feature-item">
+                <div class="cf-icon"><i class="fas fa-globe"></i></div>
+                <div class="cf-text">
+                  <strong>Chat in English</strong>
+                  <span
+                    >No special skills needed — just good conversational
+                    English. Topics are provided so you always know what to talk
+                    about.</span
+                  >
+                </div>
+              </div>
+              <div class="chat-feature-item">
+                <div class="cf-icon"><i class="fas fa-coins"></i></div>
+                <div class="cf-text">
+                  <strong>Earn Per Session &amp; Per Hour</strong>
+                  <span
+                    >Earn 50 ZMW per chat session plus 30 ZMW for every hour you
+                    stay active. The longer you chat, the more you make.</span
+                  >
+                </div>
+              </div>
+              <div class="chat-feature-item">
+                <div class="cf-icon"><i class="fas fa-calendar-check"></i></div>
+                <div class="cf-text">
+                  <strong>Work Any Time, Any Day</strong>
+                  <span
+                    >Foreigners are active around the clock across different
+                    time zones. You pick your own schedule — morning, evening,
+                    or night.</span
+                  >
+                </div>
+              </div>
+              <div class="chat-feature-item">
+                <div class="cf-icon"><i class="fas fa-mobile-screen"></i></div>
+                <div class="cf-text">
+                  <strong>Fully Mobile — No PC Needed</strong>
+                  <span
+                    >All chatting happens right in your browser on your Android
+                    or iPhone. No downloads, no extra apps.</span
+                  >
+                </div>
+              </div>
+              <div class="chat-feature-item">
+                <div class="cf-icon"><i class="fas fa-infinity"></i></div>
+                <div class="cf-text">
+                  <strong>Unlimited Chat Sessions Daily</strong>
+                  <span
+                    >There's no cap on how much you can earn. The platform has
+                    50+ active foreigners waiting to chat every day.</span
+                  >
+                </div>
               </div>
             </div>
-            <div class="act-body">
-              <div class="act-name">CHAT WITH FOREIGNERS</div>
-              <div class="act-sub">Chat &amp; Earn — Main Task</div>
-              <div class="act-earn">Earn up to $200/day based on activity</div>
-              <div class="act-btns">
-                <a href="chatting.html" class="btn-act-learn">💬 Learn More</a>
-                <button class="btn-act-reg" onclick="openOfferwall()">
-                  🚀 Register
-                </button>
+            <a
+              href="https://starhela.com/register.php?ref=sydney"
+              target="_blank"
+              class="btn-primary-zm"
+            >
+              <i class="fas fa-comments"></i> Start Chatting Today
+            </a>
+          </div>
+
+          <div class="reveal-right">
+            <div class="chat-earnings-panel">
+              <div class="cep-title">💰 Daily Chatting Earnings Breakdown</div>
+
+              <div class="cep-row">
+                <div class="cep-row-label">
+                  <div class="cep-dot blue"></div>
+                  <span class="cep-name">10 Chat Sessions × 50 ZMW</span>
+                </div>
+                <div class="cep-amt">500 ZMW</div>
+              </div>
+              <div class="cep-row">
+                <div class="cep-row-label">
+                  <div class="cep-dot teal"></div>
+                  <span class="cep-name">5 Hours Active × 30 ZMW</span>
+                </div>
+                <div class="cep-amt">150 ZMW</div>
+              </div>
+              <div class="cep-row">
+                <div class="cep-row-label">
+                  <div class="cep-dot orange"></div>
+                  <span class="cep-name">Friend Invites Bonus × 50%</span>
+                </div>
+                <div class="cep-amt">250 ZMW</div>
+              </div>
+              <div class="cep-row">
+                <div class="cep-row-label">
+                  <div class="cep-dot green"></div>
+                  <span class="cep-name">Bonus Activity Tasks</span>
+                </div>
+                <div class="cep-amt">100 ZMW</div>
+              </div>
+
+              <div class="cep-divider"></div>
+
+              <div class="cep-total-row">
+                <div class="cep-total-label">Estimated Daily Total</div>
+                <div class="cep-total-amt">1,000 ZMW</div>
+              </div>
+              <div class="cep-note">
+                * Based on active chatting. Earnings vary by participation. New
+                chatters typically earn 200–400 ZMW/day in their first week.
+              </div>
+
+              <div
+                style="
+                  margin-top: 24px;
+                  background: var(--gray-1);
+                  border: 1px solid var(--gray-2);
+                  border-radius: 14px;
+                  padding: 18px 20px;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--ff-head);
+                    font-size: 0.82rem;
+                    font-weight: 800;
+                    color: var(--text-1);
+                    margin-bottom: 12px;
+                  "
+                >
+                  🗺️ Chat Topics Available
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >African Culture</span
+                  >
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >Travel &amp; Tourism</span
+                  >
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >Languages</span
+                  >
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >Daily Life</span
+                  >
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >Food &amp; Cuisine</span
+                  >
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >Sports</span
+                  >
+                  <span
+                    style="
+                      background: #e8f4ff;
+                      color: var(--chat-blue);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >Music</span
+                  >
+                  <span
+                    style="
+                      background: #f3e8ff;
+                      color: var(--pu-2);
+                      font-size: 0.7rem;
+                      font-weight: 700;
+                      padding: 4px 12px;
+                      border-radius: 99px;
+                    "
+                    >+ more topics</span
+                  >
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ OTHER TASKS (SUPPLEMENTAL) ═══════════════ -->
+    <section id="other-tasks" class="section bg-white">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div class="section-eyebrow">➕ Boost Your Income</div>
+          <h2>Supplemental Tasks to Earn Even More</h2>
+          <p>
+            Chatting is the main earner — but when you're not chatting, these
+            bonus tasks keep the money coming in.
+          </p>
+        </div>
+
+        <!-- MAIN TASK CARDS -->
+        <div class="acts-grid" style="margin-bottom: 40px">
           <div class="act-card reveal">
             <div class="act-img-wrap">
               <img
@@ -2308,7 +2826,7 @@
                 height="300"
               />
               <div class="act-badges">
-                <span class="act-badge bdg-new">NEW</span
+                <span class="act-badge bdg-free">NEW</span
                 ><span class="earn-badge">$1–8/label</span>
               </div>
             </div>
@@ -2362,7 +2880,7 @@
                 height="300"
               />
               <div class="act-badges">
-                <span class="act-badge bdg-new">NEW</span
+                <span class="act-badge bdg-free">NEW</span
                 ><span class="earn-badge">$0.80/reel</span>
               </div>
             </div>
@@ -2379,41 +2897,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- DETAILED ACTIVITIES -->
-    <section id="activities" class="section bg-white">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">🎯 Daily Tasks</div>
-          <h2>Daily Earning Activities for Zambians</h2>
-          <p>
-            Over 10+ different ways to earn every day — pick what suits you
-            best.
-          </p>
-        </div>
+        <!-- MINI TASK GRID -->
         <div class="detail-acts-grid">
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-comments"></i></div>
-            <div>
-              <div class="dact-name">Chatting Sessions</div>
-              <div class="dact-desc">
-                Paid conversations with foreigners — 3–15 ZMW per chat. 50+
-                chats available daily.
-              </div>
-            </div>
-          </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-video"></i></div>
-            <div>
-              <div class="dact-name">Watch &amp; Earn Videos</div>
-              <div class="dact-desc">
-                Watch short promotional videos (30s–2min) — 1–5 ZMW per video.
-                Unlimited daily.
-              </div>
-            </div>
-          </div>
           <div class="dact-card reveal">
             <div class="dact-icon"><i class="fas fa-robot"></i></div>
             <div>
@@ -2473,15 +2959,6 @@
               </div>
             </div>
           </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-tag"></i></div>
-            <div>
-              <div class="dact-name">Product Categorization</div>
-              <div class="dact-desc">
-                Classify products into categories — 2–10 ZMW per batch.
-              </div>
-            </div>
-          </div>
         </div>
         <div style="text-align: center; margin-top: 28px" class="reveal">
           <div
@@ -2504,52 +2981,6 @@
       </div>
     </section>
 
-    <!-- REFERRAL SYSTEM -->
-    <section id="referral-system" class="section ref-section">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">🌟 3-Level Referrals</div>
-          <h2>3-Level Referral Commission Structure</h2>
-          <p>
-            Build a team and earn passive income from every active member you
-            bring — plus their referrals!
-          </p>
-        </div>
-        <div class="ref-levels">
-          <div class="ref-card reveal">
-            <div class="ref-card-icon">👑</div>
-            <div class="ref-card-title">Level 1</div>
-            <div class="ref-card-amt">50 <span>ZMW</span></div>
-            <div class="ref-card-desc">
-              You earn <strong style="color: #fff">50 ZMW</strong> for every
-              direct referral who activates. Unlimited referrals! Paid instantly
-              when your referral pays the 130 ZMW activation.
-            </div>
-          </div>
-          <div class="ref-card reveal">
-            <div class="ref-card-icon">🤝</div>
-            <div class="ref-card-title">Level 2</div>
-            <div class="ref-card-amt">30 <span>ZMW</span></div>
-            <div class="ref-card-desc">
-              Earn <strong style="color: #fff">30 ZMW</strong> from referrals
-              made by your direct referrals. Passive overflow income that grows
-              as your team grows.
-            </div>
-          </div>
-          <div class="ref-card reveal">
-            <div class="ref-card-icon">📈</div>
-            <div class="ref-card-title">Level 3</div>
-            <div class="ref-card-amt">20 <span>ZMW</span></div>
-            <div class="ref-card-desc">
-              Earn <strong style="color: #fff">20 ZMW</strong> from your Level
-              2's referrals. Massive team potential — the deeper your network,
-              the more you earn.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- TESTIMONIALS -->
     <section class="section bg-soft">
       <div class="section-inner">
@@ -2562,9 +2993,9 @@
           <div class="testi-card reveal">
             <div class="testi-quote">❝</div>
             <p class="testi-text">
-              "I joined StarHela 2 months ago. The chatting tasks alone pay me
-              40–60 ZMW daily. Plus referrals! Best decision I've made this
-              year."
+              "I joined StarHela 2 months ago. The chatting tasks are my main
+              income — 40–60 ZMW daily just from conversations. Best decision
+              I've made this year."
             </p>
             <div class="testi-name">— Mulenga K., Lusaka</div>
             <div class="testi-stars">★★★★★</div>
@@ -2572,9 +3003,9 @@
           <div class="testi-card reveal">
             <div class="testi-quote">❝</div>
             <p class="testi-text">
-              "The AI labeling tasks are my favorite. I earn while on my phone
-              at home. Withdrawals to Airtel are instant. A truly trustworthy
-              platform!"
+              "Chatting with foreigners about Zambian life and culture is so
+              easy and fun. I earn while having interesting conversations on my
+              phone at home!"
             </p>
             <div class="testi-name">— Natasha B., Kitwe</div>
             <div class="testi-stars">★★★★★</div>
@@ -2582,8 +3013,9 @@
           <div class="testi-card reveal">
             <div class="testi-quote">❝</div>
             <p class="testi-text">
-              "I've referred 15 friends already. The 3-level commissions add up
-              quickly. The support team is very responsive on WhatsApp."
+              "I was skeptical but tried it anyway. Within 3 days I hit 150 ZMW
+              and withdrew straight to Airtel. The support team is very
+              responsive on WhatsApp."
             </p>
             <div class="testi-name">— Brian S., Ndola</div>
             <div class="testi-stars">★★★★★</div>
@@ -2630,9 +3062,9 @@
               </li>
             </ul>
             <div class="withdraw-note">
-              💡 <strong>Tip:</strong> Combine all earnings — chatting + micro
-              tasks + referral commissions. Reach 150 ZMW and withdraw
-              instantly.
+              💡 <strong>Tip:</strong> Combine chatting sessions with micro
+              tasks. Most members reach 150 ZMW within their first 3–5 days and
+              start withdrawing straight away.
             </div>
           </div>
           <div class="reveal-right">
@@ -2671,12 +3103,12 @@
         <div
           style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap"
         >
-          <div class="ab-icon">🚀</div>
+          <div class="ab-icon">💬</div>
           <div class="ab-text">
-            <strong>Early joiners earn significantly more!</strong>
+            <strong>Foreigners are waiting to chat with you right now!</strong>
             <span
-              >The 3-level affiliate model rewards those who build teams early.
-              Start today before your province gets saturated.</span
+              >50+ active chat requests available daily. Activate your account
+              and start earning from your very first conversation today.</span
             >
           </div>
         </div>
@@ -2697,7 +3129,7 @@
           <div class="section-eyebrow">❓ FAQ</div>
           <h2>Frequently Asked Questions — Zambia Edition</h2>
           <p>
-            Everything about activation, earnings, and Mobile Money withdrawals.
+            Everything about chatting, activation, and Mobile Money withdrawals.
           </p>
         </div>
         <div class="faq-list">
@@ -2710,10 +3142,27 @@
             </button>
             <div class="faq-answer">
               <p>
-                One-time payment unlocks full access: chatting tasks, micro
-                tasks, AI labeling, surveys, referral dashboard, and withdrawal
-                ability. Non-refundable but gives you lifetime earning potential
-                across all activity types.
+                One-time payment unlocks full access: chatting with foreigners,
+                micro tasks, AI labeling, surveys, and withdrawal ability.
+                Non-refundable but gives you lifetime earning potential across
+                all activity types.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-btn" onclick="toggleFaq(this)">
+              Do I need to speak a foreign language to chat?
+              <span class="faq-chevron"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No! All conversations are in English. Foreigners on the platform
+                want to learn about African culture, Zambia, and life here — you
+                just share your knowledge and experiences naturally. Topics and
+                guidance are provided so you always have something to talk
+                about.
               </p>
             </div>
           </div>
@@ -2726,9 +3175,24 @@
             </button>
             <div class="faq-answer">
               <p>
-                Once your wallet reaches 150 ZMW (typically 3–5 days with
-                chatting + tasks + 1–2 referrals), you can withdraw instantly to
-                Airtel or MTN Zambia anytime, 24/7.
+                Once your wallet reaches 150 ZMW (typically 3–5 days with active
+                chatting + tasks), you can withdraw instantly to Airtel or MTN
+                Zambia anytime, 24/7.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-btn" onclick="toggleFaq(this)">
+              Are there enough foreigners to chat with daily?
+              <span class="faq-chevron"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! There are 50+ chat requests available every day from people
+                across the US, UK, Europe, and Asia. Because they span different
+                time zones, chats are available morning, afternoon, and evening.
               </p>
             </div>
           </div>
@@ -2743,22 +3207,7 @@
               <p>
                 No! StarHela works perfectly on any smartphone (Android or
                 iPhone) via your browser. No app download required — just open
-                the website and start working.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              Are there enough tasks available daily?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Yes! 20–50+ tasks are available every day including chatting,
-                video watching, surveys, AI labeling, data entry, and more. New
-                tasks are added regularly so you always have something to do.
+                the website and start chatting.
               </p>
             </div>
           </div>
@@ -2785,10 +3234,10 @@
     <!-- FINAL CTA -->
     <section class="final-cta">
       <div class="reveal">
-        <h2>Start Earning in Zambia Today! 🇿🇲</h2>
+        <h2>Start Chatting &amp; Earning in Zambia Today! 🇿🇲</h2>
         <p>
-          Join thousands of active Zambians already cashing out with StarHela
-          every week.
+          Thousands of active Zambians are already earning real money from
+          conversations — join them now.
         </p>
         <div class="final-cta-btns">
           <a
@@ -2796,14 +3245,15 @@
             target="_blank"
             class="btn-final"
           >
-            <i class="fas fa-user-check"></i> Register Now — 130 ZMW Activation
+            <i class="fas fa-comments"></i> Register Now — 130 ZMW Activation
           </a>
         </div>
         <div class="final-cta-note">
-          One-time fee · Lifetime access · Chat, Tasks &amp; Referral income
+          One-time fee · Lifetime access · Chat &amp; earn from day one
         </div>
       </div>
     </section>
+
     <!-- NAVIGATION -->
     <div
       class="about-navigation"
@@ -2827,13 +3277,12 @@
             <span class="footer-brand-name">STARHELA AGENCIES</span>
           </div>
           <p class="footer-desc">
-            StarHela Agencies — Africa's trusted online earning platform.
-            Thousands already earning daily. Complete training, step-by-step
-            guidance, and real money-making opportunities for Zambians. No
+            StarHela Agencies — Africa's trusted online earning platform. Chat
+            with foreigners, complete tasks, and earn real money daily. No
             experience needed.
           </p>
           <div class="footer-contact-item">
-            <span>📞</span><a href="tel:+254102861720">+254 745 656 143</a>
+            <span>📞</span><a href="tel:+254729743223">+254 729 743 223</a>
           </div>
           <div class="footer-contact-item">
             <span>✉️</span
@@ -2843,7 +3292,7 @@
           </div>
           <div class="footer-contact-item">
             <span>💬</span
-            ><a href="https://wa.me/254102861720" target="_blank" rel="noopener"
+            ><a href="https://wa.me/254729743223" target="_blank" rel="noopener"
               >WhatsApp Support</a
             >
           </div>
@@ -2857,7 +3306,7 @@
               >📣</a
             >
             <a
-              href="https://wa.me/254102861720"
+              href="https://wa.me/254729743223"
               target="_blank"
               rel="noopener"
               class="footer-soc-btn"
@@ -2876,9 +3325,8 @@
           <div class="footer-col-title">Quick Links</div>
           <div class="footer-links">
             <a href="#how-it-works">How StarHela Works</a>
-            <a href="#earn-options">Earning Activities</a>
-            <a href="#activities">Daily Tasks</a>
-            <a href="#referral-system">Referral Plan</a>
+            <a href="#chatting">Chat &amp; Earn</a>
+            <a href="#other-tasks">Other Tasks</a>
             <a href="#faq">StarHela FAQ</a>
             <a
               href="https://starhela.com/register.php?ref=sydney"
@@ -2896,37 +3344,13 @@
         <div>
           <div class="footer-col-title">Countries</div>
           <div class="footer-links">
-            <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
-            ><a href="tanzania.html">Tanzania</a><a href="zambia.html">Zambia</a
-            ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
-            ><a href="nigeria.html">Nigeria</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Connect &amp; Start Earning</div>
-          <div class="footer-links">
-            <a
-              href="https://starhela.com/register.php?ref=sydney"
-              target="_blank"
-              >🚀 Register on StarHela</a
-            >
-            <a
-              href="https://starhela.com/login.php"
-              target="_blank"
-              rel="noopener"
-              >🔑 Login to StarHela</a
-            >
-            <a href="https://wa.me/254102861720" target="_blank" rel="noopener"
-              >💬 WhatsApp Us</a
-            >
-            <a
-              href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
-              target="_blank"
-              rel="noopener"
-              >📣 Join Our Channel</a
-            >
-            <a href="mailto:starhelaofficials@gmail.com">✉️ Email Us</a>
-            <a href="tel:+254102861720">📞 Call Us</a>
+            <a href="kenya.html">Kenya</a>
+            <a href="uganda.html">Uganda</a>
+            <a href="tanzania.html">Tanzania</a>
+            <a href="zambia.html">Zambia</a>
+            <a href="cameroon.html">Cameroon</a>
+            <a href="ghana.html">Ghana</a>
+            <a href="nigeria.html">Nigeria</a>
           </div>
         </div>
       </div>
@@ -2936,7 +3360,8 @@
           <a href="https://starhela.com/register.php?ref=sydney" target="_blank"
             >Register</a
           >
-          · <a href="https://starhela.com/login.php" target="_blank">Login</a>
+          ·
+          <a href="https://starhela.com/login.php" target="_blank">Login</a>
         </div>
         <div class="footer-note">
           <span>ℹ️</span> StarHela Agencies · 🌍 Zambia &amp; Africa
@@ -2945,20 +3370,20 @@
     </footer>
 
     <script>
-      // ── PAGE LOADER ──
+      // PAGE LOADER
       window.addEventListener("load", () => {
         setTimeout(() => {
           document.getElementById("pageLoader").classList.add("hide");
         }, 1200);
       });
 
-      // ── NAVBAR SCROLL ──
+      // NAVBAR SCROLL
       const topNav = document.getElementById("topNav");
       window.addEventListener("scroll", () => {
         topNav.classList.toggle("scrolled", window.scrollY > 20);
       });
 
-      // ── HAMBURGER ──
+      // HAMBURGER
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       hamburger.addEventListener("click", () =>
@@ -2972,7 +3397,7 @@
           ),
         );
 
-      // ── OFFERWALL ──
+      // OFFERWALL
       function openOfferwall() {
         document.getElementById("offerwallOv").classList.add("on");
         document.body.style.overflow = "hidden";
@@ -2988,7 +3413,7 @@
         }
       });
 
-      // ── FAQ ──
+      // FAQ
       function toggleFaq(btn) {
         const item = btn.closest(".faq-item");
         const isOpen = item.classList.contains("open");
@@ -2998,13 +3423,13 @@
         if (!isOpen) item.classList.add("open");
       }
 
-      // ── SCROLL REVEAL ──
+      // SCROLL REVEAL
       const revealEls = document.querySelectorAll(
         ".reveal, .reveal-left, .reveal-right",
       );
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((e, i) => {
+          entries.forEach((e) => {
             if (e.isIntersecting) {
               setTimeout(() => e.target.classList.add("visible"), 80);
               observer.unobserve(e.target);
@@ -3015,14 +3440,18 @@
       );
       revealEls.forEach((el) => observer.observe(el));
 
-      // ── STAGGER CHILDREN ──
+      // STAGGER CHILDREN
       document
         .querySelectorAll(
-          ".steps-grid, .acts-grid, .detail-acts-grid, .ref-levels, .testi-grid, .trust-inner",
+          ".steps-grid, .acts-grid, .detail-acts-grid, .testi-grid, .trust-inner, .chat-feature-list",
         )
         .forEach((grid) => {
           [...grid.children].forEach((child, i) => {
-            if (!child.classList.contains("reveal")) return;
+            if (
+              !child.classList.contains("reveal") &&
+              !child.classList.contains("chat-feature-item")
+            )
+              return;
             child.style.transitionDelay = `${i * 80}ms`;
           });
         });
