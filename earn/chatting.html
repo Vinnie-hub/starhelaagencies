@@ -6165,7 +6165,7 @@
             t4_title: "Life Advice &amp; Stories",
             t4_desc:
               "People want your perspective on relationships, work, and life decisions.",
-            accept_btn: "Accept",
+            accept_btn: "Accept Request",
             view_btn: "View Profile",
           },
           sw: {
@@ -6273,7 +6273,7 @@
             t4_title: "Ushauri wa Maisha &amp; Hadithi",
             t4_desc:
               "Watu wanataka mtazamo wako kuhusu mahusiano, kazi, na maamuzi ya maisha.",
-            accept_btn: "Kubali",
+            accept_btn: "Kubali Ombi",
             view_btn: "Angalia Maelezo",
           },
         };
@@ -6290,12 +6290,11 @@
           document.querySelectorAll(".lang-btn").forEach((b) => {
             b.classList.toggle("active", b.dataset.lang === lang);
           });
-          // Update visible profile card buttons (event delegation still works, just refresh text)
           const grid = $("profileGrid");
           if (grid) {
             grid.querySelectorAll(".prf-btn-accept").forEach((b) => {
               if (!b.disabled)
-                b.innerHTML = `<i class="fas fa-check"></i> ${TRANSLATIONS[lang].accept_btn || "Accept"}`;
+                b.innerHTML = `<i class="fas fa-check"></i> ${TRANSLATIONS[lang].accept_btn || "Accept Request"}`;
             });
             grid.querySelectorAll(".prf-btn-view").forEach((b) => {
               b.innerHTML = `<i class="fas fa-user"></i> ${TRANSLATIONS[lang].view_btn || "View Profile"}`;
@@ -6808,39 +6807,25 @@
           },
         ];
 
-        /* ═══════════════════════════════════════════════════════════════
-     PROFILE GRID — PER-CARD ROTATION SYSTEM
-     ─ 9 slots rendered once; only 2–3 cards replaced per cycle
-     ─ Event delegation (single listener, no re-attachment)
-     ─ Weighted-random slot selection avoids same slots repeating
-     ─ Multi-pass shuffled queue minimises visible repetition
-  ═══════════════════════════════════════════════════════════════ */
-
         // State
-        const GRID_SLOTS = 9; // visible cards
-        const ROTATE_INTERVAL = 5000; // ms between rotation cycles
-        const STAGGER_MS = 170; // ms between each card's animation start
-        const FADE_OUT_MS = 260; // fade-out duration
-        const FADE_IN_MS = 340; // fade-in duration (slightly longer for spring feel)
+        const GRID_SLOTS = 9;
+        const ROTATE_INTERVAL = 5000;
+        const STAGGER_MS = 170;
+        const FADE_OUT_MS = 260;
+        const FADE_IN_MS = 340;
 
-        let slotProfiles = new Array(GRID_SLOTS).fill(null); // profile in each slot
-        let profileQueue = []; // long shuffled pipeline
-        let queueCursor = 0; // current position in pipeline
+        let slotProfiles = new Array(GRID_SLOTS).fill(null);
+        let profileQueue = [];
+        let queueCursor = 0;
         let rotTimer = null;
         let isRotating = false;
 
-        // Weight each slot by recency — slots that changed recently score lower
         const slotLastChanged = new Array(GRID_SLOTS).fill(0);
 
-        /** Extend the profile pipeline by one more shuffled pass. */
         function refillQueue() {
           profileQueue = [...profileQueue, ...shuffle(ALL_PROFILES)];
         }
 
-        /**
-         * Pull the next profile from the pipeline that is NOT in excludeIds.
-         * @param {Set<number>} excludeIds
-         */
         function nextProfile(excludeIds) {
           const limit = profileQueue.length + ALL_PROFILES.length;
           for (let tries = 0; tries < limit; tries++) {
@@ -6848,31 +6833,24 @@
             const p = profileQueue[queueCursor++];
             if (!excludeIds.has(p.id)) return p;
           }
-          // Absolute fallback
           return (
             ALL_PROFILES.find((p) => !excludeIds.has(p.id)) || ALL_PROFILES[0]
           );
         }
 
-        /**
-         * Pick `count` slot indices, biasing toward slots that changed longest ago.
-         * This prevents the same positions rotating repeatedly.
-         */
         function pickSlots(count) {
           const now = Date.now();
-          // Score = time since last change (higher = more eligible to rotate)
           const scored = Array.from({ length: GRID_SLOTS }, (_, i) => ({
             idx: i,
-            score: now - slotLastChanged[i] + Math.random() * 1500, // add noise
+            score: now - slotLastChanged[i] + Math.random() * 1500,
           }));
           scored.sort((a, b) => b.score - a.score);
           return scored.slice(0, count).map((s) => s.idx);
         }
 
-        /** Build the inner HTML of a single profile card (no outer .prf-card wrapper). */
         function buildCardInner(p) {
           const t = TRANSLATIONS[currentLang];
-          const starCount = Math.random() < 0.3 ? 4 : 5; // occasionally 4 stars for realism
+          const starCount = Math.random() < 0.3 ? 4 : 5;
           const stars = "★".repeat(starCount);
           return `
       <div class="prf-top">
@@ -6903,7 +6881,6 @@
       </div>`;
         }
 
-        /** Set up a single delegated click listener on the grid container. */
         function setupGridDelegation(grid) {
           grid.addEventListener("click", function (e) {
             const acceptBtn = e.target.closest(".prf-btn-accept");
@@ -6932,12 +6909,10 @@
           });
         }
 
-        /** Render the initial 9-card grid and wire up delegation. */
         function initProfileGrid() {
           const grid = $("profileGrid");
           if (!grid) return;
 
-          // Seed the pipeline with three shuffled passes
           profileQueue = [
             ...shuffle(ALL_PROFILES),
             ...shuffle(ALL_PROFILES),
@@ -6945,16 +6920,14 @@
           ];
           queueCursor = 0;
 
-          // Pick 9 unique starting profiles
           const excludeIds = new Set();
           for (let i = 0; i < GRID_SLOTS; i++) {
             const p = nextProfile(excludeIds);
             slotProfiles[i] = p;
             excludeIds.add(p.id);
-            slotLastChanged[i] = Date.now() - Math.random() * 30000; // randomise initial ages
+            slotLastChanged[i] = Date.now() - Math.random() * 30000;
           }
 
-          // Render wrapper divs once — we will only update their innerHTML going forward
           grid.innerHTML = slotProfiles
             .map(
               (p, i) =>
@@ -6962,17 +6935,10 @@
             )
             .join("");
 
-          // Single delegated listener — never needs re-attachment
           setupGridDelegation(grid);
-
-          // Begin rotation after a short warm-up delay
           setTimeout(startRotation, 3500);
         }
 
-        /**
-         * Core rotation: fade out 2–3 selected cards, swap content, fade back in.
-         * Cards animate with a stagger so the swap feels organic, not synchronised.
-         */
         function rotateSomeCards() {
           if (isRotating || document.hidden) return;
 
@@ -6984,16 +6950,13 @@
 
           isRotating = true;
 
-          // 40 % chance of 3, otherwise 2
           const count = Math.random() < 0.4 ? 3 : 2;
           const slotIndices = pickSlots(count);
 
-          // Build exclusion set from all currently visible profiles
           const currentIds = new Set(
             slotProfiles.filter(Boolean).map((p) => p.id),
           );
 
-          // Gather replacement profiles (unique within this batch too)
           const replacements = slotIndices.map(() => {
             const p = nextProfile(currentIds);
             currentIds.add(p.id);
@@ -7015,20 +6978,16 @@
             const delay = batchIdx * STAGGER_MS;
 
             setTimeout(() => {
-              /* ── Phase 1: Fade out + slight lift ── */
               card.style.transition = `opacity ${FADE_OUT_MS}ms ease, transform ${FADE_OUT_MS}ms ease`;
               card.style.opacity = "0";
               card.style.transform = "translateY(-10px) scale(0.96)";
 
               setTimeout(() => {
-                /* ── Phase 2: Swap inner HTML while invisible ── */
                 card.innerHTML = buildCardInner(newProfile);
                 card.style.transition = "none";
                 card.style.opacity = "0";
                 card.style.transform = "translateY(12px) scale(0.97)";
 
-                /* ── Phase 3: Fade in + spring settle ── */
-                // Double rAF guarantees the browser has painted before the transition fires
                 requestAnimationFrame(() => {
                   requestAnimationFrame(() => {
                     card.style.transition = `opacity ${FADE_IN_MS}ms ease, transform ${FADE_IN_MS}ms cubic-bezier(0.34,1.56,0.64,1)`;
@@ -7037,18 +6996,16 @@
                   });
                 });
 
-                /* ── Update state ── */
                 slotProfiles[slotIdx] = newProfile;
                 slotLastChanged[slotIdx] = Date.now();
 
                 completedCount++;
                 if (completedCount === count) {
-                  // Release the lock once the last fade-in completes
                   setTimeout(() => {
                     isRotating = false;
                   }, FADE_IN_MS + 60);
                 }
-              }, FADE_OUT_MS + 20); // start swap just after fade-out settles
+              }, FADE_OUT_MS + 20);
             }, delay);
           });
         }
@@ -7058,7 +7015,6 @@
           rotTimer = setInterval(rotateSomeCards, ROTATE_INTERVAL);
         }
 
-        /* Pause rotation when tab is hidden to save battery on mobile */
         document.addEventListener("visibilitychange", () => {
           if (document.hidden) {
             clearInterval(rotTimer);
@@ -7069,7 +7025,11 @@
         });
 
         /* ─── showPMod (profile detail overlay) ─────────────────────── */
+        // FIX: `t` was never defined in this scope, causing a ReferenceError
+        // that silently prevented the modal from opening.
         function showPMod(p) {
+          const t = TRANSLATIONS[currentLang]; // ← THE FIX
+
           document.querySelector(".pmod") &&
             document.querySelector(".pmod").remove();
           const ov = document.createElement("div");
@@ -7088,7 +7048,7 @@
       </div>
       <div style="padding:1.5rem;border-bottom:1px solid var(--border-0)">
         <p style="font-size:.875rem;color:var(--text-2);line-height:1.75">${p.full}</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.875rem">${p.tags.map((t) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.22rem .65rem;border-radius:6px;font-size:.76rem;font-weight:700;border:1px solid var(--border-2)">${t}</span>`).join("")}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.875rem">${p.tags.map((tag) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.22rem .65rem;border-radius:6px;font-size:.76rem;font-weight:700;border:1px solid var(--border-2)">${tag}</span>`).join("")}</div>
       </div>
       <div style="padding:1.25rem;border-bottom:1px solid var(--border-0)">
         <div style="font-size:.54rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:.35rem">Languages</div>
@@ -7100,7 +7060,9 @@
         </div>
         <div style="display:flex;gap:.75rem;flex-wrap:wrap">
           <a href="${REG}" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:var(--grad-brand);color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-user-plus"></i> Create Account</a>
-          <a href="https://Starhela.com/register.php?ref=sydney" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:#25d350;color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <button class="prf-btn-accept" data-id="${p.id}" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:#25d350;color:#fff;font-weight:800;font-size:.855rem;border:none;cursor:pointer">
+            <i class="fas fa-check"></i> ${t.accept_btn || "Accept Request"}
+          </button>
         </div>
       </div>
     </div>`;
@@ -7110,6 +7072,24 @@
               checkBodyScroll();
             }
           });
+          // Wire up the Accept button inside the modal
+          ov.querySelector(".prf-btn-accept").addEventListener(
+            "click",
+            function () {
+              if (this.disabled) return;
+              this.disabled = true;
+              this.innerHTML = `<span style="display:inline-flex;align-items:center;gap:.3rem">
+              <span style="width:10px;height:10px;border:2px solid rgba(255,255,255,.35);
+                border-top-color:#fff;border-radius:50%;display:inline-block;
+                animation:spin .55s linear infinite"></span> Accepting…</span>`;
+              setTimeout(() => {
+                showNotif(`🚀 Register now to start chatting with ${p.name}!`);
+                ov.remove();
+                checkBodyScroll();
+                openOffer(selC);
+              }, 800);
+            },
+          );
           document.body.appendChild(ov);
           document.body.style.overflow = "hidden";
         }
