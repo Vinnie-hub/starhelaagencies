@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -26,9 +26,12 @@
     <meta name="language" content="English" />
     <meta name="geo.region" content="KE" />
     <meta name="geo.placename" content="Kenya" />
-    <link rel="canonical" href="https://starhelaagencies.com/" />
+    <link rel="canonical" href="https://starhelaagencies.com/earn/chatting" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://starhelaagencies.com/" />
+    <meta
+      property="og:url"
+      content="https://starhelaagencies.com/earn/chatting"
+    />
     <meta
       property="og:title"
       content="Starhela – Get Paid to Chat With People Abroad | Earn $2–$8/hr"
@@ -137,15 +140,6 @@
         ]
       }
     </script>
-    <script>
-      (function () {
-        var s = localStorage.getItem("sh-theme"),
-          p = window.matchMedia("(prefers-color-scheme:dark)").matches
-            ? "dark"
-            : "light";
-        document.documentElement.setAttribute("data-theme", s || "dark");
-      })();
-    </script>
     <style>
       *,
       *::before,
@@ -175,63 +169,8 @@
         cursor: pointer;
         border: none;
       }
+      /* LIGHT MODE ONLY */
       :root,
-      [data-theme="dark"] {
-        --bg-0: #080611;
-        --bg-1: #0e0b1e;
-        --bg-2: #130f24;
-        --bg-3: #18132b;
-        --card-0: #1a1630;
-        --card-1: #211c3a;
-        --card-2: #282042;
-        --border-0: rgba(139, 92, 246, 0.07);
-        --border-1: rgba(139, 92, 246, 0.13);
-        --border-2: rgba(139, 92, 246, 0.22);
-        --border-3: rgba(139, 92, 246, 0.36);
-        --text-0: #ffffff;
-        --text-1: rgba(255, 255, 255, 0.9);
-        --text-2: rgba(255, 255, 255, 0.6);
-        --text-3: rgba(255, 255, 255, 0.35);
-        --text-4: rgba(255, 255, 255, 0.18);
-        --violet: #7c3aed;
-        --violet-2: #6d28d9;
-        --violet-3: #8b5cf6;
-        --violet-4: #a78bfa;
-        --violet-5: #c4b5fd;
-        --violet-glow: rgba(124, 58, 237, 0.28);
-        --violet-dim: rgba(124, 58, 237, 0.1);
-        --violet-dim-2: rgba(124, 58, 237, 0.16);
-        --green: #10b981;
-        --green-2: #34d399;
-        --green-glow: rgba(16, 185, 129, 0.24);
-        --green-dim: rgba(16, 185, 129, 0.1);
-        --indigo: #6366f1;
-        --indigo-dim: rgba(99, 102, 241, 0.12);
-        --gold: #f59e0b;
-        --gold-dim: rgba(245, 158, 11, 0.1);
-        --red: #ef4444;
-        --red-dim: rgba(239, 68, 68, 0.1);
-        --grad-brand: linear-gradient(135deg, #7c3aed, #a855f7);
-        --grad-brand-2: linear-gradient(135deg, #6d28d9, #7c3aed, #8b5cf6);
-        --grad-earn: linear-gradient(135deg, #059669, #10b981);
-        --grad-text: linear-gradient(135deg, #a78bfa, #c4b5fd);
-        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.32);
-        --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.4);
-        --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.52);
-        --shadow-violet: 0 4px 24px rgba(124, 58, 237, 0.22);
-        --shadow-violet-lg: 0 8px 40px rgba(124, 58, 237, 0.3);
-        --font-h: "Syne", sans-serif;
-        --font-b: "Plus Jakarta Sans", sans-serif;
-        --font-m: "JetBrains Mono", monospace;
-        --nav-h: 64px;
-        --radius-sm: 8px;
-        --radius-md: 12px;
-        --radius-lg: 18px;
-        --radius-xl: 24px;
-        --ease: cubic-bezier(0.4, 0, 0.2, 1);
-        --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-        --bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      }
       [data-theme="light"] {
         --bg-0: #f5f3ff;
         --bg-1: #ede9fe;
@@ -270,7 +209,21 @@
         --shadow-lg: 0 8px 40px rgba(109, 40, 217, 0.14);
         --shadow-violet: 0 4px 20px rgba(124, 58, 237, 0.16);
         --shadow-violet-lg: 0 8px 32px rgba(124, 58, 237, 0.22);
+        --grad-brand: linear-gradient(135deg, #7c3aed, #a855f7);
+        --grad-brand-2: linear-gradient(135deg, #6d28d9, #7c3aed, #8b5cf6);
+        --grad-earn: linear-gradient(135deg, #059669, #10b981);
         --grad-text: linear-gradient(135deg, #7c3aed, #a855f7);
+        --font-h: "Syne", sans-serif;
+        --font-b: "Plus Jakarta Sans", sans-serif;
+        --font-m: "JetBrains Mono", monospace;
+        --nav-h: 64px;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --radius-xl: 24px;
+        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+        --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
       }
       ::-webkit-scrollbar {
         width: 3px;
@@ -288,9 +241,69 @@
         color: var(--text-1);
         line-height: 1.6;
         overflow-x: hidden;
-        transition:
-          background 0.3s,
-          color 0.3s;
+      }
+      .lang-switcher {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        background: var(--card-0);
+        border: 1.5px solid var(--border-2);
+        border-radius: 999px;
+        padding: 3px;
+        box-shadow: var(--shadow-sm);
+        flex-shrink: 0;
+      }
+      .lang-btn {
+        padding: 0.28rem 0.7rem;
+        border-radius: 999px;
+        font-family: var(--font-m);
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        color: var(--text-3);
+        transition: all 0.22s var(--ease);
+      }
+      .lang-btn.active {
+        background: var(--grad-brand);
+        color: #fff;
+        box-shadow: 0 2px 8px var(--violet-glow);
+      }
+      .swahili-note {
+        background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+        border: 1.5px solid var(--border-2);
+        border-radius: var(--radius-md);
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.875rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .swahili-note-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--grad-brand);
+        display: grid;
+        place-items: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        color: #fff;
+      }
+      .swahili-note-title {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--text-0);
+        margin-bottom: 0.25rem;
+      }
+      .swahili-note-text {
+        font-size: 0.8rem;
+        color: var(--text-2);
+        line-height: 1.7;
       }
       #pageLoader {
         position: fixed;
@@ -439,7 +452,7 @@
         height: var(--nav-h);
         display: flex;
         align-items: center;
-        background: rgba(8, 6, 17, 0.82);
+        background: rgba(245, 243, 255, 0.88);
         backdrop-filter: blur(32px) saturate(200%);
         -webkit-backdrop-filter: blur(32px) saturate(200%);
         border-bottom: 1px solid var(--border-0);
@@ -448,19 +461,16 @@
           background 0.3s,
           box-shadow 0.3s;
       }
-      [data-theme="light"] .nav {
-        background: rgba(245, 243, 255, 0.88);
-      }
       .nav.solid {
         border-color: var(--border-1);
         box-shadow:
           0 1px 0 var(--border-1),
-          0 4px 24px rgba(0, 0, 0, 0.18);
+          0 4px 24px rgba(109, 40, 217, 0.08);
       }
       .nav-inner {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
         width: 100%;
       }
       .logo {
@@ -540,7 +550,7 @@
       .nav-right {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.45rem;
         margin-left: auto;
       }
       .nav-btn-ghost {
@@ -872,8 +882,6 @@
             0 0 0 0 transparent;
         }
       }
-
-      /* ── CHANGE 3: Eye-catching Meet People button ── */
       #meetBtn {
         background: linear-gradient(
           135deg,
@@ -910,8 +918,8 @@
       }
       #meetBtn .meet-badge {
         position: absolute;
-        top: -9px;
-        right: -9px;
+        top: -2px;
+        right: -2px;
         background: #ef4444;
         color: #fff;
         font-family: var(--font-m);
@@ -943,7 +951,6 @@
             0 0 0 0 transparent;
         }
       }
-
       @keyframes fadeUp {
         from {
           opacity: 0;
@@ -1084,6 +1091,26 @@
             0 0 0 0 transparent;
         }
       }
+      @keyframes cardFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(16px) scale(0.97);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes cardFadeOut {
+        from {
+          opacity: 1;
+          transform: none;
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-10px) scale(0.97);
+        }
+      }
       .fu {
         opacity: 0;
         transform: translateY(22px);
@@ -1164,7 +1191,7 @@
         height: 700px;
         background: radial-gradient(
           circle,
-          rgba(124, 58, 237, 0.15),
+          rgba(124, 58, 237, 0.12),
           transparent 65%
         );
         top: -200px;
@@ -1176,7 +1203,7 @@
         height: 500px;
         background: radial-gradient(
           circle,
-          rgba(167, 139, 250, 0.1),
+          rgba(167, 139, 250, 0.08),
           transparent 65%
         );
         top: 30%;
@@ -1189,7 +1216,7 @@
         height: 400px;
         background: radial-gradient(
           circle,
-          rgba(16, 185, 129, 0.07),
+          rgba(16, 185, 129, 0.06),
           transparent 65%
         );
         bottom: -80px;
@@ -1202,8 +1229,8 @@
         inset: 0;
         pointer-events: none;
         background-image:
-          linear-gradient(rgba(124, 58, 237, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+          linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
         background-size: 60px 60px;
         mask-image: radial-gradient(
           ellipse 80% 70% at 50% 50%,
@@ -1227,7 +1254,7 @@
           var(--violet-3),
           transparent
         );
-        opacity: 0.18;
+        opacity: 0.12;
         animation: scanLine 7s linear infinite;
         pointer-events: none;
       }
@@ -1450,120 +1477,61 @@
         overflow: hidden;
         box-shadow: var(--shadow-lg);
       }
-      .cw-head {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.875rem 1.125rem;
-        border-bottom: 1px solid var(--border-0);
-        background: var(--card-1);
-      }
-      .cw-av {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--border-1);
-        flex-shrink: 0;
-      }
-      .cw-name {
-        font-weight: 700;
-        font-size: 0.855rem;
-        color: var(--text-0);
-      }
-      .cw-status {
-        font-size: 0.65rem;
-        color: var(--green-2);
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-      }
-      .cw-badge {
-        margin-left: auto;
-        background: var(--green-dim);
-        border: 1px solid rgba(16, 185, 129, 0.22);
-        border-radius: 6px;
-        padding: 0.2rem 0.65rem;
-        font-family: var(--font-m);
-        font-size: 0.56rem;
-        color: var(--green-2);
-      }
-      .cw-msgs {
-        padding: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        background: var(--bg-1);
-      }
-      .cw-bubble-wrap {
-        display: flex;
-        gap: 0.5rem;
-        align-items: flex-end;
-      }
-      .cw-bubble-wrap.me {
-        flex-direction: row-reverse;
-      }
-      .cw-mini-av {
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        object-fit: cover;
-        flex-shrink: 0;
-        border: 1px solid var(--border-0);
-      }
-      .cw-bubble {
-        padding: 0.5rem 0.875rem;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        line-height: 1.55;
-        max-width: 78%;
-      }
-      .cw-bubble.them {
-        background: var(--card-1);
-        color: var(--text-1);
-        border-bottom-left-radius: 2px;
-        border: 1px solid var(--border-0);
-      }
-      .cw-bubble.me {
-        background: var(--grad-brand);
-        color: #fff;
-        font-weight: 500;
-        border-bottom-right-radius: 2px;
-      }
-      .cw-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border-top: 1px solid var(--border-0);
-      }
-      .cw-stat {
-        padding: 0.7rem 0.5rem;
+      .rs {
+        padding: 0.75rem 0.5rem;
         text-align: center;
         border-right: 1px solid var(--border-0);
       }
-      .cw-stat:last-child {
+      .rs:last-child {
         border-right: none;
       }
-      .cw-stat-v {
+      .rs-v {
         font-family: "Outfit", sans-serif;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 800;
         color: var(--text-0);
         line-height: 1;
         letter-spacing: -0.02em;
       }
-      .cw-stat-v.g {
+      .rs-v.g {
         color: var(--green-2);
       }
-      .cw-stat-v.b {
+      .rs-v.b {
         color: var(--violet-4);
       }
-      .cw-stat-l {
+      .rs-l {
         font-family: var(--font-m);
-        font-size: 0.48rem;
+        font-size: 0.5rem;
         color: var(--text-3);
-        margin-top: 0.15rem;
+        margin-top: 0.12rem;
         text-transform: uppercase;
         letter-spacing: 0.07em;
+      }
+      .req-panel-cta {
+        padding: 0.875rem 1.125rem;
+      }
+      .req-panel-cta-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0.875rem;
+        border-radius: var(--radius-md);
+        background: var(--grad-brand);
+        color: #fff;
+        font-family: var(--font-b);
+        font-size: 0.855rem;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        transition: all 0.2s;
+        box-shadow: var(--shadow-violet);
+      }
+      .req-panel-cta-btn:hover {
+        filter: brightness(1.08);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-violet-lg);
       }
       .cw-calc {
         padding: 0.875rem 1.125rem;
@@ -1672,146 +1640,6 @@
       .shead.c .sub {
         margin: 0 auto;
         max-width: 480px;
-      }
-      .pcard {
-        background: var(--card-0);
-        border: 1px solid var(--border-1);
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        margin-bottom: 1.5rem;
-        position: relative;
-      }
-      .pcard-img-wrap {
-        position: relative;
-        height: 220px;
-        overflow: hidden;
-      }
-      .pcard-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s var(--ease);
-      }
-      .pcard:hover .pcard-img {
-        transform: scale(1.04);
-      }
-      .pcard-badge {
-        position: absolute;
-        top: 0.75rem;
-        left: 0.75rem;
-        background: var(--grad-brand);
-        color: #fff;
-        font-family: var(--font-m);
-        font-size: 0.58rem;
-        font-weight: 700;
-        padding: 0.22rem 0.65rem;
-        border-radius: 6px;
-        letter-spacing: 0.06em;
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-      }
-      .pcard-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 0.875rem;
-        background: linear-gradient(to top, rgba(8, 6, 17, 0.94), transparent);
-      }
-      .pcard-name {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.1rem;
-        font-weight: 800;
-        color: #fff;
-        letter-spacing: -0.02em;
-      }
-      .pcard-info {
-        display: flex;
-        gap: 0.75rem;
-        margin-top: 0.2rem;
-      }
-      .pcard-info span {
-        font-size: 0.68rem;
-        color: rgba(255, 255, 255, 0.7);
-        display: flex;
-        align-items: center;
-        gap: 0.28rem;
-      }
-      .pcard-body {
-        padding: 1.125rem 1.25rem;
-      }
-      .pcard-desc {
-        font-size: 0.82rem;
-        color: var(--text-2);
-        line-height: 1.75;
-        margin-bottom: 0.875rem;
-      }
-      .pcard-foot {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      .pcard-price {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.35rem;
-        font-weight: 800;
-        color: var(--green-2);
-        letter-spacing: -0.03em;
-      }
-      .pcard-price span {
-        font-size: 0.75rem;
-        font-weight: 400;
-        color: var(--text-3);
-        font-family: var(--font-b);
-        margin-left: 0.18rem;
-      }
-      .pcard-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.42rem 0.95rem;
-        border-radius: var(--radius-sm);
-        background: var(--violet-dim);
-        border: 1px solid var(--border-2);
-        color: var(--violet-4);
-        font-family: var(--font-b);
-        font-size: 0.78rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .pcard-cta:hover {
-        background: var(--violet-dim-2);
-        border-color: var(--border-3);
-        transform: translateY(-1px);
-      }
-      .pcard-close {
-        position: absolute;
-        top: 0.75rem;
-        right: 0.75rem;
-        z-index: 10;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: rgba(8, 6, 17, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        color: rgba(255, 255, 255, 0.8);
-        cursor: pointer;
-        display: grid;
-        place-items: center;
-        font-size: 0.7rem;
-        transition: all 0.2s;
-        backdrop-filter: blur(6px);
-      }
-      .pcard-close:hover {
-        background: var(--red);
-        color: #fff;
-        border-color: var(--red);
       }
       .how-sec {
         background: var(--bg-1);
@@ -1968,7 +1796,7 @@
         background: linear-gradient(90deg, var(--green), var(--green-2));
       }
       .em3::after {
-        background: linear-gradient(90deg, var(--violet), var(--indigo));
+        background: linear-gradient(90deg, var(--violet), #6366f1);
       }
       .em4::after {
         background: linear-gradient(90deg, var(--gold), #fde68a);
@@ -2088,7 +1916,7 @@
         background: linear-gradient(90deg, var(--green), var(--green-2));
       }
       .t3::before {
-        background: linear-gradient(90deg, var(--indigo), #818cf8);
+        background: linear-gradient(90deg, #6366f1, #818cf8);
       }
       .t4::before {
         background: linear-gradient(90deg, var(--gold), #fde68a);
@@ -2119,7 +1947,7 @@
         color: var(--green-2);
       }
       .t3 .topic-cat {
-        color: var(--indigo);
+        color: #6366f1;
       }
       .t4 .topic-cat {
         color: var(--gold);
@@ -2159,9 +1987,9 @@
         color: var(--green-2);
       }
       .t3 .topic-earn {
-        background: var(--indigo-dim);
+        background: rgba(99, 102, 241, 0.08);
         border-color: rgba(99, 102, 241, 0.24);
-        color: var(--indigo);
+        color: #6366f1;
       }
       .t4 .topic-earn {
         background: var(--gold-dim);
@@ -2169,230 +1997,599 @@
         color: var(--gold);
       }
       .req-sec {
-        background: var(--bg-2);
+        background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
       }
-      .req-wrap {
+      .req-section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .req-section-header .pill {
+        display: inline-flex;
+      }
+      .req-live-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+        margin-bottom: 2rem;
+      }
+      .req-live-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: var(--card-0);
+        border: 1.5px solid var(--border-1);
+        border-radius: 999px;
+        padding: 0.38rem 0.875rem;
+        font-family: var(--font-m);
+        font-size: 0.62rem;
+        font-weight: 700;
+        color: var(--text-2);
+        box-shadow: var(--shadow-sm);
+      }
+      .req-live-pill .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--green-2);
+        display: inline-block;
+        box-shadow: 0 0 6px var(--green-2);
+      }
+      .req-live-pill.rate {
+        color: var(--violet-4);
+      }
+      .req-live-pill.fast {
+        color: #059669;
+      }
+      .profile-grid-wrap {
+        position: relative;
+      }
+      .profile-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        align-items: start;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
       }
-      @media (min-width: 900px) {
-        .req-wrap {
-          grid-template-columns: 1.1fr 0.9fr;
+      @media (max-width: 900px) {
+        .profile-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
-      .req-pills {
-        display: flex;
-        gap: 0.45rem;
-        flex-wrap: wrap;
-        margin-bottom: 1.125rem;
+      @media (max-width: 560px) {
+        .profile-grid {
+          grid-template-columns: 1fr;
+        }
       }
-      .req-pill {
+      .prf-card {
+        background: var(--card-0);
+        border: 1.5px solid var(--border-1);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(109, 40, 217, 0.07);
+        transition: all 0.32s var(--spring);
+        position: relative;
+      }
+      .prf-card:hover {
+        transform: translateY(-8px) scale(1.012);
+        box-shadow: 0 16px 48px rgba(109, 40, 217, 0.16);
+        border-color: var(--border-2);
+      }
+      .prf-top {
+        position: relative;
+        height: 0;
+        padding-bottom: 62%;
+        overflow: hidden;
+      }
+      .prf-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s var(--ease);
+      }
+      .prf-card:hover .prf-img {
+        transform: scale(1.05);
+      }
+      .prf-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(30, 16, 48, 0.88) 0%,
+          rgba(30, 16, 48, 0.1) 50%,
+          transparent 100%
+        );
+      }
+      .prf-badge {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        background: var(--grad-brand);
+        color: #fff;
+        font-family: var(--font-m);
+        font-size: 0.55rem;
+        font-weight: 700;
+        padding: 0.22rem 0.65rem;
+        border-radius: 999px;
+        letter-spacing: 0.06em;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        z-index: 2;
+      }
+      .prf-badge.premium {
+        background: linear-gradient(135deg, #d97706, #f59e0b);
+      }
+      .prf-badge.top {
+        background: linear-gradient(135deg, #059669, #10b981);
+      }
+      .prf-online {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+      .prf-online-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--green-2);
+        box-shadow: 0 0 8px var(--green-2);
+        animation: blink 2s infinite;
+      }
+      .prf-identity {
+        position: absolute;
+        bottom: 0.875rem;
+        left: 0.875rem;
+        right: 0.875rem;
+        z-index: 2;
+      }
+      .prf-name {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      .prf-location {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 0.25rem;
+      }
+      .prf-body {
+        padding: 1rem 1.125rem 1.125rem;
+      }
+      .prf-rate-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+      }
+      .prf-rate {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: var(--green-2);
+        letter-spacing: -0.03em;
+      }
+      .prf-rate span {
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--text-3);
+        font-family: var(--font-b);
+      }
+      .prf-stars {
+        color: var(--gold);
+        font-size: 0.7rem;
+        letter-spacing: 0.04em;
+      }
+      .prf-desc {
+        font-size: 0.8rem;
+        color: var(--text-2);
+        line-height: 1.7;
+        margin-bottom: 0.875rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .prf-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+      }
+      .prf-tag {
+        font-family: var(--font-m);
+        font-size: 0.52rem;
+        font-weight: 700;
+        padding: 0.18rem 0.55rem;
+        border-radius: 5px;
+        background: var(--violet-dim);
+        color: var(--violet-4);
+        border: 1px solid var(--border-1);
+      }
+      .prf-actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .prf-btn-accept {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.6rem 0.75rem;
+        border-radius: var(--radius-sm);
+        background: var(--grad-brand);
+        color: #fff;
+        font-family: var(--font-b);
+        font-size: 0.78rem;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: var(--shadow-violet);
+      }
+      .prf-btn-accept:hover {
+        filter: brightness(1.08);
+        transform: translateY(-2px);
+      }
+      .prf-btn-view {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.6rem 0.75rem;
+        border-radius: var(--radius-sm);
+        background: var(--card-1);
+        color: var(--text-2);
+        font-family: var(--font-b);
+        font-size: 0.78rem;
+        font-weight: 700;
+        border: 1.5px solid var(--border-1);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .prf-btn-view:hover {
+        background: var(--violet-dim);
+        color: var(--violet-4);
+        border-color: var(--border-2);
+      }
+      .req-view-all {
+        text-align: center;
+        padding: 1.5rem 0 0;
+      }
+      .req-view-all-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.625rem;
+        padding: 0.95rem 2.25rem;
+        background: var(--grad-brand);
+        color: #fff;
+        border-radius: var(--radius-md);
+        font-family: var(--font-b);
+        font-size: 0.95rem;
+        font-weight: 800;
+        box-shadow: var(--shadow-violet-lg);
+        transition: all 0.25s var(--ease);
+        border: none;
+        cursor: pointer;
+      }
+      .req-view-all-btn:hover {
+        filter: brightness(1.08);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(124, 58, 237, 0.28);
+      }
+      .req-view-all-sub {
+        margin-top: 0.875rem;
+        font-size: 0.78rem;
+        color: var(--text-3);
+      }
+      .clients-sec {
+        background: var(--bg-1);
+        position: relative;
+        overflow: hidden;
+      }
+      .cl-intro {
+        background: var(--card-0);
+        border: 1px solid var(--border-1);
+        border-radius: var(--radius-xl);
+        padding: 2rem 2rem 1.75rem;
+        margin-bottom: 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .cl-intro::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--violet), var(--violet-4));
+      }
+      .cl-intro-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .cl-intro-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 2.5rem;
+          align-items: center;
+        }
+      }
+      .cl-intro-text h3 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(1.3rem, 3vw, 1.9rem);
+        font-weight: 800;
+        color: var(--text-0);
+        margin-bottom: 0.625rem;
+        letter-spacing: -0.02em;
+      }
+      .cl-intro-text p {
+        font-size: 0.9rem;
+        color: var(--text-2);
+        line-height: 1.85;
+      }
+      .cl-intro-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .cl-badge {
         display: inline-flex;
         align-items: center;
         gap: 0.35rem;
-        background: var(--card-0);
-        border: 1px solid var(--border-0);
-        border-radius: 7px;
-        padding: 0.22rem 0.75rem;
-        font-size: 0.7rem;
-        font-weight: 500;
-        color: var(--text-2);
+        padding: 0.32rem 0.85rem;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border: 1px solid;
       }
-      .req-card {
-        background: var(--card-0);
-        border: 1px solid var(--border-0);
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        margin-bottom: 0.5rem;
-        transition: all 0.2s;
-      }
-      .req-card:hover {
+      .cl-badge.blue {
+        background: var(--violet-dim);
+        color: var(--violet-4);
         border-color: var(--border-2);
-        box-shadow: var(--shadow-md);
       }
-      .req-head {
+      .cl-badge.green {
+        background: var(--green-dim);
+        color: var(--green-2);
+        border-color: rgba(16, 185, 129, 0.24);
+      }
+      .cl-badge.red {
+        background: var(--red-dim);
+        color: var(--red);
+        border-color: rgba(220, 38, 38, 0.24);
+      }
+      .cl-not-for {
+        background: rgba(220, 38, 38, 0.04);
+        border: 1px solid rgba(220, 38, 38, 0.14);
+        border-radius: 10px;
+        padding: 0.875rem 1rem;
+        font-size: 0.8rem;
+        color: var(--text-2);
+        line-height: 1.7;
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+      .cl-not-for i {
+        color: var(--red);
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+      }
+      .cl-reviews-grid {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        position: relative;
+      }
+      .cl-reviews-track {
+        display: flex;
+        gap: 1rem;
+        animation: carouselSlide 18s linear infinite;
+        will-change: transform;
+      }
+      .cl-reviews-track:hover {
+        animation-play-state: paused;
+      }
+      .cl-review2 {
+        background: var(--card-0);
+        border: 1px solid var(--border-0);
+        border-radius: var(--radius-lg);
+        padding: 1.375rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.25s;
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+        flex: 0 0 340px;
+        min-width: 340px;
+      }
+      @media (max-width: 640px) {
+        .cl-review2 {
+          flex: 0 0 85vw;
+          min-width: 85vw;
+        }
+      }
+      .cl-review2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+      }
+      .cl-review2.rev-blue::before {
+        background: linear-gradient(90deg, var(--violet), var(--violet-4));
+      }
+      .cl-review2.rev-green::before {
+        background: linear-gradient(90deg, var(--green), var(--green-2));
+      }
+      .cl-review2.rev-gold::before {
+        background: linear-gradient(90deg, var(--gold), #fde68a);
+      }
+      .cl-review2:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--border-1);
+      }
+      .cl-rev2-stars {
+        color: var(--gold);
+        font-size: 0.75rem;
+      }
+      .cl-rev2-text {
+        font-size: 0.82rem;
+        color: var(--text-2);
+        line-height: 1.85;
+        font-style: italic;
+        flex: 1;
+      }
+      .cl-rev2-foot {
         display: flex;
         align-items: center;
-        gap: 0.875rem;
-        padding: 0.875rem 1rem 0.75rem;
+        gap: 0.625rem;
       }
-      .req-av-wrap {
-        position: relative;
-        flex-shrink: 0;
-      }
-      .req-av-wrap img {
+      .cl-rev2-av {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--border-1);
+        flex-shrink: 0;
       }
-      .req-flag {
-        position: absolute;
-        bottom: -2px;
-        right: -4px;
-        font-size: 0.68rem;
-      }
-      .req-inf {
-        flex: 1;
-        min-width: 0;
-      }
-      .req-name {
-        font-weight: 600;
-        font-size: 0.84rem;
+      .cl-rev2-name {
+        font-weight: 700;
+        font-size: 0.82rem;
         color: var(--text-0);
       }
-      .req-meta {
-        font-size: 0.63rem;
+      .cl-rev2-meta {
+        font-size: 0.65rem;
         color: var(--text-3);
-        display: flex;
-        align-items: center;
-        gap: 0.28rem;
         margin-top: 0.06rem;
-        flex-wrap: wrap;
       }
-      .req-earn {
-        flex-shrink: 0;
-        font-family: var(--font-m);
-        font-size: 0.75rem;
-        font-weight: 700;
-        color: var(--green-2);
-        background: var(--green-dim);
-        padding: 0.18rem 0.55rem;
-        border-radius: 6px;
-        border: 1px solid rgba(16, 185, 129, 0.2);
-      }
-      .req-bubble-row {
-        padding: 0.45rem 1rem 0.625rem;
-        border-top: 1px solid var(--border-0);
-      }
-      .req-bubble {
-        background: var(--card-1);
-        border: 1px solid var(--border-0);
-        border-radius: 4px 10px 10px 10px;
-        padding: 0.45rem 0.75rem;
-        font-size: 0.8rem;
-        color: var(--text-1);
-        line-height: 1.5;
-        display: inline-block;
-      }
-      .req-acts {
-        padding: 0.625rem 1rem;
-        display: flex;
-        gap: 0.45rem;
-        border-top: 1px solid var(--border-0);
-        align-items: center;
-        background: var(--bg-1);
-      }
-      .req-time {
+      .cl-verified-badge {
         margin-left: auto;
-        font-size: 0.58rem;
-        color: var(--text-3);
+        background: var(--violet-dim);
+        border: 1px solid var(--border-2);
+        border-radius: 6px;
+        padding: 0.18rem 0.6rem;
         font-family: var(--font-m);
+        font-size: 0.52rem;
+        color: var(--violet-4);
+        white-space: nowrap;
       }
-      .btn-xs {
-        padding: 0.28rem 0.78rem;
-        font-size: 0.73rem;
-        border-radius: 7px;
-        font-weight: 700;
-        cursor: pointer;
+      .cl-cta-box {
+        background: linear-gradient(135deg, var(--bg-2), var(--card-0));
+        border: 1px solid var(--border-1);
+        border-radius: var(--radius-xl);
+        padding: 3rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cl-cta-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(124, 58, 237, 0.04) 1px,
+          transparent 1px
+        );
+        background-size: 24px 24px;
+        pointer-events: none;
+      }
+      .cl-cta-lbl {
         display: inline-flex;
         align-items: center;
-        gap: 0.28rem;
-        transition: all 0.2s;
-        border: none;
-      }
-      .btn-acc {
-        background: var(--grad-brand);
-        color: #fff;
-        box-shadow: 0 2px 10px var(--violet-glow);
-      }
-      .btn-acc:hover {
-        filter: brightness(1.08);
-      }
-      .btn-skp {
-        background: var(--card-1);
+        gap: 0.4rem;
+        background: var(--violet-dim);
+        border: 1px solid var(--border-1);
+        border-radius: 7px;
+        padding: 0.3rem 0.875rem;
+        font-size: 0.7rem;
+        font-weight: 600;
         color: var(--text-2);
-        border: 1px solid var(--border-1);
+        margin-bottom: 1.25rem;
+        position: relative;
+        z-index: 2;
       }
-      .btn-skp:hover {
-        border-color: var(--border-2);
-        color: var(--text-0);
-      }
-      .req-panel {
-        background: var(--card-0);
-        border: 1px solid var(--border-1);
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        box-shadow: var(--shadow-md);
-      }
-      .req-panel-img {
-        width: 100%;
-        height: 215px;
-        object-fit: cover;
-      }
-      .req-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border-bottom: 1px solid var(--border-0);
-      }
-      .rs {
-        padding: 0.75rem 0.5rem;
-        text-align: center;
-        border-right: 1px solid var(--border-0);
-      }
-      .rs:last-child {
-        border-right: none;
-      }
-      .rs-v {
+      .cl-cta-box h3 {
         font-family: "Outfit", sans-serif;
-        font-size: 1.1rem;
+        font-size: clamp(1.4rem, 3vw, 2rem);
         font-weight: 800;
         color: var(--text-0);
-        line-height: 1;
-        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 2;
       }
-      .rs-v.g {
-        color: var(--green-2);
+      .cl-cta-box p {
+        font-size: 0.875rem;
+        color: var(--text-2);
+        max-width: 440px;
+        margin: 0 auto 2rem;
+        line-height: 1.85;
+        position: relative;
+        z-index: 2;
       }
-      .rs-v.b {
-        color: var(--violet-4);
-      }
-      .rs-l {
-        font-family: var(--font-m);
-        font-size: 0.5rem;
-        color: var(--text-3);
-        margin-top: 0.12rem;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-      }
-      .req-panel-cta {
-        padding: 0.875rem 1.125rem;
-      }
-      .req-panel-cta-btn {
+      .cl-cta-btns {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.875rem;
         justify-content: center;
-        gap: 0.5rem;
-        width: 100%;
-        padding: 0.875rem;
-        border-radius: var(--radius-md);
-        background: var(--grad-brand);
-        color: #fff;
-        font-family: var(--font-b);
-        font-size: 0.855rem;
-        font-weight: 700;
-        cursor: pointer;
-        border: none;
-        transition: all 0.2s;
-        box-shadow: var(--shadow-violet);
+        position: relative;
+        z-index: 2;
       }
-      .req-panel-cta-btn:hover {
-        filter: brightness(1.08);
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-violet-lg);
+      .cl-safety {
+        background: var(--card-0);
+        border: 1px solid var(--border-0);
+        border-radius: 12px;
+        padding: 1rem 1.375rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.875rem;
+        margin-top: 1.5rem;
+      }
+      .cl-safety-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: var(--violet-dim);
+        border: 1px solid var(--border-2);
+        display: grid;
+        place-items: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .cl-safety-title {
+        font-weight: 700;
+        font-size: 0.82rem;
+        color: var(--text-0);
+        margin-bottom: 0.18rem;
+      }
+      .cl-safety-text {
+        font-size: 0.76rem;
+        color: var(--text-2);
+        line-height: 1.75;
       }
       .proof-sec {
         background: var(--bg-1);
@@ -2470,7 +2667,7 @@
         right: 14px;
         font-family: Georgia, serif;
         font-size: 7rem;
-        color: var(--violet-dim-2);
+        color: rgba(124, 58, 237, 0.06);
         pointer-events: none;
         line-height: 1;
       }
@@ -2811,7 +3008,7 @@
         inset: 0;
         background: radial-gradient(
           ellipse 55% 65% at 50% 50%,
-          rgba(124, 58, 237, 0.1),
+          rgba(124, 58, 237, 0.08),
           transparent 60%
         );
         pointer-events: none;
@@ -2843,298 +3040,6 @@
         flex-wrap: wrap;
         gap: 0.875rem;
         justify-content: center;
-      }
-      .clients-sec {
-        background: var(--bg-1);
-        position: relative;
-        overflow: hidden;
-      }
-      .cl-intro {
-        background: var(--card-0);
-        border: 1px solid var(--border-1);
-        border-radius: var(--radius-xl);
-        padding: 2rem 2rem 1.75rem;
-        margin-bottom: 3rem;
-        position: relative;
-        overflow: hidden;
-      }
-      .cl-intro::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--violet), var(--violet-4));
-      }
-      .cl-intro-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      @media (min-width: 768px) {
-        .cl-intro-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 2.5rem;
-          align-items: center;
-        }
-      }
-      .cl-intro-text h3 {
-        font-family: "Outfit", sans-serif;
-        font-size: clamp(1.3rem, 3vw, 1.9rem);
-        font-weight: 800;
-        color: var(--text-0);
-        margin-bottom: 0.625rem;
-        letter-spacing: -0.02em;
-      }
-      .cl-intro-text p {
-        font-size: 0.9rem;
-        color: var(--text-2);
-        line-height: 1.85;
-      }
-      .cl-intro-badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-      .cl-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        padding: 0.32rem 0.85rem;
-        border-radius: 8px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border: 1px solid;
-      }
-      .cl-badge.blue {
-        background: var(--violet-dim);
-        color: var(--violet-4);
-        border-color: var(--border-2);
-      }
-      .cl-badge.green {
-        background: var(--green-dim);
-        color: var(--green-2);
-        border-color: rgba(16, 185, 129, 0.24);
-      }
-      .cl-badge.red {
-        background: var(--red-dim);
-        color: var(--red);
-        border-color: rgba(239, 68, 68, 0.24);
-      }
-      .cl-not-for {
-        background: rgba(239, 68, 68, 0.05);
-        border: 1px solid rgba(239, 68, 68, 0.16);
-        border-radius: 10px;
-        padding: 0.875rem 1rem;
-        font-size: 0.8rem;
-        color: var(--text-2);
-        line-height: 1.7;
-        display: flex;
-        gap: 0.5rem;
-        align-items: flex-start;
-      }
-      .cl-not-for i {
-        color: var(--red);
-        flex-shrink: 0;
-        margin-top: 0.15rem;
-      }
-      .cl-reviews-grid {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 3rem;
-        overflow: hidden;
-        position: relative;
-      }
-      .cl-reviews-track {
-        display: flex;
-        gap: 1rem;
-        animation: carouselSlide 18s linear infinite;
-        will-change: transform;
-      }
-      .cl-reviews-track:hover {
-        animation-play-state: paused;
-      }
-      .cl-review2 {
-        background: var(--card-0);
-        border: 1px solid var(--border-0);
-        border-radius: var(--radius-lg);
-        padding: 1.375rem;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.25s;
-        display: flex;
-        flex-direction: column;
-        gap: 0.875rem;
-        flex: 0 0 340px;
-        min-width: 340px;
-      }
-      @media (max-width: 640px) {
-        .cl-review2 {
-          flex: 0 0 85vw;
-          min-width: 85vw;
-        }
-      }
-      .cl-review2::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-      }
-      .cl-review2.rev-blue::before {
-        background: linear-gradient(90deg, var(--violet), var(--violet-4));
-      }
-      .cl-review2.rev-green::before {
-        background: linear-gradient(90deg, var(--green), var(--green-2));
-      }
-      .cl-review2.rev-gold::before {
-        background: linear-gradient(90deg, var(--gold), #fde68a);
-      }
-      .cl-review2:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--border-1);
-      }
-      .cl-rev2-stars {
-        color: var(--gold);
-        font-size: 0.75rem;
-      }
-      .cl-rev2-text {
-        font-size: 0.82rem;
-        color: var(--text-2);
-        line-height: 1.85;
-        font-style: italic;
-        flex: 1;
-      }
-      .cl-rev2-foot {
-        display: flex;
-        align-items: center;
-        gap: 0.625rem;
-      }
-      .cl-rev2-av {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--border-1);
-        flex-shrink: 0;
-      }
-      .cl-rev2-name {
-        font-weight: 700;
-        font-size: 0.82rem;
-        color: var(--text-0);
-      }
-      .cl-rev2-meta {
-        font-size: 0.65rem;
-        color: var(--text-3);
-        margin-top: 0.06rem;
-      }
-      .cl-verified-badge {
-        margin-left: auto;
-        background: var(--violet-dim);
-        border: 1px solid var(--border-2);
-        border-radius: 6px;
-        padding: 0.18rem 0.6rem;
-        font-family: var(--font-m);
-        font-size: 0.52rem;
-        color: var(--violet-4);
-        white-space: nowrap;
-      }
-      .cl-cta-box {
-        background: linear-gradient(135deg, var(--bg-2), var(--card-0));
-        border: 1px solid var(--border-1);
-        border-radius: var(--radius-xl);
-        padding: 3rem 2rem;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .cl-cta-box::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image: radial-gradient(
-          rgba(124, 58, 237, 0.04) 1px,
-          transparent 1px
-        );
-        background-size: 24px 24px;
-        pointer-events: none;
-      }
-      .cl-cta-lbl {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        background: var(--violet-dim);
-        border: 1px solid var(--border-1);
-        border-radius: 7px;
-        padding: 0.3rem 0.875rem;
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: var(--text-2);
-        margin-bottom: 1.25rem;
-        position: relative;
-        z-index: 2;
-      }
-      .cl-cta-box h3 {
-        font-family: "Outfit", sans-serif;
-        font-size: clamp(1.4rem, 3vw, 2rem);
-        font-weight: 800;
-        color: var(--text-0);
-        margin-bottom: 0.5rem;
-        position: relative;
-        z-index: 2;
-      }
-      .cl-cta-box p {
-        font-size: 0.875rem;
-        color: var(--text-2);
-        max-width: 440px;
-        margin: 0 auto 2rem;
-        line-height: 1.85;
-        position: relative;
-        z-index: 2;
-      }
-      .cl-cta-btns {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.875rem;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-      }
-      .cl-safety {
-        background: var(--card-0);
-        border: 1px solid var(--border-0);
-        border-radius: 12px;
-        padding: 1rem 1.375rem;
-        display: flex;
-        align-items: flex-start;
-        gap: 0.875rem;
-        margin-top: 1.5rem;
-      }
-      .cl-safety-icon {
-        width: 34px;
-        height: 34px;
-        border-radius: 8px;
-        background: var(--violet-dim);
-        border: 1px solid var(--border-2);
-        display: grid;
-        place-items: center;
-        font-size: 0.9rem;
-        flex-shrink: 0;
-      }
-      .cl-safety-title {
-        font-weight: 700;
-        font-size: 0.82rem;
-        color: var(--text-0);
-        margin-bottom: 0.18rem;
-      }
-      .cl-safety-text {
-        font-size: 0.76rem;
-        color: var(--text-2);
-        line-height: 1.75;
       }
       .footer {
         background: var(--bg-0);
@@ -3291,16 +3196,13 @@
         bottom: 0;
         inset-inline: 0;
         z-index: 795;
-        background: rgba(8, 6, 17, 0.97);
+        background: rgba(245, 243, 255, 0.97);
         backdrop-filter: blur(24px);
         border-top: 1px solid var(--border-2);
         padding: 0.55rem 0;
         transform: translateY(100%);
         transition: transform 0.3s;
-        box-shadow: 0 -4px 24px rgba(124, 58, 237, 0.12);
-      }
-      [data-theme="light"] .sticky-bar {
-        background: rgba(245, 243, 255, 0.97);
+        box-shadow: 0 -4px 24px rgba(124, 58, 237, 0.1);
       }
       .sticky-bar.show {
         transform: none;
@@ -3352,7 +3254,7 @@
         transform: scale(1.1);
       }
       .float-wa-label {
-        background: rgba(8, 6, 17, 0.92);
+        background: rgba(45, 27, 94, 0.9);
         border: 1px solid rgba(37, 211, 102, 0.3);
         color: #fff;
         font-size: 0.62rem;
@@ -3480,7 +3382,7 @@
       .ov {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.88);
+        background: rgba(30, 16, 48, 0.75);
         backdrop-filter: blur(24px);
         z-index: 10020;
         display: none;
@@ -3515,7 +3417,7 @@
         inset: 0;
         background-size: cover;
         background-position: center;
-        opacity: 0.1;
+        opacity: 0.08;
       }
       .om-ribbon {
         position: absolute;
@@ -3536,7 +3438,7 @@
         font-size: 2.5rem;
         display: block;
         margin-bottom: 0.45rem;
-        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
         position: relative;
         z-index: 2;
       }
@@ -3567,8 +3469,8 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid var(--border-0);
+        background: var(--card-0);
+        border: 1px solid var(--border-1);
         color: var(--text-2);
         cursor: pointer;
         display: grid;
@@ -3590,7 +3492,7 @@
         gap: 0.4rem;
         background: var(--red-dim);
         color: var(--red);
-        border: 1px solid rgba(239, 68, 68, 0.22);
+        border: 1px solid rgba(220, 38, 38, 0.22);
         padding: 0.32rem 0.875rem;
         border-radius: 7px;
         font-size: 0.74rem;
@@ -3692,7 +3594,7 @@
       .acct-ov {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(30, 16, 48, 0.85);
         backdrop-filter: blur(24px);
         z-index: 10025;
         display: none;
@@ -3739,7 +3641,6 @@
         font-size: 2.2rem;
         display: block;
         margin-bottom: 0.5rem;
-        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
       }
       .acct-head-title {
         font-family: "Outfit", sans-serif;
@@ -3912,7 +3813,7 @@
       .chat-ov {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.68);
+        background: rgba(30, 16, 48, 0.6);
         backdrop-filter: blur(18px);
         z-index: 10001;
         display: none;
@@ -4104,6 +4005,10 @@
       .cm-inp::placeholder {
         color: var(--text-3);
       }
+      .cm-inp:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
       .cm-send {
         width: 36px;
         height: 36px;
@@ -4123,10 +4028,15 @@
         filter: brightness(1.08);
         transform: scale(1.08);
       }
+      .cm-send:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
       .lm-ov {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.82);
+        background: rgba(30, 16, 48, 0.8);
         backdrop-filter: blur(22px);
         z-index: 10003;
         display: none;
@@ -4348,9 +4258,6 @@
         .btn-xl {
           padding: 0.8rem 1.5rem;
           font-size: 0.875rem;
-        }
-        .om {
-          border-radius: var(--radius-lg) var(--radius-lg) 0 0;
         }
       }
       @media (max-width: 360px) {
@@ -4636,7 +4543,6 @@
       <i class="fas fa-check-circle"></i><span id="notifTxt"></span>
     </div>
     <div class="sp-wrap" id="spWrap" aria-hidden="true"></div>
-
     <div
       class="cookie-bar"
       id="cookieBar"
@@ -4665,7 +4571,6 @@
       ></a>
     </div>
 
-    <!-- STICKY BAR — direct link, no modal -->
     <div class="sticky-bar" id="stickyBar" role="banner">
       <div class="wrap">
         <div class="sticky-in">
@@ -4684,7 +4589,6 @@
       </div>
     </div>
 
-    <!-- NAV — direct links, no modal -->
     <header class="nav" id="nav" role="navigation">
       <div class="wrap">
         <div class="nav-inner">
@@ -4698,6 +4602,18 @@
             ><a href="#faq">FAQ</a>
           </nav>
           <div class="nav-right">
+            <div class="lang-switcher" id="langSwitcher" aria-label="Language">
+              <button
+                class="lang-btn active"
+                data-lang="en"
+                onclick="setLang('en')"
+              >
+                EN
+              </button>
+              <button class="lang-btn" data-lang="sw" onclick="setLang('sw')">
+                SW
+              </button>
+            </div>
             <a
               href="https://Starhela.com/login.php"
               target="_blank"
@@ -4727,7 +4643,6 @@
       </div>
     </header>
 
-    <!-- MOB NAV — direct links, no modal -->
     <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
       <a href="#how">How It Works</a><a href="#earn">5 Ways to Earn</a
       ><a href="#clients">For Clients</a><a href="#topics">Topics</a
@@ -4769,29 +4684,39 @@
         <div class="hero-left">
           <div class="hero-live">
             <span class="live-dot" aria-hidden="true"></span>
-            <span class="live-lbl">Earning right now —</span>
-            <span class="live-count" id="liveCount">847</span>
-            <span class="live-lbl">&nbsp;active chatters</span>
+            <span class="live-lbl" data-i18n="live_label"
+              >Earning right now —</span
+            >
+            <span class="live-count" id="liveCount">2,847</span>
+            <span class="live-lbl"
+              >&nbsp;<span data-i18n="active_chatters"
+                >active chatters</span
+              ></span
+            >
           </div>
           <h1 class="h-xl hero-h1">
-            <span class="line1">Turn Conversations Into</span>
-            <span class="g-text">Real Cash</span>
+            <span class="line1" data-i18n="hero_sub"
+              >Turn Conversations Into</span
+            >
+            <span class="g-text" data-i18n="hero_main">Real Cash</span>
           </h1>
           <div class="hero-rate-row">
             <div class="hero-rate">$2–$8</div>
             <div class="hero-rate-sep"></div>
             <div class="hero-rate-info">
-              <span class="hero-rate-lbl">per hour · 5 ways to earn</span>
+              <span class="hero-rate-lbl" data-i18n="rate_label"
+                >per hour · 5 ways to earn</span
+              >
               <div class="hero-methods">
-                <span class="method-tag">Per Hour</span
-                ><span class="method-tag">Per Message</span
-                ><span class="method-tag">Per Session</span
+                <span class="method-tag" data-i18n="m1">Per Hour</span
+                ><span class="method-tag" data-i18n="m2">Per Message</span
+                ><span class="method-tag" data-i18n="m3">Per Session</span
                 ><span class="method-tag">Tips</span
-                ><span class="method-tag">Daily Rewards</span>
+                ><span class="method-tag" data-i18n="m4">Daily Rewards</span>
               </div>
             </div>
           </div>
-          <p class="hero-desc">
+          <p class="hero-desc" data-i18n="hero_desc">
             Chat with people from
             <strong style="color: var(--text-0)"
               >UK, USA, Canada, Qatar &amp; 100+ countries</strong
@@ -4801,148 +4726,129 @@
           <div class="hero-stats-bar">
             <div class="hstat">
               <div class="hstat-val" id="todayEarned">$3,240</div>
-              <div class="hstat-lbl">Paid today</div>
+              <div class="hstat-lbl" data-i18n="paid_today">Paid today</div>
             </div>
             <div class="hstat">
               <div class="hstat-val g">8,400+</div>
-              <div class="hstat-lbl">Active earners</div>
+              <div class="hstat-lbl" data-i18n="active_earners">
+                Active earners
+              </div>
             </div>
             <div class="hstat">
               <div class="hstat-val">$890K+</div>
-              <div class="hstat-lbl">Total paid out</div>
+              <div class="hstat-lbl" data-i18n="total_paid">Total paid out</div>
             </div>
             <div class="hstat">
               <div class="hstat-val g">4.6★</div>
-              <div class="hstat-lbl">Rating</div>
+              <div class="hstat-lbl" data-i18n="rating">Rating</div>
             </div>
           </div>
           <div class="hero-flags">
-            <span class="flag-chip">🇬🇧 UK <em>$2–$8/hr</em></span>
-            <span class="flag-chip">🇺🇸 USA <em>$2–$8/hr</em></span>
-            <span class="flag-chip">🇨🇦 Canada <em>$2–$8/hr</em></span>
-            <span class="flag-chip">🇶🇦 Qatar <em>$2–$8/hr</em></span>
-            <span class="flag-chip">🇦🇺 Australia <em>$2–$8/hr</em></span>
-            <span class="flag-chip">🌍 +100 more</span>
+            <span class="flag-chip">🇬🇧 UK <em>$2–$8/hr</em></span
+            ><span class="flag-chip">🇺🇸 USA <em>$2–$8/hr</em></span
+            ><span class="flag-chip">🇨🇦 Canada <em>$2–$8/hr</em></span
+            ><span class="flag-chip">🇶🇦 Qatar <em>$2–$8/hr</em></span
+            ><span class="flag-chip">🇦🇺 Australia <em>$2–$8/hr</em></span
+            ><span class="flag-chip">🌍 +100 more</span>
           </div>
           <div class="hero-btns">
-            <!-- CHANGE 3: Eye-catching Meet People button with live dot + badge -->
-            <button class="btn btn-xl" id="meetBtn" style="position: relative">
+            <button
+              class="btn btn-xl"
+              id="meetBtn"
+              style="position: relative"
+              onclick="scrollToReq()"
+            >
               <span class="meet-live-dot"></span>
-              <span id="meetBtnTxt">Meet People Ready to Chat</span>
+              <span id="meetBtnTxt" data-i18n="meet_btn"
+                >Meet People Ready to Chat</span
+              >
               <span class="meet-badge">LIVE</span>
             </button>
-            <!-- CHANGE 2: Direct link — no modal -->
             <a
               href="https://Starhela.com/register.php?ref=sydney"
               target="_blank"
               rel="noopener"
               class="btn btn-g btn-xl"
+              ><i class="fas fa-user-plus"></i
+              ><span data-i18n="create_account">Create Account</span></a
             >
-              <i class="fas fa-user-plus"></i> Create Account
-            </a>
           </div>
-          <div id="pCardWrap" style="margin-bottom: 1.5rem"></div>
           <div class="hero-proof">
             <span class="proof-item"
-              ><i class="fas fa-shield-alt"></i> Secure &amp; Trusted</span
+              ><i class="fas fa-shield-alt"></i
+              ><span data-i18n="proof1">Secure &amp; Trusted</span></span
             >
             <span class="proof-item"
-              ><i class="fas fa-bolt"></i> Daily Withdrawals</span
+              ><i class="fas fa-bolt"></i
+              ><span data-i18n="proof2">Daily Withdrawals</span></span
             >
             <span class="proof-item"
-              ><i class="fas fa-layer-group"></i> 5 Ways to Earn</span
+              ><i class="fas fa-layer-group"></i
+              ><span data-i18n="proof3">5 Ways to Earn</span></span
             >
             <span class="proof-item"
-              ><i class="fas fa-globe"></i> 100+ Countries</span
+              ><i class="fas fa-globe"></i
+              ><span data-i18n="proof4">100+ Countries</span></span
             >
           </div>
         </div>
         <div class="hero-right">
           <div class="chat-widget">
-            <div class="cw-head">
+            <div class="req-panel fu">
               <img
-                src="https://i.pravatar.cc/84?img=12"
-                alt="James from London"
-                class="cw-av"
+                src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1777884222/how-to-chat-in-Starhela_xrjfnk.png"
+                alt="How to earn by chatting on Starhela"
+                class="req-panel-img"
                 loading="lazy"
+                width="400"
+                height="215"
+                style="width: 100%; height: 215px; object-fit: cover"
               />
-              <div>
-                <div class="cw-name">James, 52 · London 🇬🇧</div>
-                <div class="cw-status">
-                  <span
-                    style="
-                      width: 5px;
-                      height: 5px;
-                      border-radius: 50%;
-                      background: var(--green-2);
-                      display: inline-block;
-                      animation: blink 1.8s infinite;
-                    "
-                  ></span>
-                  Online now
+              <div
+                class="req-stats"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  border-bottom: 1px solid var(--border-0);
+                "
+              >
+                <div class="rs">
+                  <div class="rs-v" data-count="8400">0</div>
+                  <div class="rs-l">Earners</div>
+                </div>
+                <div class="rs">
+                  <div class="rs-v g">$2–$8</div>
+                  <div class="rs-l">Per Hour</div>
+                </div>
+                <div class="rs">
+                  <div class="rs-v b">5×</div>
+                  <div class="rs-l">Earn Ways</div>
+                </div>
+                <div class="rs">
+                  <div class="rs-v">Daily</div>
+                  <div class="rs-l">Payouts</div>
                 </div>
               </div>
-              <div class="cw-badge">$2–$8/hr</div>
-            </div>
-            <div class="cw-msgs">
-              <div class="cw-bubble-wrap">
-                <img
-                  src="https://i.pravatar.cc/56?img=12"
-                  class="cw-mini-av"
-                  loading="lazy"
-                  alt=""
-                />
-                <div class="cw-bubble them">
-                  Hi! I'm James from London 🇬🇧 I'd love to learn about your
-                  culture. Are you free to chat?
-                </div>
-              </div>
-              <div class="cw-bubble-wrap me">
-                <div class="cw-bubble me">
-                  Hi James! Of course 😊 Happy to share. What would you like to
-                  know?
-                </div>
-                <img
-                  src="https://i.pravatar.cc/56?img=44"
-                  class="cw-mini-av"
-                  loading="lazy"
-                  alt=""
-                />
-              </div>
-              <div class="cw-bubble-wrap">
-                <img
-                  src="https://i.pravatar.cc/56?img=12"
-                  class="cw-mini-av"
-                  loading="lazy"
-                  alt=""
-                />
-                <div class="cw-bubble them">
-                  Amazing! Tell me about local food 🍛
-                </div>
-              </div>
-            </div>
-            <div class="cw-stats">
-              <div class="cw-stat">
-                <div class="cw-stat-v" data-count="8400">0</div>
-                <div class="cw-stat-l">Earners</div>
-              </div>
-              <div class="cw-stat">
-                <div class="cw-stat-v g">$2–$8</div>
-                <div class="cw-stat-l">Per Hour</div>
-              </div>
-              <div class="cw-stat">
-                <div class="cw-stat-v b">5×</div>
-                <div class="cw-stat-l">Earn Ways</div>
-              </div>
-              <div class="cw-stat">
-                <div class="cw-stat-v">Daily</div>
-                <div class="cw-stat-l">Payouts</div>
+              <div class="req-panel-cta">
+                <a
+                  href="https://Starhela.com/register.php?ref=sydney"
+                  target="_blank"
+                  rel="noopener"
+                  class="req-panel-cta-btn"
+                  style="text-decoration: none"
+                  ><i class="fas fa-rocket"></i
+                  ><span data-i18n="start_accepting"
+                    >Start Accepting Requests</span
+                  ></a
+                >
               </div>
             </div>
             <div class="cw-calc">
-              <div class="cw-calc-lbl">💰 Estimate your earnings</div>
+              <div class="cw-calc-lbl">
+                💰 <span data-i18n="estimate">Estimate your earnings</span>
+              </div>
               <div class="c-row">
-                <span class="c-lbl">Chats / day</span
+                <span class="c-lbl" data-i18n="chats_day">Chats / day</span
                 ><input
                   type="range"
                   class="c-sl"
@@ -4953,7 +4859,7 @@
                 /><span class="c-val" id="cChatsV">4</span>
               </div>
               <div class="c-row">
-                <span class="c-lbl">Rate / hr</span
+                <span class="c-lbl" data-i18n="rate_hr">Rate / hr</span
                 ><input
                   type="range"
                   class="c-sl"
@@ -4964,16 +4870,79 @@
                 /><span class="c-val" id="cRateV">$4</span>
               </div>
               <div class="c-result">
-                <span class="c-result-lbl">Monthly estimate (30 days)</span
+                <span class="c-result-lbl" data-i18n="monthly_est"
+                  >Monthly estimate (30 days)</span
                 ><span class="c-result-val" id="cResult">$480</span>
               </div>
             </div>
             <div class="cw-cta">
               <button class="cw-demo-btn" id="openDemo">
-                <i class="fas fa-comment-dots"></i> Try a Live Chat Demo
+                <i class="fas fa-comment-dots"></i
+                ><span data-i18n="try_demo">Try a Live Chat Demo</span>
               </button>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE REQUESTS — INFINITE PER-CARD ROTATION 3×3 GRID -->
+    <section class="req-sec sec" id="req-sec">
+      <div class="wrap">
+        <div class="req-section-header fu">
+          <div class="pill" data-i18n="live_requests">Live Requests</div>
+          <h2 class="h-lg">
+            <span data-i18n="real_people">Real people,</span>
+            <span class="g-text" data-i18n="ready_to_chat">ready to chat</span>
+          </h2>
+          <p class="sub" data-i18n="req_sub">
+            New requests arrive regularly. Every completed conversation adds to
+            your balance. <strong>Chat in Kiswahili</strong> — clients
+            automatically receive translated messages on their side.
+          </p>
+          <div class="req-live-bar">
+            <div class="req-live-pill">
+              <span class="dot"></span
+              ><span id="activeReqCount">1,312</span>&nbsp;<span
+                data-i18n="requests_live"
+                >requests live</span
+              >
+            </div>
+            <div class="req-live-pill rate">
+              <i
+                class="fas fa-dollar-sign"
+                style="font-size: 0.55rem; color: var(--violet-4)"
+              ></i>
+              $2–$8/hr
+            </div>
+            <div class="req-live-pill fast">
+              <i
+                class="fas fa-clock"
+                style="font-size: 0.55rem; color: var(--green-2)"
+              ></i>
+              ~5 min wait
+            </div>
+          </div>
+        </div>
+        <div class="profile-grid-wrap">
+          <div class="profile-grid" id="profileGrid"></div>
+        </div>
+        <div class="req-view-all fu">
+          <a
+            href="https://Starhela.com/register.php?ref=sydney"
+            target="_blank"
+            rel="noopener"
+            class="req-view-all-btn"
+          >
+            <i class="fas fa-th-large"></i>
+            <span data-i18n="view_all_profiles"
+              >View All Profiles &amp; Start Chatting</span
+            >
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <p class="req-view-all-sub" data-i18n="view_all_sub">
+            Register free to access 500+ verified clients from 100+ countries
+          </p>
         </div>
       </div>
     </section>
@@ -4982,11 +4951,12 @@
     <section class="how-sec sec" id="how">
       <div class="wrap">
         <div class="shead c fu">
-          <div class="pill">Simple Process</div>
+          <div class="pill" data-i18n="simple_process">Simple Process</div>
           <h2 class="h-lg">
-            Start earning in <span class="g-text">3 easy steps</span>
+            <span data-i18n="start_earning">Start earning in</span>
+            <span class="g-text" data-i18n="three_steps">3 easy steps</span>
           </h2>
-          <p class="sub">
+          <p class="sub" data-i18n="steps_sub">
             From zero to your first conversation in under an hour.
           </p>
         </div>
@@ -5000,8 +4970,9 @@
             <div class="step-n">Step 01</div>
             <div class="step-num">1</div>
             <h3>
-              <span class="step-title-link">Register Your Account</span>
-              <i
+              <span class="step-title-link" data-i18n="step1_title"
+                >Register Your Account</span
+              ><i
                 class="fas fa-info-circle"
                 style="
                   font-size: 0.75rem;
@@ -5011,12 +4982,15 @@
                 "
               ></i>
             </h3>
-            <p>
+            <p data-i18n="step1_desc">
               Create your profile with a one-time activation fee. Instantly
               unlocks access to clients worldwide.
             </p>
             <div class="step-tag">
-              <i class="fas fa-check"></i> One-time only — no recurring fees
+              <i class="fas fa-check"></i
+              ><span data-i18n="step1_tag"
+                >One-time only — no recurring fees</span
+              >
             </div>
             <div
               style="
@@ -5036,6 +5010,7 @@
                   font-weight: 700;
                   color: var(--text-0);
                 "
+                data-i18n="view_steps"
                 >View Registration Steps</span
               >
               <span style="display: flex; gap: 0.18rem; margin-left: auto">
@@ -5071,25 +5046,28 @@
           <div class="step fu" style="transition-delay: 0.1s">
             <div class="step-n">Step 02</div>
             <div class="step-num">2</div>
-            <h3>Accept Chat Requests</h3>
-            <p>
+            <h3 data-i18n="step2_title">Accept Chat Requests</h3>
+            <p data-i18n="step2_desc">
               Clients from UK, USA, Canada &amp; more send requests. Accept,
               have a real conversation, and earn per hour, message, or session.
+              Chat in Kiswahili — messages auto-translate for clients.
             </p>
             <div class="step-tag">
-              <i class="fas fa-comment"></i> 5 ways to earn per chat
+              <i class="fas fa-comment"></i
+              ><span data-i18n="step2_tag">5 ways to earn per chat</span>
             </div>
           </div>
           <div class="step fu" style="transition-delay: 0.2s">
             <div class="step-n">Step 03</div>
             <div class="step-num">3</div>
-            <h3>Earn &amp; Withdraw Daily</h3>
-            <p>
+            <h3 data-i18n="step3_title">Earn &amp; Withdraw Daily</h3>
+            <p data-i18n="step3_desc">
               Withdraw daily to M-Pesa, PayPal, MTN Money, or Airtel Money —
               zero fees.
             </p>
             <div class="step-tag">
-              <i class="fas fa-dollar-sign"></i> Zero withdrawal fees
+              <i class="fas fa-dollar-sign"></i
+              ><span data-i18n="step3_tag">Zero withdrawal fees</span>
             </div>
           </div>
         </div>
@@ -5100,9 +5078,12 @@
     <section class="earn-sec sec" id="earn">
       <div class="wrap">
         <div class="shead c fu">
-          <div class="pill">Maximize Your Income</div>
-          <h2 class="h-lg">Five ways to <span class="g-text">earn</span></h2>
-          <p class="sub">
+          <div class="pill" data-i18n="maximize">Maximize Your Income</div>
+          <h2 class="h-lg">
+            <span data-i18n="five_ways">Five ways to</span>
+            <span class="g-text" data-i18n="earn_word">earn</span>
+          </h2>
+          <p class="sub" data-i18n="five_sub">
             Most platforms pay one way. Starhela pays five. Combine methods to
             maximize every conversation.
           </p>
@@ -5111,64 +5092,73 @@
           <div class="em em1 fu">
             <div class="em-idx">Method 01</div>
             <span class="em-icon">⏰</span>
-            <h3 class="em-title">Earn Per Hour</h3>
+            <h3 class="em-title" data-i18n="em1_title">Earn Per Hour</h3>
             <div class="em-earn">$2–$8 / hr</div>
-            <p class="em-desc">
+            <p class="em-desc" data-i18n="em1_desc">
               Auto-tracked earnings for every hour of conversation. The more you
               chat, the more you earn.
             </p>
-            <div class="em-foot"><i class="fas fa-bolt"></i> Auto-tracked</div>
+            <div class="em-foot">
+              <i class="fas fa-bolt"></i
+              ><span data-i18n="auto_tracked">Auto-tracked</span>
+            </div>
           </div>
           <div class="em em2 fu" style="transition-delay: 0.07s">
             <div class="em-idx">Method 02</div>
             <span class="em-icon">💬</span>
-            <h3 class="em-title">Earn Per Message</h3>
-            <div class="em-earn">Every reply pays</div>
-            <p class="em-desc">
+            <h3 class="em-title" data-i18n="em2_title">Earn Per Message</h3>
+            <div class="em-earn" data-i18n="em2_earn">Every reply pays</div>
+            <p class="em-desc" data-i18n="em2_desc">
               Get paid for each message sent. Balance updates instantly with
               every reply.
             </p>
             <div class="em-foot">
-              <i class="fas fa-bolt"></i> Instant update
+              <i class="fas fa-bolt"></i
+              ><span data-i18n="instant_update">Instant update</span>
             </div>
           </div>
           <div class="em em3 fu" style="transition-delay: 0.14s">
             <div class="em-idx">Method 03</div>
             <span class="em-icon">📋</span>
-            <h3 class="em-title">Earn Per Session</h3>
+            <h3 class="em-title" data-i18n="em3_title">Earn Per Session</h3>
             <div class="em-earn">$2–$4 per session</div>
-            <p class="em-desc">
+            <p class="em-desc" data-i18n="em3_desc">
               Complete full chat sessions (20–60 min) and receive a flat payment
               on completion.
             </p>
             <div class="em-foot">
-              <i class="fas fa-bolt"></i> Paid on completion
+              <i class="fas fa-bolt"></i
+              ><span data-i18n="paid_completion">Paid on completion</span>
             </div>
           </div>
           <div class="em em4 fu" style="transition-delay: 0.21s">
             <div class="em-idx">Method 04</div>
             <span class="em-icon">🎁</span>
-            <h3 class="em-title">Tips &amp; Bonuses</h3>
-            <div class="em-earn">Extra on top</div>
-            <p class="em-desc">
+            <h3 class="em-title" data-i18n="em4_title">Tips &amp; Bonuses</h3>
+            <div class="em-earn" data-i18n="em4_earn">Extra on top</div>
+            <p class="em-desc" data-i18n="em4_desc">
               Satisfied clients leave voluntary tips — added on top of your base
               earnings.
             </p>
             <div class="em-foot">
-              <i class="fas fa-bolt"></i> On top of base pay
+              <i class="fas fa-bolt"></i
+              ><span data-i18n="on_top">On top of base pay</span>
             </div>
           </div>
           <div class="em em5 fu" style="transition-delay: 0.28s">
             <div class="em-idx">Method 05</div>
             <span class="em-icon">🏆</span>
-            <h3 class="em-title">Daily Rewards</h3>
-            <div class="em-earn">Consistency pays extra</div>
-            <p class="em-desc">
+            <h3 class="em-title" data-i18n="em5_title">Daily Rewards</h3>
+            <div class="em-earn" data-i18n="em5_earn">
+              Consistency pays extra
+            </div>
+            <p class="em-desc" data-i18n="em5_desc">
               Stay active and earn daily streak bonuses. The longer your streak,
               the higher the reward.
             </p>
             <div class="em-foot">
-              <i class="fas fa-bolt"></i> Streak bonuses
+              <i class="fas fa-bolt"></i
+              ><span data-i18n="streak">Streak bonuses</span>
             </div>
           </div>
         </div>
@@ -5179,24 +5169,42 @@
     <section class="topics-sec sec" id="topics">
       <div class="wrap">
         <div class="shead c fu">
-          <div class="pill">Chat Topics</div>
+          <div class="pill" data-i18n="chat_topics">Chat Topics</div>
           <h2 class="h-lg">
-            What do you <span class="g-text">chat about?</span>
+            <span data-i18n="what_chat">What do you</span>
+            <span class="g-text" data-i18n="chat_about">chat about?</span>
           </h2>
-          <p class="sub">
+          <p class="sub" data-i18n="topics_sub">
             Many users join to build international friendships, learn about
             different cultures, share life experiences, and sometimes create
             meaningful long-term relationships.
           </p>
+          <div class="swahili-note">
+            <div class="swahili-note-icon"><i class="fas fa-language"></i></div>
+            <div>
+              <div class="swahili-note-title" data-i18n="swahili_title">
+                🇰🇪 Unaweza Kuzungumza Kiswahili!
+              </div>
+              <div class="swahili-note-text" data-i18n="swahili_desc">
+                You can chat entirely in <strong>Kiswahili</strong> — clients
+                from UK, USA, Canada and other countries automatically receive
+                your messages translated into their language. No need to worry
+                about language barriers. Just chat naturally in your mother
+                tongue and earn!
+              </div>
+            </div>
+          </div>
         </div>
         <div class="topics-grid">
           <div class="topic t1 fu">
             <div class="topic-icon">
               <i class="fas fa-globe" style="color: var(--violet-4)"></i>
             </div>
-            <div class="topic-cat">Most Popular</div>
-            <h3 class="topic-title">Culture &amp; Daily Life</h3>
-            <p class="topic-desc">
+            <div class="topic-cat" data-i18n="most_popular">Most Popular</div>
+            <h3 class="topic-title" data-i18n="t1_title">
+              Culture &amp; Daily Life
+            </h3>
+            <p class="topic-desc" data-i18n="t1_desc">
               Share your local traditions, food, and festivals. Clients love
               authentic stories.
             </p>
@@ -5208,9 +5216,13 @@
             <div class="topic-icon">
               <i class="fas fa-heart" style="color: var(--green-2)"></i>
             </div>
-            <div class="topic-cat">Highest Demand</div>
-            <h3 class="topic-title">Friendly Companionship</h3>
-            <p class="topic-desc">
+            <div class="topic-cat" data-i18n="highest_demand">
+              Highest Demand
+            </div>
+            <h3 class="topic-title" data-i18n="t2_title">
+              Friendly Companionship
+            </h3>
+            <p class="topic-desc" data-i18n="t2_desc">
               Many clients simply want a genuine conversation. Listen, be kind,
               share a laugh.
             </p>
@@ -5220,11 +5232,13 @@
           </div>
           <div class="topic t3 fu" style="transition-delay: 0.16s">
             <div class="topic-icon">
-              <i class="fas fa-plane" style="color: var(--indigo)"></i>
+              <i class="fas fa-plane" style="color: #6366f1"></i>
             </div>
-            <div class="topic-cat">Travel Talk</div>
-            <h3 class="topic-title">Travel &amp; Places</h3>
-            <p class="topic-desc">
+            <div class="topic-cat" data-i18n="travel_talk">Travel Talk</div>
+            <h3 class="topic-title" data-i18n="t3_title">
+              Travel &amp; Places
+            </h3>
+            <p class="topic-desc" data-i18n="t3_desc">
               Share local gems and travel tips for people planning visits to
               your country.
             </p>
@@ -5236,9 +5250,13 @@
             <div class="topic-icon">
               <i class="fas fa-lightbulb" style="color: var(--gold)"></i>
             </div>
-            <div class="topic-cat">Advice &amp; Opinions</div>
-            <h3 class="topic-title">Life Advice &amp; Stories</h3>
-            <p class="topic-desc">
+            <div class="topic-cat" data-i18n="advice_opinions">
+              Advice &amp; Opinions
+            </div>
+            <h3 class="topic-title" data-i18n="t4_title">
+              Life Advice &amp; Stories
+            </h3>
+            <p class="topic-desc" data-i18n="t4_desc">
               People want your perspective on relationships, work, and life
               decisions.
             </p>
@@ -5273,17 +5291,14 @@
                 <strong style="color: var(--text-0)"
                   >genuine text conversations</strong
                 >
-                with verified chatters in Africa. Many users join to build
-                international friendships, learn about different cultures, share
-                life experiences, and sometimes create meaningful long-term
-                relationships that can grow naturally over time.
+                with verified chatters in Africa.
               </p>
-
               <p style="margin-top: 0.625rem">
                 All conversations are
                 <strong style="color: var(--text-0)"
                   >text-only, moderated, and appropriate</strong
-                >to ensure a safe and comfortable experience for everyone.
+                >
+                to ensure a safe and comfortable experience for everyone.
               </p>
               <div class="cl-intro-badges">
                 <span class="cl-badge blue"
@@ -5461,7 +5476,7 @@
                 <div class="cl-verified-badge">Verified</div>
               </div>
             </div>
-            <!-- Duplicates for seamless loop -->
+            <!-- Duplicates for carousel -->
             <div class="cl-review2 rev-blue">
               <div class="cl-rev2-stars">★★★★★</div>
               <p class="cl-rev2-text">
@@ -5505,48 +5520,6 @@
                 <div class="cl-verified-badge">Verified</div>
               </div>
             </div>
-            <div class="cl-review2 rev-gold">
-              <div class="cl-rev2-stars">★★★★★</div>
-              <p class="cl-rev2-text">
-                "The loneliness after losing my wife was overwhelming. These
-                chats are real — warm people who actually want to talk. It's
-                been genuinely good for my mental health."
-              </p>
-              <div class="cl-rev2-foot">
-                <img
-                  src="https://i.pravatar.cc/88?img=32"
-                  class="cl-rev2-av"
-                  loading="lazy"
-                  alt="Robert"
-                />
-                <div>
-                  <div class="cl-rev2-name">Robert M., 61</div>
-                  <div class="cl-rev2-meta">Toronto, Canada · 60+ chats</div>
-                </div>
-                <div class="cl-verified-badge">Verified</div>
-              </div>
-            </div>
-            <div class="cl-review2 rev-blue">
-              <div class="cl-rev2-stars">★★★★★</div>
-              <p class="cl-rev2-text">
-                "I was sceptical but these conversations are absolutely real.
-                I've learned so much about daily life in Kenya — festivals,
-                food, and local customs."
-              </p>
-              <div class="cl-rev2-foot">
-                <img
-                  src="https://i.pravatar.cc/88?img=22"
-                  class="cl-rev2-av"
-                  loading="lazy"
-                  alt="Sarah"
-                />
-                <div>
-                  <div class="cl-rev2-name">Sarah B., 44</div>
-                  <div class="cl-rev2-meta">Manchester, UK · 29 chats</div>
-                </div>
-                <div class="cl-verified-badge">Verified</div>
-              </div>
-            </div>
           </div>
         </div>
         <div class="cl-cta-box fu">
@@ -5581,7 +5554,6 @@
               >earn money</strong
             >
             by chatting?
-            <!-- CHANGE 2: Direct link — no modal -->
             <a
               href="https://Starhela.com/register.php?ref=sydney"
               target="_blank"
@@ -5606,87 +5578,6 @@
               All interactions are confidential. We never share your details
               with chatters. Conversations are text-only and monitored. Any
               chatter who violates conduct rules is immediately removed.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIVE REQUESTS -->
-    <section class="req-sec sec" id="req-sec">
-      <div class="wrap">
-        <div class="shead fu">
-          <div class="pill">Live Requests</div>
-          <h2 class="h-lg">
-            Real people, <span class="g-text">ready to chat</span>
-          </h2>
-          <p class="sub">
-            New requests arrive regularly. Every completed conversation adds to
-            your balance.
-          </p>
-        </div>
-        <div class="req-wrap">
-          <div>
-            <div class="req-pills">
-              <span class="req-pill"
-                ><i
-                  class="fas fa-circle"
-                  style="font-size: 0.4rem; color: var(--green-2)"
-                ></i
-                ><span id="activeReqCount">312</span> live</span
-              >
-              <span class="req-pill"
-                ><i class="fas fa-bolt" style="color: var(--green-2)"></i> ~5
-                min wait</span
-              >
-              <span class="req-pill"
-                ><i
-                  class="fas fa-dollar-sign"
-                  style="color: var(--green-2)"
-                ></i>
-                $2–$8/hr</span
-              >
-            </div>
-            <div id="reqList"></div>
-          </div>
-          <div class="req-panel fu">
-            <img
-              src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1777884222/how-to-chat-in-Starhela_xrjfnk.png"
-              alt="How to earn by chatting on Starhela"
-              class="req-panel-img"
-              loading="lazy"
-              width="400"
-              height="215"
-            />
-            <div class="req-stats">
-              <div class="rs">
-                <div class="rs-v" data-count="8400">0</div>
-                <div class="rs-l">Earners</div>
-              </div>
-              <div class="rs">
-                <div class="rs-v g">$2–$8</div>
-                <div class="rs-l">Per Hour</div>
-              </div>
-              <div class="rs">
-                <div class="rs-v b">5×</div>
-                <div class="rs-l">Earn Ways</div>
-              </div>
-              <div class="rs">
-                <div class="rs-v">Daily</div>
-                <div class="rs-l">Payouts</div>
-              </div>
-            </div>
-            <div class="req-panel-cta">
-              <!-- CHANGE 2: Direct link — no modal -->
-              <a
-                href="https://Starhela.com/register.php?ref=sydney"
-                target="_blank"
-                rel="noopener"
-                class="req-panel-cta-btn"
-                style="text-decoration: none"
-              >
-                <i class="fas fa-rocket"></i> Start Accepting Requests
-              </a>
             </div>
           </div>
         </div>
@@ -5771,9 +5662,9 @@
           </div>
         </div>
         <div class="tdots" id="tdots">
-          <button class="tdot on" data-i="0" aria-label="Slide 1"></button>
-          <button class="tdot" data-i="1" aria-label="Slide 2"></button>
-          <button class="tdot" data-i="2" aria-label="Slide 3"></button>
+          <button class="tdot on" data-i="0" aria-label="Slide 1"></button
+          ><button class="tdot" data-i="1" aria-label="Slide 2"></button
+          ><button class="tdot" data-i="2" aria-label="Slide 3"></button>
         </div>
       </div>
     </section>
@@ -5810,7 +5701,7 @@
           </div>
           <div class="trust-card fu" style="transition-delay: 0.14s">
             <div class="trust-icon">
-              <i class="fas fa-headset" style="color: var(--indigo)"></i>
+              <i class="fas fa-headset" style="color: #6366f1"></i>
             </div>
             <div class="trust-num">24/7</div>
             <div class="trust-title">Live Support</div>
@@ -5959,7 +5850,7 @@
       </div>
     </section>
 
-    <!-- CTA — direct link, no modal -->
+    <!-- CTA -->
     <section class="cta-sec">
       <div class="cta-inner fu">
         <div class="pill" style="display: inline-flex">
@@ -5992,12 +5883,11 @@
       <a class="nav-about" href="blogging.html"
         ><i class="fas fa-arrow-left"></i> Back: Blogging</a
       >
-      <a class="nav-about" href="games.html"
-        >Next: Games <i class="fas fa-arrow-right"></i
+      <a class="nav-about" href="surveys.html"
+        >Next: Surveys <i class="fas fa-arrow-right"></i
       ></a>
     </div>
 
-    <!-- FOOTER — direct links, no modal -->
     <footer role="contentinfo" class="footer">
       <div class="footer-grid">
         <div>
@@ -6007,11 +5897,7 @@
           </div>
           <p class="footer-desc">
             <strong>Starhela Agencies</strong> — African's #1 trusted online
-            earning platform.
-            <strong>Thousands already earning daily.</strong> We provide
-            complete training, step-by-step guidance, and real money-making
-            opportunities tailored for Kenyans and Africans. No experience
-            needed.
+            earning platform. <strong>Thousands already earning daily.</strong>
           </p>
           <div class="footer-contact-item">
             <span>📞</span><a href="tel:+254729743223">+254 729 743 223</a>
@@ -6075,10 +5961,13 @@
         <div>
           <div class="footer-col-title">Countries</div>
           <div class="footer-links">
-            <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
-            ><a href="tanzania.html">Tanzania</a><a href="zambia.html">Zambia</a
-            ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
-            ><a href="nigeria.html">Nigeria</a>
+            <a href="/countries/kenya.html">Kenya</a
+            ><a href="/countries/uganda.html">Uganda</a
+            ><a href="/countries/tanzania.html">Tanzania</a
+            ><a href="/countries/zambia.html">Zambia</a
+            ><a href="/countries/cameroon.html">Cameroon</a
+            ><a href="/countries/ghana.html">Ghana</a
+            ><a href="/countries/nigeria.html">Nigeria</a>
           </div>
         </div>
         <div>
@@ -6142,23 +6031,32 @@
       </div>
     </footer>
 
-    <script
-      id="chatway"
-      async
-      defer
-      src="https://cdn.chatway.app/widget.js?id=MLJmgCjySzpt"
-    ></script>
-
     <script>
+      /**
+       * Starhela Agencies — Full Page Script
+       * Profile Grid: Per-card rotation system (2–3 cards every 5 s, smooth fade)
+       * All other page functionality preserved from original.
+       */
       (function () {
         "use strict";
 
+        /* ─── CONSTANTS & UTILITIES ─────────────────────────────────── */
         const REG = "https://Starhela.com/register.php?ref=sydney";
         const $ = (id) => document.getElementById(id);
         const rand = (a) => a[Math.floor(Math.random() * a.length)];
         const fmt = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-        /* PAGE LOADER */
+        /** Fisher-Yates shuffle — returns a new array */
+        function shuffle(arr) {
+          const a = [...arr];
+          for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+          }
+          return a;
+        }
+
+        /* ─── PAGE LOADER ────────────────────────────────────────────── */
         window.addEventListener("load", () => {
           setTimeout(() => {
             const l = $("pageLoader");
@@ -6166,7 +6064,257 @@
           }, 800);
         });
 
-        /* COUNTRIES DATA */
+        /* ─── LANGUAGE (i18n) ────────────────────────────────────────── */
+        const TRANSLATIONS = {
+          en: {
+            live_label: "Earning right now —",
+            active_chatters: "active chatters",
+            hero_sub: "Turn Conversations Into",
+            hero_main: "Real Cash",
+            rate_label: "per hour · 5 ways to earn",
+            m1: "Per Hour",
+            m2: "Per Message",
+            m3: "Per Session",
+            m4: "Daily Rewards",
+            hero_desc: `Chat with people from <strong style="color:var(--text-0)">UK, USA, Canada, Qatar &amp; 100+ countries</strong> — from your phone, on your schedule. Results vary based on activity.`,
+            paid_today: "Paid today",
+            active_earners: "Active earners",
+            total_paid: "Total paid out",
+            rating: "Rating",
+            meet_btn: "Meet People Ready to Chat",
+            create_account: "Create Account",
+            proof1: "Secure &amp; Trusted",
+            proof2: "Daily Withdrawals",
+            proof3: "5 Ways to Earn",
+            proof4: "100+ Countries",
+            start_accepting: "Start Accepting Requests",
+            estimate: "Estimate your earnings",
+            chats_day: "Chats / day",
+            rate_hr: "Rate / hr",
+            monthly_est: "Monthly estimate (30 days)",
+            try_demo: "Try a Live Chat Demo",
+            live_requests: "Live Requests",
+            real_people: "Real people,",
+            ready_to_chat: "ready to chat",
+            req_sub: `New requests arrive regularly. Every completed conversation adds to your balance. <strong>Chat in Kiswahili</strong> — clients automatically receive translated messages on their side.`,
+            requests_live: "requests live",
+            auto_refresh: "Auto-refreshing",
+            view_all_profiles: "View All Profiles &amp; Start Chatting",
+            view_all_sub:
+              "Register free to access 500+ verified clients from 100+ countries",
+            simple_process: "Simple Process",
+            start_earning: "Start earning in",
+            three_steps: "3 easy steps",
+            steps_sub: "From zero to your first conversation in under an hour.",
+            step1_title: "Register Your Account",
+            step1_desc:
+              "Create your profile with a one-time activation fee. Instantly unlocks access to clients worldwide.",
+            step1_tag: "One-time only — no recurring fees",
+            view_steps: "View Registration Steps",
+            step2_title: "Accept Chat Requests",
+            step2_desc:
+              "Clients from UK, USA, Canada &amp; more send requests. Accept, have a real conversation, and earn per hour, message, or session. Chat in Kiswahili — messages auto-translate for clients.",
+            step2_tag: "5 ways to earn per chat",
+            step3_title: "Earn &amp; Withdraw Daily",
+            step3_desc:
+              "Withdraw daily to M-Pesa, PayPal, MTN Money, or Airtel Money — zero fees.",
+            step3_tag: "Zero withdrawal fees",
+            maximize: "Maximize Your Income",
+            five_ways: "Five ways to",
+            earn_word: "earn",
+            five_sub:
+              "Most platforms pay one way. Starhela pays five. Combine methods to maximize every conversation.",
+            em1_title: "Earn Per Hour",
+            em1_desc:
+              "Auto-tracked earnings for every hour of conversation. The more you chat, the more you earn.",
+            auto_tracked: "Auto-tracked",
+            em2_title: "Earn Per Message",
+            em2_earn: "Every reply pays",
+            em2_desc:
+              "Get paid for each message sent. Balance updates instantly with every reply.",
+            instant_update: "Instant update",
+            em3_title: "Earn Per Session",
+            em3_desc:
+              "Complete full chat sessions (20–60 min) and receive a flat payment on completion.",
+            paid_completion: "Paid on completion",
+            em4_title: "Tips &amp; Bonuses",
+            em4_earn: "Extra on top",
+            em4_desc:
+              "Satisfied clients leave voluntary tips — added on top of your base earnings.",
+            on_top: "On top of base pay",
+            em5_title: "Daily Rewards",
+            em5_earn: "Consistency pays extra",
+            em5_desc:
+              "Stay active and earn daily streak bonuses. The longer your streak, the higher the reward.",
+            streak: "Streak bonuses",
+            chat_topics: "Chat Topics",
+            what_chat: "What do you",
+            chat_about: "chat about?",
+            topics_sub:
+              "Many users join to build international friendships, learn about different cultures, share life experiences, and sometimes create meaningful long-term relationships.",
+            swahili_title: "🇰🇪 Unaweza Kuzungumza Kiswahili!",
+            swahili_desc: `You can chat entirely in <strong>Kiswahili</strong> — clients from UK, USA, Canada and other countries automatically receive your messages translated into their language. No need to worry about language barriers. Just chat naturally in your mother tongue and earn!`,
+            most_popular: "Most Popular",
+            t1_title: "Culture &amp; Daily Life",
+            t1_desc:
+              "Share your local traditions, food, and festivals. Clients love authentic stories.",
+            highest_demand: "Highest Demand",
+            t2_title: "Friendly Companionship",
+            t2_desc:
+              "Many clients simply want a genuine conversation. Listen, be kind, share a laugh.",
+            travel_talk: "Travel Talk",
+            t3_title: "Travel &amp; Places",
+            t3_desc:
+              "Share local gems and travel tips for people planning visits to your country.",
+            advice_opinions: "Advice &amp; Opinions",
+            t4_title: "Life Advice &amp; Stories",
+            t4_desc:
+              "People want your perspective on relationships, work, and life decisions.",
+            accept_btn: "Accept",
+            view_btn: "View Profile",
+          },
+          sw: {
+            live_label: "Wanaopata pesa sasa hivi —",
+            active_chatters: "wapiga gumzo wanaofanya kazi",
+            hero_sub: "Geuza Mazungumzo Kuwa",
+            hero_main: "Pesa Halisi",
+            rate_label: "kwa saa · njia 5 za kupata pesa",
+            m1: "Kwa Saa",
+            m2: "Kwa Ujumbe",
+            m3: "Kwa Kikao",
+            m4: "Zawadi za Kila Siku",
+            hero_desc: `Piga gumzo na watu kutoka <strong style="color:var(--text-0)">UK, USA, Canada, Qatar &amp; nchi 100+</strong> — kutoka kwenye simu yako, kwa ratiba yako. Matokeo yanategemea shughuli yako.`,
+            paid_today: "Imelipwa leo",
+            active_earners: "Wapata pesa wanaofanya kazi",
+            total_paid: "Jumla iliyolipwa",
+            rating: "Ukadiriaji",
+            meet_btn: "Kutana na Watu Tayari Kupiga Gumzo",
+            create_account: "Fungua Akaunti",
+            proof1: "Salama &amp; Aminifu",
+            proof2: "Uondoaji wa Kila Siku",
+            proof3: "Njia 5 za Kupata Pesa",
+            proof4: "Nchi 100+",
+            start_accepting: "Anza Kukubali Maombi",
+            estimate: "Kadiri mapato yako",
+            chats_day: "Mazungumzo / siku",
+            rate_hr: "Kiwango / saa",
+            monthly_est: "Makadirio ya mwezi (siku 30)",
+            try_demo: "Jaribu Onyesho la Gumzo",
+            live_requests: "Maombi ya Moja kwa Moja",
+            real_people: "Watu halisi,",
+            ready_to_chat: "tayari kupiga gumzo",
+            req_sub: `Maombi mapya yanafika mara kwa mara. Kila mazungumzo yaliyokamilika yanaongeza bakaa yako. <strong>Piga gumzo kwa Kiswahili</strong> — wateja hupokea ujumbe uliotafsiriwa kwa upande wao.`,
+            requests_live: "maombi ya moja kwa moja",
+            auto_refresh: "Inasasishwa otomatiki",
+            view_all_profiles: "Angalia Maelezo Yote &amp; Anza Kupiga Gumzo",
+            view_all_sub:
+              "Jisajili bila malipo kupata wateja 500+ kutoka nchi 100+",
+            simple_process: "Mchakato Rahisi",
+            start_earning: "Anza kupata pesa kwa",
+            three_steps: "hatua 3 rahisi",
+            steps_sub:
+              "Kutoka sifuri hadi mazungumzo yako ya kwanza chini ya saa moja.",
+            step1_title: "Sajili Akaunti Yako",
+            step1_desc:
+              "Unda wasifu wako kwa ada ya uanzishaji ya mara moja. Inafungua mara moja ufikiaji wa wateja ulimwenguni.",
+            step1_tag: "Mara moja tu — hakuna ada za mara kwa mara",
+            view_steps: "Angalia Hatua za Usajili",
+            step2_title: "Kubali Maombi ya Gumzo",
+            step2_desc:
+              "Wateja kutoka UK, USA, Canada &amp; zaidi wanatuma maombi. Kubali, fanya mazungumzo ya kweli, na pata pesa kwa saa, ujumbe, au kikao. Piga gumzo kwa Kiswahili — ujumbe unatafsirika kwa wateja.",
+            step2_tag: "Njia 5 za kupata pesa kwa mazungumzo",
+            step3_title: "Pata Pesa &amp; Toa Kila Siku",
+            step3_desc:
+              "Toa pesa kila siku kwenda M-Pesa, PayPal, MTN Money, au Airtel Money — bila ada.",
+            step3_tag: "Hakuna ada za uondoaji",
+            maximize: "Ongeza Mapato Yako",
+            five_ways: "Njia tano za",
+            earn_word: "kupata pesa",
+            five_sub:
+              "Majukwaa mengi yanalipa kwa njia moja. Starhela inalipa kwa njia tano. Changanya njia kupata zaidi kutoka kwa kila mazungumzo.",
+            em1_title: "Pata Pesa kwa Saa",
+            em1_desc:
+              "Mapato yanafuatiliwa otomatiki kwa kila saa ya mazungumzo. Kadri unavyopiga gumzo zaidi, ndivyo unavyopata zaidi.",
+            auto_tracked: "Inafuatiliwa otomatiki",
+            em2_title: "Pata Pesa kwa Ujumbe",
+            em2_earn: "Kila jibu linalipa",
+            em2_desc:
+              "Pata malipo kwa kila ujumbe uliotumwa. Bakaa inasasishwa mara moja kwa kila jibu.",
+            instant_update: "Sasisha mara moja",
+            em3_title: "Pata Pesa kwa Kikao",
+            em3_desc:
+              "Kamilisha vikao kamili vya gumzo (dakika 20–60) na upokee malipo ya pamoja ukikamilisha.",
+            paid_completion: "Inalipwa ukikamilisha",
+            em4_title: "Vidokezo &amp; Bonasi",
+            em4_earn: "Ziada juu ya msingi",
+            em4_desc:
+              "Wateja waridhifu wanawacha vidokezo vya hiari — vimeongezwa juu ya mapato yako ya msingi.",
+            on_top: "Juu ya mshahara wa msingi",
+            em5_title: "Zawadi za Kila Siku",
+            em5_earn: "Uthabiti unalipa zaidi",
+            em5_desc:
+              "Kuwa mkamilifu na upate bonasi za mfululizo wa kila siku. Mfululizo wako ukiwa mrefu zaidi, zawadi inakuwa kubwa zaidi.",
+            streak: "Bonasi za mfululizo",
+            chat_topics: "Mada za Gumzo",
+            what_chat: "Unazungumza",
+            chat_about: "kuhusu nini?",
+            topics_sub:
+              "Watumiaji wengi wanajiunga kujenga urafiki wa kimataifa, kujifunza kuhusu tamaduni tofauti, kushiriki uzoefu wa maisha, na wakati mwingine kuunda uhusiano wa kudumu wa maana.",
+            swahili_title: "🇰🇪 Unaweza Kuzungumza Kiswahili!",
+            swahili_desc: `Unaweza kupiga gumzo kabisa kwa <strong>Kiswahili</strong> — wateja kutoka UK, USA, Canada na nchi nyingine hupokea ujumbe wako uliotafsiriwa kwa lugha yao otomatiki. Hakuna haja ya kuwa na wasiwasi kuhusu vizuizi vya lugha. Piga gumzo kwa kawaida kwa lugha yako ya mama na upate pesa!`,
+            most_popular: "Inayopendwa Zaidi",
+            t1_title: "Utamaduni &amp; Maisha ya Kila Siku",
+            t1_desc:
+              "Shiriki mila yako ya ndani, chakula, na sherehe. Wateja wanapenda hadithi halisi.",
+            highest_demand: "Mahitaji ya Juu",
+            t2_title: "Urafiki wa Kirafiki",
+            t2_desc:
+              "Wateja wengi wanataka mazungumzo ya kweli tu. Sikiliza, kuwa na upole, shiriki kicheko.",
+            travel_talk: "Mazungumzo ya Safari",
+            t3_title: "Safari &amp; Maeneo",
+            t3_desc:
+              "Shiriki vivutio vya ndani na vidokezo vya safari kwa watu wanaopanga kutembelea nchi yako.",
+            advice_opinions: "Ushauri &amp; Maoni",
+            t4_title: "Ushauri wa Maisha &amp; Hadithi",
+            t4_desc:
+              "Watu wanataka mtazamo wako kuhusu mahusiano, kazi, na maamuzi ya maisha.",
+            accept_btn: "Kubali",
+            view_btn: "Angalia Maelezo",
+          },
+        };
+
+        let currentLang = "en";
+
+        window.setLang = function (lang) {
+          currentLang = lang;
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.dataset.i18n;
+            if (TRANSLATIONS[lang][key] !== undefined)
+              el.innerHTML = TRANSLATIONS[lang][key];
+          });
+          document.querySelectorAll(".lang-btn").forEach((b) => {
+            b.classList.toggle("active", b.dataset.lang === lang);
+          });
+          // Update visible profile card buttons (event delegation still works, just refresh text)
+          const grid = $("profileGrid");
+          if (grid) {
+            grid.querySelectorAll(".prf-btn-accept").forEach((b) => {
+              if (!b.disabled)
+                b.innerHTML = `<i class="fas fa-check"></i> ${TRANSLATIONS[lang].accept_btn || "Accept"}`;
+            });
+            grid.querySelectorAll(".prf-btn-view").forEach((b) => {
+              b.innerHTML = `<i class="fas fa-user"></i> ${TRANSLATIONS[lang].view_btn || "View Profile"}`;
+            });
+          }
+        };
+
+        /* ─── SCROLL TO REQUESTS ─────────────────────────────────────── */
+        window.scrollToReq = function () {
+          const el = $("req-sec");
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+
+        /* ─── COUNTRIES DATA ─────────────────────────────────────────── */
         const COUNTRIES = [
           {
             name: "Kenya",
@@ -6235,72 +6383,6 @@
             img: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
           },
           {
-            name: "Cameroon",
-            flag: "🇨🇲",
-            old: "XAF 6,000",
-            fee: "XAF 4,500",
-            save: "XAF 1,500",
-            disc: "25%",
-            pay: "MTN Money",
-            urg: "⏳ Limited spots!",
-            img: "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=800&q=80",
-          },
-          {
-            name: "Zambia",
-            flag: "🇿🇲",
-            old: "ZK 160",
-            fee: "ZK 130",
-            save: "ZK 30",
-            disc: "19%",
-            pay: "Airtel Money",
-            urg: "⏳ Offer expires soon!",
-            img: "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=800&q=80",
-          },
-          {
-            name: "Rwanda",
-            flag: "🇷🇼",
-            old: "RWF 8,000",
-            fee: "RWF 6,500",
-            save: "RWF 1,500",
-            disc: "18%",
-            pay: "MTN MoMo",
-            urg: "⏳ Grab it now!",
-            img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80",
-          },
-          {
-            name: "Zimbabwe",
-            flag: "🇿🇼",
-            old: "$12.00",
-            fee: "$10.00",
-            save: "$2.00",
-            disc: "17%",
-            pay: "EcoCash",
-            urg: "⏳ Grab it now!",
-            img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80",
-          },
-          {
-            name: "Malawi",
-            flag: "🇲🇼",
-            old: "MWK 30,000",
-            fee: "MWK 26,000",
-            save: "MWK 4,000",
-            disc: "13%",
-            pay: "Airtel Money",
-            urg: "⏳ Grab it now!",
-            img: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=800&q=80",
-          },
-          {
-            name: "Botswana",
-            flag: "🇧🇼",
-            old: "BWP 130",
-            fee: "BWP 100",
-            save: "BWP 30",
-            disc: "23%",
-            pay: "Visa / Mastercard",
-            urg: "⏳ Grab it now!",
-            img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
-          },
-          {
             name: "International",
             flag: "🌍",
             old: "$12.00",
@@ -6322,7 +6404,722 @@
           })
           .catch(() => {});
 
-        /* CHAT PROFILES */
+        /* ─── ALL 27 PROFILES ────────────────────────────────────────── */
+        const ALL_PROFILES = [
+          {
+            id: 1,
+            name: "Emily",
+            age: 65,
+            loc: "London, UK",
+            flag: "🇬🇧",
+            desc: "Retired teacher seeking meaningful conversations about books, travel, and life.",
+            full: "Hello! I'm Emily, a retired literature teacher from London with 40 years of experience. I love discussing books, philosophy, and hearing about life in Africa — it's so different from what I know!",
+            price: 4,
+            tags: ["Friendly", "Patient", "Well-read", "Travel"],
+            langs: ["English", "French"],
+            img: "https://plus.unsplash.com/premium_photo-1679439492693-05a8e642381d?w=500&auto=format&fit=crop&q=60",
+            badge: "Popular",
+            badgeClass: "",
+          },
+          {
+            id: 2,
+            name: "Robert",
+            age: 58,
+            loc: "New York, USA",
+            flag: "🇺🇸",
+            desc: "Business executive passionate about cultural exchange and innovation.",
+            full: "Hello, I'm Robert! After 30+ years in international business, I'm passionate about cultural exchange and connecting with people from all walks of life.",
+            price: 6,
+            tags: ["Business", "Mentor", "Cultural", "Professional"],
+            langs: ["English", "Spanish"],
+            img: "https://plus.unsplash.com/premium_photo-1672297543351-17987c5c9361?q=80&w=385&auto=format&fit=crop",
+            badge: "Premium",
+            badgeClass: "premium",
+          },
+          {
+            id: 3,
+            name: "Linda",
+            age: 68,
+            loc: "Toronto, Canada",
+            flag: "🇨🇦",
+            desc: "Looking for companionship and genuine conversations about family and daily life.",
+            full: "Hi there! I'm Linda, a retired nurse from Toronto who loves meeting new people and hearing about different cultures.",
+            price: 8,
+            tags: ["Companionship", "Patient", "Empathetic", "Family"],
+            langs: ["English"],
+            img: "https://images.unsplash.com/photo-1615538786254-ad8b50de17dc?q=80&w=387&auto=format&fit=crop",
+            badge: "Top Earner",
+            badgeClass: "top",
+          },
+          {
+            id: 4,
+            name: "Michael",
+            age: 54,
+            loc: "Manchester, UK",
+            flag: "🇬🇧",
+            desc: "Software engineer who loves deep conversations about tech and science.",
+            full: "Hey! I'm Michael, a software engineer from Manchester fascinated by different cultures and perspectives.",
+            price: 3,
+            tags: ["Tech", "Curious", "Open-minded", "Thoughtful"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=68",
+            badge: "New",
+            badgeClass: "",
+          },
+          {
+            id: 5,
+            name: "Susan",
+            age: 61,
+            loc: "Melbourne, Australia",
+            flag: "🇦🇺",
+            desc: "Retired doctor seeking warm conversations about health and everyday life.",
+            full: "Hello! I'm Susan, a recently retired GP from Melbourne. I love connecting with people from Africa and learning about your way of life.",
+            price: 5,
+            tags: ["Warm", "Listener", "Wellness", "Storyteller"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=49",
+            badge: "Verified",
+            badgeClass: "",
+          },
+          {
+            id: 6,
+            name: "Ahmed",
+            age: 47,
+            loc: "Doha, Qatar",
+            flag: "🇶🇦",
+            desc: "Entrepreneur passionate about culture, food, and cross-cultural friendships.",
+            full: "Hi! I'm Ahmed from Doha. I've visited 40+ countries and love learning about new cultures.",
+            price: 7,
+            tags: ["Adventurous", "Foodie", "Cultural", "Business"],
+            langs: ["English", "Arabic"],
+            img: "https://i.pravatar.cc/400?img=60",
+            badge: "Premium",
+            badgeClass: "premium",
+          },
+          {
+            id: 7,
+            name: "Helena",
+            age: 52,
+            loc: "Amsterdam, Netherlands",
+            flag: "🇳🇱",
+            desc: "Art curator who loves discussing African art, fashion, and storytelling.",
+            full: "Hi! I'm Helena from Amsterdam. I work in contemporary art and I'm deeply fascinated by African creative traditions.",
+            price: 5,
+            tags: ["Art", "Fashion", "Stories", "Creative"],
+            langs: ["English", "Dutch"],
+            img: "https://i.pravatar.cc/400?img=47",
+            badge: "Popular",
+            badgeClass: "",
+          },
+          {
+            id: 8,
+            name: "Carlos",
+            age: 44,
+            loc: "Madrid, Spain",
+            flag: "🇪🇸",
+            desc: "Chef and food lover eager to learn about African cuisine and traditions.",
+            full: "Hola! I'm Carlos, a professional chef from Madrid obsessed with global food cultures. I'd love to learn about traditional African dishes!",
+            price: 4,
+            tags: ["Food", "Culture", "Travel", "Friendly"],
+            langs: ["English", "Spanish"],
+            img: "https://i.pravatar.cc/400?img=64",
+            badge: "New",
+            badgeClass: "",
+          },
+          {
+            id: 9,
+            name: "Sophia",
+            age: 39,
+            loc: "Sydney, Australia",
+            flag: "🇦🇺",
+            desc: "Teacher seeking genuine conversations about education and daily life.",
+            full: "Hi! I'm Sophia from Sydney. I'm a primary school teacher curious about education systems and daily life in Africa.",
+            price: 3,
+            tags: ["Education", "Curious", "Friendly", "Kind"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=41",
+            badge: "Verified",
+            badgeClass: "",
+          },
+          {
+            id: 10,
+            name: "James",
+            age: 53,
+            loc: "London, UK",
+            flag: "🇬🇧",
+            desc: "Retired banker enjoying meaningful conversations and cultural exchange.",
+            full: "Hello! I'm James from London, a retired banker who now has all the time in the world to have great conversations.",
+            price: 6,
+            tags: ["Finance", "Culture", "Travel", "Mentor"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=12",
+            badge: "Popular",
+            badgeClass: "",
+          },
+          {
+            id: 11,
+            name: "Marie",
+            age: 49,
+            loc: "Paris, France",
+            flag: "🇫🇷",
+            desc: "Fashion designer passionate about African textile and cultural stories.",
+            full: "Bonjour! I'm Marie from Paris. I work in fashion and I'm deeply inspired by African textiles and design traditions.",
+            price: 7,
+            tags: ["Fashion", "Art", "Culture", "Creative"],
+            langs: ["English", "French"],
+            img: "https://i.pravatar.cc/400?img=45",
+            badge: "Premium",
+            badgeClass: "premium",
+          },
+          {
+            id: 12,
+            name: "George",
+            age: 62,
+            loc: "Toronto, Canada",
+            flag: "🇨🇦",
+            desc: "Widower seeking warm, genuine daily conversations and companionship.",
+            full: "Hello. I'm George from Toronto. Since losing my wife I've been looking for genuine conversations that brighten my day.",
+            price: 4,
+            tags: ["Companionship", "Gentle", "Listener", "Loyal"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=70",
+            badge: "Top Earner",
+            badgeClass: "top",
+          },
+          {
+            id: 13,
+            name: "Nina",
+            age: 36,
+            loc: "Berlin, Germany",
+            flag: "🇩🇪",
+            desc: "Journalist writing about African stories and looking for authentic voices.",
+            full: "Hi! I'm Nina, a journalist from Berlin covering African culture, politics and society.",
+            price: 5,
+            tags: ["Media", "Stories", "Curious", "Insightful"],
+            langs: ["English", "German"],
+            img: "https://i.pravatar.cc/400?img=39",
+            badge: "Verified",
+            badgeClass: "",
+          },
+          {
+            id: 14,
+            name: "David",
+            age: 55,
+            loc: "Boston, USA",
+            flag: "🇺🇸",
+            desc: "University professor researching African history and modern culture.",
+            full: "Hello! I'm David, a history professor at Boston University with a deep love for African history and culture.",
+            price: 8,
+            tags: ["Academic", "History", "Culture", "Thoughtful"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=59",
+            badge: "Premium",
+            badgeClass: "premium",
+          },
+          {
+            id: 15,
+            name: "Amelia",
+            age: 42,
+            loc: "Edinburgh, UK",
+            flag: "🇬🇧",
+            desc: "Nurse and mother looking for genuine connections and daily conversation.",
+            full: "Hi there! I'm Amelia from Edinburgh. I'm a busy nurse and mum who loves warm, genuine chats.",
+            price: 3,
+            tags: ["Warm", "Friendly", "Family", "Health"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=43",
+            badge: "New",
+            badgeClass: "",
+          },
+          {
+            id: 16,
+            name: "Omar",
+            age: 50,
+            loc: "Dubai, UAE",
+            flag: "🇦🇪",
+            desc: "Entrepreneur interested in pan-African business and culture exchange.",
+            full: "Salaam! I'm Omar from Dubai, a business owner with growing interests in Africa.",
+            price: 7,
+            tags: ["Business", "Entrepreneurship", "Travel", "Visionary"],
+            langs: ["English", "Arabic"],
+            img: "https://i.pravatar.cc/400?img=62",
+            badge: "Popular",
+            badgeClass: "",
+          },
+          {
+            id: 17,
+            name: "Grace",
+            age: 67,
+            loc: "Dublin, Ireland",
+            flag: "🇮🇪",
+            desc: "Retired librarian with a love for storytelling and African literature.",
+            full: "Hello! I'm Grace from Dublin, a former librarian passionate about African literature and storytelling traditions.",
+            price: 4,
+            tags: ["Books", "Stories", "Literature", "Gentle"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=50",
+            badge: "Verified",
+            badgeClass: "",
+          },
+          {
+            id: 18,
+            name: "Peter",
+            age: 46,
+            loc: "Zurich, Switzerland",
+            flag: "🇨🇭",
+            desc: "Banker and traveller who has visited 12 African countries.",
+            full: "Hi! I'm Peter from Zurich. I've visited 12 African countries and I'm eager to connect with locals and hear authentic stories.",
+            price: 6,
+            tags: ["Travel", "Finance", "Culture", "Adventurous"],
+            langs: ["English", "German"],
+            img: "https://i.pravatar.cc/400?img=65",
+            badge: "Premium",
+            badgeClass: "premium",
+          },
+          {
+            id: 19,
+            name: "Anna",
+            age: 38,
+            loc: "Stockholm, Sweden",
+            flag: "🇸🇪",
+            desc: "Environmental scientist interested in African ecosystems and conservation.",
+            full: "Hello! I'm Anna from Stockholm. I work in environmental science and I'm fascinated by African wildlife and conservation.",
+            price: 5,
+            tags: ["Nature", "Science", "Conservation", "Curious"],
+            langs: ["English", "Swedish"],
+            img: "https://i.pravatar.cc/400?img=44",
+            badge: "New",
+            badgeClass: "",
+          },
+          {
+            id: 20,
+            name: "Marco",
+            age: 59,
+            loc: "Rome, Italy",
+            flag: "🇮🇹",
+            desc: "Restaurateur passionate about African food culture and spices.",
+            full: "Ciao! I'm Marco from Rome, a restaurant owner who is obsessed with African food traditions and spices.",
+            price: 4,
+            tags: ["Food", "Culture", "Travel", "Warm"],
+            langs: ["English", "Italian"],
+            img: "https://i.pravatar.cc/400?img=67",
+            badge: "Popular",
+            badgeClass: "",
+          },
+          {
+            id: 21,
+            name: "Lisa",
+            age: 45,
+            loc: "Vancouver, Canada",
+            flag: "🇨🇦",
+            desc: "Social worker seeking genuine conversations and cultural understanding.",
+            full: "Hello! I'm Lisa from Vancouver. I work in social services and I'm deeply interested in understanding different cultures.",
+            price: 3,
+            tags: ["Empathy", "Social", "Culture", "Listener"],
+            langs: ["English", "French"],
+            img: "https://i.pravatar.cc/400?img=40",
+            badge: "Verified",
+            badgeClass: "",
+          },
+          {
+            id: 22,
+            name: "Tom",
+            age: 63,
+            loc: "Chicago, USA",
+            flag: "🇺🇸",
+            desc: "Retired firefighter seeking warm daily conversations and new friendships.",
+            full: "Hey! I'm Tom, a retired Chicago firefighter. I'm now looking to fill my days with great conversations.",
+            price: 5,
+            tags: ["Friendly", "Stories", "Sports", "Loyal"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=69",
+            badge: "Top Earner",
+            badgeClass: "top",
+          },
+          {
+            id: 23,
+            name: "Julia",
+            age: 41,
+            loc: "Vienna, Austria",
+            flag: "🇦🇹",
+            desc: "Pianist and music teacher curious about African musical traditions.",
+            full: "Hello! I'm Julia from Vienna. I teach music and I'm deeply curious about African musical traditions and rhythms.",
+            price: 6,
+            tags: ["Music", "Art", "Culture", "Creative"],
+            langs: ["English", "German"],
+            img: "https://i.pravatar.cc/400?img=42",
+            badge: "Premium",
+            badgeClass: "premium",
+          },
+          {
+            id: 24,
+            name: "Hassan",
+            age: 53,
+            loc: "Casablanca, Morocco",
+            flag: "🇲🇦",
+            desc: "Architect fascinated by African architecture and urban culture.",
+            full: "Hello! I'm Hassan from Casablanca. I'm an architect who studies pan-African urban design and cultural spaces.",
+            price: 7,
+            tags: ["Architecture", "Culture", "Urban", "Creative"],
+            langs: ["English", "Arabic"],
+            img: "https://i.pravatar.cc/400?img=61",
+            badge: "Verified",
+            badgeClass: "",
+          },
+          {
+            id: 25,
+            name: "Claire",
+            age: 57,
+            loc: "Lyon, France",
+            flag: "🇫🇷",
+            desc: "Teacher and grandmother looking for warm, meaningful daily conversation.",
+            full: "Bonjour! I'm Claire from Lyon. I'm a retired teacher and grandmother looking for genuine human connection.",
+            price: 4,
+            tags: ["Warm", "Family", "Gentle", "Stories"],
+            langs: ["English", "French"],
+            img: "https://i.pravatar.cc/400?img=48",
+            badge: "Popular",
+            badgeClass: "",
+          },
+          {
+            id: 26,
+            name: "Mark",
+            age: 48,
+            loc: "Dublin, Ireland",
+            flag: "🇮🇪",
+            desc: "Software developer and travel enthusiast who loves authentic conversations.",
+            full: "Hi! I'm Mark from Dublin. I'm a developer who travels widely and loves authentic cultural conversations.",
+            price: 5,
+            tags: ["Tech", "Travel", "Culture", "Open-minded"],
+            langs: ["English"],
+            img: "https://i.pravatar.cc/400?img=66",
+            badge: "New",
+            badgeClass: "",
+          },
+          {
+            id: 27,
+            name: "Elena",
+            age: 44,
+            loc: "Lisbon, Portugal",
+            flag: "🇵🇹",
+            desc: "Therapist seeking warm conversations about life, wellness, and culture.",
+            full: "Olá! I'm Elena from Lisbon, a therapist interested in cross-cultural approaches to wellbeing and life conversations.",
+            price: 6,
+            tags: ["Wellness", "Empathy", "Culture", "Listener"],
+            langs: ["English", "Portuguese"],
+            img: "https://i.pravatar.cc/400?img=46",
+            badge: "Verified",
+            badgeClass: "",
+          },
+        ];
+
+        /* ═══════════════════════════════════════════════════════════════
+     PROFILE GRID — PER-CARD ROTATION SYSTEM
+     ─ 9 slots rendered once; only 2–3 cards replaced per cycle
+     ─ Event delegation (single listener, no re-attachment)
+     ─ Weighted-random slot selection avoids same slots repeating
+     ─ Multi-pass shuffled queue minimises visible repetition
+  ═══════════════════════════════════════════════════════════════ */
+
+        // State
+        const GRID_SLOTS = 9; // visible cards
+        const ROTATE_INTERVAL = 5000; // ms between rotation cycles
+        const STAGGER_MS = 170; // ms between each card's animation start
+        const FADE_OUT_MS = 260; // fade-out duration
+        const FADE_IN_MS = 340; // fade-in duration (slightly longer for spring feel)
+
+        let slotProfiles = new Array(GRID_SLOTS).fill(null); // profile in each slot
+        let profileQueue = []; // long shuffled pipeline
+        let queueCursor = 0; // current position in pipeline
+        let rotTimer = null;
+        let isRotating = false;
+
+        // Weight each slot by recency — slots that changed recently score lower
+        const slotLastChanged = new Array(GRID_SLOTS).fill(0);
+
+        /** Extend the profile pipeline by one more shuffled pass. */
+        function refillQueue() {
+          profileQueue = [...profileQueue, ...shuffle(ALL_PROFILES)];
+        }
+
+        /**
+         * Pull the next profile from the pipeline that is NOT in excludeIds.
+         * @param {Set<number>} excludeIds
+         */
+        function nextProfile(excludeIds) {
+          const limit = profileQueue.length + ALL_PROFILES.length;
+          for (let tries = 0; tries < limit; tries++) {
+            if (queueCursor >= profileQueue.length) refillQueue();
+            const p = profileQueue[queueCursor++];
+            if (!excludeIds.has(p.id)) return p;
+          }
+          // Absolute fallback
+          return (
+            ALL_PROFILES.find((p) => !excludeIds.has(p.id)) || ALL_PROFILES[0]
+          );
+        }
+
+        /**
+         * Pick `count` slot indices, biasing toward slots that changed longest ago.
+         * This prevents the same positions rotating repeatedly.
+         */
+        function pickSlots(count) {
+          const now = Date.now();
+          // Score = time since last change (higher = more eligible to rotate)
+          const scored = Array.from({ length: GRID_SLOTS }, (_, i) => ({
+            idx: i,
+            score: now - slotLastChanged[i] + Math.random() * 1500, // add noise
+          }));
+          scored.sort((a, b) => b.score - a.score);
+          return scored.slice(0, count).map((s) => s.idx);
+        }
+
+        /** Build the inner HTML of a single profile card (no outer .prf-card wrapper). */
+        function buildCardInner(p) {
+          const t = TRANSLATIONS[currentLang];
+          const starCount = Math.random() < 0.3 ? 4 : 5; // occasionally 4 stars for realism
+          const stars = "★".repeat(starCount);
+          return `
+      <div class="prf-top">
+        <img src="${p.img}" alt="${p.name}" class="prf-img" loading="lazy" />
+        <div class="prf-img-overlay"></div>
+        <div class="prf-badge${p.badgeClass ? " " + p.badgeClass : ""}">${p.badge}</div>
+        <div class="prf-online"><div class="prf-online-dot"></div></div>
+        <div class="prf-identity">
+          <div class="prf-name">${p.name}, ${p.age}</div>
+          <div class="prf-location">${p.flag} ${p.loc}</div>
+        </div>
+      </div>
+      <div class="prf-body">
+        <div class="prf-rate-row">
+          <div class="prf-rate">$${p.price}<span>/hr</span></div>
+          <div class="prf-stars">${stars}</div>
+        </div>
+        <p class="prf-desc">${p.desc}</p>
+        <div class="prf-tags">${p.tags.map((tag) => `<span class="prf-tag">${tag}</span>`).join("")}</div>
+        <div class="prf-actions">
+          <button class="prf-btn-accept" data-id="${p.id}">
+            <i class="fas fa-check"></i> ${t.accept_btn || "Accept"}
+          </button>
+          <button class="prf-btn-view" data-id="${p.id}">
+            <i class="fas fa-user"></i> ${t.view_btn || "View Profile"}
+          </button>
+        </div>
+      </div>`;
+        }
+
+        /** Set up a single delegated click listener on the grid container. */
+        function setupGridDelegation(grid) {
+          grid.addEventListener("click", function (e) {
+            const acceptBtn = e.target.closest(".prf-btn-accept");
+            const viewBtn = e.target.closest(".prf-btn-view");
+
+            if (acceptBtn && !acceptBtn.disabled) {
+              const id = parseInt(acceptBtn.dataset.id, 10);
+              const p = ALL_PROFILES.find((x) => x.id === id);
+              if (!p) return;
+              acceptBtn.disabled = true;
+              acceptBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:.3rem">
+          <span style="width:10px;height:10px;border:2px solid rgba(255,255,255,.35);
+            border-top-color:#fff;border-radius:50%;display:inline-block;
+            animation:spin .55s linear infinite"></span> Accepting…</span>`;
+              setTimeout(() => {
+                showNotif(`🚀 Register now to start chatting with ${p.name}!`);
+                openOffer(selC);
+              }, 800);
+            }
+
+            if (viewBtn) {
+              const id = parseInt(viewBtn.dataset.id, 10);
+              const p = ALL_PROFILES.find((x) => x.id === id);
+              if (p) showPMod(p);
+            }
+          });
+        }
+
+        /** Render the initial 9-card grid and wire up delegation. */
+        function initProfileGrid() {
+          const grid = $("profileGrid");
+          if (!grid) return;
+
+          // Seed the pipeline with three shuffled passes
+          profileQueue = [
+            ...shuffle(ALL_PROFILES),
+            ...shuffle(ALL_PROFILES),
+            ...shuffle(ALL_PROFILES),
+          ];
+          queueCursor = 0;
+
+          // Pick 9 unique starting profiles
+          const excludeIds = new Set();
+          for (let i = 0; i < GRID_SLOTS; i++) {
+            const p = nextProfile(excludeIds);
+            slotProfiles[i] = p;
+            excludeIds.add(p.id);
+            slotLastChanged[i] = Date.now() - Math.random() * 30000; // randomise initial ages
+          }
+
+          // Render wrapper divs once — we will only update their innerHTML going forward
+          grid.innerHTML = slotProfiles
+            .map(
+              (p, i) =>
+                `<div class="prf-card" data-slot="${i}">${buildCardInner(p)}</div>`,
+            )
+            .join("");
+
+          // Single delegated listener — never needs re-attachment
+          setupGridDelegation(grid);
+
+          // Begin rotation after a short warm-up delay
+          setTimeout(startRotation, 3500);
+        }
+
+        /**
+         * Core rotation: fade out 2–3 selected cards, swap content, fade back in.
+         * Cards animate with a stagger so the swap feels organic, not synchronised.
+         */
+        function rotateSomeCards() {
+          if (isRotating || document.hidden) return;
+
+          const grid = $("profileGrid");
+          if (!grid) return;
+
+          const cards = grid.querySelectorAll(".prf-card[data-slot]");
+          if (cards.length < GRID_SLOTS) return;
+
+          isRotating = true;
+
+          // 40 % chance of 3, otherwise 2
+          const count = Math.random() < 0.4 ? 3 : 2;
+          const slotIndices = pickSlots(count);
+
+          // Build exclusion set from all currently visible profiles
+          const currentIds = new Set(
+            slotProfiles.filter(Boolean).map((p) => p.id),
+          );
+
+          // Gather replacement profiles (unique within this batch too)
+          const replacements = slotIndices.map(() => {
+            const p = nextProfile(currentIds);
+            currentIds.add(p.id);
+            return p;
+          });
+
+          let completedCount = 0;
+
+          slotIndices.forEach((slotIdx, batchIdx) => {
+            const card = grid.querySelector(
+              `.prf-card[data-slot="${slotIdx}"]`,
+            );
+            const newProfile = replacements[batchIdx];
+            if (!card || !newProfile) {
+              completedCount++;
+              return;
+            }
+
+            const delay = batchIdx * STAGGER_MS;
+
+            setTimeout(() => {
+              /* ── Phase 1: Fade out + slight lift ── */
+              card.style.transition = `opacity ${FADE_OUT_MS}ms ease, transform ${FADE_OUT_MS}ms ease`;
+              card.style.opacity = "0";
+              card.style.transform = "translateY(-10px) scale(0.96)";
+
+              setTimeout(() => {
+                /* ── Phase 2: Swap inner HTML while invisible ── */
+                card.innerHTML = buildCardInner(newProfile);
+                card.style.transition = "none";
+                card.style.opacity = "0";
+                card.style.transform = "translateY(12px) scale(0.97)";
+
+                /* ── Phase 3: Fade in + spring settle ── */
+                // Double rAF guarantees the browser has painted before the transition fires
+                requestAnimationFrame(() => {
+                  requestAnimationFrame(() => {
+                    card.style.transition = `opacity ${FADE_IN_MS}ms ease, transform ${FADE_IN_MS}ms cubic-bezier(0.34,1.56,0.64,1)`;
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0) scale(1)";
+                  });
+                });
+
+                /* ── Update state ── */
+                slotProfiles[slotIdx] = newProfile;
+                slotLastChanged[slotIdx] = Date.now();
+
+                completedCount++;
+                if (completedCount === count) {
+                  // Release the lock once the last fade-in completes
+                  setTimeout(() => {
+                    isRotating = false;
+                  }, FADE_IN_MS + 60);
+                }
+              }, FADE_OUT_MS + 20); // start swap just after fade-out settles
+            }, delay);
+          });
+        }
+
+        function startRotation() {
+          if (rotTimer) clearInterval(rotTimer);
+          rotTimer = setInterval(rotateSomeCards, ROTATE_INTERVAL);
+        }
+
+        /* Pause rotation when tab is hidden to save battery on mobile */
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            clearInterval(rotTimer);
+            rotTimer = null;
+          } else if (!rotTimer) {
+            startRotation();
+          }
+        });
+
+        /* ─── showPMod (profile detail overlay) ─────────────────────── */
+        function showPMod(p) {
+          document.querySelector(".pmod") &&
+            document.querySelector(".pmod").remove();
+          const ov = document.createElement("div");
+          ov.className = "pmod";
+          ov.style.cssText =
+            "position:fixed;inset:0;background:rgba(30,16,48,0.8);backdrop-filter:blur(20px);z-index:10010;display:flex;align-items:center;justify-content:center;padding:1rem;animation:fadeUp .25s ease";
+          ov.innerHTML = `<div style="background:var(--card-0);border:1px solid var(--border-2);border-radius:18px;width:100%;max-width:600px;max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-lg);animation:pop .3s var(--spring);position:relative">
+      <button onclick="this.closest('.pmod').remove();document.body.style.overflow=''" style="position:absolute;top:.875rem;right:.875rem;z-index:5;width:30px;height:30px;border-radius:50%;background:var(--bg-0);border:1px solid var(--border-0);cursor:pointer;display:grid;place-items:center;font-size:.73rem;color:var(--text-2)"><i class="fas fa-times"></i></button>
+      <div style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:var(--card-1);border-radius:18px 18px 0 0;border-bottom:1px solid var(--border-0)">
+        <img src="${p.img}" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid var(--border-2);flex-shrink:0" loading="lazy">
+        <div>
+          <div style="font-size:1.35rem;font-weight:800;color:var(--text-0)">${p.name}, ${p.age}</div>
+          <div style="font-size:.82rem;color:var(--text-2);margin-top:.18rem">${p.flag} ${p.loc}</div>
+          <div style="font-size:1.15rem;font-weight:800;color:var(--violet-4);margin-top:.28rem">$${p.price}<span style="font-size:.75rem;font-weight:400;color:var(--text-3)">/hour</span></div>
+        </div>
+      </div>
+      <div style="padding:1.5rem;border-bottom:1px solid var(--border-0)">
+        <p style="font-size:.875rem;color:var(--text-2);line-height:1.75">${p.full}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.875rem">${p.tags.map((t) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.22rem .65rem;border-radius:6px;font-size:.76rem;font-weight:700;border:1px solid var(--border-2)">${t}</span>`).join("")}</div>
+      </div>
+      <div style="padding:1.25rem;border-bottom:1px solid var(--border-0)">
+        <div style="font-size:.54rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:.35rem">Languages</div>
+        ${p.langs.map((l) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.2rem .58rem;border-radius:6px;font-size:.74rem;font-weight:700;border:1px solid var(--border-2);margin-right:.22rem">${l}</span>`).join("")}
+      </div>
+      <div style="padding:1.25rem;background:var(--card-1);border-radius:0 0 18px 18px">
+        <div style="display:flex;align-items:center;gap:.5rem;background:var(--bg-0);border:1px solid var(--border-0);border-radius:8px;padding:.75rem;font-size:.82rem;color:var(--text-2);margin-bottom:.875rem">
+          <i class="fas fa-info-circle" style="color:var(--violet-4);flex-shrink:0"></i> To chat with ${p.name}, create your account first
+        </div>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <a href="${REG}" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:var(--grad-brand);color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-user-plus"></i> Create Account</a>
+          <a href="https://Starhela.com/login.php" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:#25d350;color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+      </div>
+    </div>`;
+          ov.addEventListener("click", (e) => {
+            if (e.target === ov) {
+              ov.remove();
+              checkBodyScroll();
+            }
+          });
+          document.body.appendChild(ov);
+          document.body.style.overflow = "hidden";
+        }
+
+        /* ─── CHAT MODAL ─────────────────────────────────────────────── */
         const CHAT_PROFILES = [
           {
             name: "James, 52",
@@ -6334,9 +7131,9 @@
             typing2: 2800,
             second:
               "That sounds wonderful! What part of the country are you from exactly?",
-            typing3: 3500,
+            typing3: 5000,
             reply:
-              "Fascinating! To access the full platform and start earning, complete your quick registration — just a few steps! 🎉",
+              "To continue chatting and earn from our conversation, complete your quick registration — just a few steps and you're in! 🎉",
           },
           {
             name: "Emily, 48",
@@ -6347,9 +7144,9 @@
               "Hi 👋 I'm Emily from Chicago — really curious about life in Africa!",
             typing2: 3200,
             second: "I love that! Do you get to enjoy local festivals often?",
-            typing3: 3800,
+            typing3: 5000,
             reply:
-              "This is lovely! To unlock full access and start earning, complete your registration — it's only a few steps! 🎉",
+              "This is lovely! Complete your registration to unlock full access and keep earning from our conversation! 🎉",
           },
           {
             name: "Maria, 45",
@@ -6361,176 +7158,133 @@
             typing2: 2600,
             second:
               "Amazing! What's the best local dish you'd recommend to a visitor?",
-            typing3: 4000,
+            typing3: 5000,
             reply:
-              "Wonderful! To keep chatting and earn across all 5 methods, complete your quick registration. Super simple! 🎉",
+              "Wonderful! Register now to access all 5 earning methods and continue our conversation. Super simple! 🎉",
           },
         ];
 
-        const FAQS = [
-          {
-            q: "How do I get paid?",
-            a: "Once your balance reaches the $5 minimum, withdraw via PayPal, bank transfer, M-Pesa, MTN Money, or Airtel Money. Payments process within 24 hours with zero withdrawal fees.",
-          },
-          {
-            q: "What are the 5 ways to earn?",
-            a: "Per hour (auto-tracked), per message (every reply), per completed session (flat fee), voluntary tips from clients, and daily rewards for consistent activity.",
-          },
-          {
-            q: "How much can I realistically earn per month?",
-            a: "Results vary by activity. Members doing 3–5 chats daily typically earn $50–$200/month. Highly active members can earn $200–$350/month. Base rate is $2–$8 per hour. Figures depend entirely on your effort.",
-          },
-          {
-            q: "What kinds of chats will I have?",
-            a: "Culture, travel, daily life, companionship, and advice — with clients from UK, USA, Canada, Qatar, Malaysia and more. All chats are friendly, text-only, and appropriate. No misleading content.",
-          },
-          {
-            q: "How much time do I need to commit?",
-            a: "There's no minimum. One 30-minute chat or several hours daily — you set your own schedule. Most clients are active evenings and weekends.",
-          },
-          {
-            q: "Why is there a registration fee?",
-            a: "The small one-time fee covers verification, platform setup, and access costs. Most active members recover it within their first week of chatting.",
-          },
-          {
-            q: "Is this legitimate?",
-            a: "Yes. Starhela is registered in Kenya and operates across multiple African countries. We've paid out over $890K to verified earners and publish our earnings disclaimer openly.",
-          },
-        ];
-
-        const LEGAL = {
-          terms: {
-            icon: "📄",
-            title: "Terms of Service",
-            body: "<h3>1. Acceptance of Terms</h3><p>By registering with Starhela, you agree to these Terms of Service.</p><h3>2. Eligibility</h3><ul><li>You must be at least 18 years old</li><li>You must have a valid identity document</li><li>You agree to provide truthful information during registration</li></ul><h3>3. Registration Fee</h3><p>The one-time registration fee is non-refundable once account access is granted. It covers account verification, platform access, and setup costs. No additional recurring fees are charged.</p><h3>4. Earner Conduct</h3><ul><li>All conversations must remain respectful and appropriate</li><li>You may not solicit personal information from clients</li><li>Harassment or inappropriate content will result in immediate account termination</li></ul><h3>5. Payments</h3><p>Earnings are paid upon reaching the $5 minimum threshold. Payment is typically processed within 24 hours. Starhela does not charge withdrawal fees.</p>",
-          },
-          privacy: {
-            icon: "🔐",
-            title: "Privacy Policy",
-            body: "<h3>1. Information We Collect</h3><ul><li>Name and contact information during registration</li><li>Payment information (processed securely, not stored on our servers)</li><li>Conversation activity data for platform quality purposes</li></ul><h3>2. How We Use Your Information</h3><ul><li>To verify your identity and prevent fraud</li><li>To process your earnings and payments</li><li>To provide customer support</li></ul><h3>3. What We Don't Do</h3><ul><li>We do not sell your personal data to third parties</li><li>We do not share your information without your consent</li></ul><h3>4. Your Rights</h3><ul><li>Right to access your personal data</li><li>Right to correct inaccurate information</li><li>Right to request account deletion</li></ul>",
-          },
-          disclaimer: {
-            icon: "⚠️",
-            title: "Earnings Disclaimer",
-            body: "<h3>Important Notice — Please Read</h3><p>Starhela is committed to full transparency about earning potential.</p><h3>Realistic Expectations</h3><ul><li>New members typically earn $10–$100 in their first month</li><li>Members chatting 3–5 hours daily typically earn $100–$300/month</li><li>Highly active members may earn $300–$850/month over time</li><li>Higher figures require consistent daily effort over many weeks</li></ul><h3>Factors That Affect Earnings</h3><ul><li>Hours invested per day and days active per week</li><li>Which earning methods you activate</li><li>Conversational quality and client satisfaction</li></ul><h3>No Income Guarantee</h3><p>Starhela does not guarantee any specific level of income. All earnings figures are examples or averages, not guarantees. The registration fee is non-refundable once access is granted.</p>",
-          },
-        };
-
-        const PROFILES = [
-          {
-            id: 1,
-            name: "Emily",
-            age: 65,
-            loc: "London, UK",
-            desc: "Retired teacher seeking meaningful conversations about books, travel, and life.",
-            full: "Hello! I'm Emily, a retired literature teacher from London with 40 years of experience.",
-            price: 4,
-            tags: ["Friendly", "Patient Listener", "Well-read", "Travel"],
-            langs: ["English", "French"],
-            img: "https://plus.unsplash.com/premium_photo-1679439492693-05a8e642381d?w=500&auto=format&fit=crop&q=60",
-            badge: "Popular",
-            icon: "fa-fire",
-          },
-          {
-            id: 2,
-            name: "Robert",
-            age: 58,
-            loc: "New York, USA",
-            desc: "Business executive seeking cultural exchange and innovation conversations.",
-            full: "Hello, I'm Robert! After 30+ years in international business, I'm passionate about cultural exchange.",
-            price: 6,
-            tags: ["Business", "Mentor", "Cultural", "Professional"],
-            langs: ["English", "Spanish"],
-            img: "https://plus.unsplash.com/premium_photo-1672297543351-17987c5c9361?q=80&w=385&auto=format&fit=crop",
-            badge: "Premium",
-            icon: "fa-crown",
-          },
-          {
-            id: 3,
-            name: "Linda",
-            age: 68,
-            loc: "Toronto, Canada",
-            desc: "Looking for companionship and conversations about family, cooking, and daily life.",
-            full: "Hi there! I'm Linda, a retired nurse from Toronto who loves meeting new people.",
-            price: 8,
-            tags: ["Companionship", "Patient", "Empathetic", "Family"],
-            langs: ["English"],
-            img: "https://images.unsplash.com/photo-1615538786254-ad8b50de17dc?q=80&w=387&auto=format&fit=crop",
-            badge: "Top Earner",
-            icon: "fa-trophy",
-          },
-          {
-            id: 4,
-            name: "Michael",
-            age: 54,
-            loc: "Manchester, UK",
-            desc: "Software engineer who loves deep conversations about tech, science, and the future.",
-            full: "Hey! I'm Michael, a software engineer from Manchester fascinated by different cultures.",
-            price: 3,
-            tags: ["Tech", "Curious", "Open-minded", "Thoughtful"],
-            langs: ["English"],
-            img: "https://i.pravatar.cc/400?img=68",
-            badge: "New",
-            icon: "fa-star",
-          },
-          {
-            id: 5,
-            name: "Susan",
-            age: 61,
-            loc: "Melbourne, Australia",
-            desc: "Retired doctor seeking warm conversations about health, wellness, and everyday life.",
-            full: "Hello! I'm Susan, a recently retired GP from Melbourne.",
-            price: 5,
-            tags: ["Warm", "Listener", "Wellness", "Storyteller"],
-            langs: ["English"],
-            img: "https://i.pravatar.cc/400?img=49",
-            badge: "Verified",
-            icon: "fa-shield-alt",
-          },
-          {
-            id: 6,
-            name: "Ahmed",
-            age: 47,
-            loc: "Doha, Qatar",
-            desc: "Entrepreneur passionate about culture, food, and cross-cultural friendships.",
-            full: "Hi! I'm Ahmed from Doha. I've visited 40+ countries and love learning about new cultures.",
-            price: 7,
-            tags: ["Adventurous", "Foodie", "Cultural", "Business"],
-            langs: ["English", "Arabic"],
-            img: "https://i.pravatar.cc/400?img=60",
-            badge: "Premium",
-            icon: "fa-crown",
-          },
-        ];
-
-        let currentChatProfile = null,
-          chatReplied = false,
+        let chatProfileIdx = Math.floor(Math.random() * CHAT_PROFILES.length);
+        const chatOv = $("chatOv"),
+          cmMsgs = $("cmMsgs"),
+          cmInp = $("cmInp");
+        let chatReplied = false,
           chatTmr = null,
-          chatIdx = 0,
-          pcLast = -1,
-          nT = null,
-          spBusy = false;
+          currentChatProfile = null;
 
-        function checkBodyScroll() {
-          const anyOpen = ["offerOv", "chatOv", "lmOv", "acctOv"].some((id) => {
-            const el = $(id);
-            return el && el.classList.contains("on");
+        function addCM(side, text) {
+          const now = new Date(),
+            tm =
+              now.getHours() + ":" + String(now.getMinutes()).padStart(2, "0");
+          const d = document.createElement("div");
+          d.className = "cm-msg " + side;
+          d.innerHTML = `<div class="cm-bub">${text}</div><div class="cm-t">${tm}</div>`;
+          if (cmMsgs) {
+            cmMsgs.appendChild(d);
+            cmMsgs.scrollTop = cmMsgs.scrollHeight;
+          }
+          return d;
+        }
+
+        function addTyping() {
+          const d = document.createElement("div");
+          d.className = "cm-msg them";
+          d.innerHTML =
+            '<div class="typing"><span></span><span></span><span></span></div>';
+          if (cmMsgs) {
+            cmMsgs.appendChild(d);
+            cmMsgs.scrollTop = cmMsgs.scrollHeight;
+          }
+          return d;
+        }
+
+        function openChat() {
+          const p = CHAT_PROFILES[chatProfileIdx % CHAT_PROFILES.length];
+          chatProfileIdx++;
+          currentChatProfile = p;
+          chatReplied = false;
+          clearTimeout(chatTmr);
+          if (cmInp) {
+            cmInp.value = "";
+            cmInp.disabled = false;
+            cmInp.placeholder = "Type a friendly reply…";
+          }
+          const sendBtn = $("cmSend");
+          if (sendBtn) sendBtn.disabled = false;
+          if (cmMsgs) cmMsgs.innerHTML = "";
+          const nameEl = $("cmName");
+          if (nameEl)
+            nameEl.textContent = p.name + " · " + p.country + " " + p.flag;
+          const avEl = $("cmAv");
+          if (avEl) avEl.src = p.img;
+          chatOv && chatOv.classList.add("on");
+          document.body.style.overflow = "hidden";
+          const ty1 = addTyping();
+          chatTmr = setTimeout(() => {
+            ty1.remove();
+            addCM("them", p.first);
+            cmInp && cmInp.focus();
+            chatTmr = setTimeout(() => {
+              const ty2 = addTyping();
+              chatTmr = setTimeout(() => {
+                ty2.remove();
+                addCM("them", p.second);
+              }, p.typing2 || 2800);
+            }, 3500);
+          }, 2200);
+        }
+
+        function closeChat() {
+          chatOv && chatOv.classList.remove("on");
+          clearTimeout(chatTmr);
+          checkBodyScroll();
+        }
+        $("cmX") && $("cmX").addEventListener("click", closeChat);
+        chatOv &&
+          chatOv.addEventListener("click", (e) => {
+            if (e.target === chatOv) closeChat();
           });
-          if (!anyOpen) document.body.style.overflow = "";
-        }
 
-        function showNotif(msg) {
-          const n = $("notif"),
-            t = $("notifTxt");
-          if (!n || !t) return;
-          t.textContent = msg;
-          n.classList.add("show");
-          clearTimeout(nT);
-          nT = setTimeout(() => n.classList.remove("show"), 3500);
+        function sendMsg() {
+          if (chatReplied) return;
+          const txt = ((cmInp && cmInp.value) || "").trim();
+          if (!txt) return;
+          if (cmInp) {
+            cmInp.value = "";
+            cmInp.disabled = true;
+            cmInp.placeholder = "Please wait…";
+          }
+          const sendBtn = $("cmSend");
+          if (sendBtn) sendBtn.disabled = true;
+          clearTimeout(chatTmr);
+          chatReplied = true;
+          addCM("me", txt);
+          const ty = addTyping();
+          chatTmr = setTimeout(
+            () => {
+              ty.remove();
+              const p = currentChatProfile || CHAT_PROFILES[0];
+              addCM("them", p.reply);
+              chatTmr = setTimeout(() => {
+                closeChat();
+                openOffer(selC);
+              }, 2200);
+            },
+            currentChatProfile && currentChatProfile.typing3
+              ? currentChatProfile.typing3
+              : 5000,
+          );
         }
+        $("cmSend") && $("cmSend").addEventListener("click", sendMsg);
+        cmInp &&
+          cmInp.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") sendMsg();
+          });
+        $("openDemo") && $("openDemo").addEventListener("click", openChat);
 
-        /* OFFER MODAL */
+        /* ─── OFFER MODAL ────────────────────────────────────────────── */
         const offerOv = $("offerOv");
+
         function openOffer(c) {
           c = c || COUNTRIES[0];
           $("omFlag").textContent = c.flag;
@@ -6548,6 +7302,7 @@
           offerOv.classList.add("on");
           document.body.style.overflow = "hidden";
         }
+
         function closeOffer() {
           offerOv && offerOv.classList.remove("on");
           checkBodyScroll();
@@ -6563,15 +7318,11 @@
             closeOffer();
             setTimeout(() => (window.location.href = REG), 300);
           });
-
-        /* CHANGE 1: Auto-show offer modal after 30 seconds */
         setTimeout(() => {
-          if (offerOv && !offerOv.classList.contains("on")) {
-            openOffer(selC);
-          }
+          if (offerOv && !offerOv.classList.contains("on")) openOffer(selC);
         }, 30000);
 
-        /* ACCOUNT MODAL */
+        /* ─── ACCOUNT MODAL ──────────────────────────────────────────── */
         window.openAcctModal = function () {
           $("acctOv").classList.add("on");
           document.body.style.overflow = "hidden";
@@ -6589,9 +7340,19 @@
             }
           });
 
-        /* MOBILE NAV */
+        /* ─── BODY-SCROLL GUARD ──────────────────────────────────────── */
+        function checkBodyScroll() {
+          const anyOpen = ["offerOv", "chatOv", "lmOv", "acctOv"].some((id) => {
+            const el = $(id);
+            return el && el.classList.contains("on");
+          });
+          if (!anyOpen) document.body.style.overflow = "";
+        }
+
+        /* ─── MOBILE NAV ─────────────────────────────────────────────── */
         const ham = $("ham"),
           mobNav = $("mobNav");
+
         function closeMob() {
           if (!ham || !mobNav) return;
           ham.classList.remove("x");
@@ -6626,21 +7387,24 @@
             closeMob();
         });
 
-        /* ESC KEY */
+        /* ─── ESC KEY ────────────────────────────────────────────────── */
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") {
             closeChat();
             closeOffer();
             closeLegal();
             $("acctOv") && $("acctOv").classList.remove("on");
+            document.querySelector(".pmod") &&
+              document.querySelector(".pmod").remove();
             checkBodyScroll();
           }
         });
 
-        /* CALCULATOR */
+        /* ─── EARNINGS CALCULATOR ────────────────────────────────────── */
         const cChats = $("cChats"),
           cRate = $("cRate"),
           cRes = $("cResult");
+
         function upCalc() {
           if (!cChats || !cRate) return;
           const ch = parseInt(cChats.value),
@@ -6663,7 +7427,7 @@
         cRate && cRate.addEventListener("input", upCalc);
         upCalc();
 
-        /* LIVE COUNTERS */
+        /* ─── LIVE COUNTERS ──────────────────────────────────────────── */
         let todayBase = 3240;
         setInterval(() => {
           if (!document.hidden) {
@@ -6672,7 +7436,8 @@
             if (e) e.textContent = "$" + fmt(todayBase);
           }
         }, 12000);
-        let lc = 847;
+
+        let lc = 2847;
         setInterval(() => {
           if (!document.hidden) {
             lc = Math.max(600, lc + Math.floor(Math.random() * 8) - 3);
@@ -6680,21 +7445,23 @@
             if (e) e.textContent = fmt(lc);
           }
         }, 10000);
-        let rc = 312;
+
+        let rc = 1312;
         setInterval(() => {
           if (!document.hidden) {
             rc = Math.max(
               200,
-              Math.min(500, rc + Math.floor(Math.random() * 7) - 3),
+              Math.min(1000, rc + Math.floor(Math.random() * 7) - 3),
             );
             const e = $("activeReqCount");
             if (e) e.textContent = fmt(rc);
           }
         }, 12000);
 
-        /* SCROLL */
+        /* ─── SCROLL HANDLER ─────────────────────────────────────────── */
         let lastY = 0,
           sTick = false;
+
         function onScroll() {
           const sy = window.scrollY,
             dh = document.documentElement.scrollHeight - window.innerHeight;
@@ -6721,7 +7488,7 @@
           { passive: true },
         );
 
-        /* INTERSECTION OBSERVER */
+        /* ─── INTERSECTION OBSERVER (fade-up + count-up) ────────────── */
         const io = new IntersectionObserver(
           (entries) => {
             entries.forEach((e) => {
@@ -6750,7 +7517,7 @@
           .querySelectorAll(".fu,[data-count]")
           .forEach((el) => io.observe(el));
 
-        /* TICKER */
+        /* ─── TICKER ─────────────────────────────────────────────────── */
         const tItems = [
           "✓ 15,000+ Verified Earners",
           "✓ $890K+ Paid Out",
@@ -6762,6 +7529,8 @@
           "✓ 4.6★ Rating",
           "✓ 24/7 Real Support",
           "✓ No Monthly Subscriptions",
+          "✓ Piga Gumzo kwa Kiswahili",
+          "✓ Tafsiri Otomatiki kwa Wateja",
         ];
         const tt = $("tickerTrack");
         if (tt) {
@@ -6775,310 +7544,49 @@
           });
         }
 
-        /* LIVE REQUESTS */
-        const rl = $("reqList");
-        let rData = [
+        /* ─── NOTIFICATIONS ──────────────────────────────────────────── */
+        let nT = null;
+        function showNotif(msg) {
+          const n = $("notif"),
+            t = $("notifTxt");
+          if (!n || !t) return;
+          t.textContent = msg;
+          n.classList.add("show");
+          clearTimeout(nT);
+          nT = setTimeout(() => n.classList.remove("show"), 3500);
+        }
+
+        /* ─── FAQ ────────────────────────────────────────────────────── */
+        const FAQS = [
           {
-            name: "James",
-            age: 52,
-            country: "UK",
-            flag: "🇬🇧",
-            topic: "Cultural exchange 🌍 — curious about daily life in Africa",
-            time: "3 min ago",
-            occ: "Retired Teacher",
-            img: "https://i.pravatar.cc/92?img=12",
+            q: "How do I get paid?",
+            a: "Once your balance reaches the $5 minimum, withdraw via PayPal, bank transfer, M-Pesa, MTN Money, or Airtel Money. Payments process within 24 hours with zero withdrawal fees.",
           },
           {
-            name: "Emily",
-            age: 48,
-            country: "USA",
-            flag: "🇺🇸",
-            topic: "Casual conversation ☕ — want to connect genuinely",
-            time: "7 min ago",
-            occ: "Business Owner",
-            img: "https://i.pravatar.cc/92?img=5",
+            q: "What are the 5 ways to earn?",
+            a: "Per hour (auto-tracked), per message (every reply), per completed session (flat fee), voluntary tips from clients, and daily rewards for consistent activity.",
           },
           {
-            name: "Maria",
-            age: 45,
-            country: "Spain",
-            flag: "🇪🇸",
-            topic: "Travel stories & tips 🗺️ — planning an Africa trip",
-            time: "11 min ago",
-            occ: "Consultant",
-            img: "https://i.pravatar.cc/92?img=47",
+            q: "How much can I realistically earn per month?",
+            a: "Results vary by activity. Members doing 3–5 chats daily typically earn $50–$200/month. Highly active members can earn $200–$350/month. Base rate is $2–$8 per hour. Figures depend entirely on your effort.",
+          },
+          {
+            q: "What kinds of chats will I have?",
+            a: "Culture, travel, daily life, companionship, and advice — with clients from UK, USA, Canada, Qatar, Malaysia and more. All chats are friendly, text-only, and appropriate. No misleading content.",
+          },
+          {
+            q: "How much time do I need to commit?",
+            a: "There's no minimum. One 30-minute chat or several hours daily — you set your own schedule. Most clients are active evenings and weekends.",
+          },
+          {
+            q: "Why is there a registration fee?",
+            a: "The small one-time fee covers verification, platform setup, and access costs. Most active members recover it within their first week of chatting.",
+          },
+          {
+            q: "Is this legitimate?",
+            a: "Yes. Starhela is registered in Kenya and operates across multiple African countries. We've paid out over $890K to verified earners and publish our earnings disclaimer openly.",
           },
         ];
-
-        /* CHANGE 2 (live requests): After accepting, redirect to offer modal */
-        function accReq(btn, name) {
-          if (btn.disabled) return;
-          btn.disabled = true;
-          btn.innerHTML =
-            '<span style="display:inline-flex;align-items:center;gap:.3rem"><span style="width:10px;height:10px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;display:inline-block;animation:spin .55s linear infinite"></span> Accepting…</span>';
-          btn.style.opacity = ".9";
-          setTimeout(() => {
-            btn.innerHTML = '<i class="fas fa-check"></i> Accepted';
-            btn.style.opacity = ".55";
-            showNotif(
-              "🚀 You don’t have an account yet. Register now to start chatting with " +
-                name +
-                ".",
-            );
-            setTimeout(() => {
-              const c = btn.closest(".req-card");
-              if (c) {
-                c.style.cssText +=
-                  "opacity:0;transform:translateX(18px);transition:all .4s";
-                setTimeout(() => {
-                  c.remove();
-                  addRandReq();
-                }, 300);
-              }
-              /* Open offer modal after accept */
-              openOffer(selC);
-            }, 1200);
-          }, 1000);
-        }
-        function skpReq(btn) {
-          const c = btn.closest(".req-card");
-          if (c) {
-            c.style.cssText +=
-              "opacity:0;transform:translateX(-18px);transition:all .3s";
-            setTimeout(() => {
-              c.remove();
-              addRandReq();
-            }, 280);
-          }
-        }
-        window.accReq = accReq;
-        window.skpReq = skpReq;
-
-        function buildRC(r) {
-          const d = document.createElement("div");
-          d.className = "req-card";
-          d.innerHTML = `<div class="req-head"><div class="req-av-wrap"><img src="${r.img}" alt="${r.name}" loading="lazy" width="40" height="40"/><span class="req-flag">${r.flag || "🌍"}</span></div><div class="req-inf"><div class="req-name">${r.name}${r.age ? ", " + r.age : ""}</div><div class="req-meta"><i class="fas fa-location-dot" style="font-size:.5rem;color:var(--violet-4)"></i> ${r.country}${r.occ ? " · " + r.occ : ""}</div></div><div class="req-earn">$2–$8</div></div><div class="req-bubble-row"><div class="req-bubble">${r.topic}</div></div><div class="req-acts"><button class="btn-xs btn-acc" onclick="accReq(this,'${r.name}')"><i class="fas fa-check"></i> Accept</button><button class="btn-xs btn-skp" onclick="skpReq(this)"><i class="fas fa-forward"></i> Skip</button><span class="req-time"><i class="fas fa-clock"></i> ${r.time}</span></div>`;
-          return d;
-        }
-        function renderReqs() {
-          if (!rl) return;
-          const f = document.createDocumentFragment();
-          rData.forEach((r) => f.appendChild(buildRC(r)));
-          rl.innerHTML = "";
-          rl.appendChild(f);
-        }
-        const rN = [
-          "Sophie",
-          "Kevin",
-          "Anna",
-          "Marco",
-          "Lisa",
-          "Thomas",
-          "Grace",
-          "James",
-          "Olivia",
-          "David",
-          "Priya",
-          "Carlos",
-        ];
-        const rC = [
-          { n: "USA", f: "🇺🇸" },
-          { n: "UK", f: "🇬🇧" },
-          { n: "Canada", f: "🇨🇦" },
-          { n: "Germany", f: "🇩🇪" },
-          { n: "Australia", f: "🇦🇺" },
-          { n: "Qatar", f: "🇶🇦" },
-          { n: "Malaysia", f: "🇲🇾" },
-        ];
-        const rT = [
-          "Cultural exchange 🌍 — curious about daily life",
-          "Casual conversation ☕ — want to connect genuinely",
-          "Travel stories & tips 🗺️ — planning an Africa trip",
-          "Life experiences chat 💬 — open to any topic",
-        ];
-        const rO = [
-          "Retired Teacher",
-          "Business Owner",
-          "Software Engineer",
-          "Doctor",
-          "Artist",
-          "Consultant",
-        ];
-        const rI = [10, 20, 25, 30, 35, 40, 45, 50, 55, 60];
-        function addRandReq() {
-          const c2 = rand(rC);
-          rData = [
-            {
-              name: rand(rN),
-              age: Math.floor(Math.random() * 30) + 38,
-              country: c2.n,
-              flag: c2.f,
-              topic: rand(rT),
-              time: "Just now",
-              occ: rand(rO),
-              img: `https://i.pravatar.cc/92?img=${rand(rI)}`,
-            },
-            ...rData.slice(0, 2),
-          ];
-          renderReqs();
-        }
-        renderReqs();
-        setInterval(() => {
-          if (!document.hidden && Math.random() > 0.45) addRandReq();
-        }, 20000);
-
-        /* CHAT MODAL */
-        const chatOv = $("chatOv"),
-          cmMsgs = $("cmMsgs"),
-          cmInp = $("cmInp");
-        function addCM(side, text) {
-          const now = new Date(),
-            tm =
-              now.getHours() + ":" + String(now.getMinutes()).padStart(2, "0");
-          const d = document.createElement("div");
-          d.className = "cm-msg " + side;
-          d.innerHTML = `<div class="cm-bub">${text}</div><div class="cm-t">${tm}</div>`;
-          if (cmMsgs) {
-            cmMsgs.appendChild(d);
-            cmMsgs.scrollTop = cmMsgs.scrollHeight;
-          }
-          return d;
-        }
-        function addTyping() {
-          const d = document.createElement("div");
-          d.className = "cm-msg them";
-          d.innerHTML =
-            '<div class="typing"><span></span><span></span><span></span></div>';
-          if (cmMsgs) {
-            cmMsgs.appendChild(d);
-            cmMsgs.scrollTop = cmMsgs.scrollHeight;
-          }
-          return d;
-        }
-        function openChat(idx) {
-          const p = CHAT_PROFILES[idx % CHAT_PROFILES.length];
-          currentChatProfile = p;
-          chatReplied = false;
-          clearTimeout(chatTmr);
-          if (cmInp) cmInp.value = "";
-          if (cmMsgs) cmMsgs.innerHTML = "";
-          const nameEl = $("cmName");
-          if (nameEl)
-            nameEl.textContent = p.name + " · " + p.country + " " + p.flag;
-          const avEl = $("cmAv");
-          if (avEl) avEl.src = p.img;
-          chatOv && chatOv.classList.add("on");
-          document.body.style.overflow = "hidden";
-          const ty1 = addTyping();
-          chatTmr = setTimeout(() => {
-            ty1.remove();
-            addCM("them", p.first);
-            cmInp && cmInp.focus();
-            chatTmr = setTimeout(() => {
-              const ty2 = addTyping();
-              chatTmr = setTimeout(() => {
-                ty2.remove();
-                addCM("them", p.second);
-              }, p.typing2 || 2800);
-            }, 3500);
-          }, 2200);
-        }
-        function closeChat() {
-          chatOv && chatOv.classList.remove("on");
-          clearTimeout(chatTmr);
-          checkBodyScroll();
-        }
-        $("cmX") && $("cmX").addEventListener("click", closeChat);
-        chatOv &&
-          chatOv.addEventListener("click", (e) => {
-            if (e.target === chatOv) closeChat();
-          });
-        function sendMsg() {
-          const txt = ((cmInp && cmInp.value) || "").trim();
-          if (!txt) return;
-          if (cmInp) cmInp.value = "";
-          clearTimeout(chatTmr);
-          addCM("me", txt);
-          if (!chatReplied) {
-            chatReplied = true;
-            chatTmr = setTimeout(() => {
-              const ty = addTyping(),
-                p = currentChatProfile || CHAT_PROFILES[0];
-              chatTmr = setTimeout(() => {
-                ty.remove();
-                addCM("them", p.reply);
-                chatTmr = setTimeout(() => {
-                  closeChat();
-                  openOffer(selC);
-                }, 3000);
-              }, p.typing3 || 3500);
-            }, 1200);
-          }
-        }
-        $("cmSend") && $("cmSend").addEventListener("click", sendMsg);
-        cmInp &&
-          cmInp.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") sendMsg();
-          });
-        $("openDemo") &&
-          $("openDemo").addEventListener("click", () => openChat(chatIdx++));
-
-        /* PROFILE CARDS */
-        function renderPCard(idx) {
-          const w = $("pCardWrap");
-          if (!w) return;
-          const p = PROFILES[idx];
-          w.innerHTML = `<div class="pcard"><button class="pcard-close" aria-label="Close"><i class="fas fa-times"></i></button><div class="pcard-img-wrap"><img src="${p.img}" class="pcard-img" alt="${p.name}" loading="lazy"><div class="pcard-badge"><i class="fas ${p.icon}"></i> ${p.badge}</div><div class="pcard-overlay"><div class="pcard-name">${p.name}</div><div class="pcard-info"><span><i class="fas fa-birthday-cake"></i> ${p.age}</span><span><i class="fas fa-map-marker-alt"></i> ${p.loc}</span></div></div></div><div class="pcard-body"><p class="pcard-desc">${p.desc}</p><div class="pcard-foot"><div class="pcard-price">$${p.price}<span>/ hour</span></div><button class="pcard-cta" data-id="${p.id}"><i class="fas fa-comment"></i> View Profile</button></div><a href="${REG}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;margin-top:.625rem;padding:.65rem;border-radius:8px;background:var(--grad-brand);color:#fff;font-family:var(--font-b);font-weight:800;font-size:.8rem"><i class="fas fa-th-list"></i> View All Profiles</a></div></div>`;
-          w.querySelector(".pcard-close").addEventListener("click", () => {
-            w.innerHTML = "";
-            const b = $("meetBtn");
-            if (b) {
-              b.innerHTML =
-                '<span class="meet-live-dot"></span><span id="meetBtnTxt">Meet People Ready to Chat</span><span class="meet-badge">LIVE</span>';
-              pcLast = -1;
-            }
-          });
-          w.querySelector(".pcard-cta").addEventListener("click", function () {
-            const prof = PROFILES.find(
-              (x) => x.id === parseInt(this.dataset.id),
-            );
-            if (prof) showPMod(prof);
-          });
-        }
-        function pickRandom() {
-          const avail = PROFILES.map((_, i) => i).filter((i) => i !== pcLast);
-          return avail[Math.floor(Math.random() * avail.length)];
-        }
-        function showPMod(p) {
-          document.querySelector(".pmod") &&
-            document.querySelector(".pmod").remove();
-          const ov = document.createElement("div");
-          ov.className = "pmod";
-          ov.style.cssText =
-            "position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(20px);z-index:10010;display:flex;align-items:center;justify-content:center;padding:1rem;animation:fadeUp .25s ease";
-          ov.innerHTML = `<div style="background:var(--card-0);border:1px solid var(--border-2);border-radius:18px;width:100%;max-width:600px;max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-lg);animation:pop .3s var(--spring);position:relative"><button onclick="this.closest('.pmod').remove();document.body.style.overflow=''" style="position:absolute;top:.875rem;right:.875rem;z-index:5;width:30px;height:30px;border-radius:50%;background:var(--bg-0);border:1px solid var(--border-0);cursor:pointer;display:grid;place-items:center;font-size:.73rem;color:var(--text-2)"><i class="fas fa-times"></i></button><div style="display:flex;align-items:center;gap:1.25rem;padding:1.5rem;background:var(--card-1);border-radius:18px 18px 0 0;border-bottom:1px solid var(--border-0)"><img src="${p.img}" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid var(--border-2);flex-shrink:0" loading="lazy"><div><div style="font-size:1.35rem;font-weight:800;color:var(--text-0)">${p.name}, ${p.age}</div><div style="font-size:.82rem;color:var(--text-2);margin-top:.18rem"><i class="fas fa-map-marker-alt"></i> ${p.loc}</div><div style="font-size:1.15rem;font-weight:800;color:var(--violet-4);margin-top:.28rem">$${p.price}<span style="font-size:.75rem;font-weight:400;color:var(--text-3)">/hour</span></div></div></div><div style="padding:1.5rem;border-bottom:1px solid var(--border-0)"><p style="font-size:.875rem;color:var(--text-2);line-height:1.75">${p.full}</p><div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.875rem">${p.tags.map((t) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.22rem .65rem;border-radius:6px;font-size:.76rem;font-weight:700;border:1px solid var(--border-2)">${t}</span>`).join("")}</div></div><div style="padding:1.25rem;border-bottom:1px solid var(--border-0)"><div style="font-size:.54rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:.35rem">Languages</div>${p.langs.map((l) => `<span style="background:var(--violet-dim);color:var(--violet-4);padding:.2rem .58rem;border-radius:6px;font-size:.74rem;font-weight:700;border:1px solid var(--border-2);margin-right:.22rem">${l}</span>`).join("")}</div><div style="padding:1.25rem;background:var(--card-1);border-radius:0 0 18px 18px"><div style="display:flex;align-items:center;gap:.5rem;background:var(--bg-0);border:1px solid var(--border-0);border-radius:8px;padding:.75rem;font-size:.82rem;color:var(--text-2);margin-bottom:.875rem"><i class="fas fa-info-circle" style="color:var(--violet-4);flex-shrink:0"></i> To chat with ${p.name}, create your account first</div><div style="display:flex;gap:.75rem;flex-wrap:wrap"><a href="${REG}" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:var(--grad-brand);color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-user-plus"></i> Create Account</a><a href="https://Starhela.com/login.php" target="_blank" rel="noopener" style="flex:1;min-width:135px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.875rem;border-radius:10px;background:#25d350;color:#fff;font-weight:800;font-size:.855rem"><i class="fas fa-sign-in-alt"></i> Login</a></div></div></div>`;
-          ov.addEventListener("click", (e) => {
-            if (e.target === ov) {
-              ov.remove();
-              checkBodyScroll();
-            }
-          });
-          document.body.appendChild(ov);
-          document.body.style.overflow = "hidden";
-        }
-
-        /* CHANGE 3: Meet button click handler — updates button text with new markup */
-        const meetBtn = $("meetBtn");
-        meetBtn &&
-          meetBtn.addEventListener("click", function () {
-            const idx = pickRandom();
-            pcLast = idx;
-            renderPCard(idx);
-            const txtEl = $("meetBtnTxt");
-            if (txtEl) txtEl.textContent = "Meet Someone Else";
-          });
-
-        /* FAQ */
         const fw = $("faqWrap");
         if (fw) {
           const fr = document.createDocumentFragment();
@@ -7086,10 +7594,10 @@
             const d = document.createElement("div");
             d.className = "faq-item";
             d.innerHTML = `<div class="faq-q">${f.q} <i class="fas fa-chevron-down"></i></div><div class="faq-a">${f.a}</div>`;
-            const q = d.querySelector(".faq-q"),
-              a = d.querySelector(".faq-a");
-            q.addEventListener("click", () => {
-              const wasOpen = a.classList.contains("open");
+            const qDiv = d.querySelector(".faq-q"),
+              aDiv = d.querySelector(".faq-a");
+            qDiv.addEventListener("click", () => {
+              const wasOpen = aDiv.classList.contains("open");
               document
                 .querySelectorAll(".faq-a")
                 .forEach((x) => x.classList.remove("open"));
@@ -7097,8 +7605,8 @@
                 .querySelectorAll(".faq-q")
                 .forEach((x) => x.classList.remove("open"));
               if (!wasOpen) {
-                a.classList.add("open");
-                q.classList.add("open");
+                aDiv.classList.add("open");
+                qDiv.classList.add("open");
               }
             });
             fr.appendChild(d);
@@ -7106,7 +7614,25 @@
           fw.appendChild(fr);
         }
 
-        /* LEGAL */
+        /* ─── LEGAL MODAL ────────────────────────────────────────────── */
+        const LEGAL = {
+          terms: {
+            icon: "📄",
+            title: "Terms of Service",
+            body: "<h3>1. Acceptance of Terms</h3><p>By registering with Starhela, you agree to these Terms of Service.</p><h3>2. Eligibility</h3><ul><li>You must be at least 18 years old</li><li>You must have a valid identity document</li><li>You agree to provide truthful information during registration</li></ul><h3>3. Registration Fee</h3><p>The one-time registration fee is non-refundable once account access is granted. It covers account verification, platform access, and setup costs. No additional recurring fees are charged.</p><h3>4. Earner Conduct</h3><ul><li>All conversations must remain respectful and appropriate</li><li>You may not solicit personal information from clients</li><li>Harassment or inappropriate content will result in immediate account termination</li></ul><h3>5. Payments</h3><p>Earnings are paid upon reaching the $5 minimum threshold. Payment is typically processed within 24 hours. Starhela does not charge withdrawal fees.</p>",
+          },
+          privacy: {
+            icon: "🔐",
+            title: "Privacy Policy",
+            body: "<h3>1. Information We Collect</h3><ul><li>Name and contact information during registration</li><li>Payment information (processed securely, not stored on our servers)</li><li>Conversation activity data for platform quality purposes</li></ul><h3>2. How We Use Your Information</h3><ul><li>To verify your identity and prevent fraud</li><li>To process your earnings and payments</li><li>To provide customer support</li></ul><h3>3. What We Don't Do</h3><ul><li>We do not sell your personal data to third parties</li><li>We do not share your information without your consent</li></ul><h3>4. Your Rights</h3><ul><li>Right to access your personal data</li><li>Right to correct inaccurate information</li><li>Right to request account deletion</li></ul>",
+          },
+          disclaimer: {
+            icon: "⚠️",
+            title: "Earnings Disclaimer",
+            body: "<h3>Important Notice — Please Read</h3><p>Starhela is committed to full transparency about earning potential.</p><h3>Realistic Expectations</h3><ul><li>New members typically earn $10–$100 in their first month</li><li>Members chatting 3–5 hours daily typically earn $100–$300/month</li><li>Highly active members may earn $300–$850/month over time</li><li>Higher figures require consistent daily effort over many weeks</li></ul><h3>Factors That Affect Earnings</h3><ul><li>Hours invested per day and days active per week</li><li>Which earning methods you activate</li><li>Conversational quality and client satisfaction</li></ul><h3>No Income Guarantee</h3><p>Starhela does not guarantee any specific level of income. All earnings figures are examples or averages, not guarantees. The registration fee is non-refundable once access is granted.</p>",
+          },
+        };
+
         window.openLegal = function (type) {
           switchLegal(type);
           $("lmOv") && $("lmOv").classList.add("on");
@@ -7143,7 +7669,7 @@
           });
         });
 
-        /* SOCIAL PROOF POPUPS */
+        /* ─── SOCIAL PROOF POPUPS ────────────────────────────────────── */
         const spNames = [
           "Sarah from Nairobi",
           "John from Lagos",
@@ -7163,6 +7689,8 @@
           { i: "fa-gift", t: "received a tip from a satisfied client" },
         ];
         const spW = $("spWrap");
+        let spBusy = false;
+
         function showSP() {
           if (!spW || spBusy || document.hidden) return;
           spBusy = true;
@@ -7183,7 +7711,7 @@
         setTimeout(showSP, 12000);
         setInterval(showSP, 15000);
 
-        /* COOKIES */
+        /* ─── COOKIE CONSENT ─────────────────────────────────────────── */
         const hasCk = () => {
           try {
             return !!localStorage.getItem("Starhela_ck");
@@ -7212,7 +7740,7 @@
             $("cookieBar") && $("cookieBar").classList.remove("show");
           });
 
-        /* SMOOTH SCROLL */
+        /* ─── SMOOTH ANCHOR SCROLL ───────────────────────────────────── */
         document.querySelectorAll('a[href^="#"]').forEach((a) => {
           a.addEventListener("click", (e) => {
             const id = a.getAttribute("href").slice(1),
@@ -7225,7 +7753,7 @@
           });
         });
 
-        /* TESTIMONIAL DOTS */
+        /* ─── TESTIMONIAL DOTS ───────────────────────────────────────── */
         (function () {
           const tg = document.querySelector(".tgrid"),
             dots = document.querySelectorAll(".tdot");
@@ -7246,7 +7774,11 @@
           );
         })();
 
+        /* ─── INIT LEGAL MODAL DEFAULT TAB ──────────────────────────── */
         window.switchLegal("terms");
+
+        /* ─── INITIALISE PROFILE GRID (last, so helpers are available) ─ */
+        initProfileGrid();
       })();
     </script>
   </body>

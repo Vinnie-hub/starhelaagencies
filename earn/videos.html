@@ -19,7 +19,7 @@
     />
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Starhela Agencies" />
-    <link rel="canonical" href="https://starhela.com/watch-earn" />
+    <link rel="canonical" href="https://starhela.com/earn/videos" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -31,7 +31,7 @@
       property="og:description"
       content="Join 120,000+ Africans earning $5–$50/day just by watching videos. One-time activation. M-Pesa withdrawals. Start now!"
     />
-    <meta property="og:url" content="https://starhela.com/watch-earn" />
+    <meta property="og:url" content="https://starhela.com/earn/videos" />
     <meta property="og:site_name" content="Starhela Agencies" />
     <meta
       property="og:image"
@@ -2471,7 +2471,7 @@
     <!-- NAV -->
     <header class="nav" id="nav">
       <div class="nav-inner">
-        <a href="index.html" class="logo" aria-label="Starhela Home">
+        <a href="/index.html" class="logo" aria-label="Starhela Home">
           <div class="logo-mark">
             <img
               src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1777814668/Starheladesign_pc7nvp.jpg"
@@ -2483,7 +2483,7 @@
           <span class="logo-name">STARHELA <em>AGENCIES</em></span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="/index.html"><i class="fas fa-home"></i> Home</a>
           <a href="#how-it-works"
             ><i class="fas fa-play-circle"></i> How It Works</a
           >
@@ -2511,7 +2511,7 @@
         role="navigation"
         aria-label="Mobile navigation"
       >
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="/index.html"><i class="fas fa-home"></i> Home</a>
         <a href="#how-it-works"
           ><i class="fas fa-play-circle"></i> How It Works</a
         >
@@ -2655,7 +2655,7 @@
                     class="ps-btn"
                     onclick="
                       window.location.href =
-                        'https://starhela.com/register.php?ref=sydney'
+                        'https://starhela.com/register.php?ref=sydney&utm_source=starhela&utm_medium=website&utm_campaign=referral'
                     "
                   >
                     Withdraw to M-Pesa →
@@ -3350,11 +3350,11 @@
     <!-- ABOUT NAVIGATION -->
     <div class="container">
       <div class="about-navigation" aria-label="Post navigation">
-        <a class="nav-about" href="videos.html"
+        <a class="nav-about" href="earn/videos.html"
           ><i class="fas fa-arrow-left"></i> Back: Watch Videos</a
         >
-        <a class="nav-about" href="networking.html"
-          >Next: Affiliate Program <i class="fas fa-arrow-right"></i
+        <a class="nav-about" href="earn/bonus.html"
+          >Next: Agent Bonus <i class="fas fa-arrow-right"></i
         ></a>
       </div>
     </div>
@@ -3428,11 +3428,13 @@
           <div>
             <div class="footer-col-title">Countries</div>
             <div class="footer-links">
-              <a href="kenya.html">Kenya</a><a href="uganda.html">Uganda</a
-              ><a href="tanzania.html">Tanzania</a
-              ><a href="zambia.html">Zambia</a
-              ><a href="cameroon.html">Cameroon</a><a href="ghana.html">Ghana</a
-              ><a href="nigeria.html">Nigeria</a>
+              <a href="/countries/kenya.html">Kenya</a
+              ><a href="/countries/uganda.html">Uganda</a>
+              <a href="/countries/tanzania.html">Tanzania</a>
+              <a href="/countries/zambia.html">Zambia</a>
+              <a href="/countries/cameroon.html">Cameroon</a
+              ><a href="/countries/ghana.html">Ghana</a>
+              <a href="/countries/nigeria.html">Nigeria</a>
             </div>
           </div>
           <div>
@@ -3739,6 +3741,58 @@
         }
       }
       updateSpots();
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.",
+        );
+      }
+      // ]]>
     </script>
   </body>
 </html>
