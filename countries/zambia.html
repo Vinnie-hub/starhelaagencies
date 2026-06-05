@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
     <title>
       StarHela Zambia | Chat With Foreigners & Earn Online | Airtel & MTN Zambia
@@ -17,7 +17,6 @@
       name="keywords"
       content="StarHela Zambia, chat with foreigners earn money Zambia, earn online Zambia, chatting jobs Zambia, Airtel Zambia, MTN Mobile Money, micro tasks Zambia"
     />
-    <meta name="author" content="StarHela Zambia" />
     <meta name="robots" content="index, follow" />
     <meta
       property="og:title"
@@ -28,6 +27,10 @@
       content="Activation 130 ZMW. Chat with foreigners & complete tasks. Withdraw to Airtel & MTN Zambia."
     />
     <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dovhxt8ye/image/upload/v1777814668/starheladesign_pc7nvp.jpg"
+    />
+    <meta
       property="og:url"
       content="https://starhelaagencies.com/countries/zambia"
     />
@@ -35,252 +38,279 @@
       rel="canonical"
       href="https://starhelaagencies.com/countries/zambia"
     />
+    <!-- Exact same favicon as index.html -->
     <link
       rel="icon"
       type="image/png"
       href="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png"
     />
+    <!-- Exact same fonts as index.html -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
     <style>
-      :root {
-        --pu-1: #3d1d96;
-        --pu-2: #5b2fcf;
-        --pu-3: #7c4dff;
-        --pu-4: #a47bff;
-        --pu-5: #d4bfff;
-        --pu-bg: #f5f0ff;
-        --zm-green: #1a7c1a;
-        --zm-orange: #e07010;
-        --zm-red: #c01020;
-        --chat-blue: #0e6fd8;
-        --chat-teal: #0aa3a3;
-        --gold: #f0a500;
-        --white: #ffffff;
-        --gray-1: #f8f7fd;
-        --gray-2: #eeeaf8;
-        --gray-3: #ccc6e0;
-        --gray-4: #8880a8;
-        --text-1: #12082e;
-        --text-2: #3a2f5a;
-        --text-3: #6b6085;
-        --radius-sm: 12px;
-        --radius-md: 20px;
-        --radius-lg: 32px;
-        --shadow-sm: 0 2px 12px rgba(61, 29, 150, 0.08);
-        --shadow-md: 0 8px 32px rgba(61, 29, 150, 0.13);
-        --shadow-lg: 0 20px 60px rgba(61, 29, 150, 0.18);
-        --t: 0.22s ease;
-        --ff-head: "Sora", sans-serif;
-        --ff-body: "DM Sans", sans-serif;
-        --ff-mono: "JetBrains Mono", monospace;
-      }
-
+      /* ============================================================
+       BASE RESET
+    ============================================================ */
       *,
       *::before,
       *::after {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
+
+      /* ============================================================
+       DESIGN TOKENS  —  light mode, brand-accurate
+       All values cross-referenced from index.html
+    ============================================================ */
+      :root {
+        /* Brand purple (index.html: --purple:#7c3aed) */
+        --pu: #7c3aed;
+        --pu-dark: #6d28d9;
+        --pu-light: #a78bfa;
+        --pu-bg: rgba(124, 58, 237, 0.08);
+        --pu-bdr: rgba(124, 58, 237, 0.18);
+
+        /* Zambia national colours */
+        --zm-green: #16a34a;
+        --zm-green-dk: #15803d;
+        --zm-green-bg: rgba(22, 163, 74, 0.07);
+        --zm-green-bd: rgba(22, 163, 74, 0.2);
+        --zm-orange: #ea580c;
+        --zm-red: #b91c1c;
+
+        /* Light surfaces */
+        --bg: #faf8ff; /* page bg */
+        --bg-white: #ffffff;
+        --bg-tint: #f4f1fc; /* subtle purple-tinted card bg */
+        --bg-soft: #f0fdf4; /* green-tinted section */
+
+        /* Borders */
+        --bdr: #e8e3f4;
+        --bdr-hi: #c4b5f7;
+
+        /* Typography */
+        --t1: #12082e;
+        --t2: #3a2f5a;
+        --t3: #6b6085;
+        --t4: #9990b8;
+
+        /* Accents */
+        --gold: #f59e0b;
+        --blue: #0e6fd8;
+
+        /* Shadows */
+        --sh-sm: 0 2px 12px rgba(61, 29, 150, 0.07);
+        --sh-md: 0 6px 28px rgba(61, 29, 150, 0.11);
+        --sh-lg: 0 18px 56px rgba(61, 29, 150, 0.15);
+
+        /* Layout */
+        --nav-h: 66px;
+        --max: 1120px;
+        --r: 14px;
+        --r-lg: 20px;
+        --r-xl: 28px;
+
+        /* Fonts (exact match index.html) */
+        --fh: "Sora", sans-serif;
+        --fb: "DM Sans", sans-serif;
+      }
+
       html {
         scroll-behavior: smooth;
       }
       body {
-        font-family: var(--ff-body);
-        background: #faf8ff;
-        color: var(--text-1);
-        line-height: 1.6;
+        font-family: var(--fb);
+        background: var(--bg);
+        color: var(--t1);
+        line-height: 1.65;
         overflow-x: hidden;
       }
 
-      /* PAGE LOADER */
-      #pageLoader {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: var(--pu-1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        transition:
-          opacity 0.5s ease,
-          visibility 0.5s ease;
+      ::-webkit-scrollbar {
+        width: 3px;
       }
-      #pageLoader.hide {
-        opacity: 0;
-        visibility: hidden;
+      ::-webkit-scrollbar-track {
+        background: var(--bg-tint);
       }
-      .loader-ring {
-        width: 60px;
-        height: 60px;
-        border: 3px solid rgba(255, 255, 255, 0.15);
-        border-top-color: #fff;
-        border-radius: 50%;
-        animation: spin 0.9s linear infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      .loader-brand {
-        font-family: var(--ff-head);
-        font-size: 1.3rem;
-        font-weight: 800;
-        letter-spacing: 0.18em;
-        color: #fff;
-      }
-      .loader-sub {
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.6);
-        letter-spacing: 0.08em;
-      }
-      .loader-bar {
-        width: 180px;
-        height: 3px;
-        background: rgba(255, 255, 255, 0.15);
+      ::-webkit-scrollbar-thumb {
+        background: var(--pu);
         border-radius: 99px;
-        overflow: hidden;
-      }
-      .loader-bar-fill {
-        height: 100%;
-        background: var(--pu-4);
-        border-radius: 99px;
-        animation: barFill 1.8s ease forwards;
-      }
-      @keyframes barFill {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
       }
 
-      /* NAVBAR */
-      nav.top-nav {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        display: block;
+      }
+      button {
+        font-family: var(--fb);
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: var(--max);
+        margin-inline: auto;
+        padding-inline: clamp(20px, 4vw, 52px);
+      }
+
+      /* ============================================================
+       ZAMBIA FLAG STRIP  (top accent bar)
+    ============================================================ */
+      .flag-strip {
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          var(--zm-green) 33.3%,
+          var(--zm-red) 33.3% 66.6%,
+          var(--zm-orange) 66.6%
+        );
+        position: relative;
+        z-index: 1000;
+      }
+
+      /* ============================================================
+       NAV  —  mirrors index.html nav exactly:
+               rgba frosted glass · same logo img · same link style
+    ============================================================ */
+      .top-nav {
         position: fixed;
-        top: 0;
+        top: 5px; /* sits below 5px flag strip */
         left: 0;
         right: 0;
-        z-index: 500;
-        background: rgba(250, 248, 255, 0.92);
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid var(--gray-2);
-        padding: 0 clamp(16px, 5vw, 48px);
-        height: 64px;
+        z-index: 900;
+        height: var(--nav-h);
+        background: rgba(250, 248, 255, 0.9);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--bdr);
+        transition: box-shadow 0.25s;
+      }
+      .top-nav.scrolled {
+        box-shadow: var(--sh-md);
+      }
+
+      .nav-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: box-shadow var(--t);
+        height: 100%;
       }
-      nav.top-nav.scrolled {
-        box-shadow: var(--shadow-md);
-      }
-      .nav-brand {
+
+      /* Logo — exact same <img> + <span> as index.html */
+      .nav-logo {
         display: flex;
         align-items: center;
         gap: 10px;
-        text-decoration: none;
       }
-      .nav-logo-mark {
-        width: 34px;
-        height: 34px;
-        background: linear-gradient(135deg, var(--pu-2), var(--pu-4));
-        clip-path: polygon(
-          50% 0%,
-          61% 35%,
-          98% 35%,
-          68% 57%,
-          79% 91%,
-          50% 70%,
-          21% 91%,
-          32% 57%,
-          2% 35%,
-          39% 35%
-        );
-        flex-shrink: 0;
+      .nav-logo img {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        object-fit: contain;
       }
-      .nav-brand-name {
-        font-family: var(--ff-head);
-        font-size: 0.85rem;
+      .nav-logo-name {
+        font-family: var(--fh);
         font-weight: 800;
-        letter-spacing: 0.12em;
-        color: var(--pu-1);
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+        background: linear-gradient(120deg, var(--t1) 0%, var(--pu) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
+      .nav-country-tag {
+        font-size: 0.63rem;
+        font-weight: 700;
+        color: var(--zm-green);
+        background: var(--zm-green-bg);
+        border: 1px solid var(--zm-green-bd);
+        padding: 2px 9px;
+        border-radius: 99px;
+        letter-spacing: 0.06em;
+      }
+
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 4px;
         list-style: none;
       }
       .nav-links a {
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: var(--text-2);
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--t2);
         padding: 6px 12px;
         border-radius: 8px;
-        text-decoration: none;
-        transition: all var(--t);
+        transition: all 0.2s;
       }
       .nav-links a:hover {
-        background: var(--pu-bg);
-        color: var(--pu-2);
+        background: var(--bg-tint);
+        color: var(--pu);
       }
+
       .btn-nav {
-        background: linear-gradient(135deg, var(--pu-2), var(--pu-3));
+        background: linear-gradient(
+          135deg,
+          var(--pu),
+          var(--pu-dark)
+        ) !important;
         color: #fff !important;
-        border-radius: 99px !important;
         padding: 8px 20px !important;
-        box-shadow: 0 4px 14px rgba(91, 47, 207, 0.35);
+        border-radius: 99px !important;
+        font-weight: 600 !important;
+        box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s !important;
       }
       .btn-nav:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(91, 47, 207, 0.45) !important;
+        box-shadow: 0 8px 22px rgba(124, 58, 237, 0.42) !important;
         background: linear-gradient(
           135deg,
-          var(--pu-1),
-          var(--pu-2)
+          var(--pu-dark),
+          var(--pu)
         ) !important;
       }
-      .nav-hamburger {
+
+      /* Hamburger */
+      .nav-burger {
         display: none;
         flex-direction: column;
         gap: 5px;
-        cursor: pointer;
         background: none;
         border: none;
+        cursor: pointer;
         padding: 6px;
       }
-      .nav-hamburger span {
+      .nav-burger span {
         display: block;
         width: 22px;
         height: 2px;
-        background: var(--text-1);
+        background: var(--t1);
         border-radius: 99px;
         transition: all 0.25s;
       }
+
+      /* Mobile drawer */
       .mobile-menu {
         display: none;
         position: fixed;
-        top: 64px;
+        top: calc(var(--nav-h) + 5px);
         left: 0;
         right: 0;
-        z-index: 499;
+        z-index: 800;
         background: rgba(250, 248, 255, 0.97);
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid var(--gray-2);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--bdr);
         padding: 16px 24px 24px;
         flex-direction: column;
         gap: 4px;
@@ -289,403 +319,615 @@
         display: flex;
       }
       .mobile-menu a {
-        text-decoration: none;
         font-size: 0.9rem;
         font-weight: 600;
-        color: var(--text-2);
+        color: var(--t2);
         padding: 10px 14px;
         border-radius: 10px;
-        transition: all var(--t);
+        transition: all 0.2s;
       }
       .mobile-menu a:hover {
-        background: var(--pu-bg);
-        color: var(--pu-2);
+        background: var(--bg-tint);
+        color: var(--pu);
       }
-      .mobile-menu .btn-mobile {
+      .mob-cta {
         margin-top: 8px;
         text-align: center;
-        background: linear-gradient(135deg, var(--pu-2), var(--pu-3));
+        background: linear-gradient(
+          135deg,
+          var(--zm-green),
+          var(--zm-green-dk)
+        ) !important;
         color: #fff;
         border-radius: 14px;
-        padding: 13px !important;
+        padding: 14px !important;
         font-size: 1rem !important;
-        box-shadow: 0 6px 20px rgba(91, 47, 207, 0.3);
+        font-weight: 700 !important;
+        box-shadow: 0 6px 20px rgba(22, 163, 74, 0.28);
       }
 
-      /* HERO */
+      /* ============================================================
+       HERO
+    ============================================================ */
       .hero {
-        padding: 120px clamp(16px, 5vw, 64px) 80px;
-        background: linear-gradient(
-          160deg,
-          #f5f0ff 0%,
-          #e8f4ff 50%,
-          #f0fff4 100%
-        );
+        min-height: 100dvh;
+        padding-top: calc(var(--nav-h) + 80px);
+        padding-bottom: 80px;
+        display: flex;
+        align-items: center;
         position: relative;
         overflow: hidden;
+        /* three-stop gradient matching index.html hero section palette */
+        background: linear-gradient(
+          155deg,
+          #f5f0ff 0%,
+          #e8f4ff 48%,
+          #f0fdf4 100%
+        );
       }
-      .hero::before {
-        content: "";
+
+      /* Decorative orbs */
+      .hero-orb-1 {
         position: absolute;
         top: -120px;
-        right: -120px;
-        width: 600px;
-        height: 600px;
+        right: -80px;
+        width: 640px;
+        height: 640px;
+        pointer-events: none;
         background: radial-gradient(
           circle,
-          rgba(14, 111, 216, 0.1) 0%,
-          transparent 70%
+          rgba(124, 58, 237, 0.09) 0%,
+          transparent 65%
         );
-        pointer-events: none;
       }
-      .hero::after {
-        content: "";
+      .hero-orb-2 {
         position: absolute;
-        bottom: -80px;
-        left: -80px;
-        width: 400px;
-        height: 400px;
+        bottom: -60px;
+        left: -60px;
+        width: 440px;
+        height: 440px;
+        pointer-events: none;
         background: radial-gradient(
           circle,
-          rgba(26, 124, 26, 0.08) 0%,
-          transparent 70%
+          rgba(22, 163, 74, 0.07) 0%,
+          transparent 65%
         );
+      }
+      .hero-grid {
+        position: absolute;
+        inset: 0;
         pointer-events: none;
+        background-image:
+          linear-gradient(rgba(124, 58, 237, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: radial-gradient(
+          ellipse 78% 55% at 50% 18%,
+          black 0%,
+          transparent 80%
+        );
       }
+
       .hero-inner {
-        max-width: 1200px;
-        margin: 0 auto;
+        position: relative;
+        z-index: 2;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
+        grid-template-columns: 1fr 440px;
+        gap: 52px;
         align-items: center;
+        width: 100%;
       }
+
+      .hero-left {
+        animation: riseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .hero-right {
+        animation: riseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
+        position: relative;
+      }
+
+      @keyframes riseIn {
+        from {
+          opacity: 0;
+          transform: translateY(22px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Top badge */
       .hero-badge {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        background: rgba(14, 111, 216, 0.1);
+        gap: 7px;
+        background: rgba(14, 111, 216, 0.08);
         border: 1px solid rgba(14, 111, 216, 0.2);
-        color: var(--chat-blue);
-        font-size: 0.72rem;
+        border-radius: 99px;
+        padding: 5px 14px 5px 10px;
+        font-size: 0.7rem;
         font-weight: 700;
+        color: var(--blue);
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        padding: 6px 16px;
-        border-radius: 99px;
         margin-bottom: 20px;
       }
-      .hero h1 {
-        font-family: var(--ff-head);
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 800;
-        line-height: 1.1;
-        color: var(--text-1);
-        margin-bottom: 20px;
-      }
-      .hero h1 .accent {
-        color: var(--zm-orange);
-      }
-      .hero h1 .accent-blue {
-        color: var(--chat-blue);
-      }
-      .hero-desc {
-        font-size: 1rem;
-        color: var(--text-2);
-        line-height: 1.7;
-        margin-bottom: 28px;
-      }
-      .hero-price {
-        display: inline-flex;
-        align-items: baseline;
-        gap: 6px;
-        background: linear-gradient(
-          135deg,
-          rgba(26, 124, 26, 0.1),
-          rgba(26, 124, 26, 0.05)
-        );
-        border: 1px solid rgba(26, 124, 26, 0.25);
-        border-radius: var(--radius-sm);
-        padding: 8px 18px;
-        margin-bottom: 28px;
-      }
-      .hero-price .amt {
-        font-family: var(--ff-mono);
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--zm-green);
-      }
-      .hero-price .lbl {
-        font-size: 0.75rem;
-        color: var(--zm-green);
-        font-weight: 600;
-      }
-      .hero-btns {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 32px;
-      }
-      .btn-primary-zm {
-        background: linear-gradient(135deg, var(--zm-green), #22a322);
-        color: #fff;
-        padding: 14px 28px;
-        border-radius: 99px;
-        border: none;
-        font-family: var(--ff-head);
-        font-size: 0.9rem;
-        font-weight: 700;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 6px 20px rgba(26, 124, 26, 0.3);
-        transition: all var(--t);
-      }
-      .btn-primary-zm:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 32px rgba(26, 124, 26, 0.4);
-      }
-      .btn-secondary-zm {
-        background: transparent;
-        color: var(--pu-2);
-        border: 2px solid var(--pu-3);
-        padding: 12px 24px;
-        border-radius: 99px;
-        font-family: var(--ff-head);
-        font-size: 0.9rem;
-        font-weight: 700;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all var(--t);
-      }
-      .btn-secondary-zm:hover {
-        background: var(--pu-bg);
-        transform: translateY(-2px);
-      }
-      .hero-stats {
-        display: flex;
-        gap: 28px;
-        flex-wrap: wrap;
-      }
-      .hero-stat {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 0.82rem;
-        color: var(--text-3);
-        font-weight: 600;
-      }
-      .hero-stat i {
-        color: var(--zm-green);
-      }
-
-      /* CHAT SHOWCASE VISUAL */
-      .hero-visual {
-        background: linear-gradient(135deg, #0e2a5c, #1a4fa8, #0e6fd8);
-        border-radius: var(--radius-lg);
-        padding: 36px 28px;
-        box-shadow: var(--shadow-lg);
-        position: relative;
-        overflow: hidden;
-      }
-      .hero-visual::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-        background-size: 24px 24px;
-        pointer-events: none;
-      }
-      .hv-title {
-        font-family: var(--ff-head);
-        font-size: 1rem;
-        font-weight: 800;
-        color: #fff;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .hv-online-dot {
-        width: 8px;
-        height: 8px;
-        background: #4ade80;
+      .badge-pulse {
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
-        animation: pulse-dot 2s infinite;
+        background: #22c55e;
+        flex-shrink: 0;
+        animation: pulse 1.8s ease-in-out infinite;
       }
-      @keyframes pulse-dot {
+      @keyframes pulse {
         0%,
         100% {
           opacity: 1;
           transform: scale(1);
         }
         50% {
-          opacity: 0.6;
-          transform: scale(1.4);
+          opacity: 0.35;
+          transform: scale(0.6);
         }
       }
 
-      /* CHAT BUBBLES */
-      .chat-thread {
+      /* H1 */
+      .hero h1 {
+        font-family: var(--fh);
+        font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin-bottom: 18px;
+        color: var(--t1);
+      }
+      .hero h1 .hi-blue {
+        color: var(--blue);
+      }
+      .hero h1 .hi-green {
+        color: var(--zm-green);
+      }
+
+      .hero-desc {
+        font-size: clamp(0.94rem, 1.5vw, 1.03rem);
+        color: var(--t2);
+        max-width: 460px;
+        margin-bottom: 22px;
+        line-height: 1.75;
+      }
+
+      /* Activation pill */
+      .act-pill {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 7px;
+        background: var(--zm-green-bg);
+        border: 1px solid var(--zm-green-bd);
+        border-radius: 12px;
+        padding: 8px 18px;
+        margin-bottom: 26px;
+      }
+      .act-pill .amt {
+        font-family: var(--fh);
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: var(--zm-green);
+        line-height: 1;
+      }
+      .act-pill .lbl {
+        font-size: 0.74rem;
+        color: var(--zm-green);
+        font-weight: 600;
+      }
+
+      /* Feature list (same ✓ style as index.html) */
+      .feat-list {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
-      .chat-msg {
+      .feat-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--t2);
+      }
+      .feat-icon {
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
+        background: var(--pu-bg);
+        border: 1px solid var(--pu-bdr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        flex-shrink: 0;
+        color: var(--pu);
+      }
+
+      /* CTA row (mirrors index.html exactly) */
+      .cta-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 34px;
+      }
+      .btn-primary {
+        background: linear-gradient(
+          120deg,
+          var(--zm-green),
+          var(--zm-green-dk)
+        );
+        color: #fff;
+        padding: 14px 30px;
+        border-radius: 99px;
+        font-family: var(--fh);
+        font-size: 0.92rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 10px 26px -6px rgba(22, 163, 74, 0.4);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 36px -6px rgba(22, 163, 74, 0.55);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        border: 1.5px solid var(--pu-bdr);
+        color: var(--pu);
+        padding: 12px 24px;
+        border-radius: 99px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        transition:
+          border-color 0.2s,
+          background 0.2s,
+          transform 0.2s;
+      }
+      .btn-ghost:hover {
+        border-color: var(--pu);
+        background: var(--bg-tint);
+        transform: translateY(-2px);
+      }
+
+      /* Hero stats row (same as index.html trust-row) */
+      .hero-stats {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: wrap;
+      }
+      .hs-stat {
+        padding-right: 24px;
+        margin-right: 24px;
+        border-right: 1px solid var(--bdr);
+      }
+      .hs-stat:last-child {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: none;
+      }
+      .hs-num {
+        font-family: var(--fh);
+        font-size: 1.45rem;
+        font-weight: 800;
+        color: var(--t1);
+        display: block;
+        line-height: 1;
+        margin-bottom: 3px;
+      }
+      .hs-lbl {
+        font-size: 0.68rem;
+        color: var(--t4);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+
+      /* ============================================================
+       HERO CARD  (earn-showcase)
+    ============================================================ */
+      .earn-card {
+        background: var(--bg-white);
+        border: 1px solid var(--bdr-hi);
+        border-radius: var(--r-xl);
+        padding: 26px;
+        box-shadow: var(--sh-lg);
+        position: relative;
+        overflow: hidden;
+      }
+      /* Three-colour top bar matching Zambia flag */
+      .earn-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--zm-green) 33%,
+          var(--pu) 66%,
+          var(--zm-orange) 100%
+        );
+      }
+
+      .ec-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
+      .ec-title {
+        font-family: var(--fh);
+        font-size: 0.94rem;
+        font-weight: 800;
+        color: var(--t1);
+      }
+      .live-pill {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--zm-green-bg);
+        border: 1px solid var(--zm-green-bd);
+        border-radius: 99px;
+        padding: 3px 10px;
+        font-size: 0.66rem;
+        font-weight: 700;
+        color: var(--zm-green);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .live-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--zm-green);
+        animation: pulse 1.8s ease-in-out infinite;
+      }
+      .ec-sub {
+        font-size: 0.76rem;
+        color: var(--t4);
+        margin-bottom: 14px;
+      }
+
+      /* Chat bubbles inside card */
+      .chat-thread {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 14px;
+      }
+      .c-msg {
         display: flex;
         align-items: flex-end;
         gap: 8px;
       }
-      .chat-msg.foreign {
+      .c-msg.them {
         flex-direction: row;
       }
-      .chat-msg.you {
+      .c-msg.you {
         flex-direction: row-reverse;
       }
-      .chat-avatar {
-        width: 28px;
-        height: 28px;
+      .c-av {
+        width: 26px;
+        height: 26px;
         border-radius: 50%;
         flex-shrink: 0;
-        font-size: 0.8rem;
         display: grid;
         place-items: center;
+        font-size: 0.75rem;
         font-weight: 700;
       }
-      .chat-msg.foreign .chat-avatar {
-        background: rgba(255, 255, 255, 0.2);
+      .c-msg.them .c-av {
+        background: var(--bg-tint);
+        color: var(--pu);
+      }
+      .c-msg.you .c-av {
+        background: var(--zm-green);
         color: #fff;
       }
-      .chat-msg.you .chat-avatar {
-        background: #4ade80;
-        color: #0a3a0a;
-      }
-      .chat-bubble {
-        max-width: 78%;
-        padding: 10px 14px;
-        border-radius: 16px;
-        font-size: 0.78rem;
+      .c-bubble {
+        max-width: 82%;
+        padding: 9px 13px;
+        border-radius: 14px;
+        font-size: 0.74rem;
         line-height: 1.5;
       }
-      .chat-msg.foreign .chat-bubble {
-        background: rgba(255, 255, 255, 0.15);
-        color: rgba(255, 255, 255, 0.92);
+      .c-msg.them .c-bubble {
+        background: var(--bg-tint);
+        color: var(--t2);
         border-bottom-left-radius: 4px;
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 1px solid var(--bdr);
       }
-      .chat-msg.you .chat-bubble {
-        background: #22c55e;
+      .c-msg.you .c-bubble {
+        background: var(--zm-green);
         color: #fff;
         border-bottom-right-radius: 4px;
       }
-      .chat-flag {
-        font-size: 0.65rem;
-      }
-      .chat-earn-pill {
+      .c-earn {
         display: inline-flex;
         align-items: center;
-        gap: 5px;
-        background: rgba(240, 165, 0, 0.25);
-        border: 1px solid rgba(240, 165, 0, 0.4);
-        color: #fde68a;
-        font-size: 0.62rem;
+        gap: 4px;
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px solid rgba(245, 158, 11, 0.22);
+        color: #92400e;
+        font-size: 0.59rem;
         font-weight: 800;
-        padding: 3px 10px;
+        padding: 2px 9px;
         border-radius: 99px;
-        margin-top: 6px;
+        margin-top: 5px;
       }
 
-      .hv-divider {
+      .ec-divider {
         border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 16px 0;
+        border-top: 1px solid var(--bdr);
+        margin: 12px 0;
       }
-      .hv-earn-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+
+      /* Activity list inside card */
+      .act-list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin-bottom: 14px;
       }
-      .hv-earn-box {
-        background: rgba(0, 0, 0, 0.25);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 12px;
-        padding: 12px 14px;
-        backdrop-filter: blur(8px);
+      .act-row {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 9px 12px;
+        background: var(--bg-tint);
+        border: 1px solid var(--bdr);
+        border-radius: 11px;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
       }
-      .hv-earn-lbl {
-        font-size: 0.6rem;
-        color: rgba(255, 255, 255, 0.55);
+      .act-row:hover {
+        background: #ede9fd;
+        border-color: var(--pu-bdr);
+      }
+      .act-ico {
+        width: 30px;
+        height: 30px;
+        border-radius: 9px;
+        background: var(--pu-bg);
+        border: 1px solid var(--pu-bdr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .act-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .act-name {
+        font-size: 0.77rem;
+        font-weight: 600;
+        color: var(--t1);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.3;
+      }
+      .act-sub {
+        font-size: 0.65rem;
+        color: var(--t4);
+        margin-top: 1px;
+      }
+      .act-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3px;
+        flex-shrink: 0;
+      }
+      .act-zmw {
+        font-family: var(--fh);
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--zm-green);
+      }
+      .act-hot {
+        font-size: 0.56rem;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.07em;
-        margin-bottom: 4px;
+        background: rgba(245, 158, 11, 0.12);
+        color: #92400e;
+        border-radius: 4px;
+        padding: 1px 5px;
       }
-      .hv-earn-val {
-        font-family: var(--ff-mono);
+
+      /* Total bar */
+      .ec-total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--zm-green-bg);
+        border: 1px solid var(--zm-green-bd);
+        border-radius: 12px;
+        padding: 13px 15px;
+      }
+      .ect-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .ect-label {
+        font-family: var(--fh);
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--zm-green);
+      }
+      .ect-note {
+        font-size: 0.66rem;
+        color: var(--t4);
+      }
+      .ect-amt {
+        font-family: var(--fh);
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--zm-green);
+      }
+
+      /* Gold badge floating top-right */
+      .float-badge {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        border-radius: 14px;
+        padding: 10px 14px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(245, 158, 11, 0.34);
+      }
+      .fb-num {
+        font-family: var(--fh);
         font-size: 1.1rem;
         font-weight: 800;
         color: #fff;
+        line-height: 1;
+        display: block;
       }
-      .hv-earn-val.green {
-        color: #4ade80;
-      }
-      .hv-total-box {
-        background: rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 14px;
-        padding: 14px 18px;
-        text-align: center;
-        margin-top: 12px;
-      }
-      .hv-total-lbl {
-        font-size: 0.65rem;
-        color: rgba(255, 255, 255, 0.6);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 4px;
-      }
-      .hv-total-val {
-        font-family: var(--ff-mono);
-        font-size: 2rem;
-        font-weight: 800;
-        color: #fff;
-      }
-      .hv-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: rgba(240, 165, 0, 0.2);
-        border: 1px solid rgba(240, 165, 0, 0.35);
-        color: #fde68a;
-        font-size: 0.65rem;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        padding: 4px 12px;
-        border-radius: 99px;
-        margin-top: 8px;
+      .fb-lbl {
+        font-size: 0.6rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+        letter-spacing: 0.05em;
       }
 
-      /* TRUST STRIP */
+      /* ============================================================
+       TRUST STRIP
+    ============================================================ */
       .trust-strip {
-        background: #fff;
-        border-bottom: 1px solid var(--gray-2);
-        padding: 24px clamp(16px, 5vw, 64px);
+        background: var(--bg-white);
+        border-bottom: 1px solid var(--bdr);
+        padding: 26px 0;
       }
       .trust-inner {
-        max-width: 1200px;
-        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        gap: 32px;
+        gap: 28px;
         justify-content: center;
       }
       .trust-item {
@@ -693,710 +935,699 @@
         align-items: center;
         gap: 10px;
       }
-      .trust-icon {
+      .trust-ico {
         width: 40px;
         height: 40px;
-        background: var(--pu-bg);
-        border-radius: 10px;
+        background: var(--bg-tint);
+        border: 1px solid var(--bdr);
+        border-radius: 11px;
         display: grid;
         place-items: center;
-        font-size: 1.1rem;
-        color: var(--pu-2);
+        font-size: 1.05rem;
         flex-shrink: 0;
       }
-      .trust-item-text p {
+      .trust-text p {
         font-size: 0.82rem;
         font-weight: 700;
-        color: var(--text-1);
+        color: var(--t1);
         margin: 0;
       }
-      .trust-item-text span {
-        font-size: 0.72rem;
-        color: var(--text-3);
+      .trust-text span {
+        font-size: 0.7rem;
+        color: var(--t4);
       }
 
-      /* SECTION WRAPPER */
-      .section {
-        padding: 80px clamp(16px, 5vw, 64px);
+      /* ============================================================
+       COUNTRIES RIBBON  (dark navy — same as original zambia.html)
+    ============================================================ */
+      .countries-ribbon {
+        background: linear-gradient(135deg, #0e2a5c, #1a4fa8);
+        padding: 22px 0;
       }
-      .section-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .section-head {
-        text-align: center;
-        margin-bottom: 56px;
-      }
-      .section-eyebrow {
-        display: inline-flex;
+      .cr-inner {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 6px;
-        background: var(--pu-bg);
-        border: 1px solid var(--pu-5);
-        color: var(--pu-2);
-        font-size: 0.68rem;
+        gap: 18px;
+        justify-content: center;
+      }
+      .cr-label {
+        font-family: var(--fh);
+        font-size: 0.7rem;
         font-weight: 800;
+        color: rgba(255, 255, 255, 0.55);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        flex-shrink: 0;
+      }
+      .cr-flags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+      }
+      .cr-chip {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 99px;
+        padding: 5px 13px;
+        font-size: 0.73rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.88);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      /* ============================================================
+       SECTION SCAFFOLD
+    ============================================================ */
+      .section {
+        padding: clamp(68px, 9vw, 108px) 0;
+      }
+      .bg-white {
+        background: var(--bg-white);
+      }
+      .bg-tint {
+        background: var(--bg-tint);
+      }
+      .bg-soft {
+        background: linear-gradient(135deg, #fef8f0 0%, #f5f0ff 100%);
+      }
+      .bg-grad {
+        background: linear-gradient(155deg, #e8f4ff 0%, #f5f0ff 100%);
+        border-top: 1px solid var(--bdr);
+        border-bottom: 1px solid var(--bdr);
+      }
+
+      .eyebrow {
+        display: block;
+        text-align: center;
+        font-size: 0.7rem;
+        font-weight: 800;
+        color: var(--pu);
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        padding: 5px 14px;
-        border-radius: 99px;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
       }
-      .section-head h2 {
-        font-family: var(--ff-head);
-        font-size: clamp(1.6rem, 3vw, 2.4rem);
+      .sec-h2 {
+        font-family: var(--fh);
+        font-size: clamp(1.55rem, 3.1vw, 2.4rem);
         font-weight: 800;
-        color: var(--text-1);
+        letter-spacing: -0.025em;
+        text-align: center;
+        color: var(--t1);
         margin-bottom: 12px;
       }
-      .section-head p {
-        font-size: 1rem;
-        color: var(--text-3);
-        max-width: 560px;
-        margin: 0 auto;
+      .sec-p {
+        text-align: center;
+        color: var(--t3);
+        font-size: 0.93rem;
+        max-width: 500px;
+        margin-inline: auto;
+        margin-bottom: 52px;
+        line-height: 1.72;
       }
 
-      /* HOW IT WORKS */
+      /* ============================================================
+       HOW IT WORKS  —  4-step grid
+    ============================================================ */
       .steps-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        gap: 16px;
+        max-width: 1000px;
+        margin-inline: auto;
       }
       .step-card {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-md);
-        padding: 28px 22px;
-        box-shadow: var(--shadow-sm);
-        transition: all var(--t);
+        background: var(--bg-white);
+        border: 1px solid var(--bdr);
+        border-radius: var(--r-lg);
+        padding: 28px 20px 24px;
         text-align: center;
+        box-shadow: var(--sh-sm);
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
         position: relative;
       }
       .step-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--pu-5);
+        transform: translateY(-5px);
+        box-shadow: var(--sh-md);
+        border-color: var(--bdr-hi);
       }
       .step-num {
-        position: absolute;
-        top: -14px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 28px;
-        height: 28px;
-        background: var(--pu-2);
-        color: #fff;
-        font-family: var(--ff-mono);
-        font-size: 0.75rem;
-        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        display: grid;
-        place-items: center;
+        background: var(--pu-bg);
+        border: 1.5px solid var(--pu-bdr);
+        font-family: var(--fh);
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: var(--pu);
+        margin: 0 auto 14px;
       }
-      .step-icon {
-        font-size: 2rem;
-        margin-bottom: 12px;
+      .step-emoji {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
       }
-      .step-title {
-        font-family: var(--ff-head);
-        font-size: 0.9rem;
+      .step-card h3 {
+        font-family: var(--fh);
+        font-size: 0.92rem;
         font-weight: 700;
-        color: var(--text-1);
-        margin-bottom: 6px;
+        color: var(--t1);
+        margin-bottom: 7px;
       }
-      .step-desc {
-        font-size: 0.8rem;
-        color: var(--text-3);
-        line-height: 1.6;
+      .step-card p {
+        font-size: 0.81rem;
+        color: var(--t3);
+        line-height: 1.65;
       }
 
-      /* CHATTING DEEP DIVE */
-      .chat-section {
-        background: linear-gradient(160deg, #e8f4ff 0%, #f5f0ff 100%);
-      }
-      .chat-deep-grid {
+      /* ============================================================
+       CHATTING DEEP-DIVE
+    ============================================================ */
+      .chat-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 56px;
         align-items: start;
       }
-      .chat-deep-h2 {
-        font-family: var(--ff-head);
-        font-size: clamp(1.5rem, 3vw, 2.1rem);
+
+      .chat-h2 {
+        font-family: var(--fh);
+        font-size: clamp(1.4rem, 2.8vw, 1.95rem);
         font-weight: 800;
-        color: var(--text-1);
-        margin-bottom: 16px;
+        color: var(--t1);
+        margin-bottom: 14px;
         line-height: 1.2;
       }
-      .chat-deep-lead {
-        font-size: 1rem;
-        color: var(--text-2);
-        line-height: 1.7;
-        margin-bottom: 24px;
+      .chat-lead {
+        font-size: 0.95rem;
+        color: var(--t2);
+        line-height: 1.75;
+        margin-bottom: 22px;
       }
-      .chat-feature-list {
+
+      .feat-grid {
         display: flex;
         flex-direction: column;
         gap: 14px;
         margin-bottom: 28px;
       }
-      .chat-feature-item {
+      .feat-row {
         display: flex;
         align-items: flex-start;
         gap: 12px;
       }
-      .cf-icon {
+      .feat-row-ico {
         width: 36px;
         height: 36px;
-        background: linear-gradient(135deg, var(--chat-blue), #3b82f6);
+        flex-shrink: 0;
+        margin-top: 2px;
+        background: rgba(14, 111, 216, 0.08);
+        border: 1px solid rgba(14, 111, 216, 0.18);
         border-radius: 10px;
         display: grid;
         place-items: center;
-        font-size: 0.9rem;
-        color: #fff;
-        flex-shrink: 0;
-        margin-top: 2px;
+        font-size: 0.95rem;
       }
-      .cf-text strong {
+      .feat-row-text strong {
         display: block;
-        font-size: 0.88rem;
+        font-size: 0.87rem;
         font-weight: 700;
-        color: var(--text-1);
+        color: var(--t1);
         margin-bottom: 3px;
       }
-      .cf-text span {
-        font-size: 0.78rem;
-        color: var(--text-3);
-        line-height: 1.5;
+      .feat-row-text span {
+        font-size: 0.77rem;
+        color: var(--t3);
+        line-height: 1.55;
       }
 
-      /* CHAT EARNINGS VISUAL PANEL */
-      .chat-earnings-panel {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-lg);
-        padding: 32px;
-        box-shadow: var(--shadow-md);
+      /* Earnings breakdown panel */
+      .earnings-panel {
+        background: var(--bg-white);
+        border: 1px solid var(--bdr-hi);
+        border-radius: var(--r-lg);
+        padding: 28px;
+        box-shadow: var(--sh-md);
       }
-      .cep-title {
-        font-family: var(--ff-head);
-        font-size: 1rem;
+      .ep-title {
+        font-family: var(--fh);
+        font-size: 0.94rem;
         font-weight: 800;
-        color: var(--text-1);
-        margin-bottom: 20px;
+        color: var(--t1);
+        margin-bottom: 16px;
       }
-      .cep-row {
+
+      .ep-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 14px 16px;
-        background: var(--gray-1);
-        border: 1px solid var(--gray-2);
-        border-radius: 12px;
-        margin-bottom: 10px;
+        padding: 11px 14px;
+        background: var(--bg-tint);
+        border: 1px solid var(--bdr);
+        border-radius: 10px;
+        margin-bottom: 8px;
       }
-      .cep-row-label {
+      .ep-label {
         display: flex;
         align-items: center;
         gap: 10px;
       }
-      .cep-dot {
-        width: 10px;
-        height: 10px;
+      .ep-dot {
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         flex-shrink: 0;
       }
-      .cep-dot.blue {
-        background: var(--chat-blue);
+      .ep-dot.blue {
+        background: #3b82f6;
       }
-      .cep-dot.teal {
-        background: var(--chat-teal);
+      .ep-dot.teal {
+        background: #14b8a6;
       }
-      .cep-dot.orange {
+      .ep-dot.orange {
         background: var(--zm-orange);
       }
-      .cep-dot.green {
+      .ep-dot.green {
         background: var(--zm-green);
       }
-      .cep-name {
-        font-size: 0.82rem;
+      .ep-name {
+        font-size: 0.79rem;
         font-weight: 600;
-        color: var(--text-2);
+        color: var(--t2);
       }
-      .cep-amt {
-        font-family: var(--ff-mono);
-        font-size: 1rem;
+      .ep-amt {
+        font-family: var(--fh);
+        font-size: 0.94rem;
         font-weight: 800;
-        color: var(--text-1);
+        color: var(--t1);
       }
-      .cep-divider {
+
+      .ep-divider {
         border: none;
-        border-top: 1px solid var(--gray-2);
-        margin: 16px 0;
+        border-top: 1px solid var(--bdr);
+        margin: 14px 0;
       }
-      .cep-total-row {
+      .ep-total {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 16px 18px;
-        background: linear-gradient(
-          135deg,
-          rgba(26, 124, 26, 0.08),
-          rgba(26, 124, 26, 0.03)
-        );
-        border: 1px solid rgba(26, 124, 26, 0.2);
-        border-radius: 14px;
+        padding: 14px 16px;
+        background: var(--zm-green-bg);
+        border: 1px solid var(--zm-green-bd);
+        border-radius: 12px;
       }
-      .cep-total-label {
-        font-family: var(--ff-head);
-        font-size: 0.8rem;
+      .ep-total-lbl {
+        font-family: var(--fh);
+        font-size: 0.78rem;
         font-weight: 800;
         color: var(--zm-green);
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
-      .cep-total-amt {
-        font-family: var(--ff-mono);
-        font-size: 1.6rem;
+      .ep-total-amt {
+        font-family: var(--fh);
+        font-size: 1.55rem;
         font-weight: 800;
         color: var(--zm-green);
       }
-      .cep-note {
-        margin-top: 14px;
-        font-size: 0.73rem;
-        color: var(--text-3);
+      .ep-note {
+        margin-top: 12px;
+        font-size: 0.7rem;
+        color: var(--t4);
         text-align: center;
       }
 
-      /* COUNTRIES STRIP */
-      .countries-strip {
-        background: linear-gradient(135deg, #0e2a5c, #1a4fa8);
-        padding: 28px clamp(16px, 5vw, 64px);
+      /* Topic tags */
+      .topic-box {
+        margin-top: 18px;
+        background: var(--bg-tint);
+        border: 1px solid var(--bdr);
+        border-radius: 12px;
+        padding: 15px 17px;
       }
-      .cs-inner {
-        max-width: 1200px;
-        margin: 0 auto;
+      .topic-ttl {
+        font-family: var(--fh);
+        font-size: 0.79rem;
+        font-weight: 800;
+        color: var(--t1);
+        margin-bottom: 11px;
+      }
+      .topic-wrap {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        gap: 24px;
-        justify-content: center;
+        gap: 7px;
       }
-      .cs-label {
-        font-family: var(--ff-head);
-        font-size: 0.75rem;
-        font-weight: 800;
-        color: rgba(255, 255, 255, 0.6);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        flex-shrink: 0;
-      }
-      .cs-flags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-      }
-      .cs-flag-chip {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 99px;
-        padding: 6px 14px;
-        font-size: 0.75rem;
+      .topic-tag {
+        background: #e8f4ff;
+        color: #1d4ed8;
+        font-size: 0.68rem;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.85);
-        display: flex;
-        align-items: center;
-        gap: 6px;
+        padding: 4px 12px;
+        border-radius: 99px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
       }
 
-      /* ACTIVITIES */
-      .acts-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      .act-card {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        box-shadow: var(--shadow-sm);
-        transition: all var(--t);
-      }
-      .act-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
-      }
-      .act-img-wrap {
-        position: relative;
-        height: 180px;
-        overflow: hidden;
-      }
-      .act-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-      }
-      .act-card:hover .act-img-wrap img {
-        transform: scale(1.05);
-      }
-      .act-badges {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        display: flex;
-        justify-content: space-between;
-      }
-      .act-badge {
-        font-size: 0.6rem;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        padding: 3px 9px;
-        border-radius: 99px;
-        text-transform: uppercase;
-      }
-      .bdg-free {
-        background: #e8f5e9;
-        color: #1a7c1a;
-      }
-      .bdg-hot {
-        background: #fff3e0;
-        color: #e07010;
-      }
-      .bdg-new {
-        background: var(--pu-bg);
-        color: var(--pu-2);
-      }
-      .earn-badge {
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        font-size: 0.6rem;
-        font-weight: 700;
-        padding: 3px 9px;
-        border-radius: 99px;
-      }
-      .act-body {
-        padding: 16px 18px 20px;
-      }
-      .act-name {
-        font-family: var(--ff-head);
-        font-size: 0.88rem;
-        font-weight: 800;
-        color: var(--text-1);
-        margin-bottom: 4px;
-      }
-      .act-sub {
-        font-size: 0.72rem;
-        color: var(--text-3);
-        margin-bottom: 8px;
-      }
-      .act-earn {
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: var(--zm-green);
-        margin-bottom: 14px;
-      }
-      .act-btns {
-        display: flex;
-        gap: 8px;
-      }
-      .btn-act-learn {
-        flex: 1;
-        padding: 9px;
-        background: var(--gray-1);
-        border: 1px solid var(--gray-2);
-        color: var(--text-2);
-        border-radius: 10px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        transition: all var(--t);
-      }
-      .btn-act-learn:hover {
-        background: var(--pu-bg);
-        border-color: var(--pu-5);
-        color: var(--pu-2);
-      }
-      .btn-act-reg {
-        flex: 1;
-        padding: 9px;
-        background: linear-gradient(135deg, var(--pu-2), var(--pu-3));
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        transition: all var(--t);
-        box-shadow: 0 4px 12px rgba(91, 47, 207, 0.25);
-      }
-      .btn-act-reg:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 8px 20px rgba(91, 47, 207, 0.35);
-      }
-
-      /* DETAIL TASKS */
-      .detail-acts-grid {
+      /* ============================================================
+       EARN CARDS GRID  (same as index.html earn-card pattern)
+    ============================================================ */
+      .earn-cards-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
       }
-      .dact-card {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-md);
-        padding: 22px;
-        box-shadow: var(--shadow-sm);
-        transition: all var(--t);
+      .e-card {
+        background: var(--bg-white);
+        border: 1px solid var(--bdr);
+        border-radius: var(--r-lg);
+        padding: 26px 22px;
         display: flex;
-        gap: 14px;
+        flex-direction: column;
+        gap: 11px;
+        box-shadow: var(--sh-sm);
+        transition:
+          border-color 0.25s,
+          transform 0.25s,
+          box-shadow 0.25s;
       }
-      .dact-card:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--pu-5);
+      .e-card:hover {
+        border-color: var(--bdr-hi);
+        transform: translateY(-4px);
+        box-shadow: var(--sh-md);
       }
-      .dact-icon {
+      .e-head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .e-ico {
         width: 46px;
         height: 46px;
-        flex-shrink: 0;
-        background: var(--pu-bg);
         border-radius: 12px;
-        display: grid;
-        place-items: center;
-        font-size: 1.1rem;
-        color: var(--pu-2);
+        background: var(--bg-tint);
+        border: 1px solid var(--bdr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        flex-shrink: 0;
       }
-      .dact-name {
-        font-family: var(--ff-head);
-        font-size: 0.85rem;
+      .e-card h3 {
+        font-family: var(--fh);
+        font-size: 0.94rem;
         font-weight: 700;
-        color: var(--text-1);
-        margin-bottom: 4px;
+        color: var(--t1);
       }
-      .dact-desc {
-        font-size: 0.76rem;
-        color: var(--text-3);
-        line-height: 1.6;
+      .e-card p {
+        font-size: 0.82rem;
+        color: var(--t3);
+        line-height: 1.65;
+        flex: 1;
+      }
+      .e-rate {
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: var(--zm-green);
+      }
+      .e-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.77rem;
+        font-weight: 600;
+        color: var(--pu);
+        margin-top: auto;
+        transition: gap 0.18s;
+      }
+      .e-card:hover .e-link {
+        gap: 9px;
       }
 
-      /* TESTIMONIALS */
+      /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
       .testi-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 16px;
       }
       .testi-card {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-md);
-        padding: 28px;
-        box-shadow: var(--shadow-sm);
-        transition: all var(--t);
+        background: var(--bg-white);
+        border: 1px solid var(--bdr);
+        border-radius: var(--r-lg);
+        padding: 26px;
+        box-shadow: var(--sh-sm);
+        transition:
+          border-color 0.25s,
+          transform 0.25s,
+          box-shadow 0.25s;
       }
       .testi-card:hover {
+        border-color: var(--bdr-hi);
         transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--sh-md);
       }
-      .testi-quote {
-        font-size: 2rem;
-        color: var(--pu-5);
-        margin-bottom: 12px;
+      .testi-q {
+        font-size: 1.9rem;
+        color: #d8c9ff;
         line-height: 1;
+        margin-bottom: 12px;
       }
-      .testi-text {
-        font-size: 0.88rem;
-        color: var(--text-2);
-        line-height: 1.7;
-        margin-bottom: 18px;
+      .testi-t {
+        font-size: 0.87rem;
+        color: var(--t2);
+        line-height: 1.75;
+        margin-bottom: 16px;
         font-style: italic;
       }
-      .testi-name {
-        font-family: var(--ff-head);
-        font-size: 0.82rem;
+      .testi-n {
+        font-family: var(--fh);
+        font-size: 0.8rem;
         font-weight: 700;
-        color: var(--text-1);
+        color: var(--t1);
       }
-      .testi-stars {
+      .testi-s {
         color: var(--gold);
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-top: 4px;
       }
 
-      /* WITHDRAW */
+      /* ============================================================
+       WITHDRAWAL SECTION
+    ============================================================ */
       .withdraw-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 56px;
+        gap: 52px;
         align-items: center;
       }
-      .withdraw-h2 {
-        font-family: var(--ff-head);
-        font-size: clamp(1.5rem, 3vw, 2rem);
+      .w-h2 {
+        font-family: var(--fh);
+        font-size: clamp(1.4rem, 2.7vw, 1.9rem);
         font-weight: 800;
-        color: var(--text-1);
-        margin-bottom: 24px;
+        color: var(--t1);
+        margin-bottom: 20px;
+        line-height: 1.2;
       }
-      .withdraw-list {
+      .w-list {
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 14px;
-        margin-bottom: 24px;
+        gap: 12px;
+        margin-bottom: 20px;
       }
-      .withdraw-list li {
+      .w-list li {
         display: flex;
         align-items: flex-start;
         gap: 12px;
-        font-size: 0.9rem;
-        color: var(--text-2);
+        font-size: 0.88rem;
+        color: var(--t2);
       }
-      .wl-icon {
-        width: 24px;
-        height: 24px;
-        background: #e8f5e9;
+      .w-ico {
+        width: 22px;
+        height: 22px;
         border-radius: 50%;
+        background: var(--zm-green-bg);
         display: grid;
         place-items: center;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: var(--zm-green);
         flex-shrink: 0;
         margin-top: 2px;
       }
-      .withdraw-note {
-        background: linear-gradient(
-          135deg,
-          rgba(26, 124, 26, 0.07),
-          rgba(26, 124, 26, 0.03)
-        );
-        border: 1px solid rgba(26, 124, 26, 0.2);
-        border-radius: var(--radius-sm);
-        padding: 16px 20px;
-        font-size: 0.83rem;
-        color: var(--text-2);
+      .w-tip {
+        background: var(--zm-green-bg);
+        border: 1px solid var(--zm-green-bd);
+        border-radius: var(--r);
+        padding: 14px 18px;
+        font-size: 0.82rem;
+        color: var(--t2);
       }
-      .withdraw-visual {
-        background: linear-gradient(160deg, var(--gray-1), var(--pu-bg));
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-lg);
-        padding: 40px;
-        box-shadow: var(--shadow-md);
-        text-align: center;
+      /* Payout card */
+      .payout-card {
+        background: var(--bg-white);
+        border: 1px solid var(--bdr);
+        border-radius: var(--r-lg);
+        padding: 32px;
+        box-shadow: var(--sh-md);
       }
-      .wv-title {
-        font-family: var(--ff-head);
-        font-size: 1rem;
+      .pc-title {
+        font-family: var(--fh);
+        font-size: 0.94rem;
         font-weight: 800;
-        color: var(--text-1);
-        margin-bottom: 24px;
+        color: var(--t1);
+        margin-bottom: 20px;
       }
-      .wv-method {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-sm);
-        padding: 16px 20px;
+      .pc-method {
+        background: var(--bg-tint);
+        border: 1px solid var(--bdr);
+        border-radius: 12px;
+        padding: 14px 18px;
         margin-bottom: 12px;
         display: flex;
         align-items: center;
         gap: 14px;
-        box-shadow: var(--shadow-sm);
-        text-align: left;
+        box-shadow: var(--sh-sm);
       }
-      .wv-method-icon {
-        font-size: 1.8rem;
+      .pc-method-ico {
+        font-size: 1.9rem;
+        flex-shrink: 0;
       }
-      .wv-method-name {
-        font-family: var(--ff-head);
-        font-size: 0.85rem;
+      .pc-method-name {
+        font-family: var(--fh);
+        font-size: 0.86rem;
         font-weight: 700;
-        color: var(--text-1);
+        color: var(--t1);
       }
-      .wv-method-sub {
+      .pc-method-sub {
         font-size: 0.72rem;
-        color: var(--text-3);
+        color: var(--t4);
       }
-      .wv-method-badge {
+      .pc-badge {
         margin-left: auto;
-        background: #e8f5e9;
+        background: var(--zm-green-bg);
         color: var(--zm-green);
-        font-size: 0.65rem;
+        border: 1px solid var(--zm-green-bd);
+        font-size: 0.63rem;
         font-weight: 800;
         padding: 3px 10px;
         border-radius: 99px;
         text-transform: uppercase;
       }
-      .wv-min {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        font-size: 0.8rem;
-        color: var(--text-3);
+      .pc-min {
+        margin-top: 18px;
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--t3);
         font-weight: 600;
       }
-      .wv-min strong {
+      .pc-min strong {
         color: var(--zm-green);
-        font-family: var(--ff-mono);
+        font-family: var(--fh);
       }
 
-      /* ALERT BANNER */
-      .alert-banner {
+      /* ============================================================
+       PAYOUT RIBBON  (dark navy — same palette as countries)
+    ============================================================ */
+      .payout-ribbon {
+        background: linear-gradient(135deg, #0e2a5c, #1a4fa8);
+        padding: 46px 0;
+      }
+      .pr-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+      .pr-copy h2 {
+        font-family: var(--fh);
+        font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 4px;
+      }
+      .pr-copy p {
+        font-size: 0.87rem;
+        color: rgba(255, 255, 255, 0.68);
+      }
+      .pr-methods {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        flex-wrap: wrap;
+      }
+      .pr-chip {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 99px;
+        padding: 7px 16px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      /* ============================================================
+       ALERT BANNER
+    ============================================================ */
+      .alert-bar {
         background: linear-gradient(135deg, #fff8e1, #fff3cd);
-        border: 1px solid #ffe082;
-        padding: 20px clamp(16px, 5vw, 64px);
+        border-top: 1px solid #ffe082;
+        border-bottom: 1px solid #ffe082;
+        padding: 22px 0;
       }
       .ab-inner {
-        max-width: 1200px;
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
         flex-wrap: wrap;
       }
-      .ab-icon {
-        font-size: 1.6rem;
-        flex-shrink: 0;
-      }
       .ab-text strong {
-        font-family: var(--ff-head);
-        font-size: 0.95rem;
+        font-family: var(--fh);
+        font-size: 0.94rem;
         font-weight: 800;
-        color: var(--text-1);
+        color: var(--t1);
         display: block;
         margin-bottom: 2px;
       }
       .ab-text span {
         font-size: 0.82rem;
-        color: var(--text-2);
+        color: var(--t2);
       }
 
-      /* FAQ */
+      /* ============================================================
+       FAQ
+    ============================================================ */
       .faq-list {
         max-width: 720px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
       }
       .faq-item {
-        background: #fff;
-        border: 1px solid var(--gray-2);
-        border-radius: var(--radius-md);
+        background: var(--bg-white);
+        border: 1px solid var(--bdr);
+        border-radius: var(--r-lg);
         overflow: hidden;
-        box-shadow: var(--shadow-sm);
-        transition: all var(--t);
+        box-shadow: var(--sh-sm);
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
       }
       .faq-item.open {
-        border-color: var(--pu-5);
+        border-color: var(--bdr-hi);
+        box-shadow: var(--sh-md);
       }
       .faq-btn {
         width: 100%;
@@ -1408,34 +1639,36 @@
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        font-family: var(--ff-head);
-        font-size: 0.88rem;
+        font-family: var(--fh);
+        font-size: 0.87rem;
         font-weight: 700;
-        color: var(--text-1);
+        color: var(--t1);
         text-align: left;
-        transition: all var(--t);
+        transition: color 0.2s;
       }
       .faq-btn:hover {
-        color: var(--pu-2);
+        color: var(--pu);
       }
-      .faq-chevron {
+      .faq-arrow {
         width: 24px;
         height: 24px;
-        background: var(--gray-1);
+        background: var(--bg-tint);
         border-radius: 50%;
         display: grid;
         place-items: center;
         font-size: 0.65rem;
-        color: var(--text-3);
+        color: var(--t4);
         flex-shrink: 0;
-        transition: transform var(--t);
+        transition:
+          transform 0.25s,
+          background 0.2s;
       }
-      .faq-item.open .faq-chevron {
+      .faq-item.open .faq-arrow {
         transform: rotate(180deg);
         background: var(--pu-bg);
-        color: var(--pu-2);
+        color: var(--pu);
       }
-      .faq-answer {
+      .faq-body {
         padding: 0 22px;
         max-height: 0;
         overflow: hidden;
@@ -1443,20 +1676,22 @@
           max-height 0.35s ease,
           padding 0.35s ease;
       }
-      .faq-item.open .faq-answer {
-        max-height: 300px;
+      .faq-item.open .faq-body {
+        max-height: 320px;
         padding-bottom: 20px;
       }
-      .faq-answer p {
-        font-size: 0.85rem;
-        color: var(--text-2);
-        line-height: 1.7;
+      .faq-body p {
+        font-size: 0.84rem;
+        color: var(--t2);
+        line-height: 1.75;
       }
 
-      /* FINAL CTA */
+      /* ============================================================
+       FINAL CTA  (deep purple — same as index.html hero left gradient)
+    ============================================================ */
       .final-cta {
-        background: linear-gradient(160deg, var(--pu-1), var(--pu-2));
-        padding: 80px clamp(16px, 5vw, 64px);
+        background: linear-gradient(155deg, var(--pu) 0%, var(--pu-dark) 100%);
+        padding: clamp(80px, 10vw, 120px) 0;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -1468,232 +1703,224 @@
         background-image:
           linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
           linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-        background-size: 32px 32px;
+        background-size: 40px 40px;
         pointer-events: none;
       }
+      .fc-inner {
+        position: relative;
+        z-index: 1;
+      }
       .final-cta h2 {
-        font-family: var(--ff-head);
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-family: var(--fh);
+        font-size: clamp(1.8rem, 3.8vw, 2.7rem);
         font-weight: 800;
         color: #fff;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        letter-spacing: -0.03em;
       }
       .final-cta p {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.97rem;
+        color: rgba(255, 255, 255, 0.78);
         margin-bottom: 32px;
+        max-width: 520px;
+        margin-inline: auto;
+        line-height: 1.72;
       }
-      .final-cta-btns {
+      .fc-btns {
         display: flex;
         gap: 14px;
         justify-content: center;
         flex-wrap: wrap;
       }
       .btn-final {
-        background: linear-gradient(90deg, var(--zm-green), #22a322);
+        background: linear-gradient(90deg, var(--zm-green), var(--zm-green-dk));
         color: #fff;
         padding: 16px 36px;
         border-radius: 99px;
         border: none;
-        font-family: var(--ff-head);
-        font-size: 1rem;
+        font-family: var(--fh);
+        font-size: 0.97rem;
         font-weight: 800;
         cursor: pointer;
-        text-decoration: none;
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        box-shadow: 0 8px 28px rgba(26, 124, 26, 0.45);
-        transition: all var(--t);
+        box-shadow: 0 8px 28px rgba(22, 163, 74, 0.42);
+        transition: all 0.2s;
       }
       .btn-final:hover {
         transform: translateY(-3px);
-        box-shadow: 0 16px 40px rgba(26, 124, 26, 0.55);
+        box-shadow: 0 16px 40px rgba(22, 163, 74, 0.55);
       }
-      .final-cta-note {
-        margin-top: 20px;
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.55);
+      .fc-note {
+        margin-top: 18px;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
       }
 
-      /* FOOTER */
+      /* ============================================================
+       PAGE NAVIGATION
+    ============================================================ */
+      .page-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 28px 0;
+        border-top: 1px solid var(--bdr);
+        border-bottom: 1px solid var(--bdr);
+      }
+      .pnav-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 22px;
+        background: var(--bg-white);
+        border: 1px solid var(--bdr);
+        border-radius: var(--r);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--t2);
+        box-shadow: var(--sh-sm);
+        transition: all 0.2s;
+      }
+      .pnav-link:hover {
+        background: var(--bg-tint);
+        color: var(--pu);
+        border-color: var(--bdr-hi);
+        transform: translateY(-2px);
+        box-shadow: var(--sh-md);
+      }
+
+      /* ============================================================
+       FOOTER  —  same dark bg as index.html footer (#0e0820)
+    ============================================================ */
       footer {
         background: #0e0820;
         border-top: 1px solid rgba(255, 255, 255, 0.07);
-        padding: 56px clamp(16px, 5vw, 64px) 28px;
+        padding: clamp(40px, 5vw, 56px) 0 clamp(26px, 4vw, 36px);
       }
-      .footer-grid {
+      .foot-grid {
         display: grid;
         grid-template-columns: 1.6fr 1fr 1fr;
         gap: 40px;
         margin-bottom: 40px;
-        max-width: 1200px;
-        margin-inline: auto;
       }
-      .footer-brand-mark {
-        width: 32px;
-        height: 32px;
-        background: linear-gradient(135deg, var(--pu-2), var(--pu-4));
-        clip-path: polygon(
-          50% 0%,
-          61% 35%,
-          98% 35%,
-          68% 57%,
-          79% 91%,
-          50% 70%,
-          21% 91%,
-          32% 57%,
-          2% 35%,
-          39% 35%
-        );
-        flex-shrink: 0;
-      }
-      .footer-brand-row {
+      .foot-brand-row {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
-      .footer-brand-name {
-        font-family: var(--ff-head);
-        font-size: 0.85rem;
+      /* Same logo img as index.html */
+      .foot-logo-img {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        object-fit: contain;
+      }
+      .foot-brand-name {
+        font-family: var(--fh);
+        font-size: 0.84rem;
         font-weight: 800;
         letter-spacing: 0.1em;
         color: #fff;
       }
-      .footer-desc {
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.5);
-        line-height: 1.7;
-        margin-bottom: 16px;
+      .foot-desc {
+        font-size: 0.74rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.75;
+        margin-bottom: 14px;
         max-width: 280px;
       }
-      .footer-contact-item {
+      .foot-contact {
         display: flex;
         align-items: center;
         gap: 8px;
-        font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.55);
-        margin-bottom: 8px;
+        font-size: 0.73rem;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 7px;
       }
-      .footer-contact-item a {
-        color: rgba(255, 255, 255, 0.55);
-        text-decoration: none;
-        transition: color var(--t);
+      .foot-contact a {
+        color: rgba(255, 255, 255, 0.45);
+        transition: color 0.2s;
       }
-      .footer-contact-item a:hover {
-        color: var(--pu-4);
+      .foot-contact a:hover {
+        color: var(--pu-light);
       }
-      .footer-social {
+      .foot-social {
         display: flex;
         gap: 8px;
-        margin-top: 16px;
+        margin-top: 14px;
       }
-      .footer-soc-btn {
+      .foot-soc {
         width: 34px;
         height: 34px;
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 9px;
         display: grid;
         place-items: center;
         font-size: 0.85rem;
-        text-decoration: none;
-        transition: all var(--t);
+        transition: all 0.2s;
         cursor: pointer;
       }
-      .footer-soc-btn:hover {
-        background: rgba(255, 255, 255, 0.13);
-        border-color: var(--pu-4);
+      .foot-soc:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: var(--pu-light);
       }
-      .footer-col-title {
-        font-size: 0.62rem;
+      .foot-col-ttl {
+        font-size: 0.61rem;
         font-weight: 800;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.35);
+        color: rgba(255, 255, 255, 0.32);
         margin-bottom: 14px;
       }
-      .footer-links {
+      .foot-links {
         display: flex;
         flex-direction: column;
         gap: 9px;
       }
-      .footer-links a {
-        font-size: 0.78rem;
-        color: rgba(255, 255, 255, 0.55);
-        text-decoration: none;
-        transition: color var(--t);
+      .foot-links a {
+        font-size: 0.77rem;
+        color: rgba(255, 255, 255, 0.45);
+        transition: color 0.2s;
       }
-      .footer-links a:hover {
-        color: var(--pu-4);
+      .foot-links a:hover {
+        color: var(--pu-light);
       }
-      .footer-bottom {
-        max-width: 1200px;
-        margin: 0 auto;
+      .foot-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.07);
-        padding-top: 20px;
+        padding-top: 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 12px;
       }
-      .footer-copy {
-        font-size: 0.65rem;
-        color: rgba(255, 255, 255, 0.3);
+      .foot-copy {
+        font-size: 0.63rem;
+        color: rgba(255, 255, 255, 0.26);
       }
-      .footer-copy a {
-        color: rgba(255, 255, 255, 0.3);
-        text-decoration: none;
+      .foot-copy a {
+        color: rgba(255, 255, 255, 0.26);
       }
-      .footer-note {
+      .foot-badge {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
         border-radius: 8px;
         padding: 4px 12px;
-        font-size: 0.62rem;
-        color: rgba(255, 255, 255, 0.35);
+        font-size: 0.61rem;
+        color: rgba(255, 255, 255, 0.26);
       }
 
-      /* NAV BETWEEN SECTIONS */
-      .about-navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 50px 0;
-        padding: 20px 0;
-        border-top: 1px solid var(--gray-2);
-        border-bottom: 1px solid var(--gray-2);
-      }
-      .nav-about {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 24px;
-        background: #fff;
-        color: var(--text-1);
-        border-radius: var(--radius-sm);
-        font-weight: 600;
-        font-size: 0.875rem;
-        transition: all 0.22s;
-        border: 1px solid var(--gray-2);
-        box-shadow: var(--shadow-sm);
-        text-decoration: none;
-      }
-      .nav-about:hover {
-        background: var(--pu-bg);
-        color: var(--pu-2);
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--pu-5);
-      }
-
-      /* FLOATING WA */
-      .float-wa-wrap {
+      /* ============================================================
+       FLOATING WHATSAPP
+    ============================================================ */
+      .wa-wrap {
         position: fixed;
         bottom: 24px;
         right: 24px;
@@ -1703,7 +1930,7 @@
         align-items: flex-end;
         gap: 6px;
       }
-      .float-wa {
+      .wa-btn {
         width: 52px;
         height: 52px;
         background: #25d366;
@@ -1712,17 +1939,36 @@
         place-items: center;
         font-size: 1.4rem;
         color: #fff;
-        text-decoration: none;
         box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         animation:
           floatY 3s ease-in-out infinite,
           waPulse 2.8s infinite;
-        transition: all var(--t);
+        transition: all 0.2s;
       }
-      .float-wa:hover {
+      .wa-btn:hover {
         background: #1da851;
         animation: none;
         transform: scale(1.1);
+      }
+      .wa-label {
+        background: rgba(0, 0, 0, 0.82);
+        color: #fff;
+        font-size: 0.61rem;
+        font-weight: 700;
+        font-family: var(--fh);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 6px;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(8px);
+        pointer-events: none;
+        transition: all 0.2s;
+      }
+      .wa-wrap:hover .wa-label {
+        opacity: 1;
+        transform: translateX(0);
       }
       @keyframes floatY {
         0%,
@@ -1737,7 +1983,7 @@
         0% {
           box-shadow:
             0 6px 20px rgba(37, 211, 102, 0.4),
-            0 0 0 0 rgba(37, 211, 102, 0.3);
+            0 0 0 0 rgba(37, 211, 102, 0.28);
         }
         70% {
           box-shadow:
@@ -1750,44 +1996,26 @@
             0 0 0 0 transparent;
         }
       }
-      .float-wa-label {
-        background: rgba(0, 0, 0, 0.85);
-        color: #fff;
-        font-size: 0.62rem;
-        font-weight: 700;
-        font-family: var(--ff-head);
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        padding: 4px 10px;
-        border-radius: 6px;
-        white-space: nowrap;
-        opacity: 0;
-        transform: translateX(8px);
-        pointer-events: none;
-        transition: all var(--t);
-      }
-      .float-wa-wrap:hover .float-wa-label {
-        opacity: 1;
-        transform: translateX(0);
-      }
 
-      /* OFFERWALL MODAL */
-      #offerwallOv {
+      /* ============================================================
+       REGISTRATION MODAL
+    ============================================================ */
+      #reg-overlay {
         position: fixed;
         inset: 0;
         z-index: 10020;
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(20px);
+        background: rgba(8, 5, 26, 0.82);
+        backdrop-filter: blur(18px);
         display: none;
         align-items: center;
         justify-content: center;
         padding: 16px;
       }
-      #offerwallOv.on {
+      #reg-overlay.open {
         display: flex;
-        animation: owFade 0.2s ease;
+        animation: fadeIn 0.2s ease;
       }
-      @keyframes owFade {
+      @keyframes fadeIn {
         from {
           opacity: 0;
         }
@@ -1795,17 +2023,17 @@
           opacity: 1;
         }
       }
-      .ow-modal {
-        background: #0e0820;
-        border: 1px solid rgba(124, 77, 255, 0.25);
-        border-radius: 28px;
+      .reg-modal {
+        background: #0f0a22;
+        border: 1px solid rgba(124, 77, 255, 0.28);
+        border-radius: var(--r-xl);
         width: 100%;
         max-width: 460px;
         overflow: hidden;
         box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
-        animation: owPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
-      @keyframes owPop {
+      @keyframes popIn {
         from {
           transform: scale(0.88) translateY(24px);
           opacity: 0;
@@ -1815,18 +2043,13 @@
           opacity: 1;
         }
       }
-      .ow-header {
-        background: linear-gradient(
-          145deg,
-          var(--pu-1),
-          var(--pu-2),
-          var(--pu-3)
-        );
+      .rm-head {
+        background: linear-gradient(145deg, #3d1d96, #5b2fcf, #7c4dff);
         padding: 32px 28px 28px;
         position: relative;
         overflow: hidden;
       }
-      .ow-grid-bg {
+      .rm-grid-bg {
         position: absolute;
         inset: 0;
         background-image:
@@ -1835,7 +2058,7 @@
         background-size: 24px 24px;
         pointer-events: none;
       }
-      .ow-orb {
+      .rm-orb {
         position: absolute;
         right: -50px;
         top: -50px;
@@ -1844,13 +2067,13 @@
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.14),
           transparent 70%
         );
         filter: blur(8px);
         pointer-events: none;
       }
-      .ow-close {
+      .rm-close {
         position: absolute;
         top: 14px;
         right: 14px;
@@ -1865,31 +2088,30 @@
         cursor: pointer;
         display: grid;
         place-items: center;
-        transition: all var(--t);
+        transition: all 0.2s;
         font-family: inherit;
-        backdrop-filter: blur(4px);
       }
-      .ow-close:hover {
-        background: #e53e3e;
+      .rm-close:hover {
+        background: #dc2626;
         color: #fff;
       }
-      .ow-eyebrow {
+      .rm-eyebrow {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        background: rgba(255, 255, 255, 0.13);
+        background: rgba(255, 255, 255, 0.12);
         border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 99px;
         padding: 4px 14px;
-        font-size: 0.62rem;
+        font-size: 0.61rem;
         font-weight: 800;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.9);
         margin-bottom: 12px;
       }
-      .ow-title {
-        font-family: var(--ff-head);
+      .rm-title {
+        font-family: var(--fh);
         font-size: 1.7rem;
         font-weight: 800;
         color: #fff;
@@ -1898,53 +2120,52 @@
         position: relative;
         z-index: 2;
       }
-      .ow-sub {
+      .rm-sub {
         font-size: 0.83rem;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.78);
         position: relative;
         z-index: 2;
         line-height: 1.5;
       }
-      .ow-stats {
+      .rm-stats {
         display: flex;
         gap: 10px;
         margin-top: 18px;
         position: relative;
         z-index: 2;
       }
-      .ow-stat {
+      .rm-stat {
         background: rgba(0, 0, 0, 0.28);
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 12px;
         padding: 10px 12px;
         text-align: center;
         flex: 1;
-        backdrop-filter: blur(8px);
       }
-      .ow-stat-val {
-        font-family: var(--ff-mono);
-        font-size: 0.95rem;
+      .rm-stat-val {
+        font-family: var(--fh);
+        font-size: 0.9rem;
         font-weight: 800;
         color: #fff;
       }
-      .ow-stat-lbl {
+      .rm-stat-lbl {
         font-size: 0.55rem;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.55);
         font-weight: 700;
         letter-spacing: 0.07em;
         text-transform: uppercase;
         margin-top: 3px;
       }
-      .ow-body {
+      .rm-body {
         padding: 24px 28px 28px;
       }
-      .ow-fee {
+      .rm-fee {
         background: linear-gradient(
           135deg,
           rgba(109, 40, 217, 0.18),
-          rgba(26, 124, 26, 0.07)
+          rgba(22, 163, 74, 0.07)
         );
-        border: 1px solid rgba(124, 77, 255, 0.3);
+        border: 1px solid rgba(124, 77, 255, 0.28);
         border-radius: 16px;
         padding: 18px 20px;
         margin-bottom: 20px;
@@ -1952,51 +2173,51 @@
         align-items: center;
         gap: 14px;
       }
-      .ow-fee-icon {
+      .rm-fee-icon {
         font-size: 2rem;
         flex-shrink: 0;
       }
-      .ow-fee-label {
-        font-size: 0.68rem;
+      .rm-fee-lbl {
+        font-size: 0.67rem;
         font-weight: 700;
-        color: rgba(200, 180, 255, 0.8);
+        color: rgba(196, 181, 247, 0.85);
         text-transform: uppercase;
         letter-spacing: 0.06em;
         margin-bottom: 2px;
       }
-      .ow-fee-val {
-        font-family: var(--ff-mono);
+      .rm-fee-val {
+        font-family: var(--fh);
         font-size: 1.75rem;
         font-weight: 800;
         color: #c4b5fd;
         line-height: 1;
       }
-      .ow-fee-sub {
-        font-size: 0.65rem;
+      .rm-fee-sub {
+        font-size: 0.64rem;
         color: #a5b4fc;
         margin-top: 4px;
       }
-      .ow-cta {
+      .rm-cta {
         display: flex;
         width: 100%;
         padding: 17px 12px;
-        background: linear-gradient(90deg, var(--zm-green), #22a322);
+        background: linear-gradient(90deg, var(--zm-green), var(--zm-green-dk));
         color: #fff;
         border: none;
         border-radius: 99px;
-        font-family: var(--ff-head);
+        font-family: var(--fh);
         font-size: 1rem;
         font-weight: 800;
         cursor: pointer;
-        transition: all var(--t);
-        box-shadow: 0 10px 28px rgba(26, 124, 26, 0.4);
+        transition: all 0.2s;
+        box-shadow: 0 10px 28px rgba(22, 163, 74, 0.42);
         align-items: center;
         justify-content: center;
         gap: 10px;
         overflow: hidden;
         position: relative;
       }
-      .ow-cta::before {
+      .rm-cta::before {
         content: "";
         position: absolute;
         top: 0;
@@ -2006,209 +2227,239 @@
         background: linear-gradient(
           90deg,
           transparent,
-          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.18),
           transparent
         );
         transition: left 0.5s ease;
       }
-      .ow-cta:hover::before {
+      .rm-cta:hover::before {
         left: 100%;
       }
-      .ow-cta:hover {
+      .rm-cta:hover {
         transform: translateY(-2px);
-        box-shadow: 0 16px 36px rgba(26, 124, 26, 0.55);
+        box-shadow: 0 16px 36px rgba(22, 163, 74, 0.55);
       }
-      .ow-trust {
+      .rm-trust {
         display: flex;
         justify-content: center;
         gap: 14px;
         margin-top: 14px;
         flex-wrap: wrap;
       }
-      .ow-trust-item {
+      .rm-trust span {
         display: flex;
         align-items: center;
         gap: 5px;
-        font-size: 0.63rem;
+        font-size: 0.62rem;
         color: #6b7280;
         font-weight: 600;
       }
 
-      /* ZAMBIA FLAG STRIP */
-      .zm-flag-strip {
-        height: 5px;
+      /* Mobile sticky CTA */
+      .mob-sticky {
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        width: calc(100% - 24px);
+        max-width: 370px;
+        display: none;
+      }
+      .mob-sticky a {
+        display: block;
         background: linear-gradient(
-          90deg,
-          var(--zm-green) 33%,
-          var(--zm-red) 33% 66%,
-          var(--zm-orange) 66%
+          120deg,
+          var(--zm-green),
+          var(--zm-green-dk)
         );
+        color: #fff;
+        text-align: center;
+        padding: 15px 20px;
+        border-radius: 99px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        box-shadow: 0 12px 30px -8px rgba(22, 163, 74, 0.58);
+        transition: transform 0.2s;
+      }
+      .mob-sticky a:hover {
+        transform: scale(1.02);
       }
 
-      /* BG VARIANTS */
-      .bg-light-pu {
-        background: var(--pu-bg);
-      }
-      .bg-soft {
-        background: linear-gradient(135deg, #fef8f0 0%, #f5f0ff 100%);
-      }
-      .bg-white {
-        background: #fff;
-      }
-
-      /* ANIMATIONS */
+      /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
       .reveal {
         opacity: 0;
-        transform: translateY(28px);
+        transform: translateY(20px);
         transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
+          opacity 0.55s ease,
+          transform 0.55s ease;
       }
-      .reveal.visible {
+      .reveal.on {
         opacity: 1;
         transform: translateY(0);
       }
-      .reveal-left {
-        opacity: 0;
-        transform: translateX(-28px);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
-      }
-      .reveal-left.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      .reveal-right {
-        opacity: 0;
-        transform: translateX(28px);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
-      }
-      .reveal-right.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
 
-      /* RESPONSIVE */
-      @media (max-width: 900px) {
+      /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+      @media (max-width: 960px) {
         .hero-inner {
           grid-template-columns: 1fr;
-          gap: 40px;
+          text-align: center;
+          justify-items: center;
         }
-        .hero-visual {
-          order: -1;
+        .hero-left {
+          max-width: 600px;
         }
-        .steps-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .feat-list {
+          align-items: center;
         }
-        .acts-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .cta-row {
+          justify-content: center;
         }
-        .detail-acts-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .hero-stats {
+          justify-content: center;
         }
-        .testi-grid {
+        .hero-desc {
+          margin-inline: auto;
+        }
+        .hero-right {
+          max-width: 480px;
+          width: 100%;
+        }
+        .float-badge {
+          top: -12px;
+          right: 8px;
+        }
+        .chat-grid {
           grid-template-columns: 1fr;
+          gap: 32px;
         }
         .withdraw-grid {
           grid-template-columns: 1fr;
           gap: 32px;
         }
-        .chat-deep-grid {
+        .testi-grid {
           grid-template-columns: 1fr;
-          gap: 32px;
         }
-        .footer-grid {
+        .foot-grid {
           grid-template-columns: 1fr 1fr;
         }
-      }
-      @media (max-width: 600px) {
-        .nav-links {
-          display: none;
+        .steps-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
-        .nav-hamburger {
-          display: flex;
+      }
+      @media (max-width: 680px) {
+        .earn-cards-grid {
+          grid-template-columns: 1fr;
         }
         .steps-grid {
           grid-template-columns: 1fr;
         }
-        .acts-grid {
+        .foot-grid {
           grid-template-columns: 1fr;
         }
-        .detail-acts-grid {
-          grid-template-columns: 1fr;
+        .nav-links li:not(:last-child) {
+          display: none;
         }
-        .footer-grid {
-          grid-template-columns: 1fr;
+        .nav-burger {
+          display: flex;
+        }
+        .mob-sticky {
+          display: block;
+        }
+        .hero {
+          padding-bottom: 100px;
+        }
+        footer {
+          padding-bottom: 90px;
+        }
+        .pr-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero-stats {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .hs-stat {
+          padding: 8px 18px;
+          border-right: none;
+          border-bottom: 1px solid var(--bdr);
+        }
+        .hs-stat:last-child {
+          border-bottom: none;
         }
         .trust-inner {
-          gap: 20px;
+          gap: 16px;
         }
-        .hv-earn-row {
-          grid-template-columns: 1fr;
+      }
+      @media (max-width: 440px) {
+        .cta-row {
+          flex-direction: column;
+        }
+        .btn-primary,
+        .btn-ghost {
+          width: 100%;
+          justify-content: center;
+        }
+        .fc-btns {
+          flex-direction: column;
+          align-items: center;
         }
       }
     </style>
   </head>
   <body>
-    <!-- PAGE LOADER -->
-    <div id="pageLoader">
-      <div class="loader-ring"></div>
-      <div class="loader-brand">STARHELA</div>
-      <div class="loader-sub">StarHela Zambia · Chat & Earn · 🇿🇲</div>
-      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
-    </div>
-
-    <!-- OFFERWALL MODAL -->
+    <!-- ═══ REGISTRATION MODAL ═══════════════════════════════ -->
     <div
-      id="offerwallOv"
+      id="reg-overlay"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="owTitle"
+      aria-labelledby="rm-title"
     >
-      <div class="ow-modal">
-        <div class="ow-header">
-          <div class="ow-grid-bg"></div>
-          <div class="ow-orb"></div>
-          <button class="ow-close" id="owClose" aria-label="Close">✕</button>
-          <div class="ow-eyebrow">⭐ Official Registration</div>
-          <h2 class="ow-title" id="owTitle">
+      <div class="reg-modal">
+        <div class="rm-head">
+          <div class="rm-grid-bg"></div>
+          <div class="rm-orb"></div>
+          <button class="rm-close" id="rm-close" aria-label="Close">✕</button>
+          <div class="rm-eyebrow">⭐ Official Registration</div>
+          <h2 class="rm-title" id="rm-title">
             Unlock Your<br />Earning Potential
           </h2>
-          <p class="ow-sub">
+          <p class="rm-sub">
             Join 120,000+ earners across Africa. One payment. Lifetime access.
           </p>
-          <div class="ow-stats">
-            <div class="ow-stat">
-              <div class="ow-stat-val">120K+</div>
-              <div class="ow-stat-lbl">Members</div>
+          <div class="rm-stats">
+            <div class="rm-stat">
+              <div class="rm-stat-val">120K+</div>
+              <div class="rm-stat-lbl">Members</div>
             </div>
-            <div class="ow-stat">
-              <div class="ow-stat-val">$2.4M+</div>
-              <div class="ow-stat-lbl">Paid Out</div>
+            <div class="rm-stat">
+              <div class="rm-stat-val">$2.4M+</div>
+              <div class="rm-stat-lbl">Paid Out</div>
             </div>
-            <div class="ow-stat">
-              <div class="ow-stat-val">10K+</div>
-              <div class="ow-stat-lbl">Tasks</div>
+            <div class="rm-stat">
+              <div class="rm-stat-val">10K+</div>
+              <div class="rm-stat-lbl">Daily Tasks</div>
             </div>
           </div>
         </div>
-        <div class="ow-body">
-          <div class="ow-fee">
-            <div class="ow-fee-icon">🔓</div>
+        <div class="rm-body">
+          <div class="rm-fee">
+            <div class="rm-fee-icon">🔓</div>
             <div>
-              <div class="ow-fee-label">One-Time Activation — Zambia</div>
-              <div class="ow-fee-val">ZK 130</div>
-              <div class="ow-fee-sub">
+              <div class="rm-fee-lbl">One-Time Activation — Zambia 🇿🇲</div>
+              <div class="rm-fee-val">ZK 130</div>
+              <div class="rm-fee-sub">
                 No monthly fees · No hidden charges · Lifetime access
               </div>
             </div>
           </div>
           <button
-            class="ow-cta"
-            id="owProceedBtn"
+            class="rm-cta"
             onclick="
               window.open(
                 'https://starhela.com/register.php?ref=sydney',
@@ -2218,375 +2469,471 @@
           >
             🚀 Register on StarHela Now →
           </button>
-          <div class="ow-trust">
-            <div class="ow-trust-item">🔒 Secure Payment</div>
-            <div class="ow-trust-item">⚡ Instant Access</div>
-            <div class="ow-trust-item">📱 Airtel &amp; MTN</div>
-            <div class="ow-trust-item">🛡️ Legit Platform</div>
+          <div class="rm-trust">
+            <span>🔒 Secure Payment</span>
+            <span>⚡ Instant Access</span>
+            <span>📱 Airtel &amp; MTN</span>
+            <span>🛡️ Legit Platform</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- FLOATING WA -->
-    <div class="float-wa-wrap">
-      <span class="float-wa-label">Chat with Agent</span>
+    <!-- ═══ FLOATING WHATSAPP ════════════════════════════════ -->
+    <div class="wa-wrap">
+      <span class="wa-label">Chat with Agent</span>
       <a
         href="https://wa.me/254729743223"
-        class="float-wa"
+        class="wa-btn"
         target="_blank"
         rel="noopener"
         aria-label="Chat on WhatsApp"
+        >💬</a
       >
-        <i class="fab fa-whatsapp"></i>
-      </a>
     </div>
 
-    <!-- ZAMBIA FLAG STRIP -->
-    <div class="zm-flag-strip"></div>
+    <!-- ═══ ZAMBIA FLAG STRIP ════════════════════════════════ -->
+    <div class="flag-strip" role="presentation"></div>
 
-    <!-- NAVBAR -->
-    <nav class="top-nav" id="topNav">
-      <a href="/index.html" class="nav-brand">
-        <div class="nav-logo-mark"></div>
-        <span class="nav-brand-name">STARHELA ZAMBIA</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#chatting">Chat &amp; Earn</a></li>
-        <li><a href="#other-tasks">More Tasks</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li>
-          <a
-            href="https://starhela.com/register.php?ref=sydney"
-            target="_blank"
-            class="btn-nav"
-            >Join Now 🇿🇲</a
-          >
-        </li>
-      </ul>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- ═══ NAV ══════════════════════════════════════════════ -->
+    <nav class="top-nav" id="top-nav">
+      <div class="wrap nav-inner">
+        <!-- Logo — exact same img URL as index.html -->
+        <a href="/index.html" class="nav-logo" aria-label="StarHela home">
+          <img
+            src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png"
+            alt="StarHela logo"
+            loading="eager"
+          />
+          <span class="nav-logo-name">STARHELA</span>
+          <span class="nav-country-tag">🇿🇲 Zambia</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#chatting">Chat &amp; Earn</a></li>
+          <li><a href="#tasks">More Tasks</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li>
+            <a
+              href="https://starhela.com/register.php?ref=sydney"
+              target="_blank"
+              class="btn-nav"
+              >Join Now 🇿🇲</a
+            >
+          </li>
+        </ul>
+
+        <button class="nav-burger" id="nav-burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
-    <div class="mobile-menu" id="mobileMenu">
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobile-menu">
       <a href="#how-it-works">How It Works</a>
       <a href="#chatting">Chat &amp; Earn</a>
-      <a href="#other-tasks">More Tasks</a>
+      <a href="#tasks">More Tasks</a>
       <a href="#faq">FAQ</a>
       <a
         href="https://starhela.com/register.php?ref=sydney"
         target="_blank"
-        class="btn-mobile"
+        class="mob-cta"
         >🚀 Join Now — 130 ZMW</a
       >
     </div>
 
-    <!-- ═══════════════ HERO ═══════════════ -->
+    <!-- ═══════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════ -->
     <section class="hero">
-      <div class="hero-inner">
-        <div class="reveal-left">
-          <div class="hero-badge">💬 #1 Chat-to-Earn Platform in Zambia</div>
-          <h1>
-            Earn Online in Zambia by <span class="accent-blue">Chatting</span
-            ><br />
-            with <span class="accent">Foreigners</span>
-          </h1>
-          <p class="hero-desc">
-            Get paid to have real conversations with people from around the
-            world — no experience needed. Chat in English, earn per session, and
-            withdraw straight to your Airtel or MTN wallet anytime.
-          </p>
-          <div class="hero-price">
-            <span class="lbl">One-time activation:</span>
-            <span class="amt">130 ZMW</span>
+      <div class="hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb-2" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="wrap" style="width: 100%">
+        <div class="hero-inner">
+          <!-- LEFT -->
+          <div class="hero-left">
+            <div class="hero-badge">
+              <span class="badge-pulse" aria-hidden="true"></span>
+              #1 Chat-to-Earn Platform in Zambia
+            </div>
+
+            <h1>
+              Earn Real Money by<br />
+              <span class="hi-blue">Chatting</span> with<br />
+              <span class="hi-green">Foreigners</span>
+            </h1>
+
+            <p class="hero-desc">
+              StarHela connects Zambians with people from the US, UK, Europe and
+              beyond who want to chat about African culture, life and travel.
+              You get paid for every conversation — no experience needed, just a
+              smartphone.
+            </p>
+
+            <div class="act-pill">
+              <span class="lbl">One-time activation:</span>
+              <span class="amt">130 ZMW</span>
+              <span class="lbl">· Lifetime access</span>
+            </div>
+
+            <div class="feat-list">
+              <div class="feat-item">
+                <div class="feat-icon">✓</div>
+                No experience needed — start earning the same day
+              </div>
+              <div class="feat-item">
+                <div class="feat-icon">✓</div>
+                Earn up to 1,000 ZMW/day from chatting + tasks
+              </div>
+              <div class="feat-item">
+                <div class="feat-icon">✓</div>
+                Withdraw instantly to Airtel Money or MTN Zambia
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a
+                href="https://starhela.com/register.php?ref=sydney"
+                target="_blank"
+                class="btn-primary"
+                >🚀 Start Chatting &amp; Earning</a
+              >
+              <a href="#chatting" class="btn-ghost">How It Works →</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hs-stat">
+                <span class="hs-num">5,000+</span
+                ><span class="hs-lbl">Active Zambians</span>
+              </div>
+              <div class="hs-stat">
+                <span class="hs-num">150 ZMW</span
+                ><span class="hs-lbl">Min. Withdrawal</span>
+              </div>
+              <div class="hs-stat">
+                <span class="hs-num">24/7</span
+                ><span class="hs-lbl">Airtel &amp; MTN Payout</span>
+              </div>
+            </div>
           </div>
-          <div class="hero-btns">
-            <a
-              href="https://starhela.com/register.php?ref=sydney"
-              target="_blank"
-              class="btn-primary-zm"
+
+          <!-- RIGHT — earn card -->
+          <div class="hero-right">
+            <div class="float-badge" aria-label="Earn up to 1000 ZMW per day">
+              <span class="fb-num">1,000</span>
+              <span class="fb-lbl">ZMW/DAY</span>
+            </div>
+
+            <div
+              class="earn-card"
+              role="region"
+              aria-label="Daily earnings preview"
             >
-              <i class="fas fa-rocket"></i> Start Chatting & Earning
-            </a>
-            <a href="#chatting" class="btn-secondary-zm"
-              >How Chatting Works →</a
-            >
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <i class="fas fa-users"></i> 5,000+ Active Zambians
-            </div>
-            <div class="hero-stat">
-              <i class="fas fa-mobile-alt"></i> Airtel &amp; MTN Payout
-            </div>
-            <div class="hero-stat">
-              <i class="fas fa-clock"></i> Min 150 ZMW Withdrawal
-            </div>
-          </div>
-        </div>
-        <div class="reveal-right">
-          <div class="hero-visual">
-            <div class="hv-title">
-              <div class="hv-online-dot"></div>
-              Live Chat Session — Earn as You Talk
-            </div>
-            <!-- SIMULATED CHAT THREAD -->
-            <div class="chat-thread">
-              <div class="chat-msg foreign">
-                <div class="chat-avatar"><span class="chat-flag">🇺🇸</span></div>
-                <div>
-                  <div class="chat-bubble">
-                    Hi! Can you tell me about Zambian culture and traditions? 😊
+              <div class="ec-header">
+                <span class="ec-title">💬 Live Chat Session</span>
+                <div class="live-pill">
+                  <span class="live-dot"></span>Active
+                </div>
+              </div>
+              <p class="ec-sub">You earn with every reply you send</p>
+
+              <!-- Chat bubbles -->
+              <div class="chat-thread">
+                <div class="c-msg them">
+                  <div class="c-av">🇺🇸</div>
+                  <div class="c-bubble">
+                    Hi! Can you tell me about Zambian culture? 😊
+                  </div>
+                </div>
+                <div class="c-msg you">
+                  <div class="c-av">Z</div>
+                  <div>
+                    <div class="c-bubble">
+                      Of course! Zambia has over 70 ethnic groups. The Kuomboka
+                      ceremony happens every year when the Lozi king moves his
+                      palace...
+                    </div>
+                    <div class="c-earn">💰 +5 ZMW earned</div>
+                  </div>
+                </div>
+                <div class="c-msg them">
+                  <div class="c-av">🇬🇧</div>
+                  <div class="c-bubble">
+                    Fascinating! When's the best time to visit Victoria Falls?
+                  </div>
+                </div>
+                <div class="c-msg you">
+                  <div class="c-av">Z</div>
+                  <div>
+                    <div class="c-bubble">
+                      February to May — peak flow season! The falls are most
+                      powerful then 🌊
+                    </div>
+                    <div class="c-earn">💰 +5 ZMW earned</div>
                   </div>
                 </div>
               </div>
-              <div class="chat-msg you">
-                <div class="chat-avatar">Z</div>
-                <div>
-                  <div class="chat-bubble">
-                    Of course! Zambia has over 70 ethnic groups, each with
-                    unique traditions. The most popular is the Kuomboka
-                    ceremony...
+
+              <hr class="ec-divider" />
+
+              <div class="act-list">
+                <div class="act-row">
+                  <div class="act-ico">💬</div>
+                  <div class="act-info">
+                    <div class="act-name">10 Chat Sessions × 50 ZMW</div>
+                    <div class="act-sub">Main income source</div>
                   </div>
-                  <div class="chat-earn-pill">
-                    💰 +5 ZMW earned this message
+                  <div class="act-right">
+                    <span class="act-zmw">500 ZMW</span
+                    ><span class="act-hot">Highest</span>
+                  </div>
+                </div>
+                <div class="act-row">
+                  <div class="act-ico">⏱️</div>
+                  <div class="act-info">
+                    <div class="act-name">5 Hours Active × 30 ZMW</div>
+                    <div class="act-sub">Hourly bonus</div>
+                  </div>
+                  <div class="act-right">
+                    <span class="act-zmw">150 ZMW</span>
+                  </div>
+                </div>
+                <div class="act-row">
+                  <div class="act-ico">🤝</div>
+                  <div class="act-info">
+                    <div class="act-name">Referral Bonus (50%)</div>
+                    <div class="act-sub">Friends you invite</div>
+                  </div>
+                  <div class="act-right">
+                    <span class="act-zmw">250 ZMW</span>
+                  </div>
+                </div>
+                <div class="act-row">
+                  <div class="act-ico">✅</div>
+                  <div class="act-info">
+                    <div class="act-name">Bonus Tasks</div>
+                    <div class="act-sub">Surveys, AI &amp; videos</div>
+                  </div>
+                  <div class="act-right">
+                    <span class="act-zmw">100 ZMW</span>
                   </div>
                 </div>
               </div>
-              <div class="chat-msg foreign">
-                <div class="chat-avatar"><span class="chat-flag">🇬🇧</span></div>
-                <div>
-                  <div class="chat-bubble">
-                    That's fascinating! What's the best time to visit Victoria
-                    Falls?
-                  </div>
+
+              <div class="ec-total">
+                <div class="ect-left">
+                  <span class="ect-label">Estimated Daily Total</span>
+                  <span class="ect-note">active chatting + tasks</span>
                 </div>
+                <span class="ect-amt">1,000 ZMW</span>
               </div>
-              <div class="chat-msg you">
-                <div class="chat-avatar">Z</div>
-                <div>
-                  <div class="chat-bubble">
-                    February to May is peak flow season — the falls are most
-                    powerful then! 🌊
-                  </div>
-                  <div class="chat-earn-pill">
-                    💰 +5 ZMW earned this message
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr class="hv-divider" />
-            <div class="hv-earn-row">
-              <div class="hv-earn-box">
-                <div class="hv-earn-lbl">Per Chat Session</div>
-                <div class="hv-earn-val green">50 ZMW</div>
-              </div>
-              <div class="hv-earn-box">
-                <div class="hv-earn-lbl">Per Hour Chatting</div>
-                <div class="hv-earn-val green">30 ZMW</div>
-              </div>
-            </div>
-            <div class="hv-total-box">
-              <div class="hv-total-lbl">Estimated Daily Earnings</div>
-              <div class="hv-total-val">1,000 ZMW</div>
-              <div class="hv-badge">🔥 Main Income from Chatting</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TRUST STRIP -->
+    <!-- ═══ TRUST STRIP ═══════════════════════════════════════ -->
     <div class="trust-strip">
-      <div class="trust-inner">
-        <div class="trust-item reveal">
-          <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
-          <div class="trust-item-text">
-            <p>Secure Platform</p>
-            <span>SSL Encrypted</span>
+      <div class="wrap">
+        <div class="trust-inner">
+          <div class="trust-item reveal">
+            <div class="trust-ico">🔒</div>
+            <div class="trust-text">
+              <p>Secure Platform</p>
+              <span>SSL Encrypted</span>
+            </div>
           </div>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-icon"><i class="fas fa-comments"></i></div>
-          <div class="trust-item-text">
-            <p>Real Conversations</p>
-            <span>Chat with people worldwide</span>
+          <div class="trust-item reveal">
+            <div class="trust-ico">💬</div>
+            <div class="trust-text">
+              <p>Real Conversations</p>
+              <span>People worldwide</span>
+            </div>
           </div>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-icon"><i class="fas fa-clock"></i></div>
-          <div class="trust-item-text">
-            <p>24/7 Support</p>
-            <span>WhatsApp &amp; Email</span>
+          <div class="trust-item reveal">
+            <div class="trust-ico">⚡</div>
+            <div class="trust-text">
+              <p>Instant Withdrawals</p>
+              <span>Airtel &amp; MTN Zambia</span>
+            </div>
           </div>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-icon"><i class="fas fa-money-bill-wave"></i></div>
-          <div class="trust-item-text">
-            <p>Instant Withdrawals</p>
-            <span>Airtel Money &amp; MTN Zambia</span>
+          <div class="trust-item reveal">
+            <div class="trust-ico">📱</div>
+            <div class="trust-text">
+              <p>Mobile Friendly</p>
+              <span>Any smartphone</span>
+            </div>
           </div>
-        </div>
-        <div class="trust-item reveal">
-          <div class="trust-icon"><i class="fas fa-mobile-alt"></i></div>
-          <div class="trust-item-text">
-            <p>Mobile Friendly</p>
-            <span>Works on any smartphone</span>
+          <div class="trust-item reveal">
+            <div class="trust-ico">🕐</div>
+            <div class="trust-text">
+              <p>24/7 Support</p>
+              <span>WhatsApp &amp; Email</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- HOW IT WORKS -->
+    <!-- ═══════════════════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════════════════ -->
     <section id="how-it-works" class="section bg-white">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">📋 Simple Process</div>
-          <h2>How StarHela Zambia Works</h2>
-          <p>
-            Get started in 4 easy steps and begin earning the same day you
-            activate.
-          </p>
-        </div>
+      <div class="wrap">
+        <span class="eyebrow reveal">Simple Process</span>
+        <h2 class="sec-h2 reveal">How StarHela Zambia Works</h2>
+        <p class="sec-p reveal">
+          Get started in 4 easy steps and begin earning the same day you
+          activate your account.
+        </p>
+
         <div class="steps-grid">
           <div class="step-card reveal">
-            <div class="step-num">1</div>
-            <div class="step-icon">📝</div>
-            <div class="step-title">Register Free</div>
-            <div class="step-desc">
-              Create your free account on StarHela using your name, phone, and
-              email.
-            </div>
+            <div class="step-num">01</div>
+            <div class="step-emoji">📝</div>
+            <h3>Register Free</h3>
+            <p>
+              Create your free account on StarHela using your name, Zambian
+              phone number, and email address.
+            </p>
           </div>
           <div class="step-card reveal">
-            <div class="step-num">2</div>
-            <div class="step-icon">💳</div>
-            <div class="step-title">Pay 130 ZMW Activation</div>
-            <div class="step-desc">
+            <div class="step-num">02</div>
+            <div class="step-emoji">💳</div>
+            <h3>Pay 130 ZMW Once</h3>
+            <p>
               One-time lifetime payment via Airtel Money or MTN Mobile Money. No
-              monthly fees.
-            </div>
+              monthly fees, ever.
+            </p>
           </div>
           <div class="step-card reveal">
-            <div class="step-num">3</div>
-            <div class="step-icon">💬</div>
-            <div class="step-title">Start Chatting</div>
-            <div class="step-desc">
-              Access the chatting dashboard and begin earning immediately from
-              conversations with foreigners worldwide.
-            </div>
+            <div class="step-num">03</div>
+            <div class="step-emoji">💬</div>
+            <h3>Start Chatting</h3>
+            <p>
+              Access your dashboard and begin real conversations with foreigners
+              from the US, UK, Europe and beyond.
+            </p>
           </div>
           <div class="step-card reveal">
-            <div class="step-num">4</div>
-            <div class="step-icon">💰</div>
-            <div class="step-title">Earn &amp; Withdraw</div>
-            <div class="step-desc">
-              Chat daily, complete bonus tasks, and withdraw to Airtel or MTN
-              Zambia instantly.
-            </div>
+            <div class="step-num">04</div>
+            <div class="step-emoji">💰</div>
+            <h3>Earn &amp; Withdraw</h3>
+            <p>
+              Reach 150 ZMW (usually 3–5 days) then withdraw instantly to Airtel
+              or MTN, 24/7.
+            </p>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 40px" class="reveal">
+
+        <div style="text-align: center; margin-top: 44px" class="reveal">
           <a
             href="https://starhela.com/register.php?ref=sydney"
             target="_blank"
-            class="btn-primary-zm"
+            class="btn-primary"
           >
-            <i class="fas fa-user-plus"></i> Start Earning Now 🇿🇲
+            👤 Register Free &amp; Start Earning
           </a>
         </div>
       </div>
     </section>
 
-    <!-- COUNTRIES CHATTERS STRIP -->
-    <div class="countries-strip">
-      <div class="cs-inner">
-        <div class="cs-label">You'll chat with people from</div>
-        <div class="cs-flags">
-          <div class="cs-flag-chip">🇺🇸 United States</div>
-          <div class="cs-flag-chip">🇬🇧 United Kingdom</div>
-          <div class="cs-flag-chip">🇩🇪 Germany</div>
-          <div class="cs-flag-chip">🇨🇦 Canada</div>
-          <div class="cs-flag-chip">🇦🇺 Australia</div>
-          <div class="cs-flag-chip">🇫🇷 France</div>
-          <div class="cs-flag-chip">🇳🇱 Netherlands</div>
-          <div class="cs-flag-chip">🇯🇵 Japan</div>
-          <div class="cs-flag-chip">+ many more</div>
+    <!-- ═══ COUNTRIES RIBBON ══════════════════════════════════ -->
+    <div class="countries-ribbon">
+      <div class="wrap">
+        <div class="cr-inner">
+          <div class="cr-label">You'll chat with people from</div>
+          <div class="cr-flags">
+            <div class="cr-chip">🇺🇸 United States</div>
+            <div class="cr-chip">🇬🇧 United Kingdom</div>
+            <div class="cr-chip">🇩🇪 Germany</div>
+            <div class="cr-chip">🇨🇦 Canada</div>
+            <div class="cr-chip">🇦🇺 Australia</div>
+            <div class="cr-chip">🇫🇷 France</div>
+            <div class="cr-chip">🇳🇱 Netherlands</div>
+            <div class="cr-chip">🇯🇵 Japan</div>
+            <div class="cr-chip">+ many more</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ═══════════════ CHATTING DEEP-DIVE ═══════════════ -->
-    <section id="chatting" class="section chat-section">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">💬 Main Earning Activity</div>
-          <h2>Get Paid to Chat with Foreigners</h2>
-          <p>
-            This is the heart of StarHela — real conversations, real money, from
-            your smartphone in Zambia.
-          </p>
-        </div>
-        <div class="chat-deep-grid">
-          <div class="reveal-left">
-            <h2 class="chat-deep-h2">How the Chatting Job Works</h2>
-            <p class="chat-deep-lead">
-              StarHela connects you with foreigners from the US, UK, Europe, and
-              beyond who want to chat about African culture, travel, languages,
-              life, and more. You get paid for every conversation you have — the
-              more you chat, the more you earn.
+    <!-- ═══════════════════════════════════════════════════════
+     CHATTING DEEP-DIVE
+═══════════════════════════════════════════════════════ -->
+    <section id="chatting" class="section bg-grad">
+      <div class="wrap">
+        <span class="eyebrow reveal">Main Earning Activity</span>
+        <h2 class="sec-h2 reveal">Get Paid to Chat with Foreigners</h2>
+        <p class="sec-p reveal">
+          Real conversations, real money — right from your phone anywhere in
+          Zambia.
+        </p>
+
+        <div class="chat-grid">
+          <!-- Left: Features -->
+          <div class="reveal">
+            <h2 class="chat-h2">How the Chatting Job Works</h2>
+            <p class="chat-lead">
+              StarHela matches you with foreigners from the US, UK, Europe and
+              Asia who genuinely want to learn about Zambian culture, Victoria
+              Falls, daily life, food, music and more. You share your knowledge,
+              they get a great conversation — and you get paid for every
+              session.
             </p>
-            <div class="chat-feature-list">
-              <div class="chat-feature-item">
-                <div class="cf-icon"><i class="fas fa-globe"></i></div>
-                <div class="cf-text">
-                  <strong>Chat in English</strong>
+            <div class="feat-grid">
+              <div class="feat-row">
+                <div class="feat-row-ico">🌍</div>
+                <div class="feat-row-text">
+                  <strong>Chat in English Only</strong>
                   <span
-                    >No special skills needed — just good conversational
-                    English. Topics are provided so you always know what to talk
-                    about.</span
+                    >No special skills required. Topic guides are provided so
+                    you always know what to talk about.</span
                   >
                 </div>
               </div>
-              <div class="chat-feature-item">
-                <div class="cf-icon"><i class="fas fa-coins"></i></div>
-                <div class="cf-text">
+              <div class="feat-row">
+                <div class="feat-row-ico">💰</div>
+                <div class="feat-row-text">
                   <strong>Earn Per Session &amp; Per Hour</strong>
                   <span
-                    >Earn 50 ZMW per chat session plus 30 ZMW for every hour you
-                    stay active. The longer you chat, the more you make.</span
+                    >50 ZMW per completed chat session, plus 30 ZMW for every
+                    hour you stay active.</span
                   >
                 </div>
               </div>
-              <div class="chat-feature-item">
-                <div class="cf-icon"><i class="fas fa-calendar-check"></i></div>
-                <div class="cf-text">
+              <div class="feat-row">
+                <div class="feat-row-ico">📅</div>
+                <div class="feat-row-text">
                   <strong>Work Any Time, Any Day</strong>
                   <span
-                    >Foreigners are active around the clock across different
-                    time zones. You pick your own schedule — morning, evening,
-                    or night.</span
+                    >Foreigners across many time zones are active morning,
+                    afternoon and night. You choose your hours.</span
                   >
                 </div>
               </div>
-              <div class="chat-feature-item">
-                <div class="cf-icon"><i class="fas fa-mobile-screen"></i></div>
-                <div class="cf-text">
+              <div class="feat-row">
+                <div class="feat-row-ico">📱</div>
+                <div class="feat-row-text">
                   <strong>Fully Mobile — No PC Needed</strong>
                   <span
-                    >All chatting happens right in your browser on your Android
-                    or iPhone. No downloads, no extra apps.</span
+                    >Everything runs in your smartphone browser. No app
+                    downloads, no expensive equipment.</span
                   >
                 </div>
               </div>
-              <div class="chat-feature-item">
-                <div class="cf-icon"><i class="fas fa-infinity"></i></div>
-                <div class="cf-text">
-                  <strong>Unlimited Chat Sessions Daily</strong>
+              <div class="feat-row">
+                <div class="feat-row-ico">♾️</div>
+                <div class="feat-row-text">
+                  <strong>Unlimited Daily Sessions</strong>
                   <span
-                    >There's no cap on how much you can earn. The platform has
-                    50+ active foreigners waiting to chat every day.</span
+                    >No earnings cap. 50+ active foreign users are ready to chat
+                    with you every single day.</span
                   >
                 </div>
               </div>
@@ -2594,165 +2941,70 @@
             <a
               href="https://starhela.com/register.php?ref=sydney"
               target="_blank"
-              class="btn-primary-zm"
+              class="btn-primary"
+              >💬 Start Chatting Today</a
             >
-              <i class="fas fa-comments"></i> Start Chatting Today
-            </a>
           </div>
 
-          <div class="reveal-right">
-            <div class="chat-earnings-panel">
-              <div class="cep-title">💰 Daily Chatting Earnings Breakdown</div>
+          <!-- Right: Earnings panel -->
+          <div class="reveal">
+            <div class="earnings-panel">
+              <div class="ep-title">💰 Daily Chatting Earnings Breakdown</div>
 
-              <div class="cep-row">
-                <div class="cep-row-label">
-                  <div class="cep-dot blue"></div>
-                  <span class="cep-name">10 Chat Sessions × 50 ZMW</span>
+              <div class="ep-row">
+                <div class="ep-label">
+                  <div class="ep-dot blue"></div>
+                  <span class="ep-name">10 Chat Sessions × 50 ZMW</span>
                 </div>
-                <div class="cep-amt">500 ZMW</div>
+                <span class="ep-amt">500 ZMW</span>
               </div>
-              <div class="cep-row">
-                <div class="cep-row-label">
-                  <div class="cep-dot teal"></div>
-                  <span class="cep-name">5 Hours Active × 30 ZMW</span>
+              <div class="ep-row">
+                <div class="ep-label">
+                  <div class="ep-dot teal"></div>
+                  <span class="ep-name">5 Hours Active × 30 ZMW</span>
                 </div>
-                <div class="cep-amt">150 ZMW</div>
+                <span class="ep-amt">150 ZMW</span>
               </div>
-              <div class="cep-row">
-                <div class="cep-row-label">
-                  <div class="cep-dot orange"></div>
-                  <span class="cep-name">Friend Invites Bonus × 50%</span>
+              <div class="ep-row">
+                <div class="ep-label">
+                  <div class="ep-dot orange"></div>
+                  <span class="ep-name">Referral Invite Bonus (50%)</span>
                 </div>
-                <div class="cep-amt">250 ZMW</div>
+                <span class="ep-amt">250 ZMW</span>
               </div>
-              <div class="cep-row">
-                <div class="cep-row-label">
-                  <div class="cep-dot green"></div>
-                  <span class="cep-name">Bonus Activity Tasks</span>
+              <div class="ep-row">
+                <div class="ep-label">
+                  <div class="ep-dot green"></div>
+                  <span class="ep-name">Bonus Activity Tasks</span>
                 </div>
-                <div class="cep-amt">100 ZMW</div>
-              </div>
-
-              <div class="cep-divider"></div>
-
-              <div class="cep-total-row">
-                <div class="cep-total-label">Estimated Daily Total</div>
-                <div class="cep-total-amt">1,000 ZMW</div>
-              </div>
-              <div class="cep-note">
-                * Based on active chatting. Earnings vary by participation. New
-                chatters typically earn 200–400 ZMW/day in their first week.
+                <span class="ep-amt">100 ZMW</span>
               </div>
 
-              <div
-                style="
-                  margin-top: 24px;
-                  background: var(--gray-1);
-                  border: 1px solid var(--gray-2);
-                  border-radius: 14px;
-                  padding: 18px 20px;
-                "
-              >
-                <div
-                  style="
-                    font-family: var(--ff-head);
-                    font-size: 0.82rem;
-                    font-weight: 800;
-                    color: var(--text-1);
-                    margin-bottom: 12px;
-                  "
-                >
-                  🗺️ Chat Topics Available
-                </div>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px">
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >African Culture</span
-                  >
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >Travel &amp; Tourism</span
-                  >
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >Languages</span
-                  >
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >Daily Life</span
-                  >
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >Food &amp; Cuisine</span
-                  >
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >Sports</span
-                  >
-                  <span
-                    style="
-                      background: #e8f4ff;
-                      color: var(--chat-blue);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >Music</span
-                  >
-                  <span
-                    style="
-                      background: #f3e8ff;
-                      color: var(--pu-2);
-                      font-size: 0.7rem;
-                      font-weight: 700;
-                      padding: 4px 12px;
-                      border-radius: 99px;
-                    "
-                    >+ more topics</span
-                  >
+              <div class="ep-divider"></div>
+
+              <div class="ep-total">
+                <span class="ep-total-lbl">Estimated Daily Total</span>
+                <span class="ep-total-amt">1,000 ZMW</span>
+              </div>
+              <div class="ep-note">
+                * Based on active chatting. New members typically earn 200–400
+                ZMW/day in week one.
+              </div>
+
+              <div class="topic-box">
+                <div class="topic-ttl">🗺️ Chat Topics You'll Discuss</div>
+                <div class="topic-wrap">
+                  <span class="topic-tag">African Culture</span>
+                  <span class="topic-tag">Victoria Falls</span>
+                  <span class="topic-tag">Travel &amp; Tourism</span>
+                  <span class="topic-tag">Languages</span>
+                  <span class="topic-tag">Daily Life</span>
+                  <span class="topic-tag">Food &amp; Cuisine</span>
+                  <span class="topic-tag">Sports</span>
+                  <span class="topic-tag">Music</span>
+                  <span class="topic-tag">Zambian History</span>
+                  <span class="topic-tag">Wildlife</span>
+                  <span class="topic-tag">+ more</span>
                 </div>
               </div>
             </div>
@@ -2761,202 +3013,101 @@
       </div>
     </section>
 
-    <!-- ═══════════════ OTHER TASKS (SUPPLEMENTAL) ═══════════════ -->
-    <section id="other-tasks" class="section bg-white">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">➕ Boost Your Income</div>
-          <h2>Supplemental Tasks to Earn Even More</h2>
-          <p>
-            Chatting is the main earner — but when you're not chatting, these
-            bonus tasks keep the money coming in.
-          </p>
-        </div>
+    <!-- ═══════════════════════════════════════════════════════
+     MORE WAYS TO EARN
+═══════════════════════════════════════════════════════ -->
+    <section id="tasks" class="section bg-white">
+      <div class="wrap">
+        <span class="eyebrow reveal">Boost Your Income</span>
+        <h2 class="sec-h2 reveal">More Ways to Earn on StarHela</h2>
+        <p class="sec-p reveal">
+          Chatting is the main earner — when you're not chatting, these bonus
+          tasks keep money coming in.
+        </p>
 
-        <!-- MAIN TASK CARDS -->
-        <div class="acts-grid" style="margin-bottom: 40px">
-          <div class="act-card reveal">
-            <div class="act-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400&q=70&fit=crop"
-                alt="Watch YouTube videos earn online Zambia"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <div class="act-badges">
-                <span class="act-badge bdg-hot">HOT</span
-                ><span class="earn-badge">$0.80/video</span>
-              </div>
+        <div class="earn-cards-grid">
+          <div class="e-card reveal">
+            <div class="e-head">
+              <div class="e-ico">🤖</div>
+              <h3>AI Data Labeling</h3>
             </div>
-            <div class="act-body">
-              <div class="act-name">YOUTUBE VIDEOS</div>
-              <div class="act-sub">Watch &amp; Earn — Top Rated</div>
-              <div class="act-earn">Earn up to $55/day based on activity</div>
-              <div class="act-btns">
-                <a href="/earn/videos.html" class="btn-act-learn"
-                  >▶️ Learn More</a
-                >
-                <button class="btn-act-reg" onclick="openOfferwall()">
-                  🚀 Register
-                </button>
-              </div>
-            </div>
+            <p>
+              Help train AI models by labeling images, text and audio. Simple
+              tasks — zero technical background needed.
+            </p>
+            <div class="e-rate">5–20 ZMW per batch · Up to 250 ZMW/day</div>
+            <a href="/earn/training-ai.html" class="e-link">Learn more →</a>
           </div>
-          <div class="act-card reveal">
-            <div class="act-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=70&fit=crop"
-                alt="AI data labeling jobs Zambia"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <div class="act-badges">
-                <span class="act-badge bdg-free">NEW</span
-                ><span class="earn-badge">$1–8/label</span>
-              </div>
+          <div class="e-card reveal">
+            <div class="e-head">
+              <div class="e-ico">📋</div>
+              <h3>Paid Surveys</h3>
             </div>
-            <div class="act-body">
-              <div class="act-name">AI DATA LABELING</div>
-              <div class="act-sub">Train AI &amp; Earn — High Paying</div>
-              <div class="act-earn">Earn up to $50/day based on activity</div>
-              <div class="act-btns">
-                <a href="/earn/training-ai.html" class="btn-act-learn"
-                  >🤖 Learn More</a
-                >
-                <button class="btn-act-reg" onclick="openOfferwall()">
-                  🚀 Register
-                </button>
-              </div>
-            </div>
+            <p>
+              Share your opinions on global brands. New surveys added every week
+              — quick and beginner-friendly.
+            </p>
+            <div class="e-rate">10–25 ZMW each · Up to 175 ZMW/day</div>
+            <a href="/earn/surveys.html" class="e-link">Learn more →</a>
           </div>
-          <div class="act-card reveal">
-            <div class="act-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=70&fit=crop"
-                alt="Paid surveys Zambia earn money"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <div class="act-badges">
-                <span class="act-badge bdg-free">FREE</span
-                ><span class="earn-badge">$2–5/survey</span>
-              </div>
+          <div class="e-card reveal">
+            <div class="e-head">
+              <div class="e-ico">🎬</div>
+              <h3>Watch Videos</h3>
             </div>
-            <div class="act-body">
-              <div class="act-name">PAID SURVEY TASKS</div>
-              <div class="act-sub">Answer &amp; Earn — Beginner Friendly</div>
-              <div class="act-earn">Earn up to $35/day based on activity</div>
-              <div class="act-btns">
-                <a href="/earn/surveys.html" class="btn-act-learn"
-                  >📋 Learn More</a
-                >
-                <button class="btn-act-reg" onclick="openOfferwall()">
-                  🚀 Register
-                </button>
-              </div>
-            </div>
+            <p>
+              Watch short YouTube clips and earn per view. Turn your daily
+              screen time into real cash every day.
+            </p>
+            <div class="e-rate">~4 ZMW per video · Up to 275 ZMW/day</div>
+            <a href="/earn/videos.html" class="e-link">Learn more →</a>
           </div>
-          <div class="act-card reveal">
-            <div class="act-img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&q=70&fit=crop"
-                alt="Earn money clicking ads Zambia"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <div class="act-badges">
-                <span class="act-badge bdg-free">NEW</span
-                ><span class="earn-badge">$0.80/reel</span>
-              </div>
+          <div class="e-card reveal">
+            <div class="e-head">
+              <div class="e-ico">⚡</div>
+              <h3>Click &amp; Watch Ads</h3>
             </div>
-            <div class="act-body">
-              <div class="act-name">ADS CLICKING</div>
-              <div class="act-sub">Click &amp; Earn — Quick &amp; Easy</div>
-              <div class="act-earn">Earn up to $45/day based on activity</div>
-              <div class="act-btns">
-                <a href="/earn/ads.html" class="btn-act-learn">🎯 Learn More</a>
-                <button class="btn-act-reg" onclick="openOfferwall()">
-                  🚀 Register
-                </button>
-              </div>
+            <p>
+              Watch short ads and click promotions to earn daily micro-rewards.
+              Takes only 15 minutes a day.
+            </p>
+            <div class="e-rate">~4 ZMW per ad · Up to 225 ZMW/day</div>
+            <a href="/earn/ads.html" class="e-link">Learn more →</a>
+          </div>
+          <div class="e-card reveal">
+            <div class="e-head">
+              <div class="e-ico">✍️</div>
+              <h3>Data Entry Tasks</h3>
             </div>
+            <p>
+              Simple copy-paste, form filling and categorization. Easy work you
+              can do from anywhere on your phone.
+            </p>
+            <div class="e-rate">3–12 ZMW per task</div>
+            <a href="#tasks" class="e-link">Coming soon →</a>
+          </div>
+          <div class="e-card reveal">
+            <div class="e-head">
+              <div class="e-ico">🌟</div>
+              <h3>Referral Rewards</h3>
+            </div>
+            <p>
+              Invite friends to StarHela and earn a 50% commission on every
+              activation they make. Passive income.
+            </p>
+            <div class="e-rate">50% per referral · Unlimited earning</div>
+            <a href="/bonus.html" class="e-link">Learn more →</a>
           </div>
         </div>
 
-        <!-- MINI TASK GRID -->
-        <div class="detail-acts-grid">
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-robot"></i></div>
-            <div>
-              <div class="dact-name">AI Data Labeling</div>
-              <div class="dact-desc">
-                Help train AI models by labeling images, text, and audio — 5–20
-                ZMW per batch.
-              </div>
-            </div>
-          </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-chart-simple"></i></div>
-            <div>
-              <div class="dact-name">Surveys &amp; Polls</div>
-              <div class="dact-desc">
-                Share your opinion — paid surveys 10–25 ZMW each. New surveys
-                weekly.
-              </div>
-            </div>
-          </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-pen-fancy"></i></div>
-            <div>
-              <div class="dact-name">Data Entry Tasks</div>
-              <div class="dact-desc">
-                Simple copy-paste, form filling, categorization — 3–12 ZMW per
-                task.
-              </div>
-            </div>
-          </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-music"></i></div>
-            <div>
-              <div class="dact-name">Audio Transcription</div>
-              <div class="dact-desc">
-                Listen to short audios and type what you hear — 5–15 ZMW per
-                minute.
-              </div>
-            </div>
-          </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-image"></i></div>
-            <div>
-              <div class="dact-name">Image Captioning</div>
-              <div class="dact-desc">
-                Write descriptions for images — 2–8 ZMW per image. Easy and
-                quick.
-              </div>
-            </div>
-          </div>
-          <div class="dact-card reveal">
-            <div class="dact-icon"><i class="fas fa-share-alt"></i></div>
-            <div>
-              <div class="dact-name">Social Engagement</div>
-              <div class="dact-desc">
-                Like, share, comment on social posts — 1–3 ZMW per engagement.
-              </div>
-            </div>
-          </div>
-        </div>
         <div style="text-align: center; margin-top: 28px" class="reveal">
           <div
             style="
               display: inline-flex;
               align-items: center;
               gap: 8px;
-              background: #e8f5e9;
-              border: 1px solid rgba(26, 124, 26, 0.2);
+              background: var(--zm-green-bg);
+              border: 1px solid var(--zm-green-bd);
               border-radius: 12px;
               padding: 12px 24px;
               font-size: 0.85rem;
@@ -2970,249 +3121,333 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- ═══════════════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════════════ -->
     <section class="section bg-soft">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">💬 Success Stories</div>
-          <h2>What Zambian Members Say</h2>
-          <p>Real testimonials from our growing community across Zambia.</p>
-        </div>
+      <div class="wrap">
+        <span class="eyebrow reveal">Success Stories</span>
+        <h2 class="sec-h2 reveal">What Zambian Members Say</h2>
+        <p class="sec-p reveal">
+          Real stories from members across Zambia who are already earning daily
+          with StarHela.
+        </p>
         <div class="testi-grid">
           <div class="testi-card reveal">
-            <div class="testi-quote">❝</div>
-            <p class="testi-text">
-              "I joined StarHela 2 months ago. The chatting tasks are my main
-              income — 40–60 ZMW daily just from conversations. Best decision
-              I've made this year."
+            <div class="testi-q">❝</div>
+            <p class="testi-t">
+              "I joined StarHela two months ago. Chatting tasks are now my main
+              income — I earn between 400–600 ZMW daily just from conversations
+              with foreigners. Best decision I've made this year."
             </p>
-            <div class="testi-name">— Mulenga K., Lusaka</div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="testi-n">— Mulenga K., Lusaka</div>
+            <div class="testi-s">★★★★★</div>
           </div>
           <div class="testi-card reveal">
-            <div class="testi-quote">❝</div>
-            <p class="testi-text">
+            <div class="testi-q">❝</div>
+            <p class="testi-t">
               "Chatting with foreigners about Zambian life and culture is so
-              easy and fun. I earn while having interesting conversations on my
-              phone at home!"
+              easy and genuinely fun. I earn while having interesting
+              conversations right from my phone at home in Kitwe!"
             </p>
-            <div class="testi-name">— Natasha B., Kitwe</div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="testi-n">— Natasha B., Kitwe</div>
+            <div class="testi-s">★★★★★</div>
           </div>
           <div class="testi-card reveal">
-            <div class="testi-quote">❝</div>
-            <p class="testi-text">
+            <div class="testi-q">❝</div>
+            <p class="testi-t">
               "I was skeptical but tried it anyway. Within 3 days I hit 150 ZMW
-              and withdrew straight to Airtel. The support team is very
-              responsive on WhatsApp."
+              and withdrew straight to Airtel Money. The WhatsApp support team
+              responds very quickly too."
             </p>
-            <div class="testi-name">— Brian S., Ndola</div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="testi-n">— Brian S., Ndola</div>
+            <div class="testi-s">★★★★★</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WITHDRAWAL -->
+    <!-- ═══════════════════════════════════════════════════════
+     WITHDRAWAL
+═══════════════════════════════════════════════════════ -->
     <section class="section bg-white">
-      <div class="section-inner">
+      <div class="wrap">
         <div class="withdraw-grid">
-          <div class="reveal-left">
-            <h2 class="withdraw-h2">
-              Instant Withdrawals to 🇿🇲 Mobile Money Zambia
-            </h2>
-            <ul class="withdraw-list">
+          <div class="reveal">
+            <h2 class="w-h2">Instant Withdrawals to 🇿🇲 Zambia Mobile Money</h2>
+            <ul class="w-list">
               <li>
-                <div class="wl-icon"><i class="fas fa-check"></i></div>
-                <div><strong>Minimum withdrawal:</strong> 150 ZMW</div>
+                <div class="w-ico">✓</div>
+                <div>
+                  <strong>Minimum withdrawal:</strong> 150 ZMW — reachable in
+                  3–5 days
+                </div>
               </li>
               <li>
-                <div class="wl-icon"><i class="fas fa-check"></i></div>
+                <div class="w-ico">✓</div>
                 <div>
                   <strong>Supported networks:</strong> Airtel Money Zambia &amp;
-                  MTN Mobile Money Zambia
+                  MTN Mobile Money
                 </div>
               </li>
               <li>
-                <div class="wl-icon"><i class="fas fa-check"></i></div>
+                <div class="w-ico">✓</div>
                 <div>
-                  <strong>Processing time:</strong> Instant (under 2 minutes)
+                  <strong>Processing time:</strong> Instant — under 2 minutes to
+                  your wallet
                 </div>
               </li>
               <li>
-                <div class="wl-icon"><i class="fas fa-check"></i></div>
+                <div class="w-ico">✓</div>
                 <div>
-                  No transaction fees — 100% of your earnings reach your wallet
+                  Zero transaction fees — 100% of your earnings reach your
+                  wallet
                 </div>
               </li>
               <li>
-                <div class="wl-icon"><i class="fas fa-check"></i></div>
-                <div>Withdraw anytime, 24/7, any day of the week</div>
+                <div class="w-ico">✓</div>
+                <div>Withdraw anytime, 24 hours a day, 7 days a week</div>
+              </li>
+              <li>
+                <div class="w-ico">✓</div>
+                <div>
+                  Works from any province — Lusaka, Kitwe, Ndola, Livingstone,
+                  Chipata and more
+                </div>
               </li>
             </ul>
-            <div class="withdraw-note">
-              💡 <strong>Tip:</strong> Combine chatting sessions with micro
-              tasks. Most members reach 150 ZMW within their first 3–5 days and
-              start withdrawing straight away.
+            <div class="w-tip">
+              💡 <strong>Tip:</strong> Combine chatting with bonus tasks. Most
+              members reach 150 ZMW within 3–5 days and make their first
+              withdrawal straight away.
             </div>
           </div>
-          <div class="reveal-right">
-            <div class="withdraw-visual">
-              <div class="wv-title">Supported Payment Methods</div>
-              <div class="wv-method">
-                <div class="wv-method-icon">📱</div>
+          <div class="reveal">
+            <div class="payout-card">
+              <div class="pc-title">Supported Payment Methods</div>
+              <div class="pc-method">
+                <div class="pc-method-ico">📱</div>
                 <div>
-                  <div class="wv-method-name">Airtel Money Zambia</div>
-                  <div class="wv-method-sub">
+                  <div class="pc-method-name">Airtel Money Zambia</div>
+                  <div class="pc-method-sub">
                     Instant withdrawal to Airtel wallet
                   </div>
                 </div>
-                <div class="wv-method-badge">INSTANT</div>
+                <span class="pc-badge">Instant</span>
               </div>
-              <div class="wv-method">
-                <div class="wv-method-icon">💳</div>
+              <div class="pc-method">
+                <div class="pc-method-ico">💳</div>
                 <div>
-                  <div class="wv-method-name">MTN Mobile Money</div>
-                  <div class="wv-method-sub">
+                  <div class="pc-method-name">MTN Mobile Money</div>
+                  <div class="pc-method-sub">
                     Instant withdrawal to MTN MoMo
                   </div>
                 </div>
-                <div class="wv-method-badge">INSTANT</div>
+                <span class="pc-badge">Instant</span>
               </div>
-              <div class="wv-min">Min withdrawal: <strong>150 ZMW</strong></div>
+              <div class="pc-min">Min withdrawal: <strong>150 ZMW</strong></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ALERT BANNER -->
-    <div class="alert-banner">
-      <div class="ab-inner">
-        <div
-          style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap"
-        >
-          <div class="ab-icon">💬</div>
-          <div class="ab-text">
-            <strong>Foreigners are waiting to chat with you right now!</strong>
-            <span
-              >50+ active chat requests available daily. Activate your account
-              and start earning from your very first conversation today.</span
-            >
+    <!-- ═══ PAYOUT RIBBON ═════════════════════════════════════ -->
+    <div class="payout-ribbon">
+      <div class="wrap">
+        <div class="pr-inner">
+          <div class="pr-copy">
+            <h2>Get paid the Zambian way 🇿🇲</h2>
+            <p>
+              Zero fees · Instant processing · Available 24/7 · No bank account
+              needed
+            </p>
+          </div>
+          <div class="pr-methods">
+            <div class="pr-chip">📱 Airtel Money</div>
+            <div class="pr-chip">📱 MTN Mobile Money</div>
           </div>
         </div>
-        <button
-          onclick="openOfferwall()"
-          class="btn-primary-zm"
-          style="white-space: nowrap"
-        >
-          Activate — 130 ZMW
-        </button>
       </div>
     </div>
 
-    <!-- FAQ -->
-    <section id="faq" class="section bg-light-pu">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div class="section-eyebrow">❓ FAQ</div>
-          <h2>Frequently Asked Questions — Zambia Edition</h2>
-          <p>
-            Everything about chatting, activation, and Mobile Money withdrawals.
-          </p>
+    <!-- ═══ ALERT BANNER ══════════════════════════════════════ -->
+    <div class="alert-bar">
+      <div class="wrap">
+        <div class="ab-inner">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 14px;
+              flex-wrap: wrap;
+            "
+          >
+            <span style="font-size: 1.6rem">💬</span>
+            <div class="ab-text">
+              <strong
+                >Foreigners are waiting to chat with you right now!</strong
+              >
+              <span
+                >50+ active chat requests available daily. Activate and start
+                earning from your very first conversation.</span
+              >
+            </div>
+          </div>
+          <button
+            onclick="openModal()"
+            class="btn-primary"
+            style="white-space: nowrap; border: none; cursor: pointer"
+          >
+            Activate — 130 ZMW
+          </button>
         </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════ -->
+    <section id="faq" class="section bg-tint">
+      <div class="wrap">
+        <span class="eyebrow reveal">FAQ</span>
+        <h2 class="sec-h2 reveal">Frequently Asked Questions</h2>
+        <p class="sec-p reveal">
+          Everything you need to know about StarHela Zambia — chatting,
+          activation and withdrawals.
+        </p>
+
         <div class="faq-list">
           <div class="faq-item reveal">
             <button class="faq-btn" onclick="toggleFaq(this)">
-              What is the 130 ZMW activation fee for?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
+              What is StarHela and how does it work in Zambia?<span
+                class="faq-arrow"
+                >▾</span
+              >
             </button>
-            <div class="faq-answer">
+            <div class="faq-body">
               <p>
-                One-time payment unlocks full access: chatting with foreigners,
-                micro tasks, AI labeling, surveys, and withdrawal ability.
-                Non-refundable but gives you lifetime earning potential across
-                all activity types.
+                StarHela is an online earning platform connecting Zambian users
+                with foreigners from the US, UK, Europe and Asia who want real
+                conversations about African culture, travel, languages and daily
+                life. You earn money for every chat session you complete. The
+                platform also offers bonus tasks like surveys, AI labeling and
+                video watching to boost your income.
               </p>
             </div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-btn" onclick="toggleFaq(this)">
-              Do I need to speak a foreign language to chat?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
+              What is the 130 ZMW activation fee for?<span class="faq-arrow"
+                >▾</span
+              >
             </button>
-            <div class="faq-answer">
+            <div class="faq-body">
               <p>
-                No! All conversations are in English. Foreigners on the platform
-                want to learn about African culture, Zambia, and life here — you
-                just share your knowledge and experiences naturally. Topics and
-                guidance are provided so you always have something to talk
-                about.
+                It is a one-time, lifetime activation fee that unlocks full
+                platform access: chatting with foreigners, all micro-tasks, AI
+                labeling, surveys, and the ability to withdraw your earnings.
+                There are no monthly fees or hidden charges — pay once and earn
+                forever.
               </p>
             </div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-btn" onclick="toggleFaq(this)">
-              How fast can I withdraw after activation?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
+              Do I need to speak a foreign language to chat?<span
+                class="faq-arrow"
+                >▾</span
+              >
             </button>
-            <div class="faq-answer">
+            <div class="faq-body">
               <p>
-                Once your wallet reaches 150 ZMW (typically 3–5 days with active
-                chatting + tasks), you can withdraw instantly to Airtel or MTN
-                Zambia anytime, 24/7.
+                Not at all! All conversations happen in English. Foreigners want
+                to learn about Zambia and African culture — you simply share
+                your own knowledge and experiences naturally. StarHela provides
+                topic guides and conversation starters so you always have
+                something interesting to talk about.
               </p>
             </div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-btn" onclick="toggleFaq(this)">
-              Are there enough foreigners to chat with daily?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
+              How quickly can I withdraw after joining?<span class="faq-arrow"
+                >▾</span
+              >
             </button>
-            <div class="faq-answer">
+            <div class="faq-body">
               <p>
-                Yes! There are 50+ chat requests available every day from people
-                across the US, UK, Europe, and Asia. Because they span different
-                time zones, chats are available morning, afternoon, and evening.
+                Once your wallet reaches the minimum 150 ZMW — typically 3–5
+                days of active chatting and tasks — you can withdraw instantly
+                to Airtel Money or MTN Mobile Money in Zambia, 24 hours a day, 7
+                days a week. Most members make their first withdrawal within
+                their first week.
               </p>
             </div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-btn" onclick="toggleFaq(this)">
-              Do I need a computer to use StarHela?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
+              Are there enough foreigners to chat with every day?<span
+                class="faq-arrow"
+                >▾</span
+              >
             </button>
-            <div class="faq-answer">
+            <div class="faq-body">
               <p>
-                No! StarHela works perfectly on any smartphone (Android or
-                iPhone) via your browser. No app download required — just open
-                the website and start chatting.
+                Yes! There are 50+ chat requests available every day from users
+                across the US, UK, Europe and Asia. Because they span many time
+                zones, chats are available morning, afternoon and evening — so
+                no matter your schedule, someone is always ready to chat.
               </p>
             </div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-btn" onclick="toggleFaq(this)">
-              Is StarHela available across all Zambian provinces?
-              <span class="faq-chevron"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
+              Do I need a computer or special equipment?<span class="faq-arrow"
+                >▾</span
+              >
             </button>
-            <div class="faq-answer">
+            <div class="faq-body">
               <p>
-                Yes! Anywhere in Zambia where you have an Airtel or MTN Mobile
-                Money account. Work from Lusaka, Kitwe, Ndola, Livingstone,
-                Chipata, or even rural areas — as long as you have internet
-                access.
+                No! StarHela works perfectly on any Android or iPhone smartphone
+                via your mobile browser. No app download required — just open
+                the StarHela website, log in, and start chatting and earning
+                right away.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-btn" onclick="toggleFaq(this)">
+              Is StarHela available in all provinces of Zambia?<span
+                class="faq-arrow"
+                >▾</span
+              >
+            </button>
+            <div class="faq-body">
+              <p>
+                Yes! StarHela works anywhere in Zambia with an Airtel or MTN
+                Mobile Money account and a working internet connection — Lusaka,
+                Kitwe, Ndola, Livingstone, Chipata, Solwezi or any rural area.
+                Your location is no barrier.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-btn" onclick="toggleFaq(this)">
+              What makes StarHela better than other platforms?<span
+                class="faq-arrow"
+                >▾</span
+              >
+            </button>
+            <div class="faq-body">
+              <p>
+                StarHela offers a low one-time fee with no recurring costs,
+                instant payouts to local Zambian mobile money networks (no bank
+                account needed), multiple income streams, a 50% referral
+                commission, 24/7 WhatsApp support, and a mobile-first design
+                that works on affordable smartphones. With 120,000+ members
+                across Africa and $2.4M+ paid out, it is one of the most trusted
+                earning platforms on the continent.
               </p>
             </div>
           </div>
@@ -3220,189 +3455,202 @@
       </div>
     </section>
 
-    <!-- FINAL CTA -->
+    <!-- ═══════════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════════ -->
     <section class="final-cta">
-      <div class="reveal">
+      <div class="wrap fc-inner reveal">
         <h2>Start Chatting &amp; Earning in Zambia Today! 🇿🇲</h2>
         <p>
           Thousands of active Zambians are already earning real money from
-          conversations — join them now.
+          everyday conversations — join them now for just 130 ZMW, once.
         </p>
-        <div class="final-cta-btns">
+        <div class="fc-btns">
           <a
             href="https://starhela.com/register.php?ref=sydney"
             target="_blank"
             class="btn-final"
           >
-            <i class="fas fa-comments"></i> Register Now — 130 ZMW Activation
+            💬 Register Now — 130 ZMW Activation
           </a>
         </div>
-        <div class="final-cta-note">
-          One-time fee · Lifetime access · Chat &amp; earn from day one
+        <div class="fc-note">
+          One-time fee · Lifetime access · Chat &amp; earn from day one · Airtel
+          &amp; MTN payout
         </div>
       </div>
     </section>
 
-    <!-- NAVIGATION -->
-    <div
-      class="about-navigation"
-      style="max-width: 1200px; margin: 50px auto; padding: 20px 1.25rem"
-      aria-label="Post navigation"
-    >
-      <a class="nav-about" href="uganda.html"
-        ><i class="fas fa-arrow-left"></i> Back: Uganda</a
-      >
-      <a class="nav-about" href="/index.html"
-        >Next: Home <i class="fas fa-arrow-right"></i
-      ></a>
+    <!-- ═══ PAGE NAVIGATION ═══════════════════════════════════ -->
+    <div class="wrap">
+      <div class="page-nav">
+        <a class="pnav-link" href="uganda.html">← Back: Uganda</a>
+        <a class="pnav-link" href="/index.html">Home →</a>
+      </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- ═══════════════════════════════════════════════════════
+     FOOTER  —  same logo img + dark bg as index.html
+═══════════════════════════════════════════════════════ -->
     <footer>
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-row">
-            <div class="footer-brand-mark"></div>
-            <span class="footer-brand-name">STARHELA AGENCIES</span>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <div class="foot-brand-row">
+              <!-- Same logo image as index.html -->
+              <img
+                src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png"
+                alt="StarHela logo"
+                class="foot-logo-img"
+                loading="lazy"
+              />
+              <span class="foot-brand-name">STARHELA AGENCIES</span>
+            </div>
+            <p class="foot-desc">
+              Africa's trusted online earning platform. Chat with foreigners,
+              complete tasks, and earn real money daily. No experience needed —
+              just a smartphone and internet.
+            </p>
+            <div class="foot-contact">
+              <span>📞</span><a href="tel:+254729743223">+254 729 743 223</a>
+            </div>
+            <div class="foot-contact">
+              <span>✉️</span
+              ><a href="mailto:starhelaofficials@gmail.com"
+                >starhelaofficials@gmail.com</a
+              >
+            </div>
+            <div class="foot-contact">
+              <span>💬</span
+              ><a
+                href="https://wa.me/254729743223"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp Support</a
+              >
+            </div>
+            <div class="foot-social">
+              <a
+                href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
+                target="_blank"
+                rel="noopener"
+                class="foot-soc"
+                aria-label="WhatsApp Channel"
+                >📣</a
+              >
+              <a
+                href="https://wa.me/254729743223"
+                target="_blank"
+                rel="noopener"
+                class="foot-soc"
+                aria-label="WhatsApp Chat"
+                >💬</a
+              >
+              <a
+                href="mailto:starhelaofficials@gmail.com"
+                class="foot-soc"
+                aria-label="Email"
+                >✉️</a
+              >
+            </div>
           </div>
-          <p class="footer-desc">
-            StarHela Agencies — Africa's trusted online earning platform. Chat
-            with foreigners, complete tasks, and earn real money daily. No
-            experience needed.
-          </p>
-          <div class="footer-contact-item">
-            <span>📞</span><a href="tel:+254729743223">+254 729 743 223</a>
+
+          <div>
+            <div class="foot-col-ttl">Quick Links</div>
+            <div class="foot-links">
+              <a href="#how-it-works">How StarHela Works</a>
+              <a href="#chatting">Chat &amp; Earn</a>
+              <a href="#tasks">Other Tasks</a>
+              <a href="#faq">FAQ</a>
+              <a
+                href="https://starhela.com/register.php?ref=sydney"
+                target="_blank"
+                >Register on StarHela</a
+              >
+              <a
+                href="https://starhela.com/c/U3lkbmV5"
+                target="_blank"
+                rel="noopener"
+                >Login to StarHela</a
+              >
+            </div>
           </div>
-          <div class="footer-contact-item">
-            <span>✉️</span
-            ><a href="mailto:starhelaofficials@gmail.com"
-              >starhelaofficials@gmail.com</a
-            >
-          </div>
-          <div class="footer-contact-item">
-            <span>💬</span
-            ><a href="https://wa.me/254729743223" target="_blank" rel="noopener"
-              >WhatsApp Support</a
-            >
-          </div>
-          <div class="footer-social">
-            <a
-              href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
-              target="_blank"
-              rel="noopener"
-              class="footer-soc-btn"
-              aria-label="WhatsApp Channel"
-              >📣</a
-            >
-            <a
-              href="https://wa.me/254729743223"
-              target="_blank"
-              rel="noopener"
-              class="footer-soc-btn"
-              aria-label="WhatsApp Chat"
-              >💬</a
-            >
-            <a
-              href="mailto:starhelaofficials@gmail.com"
-              class="footer-soc-btn"
-              aria-label="Email"
-              >✉️</a
-            >
+
+          <div>
+            <div class="foot-col-ttl">Countries</div>
+            <div class="foot-links">
+              <a href="kenya.html">Kenya</a>
+              <a href="uganda.html">Uganda</a>
+              <a href="tanzania.html">Tanzania</a>
+              <a href="zambia.html">Zambia</a>
+              <a href="cameroon.html">Cameroon</a>
+              <a href="ghana.html">Ghana</a>
+              <a href="nigeria.html">Nigeria</a>
+            </div>
           </div>
         </div>
-        <div>
-          <div class="footer-col-title">Quick Links</div>
-          <div class="footer-links">
-            <a href="#how-it-works">How StarHela Works</a>
-            <a href="#chatting">Chat &amp; Earn</a>
-            <a href="#other-tasks">Other Tasks</a>
-            <a href="#faq">StarHela FAQ</a>
+        <div class="foot-bottom">
+          <div class="foot-copy">
+            © 2025 StarHela Agencies · All rights reserved ·
             <a
               href="https://starhela.com/register.php?ref=sydney"
               target="_blank"
-              >Register on StarHela</a
+              >Register</a
             >
-            <a
-              href="https://starhela.com/c/U3lkbmV5"
-              target="_blank"
-              rel="noopener"
-              >Login to StarHela</a
-            >
+            ·
+            <a href="https://starhela.com/c/U3lkbmV5" target="_blank">Login</a>
           </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Countries</div>
-          <div class="footer-links">
-            <a href="kenya.html">Kenya</a>
-            <a href="uganda.html">Uganda</a>
-            <a href="tanzania.html">Tanzania</a>
-            <a href="zambia.html">Zambia</a>
-            <a href="cameroon.html">Cameroon</a>
-            <a href="ghana.html">Ghana</a>
-            <a href="nigeria.html">Nigeria</a>
+          <div class="foot-badge">
+            <span>ℹ️</span> StarHela Agencies · 🌍 Zambia &amp; Africa
           </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">
-          © 2025 StarHela Agencies · All rights reserved ·
-          <a href="https://starhela.com/register.php?ref=sydney" target="_blank"
-            >Register</a
-          >
-          ·
-          <a href="https://starhela.com/c/U3lkbmV5" target="_blank">Login</a>
-        </div>
-        <div class="footer-note">
-          <span>ℹ️</span> StarHela Agencies · 🌍 Zambia &amp; Africa
         </div>
       </div>
     </footer>
 
+    <!-- ═══ MOBILE STICKY CTA ═════════════════════════════════ -->
+    <div class="mob-sticky">
+      <a href="https://starhela.com/register.php?ref=sydney" target="_blank"
+        >💬 Start Chatting &amp; Earn — 130 ZMW</a
+      >
+    </div>
+
     <script>
-      // PAGE LOADER
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          document.getElementById("pageLoader").classList.add("hide");
-        }, 1200);
-      });
-
-      // NAVBAR SCROLL
-      const topNav = document.getElementById("topNav");
-      window.addEventListener("scroll", () => {
-        topNav.classList.toggle("scrolled", window.scrollY > 20);
-      });
-
-      // HAMBURGER
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      hamburger.addEventListener("click", () =>
-        mobileMenu.classList.toggle("open"),
+      // ── Nav scroll shadow ──────────────────────────────────
+      const nav = document.getElementById("top-nav");
+      window.addEventListener(
+        "scroll",
+        () => nav.classList.toggle("scrolled", scrollY > 20),
+        { passive: true },
       );
-      mobileMenu
+
+      // ── Hamburger ──────────────────────────────────────────
+      const burger = document.getElementById("nav-burger");
+      const mMenu = document.getElementById("mobile-menu");
+      burger.addEventListener("click", () => mMenu.classList.toggle("open"));
+      mMenu
         .querySelectorAll("a")
         .forEach((a) =>
-          a.addEventListener("click", () =>
-            mobileMenu.classList.remove("open"),
-          ),
+          a.addEventListener("click", () => mMenu.classList.remove("open")),
         );
 
-      // OFFERWALL
-      function openOfferwall() {
-        document.getElementById("offerwallOv").classList.add("on");
+      // ── Modal ──────────────────────────────────────────────
+      const overlay = document.getElementById("reg-overlay");
+      function openModal() {
+        overlay.classList.add("open");
         document.body.style.overflow = "hidden";
       }
-      document.getElementById("owClose").addEventListener("click", () => {
-        document.getElementById("offerwallOv").classList.remove("on");
+      document.getElementById("rm-close").addEventListener("click", () => {
+        overlay.classList.remove("open");
         document.body.style.overflow = "";
       });
-      document.getElementById("offerwallOv").addEventListener("click", (e) => {
-        if (e.target === e.currentTarget) {
-          e.currentTarget.classList.remove("on");
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove("open");
           document.body.style.overflow = "";
         }
       });
 
-      // FAQ
+      // ── FAQ accordion ──────────────────────────────────────
       function toggleFaq(btn) {
         const item = btn.closest(".faq-item");
         const isOpen = item.classList.contains("open");
@@ -3412,38 +3660,25 @@
         if (!isOpen) item.classList.add("open");
       }
 
-      // SCROLL REVEAL
-      const revealEls = document.querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right",
-      );
-      const observer = new IntersectionObserver(
+      // ── Scroll reveal  ─────────────────────────────────────
+      const revEls = document.querySelectorAll(".reveal");
+      const revObs = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
             if (e.isIntersecting) {
-              setTimeout(() => e.target.classList.add("visible"), 80);
-              observer.unobserve(e.target);
+              // stagger siblings in the same parent grid
+              const siblings = [...e.target.parentElement.children].filter(
+                (c) => c.classList.contains("reveal"),
+              );
+              const idx = siblings.indexOf(e.target);
+              setTimeout(() => e.target.classList.add("on"), idx * 70);
+              revObs.unobserve(e.target);
             }
           });
         },
         { threshold: 0.1 },
       );
-      revealEls.forEach((el) => observer.observe(el));
-
-      // STAGGER CHILDREN
-      document
-        .querySelectorAll(
-          ".steps-grid, .acts-grid, .detail-acts-grid, .testi-grid, .trust-inner, .chat-feature-list",
-        )
-        .forEach((grid) => {
-          [...grid.children].forEach((child, i) => {
-            if (
-              !child.classList.contains("reveal") &&
-              !child.classList.contains("chat-feature-item")
-            )
-              return;
-            child.style.transitionDelay = `${i * 80}ms`;
-          });
-        });
+      revEls.forEach((el) => revObs.observe(el));
     </script>
   </body>
 </html>
