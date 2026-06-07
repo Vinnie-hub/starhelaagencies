@@ -954,6 +954,87 @@
         }
       }
 
+      /* ── FLOAT WA ── */
+      .float-wa-wrap {
+        position: fixed;
+        bottom: 28px;
+        right: 20px;
+        z-index: 794;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+      }
+      .float-wa-label {
+        background: var(--surface);
+        border: 1px solid rgba(37, 211, 102, 0.3);
+        color: var(--ink);
+        font-size: 0.58rem;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.65rem;
+        border-radius: 6px;
+        white-space: nowrap;
+        backdrop-filter: blur(8px);
+        pointer-events: none;
+        opacity: 0;
+        transform: translateX(8px);
+        transition: all 0.2s;
+      }
+      .float-wa-wrap:hover .float-wa-label {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .float-wa {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #25d366;
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.2s;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        animation:
+          floatWA 3.5s ease-in-out infinite,
+          waPulse 2.8s infinite;
+      }
+      .float-wa:hover {
+        background: #1da851;
+        animation: none;
+        transform: scale(1.1);
+      }
+      @keyframes floatWA {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      @keyframes waPulse {
+        0% {
+          box-shadow:
+            0 6px 20px rgba(37, 211, 102, 0.4),
+            0 0 0 0 rgba(37, 211, 102, 0.3);
+        }
+        70% {
+          box-shadow:
+            0 6px 20px rgba(37, 211, 102, 0.4),
+            0 0 0 14px transparent;
+        }
+        100% {
+          box-shadow:
+            0 6px 20px rgba(37, 211, 102, 0.4),
+            0 0 0 0 transparent;
+        }
+      }
+
       /* ── EMPTY ────────────────────────────────── */
       .empty {
         text-align: center;
@@ -1582,6 +1663,20 @@
           ><span>.</span><span>.</span><span>.</span></span
         >
       </div>
+    </div>
+
+    <!-- ── FLOATING WA ── -->
+    <div class="float-wa-wrap">
+      <span class="float-wa-label">Join WhatsApp Community</span>
+      <a
+        href="https://chat.whatsapp.com/Ir5lbHCr9rPCLuvVzvHAyD"
+        class="float-wa"
+        target="_blank"
+        rel="noopener"
+        aria-label="Join our WhatsApp Community"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
 
     <!-- MODAL (bottom sheet on mobile) -->

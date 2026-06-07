@@ -2049,27 +2049,70 @@
         color: #10b981;
       }
 
-      /* FLOAT WA */
-      .float-wa {
+      /* ── WA FLOAT ── */
+      .wa-float {
         position: fixed;
-        bottom: 22px;
-        right: 22px;
-        z-index: 1000;
+        bottom: 24px;
+        right: 24px;
+        z-index: 400;
+      }
+      .wa-btn {
         width: 52px;
         height: 52px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #25d366, #128c7e);
+        background: #25d366;
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.6rem;
-        color: #fff;
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-        transition: all 0.25s;
+        font-size: 1.35rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+        animation: floaty 3s ease-in-out infinite;
+        transition: all 0.2s;
       }
-      .float-wa:hover {
-        transform: scale(1.08);
-        box-shadow: 0 8px 28px rgba(37, 211, 102, 0.56);
+      .wa-btn:hover {
+        background: #1da851;
+        animation: none;
+        transform: scale(1.1);
+      }
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+      .wa-tip {
+        position: absolute;
+        bottom: 62px;
+        right: 0;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: var(--r-sm);
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateY(4px);
+        transition: all 0.2s;
+        pointer-events: none;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .wa-float:hover .wa-tip {
+        opacity: 1;
+        transform: none;
+      }
+      .wa-tip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 14px;
+        border: 5px solid transparent;
+        border-top-color: var(--ink);
       }
 
       /* MODALS */

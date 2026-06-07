@@ -54,7 +54,8 @@
     <!-- Icons -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
     />
 
     <link
@@ -133,6 +134,72 @@
         opacity: 1;
         pointer-events: all;
         position: relative;
+      }
+
+      /* ── WA FLOAT ── */
+      .wa-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 400;
+      }
+      .wa-btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+        animation: floaty 3s ease-in-out infinite;
+        transition: all 0.2s;
+      }
+      .wa-btn:hover {
+        background: #1da851;
+        animation: none;
+        transform: scale(1.1);
+      }
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+      .wa-tip {
+        position: absolute;
+        bottom: 62px;
+        right: 0;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: var(--r-sm);
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateY(4px);
+        transition: all 0.2s;
+        pointer-events: none;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .wa-float:hover .wa-tip {
+        opacity: 1;
+        transform: none;
+      }
+      .wa-tip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 14px;
+        border: 5px solid transparent;
+        border-top-color: var(--ink);
       }
 
       /* ─────────────────────────────────────────────────────────
@@ -1703,6 +1770,18 @@
     </style>
   </head>
   <body>
+    <!-- WA FLOAT -->
+    <div class="wa-float">
+      <span class="wa-tip">Join WhatsApp Community</span>
+      <a
+        href="https://chat.whatsapp.com/Ir5lbHCr9rPCLuvVzvHAyD"
+        class="wa-btn"
+        target="_blank"
+        rel="noopener"
+        aria-label="WhatsApp"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+    </div>
     <!-- ═══════════════════════════════════════════════════
          SHARED NAV (morphs between landing & write modes)
     ════════════════════════════════════════════════════ -->
