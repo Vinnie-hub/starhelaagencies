@@ -1,41 +1,76 @@
+# ═══════════════════════════════════════════════════════
+# STARHELA AGENCIES — Apache Configuration
+# ═══════════════════════════════════════════════════════
+
 RewriteEngine On
 RewriteBase /
 
-# Redirect old .html URLs to clean URLs (301 redirect for SEO)
+# Prevent directory listing
+Options -Indexes
+
+# Follow symlinks (required for rewrites to work)
+Options +FollowSymLinks
+
+# Disable MultiViews to avoid conflicts with our rewrites
+Options -MultiViews
+
+# ── Canonical: non-www → www (or www → non-www) ──
+# Uncomment ONE of the two blocks below depending on your preference.
+
+# Option A: Force www (recommended for SEO)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L,NE]
+
+# Option B: Force non-www (currently active — no redirect)
+# (No rule needed; your canonical URLs are non-www)
+
+# ── Force HTTPS (uncomment when SSL is active) ──
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L,NE]
+
+# ── Redirect old .html URLs to clean URLs (301 for SEO) ──
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
 
-# Remove .html extension internally
+# ── Serve .html file when clean URL is requested ──
+# e.g. /earn/surveys → serves earn/surveys.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-# Custom error pages
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
-ErrorDocument 500 /500.html
+# ── Custom error pages ──
+# ErrorDocument 404 /404.html
+# ErrorDocument 403 /403.html
+# ErrorDocument 500 /500.html
 
-# Cache control
+# ── Cache control ──
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
     ExpiresByType text/html "access plus 1 hour"
     ExpiresByType text/css "access plus 1 week"
     ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
     ExpiresByType image/jpeg "access plus 1 month"
     ExpiresByType image/png "access plus 1 month"
     ExpiresByType image/webp "access plus 1 month"
     ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
     ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/json "access plus 0 seconds"
 </IfModule>
 
-# Enable GZIP compression (optional but recommended)
+# ── GZIP compression ──
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json text/plain text/xml application/xml image/svg+xml
 </IfModule>
 
-# Security headers (optional)
+# ── Security headers ──
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Uncomment when HTTPS is active:
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>

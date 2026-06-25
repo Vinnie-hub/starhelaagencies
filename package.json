@@ -1,0 +1,11 @@
+{
+  "name": "starhela-agencies",
+  "version": "1.0.0",
+  "description": "Starhela Agencies website — clean URL local dev server",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
