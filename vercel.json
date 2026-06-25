@@ -1,0 +1,42 @@
+{
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/earn/chatting", "destination": "/earn/chatting.html" },
+    { "source": "/earn/videos", "destination": "/earn/videos.html" },
+    { "source": "/earn/ads", "destination": "/earn/ads.html" },
+    { "source": "/earn/surveys", "destination": "/earn/surveys.html" },
+    { "source": "/earn/blogging", "destination": "/earn/blogging.html" },
+    { "source": "/earn/training-ai", "destination": "/earn/training-ai.html" },
+    { "source": "/bonus", "destination": "/bonus.html" },
+    { "source": "/countries/:name", "destination": "/countries/:name.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|webp|ico)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, immutable" }
+      ]
+    }
+  ]
+}
