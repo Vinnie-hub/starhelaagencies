@@ -120,15 +120,6 @@
       hideClickLoader();
     });
 
-    document.addEventListener('click', function (e) {
-      var el = e.target.closest('a[href]');
-      if (!el) return;
-      var href = el.getAttribute('href');
-      if (!href || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || href.startsWith('#') || href === '/') return;
-      e.preventDefault();
-      sessionStorage.setItem('sh-transitioning', '1');
-      window.navigateTo(href);
-    }, { capture: true });
   }
 
   /* ── CLICK LOADER ────────────────────────── */
