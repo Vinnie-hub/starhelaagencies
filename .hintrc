@@ -1,0 +1,9 @@
+{
+  "extends": ["development"],
+  "hints": {
+    "no-inline-styles": "off",
+    "compat-api/css": ["warning", {
+      "ignore": ["backdrop-filter", "-webkit-backdrop-filter", "mask-image", "-webkit-mask-image", "text-size-adjust", "-webkit-text-size-adjust", "appearance", "-webkit-appearance"]
+    }]
+  }
+}

@@ -6,9 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
-    <title>
-      Starhela Kenya | Pata Pesa Ukizungumza na Wageni – Malipo Kupitia M-Pesa
-    </title>
+    <title>Starhela Kenya | Pata Pesa Ukizungumza na Wageni – Malipo Kupitia M-Pesa</title>
+    <link rel="stylesheet" href="/css/countries.css" />
     <meta
       name="description"
       content="Geuza simu yako kuwa chanzo cha mapato Kenya. Zungumza na wageni, kamilisha kazi, na toa pesa mara moja kwenye M-Pesa au Airtel Money. Jiunge na Wakenya 120,000+ wanaopata pesa kila siku."
@@ -1739,29 +1738,6 @@
         }
       }
 
-      /* MOBILE STICKY */
-      .sticky-cta {
-        position: fixed;
-        bottom: 16px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 999;
-        width: calc(100% - 24px);
-        max-width: 370px;
-        display: none;
-      }
-      .sticky-cta a {
-        display: block;
-        background: linear-gradient(120deg, #7c3aed, #5b21b6);
-        color: #fff;
-        text-align: center;
-        padding: 15px 20px;
-        border-radius: 99px;
-        font-weight: 800;
-        font-size: 0.95rem;
-        box-shadow: 0 12px 30px rgba(124, 58, 237, 0.45);
-      }
-
       /* MODAL */
       #modal {
         position: fixed;
@@ -2362,9 +2338,6 @@
           flex-direction: column;
           align-items: flex-start;
         }
-        .sticky-cta {
-          display: block;
-        }
         .hero {
           padding-bottom: 100px;
         }
@@ -2385,14 +2358,6 @@
         }
       }
       @media (max-width: 440px) {
-        .cta-row {
-          flex-direction: column;
-        }
-        .btn-primary,
-        .btn-wa {
-          width: 100%;
-          justify-content: center;
-        }
         .final-btns {
           flex-direction: column;
         }
@@ -2400,7 +2365,20 @@
           padding: 2rem 1.25rem;
         }
       }
+      @media (max-width: 480px) {
+        .hero-right {
+          order: -1;
+        }
+        .float-badge {
+          position: relative;
+          top: auto;
+          right: auto;
+          margin-top: 10px;
+          display: inline-block;
+        }
+      }
     </style>
+      <link rel="stylesheet" href="/css/countries-fixes.css" />
   </head>
   <body>
     <!-- LOADER -->
@@ -2535,8 +2513,18 @@
             >Jiunge Sasa →</a
           >
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Fungua menyu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="go-register">Kuhusu</a>
+      <a href="#earn" class="go-register">Njia za Kupata Pesa</a>
+      <a href="#faq" class="go-register">Maswali</a>
+      <a href="https://starhela.com/register.php?ref=sydney" class="btn-nav" target="_blank">Jiunge Sasa →</a>
+    </div>
 
     <main>
       <!-- HERO -->
@@ -3805,13 +3793,6 @@
       </div>
     </footer>
 
-    <!-- MOBILE STICKY CTA -->
-    <div class="sticky-cta">
-      <a href="#" class="go-register"
-        >💬 Anza Kuzungumza &amp; Pata Pesa Sasa</a
-      >
-    </div>
-
     <script>
       window.addEventListener("load", () => {
         setTimeout(
@@ -3828,6 +3809,20 @@
         },
         { passive: true },
       );
+
+      // Hamburger toggle
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("open");
+        });
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("open");
+          });
+        });
+      }
 
       const revEls = document.querySelectorAll(".reveal");
       const ro = new IntersectionObserver(
@@ -3872,14 +3867,19 @@
           openModal();
         });
       });
-      modalClose.addEventListener("click", closeModal);
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) closeModal();
-      });
-      modalProceed.addEventListener("click", () => {
-        closeModal();
-        window.open("https://starhela.com/register.php?ref=sydney", "_blank");
-      });
+      // Null-safe modal wiring (auto-patched)
+if (typeof modalClose !== 'undefined' && modalClose) {
+  modalClose.addEventListener('click', closeModal);
+}
+if (typeof modal !== 'undefined' && modal) {
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+}
+if (typeof modalProceed !== 'undefined' && modalProceed) {
+  modalProceed.addEventListener('click', () => {
+    closeModal();
+    window.open('https://starhela.com/register.php?ref=sydney', '_blank');
+  });
+}
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
       });

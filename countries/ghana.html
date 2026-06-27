@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
     <title>Starhela Ghana | Earn Daily by Chatting with Foreigners</title>
+    <link rel="stylesheet" href="/css/countries.css" />
     <meta
       name="description"
       content="Join Starhela Ghana today. One-time activation 95 GHS. Chat with foreigners and earn daily. Withdraw to MTN, Vodafone Cash & AirtelTigo."
@@ -2101,33 +2102,6 @@
         transform: translateX(0);
       }
 
-      /* ─── MOBILE STICKY CTA ─────────────────── */
-      .sticky-cta {
-        position: fixed;
-        bottom: 16px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 799;
-        width: calc(100% - 24px);
-        max-width: 380px;
-        display: none;
-      }
-      .sticky-cta a {
-        display: block;
-        background: linear-gradient(120deg, var(--purple), var(--purple-dk));
-        color: #fff;
-        text-align: center;
-        padding: 15px 20px;
-        border-radius: 99px;
-        font-weight: 700;
-        font-size: 0.9rem;
-        box-shadow: var(--shadow-purple);
-        transition: transform 0.2s;
-      }
-      .sticky-cta a:hover {
-        transform: scale(1.02);
-      }
-
       /* ─── ANIMATIONS ──────────────────────── */
       .reveal {
         opacity: 0;
@@ -2235,9 +2209,6 @@
         .hamburger {
           display: flex;
         }
-        .sticky-cta {
-          display: block;
-        }
         body {
           padding-bottom: 80px;
         }
@@ -2261,7 +2232,20 @@
           justify-content: center;
         }
       }
+      @media (max-width: 480px) {
+        .hero-right {
+          order: -1;
+        }
+        .float-badge {
+          position: relative;
+          top: auto;
+          right: auto;
+          margin-top: 10px;
+          display: inline-block;
+        }
+      }
     </style>
+      <link rel="stylesheet" href="/css/countries-fixes.css" />
   </head>
   <body>
     <!-- FLOATING WHATSAPP -->
@@ -3567,13 +3551,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- MOBILE STICKY CTA -->
-    <div class="sticky-cta">
-      <a href="https://starhela.com/register.php?ref=sydney" target="_blank"
-        >💬 Activate &amp; Start Chatting — 95 GHS</a
-      >
-    </div>
 
     <script>
       // Navbar scroll

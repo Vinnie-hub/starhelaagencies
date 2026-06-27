@@ -374,22 +374,30 @@
 
   /* ── INIT ────────────────────────────────── */
   function init() {
-    initTheme();
-    initPageLoader();
-    initPageTransition();
-    initClickLoader();
-    initMobileMenu();
-    initScrollSpy();
-    initReveal();
-    initFaq();
-    initGeoDetection();
-    initOfferwall();
-    initDisclaimer();
-    initRipple();
+    // Each module is independent — wrap individually so a failure in
+    // one doesn't break the rest of the page.
+    var modules = [
+      initTheme, initPageLoader, initPageTransition, initClickLoader,
+      initMobileMenu, initScrollSpy, initReveal, initFaq,
+      initGeoDetection, initOfferwall, initDisclaimer, initRipple
+    ];
+    for (var i = 0; i < modules.length; i++) {
+      try { modules[i](); } catch (err) {
+        if (window.console && console.warn) console.warn('[starhela] init failed:', err);
+      }
+    }
 
     // Theme toggle
     var themeToggle = document.getElementById('themeToggle');
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
+    // Close any open overlay on Escape (keyboard a11y)
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (typeof window.closeMenu === 'function') window.closeMenu();
+      if (typeof window.closeOfferwall === 'function') window.closeOfferwall();
+      if (typeof window.hideDisclaimer === 'function') window.hideDisclaimer();
+    });
   }
 
   if (document.readyState === 'loading') {
