@@ -6,49 +6,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
     />
-    <title>StarHela – Chat &amp; Earn Online</title>
+    <title>Browse Chats – StarHela Chat &amp; Earn</title>
     <meta
       name="description"
-      content="Chat with people from UK, USA, Canada &amp; Qatar. Earn KES 1,000–2,000 daily. Withdraw via M-Pesa, MTN Money &amp; Airtel Money."
+      content="Browse live psychics, coaches, companions and advisors on StarHela. Chat with experts from the UK, USA, Canada &amp; Qatar."
     />
     <meta
       name="keywords"
       content="StarHela, earn online, chatting jobs, online chatting, work from home Kenya, make money online, M-Pesa jobs"
     />
     <meta name="author" content="StarHela Agencies" />
-    <meta name="theme-color" content="#6a00ff" />
-    <link
-      rel="canonical"
-      href="https://starhelaagencies.com/earn/chatting"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="StarHela – Chat &amp; Earn Online" />
-    <meta
-      property="og:description"
-      content="Chat with foreigners and earn online daily."
-    />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332679/Starhela-chatting-logo_miockq.png"
-    />
-    <meta
-      property="og:url"
-      content="https://starhelaagencies.com/earn/chatting"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="StarHela – Chat &amp; Earn Online" />
-    <meta
-      name="twitter:description"
-      content="Chat with foreigners and earn online daily."
-    />
-    <meta
-      name="twitter:image"
-      content="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332679/Starhela-chatting-logo_miockq.png"
-    />
+    <meta name="theme-color" content="#2f6bff" />
+    <link rel="canonical" href="https://starhelaagencies.com/chat.html" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -56,6 +30,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       crossorigin="anonymous"
     />
+
     <link
       rel="icon"
       type="image/png"
@@ -65,238 +40,279 @@
       rel="apple-touch-icon"
       href="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png"
     />
-    <link rel="stylesheet" href="../css/chatting.css" />
+
+    <link rel="stylesheet" href="/css/chatting.css" />
   </head>
   <body>
-    <!-- LIVE BAR -->
+    <!-- ══ NAV ══════════════════════════════════════════════ -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="logo" aria-label="StarHela home"
+          >STAR<span>HELA</span></a
+        >
+        <ul class="nav-links" role="list">
+          <li><a href="/index.html">Home</a></li>
+          <li>
+            <a href="/earn/chatting.html" class="active" aria-current="page"
+              >Browse Chats</a
+            >
+          </li>
+          <li><a href="/index.html#countries">Countries</a></li>
+          <li><a href="/index.html#activities">Features</a></li>
+        </ul>
+        <div class="nav-right">
+          <a
+            href="https://starhela.com/c/U3lkbmV5"
+            class="btn-ghost"
+            id="nav-signin"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            class="btn-primary"
+            id="nav-signup"
+            rel="noopener noreferrer"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- ══ MOBILE DRAWER ══════════════════════════════════════ -->
     <div
-      id="liveBar"
-      role="marquee"
+      class="mobile-drawer"
+      id="mobile-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <div class="drawer-panel">
+        <nav class="drawer-nav-links" aria-label="Mobile navigation">
+          <a href="/index.html">Home</a>
+          <a href="/earn/chatting.html" class="active" aria-current="page"
+            >Browse Chats</a
+          >
+          <a href="/index.html#countries">Countries</a>
+          <a href="/index.html#activities">Features</a>
+        </nav>
+        <div class="drawer-divider" role="separator"></div>
+        <div class="drawer-auth">
+          <a
+            href="https://starhela.com/c/U3lkbmV5"
+            class="btn-ghost"
+            rel="noopener noreferrer"
+            >Sign In</a
+          >
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            class="btn-primary"
+            rel="noopener noreferrer"
+            >Sign Up</a
+          >
+        </div>
+        <div class="drawer-divider" role="separator"></div>
+        <div>
+          <div class="drawer-filter-title" id="drawer-status-label">
+            Availability
+          </div>
+          <div
+            class="filter-options"
+            id="drawer-status-filters"
+            role="group"
+            aria-labelledby="drawer-status-label"
+          ></div>
+        </div>
+        <div>
+          <div class="drawer-filter-title" id="drawer-cat-label">Category</div>
+          <div
+            class="filter-options"
+            id="drawer-cat-filters"
+            role="group"
+            aria-labelledby="drawer-cat-label"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ LIVE ACTIVITY TICKER ═══════════════════════════════ -->
+    <div
+      class="live-ticker"
       aria-live="polite"
       aria-label="Live platform activity"
     >
-      <div class="lab-inner">
-        <div class="lab-badge" aria-hidden="true">
-          <span class="lab-badge-dot"></span>
-          <span class="lab-badge-txt">Live</span>
-        </div>
-        <div class="lab-feed-wrap" aria-hidden="true">
-          <div class="lab-feed" id="labFeed"></div>
-        </div>
-        <div class="lab-counter" aria-label="Users online">
-          <i class="fas fa-users"></i>
-          <span class="lab-counter-num" id="labCount">3,847 online</span>
+      <div class="ticker-inner">
+        <div class="ticker-label">🔴 LIVE</div>
+        <div class="ticker-scroll" id="tickerScroll">
+          <!-- items injected by JS -->
         </div>
       </div>
     </div>
 
-    <!-- REGISTRATION MODAL -->
+    <!-- ══ LIVE STATS BAR ════════════════════════════════════ -->
+    <div class="stats-bar" aria-label="Platform statistics">
+      <div class="stat-item">
+        <span class="stat-num" id="stat-advisors">--</span>
+        <span class="stat-label">Advisors Online</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-sessions">--</span>
+        <span class="stat-label">Active Sessions</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-members">--</span>
+        <span class="stat-label">Total Members</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="stat-rating">--</span>
+        <span class="stat-label">Avg. Rating ★</span>
+      </div>
+    </div>
+
+    <!-- ══ HERO ══════════════════════════════════════════════ -->
+    <div class="hero">
+      <h1>Find Your Advisor</h1>
+      <p>
+        Connect with <strong id="hero-count">2,500+</strong> verified psychics,
+        coaches, companions &amp; more — available right now
+      </p>
+      <div class="search-bar" role="search">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search advisors, topics, tags…"
+          aria-label="Search advisors"
+        />
+        <button id="search-btn" aria-label="Search">Search</button>
+      </div>
+    </div>
+
+    <!-- ══ MOBILE FILTER CHIPS ════════════════════════════════ -->
     <div
-      class="ov"
-      id="acctOv"
+      class="mobile-filter-bar"
+      id="mobile-filter-bar"
+      role="group"
+      aria-label="Quick filters"
+    ></div>
+
+    <!-- ══ MAIN LAYOUT ════════════════════════════════════════ -->
+    <main class="main" id="main-content">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Filter advisors">
+        <div class="filter-box">
+          <div class="filter-title" id="sidebar-status-label">Availability</div>
+          <div
+            class="filter-options"
+            id="sidebar-status-filters"
+            role="group"
+            aria-labelledby="sidebar-status-label"
+          ></div>
+        </div>
+        <div class="filter-box">
+          <div class="filter-title" id="sidebar-cat-label">Category</div>
+          <div
+            class="filter-options"
+            id="sidebar-cat-filters"
+            role="group"
+            aria-labelledby="sidebar-cat-label"
+          ></div>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <div>
+        <div class="content-header">
+          <div
+            class="chips"
+            id="type-chips"
+            role="group"
+            aria-label="Advisor type filter"
+          ></div>
+          <select
+            class="sort-select"
+            id="sort-select"
+            aria-label="Sort advisors"
+          >
+            <option value="recent">Sort: Active first</option>
+            <option value="rating">Sort: Highest rated</option>
+            <option value="price-low">Sort: Price low–high</option>
+            <option value="price-high">Sort: Price high–low</option>
+          </select>
+        </div>
+        <div class="result-count" id="result-count" aria-live="polite"></div>
+        <div
+          class="advisor-grid"
+          id="advisor-grid"
+          role="list"
+          aria-label="Advisors"
+        ></div>
+      </div>
+    </main>
+
+    <!-- ══ SOCIAL PROOF TOASTS ════════════════════════════════ -->
+    <div
+      class="sp-toast"
+      id="spWrap"
+      aria-live="polite"
+      aria-label="Recent platform activity"
+    ></div>
+
+    <!-- ══ ADVISOR MODAL ══════════════════════════════════════ -->
+    <div
+      class="modal-overlay"
+      id="modal-overlay"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="acctTitle"
+      aria-labelledby="modal-name"
     >
       <div class="modal">
-        <button class="modal-x" id="acctClose" aria-label="Close">
-          <i class="fas fa-times"></i>
+        <div class="modal-top-bar" aria-hidden="true"></div>
+        <button class="modal-close-x" id="modal-close" aria-label="Close">
+          &times;
         </button>
-        <div class="reg-modal-head">
-          <span class="rmh-emoji">🚀</span>
-          <div class="rmh-title" id="acctTitle">
-            Create Your StarHela Account
-          </div>
-          <div class="rmh-sub">
-            Start earning in under 5 minutes — follow 4 easy steps
-          </div>
-          <div class="rmh-badges">
-            <span class="rmh-badge"
-              ><i class="fas fa-bolt"></i> Instant Access</span
-            >
-            <span class="rmh-badge"
-              ><i class="fas fa-lock"></i> One-Time Fee</span
-            >
-            <span class="rmh-badge"
-              ><i class="fas fa-shield-alt"></i> Verified &amp; Safe</span
-            >
-          </div>
-        </div>
-        <div class="reg-steps">
-          <div class="reg-step">
-            <div class="reg-step-ball">1</div>
-            <div class="reg-step-body">
-              <div class="reg-step-h">Open the Registration Link</div>
-              <div class="reg-step-p">
-                Tap to open:
-                <a
-                  href="https://Starhela.com/register.php?ref=sydney"
-                  target="_blank"
-                  rel="noopener"
-                  >Starhela.com/register</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="reg-step">
-            <div class="reg-step-ball">2</div>
-            <div class="reg-step-body">
-              <div class="reg-step-h">Fill In Your Details</div>
-              <div class="reg-fields">
-                <div class="reg-field">
-                  <i class="fas fa-user"></i
-                  ><span><strong>Username</strong> — e.g. Brian2006</span>
-                </div>
-                <div class="reg-field">
-                  <i class="fas fa-phone"></i
-                  ><span><strong>Phone</strong> — e.g. 0712345678</span>
-                </div>
-                <div class="reg-field">
-                  <i class="fas fa-envelope"></i
-                  ><span><strong>Email</strong> — e.g. brian@gmail.com</span>
-                </div>
-                <div class="reg-field">
-                  <i class="fas fa-lock"></i
-                  ><span><strong>Password</strong> — choose a strong one</span>
-                </div>
-                <div class="reg-field">
-                  <i class="fas fa-globe"></i
-                  ><span><strong>Country</strong> — e.g. Kenya</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="reg-step">
-            <div class="reg-step-ball">3</div>
-            <div class="reg-step-body">
-              <div class="reg-step-h">Agree &amp; Create Account</div>
-              <div class="reg-step-p">
-                Tick "I Agree to Terms" then tap
-                <strong style="color: var(--txt)">Create Account</strong>
-              </div>
-            </div>
-          </div>
-          <div class="reg-step">
-            <div class="reg-step-ball">4</div>
-            <div class="reg-step-body" style="padding-bottom: 1.5rem">
-              <div class="reg-step-h">Complete Activation</div>
-              <div class="reg-step-p">
-                Pay the one-time activation fee. Your account goes live
-                <strong style="color: var(--green)">instantly</strong> — no
-                waiting, no recurring charges.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="reg-fee-box">
-          <div class="rfe-icon">✅</div>
+        <div class="modal-profile">
+          <div class="modal-avatar" id="modal-avatar" aria-hidden="true"></div>
           <div>
-            <div class="rfe-h">Account activates instantly after payment</div>
-            <div class="rfe-p">
-              Most active members recover the fee in their first week of
-              chatting.
-            </div>
+            <div class="modal-name" id="modal-name"></div>
+            <div class="modal-handle" id="modal-handle"></div>
+            <div class="modal-status-pill" id="modal-status-pill"></div>
           </div>
         </div>
-        <div class="reg-cta-area">
-          <a
-            href="https://Starhela.com/register.php?ref=sydney"
-            target="_blank"
-            rel="noopener"
-            class="btn-reg-primary"
-            ><i class="fas fa-rocket"></i> Register Now — Start Earning</a
-          >
-          <a
-            href="https://starhela.com/c/U3lkbmV5"
-            target="_blank"
-            rel="noopener"
-            class="btn-reg-login"
-            ><i class="fas fa-sign-in-alt"></i> Already have an account? Log
-            In</a
-          >
-          <div class="reg-trust-row">
-            <span class="reg-trust-item"
-              ><i class="fas fa-shield-alt"></i> Secure</span
+        <hr class="modal-divider" />
+        <div class="modal-auth-wall">
+          <div class="auth-icon" aria-hidden="true">🔐</div>
+          <div class="auth-title">Sign up to start chatting</div>
+          <p class="auth-body">
+            Create your account to connect with
+            <strong id="modal-expert-name"></strong> and thousands of other
+            expert advisors.
+          </p>
+          <div class="auth-btn-row">
+            <button class="btn-reg" id="modal-register-btn">
+              Create Account
+            </button>
+            <button
+              class="btn-ghost"
+              id="modal-later-btn"
+              style="
+                margin-top: 4px;
+                font-size: 12px;
+                color: var(--text-muted);
+                border-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
             >
-            <span class="reg-trust-item"
-              ><i class="fas fa-check-circle"></i> Verified</span
-            >
-            <span class="reg-trust-item"
-              ><i class="fas fa-mobile-alt"></i> M-Pesa Payouts</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- OFFER MODAL -->
-    <div
-      class="ov"
-      id="offerOv"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="offerTitle"
-    >
-      <div class="modal">
-        <button class="modal-x" id="offerClose" aria-label="Close">
-          <i class="fas fa-times"></i>
-        </button>
-        <div class="offer-head">
-          <div class="offer-pulse-ring"><i class="fas fa-comments"></i></div>
-          <div class="offer-h" id="offerTitle">Account Required to Chat</div>
-          <div class="offer-sub">
-            You need an active StarHela account to start earning from chat
-            requests.
-          </div>
-        </div>
-        <div class="offer-body">
-          <div class="offer-info-box">
-            <div class="oib-row">
-              <div class="oib-icon"><i class="fas fa-info-circle"></i></div>
-              <div class="oib-txt">
-                <strong>What's happening?</strong>
-                <p>
-                  This client is waiting for you. To accept their request and
-                  start earning, you need an active account first.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="offer-perks">
-            <div class="offer-perk">
-              <div class="offer-perk-ico g">💸</div>
-              <div class="offer-perk-txt">
-                <strong>Earn $2–$8 per hour</strong
-                ><span
-                  >Chat in Kiswahili — messages auto-translate for clients</span
-                >
-              </div>
-            </div>
-            <div class="offer-perk">
-              <div class="offer-perk-ico a">⚡</div>
-              <div class="offer-perk-txt">
-                <strong>Instant account activation</strong
-                ><span>One-time fee — no monthly charges, no hidden costs</span>
-              </div>
-            </div>
-            <div class="offer-perk">
-              <div class="offer-perk-ico y">📱</div>
-              <div class="offer-perk-txt">
-                <strong>Daily M-Pesa withdrawals</strong
-                ><span>Zero withdrawal fees — paid every day</span>
-              </div>
-            </div>
-          </div>
-          <div class="offer-cta-area">
-            <a
-              href="https://starhela.com/register.php?ref=sydney"
-              target="_blank"
-              rel="noopener"
-              class="btn-offer-main"
-              ><i class="fas fa-user-plus"></i> Create Account &amp; Start
-              Chatting</a
-            >
-            <button class="btn-offer-later" onclick="closeOffer()">
               Maybe later
             </button>
           </div>
@@ -304,764 +320,30 @@
       </div>
     </div>
 
-    <!-- PROFILE MODAL -->
-    <div class="ov" id="pmodOv" role="dialog" aria-modal="true">
-      <div class="modal" id="pmodInner">
-        <button class="modal-x" id="pmodClose" aria-label="Close">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- NOTIFICATION / SOCIAL PROOF / COOKIE -->
-    <div class="notif" id="notif" role="status">
-      <i class="fas fa-check-circle"></i><span id="notifTxt"></span>
-    </div>
-    <div class="sp-wrap" id="spWrap" aria-hidden="true"></div>
-    <div
-      class="cookie-bar"
-      id="cookieBar"
-      role="region"
-      aria-label="Cookie consent"
-    >
-      <p class="cookie-txt">We use cookies to improve your experience.</p>
-      <div class="cookie-btns">
-        <button class="cookie-btn no" id="cookieNo">Decline</button>
-        <button class="cookie-btn ok" id="cookieOk">Accept All</button>
-      </div>
-    </div>
-
-    <!-- WA FLOAT -->
-    <div class="wa-float">
-      <span class="wa-tip">Join WhatsApp Community</span>
-      <a
-        href="https://chat.whatsapp.com/Ir5lbHCr9rPCLuvVzvHAyD"
-        class="wa-btn"
-        target="_blank"
-        rel="noopener"
-        aria-label="WhatsApp"
-        ><i class="fab fa-whatsapp"></i
-      ></a>
-    </div>
-
-    <!-- NAV -->
-    <header class="nav" id="nav" role="banner">
-      <div class="wrap">
-        <div class="nav-inner">
-          <a href="/" class="logo" aria-label="StarHela Home">
-            <img
-              src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png"
-              alt="StarHela Logo"
-              class="logo-img"
-              width="36"
-              height="36"
-            />
-            <span class="logo-name">STAR<em>HELA</em></span>
-          </a>
-          <nav class="nav-links" aria-label="Main navigation">
-            <a href="#browse" onclick="goHome()">Browse</a>
-            <a href="#how" onclick="goHome()">How It Works</a>
-            <a href="#earn" onclick="goHome()">Ways to Earn</a>
-            <a href="#faq" onclick="goHome()">FAQ</a>
-          </nav>
-          <div class="nav-right">
-            <a
-              href="https://starhela.com/c/U3lkbmV5"
-              target="_blank"
-              rel="noopener"
-              class="btn-login"
-              >Login</a
-            >
-            <a
-              href="https://starhela.com/register.php?ref=sydney"
-              target="_blank"
-              rel="noopener"
-              class="btn-join"
-              >Join Now</a
-            >
-            <button
-              class="ham"
-              id="ham"
-              aria-label="Toggle menu"
-              aria-expanded="false"
-            >
-              <span></span><span></span><span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
-      <a href="#browse" onclick="goHome()">Browse Profiles</a>
-      <a href="#how" onclick="goHome()">How It Works</a>
-      <a href="#earn" onclick="goHome()">Ways to Earn</a>
-      <a href="#faq" onclick="goHome()">FAQ</a>
-      <div class="mob-hr"></div>
-      <a
-        href="https://starhela.com/c/U3lkbmV5"
-        target="_blank"
-        rel="noopener"
-        class="mob-cta"
-        ><i class="fas fa-user"></i> Login</a
-      >
-      <a
-        href="https://starhela.com/register.php?ref=sydney"
-        target="_blank"
-        rel="noopener"
-        class="mob-cta"
-        style="background: var(--green2); margin-top: 0.4rem"
-        ><i class="fas fa-rocket"></i> Start Earning</a
-      >
-    </nav>
-
-    <!-- BROWSE PAGE -->
-    <div
-      class="browse-page"
-      id="browsePage"
-      aria-label="Browse available clients"
-    >
-      <div class="browse-page-header">
-        <div class="wrap">
-          <div class="bph-inner">
-            <div class="bph-live">
-              <span id="bpLiveCount">1,312</span>&nbsp;requests live
-            </div>
-            <!-- CHANGE 1: No exact count shown -->
-            <div class="bph-filter-count" id="filterCountBadge">
-              Showing results
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="browse-filter-strip">
-        <div class="wrap">
-          <div class="bfs-inner">
-            <!-- CHANGE 1: Chip counts removed -->
-            <div class="filter-chip on" data-filter="all">
-              <i class="fas fa-th"></i> All
-            </div>
-            <div class="filter-chip" data-filter="uk"><span>🇬🇧</span> UK</div>
-            <div class="filter-chip" data-filter="usa"><span>🇺🇸</span> USA</div>
-            <div class="filter-chip" data-filter="canada">
-              <span>🇨🇦</span> Canada
-            </div>
-            <div class="filter-chip" data-filter="qatar">
-              <span>🇶🇦</span> Qatar
-            </div>
-            <div class="filter-chip" data-filter="premium">
-              <i class="fas fa-star"></i> Premium
-            </div>
-            <div class="filter-chip" data-filter="top">
-              <i class="fas fa-trophy"></i> Top Rated
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="browse-grid-wrap">
-        <div class="wrap">
-          <div
-            class="profile-grid-full"
-            id="browseGrid"
-            role="list"
-            aria-label="Browse all client profiles"
-          ></div>
-          <div class="browse-load-more" id="loadMoreWrap">
-            <button class="btn-load" onclick="loadMoreProfiles()">
-              <i class="fas fa-plus-circle"></i> Load More Profiles
-            </button>
-            <p
-              style="
-                margin-top: 0.875rem;
-                font-size: 0.78rem;
-                color: var(--txt3);
-              "
-            >
-              Register now — access 5,000+ verified clients
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="main-content" id="mainContent">
-      <!-- HERO -->
-      <section class="hero" aria-labelledby="heroH">
-        <div class="hero-bg" aria-hidden="true">
-          <div class="hero-orb a"></div>
-          <div class="hero-orb b"></div>
-          <div class="hero-orb c"></div>
-          <div class="hero-grid"></div>
-        </div>
-        <div class="wrap">
-          <div class="hero-left">
-            <div class="hero-live">
-              <span class="live-dot-pulse" aria-hidden="true"></span>
-              <span class="live-lbl">Earning right now &mdash;</span>&nbsp;
-              <span class="live-num" id="liveCount">2,847</span>&nbsp;
-              <span class="live-lbl">active chatters</span>
-            </div>
-            <h1 class="hero-h1" id="heroH">
-              Chat with people<br />worldwide.<br /><span class="ac"
-                >Get paid daily.</span
-              >
-            </h1>
-            <p class="hero-sub">
-              Connect with verified clients from UK, USA, Canada &amp; Qatar.
-              Chat in Kiswahili or English &mdash; earn $2&ndash;$8 per hour,
-              straight to M-Pesa/MTN Money/Airtel Money.
-            </p>
-            <div class="earn-pills fu">
-              <span class="ep hi"><i class="fas fa-circle"></i> Per Hour</span>
-              <span class="ep hi"
-                ><i class="fas fa-circle"></i> Per Message</span
-              >
-              <span class="ep hi"
-                ><i class="fas fa-circle"></i> Per Session</span
-              >
-              <span class="ep"><i class="fas fa-circle"></i> Tips</span>
-              <span class="ep"
-                ><i class="fas fa-circle"></i> Daily Rewards</span
-              >
-            </div>
-            <div class="hero-actions fu">
-              <button class="btn-primary" onclick="openBrowsePage()">
-                <i class="fas fa-users"></i> Browse People Ready to Chat
-              </button>
-              <a
-                href="https://starhela.com/register.php?ref=sydney"
-                target="_blank"
-                rel="noopener"
-                class="btn-secondary"
-                ><i class="fas fa-user-plus"></i> Create Account</a
-              >
-            </div>
-            <div class="trust-row fu">
-              <span class="trust-item"
-                ><i class="fas fa-shield-alt"></i> Secure &amp; Trusted</span
-              >
-              <span class="trust-item"
-                ><i class="fas fa-bolt"></i> Daily Payouts</span
-              >
-              <span class="trust-item"
-                ><i class="fas fa-globe"></i> 100+ Countries</span
-              >
-            </div>
-          </div>
-          <div class="hero-right">
-            <div class="chat-card" role="region" aria-label="Live chat demo">
-              <div class="chat-head">
-                <img
-                  id="demoAv"
-                  src="https://i.pravatar.cc/88?img=12"
-                  alt="Chat partner"
-                  class="ch-av"
-                  width="38"
-                  height="38"
-                />
-                <div>
-                  <div class="ch-name" id="demoName">
-                    James, 52 &middot; UK &#x1F1EC;&#x1F1E7;
-                  </div>
-                  <div class="ch-status">
-                    <span class="ch-dot"></span> Online now
-                  </div>
-                </div>
-                <div
-                  style="
-                    margin-left: auto;
-                    font-family: &quot;DM Mono&quot;, monospace;
-                    font-size: 0.64rem;
-                    color: rgba(255, 255, 255, 0.72);
-                  "
-                >
-                  $6/hr
-                </div>
-              </div>
-              <div class="chat-msgs" id="demoMsgs" aria-live="polite"></div>
-              <div class="earn-bar">
-                <i class="fas fa-coins"></i> Every reply earns you money
-              </div>
-              <div class="chat-inp-wrap">
-                <input
-                  class="chat-inp"
-                  id="demoInp"
-                  type="text"
-                  placeholder="Type a reply to earn&hellip;"
-                  maxlength="200"
-                  aria-label="Chat message"
-                />
-                <button class="chat-send" id="demoSend" aria-label="Send">
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- BROWSE PREVIEW -->
-      <section class="browse-sec sec" id="browse" aria-labelledby="browseH">
-        <div class="wrap">
-          <div class="sec-head fu">
-            <div class="sec-pill">Live Requests</div>
-            <h2 class="sec-h" id="browseH">People ready to chat with you</h2>
-            <p class="sec-sub">
-              New requests arrive every few minutes. Accept a chat and start
-              earning. <strong>Chat in Kiswahili</strong> &mdash; clients
-              receive auto-translated messages on their side.
-            </p>
-          </div>
-          <div class="live-pill fu">
-            <span
-              style="
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: var(--green2);
-                box-shadow: 0 0 5px var(--green2);
-                display: inline-block;
-                animation: blink 1.8s infinite;
-              "
-            ></span>
-            <span id="activeReqs">1,312</span>&nbsp;requests live now
-          </div>
-          <div
-            class="profile-grid"
-            id="profileGrid"
-            role="list"
-            aria-label="Available chat clients"
-          ></div>
-          <div class="browse-cta fu">
-            <button
-              class="btn-primary"
-              onclick="openBrowsePage()"
-              style="font-size: 0.92rem; padding: 0.82rem 2.25rem"
-            >
-              <i class="fas fa-th-large"></i> View More Profiles
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <p
-              style="
-                margin-top: 0.875rem;
-                font-size: 0.78rem;
-                color: var(--txt3);
-              "
-            >
-              Register now &mdash; access verified clients from 100+ countries
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section class="how-sec sec" id="how" aria-labelledby="howH">
-        <div class="wrap">
-          <div class="sec-head c fu">
-            <div class="sec-pill">Simple Process</div>
-            <h2 class="sec-h" id="howH">Start earning in 3 steps</h2>
-            <p class="sec-sub">
-              From zero to your first paid conversation in under an hour.
-            </p>
-          </div>
-          <div class="steps-grid" role="list">
-            <article
-              class="step-card clickable fu"
-              role="listitem"
-              onclick="openAcctModal()"
-              aria-label="Step 1: Register"
-            >
-              <div class="step-num" aria-hidden="true">1</div>
-              <h3 class="step-h">Register Your Account</h3>
-              <p class="step-p">
-                One-time activation fee. Instantly unlocks access to clients
-                worldwide. No recurring charges.
-              </p>
-              <div class="step-tag">
-                <i class="fas fa-info-circle"></i> Click to see registration
-                steps
-              </div>
-            </article>
-            <article
-              class="step-card fu"
-              role="listitem"
-              style="transition-delay: 0.1s"
-              aria-label="Step 2: Chat"
-            >
-              <div class="step-num" aria-hidden="true">2</div>
-              <h3 class="step-h">Accept Chat Requests</h3>
-              <p class="step-p">
-                Clients from UK, USA, Canada &amp; Qatar send you requests. Chat
-                in Kiswahili &mdash; messages auto-translate. Earn 5 ways per
-                chat.
-              </p>
-              <div class="step-tag">
-                <i class="fas fa-comment"></i> Kiswahili fully supported
-              </div>
-            </article>
-            <article
-              class="step-card fu"
-              role="listitem"
-              style="transition-delay: 0.2s"
-              aria-label="Step 3: Withdraw"
-            >
-              <div class="step-num" aria-hidden="true">3</div>
-              <h3 class="step-h">Withdraw Daily</h3>
-              <p class="step-p">
-                M-Pesa, PayPal, MTN Money, Airtel Money &mdash; zero withdrawal
-                fees, processed every day.
-              </p>
-              <div class="step-tag">
-                <i class="fas fa-dollar-sign"></i> Zero withdrawal fees
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- EARN -->
-      <section class="earn-sec sec" id="earn" aria-labelledby="earnH">
-        <div class="wrap">
-          <div class="sec-head c fu">
-            <div class="sec-pill">Income Methods</div>
-            <h2 class="sec-h" id="earnH">5 ways to earn from every chat</h2>
-            <p class="sec-sub">
-              Most platforms pay one way. StarHela pays five. Stack them all to
-              maximise every conversation.
-            </p>
-          </div>
-          <div class="earn-grid" role="list">
-            <article class="em-card a fu" role="listitem">
-              <span class="em-ico">⏰</span>
-              <h3 class="em-h">Earn Per Hour</h3>
-              <div class="em-earn">$2&ndash;$8 / hr</div>
-              <p class="em-p">
-                Auto-tracked for every hour of conversation. The longer you
-                chat, the more you earn.
-              </p>
-            </article>
-            <article
-              class="em-card b fu"
-              role="listitem"
-              style="transition-delay: 0.07s"
-            >
-              <span class="em-ico">💬</span>
-              <h3 class="em-h">Earn Per Message</h3>
-              <div class="em-earn">Every reply pays</div>
-              <p class="em-p">
-                Your balance updates instantly with every message you send.
-              </p>
-            </article>
-            <article
-              class="em-card c fu"
-              role="listitem"
-              style="transition-delay: 0.14s"
-            >
-              <span class="em-ico">📋</span>
-              <h3 class="em-h">Earn Per Session</h3>
-              <div class="em-earn">$2&ndash;$4 / session</div>
-              <p class="em-p">
-                Complete a full 20&ndash;60 min session and receive a flat
-                payment on completion.
-              </p>
-            </article>
-            <article
-              class="em-card d fu"
-              role="listitem"
-              style="transition-delay: 0.21s"
-            >
-              <span class="em-ico">🎁</span>
-              <h3 class="em-h">Tips &amp; Bonuses</h3>
-              <div class="em-earn">Extra on top</div>
-              <p class="em-p">
-                Happy clients send voluntary tips &mdash; added on top of your
-                base earnings.
-              </p>
-            </article>
-            <article
-              class="em-card e fu"
-              role="listitem"
-              style="transition-delay: 0.28s"
-            >
-              <span class="em-ico">🏆</span>
-              <h3 class="em-h">Daily Rewards</h3>
-              <div class="em-earn">Streak bonuses</div>
-              <p class="em-p">
-                Stay active daily and unlock increasing streak bonuses &mdash;
-                consistency pays extra.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHY -->
-      <section class="why-sec sec" aria-labelledby="whyH">
-        <div class="wrap">
-          <div class="sec-head c fu">
-            <div class="sec-pill">Why StarHela</div>
-            <h2 class="sec-h" id="whyH">Built for African earners</h2>
-          </div>
-          <div class="why-grid fu">
-            <div class="why-card">
-              <div class="why-ico">🇰🇪</div>
-              <div class="why-h">Kiswahili First</div>
-              <p class="why-p">
-                Chat entirely in Kiswahili. Messages auto-translate for
-                international clients.
-              </p>
-            </div>
-            <div class="why-card">
-              <div class="why-ico">📱</div>
-              <div class="why-h">Phone-First</div>
-              <p class="why-p">
-                No computer needed. Works on any Android or iOS smartphone with
-                internet.
-              </p>
-            </div>
-            <div class="why-card">
-              <div class="why-ico">💸</div>
-              <div class="why-h">M-Pesa Payouts</div>
-              <p class="why-p">
-                Daily withdrawals direct to your M-Pesa, MTN Money, or PayPal.
-                Zero fees.
-              </p>
-            </div>
-            <div class="why-card">
-              <div class="why-ico">🔒</div>
-              <div class="why-h">Safe &amp; Verified</div>
-              <p class="why-p">
-                All clients verified. Conversations are text-only and moderated
-                for safety.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FLAGS -->
-      <section class="flags-sec" aria-label="Available countries">
-        <div class="wrap">
-          <div class="sec-head c fu" style="margin-bottom: 0">
-            <div class="sec-pill">100+ Countries</div>
-            <h2 class="sec-h" style="font-size: clamp(1.4rem, 3vw, 2rem)">
-              Earn in your local currency
-            </h2>
-          </div>
-          <div class="flags-grid fu">
-            <span class="flag-chip">🇰🇪 Kenya <em>KES 1K–2K/day</em></span>
-            <span class="flag-chip">🇺🇬 Uganda <em>UGX 50K/day</em></span>
-            <span class="flag-chip">🇬🇭 Ghana <em>GHS 150/day</em></span>
-            <span class="flag-chip">🇹🇿 Tanzania <em>TZS 15K/day</em></span>
-            <span class="flag-chip">🇳🇬 Nigeria <em>₦800/day</em></span>
-            <span class="flag-chip">🇿🇦 South Africa <em>ZAR 70/day</em></span>
-            <span class="flag-chip">🇿🇲 Zambia <em>ZMW 150/day</em></span>
-            <span class="flag-chip">🇨🇲 Cameroon <em>XAF 50K/day</em></span>
-            <span class="flag-chip">🌍 &amp; 100+ more countries</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="faq-sec sec" id="faq" aria-labelledby="faqH">
-        <div class="wrap">
-          <div class="sec-head c fu">
-            <div class="sec-pill">FAQ</div>
-            <h2 class="sec-h" id="faqH">Common questions</h2>
-          </div>
-          <div class="faq-wrap" id="faqWrap" role="list"></div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="cta-sec" aria-labelledby="ctaH">
-        <div class="cta-inner">
-          <div
-            class="sec-pill"
-            style="
-              background: rgba(255, 255, 255, 0.14);
-              color: #fff;
-              border-color: rgba(255, 255, 255, 0.28);
-              margin-bottom: 1rem;
-            "
+    <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+    <footer class="page-footer">
+      <div class="page-footer-inner">
+        <a href="/index.html" class="page-footer-home">← Back to StarHela</a>
+        <div class="page-footer-links">
+          <a
+            href="https://starhela.com/register.php?ref=sydney"
+            rel="noopener noreferrer"
+            >Register</a
           >
-            Join 15,000+ Earners
-          </div>
-          <h2 class="cta-h" id="ctaH">
-            Start earning today.<br />From your phone.
-          </h2>
-          <p class="cta-sub">
-            Chat. Earn. Withdraw daily. No experience needed.
-          </p>
-          <div class="cta-btns">
-            <a
-              href="https://Starhela.com/register.php?ref=sydney"
-              target="_blank"
-              rel="noopener"
-              class="btn-white"
-              ><i class="fas fa-rocket"></i> Start Chatting Now</a
-            >
-          </div>
+          <a href="https://starhela.com/c/U3lkbmV5" rel="noopener noreferrer"
+            >Sign In</a
+          >
+          <a href="https://wa.me/254729743223" rel="noopener noreferrer"
+            >WhatsApp Support</a
+          >
+          <a href="mailto:starhelaofficials@gmail.com">Contact</a>
         </div>
-      </section>
+        <div class="page-footer-copy">
+          &copy; 2025 StarHela &middot; 🌍 Trusted Worldwide
+        </div>
+      </div>
+    </footer>
 
-      <!-- FOOTER -->
-      <footer class="footer" role="contentinfo">
-        <div class="footer-main">
-          <div class="wrap">
-            <div class="footer-grid">
-              <div class="f-brand-wrap">
-                <div class="f-brand">
-                  <img
-                    src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png"
-                    alt="StarHela"
-                    class="f-brand-logo"
-                    width="34"
-                    height="34"
-                  />
-                  <div class="f-brand-name">STAR<em>HELA</em></div>
-                </div>
-                <p class="f-tagline">
-                  <strong style="color: rgba(255, 255, 255, 0.7)"
-                    >Starhela Agencies</strong
-                  >
-                  — Africa's #1 trusted online earning platform. Thousands
-                  earning daily. Step-by-step guidance and real money-making
-                  opportunities for Kenyans and Africans.
-                </p>
-                <div class="f-socials">
-                  <a
-                    href="https://wa.me/254729743223"
-                    target="_blank"
-                    rel="noopener"
-                    class="f-social-btn wa"
-                    aria-label="WhatsApp"
-                    ><i class="fab fa-whatsapp"></i
-                  ></a>
-                  <a
-                    href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
-                    target="_blank"
-                    rel="noopener"
-                    class="f-social-btn"
-                    aria-label="Updates Channel"
-                    ><i class="fab fa-whatsapp"></i
-                  ></a>
-                  <a
-                    href="mailto:starhelaofficials@gmail.com"
-                    class="f-social-btn"
-                    aria-label="Email"
-                    ><i class="fas fa-envelope"></i
-                  ></a>
-                  <a
-                    href="tel:+254729743223"
-                    class="f-social-btn"
-                    aria-label="Phone"
-                    ><i class="fas fa-phone"></i
-                  ></a>
-                </div>
-                <div class="f-contact-chips">
-                  <a href="tel:+254729743223" class="f-contact-chip"
-                    ><i class="fas fa-phone"></i> +254 729 743 223</a
-                  >
-                  <a
-                    href="mailto:starhelaofficials@gmail.com"
-                    class="f-contact-chip"
-                    ><i class="fas fa-envelope"></i>
-                    starhelaofficials@gmail.com</a
-                  >
-                </div>
-              </div>
-              <div>
-                <div class="f-col-h">Platform</div>
-                <div class="f-links">
-                  <a href="#browse" onclick="goHome()">Browse Profiles</a>
-                  <a href="#how" onclick="goHome()">How It Works</a>
-                  <a href="#earn" onclick="goHome()">Earning Methods</a>
-                  <a href="#faq" onclick="goHome()">FAQ</a>
-                </div>
-              </div>
-              <div>
-                <div class="f-col-h">Get Started</div>
-                <div class="f-links">
-                  <a
-                    href="https://starhela.com/register.php?ref=sydney"
-                    target="_blank"
-                    rel="noopener"
-                    >Register &amp; Start Earning</a
-                  >
-                  <a
-                    href="https://starhela.com/c/U3lkbmV5"
-                    target="_blank"
-                    rel="noopener"
-                    >Login to Account</a
-                  >
-                  <a
-                    href="https://wa.me/254729743223"
-                    target="_blank"
-                    rel="noopener"
-                    >WhatsApp Guidance</a
-                  >
-                  <a
-                    href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
-                    target="_blank"
-                    rel="noopener"
-                    >Join Updates Channel</a
-                  >
-                </div>
-              </div>
-              <div>
-                <div class="f-col-h">Countries</div>
-                <div class="f-links">
-                  <a href="/countries/kenya.html">Kenya</a>
-                  <a href="/countries/uganda.html">Uganda</a>
-                  <a href="/countries/tanzania.html">Tanzania</a>
-                  <a href="/countries/zambia.html">Zambia</a>
-                  <a href="/countries/cameroon.html">Cameroon</a>
-                  <a href="/countries/ghana.html">Ghana</a>
-                  <a href="/countries/nigeria.html">Nigeria</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="wrap">
-            <div class="footer-bottom-inner">
-              <div class="f-copy">
-                &copy; 2025 StarHela Agencies
-                <span class="f-copy-sep">·</span>
-                <a
-                  href="https://starhela.com/register.php?ref=sydney"
-                  target="_blank"
-                  rel="noopener"
-                  >Register</a
-                >
-                <span class="f-copy-sep">·</span>
-                <a
-                  href="https://starhela.com/c/U3lkbmV5"
-                  target="_blank"
-                  rel="noopener"
-                  >Login</a
-                >
-              </div>
-              <div class="f-trust-badges">
-                <span class="f-trust-badge"
-                  ><i class="fas fa-shield-alt"></i> Secure</span
-                >
-                <span class="f-trust-badge"
-                  ><i class="fas fa-check-circle"></i> Verified</span
-                >
-                <span class="f-trust-badge"
-                  ><i class="fas fa-globe"></i> 100+ Countries</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <script src="../js/chatting.js"></script>
+    <script src="/js/chatting.js"></script>
   </body>
 </html>

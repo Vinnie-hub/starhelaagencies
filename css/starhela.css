@@ -229,7 +229,7 @@ input,textarea,select{font-family:inherit}
 .nav-inner{display:flex;align-items:center;height:100%;gap:12px}
 .nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .nav-logo img{width:34px;height:34px;border-radius:9px;object-fit:contain}
-.nav-logo-name{font-family:var(--font-head);font-size:.95rem;font-weight:800;letter-spacing:.08em;background:linear-gradient(120deg,var(--txt) 0%,var(--brand-lt) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-logo-name{font-family:var(--font-head);font-size:1.6rem;font-weight:800;letter-spacing:.08em;background:linear-gradient(120deg,var(--txt) 0%,var(--brand-lt) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .nav-links{display:flex;align-items:center;gap:4px;margin-left:auto}
 .nav-link{font-size:.83rem;font-weight:500;color:var(--txt-2);padding:6px 13px;border-radius:8px;transition:color var(--t),background var(--t)}
 .nav-link:hover{color:var(--txt);background:var(--bg-4)}
