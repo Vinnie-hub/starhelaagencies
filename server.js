@@ -77,7 +77,9 @@ app.use((req, res, next) => {
   }
 
   // Try: /earn/surveys → earn/surveys.html
-  const htmlPath = path.join(ROOT, url + HTML_EXT);
+  // Strip leading slash so path.join works correctly on Windows
+  const relativePath = url.startsWith('/') ? url.slice(1) : url;
+  const htmlPath = path.join(ROOT, relativePath + HTML_EXT);
 
   if (fileExists(htmlPath)) {
     // Serve the .html file at the clean URL
