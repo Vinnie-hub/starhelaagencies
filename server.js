@@ -10,16 +10,16 @@
    Usage:  npm run dev    (or:  node server.js)
    ═══════════════════════════════════════════════════════ */
 
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
 
 const app = express();
 const PORT = process.env.PORT || 5500;
 const ROOT = __dirname;
 
 /* ── Helpers ────────────────────────────────────── */
-const HTML_EXT = '.html';
+const HTML_EXT = ".html";
 
 /** Check if a file exists */
 function fileExists(filePath) {
@@ -32,9 +32,9 @@ function fileExists(filePath) {
 
 /** Normalise path, strip trailing slash (except root) */
 function cleanPath(p) {
-  let normalised = path.normalize(p).replace(/\\/g, '/');
+  let normalised = path.normalize(p).replace(/\\/g, "/");
   // Remove trailing slash unless it's the root
-  if (normalised.length > 1 && normalised.endsWith('/')) {
+  if (normalised.length > 1 && normalised.endsWith("/")) {
     normalised = normalised.slice(0, -1);
   }
   return normalised;
@@ -42,8 +42,8 @@ function cleanPath(p) {
 
 /* ── Middleware: Security headers (match .htaccess) ── */
 app.use((_req, res, next) => {
-  res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
   next();
 });
 
@@ -57,10 +57,10 @@ app.use((req, res, next) => {
   }
 
   // Build clean URL: strip .html
-  const cleanUrl = url.slice(0, -HTML_EXT.length) || '/';
+  const cleanUrl = url.slice(0, -HTML_EXT.length) || "/";
 
   // Preserve query string
-  const qs = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+  const qs = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
   const redirectUrl = cleanUrl + qs;
 
   // 301 Permanent Redirect
@@ -72,13 +72,13 @@ app.use((req, res, next) => {
   const url = cleanPath(req.path);
 
   // Skip root (handled by Express static) and non-HTML requests
-  if (url === '/' || url.includes('.')) {
+  if (url === "/" || url.includes(".")) {
     return next();
   }
 
   // Try: /earn/surveys → earn/surveys.html
   // Strip leading slash so path.join works correctly on Windows
-  const relativePath = url.startsWith('/') ? url.slice(1) : url;
+  const relativePath = url.startsWith("/") ? url.slice(1) : url;
   const htmlPath = path.join(ROOT, relativePath + HTML_EXT);
 
   if (fileExists(htmlPath)) {
@@ -91,34 +91,36 @@ app.use((req, res, next) => {
 });
 
 /* ── Serve static files (CSS, JS, images, fonts, etc.) ── */
-app.use(express.static(ROOT, {
-  index: 'index.html',
-  setHeaders(res, filePath) {
-    // Set correct MIME types for common extensions
-    const ext = path.extname(filePath).toLowerCase();
-    const mimeMap = {
-      '.css':  'text/css',
-      '.js':   'application/javascript',
-      '.json': 'application/json',
-      '.png':  'image/png',
-      '.jpg':  'image/jpeg',
-      '.jpeg': 'image/jpeg',
-      '.gif':  'image/gif',
-      '.svg':  'image/svg+xml',
-      '.webp': 'image/webp',
-      '.ico':  'image/x-icon',
-      '.woff': 'font/woff',
-      '.woff2':'font/woff2',
-      '.ttf':  'font/ttf',
-      '.xml':  'application/xml',
-      '.txt':  'text/plain',
-      '.pdf':  'application/pdf',
-    };
-    if (mimeMap[ext]) {
-      res.setHeader('Content-Type', mimeMap[ext]);
-    }
-  },
-}));
+app.use(
+  express.static(ROOT, {
+    index: "index.html",
+    setHeaders(res, filePath) {
+      // Set correct MIME types for common extensions
+      const ext = path.extname(filePath).toLowerCase();
+      const mimeMap = {
+        ".css": "text/css",
+        ".js": "application/javascript",
+        ".json": "application/json",
+        ".png": "image/png",
+        ".jpg": "image/jpeg",
+        ".jpeg": "image/jpeg",
+        ".gif": "image/gif",
+        ".svg": "image/svg+xml",
+        ".webp": "image/webp",
+        ".ico": "image/x-icon",
+        ".woff": "font/woff",
+        ".woff2": "font/woff2",
+        ".ttf": "font/ttf",
+        ".xml": "application/xml",
+        ".txt": "text/plain",
+        ".pdf": "application/pdf",
+      };
+      if (mimeMap[ext]) {
+        res.setHeader("Content-Type", mimeMap[ext]);
+      }
+    },
+  }),
+);
 
 /* ── 404 fallback ────────────────────────────────── */
 app.use((_req, res) => {

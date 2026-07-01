@@ -24,6 +24,7 @@ starhelaagencies/
 ## Design System
 
 All pages share a unified design system via `css/starhela.css`:
+
 - CSS Custom Properties for consistent tokens
 - Dark/Light theme support via `data-theme` attribute
 - Mobile-first responsive design

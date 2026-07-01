@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Starhela Agencies website — clean URL local dev server",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.4"
   }
 }

@@ -6,7 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
-    <title>Starhela Kenya | Pata Pesa Ukizungumza na Wageni – Malipo Kupitia M-Pesa</title>
+    <title>
+      Starhela Kenya | Pata Pesa Ukizungumza na Wageni – Malipo Kupitia M-Pesa
+    </title>
     <link rel="stylesheet" href="/css/countries.css" />
     <meta
       name="description"
@@ -2378,7 +2380,7 @@
         }
       }
     </style>
-      <link rel="stylesheet" href="/css/countries-fixes.css" />
+    <link rel="stylesheet" href="/css/countries-fixes.css" />
   </head>
   <body>
     <!-- LOADER -->
@@ -2523,7 +2525,12 @@
       <a href="#about" class="go-register">Kuhusu</a>
       <a href="#earn" class="go-register">Njia za Kupata Pesa</a>
       <a href="#faq" class="go-register">Maswali</a>
-      <a href="https://starhela.com/register.php?ref=sydney" class="btn-nav" target="_blank">Jiunge Sasa →</a>
+      <a
+        href="https://starhela.com/register.php?ref=sydney"
+        class="btn-nav"
+        target="_blank"
+        >Jiunge Sasa →</a
+      >
     </div>
 
     <main>
@@ -3817,7 +3824,7 @@
         hamburger.addEventListener("click", () => {
           mobileMenu.classList.toggle("open");
         });
-        document.querySelectorAll("#mobileMenu a").forEach(link => {
+        document.querySelectorAll("#mobileMenu a").forEach((link) => {
           link.addEventListener("click", () => {
             mobileMenu.classList.remove("open");
           });
@@ -3868,18 +3875,20 @@
         });
       });
       // Null-safe modal wiring (auto-patched)
-if (typeof modalClose !== 'undefined' && modalClose) {
-  modalClose.addEventListener('click', closeModal);
-}
-if (typeof modal !== 'undefined' && modal) {
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-}
-if (typeof modalProceed !== 'undefined' && modalProceed) {
-  modalProceed.addEventListener('click', () => {
-    closeModal();
-    window.open('https://starhela.com/register.php?ref=sydney', '_blank');
-  });
-}
+      if (typeof modalClose !== "undefined" && modalClose) {
+        modalClose.addEventListener("click", closeModal);
+      }
+      if (typeof modal !== "undefined" && modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+      if (typeof modalProceed !== "undefined" && modalProceed) {
+        modalProceed.addEventListener("click", () => {
+          closeModal();
+          window.open("https://starhela.com/register.php?ref=sydney", "_blank");
+        });
+      }
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
       });
