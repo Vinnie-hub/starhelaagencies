@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+        /* ═══════════════════════════════════════════
    STARHELA AGENCIES — SHARED FRAMEWORK
    ═══════════════════════════════════════════ */
 
@@ -638,4 +638,12 @@
         } else {
           init();
         }
+      })();
+      
+      (function () {
+        var s = localStorage.getItem("sh-theme"),
+          p = window.matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.setAttribute("data-theme", s || p);
       })();

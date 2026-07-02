@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en" data-theme="dark">
   <head>
@@ -134,502 +133,13 @@
         href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap"
     /></noscript>
 
-    <link rel="stylesheet" href="css/starhela.css" />
-    <script defer src="js/starhela.js"></script>
-    <script>
-      (function () {
-        var s = localStorage.getItem("sh-theme"),
-          p = window.matchMedia("(prefers-color-scheme:dark)").matches
-            ? "dark"
-            : "light";
-        document.documentElement.setAttribute("data-theme", s || p);
-      })();
-    </script>
-
-    <style>
-      .hero-feats {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 34px;
-      }
-      .hero-feat {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.9rem;
-        color: var(--txt-2);
-      }
-      .feat-check {
-        width: 20px;
-        height: 20px;
-        border-radius: 6px;
-        background: rgba(124, 58, 237, 0.18);
-        border: 1px solid rgba(124, 58, 237, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.6rem;
-        color: var(--brand-lt);
-        flex-shrink: 0;
-      }
-      .sec-sub a {
-        color: var(--brand-lt);
-        font-weight: 700;
-      }
-      [data-theme="light"] .hero-card .er-val {
-        color: #059669;
-      }
-      [data-theme="light"] .hero-card .htotal-amount {
-        color: #059669;
-      }
-      [data-theme="light"] .hero-card .hcard-live {
-        color: #059669;
-        border-color: rgba(5, 150, 105, 0.3);
-        background: rgba(5, 150, 105, 0.1);
-      }
-      [data-theme="light"] .hero-card .hcard-live-dot {
-        background: #059669;
-      }
-      [data-theme="light"] .hero-card .er-tag {
-        background: rgba(245, 158, 11, 0.2);
-        color: #b45309;
-      }
-      [data-theme="light"] .hero-card .er-tag.passive {
-        background: rgba(124, 58, 237, 0.15);
-        color: var(--brand);
-      }
-      [data-theme="light"] .hero-card .hcard-total {
-        background: rgba(124, 58, 237, 0.08);
-        border-color: rgba(124, 58, 237, 0.2);
-      }
-      [data-theme="light"] .hero-proof-text {
-        color: rgba(0, 0, 0, 0.5);
-      }
-      [data-theme="light"] .hero-proof-text strong {
-        color: var(--txt);
-      }
-      [data-theme="light"] .cb-ribbon {
-        background: linear-gradient(90deg, #047857, #059669);
-      }
-      [data-theme="light"] .cb-ribbon-title {
-        color: #fff;
-      }
-      [data-theme="light"] .cb-ribbon-live {
-        color: rgba(255, 255, 255, 0.9);
-      }
-      [data-theme="light"] .cb-h2 {
-        color: #fff;
-      }
-      [data-theme="light"] .cb-h2 span {
-        color: #c4b5fd;
-      }
-      [data-theme="light"] .cb-desc {
-        color: rgba(255, 255, 255, 0.8);
-      }
-      [data-theme="light"] .cb-pill {
-        background: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.2);
-        color: rgba(255, 255, 255, 0.85);
-      }
-      [data-theme="light"] .cb-method {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.12);
-      }
-      [data-theme="light"] .cb-method:hover {
-        background: rgba(167, 139, 250, 0.2);
-        border-color: rgba(167, 139, 250, 0.35);
-      }
-      [data-theme="light"] .cbm-title {
-        color: rgba(255, 255, 255, 0.9);
-      }
-      [data-theme="light"] .cbm-rate {
-        color: #c4b5fd;
-      }
-      [data-theme="light"] .cb-trust-item {
-        color: rgba(255, 255, 255, 0.5);
-      }
-      [data-theme="light"] .cb-eyebrow {
-        color: #c4b5fd;
-        background: rgba(167, 139, 250, 0.2);
-        border-color: rgba(167, 139, 250, 0.35);
-      }
-    </style>
-  
-<style id="starhela-clarity-overrides">
-/* ═══════════════════════════════════════════
-   STARHELA — CLARITY & RESPONSIVENESS OVERRIDES
-   Appended after original styles. Only refines
-   tokens, contrast, spacing, and breakpoints.
-   ═══════════════════════════════════════════ */
-
-/* ── REFINED TOKENS: DARK ─────────────────── */
-:root {
-  --bg:        #070614;
-  --bg-2:      #0d0b22;
-  --bg-3:      #15122f;
-  --bg-4:      #1d1a40;
-  --surface:   #16143a;
-  --sf-2:      #201d48;
-  --border:    rgba(167,139,250,0.20);
-  --border-2:  rgba(255,255,255,0.09);
-  --txt:       #f4f1ff;
-  --txt-2:     #c9c3ea;
-  --txt-3:     #8079b0;
-  --shadow:    0 10px 30px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.35);
-  --shadow-lg: 0 30px 70px rgba(0,0,0,0.65), 0 6px 18px rgba(0,0,0,0.4);
-  --nav-bg:    rgba(7,6,20,0.82);
-  --focus:     0 0 0 3px rgba(167,139,250,0.55);
-}
-
-/* ── REFINED TOKENS: LIGHT ────────────────── */
-[data-theme="light"] {
-  --bg:        #f6f3ff;
-  --bg-2:      #ffffff;
-  --bg-3:      #efeaff;
-  --bg-4:      #e3dcfb;
-  --surface:   #ffffff;
-  --sf-2:      #f4efff;
-  --border:    rgba(91,33,182,0.22);
-  --border-2:  rgba(15,10,40,0.10);
-  --txt:       #14092e;         /* stronger contrast */
-  --txt-2:     #372a63;         /* was too light */
-  --txt-3:     #6a608f;
-  --shadow:    0 8px 24px rgba(91,33,182,0.10), 0 2px 6px rgba(91,33,182,0.06);
-  --shadow-lg: 0 24px 60px rgba(91,33,182,0.16), 0 6px 16px rgba(91,33,182,0.08);
-  --nav-bg:    rgba(255,255,255,0.88);
-  --focus:     0 0 0 3px rgba(124,58,237,0.35);
-}
-
-/* ── GLOBAL TYPE & BACKGROUND CLARITY ─────── */
-html { scroll-padding-top: calc(var(--nav-h) + 16px); }
-body {
-  background:
-    radial-gradient(1200px 600px at 85% -10%, color-mix(in oklab, var(--brand) 14%, transparent), transparent 60%),
-    radial-gradient(900px 500px at -10% 20%, color-mix(in oklab, var(--brand-lt) 10%, transparent), transparent 60%),
-    var(--bg);
-  color: var(--txt);
-  font-size: clamp(15px, 0.9rem + 0.2vw, 17px);
-  line-height: 1.6;
-}
-[data-theme="light"] body {
-  background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(124,58,237,0.08), transparent 60%),
-    radial-gradient(900px 500px at -10% 20%, rgba(6,182,212,0.06), transparent 60%),
-    var(--bg);
-}
-
-h1,h2,h3,h4 { font-family: var(--font-head); color: var(--txt); letter-spacing: -0.01em; line-height: 1.15; }
-h1 { font-size: clamp(2rem, 4.8vw + 0.5rem, 3.75rem); font-weight: 800; }
-h2 { font-size: clamp(1.6rem, 2.6vw + 0.5rem, 2.5rem); font-weight: 800; }
-h3 { font-size: clamp(1.15rem, 1.2vw + 0.6rem, 1.5rem); font-weight: 700; }
-p  { color: var(--txt-2); }
-
-/* Better text contrast for muted copy in light mode */
-[data-theme="light"] .muted,
-[data-theme="light"] .subtle,
-[data-theme="light"] small,
-[data-theme="light"] p { color: var(--txt-2); }
-
-/* Universal link visibility */
-a { color: inherit; }
-a:hover { color: var(--brand-lt); }
-[data-theme="light"] a:hover { color: var(--brand-dk); }
-
-/* Focus visibility for accessibility, both themes */
-:where(a,button,input,select,textarea,[tabindex]):focus-visible {
-  outline: none;
-  box-shadow: var(--focus);
-  border-radius: 8px;
-}
-
-/* ── SURFACES: cards/panels legible in both modes ── */
-.card, .panel, .box, .tile, section > .wrap > article,
-[class*="card"], [class*="panel"], [class*="tile"] {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--txt);
-  box-shadow: var(--shadow);
-  border-radius: var(--r);
-}
-[data-theme="light"] .card,
-[data-theme="light"] .panel,
-[data-theme="light"] [class*="card"],
-[data-theme="light"] [class*="panel"] {
-  background: var(--bg-2);
-  border-color: var(--border);
-}
-
-/* Buttons — ensure contrast */
-button, .btn, [class*="btn"] {
-  transition: transform var(--t), box-shadow var(--t), background var(--t), color var(--t);
-}
-button:hover, .btn:hover, [class*="btn"]:hover { transform: translateY(-1px); }
-button:active, .btn:active { transform: translateY(0); }
-
-/* Inputs — consistent + accessible */
-input, textarea, select {
-  background: var(--sf-2);
-  color: var(--txt);
-  border: 1px solid var(--border);
-  border-radius: var(--r-sm);
-  padding: 0.75rem 1rem;
-  width: 100%;
-  transition: border-color var(--t), box-shadow var(--t), background var(--t);
-}
-input::placeholder, textarea::placeholder { color: var(--txt-3); }
-input:focus, textarea:focus, select:focus {
-  border-color: var(--brand-lt);
-  background: var(--bg-2);
-}
-[data-theme="light"] input,
-[data-theme="light"] textarea,
-[data-theme="light"] select { background: #fff; }
-
-/* ── NAV ────────────────────────────────── */
-nav, header nav, .nav, .navbar, [class*="navbar"] {
-  background: var(--nav-bg);
-  backdrop-filter: saturate(160%) blur(14px);
-  -webkit-backdrop-filter: saturate(160%) blur(14px);
-  border-bottom: 1px solid var(--border);
-}
-
-/* ── SCROLLBAR ──────────────────────────── */
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-thumb {
-  background: color-mix(in oklab, var(--brand) 45%, transparent);
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in oklab, var(--brand) 70%, transparent);
-  background-clip: padding-box;
-  border: 2px solid transparent;
-}
-
-/* ── UTILITY / LAYOUT ───────────────────── */
-.wrap, .container, [class*="container"] {
-  width: 100%;
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: clamp(16px, 4vw, 48px);
-}
-
-img, video, svg { max-width: 100%; height: auto; }
-
-/* Grid helpers become fluid */
-[class*="grid"] { gap: clamp(14px, 2.2vw, 28px); }
-
-/* ── RESPONSIVE: TABLET ≤1024 ───────────── */
-@media (max-width: 1024px) {
-  :root { --nav-h: 68px; }
-  h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); }
-  h2 { font-size: clamp(1.5rem, 3.6vw, 2.2rem); }
-  .wrap, .container { padding-inline: clamp(16px, 3.5vw, 32px); }
-  section { padding-block: clamp(40px, 6vw, 72px); }
-}
-
-/* ── RESPONSIVE: MOBILE ≤768 ────────────── */
-@media (max-width: 768px) {
-  :root { --nav-h: 62px; --r: 18px; --r-lg: 22px; --r-xl: 28px; }
-  html { scroll-padding-top: calc(var(--nav-h) + 12px); }
-  body { font-size: 15.5px; }
-  h1 { font-size: clamp(1.75rem, 7vw, 2.4rem); }
-  h2 { font-size: clamp(1.4rem, 5.5vw, 1.9rem); }
-  h3 { font-size: 1.15rem; }
-
-  /* Any horizontal row: allow wrapping */
-  header, nav, .row, [class*="row"], [class*="flex"] { flex-wrap: wrap; }
-
-  /* Any multi-col grid becomes single/2-col */
-  [style*="grid-template-columns"],
-  [class*="cols-3"], [class*="cols-4"], [class*="grid-3"], [class*="grid-4"] {
-    grid-template-columns: 1fr !important;
-  }
-  [class*="cols-2"], [class*="grid-2"] {
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr)) !important;
-  }
-
-  /* Text truncation safety */
-  h1, h2, h3, p { overflow-wrap: anywhere; word-break: break-word; }
-
-  /* Buttons full width when stacked */
-  .btn-block, .btn-full, form button[type="submit"] { width: 100%; }
-
-  /* Cards/panels tighten padding */
-  .card, .panel, [class*="card"], [class*="panel"] { padding: clamp(14px, 4vw, 20px); }
-
-  section { padding-block: clamp(32px, 8vw, 56px); }
-}
-
-/* ── RESPONSIVE: SMALL PHONES ≤420 ──────── */
-@media (max-width: 420px) {
-  html { font-size: 15px; }
-  h1 { font-size: clamp(1.55rem, 8vw, 2rem); }
-  .wrap, .container { padding-inline: 14px; }
-  .btn, button { padding: 0.7rem 1rem; font-size: 0.95rem; }
-}
-
-/* ── LANDSCAPE-PHONE HEIGHT-CONSTRAINED ──── */
-@media (max-height: 520px) and (orientation: landscape) {
-  section { padding-block: 32px; }
-  #pageLoader .loader-star { width: 54px; height: 54px; }
-}
-
-/* ── LIGHT MODE: images & dark overlays soften ── */
-[data-theme="light"] img { filter: none; }
-[data-theme="light"] [style*="background:#000"],
-[data-theme="light"] [style*="background: #000"] {
-  background: var(--bg-2) !important;
-  color: var(--txt);
-}
-
-/* ── LIGHT MODE: any hard-coded white text becomes readable ── */
-[data-theme="light"] :where(section, article, main) [style*="color:#fff"],
-[data-theme="light"] :where(section, article, main) [style*="color: #fff"] {
-  color: var(--txt) !important;
-}
-
-/* ── MOTION-REDUCE RESPECT ──────────────── */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ── PRINT ──────────────────────────────── */
-@media print {
-  #pageLoader, nav, footer, .no-print { display: none !important; }
-  body { background: #fff; color: #000; }
-}
-
-/* ═══════════════════════════════════════════
-   LIGHT-MODE READABILITY PATCH
-   Targets specific selectors that hardcoded
-   white text or near-black overlays, making
-   them unreadable in light mode.
-   ═══════════════════════════════════════════ */
-
-[data-theme="light"] {
-  /* Hero + body-level text that was #fff / #eeeaff */
-  .hero-eyebrow,
-  .hero-proof-text,
-  .hero-proof-text strong,
-  .er-tag,
-  .pt-label {
-    color: var(--txt) !important;
-  }
-  .hero-proof-text { color: var(--txt-2) !important; }
-  .hero-proof-text strong { color: var(--brand-dk) !important; }
-
-  /* Eyebrow chips visible on light bg */
-  .hero-eyebrow, .pt-label, .er-tag {
-    background: color-mix(in oklab, var(--brand) 10%, transparent);
-    border: 1px solid color-mix(in oklab, var(--brand) 25%, transparent);
-  }
-
-  /* CHAT BLOCK — override the still-dark purple gradient with a light-mode gradient */
-  .chat-block {
-    background: linear-gradient(140deg,
-      #ffffff 0%,
-      #f4efff 40%,
-      #ece3ff 100%) !important;
-    border: 2px solid rgba(124, 58, 237, 0.25) !important;
-    color: var(--txt) !important;
-    box-shadow: var(--shadow-lg);
-  }
-  .chat-block .cb-h2,
-  .chat-block .cb-desc,
-  .chat-block .cbm-title,
-  .chat-block .cb-trust-item { color: var(--txt) !important; }
-  .chat-block .cb-desc,
-  .chat-block .cb-trust-item { color: var(--txt-2) !important; }
-
-  /* Chat-block earn box: was rgba(0,0,0,.35) — becomes a light card */
-  .chat-block .cb-earn-box {
-    background: rgba(255,255,255,0.9) !important;
-    border: 1px solid rgba(124, 58, 237, 0.22) !important;
-    box-shadow: 0 4px 14px rgba(91,33,182,0.08);
-  }
-  .chat-block .cb-earn-box .ceb-lbl,
-  .chat-block .cb-earn-box .ceb-unit,
-  .chat-block .cb-earn-box .ceb-stat-lbl { color: var(--txt-2) !important; }
-  .chat-block .cb-earn-box .ceb-amt,
-  .chat-block .cb-earn-box .ceb-stat-val { color: var(--brand-dk) !important; }
-
-  /* Purple pills inside chat-block */
-  .chat-block .cb-pill {
-    background: rgba(124, 58, 237, 0.12) !important;
-    color: var(--brand-dk) !important;
-    border: 1px solid rgba(124, 58, 237, 0.25);
-  }
-  .chat-block .cb-btn-sec {
-    color: var(--brand-dk) !important;
-    border: 1px solid rgba(124, 58, 237, 0.35) !important;
-    background: rgba(255,255,255,0.7) !important;
-  }
-
-  /* BCTA — big call-to-action band, likely dark bg. Force readable. */
-  .bcta-title,
-  .bcta-sub,
-  .bcta-note {
-    color: var(--txt) !important;
-  }
-  .bcta-sub, .bcta-note { color: var(--txt-2) !important; }
-
-
-  /* Generic safety: any element still showing near-white text directly on body */
-  main :is(h1,h2,h3,h4,h5,h6,p,span,li,a):not(
-    [class*="btn"], [class*="cta"], [class*="ribbon"],
-    [class*="badge"], .bdg-hot, .bdg-new, .bdg-top, .bdg-free,
-    .chat-block *, .cb-ribbon *, .float-wa-label, .ow-modal *, .dp-inner *
-  ) {
-    /* if the browser computed white/near-white, fall back to token */
-    /* CSS can't detect computed color, so we rely on selector list above */
-  }
-
-  /* Cards / feature tiles: ensure surface + border show in light */
-  .card, .panel, .tile, [class*="feature-card"], [class*="stat-card"],
-  [class*="testimonial"], [class*="pricing"], [class*="step-card"] {
-    background: #ffffff !important;
-    color: var(--txt);
-    border: 1px solid var(--border) !important;
-    box-shadow: var(--shadow);
-  }
-
-  /* Section backgrounds that were dark */
-  section:not([class]),
-  section.dark,
-  [class*="section-dark"] {
-    background: var(--bg) !important;
-    color: var(--txt) !important;
-  }
-
-  /* Improve nav in light mode */
-  .site-nav { border-bottom: 1px solid var(--border); }
-  .site-nav a { color: var(--txt) !important; }
-  .site-nav a:hover { color: var(--brand-dk) !important; }
-
-  /* Any element using rgba(0,0,0,.03..0.6) as background — tone down */
-  .earn-row { background: rgba(124,58,237,0.05) !important; }
-
-  /* Loader is dark by design (splash) — leave it */
-
-  /* Sensible link color */
-  a { color: var(--brand-dk); }
-  a:hover { color: var(--brand); }
-}
-
-/* Also fix the pre-existing [data-theme="light"] .chat-block rule that
-   only recolored border but kept a dark gradient. We already overrode above
-   with higher specificity via nested selector. */
-
-</style>
-</head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/starhela.css" />
+    <script defer src="/js/starhela.js"></script>
+  </head>
   <body>
     <!-- PAGE LOADER -->
     <div id="pageLoader" role="status" aria-label="Loading Starhela">
@@ -849,7 +359,6 @@ img, video, svg { max-width: 100%; height: auto; }
         <div class="nav-links">
           <a href="#activities" class="nav-link">Earn</a>
           <a href="#countries" class="nav-link">Countries</a>
-          <a href="#faq" class="nav-link">FAQ</a>
           <a
             href="https://starhela.com/c/U3lkbmV5"
             target="_blank"
@@ -857,6 +366,11 @@ img, video, svg { max-width: 100%; height: auto; }
             class="nav-link"
             >Login</a
           >
+          <button class="nav-cta go-register" aria-label="Register on Starhela">
+            🚀 Register Now
+          </button>
+        </div>
+        <div class="nav-right-controls">
           <button
             class="nav-icon-btn"
             id="themeToggle"
@@ -886,22 +400,22 @@ img, video, svg { max-width: 100%; height: auto; }
               />
             </svg>
           </button>
-          <button class="nav-cta go-register" aria-label="Register on Starhela">
-            🚀 Register Now
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-line line-top"></span>
+              <span class="hamburger-line line-mid"></span>
+              <span class="hamburger-line line-bot"></span>
+            </span>
           </button>
         </div>
-        <button
-          class="hamburger"
-          id="hamburger"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-          </svg>
-        </button>
       </div>
     </nav>
+
 
     <!-- ══════════════════════════════════════════ -->
     <!-- HERO -->

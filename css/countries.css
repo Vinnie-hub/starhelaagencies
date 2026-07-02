@@ -333,8 +333,8 @@ nav {
   z-index: 900;
   height: var(--nav-h, 66px);
   background: rgba(250, 248, 255, 0.97);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s;
 }
@@ -521,12 +521,12 @@ nav.scrolled {
     linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
   background-size: 52px 52px;
-  mask-image: radial-gradient(
+  -webkit-mask-image: radial-gradient(
     ellipse 70% 60% at 50% 30%,
     black 0%,
     transparent 80%
   );
-  -webkit-mask-image: radial-gradient(
+  mask-image: radial-gradient(
     ellipse 70% 60% at 50% 30%,
     black 0%,
     transparent 80%
@@ -1800,8 +1800,8 @@ footer {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   z-index: 10000;
   display: none;
   align-items: center;
