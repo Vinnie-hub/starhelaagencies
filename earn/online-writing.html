@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starhela — Professional Content Writing Marketplace</title>
+  <meta name="description" content="starhela connects businesses with vetted freelance writers for blog posts, guides, whitepapers and more. Start earning as a writer today." />
+  <meta name="theme-color" content="#12141F" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ----- reset & variables (ready to use) ----- */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --ink-900:#12141F; --ink-800:#1B1E2B; --ink-700:#2A2D3E; --ink-500:#5B5F76;
+      --paper-50:#F6F4EE; --paper-100:#EFEBE1; --paper-200:#E4DFD1;
+      --cobalt:#2F5DE3; --cobalt-dark:#2447B8; --highlight:#F2C14E; --coral:#FF6B4A; --green:#1F9D6C; --white:#FFFFFF;
+      --radius-sm:10px; --radius-md:16px; --radius-lg:26px; --radius-pill:999px;
+      --shadow-sm:0 2px 8px rgba(18,20,31,0.05); --shadow-md:0 12px 32px -12px rgba(18,20,31,0.18); --shadow-lg:0 30px 70px -20px rgba(18,20,31,0.35);
+      --font-display:'Fraunces', serif; --font-body:'Inter', sans-serif; --font-mono:'JetBrains Mono', monospace; --container:1240px;
+    }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:var(--font-body); background:var(--paper-50); color:var(--ink-800);
+      line-height:1.6; -webkit-font-smoothing:antialiased;
+    }
+    a { color:inherit; text-decoration:none; }
+    .muted { color:var(--ink-500); }
+    .skip-link {
+      position:absolute; left:-999px; top:auto; background:var(--ink-900); color:var(--white);
+      padding:12px 20px; border-radius:var(--radius-sm); z-index:2000;
+    }
+    .skip-link:focus { left:16px; top:16px; }
+    :focus-visible { outline:2.5px solid var(--cobalt); outline-offset:3px; }
+
+    /* buttons */
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      font-family:var(--font-body); font-weight:600; font-size:14.5px;
+      padding:12px 24px; border-radius:var(--radius-pill);
+      border:1.5px solid transparent; cursor:pointer;
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+      white-space:nowrap;
+    }
+    .btn:active { transform:scale(0.97); }
+    .btn-primary { background:var(--cobalt); color:var(--white); box-shadow:0 8px 20px -8px rgba(47,93,227,0.55); }
+    .btn-primary:hover { background:var(--cobalt-dark); transform:translateY(-2px); box-shadow:0 12px 28px -10px rgba(47,93,227,0.65); }
+    .btn-outline { background:transparent; color:var(--ink-900); border-color:var(--ink-900); }
+    .btn-outline:hover { background:var(--ink-900); color:var(--white); transform:translateY(-2px); }
+    .btn-outline.light { color:var(--white); border-color:rgba(255,255,255,0.5); }
+    .btn-outline.light:hover { background:var(--white); color:var(--ink-900); }
+    .btn-lg { padding:15px 30px; font-size:15.5px; }
+    .btn-take {
+      background:var(--ink-900); color:var(--white); padding:9px 22px;
+      border-radius:var(--radius-pill); font-weight:600; font-size:13px; border:none; cursor:pointer;
+      transition:all .2s ease;
+    }
+    .btn-take:hover { background:var(--cobalt); transform:scale(1.04); box-shadow:0 4px 14px rgba(47,93,227,0.3); }
+
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+      color:var(--cobalt); margin-bottom:14px;
+    }
+    .eyebrow .dot { width:7px; height:7px; border-radius:50%; background:var(--coral); animation:pulse 1.8s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.35;} }
+
+    /* navbar */
+    .navbar {
+      position:sticky; top:0; z-index:500;
+      background:rgba(246,244,238,0.88); backdrop-filter:blur(14px) saturate(1.1);
+      border-bottom:1px solid rgba(228,223,209,0.5);
+    }
+    .navbar-inner {
+      max-width:var(--container); margin:0 auto; padding:14px 32px;
+      display:flex; align-items:center; justify-content:space-between; gap:24px;
+    }
+    .logo {
+      display:flex; align-items:center; gap:10px;
+      font-size:20px; font-weight:700; color:var(--ink-900); font-family:var(--font-display);
+    }
+    .logo img { height:1.75rem; }
+    .logo-word em { font-style:normal; color:var(--cobalt); }
+
+    .avatar-btn {
+      position:relative; background:none; border:none; cursor:pointer;
+      padding:0; display:flex; align-items:center; justify-content:center;
+    }
+    .avatar-btn__ring {
+      position:absolute; inset:-3px; border-radius:50%;
+      border:2px solid var(--paper-200); transition:border-color .25s ease;
+    }
+    .avatar-btn:hover .avatar-btn__ring { border-color:var(--cobalt); }
+    .avatar-btn__initial {
+      width:38px; height:38px; border-radius:50%;
+      background:var(--paper-200); color:var(--ink-500);
+      display:flex; align-items:center; justify-content:center;
+      font-size:16px; font-weight:700; transition:all .25s ease;
+    }
+    .avatar-btn:hover .avatar-btn__initial { background:var(--cobalt); color:var(--white); transform:scale(1.05); }
+
+    /* hero */
+    .hero { padding:72px 32px 0; }
+    .hero-inner {
+      max-width:var(--container); margin:0 auto;
+      display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center;
+    }
+    .hero-title {
+      font-family:var(--font-display); font-weight:600;
+      font-size:clamp(36px,4.8vw,60px); line-height:1.06; color:var(--ink-900);
+    }
+    .hero-sub { margin-top:22px; font-size:18px; color:var(--ink-500); max-width:520px; line-height:1.7; }
+    .hero-actions { display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+    .hero-trust {
+      display:flex; align-items:center; gap:16px;
+      margin-top:36px; font-size:14px; color:var(--ink-500);
+    }
+    .hero-trust strong { color:var(--ink-900); }
+    .avatars { display:flex; }
+    .avatars span {
+      width:32px; height:32px; border-radius:50%;
+      background:var(--c); border:2.5px solid var(--paper-50);
+      margin-left:-10px; transition:transform .2s;
+    }
+    .avatars span:first-child { margin-left:0; }
+    .avatars span:hover { transform:scale(1.12); z-index:2; }
+
+    /* manuscript card */
+    .hero-visual { position:relative; }
+    .manuscript-card {
+      background:var(--ink-900); border-radius:var(--radius-lg);
+      color:var(--paper-50); padding:28px 30px 24px;
+      box-shadow:var(--shadow-lg); transform:rotate(1deg);
+      transition:transform .3s ease;
+    }
+    .manuscript-card:hover { transform:rotate(0deg) scale(1.005); }
+    .manuscript-head { display:flex; align-items:center; gap:8px; margin-bottom:18px; }
+    .mc-dot { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.15); }
+    .mc-title { margin-left:10px; font-family:var(--font-mono); font-size:12px; color:rgba(255,255,255,0.5); }
+    .manuscript-body { min-height:150px; }
+    .typewriter {
+      font-family:var(--font-display); font-size:20px; line-height:1.6;
+      color:var(--paper-100); display:inline;
+    }
+    .caret {
+      display:inline-block; width:2.5px; height:22px;
+      background:var(--highlight); vertical-align:middle; margin-left:2px;
+      animation:blink 1s step-end infinite;
+    }
+    @keyframes blink { 50%{ opacity:0; } }
+    .manuscript-foot {
+      display:flex; justify-content:space-between; align-items:center;
+      margin-top:22px; padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      font-size:13px; color:rgba(255,255,255,0.55);
+    }
+    .mc-status { color:var(--green); font-weight:600; }
+    .mc-status::before { content:'●'; margin-right:5px; font-size:8px; }
+
+    .floating-badge {
+      position:absolute; background:var(--white); border-radius:var(--radius-pill);
+      padding:10px 20px; font-size:13px; font-weight:700;
+      box-shadow:var(--shadow-md); display:flex; align-items:center; gap:8px;
+      animation:float 5s ease-in-out infinite;
+    }
+    .floating-badge i { color:var(--cobalt); }
+    .badge-a { top:-18px; right:10px; animation-delay:0s; }
+    .badge-b { bottom:-16px; left:-18px; animation-delay:1.6s; }
+    @keyframes float { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-10px); } }
+
+    /* browse */
+    .browse { max-width:var(--container); margin:0 auto; padding:40px 32px 100px; }
+    .section-head { max-width:640px; margin:0 auto 48px; text-align:center; }
+    .section-head.split {
+      max-width:none; display:flex; justify-content:space-between; align-items:flex-end;
+      text-align:left; gap:24px; flex-wrap:wrap;
+    }
+    .section-head h2 {
+      font-family:var(--font-display); font-weight:600;
+      font-size:clamp(28px,3.4vw,40px); color:var(--ink-900);
+    }
+    .section-sub { margin-top:12px; color:var(--ink-500); font-size:16px; }
+
+    .search-box {
+      display:flex; align-items:center; gap:12px;
+      background:var(--white); border:1.5px solid var(--paper-200);
+      border-radius:var(--radius-pill); padding:12px 24px;
+      min-width:280px; transition:border-color .25s ease, box-shadow .25s ease;
+    }
+    .search-box:focus-within { border-color:var(--cobalt); box-shadow:0 0 0 4px rgba(47,93,227,0.12); }
+    .search-box i { color:var(--ink-500); font-size:15px; }
+    .search-box input {
+      border:none; outline:none; background:transparent;
+      flex:1; font-size:14.5px; font-family:var(--font-body);
+    }
+
+    .filter-tabs { display:flex; gap:10px; flex-wrap:wrap; margin:28px 0 32px; }
+    .tab {
+      padding:9px 22px; border-radius:var(--radius-pill);
+      font-size:13.5px; font-weight:600;
+      background:var(--white); border:1.5px solid var(--paper-200);
+      color:var(--ink-700); cursor:pointer; transition:all .2s ease;
+    }
+    .tab:hover { border-color:var(--cobalt); transform:translateY(-1px); }
+    .tab.active { background:var(--ink-900); color:var(--white); border-color:var(--ink-900); box-shadow:0 4px 12px rgba(18,20,31,0.15); }
+
+    .task-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+      gap:22px;
+    }
+    .task-card {
+      background:var(--white); border:1px solid var(--paper-200);
+      border-radius:var(--radius-md); padding:26px 26px 22px;
+      display:flex; flex-direction:column;
+      transition:all .3s cubic-bezier(.25,.46,.45,.94);
+      opacity:0; animation:cardIn .5s ease forwards;
+    }
+    @keyframes cardIn { from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
+    .task-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:#c9d3ef; }
+    .task-card.priority { border-left:5px solid var(--coral); background:linear-gradient(to right, rgba(255,107,74,0.02), var(--white)); }
+    .card-top { display:flex; justify-content:space-between; gap:12px; margin-bottom:14px; }
+    .card-top h4 { font-size:16.5px; font-weight:700; line-height:1.4; }
+    .badge {
+      background:#EAF0FE; color:var(--cobalt); font-size:11px; font-weight:700;
+      padding:4px 14px; border-radius:var(--radius-pill); white-space:nowrap; height:fit-content;
+    }
+    .badge.high { background:#FFEFE9; color:#C74A2A; }
+    .badge.new { background:#E7F7EF; color:#178156; }
+    .card-meta {
+      display:flex; flex-wrap:wrap; gap:8px 20px;
+      font-size:13px; color:var(--ink-500); margin:8px 0 18px;
+    }
+    .card-meta i { color:#A3A8BD; margin-right:5px; width:16px; }
+    .card-bottom {
+      margin-top:auto; display:flex; justify-content:space-between; align-items:center;
+      padding-top:18px; border-top:1px solid var(--paper-100);
+    }
+    .task-price { font-weight:700; font-size:19px; color:var(--ink-900); }
+    .task-price small { font-weight:400; font-size:12.5px; color:var(--ink-500); }
+    .no-results { text-align:center; padding:60px 20px; color:var(--ink-500); grid-column:1/-1; }
+    .no-results i { font-size:28px; margin-bottom:12px; display:block; opacity:.5; }
+    .browse-more {
+  margin-top: 48px;
+  padding: 16px 32px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.browse-more p {
+  margin: 0;
+  font-size: 20px;
+  color: var(--ink-700);
+}
+
+.browse-more a {
+  padding: 8px 20px;
+  font-size: 15px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--cobalt);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.browse-more a:hover {
+  background: var(--cobalt);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+
+    /* CTA */
+    .split-cta { max-width:var(--container); margin:0 auto 100px; padding:0 32px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .split-cta-card {
+      background:var(--white); border:1px solid var(--paper-200);
+      border-radius:var(--radius-lg); padding:44px 38px;
+      transition:all .25s ease;
+    }
+    .split-cta-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .split-cta-card.dark { background:var(--cobalt); color:var(--white); border-color:transparent; }
+    .cta-icon { font-size:28px; color:var(--cobalt); margin-bottom:18px; display:block; }
+    .split-cta-card.dark .cta-icon { color:var(--highlight); }
+    .split-cta-card h3 { font-family:var(--font-display); font-size:24px; font-weight:600; margin-bottom:12px; }
+    .split-cta-card p { font-size:15px; opacity:.85; margin-bottom:24px; max-width:36ch; }
+
+    /* footer */
+    .footer {
+      background:var(--ink-900); color:rgba(246,244,238,0.7);
+      padding:70px 32px 0;
+    }
+    .footer-inner {
+      max-width:var(--container); margin:0 auto;
+      display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:44px; padding-bottom:50px;
+    }
+    .footer .logo { color:var(--white); }
+    .footer-brand p { margin:14px 0 22px; font-size:14px; max-width:32ch; line-height:1.7; }
+    .social-row { display:flex; gap:12px; }
+    .social-row a {
+      width:38px; height:38px; border-radius:50%;
+      border:1px solid rgba(255,255,255,0.12);
+      display:flex; align-items:center; justify-content:center;
+      transition:all .25s ease;
+    }
+    .social-row a:hover { background:var(--cobalt); border-color:var(--cobalt); transform:translateY(-2px); }
+    .footer-col h4 { color:var(--white); font-size:14px; font-weight:700; margin-bottom:18px; }
+    .footer-col a { display:block; font-size:14px; margin-bottom:12px; transition:color .2s ease; }
+    .footer-col a:hover { color:var(--white); }
+    .footer-bottom {
+      max-width:var(--container); margin:0 auto;
+      padding:24px 0; border-top:1px solid rgba(255,255,255,0.06);
+      display:flex; justify-content:space-between; font-size:13px; flex-wrap:wrap; gap:10px;
+    }
+    .footer-legal { display:flex; gap:24px; }
+    .footer-legal a:hover { color:var(--white); }
+
+    /* modal */
+    .modal-overlay {
+      display:none; position:fixed; inset:0;
+      background:rgba(18,20,31,0.55); backdrop-filter:blur(6px);
+      z-index:1000; align-items:center; justify-content:center; padding:20px;
+    }
+    .modal-overlay.show { display:flex; }
+    .modal {
+      background:var(--white); max-width:760px; width:100%;
+      border-radius:var(--radius-lg); padding:34px 38px 32px;
+      box-shadow:var(--shadow-lg); animation:slideUp .3s cubic-bezier(.22,.68,0,1);
+    }
+    @keyframes slideUp { from{ transform:translateY(30px) scale(.98); opacity:0; } to{ transform:translateY(0) scale(1); opacity:1; } }
+    .modal-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; }
+    .modal-header h3 { font-family:var(--font-display); font-size:22px; font-weight:600; }
+    .modal-sub { color:var(--ink-500); font-size:13.5px; margin-top:4px; }
+    .close-btn {
+      background:none; border:none; font-size:26px; cursor:pointer;
+      color:var(--ink-500); line-height:1; padding:4px 8px; border-radius:8px;
+      transition:background .2s;
+    }
+    .close-btn:hover { background:var(--paper-100); }
+    .modal textarea {
+      width:100%; height:260px; border:1.5px solid var(--paper-200);
+      border-radius:var(--radius-md); padding:18px 20px;
+      font-size:15px; font-family:var(--font-body); line-height:1.75;
+      resize:vertical; transition:border-color .25s, box-shadow .25s;
+    }
+    .modal textarea:focus { outline:none; border-color:var(--cobalt); box-shadow:0 0 0 4px rgba(47,93,227,0.12); }
+    .modal-footer {
+      display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+      margin-top:22px; gap:14px;
+    }
+    .word-counter {
+      font-size:13.5px; color:var(--ink-500); font-weight:500;
+      display:flex; align-items:center; gap:8px;
+    }
+    .word-counter span:not(.progress-fill) { font-weight:700; color:var(--ink-900); }
+    .progress-track { width:100px; height:6px; background:var(--paper-100); border-radius:6px; overflow:hidden; margin-left:6px; }
+    .progress-fill { height:100%; width:0%; background:var(--cobalt); transition:width .3s ease; }
+    .modal-actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .login-prompt {
+      font-size:12.5px; color:var(--ink-500);
+      background:var(--paper-50); padding:8px 18px;
+      border-radius:var(--radius-pill); border:1px dashed var(--paper-200);
+    }
+    .login-prompt a { color:var(--cobalt); font-weight:700; }
+
+    .btn-submit { background:var(--green); color:var(--white); opacity:.5; pointer-events:none; }
+    .btn-submit.active { opacity:1; pointer-events:auto; }
+    .btn-submit.active:hover { background:#178156; transform:translateY(-1px); }
+
+    .toast {
+      position:fixed; bottom:28px; left:50%;
+      transform:translateX(-50%) translateY(24px);
+      background:var(--ink-900); color:var(--white);
+      padding:15px 28px; border-radius:var(--radius-pill);
+      font-size:14px; font-weight:600; box-shadow:var(--shadow-lg);
+      z-index:2000; opacity:0; pointer-events:none;
+      transition:all .3s cubic-bezier(.22,.68,0,1);
+      display:flex; align-items:center; gap:10px;
+    }
+    .toast.show { opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto; }
+    .toast i { color:var(--green); font-size:16px; }
+
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.68,0,1); }
+    .reveal.in-view { opacity:1; transform:translateY(0); }
+
+    @media (max-width:1080px) { .hero-inner { grid-template-columns:1fr; } .hero-visual { order:-1; max-width:480px; margin:0 auto; } .split-cta { grid-template-columns:1fr; } .footer-inner { grid-template-columns:1fr 1fr; } }
+    @media (max-width:820px) { .section-head.split { flex-direction:column; align-items:flex-start; } .search-box { width:100%; min-width:0; } }
+    @media (max-width:560px) {
+      .navbar-inner { padding:12px 18px; }
+      .hero { padding:36px 18px 0; }
+      .hero-actions { flex-direction:column; align-items:stretch; }
+      .hero-actions .btn { width:100%; }
+      .footer-inner { grid-template-columns:1fr; }
+      .modal { padding:24px 18px; }
+      .browse { padding-left:18px; padding-right:18px; }
+      .split-cta { padding:0 18px; }
+      .split-cta-card { padding:32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- Navbar -->
+<header class="navbar" role="banner">
+  <div class="navbar-inner">
+    <a href="#" class="logo" aria-label="starhela home">
+      <img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="Starhela Logo" onerror="this.style.display='none'" />
+      <span class="logo-word">STAR<em>HELA</em></span>
+    </a>
+    <div class="nav-right">
+      <a href="https://www.starhela.com/register.php?ref=sydney" class="avatar-btn" id="avatarBtn" aria-label="Account" title="Guest — not registered">
+        <span class="avatar-btn__ring"></span>
+        <span class="avatar-btn__initial" id="avatarInitial">?</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Now matching 340+ briefs a week</p>
+        <h1 class="hero-title">
+          Where good writing gets assigned,</span> written, and shipped.
+        </h1>
+        <p class="hero-sub">
+          starhela pairs businesses with vetted freelance writers for blog posts, guides, whitepapers
+          and everything in between. Claim your first task today.
+        </p>
+        <div class="hero-actions">
+          <a href="#browse" class="btn btn-primary btn-lg">
+  <i class="fa-solid fa-pen"></i> Start writing
+</a>
+          <a href="#" class="btn btn-outline btn-lg" id="postBriefBtn"><i class="fa-regular fa-circle-play"></i> Post a brief</a>
+        </div>
+        <div class="hero-trust">
+          <div class="avatars" aria-hidden="true">
+            <span style="--c:#F2C14E"></span><span style="--c:#2F5DE3"></span><span style="--c:#FF6B4A"></span><span style="--c:#1F9D6C"></span>
+          </div>
+          <p><strong>4.9/5</strong> average writer rating across 2,100+ completed briefs</p>
+        </div>
+      </div>
+      <!-- Manuscript card -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="manuscript-card">
+          <div class="manuscript-head">
+            <span class="mc-dot"></span><span class="mc-dot"></span><span class="mc-dot"></span>
+            <span class="mc-title">Draft — Crypto Wallets 2026.txt</span>
+          </div>
+          <div class="manuscript-body">
+            <p class="typewriter" id="typewriterText"></p>
+            <span class="caret"></span>
+          </div>
+          <div class="manuscript-foot">
+            <span><i class="fa-solid fa-align-left"></i> <span id="mcWordCount">0</span> / 2,500 words</span>
+            <span class="mc-status">Autosaved</span>
+          </div>
+        </div>
+        <div class="floating-badge badge-a"><i class="fa-solid fa-bolt"></i> Matched in 6 min</div>
+        <div class="floating-badge badge-b"><i class="fa-solid fa-sack-dollar"></i> Paid on approval</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROWSE TASKS -->
+  <section class="browse" id="browse">
+    <div class="section-head split">
+      <div>
+        <p class="eyebrow">Open briefs</p>
+        <h2>Available tasks</h2>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="taskSearch" placeholder="Search by keyword — 'SEO', 'tech', 'finance'…" aria-label="Search tasks">
+      </div>
+    </div>
+
+    <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filter tasks by category">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="Technology">Tech</button>
+      <button class="tab" data-filter="SEO">SEO</button>
+      <button class="tab" data-filter="Lifestyle">Lifestyle</button>
+      <button class="tab" data-filter="Finance">Finance</button>
+      <button class="tab" data-filter="Wellness">Wellness</button>
+    </div>
+
+    <div class="task-grid" id="taskFeed"></div>
+      <div class="browse-more">
+  <p>Want to browse more online writing jobs? <a href="https://starhela.com/register.php?ref=sydney" id="browseMore">Sign up</a></p>
+</div>
+</div>
+  </section>
+
+  <!-- CTA -->
+  <section class="split-cta" id="post-brief">
+    <div class="split-cta-card">
+      <i class="fa-solid fa-feather-pointed cta-icon"></i>
+      <h3>Write for starhela</h3>
+      <p>Build a portfolio of published work, choose briefs that fit your niche, and get paid on approval — no bidding wars.</p>
+      <a href="https://starhela.com/register.php?ref=sydney" class="btn btn-primary">Apply as a writer</a>
+    </div>
+    <div class="split-cta-card dark">
+      <i class="fa-solid fa-bullhorn cta-icon"></i>
+      <h3>Post a brief</h3>
+      <p>Need great content? Post your brief and get matched with vetted writers who deliver on time, every time.</p>
+      <a href="#" class="btn btn-outline light" id="ctaPostBrief">Post your first brief</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="logo"><img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="Starhela Logo" onerror="this.style.display='none'" /><span class="logo-word">STAR<em>HELA</em></span></a>
+      <p><strong>Starhela Agencies</strong> — Africa's trusted online earning platform. Thousands earn daily through guided opportunities and legitimate online income programs for Kenyans and Africans.</p>
+      <div class="ft-contact">📞 <a href="tel:+254729743223">+254 729 743 223</a></div>
+      <div class="ft-contact">✉️ <a href="mailto:starhelaofficials@gmail.com">starhelaofficials@gmail.com</a></div>
+      <div class="ft-contact">💬 <a href="https://wa.me/254729743223" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="https://www.starhelaagencies.com/">Home</a>
+      <a href="#browse">Available jobs</a>
+      <a href="#" id="ctaPostBrief">Post a brief</a>
+    </div>
+    <div class="footer-col">
+      <h4>Countries</h4>
+      <a href="#">Kenya</a><a href="#">Nigeria</a><a href="#">Ghana</a><a href="#">Uganda</a><a href="#">Tanzania</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get Started</h4>
+      <a href="https://starhela.com/register.php?ref=sydney" target="_blank" rel="noopener noreferrer">🚀 Register</a>
+      <a href="https://starhela.com/login.php" target="_blank" rel="noopener noreferrer">🔑 Sign In</a>
+      <a href="https://wa.me/254729743223" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+      <a href="mailto:starhelaofficials@gmail.com">✉️ Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 Starhela Agencies · All rights reserved · <a href="https://starhela.com/register.php?ref=sydney" target="_blank" rel="noopener noreferrer">Register</a> · <a href="https://starhela.com/c/U3lkbmV5" target="_blank" rel="noopener noreferrer">Login</a></div>
+    <div class="social-row">
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- WORKSPACE MODAL -->
+<div class="modal-overlay" id="workspaceModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="taskTitleModal">
+    <div class="modal-header">
+      <div>
+        <h3 id="taskTitleModal">Writing workspace</h3>
+        <p class="modal-sub" id="taskWordGoal">Goal: 1,200 words</p>
+      </div>
+      <button class="close-btn" id="closeModalBtn" aria-label="Close workspace">&times;</button>
+    </div>
+    <textarea id="editorArea" placeholder="Start writing your draft here… you can save progress without an account using 'Save as draft.'"></textarea>
+    <div class="modal-footer">
+      <div class="word-counter">
+        <i class="fa-solid fa-align-left"></i> Words: <span id="wordCountDisplay">0</span>
+        <span class="muted">/ <span id="wordGoalDisplay">1,200</span></span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="saveDraftBtn"><i class="fa-solid fa-floppy-disk"></i> Save as draft</button>
+        <span class="login-prompt"><i class="fa-solid fa-circle-user"></i> <a href="https://starhela.com/register.php?ref=sydney">Sign up</a> to submit</span>
+        <button class="btn btn-submit" id="submitBtn" disabled><i class="fa-solid fa-paper-plane"></i> Submit for review</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  (function() {
+    /* TASK DATA */
+    const TASKS = [
+      { id:1, title:'"The Future of AI in SaaS" — Blog Post', badge:'New', badgeClass:'new', words:1200, posted:'4 days', tag:'Technology', price:48, priority:false },
+      { id:2, title:'"Zero-Waste Living: A Practical Guide" — Listicle', badge:'Lifestyle', badgeClass:'', words:800, posted:'6 days', tag:'Lifestyle', price:32, priority:false },
+      { id:3, title:'"Crypto Wallets 2026: Security Deep-Dive" — Whitepaper', badge:'High priority', badgeClass:'high', words:2500, posted:'8 days', tag:'Finance', price:125, priority:true },
+      { id:4, title:'"Top 10 Productivity Apps for Remote Teams" — Review', badge:'Software', badgeClass:'', words:600, posted:'2 days', tag:'Technology', price:24, priority:false },
+      { id:5, title:'"Mindfulness & Mental Health at Work" — Article', badge:'New', badgeClass:'new', words:1000, posted:'5 days', tag:'Wellness', price:40, priority:false },
+      { id:6, title:'"E-commerce SEO Strategies for 2026" — Guide', badge:'SEO', badgeClass:'', words:1500, posted:'7 days', tag:'SEO', price:60, priority:false },
+      { id:7, title:'"The Evolution of Indie Game Storytelling" — Feature', badge:'Gaming', badgeClass:'', words:1100, posted:'10 days', tag:'Lifestyle', price:55, priority:false },
+      { id:8, title:'"Smart Home Gadgets: Reviews & Comparisons" — Roundup', badge:'Tech', badgeClass:'', words:900, posted:'3 days', tag:'Technology', price:36, priority:false },
+      { id:9, title:'Marketing & Social Media Manager — Education Sector', badge:'New', badgeClass:'new', words:1400, posted:'1 day', tag:'Marketing', price:65, priority:false },
+{ id:10, title:'English Interpreter for Business Meeting (Brazilian Portuguese)', badge:'Translation', badgeClass:'', words:500, posted:'1 day', tag:'Language', price:35, priority:false },
+{ id:11, title:'Short Video Editor for Reels, TikTok & YouTube Shorts', badge:'Fixed Price', badgeClass:'', words:1000, posted:'23 hours', tag:'Video Editing', price:1000, priority:false },
+{ id:12, title:'R&D Developer for Online Learning Platform', badge:'Developer', badgeClass:'', words:1800, posted:'23 hours', tag:'Software', price:120, priority:true },
+{ id:13, title:'Telehealth General Practitioner / Nurse Practitioner', badge:'Healthcare', badgeClass:'', words:1500, posted:'1 day', tag:'Medical', price:95, priority:false },
+{ id:14, title:'Marketing Specialist for AI & Web Agency (FR/EN)', badge:'Fixed Price', badgeClass:'', words:1200, posted:'22 hours', tag:'Marketing', price:300, priority:false },
+{ id:15, title:'AI Data Center Infrastructure Technical Writer', badge:'High Priority', badgeClass:'high', words:2200, posted:'22 hours', tag:'Technology', price:500, priority:true },
+{ id:16, title:'Texas Content Creator for Premium Chili Oil Brand', badge:'Content', badgeClass:'', words:900, posted:'21 hours', tag:'Content Creation', price:55, priority:false },
+{ id:17, title:'WordPress Website Developer for Mental Health Clinic', badge:'Developer', badgeClass:'', words:2000, posted:'20 hours', tag:'Web Development', price:140, priority:true },
+{ id:18, title:'Social Media Content Editor & Manager', badge:'Social Media', badgeClass:'', words:1000, posted:'20 hours', tag:'Marketing', price:60, priority:false },
+{ id:19, title:'Bilingual Spanish Case Manager for Immigration Law Firm', badge:'Legal', badgeClass:'', words:1300, posted:'1 day', tag:'Legal', price:80, priority:false },
+{ id:20, title:'Native Italian Academic Proofreader (PhD Required)', badge:'Academic', badgeClass:'', words:1600, posted:'23 hours', tag:'Editing', price:90, priority:false },
+{ id:21, title:'Native Spanish SEO Content Writer (Online Casino)', badge:'SEO', badgeClass:'', words:1200, posted:'1 day', tag:'Writing', price:50, priority:false },
+{ id:22, title:'Shopify Marketing & Social Media Manager', badge:'E-commerce', badgeClass:'', words:1400, posted:'23 hours', tag:'Marketing', price:85, priority:false },
+{ id:23, title:'User Research Interview – Sports Betting Users', badge:'Research', badgeClass:'', words:300, posted:'1 day', tag:'Research', price:15, priority:false },
+{ id:24, title:'Social Media Manager for Auto Protection Brand', badge:'Long Term', badgeClass:'high', words:1500, posted:'22 hours', tag:'Marketing', price:95, priority:true },
+{ id:25, title:'SEO Content Writer & Copywriter', badge:'SEO', badgeClass:'', words:1300, posted:'21 hours', tag:'Writing', price:70, priority:false },
+{ id:26, title:'Content Planning, Design & Social Media Management', badge:'Fixed Price', badgeClass:'', words:800, posted:'21 hours', tag:'Social Media', price:20, priority:false },
+{ id:27, title:'Social Media & Creative Assistant', badge:'Creative', badgeClass:'', words:1000, posted:'20 hours', tag:'Social Media', price:60, priority:false },
+{ id:28, title:'Social Media Reel Creator', badge:'Video', badgeClass:'', words:700, posted:'20 hours', tag:'Video Editing', price:40, priority:false },
+    ];
+
+    const iconFor = tag => ({ Technology:'fa-microchip', Lifestyle:'fa-leaf', Finance:'fa-coins', Wellness:'fa-spa', SEO:'fa-magnifying-glass-chart' }[tag] || 'fa-tag');
+
+    /* DOM refs */
+    const taskFeed = document.getElementById('taskFeed');
+    const taskSearch = document.getElementById('taskSearch');
+    const filterTabs = document.getElementById('filterTabs');
+    const workspaceModal = document.getElementById('workspaceModal');
+    const editorArea = document.getElementById('editorArea');
+    const taskTitleModal = document.getElementById('taskTitleModal');
+    const taskWordGoal = document.getElementById('taskWordGoal');
+    const wordGoalDisplay = document.getElementById('wordGoalDisplay');
+    const wordCountDisplay = document.getElementById('wordCountDisplay');
+    const progressFill = document.getElementById('progressFill');
+    const submitBtn = document.getElementById('submitBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const saveDraftBtn = document.getElementById('saveDraftBtn');
+    const toast = document.getElementById('toast');
+
+    let activeFilter = 'all';
+    let currentTask = { id:null, title:'', wordGoal:0 };
+    const draftStore = {};
+
+    /* render */
+    function renderTasks() {
+      const query = taskSearch.value.trim().toLowerCase();
+      const filtered = TASKS.filter(t => {
+        const matchesFilter = activeFilter === 'all' || t.tag === activeFilter;
+        const matchesSearch = !query || t.title.toLowerCase().includes(query) || t.tag.toLowerCase().includes(query);
+        return matchesFilter && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        taskFeed.innerHTML = `<div class="no-results"><i class="fa-solid fa-magnifying-glass" style="font-size:22px;margin-bottom:10px;display:block;"></i>No open briefs match that search yet.</div>`;
+        return;
+      }
+
+      taskFeed.innerHTML = filtered.map((t, i) => `
+        <div class="task-card${t.priority ? ' priority' : ''}" style="animation-delay:${i * 0.05}s">
+          <div class="card-top">
+            <h4>${t.title}</h4>
+            <span class="badge ${t.badgeClass}">${t.badge}</span>
+          </div>
+          <div class="card-meta">
+            <span><i class="fa-solid fa-file-lines"></i>${t.words.toLocaleString()} words</span>
+            <span><i class="fa-solid fa-clock"></i>posted ${t.posted} ago</span>
+            <span><i class="fa-solid ${iconFor(t.tag)}"></i>${t.tag}</span>
+          </div>
+          <div class="card-bottom">
+            <div class="task-price">$${t.price} <small>fixed</small></div>
+            <button class="btn-take" data-id="${t.id}">Claim brief</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    /* filter */
+    filterTabs.addEventListener('click', e => {
+      const btn = e.target.closest('.tab');
+      if (!btn) return;
+      filterTabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      renderTasks();
+    });
+
+    let searchDebounce;
+    taskSearch.addEventListener('input', () => {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(renderTasks, 150);
+    });
+
+    /* open workspace */
+    function openWorkspace(task) {
+      currentTask = { id:task.id, title: task.title, wordGoal: task.words };
+      taskTitleModal.textContent = task.title;
+      taskWordGoal.textContent = `Goal: ${task.words.toLocaleString()} words`;
+      wordGoalDisplay.textContent = task.words.toLocaleString();
+
+      editorArea.value = draftStore[task.id] || '';
+      updateWordCount();
+
+      if (draftStore[task.id]) {
+        showToast('Draft restored from this session.', 'fa-clock-rotate-left');
+      }
+
+      workspaceModal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      editorArea.focus();
+
+      submitBtn.disabled = true;
+      submitBtn.classList.remove('active');
+    }
+
+    function closeWorkspace() {
+      workspaceModal.classList.remove('show');
+      document.body.style.overflow = '';
+      if (editorArea.value.trim().length > 10 && currentTask.id != null) {
+        draftStore[currentTask.id] = editorArea.value;
+      }
+    }
+
+    function updateWordCount() {
+      const text = editorArea.value.trim();
+      const words = text === '' ? 0 : text.split(/\s+/).length;
+      wordCountDisplay.textContent = words.toLocaleString();
+      const pct = Math.min(100, Math.round((words / currentTask.wordGoal) * 100)) || 0;
+      progressFill.style.width = pct + '%';
+    }
+
+    /* toast */
+    let toastTimer;
+    function showToast(message, icon = 'fa-circle-check') {
+      toast.innerHTML = `<i class="fa-solid ${icon}"></i> ${message}`;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+    }
+
+    /* event listeners */
+    taskFeed.addEventListener('click', e => {
+      const btn = e.target.closest('.btn-take');
+      if (!btn) return;
+      const task = TASKS.find(t => t.id === Number(btn.dataset.id));
+      if (task) openWorkspace(task);
+    });
+
+    closeModalBtn.addEventListener('click', closeWorkspace);
+    workspaceModal.addEventListener('click', e => { if (e.target === workspaceModal) closeWorkspace(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && workspaceModal.classList.contains('show')) closeWorkspace();
+      if ((e.ctrlKey || e.metaKey) && e.key === 's' && workspaceModal.classList.contains('show')) {
+        e.preventDefault();
+        saveDraftBtn.click();
+      }
+    });
+
+    editorArea.addEventListener('input', updateWordCount);
+
+    saveDraftBtn.addEventListener('click', () => {
+      const text = editorArea.value;
+      if (text.trim().length < 5) {
+        showToast('Write a few words before saving a draft.', 'fa-triangle-exclamation');
+        return;
+      }
+      if (currentTask.id != null) draftStore[currentTask.id] = text;
+      showToast('Draft saved for this session.', 'fa-circle-check');
+    });
+
+    submitBtn.addEventListener('click', () => {
+      if (submitBtn.disabled) {
+        showToast('Sign up to submit a finished draft.', 'fa-lock');
+        setTimeout(() => { window.location.href = 'https://www.starhela.com/register.php?ref=sydney'; }, 1200);
+      }
+    });
+
+    /* "Post a brief" buttons – redirect to sign-up */
+    function handlePostBrief(e) {
+      e.preventDefault();
+      showToast('Please sign up to post a brief.', 'fa-user-plus');
+      setTimeout(() => { window.location.href = 'https://www.starhela.com/register.php?ref=sydney'; }, 1200);
+    }
+    document.getElementById('postBriefBtn').addEventListener('click', handlePostBrief);
+    document.getElementById('ctaPostBrief').addEventListener('click', handlePostBrief);
+
+    /* typewriter */
+    const typewriterEl = document.getElementById('typewriterText');
+    const mcWordCount = document.getElementById('mcWordCount');
+    const typewriterLines = [
+      "Cold wallets keep private keys fully offline, isolating them from",
+      "internet-connected devices and the malware that targets them.",
+    ];
+    let twLine = 0, twChar = 0, twWords = 0;
+
+    function typeStep() {
+      if (twLine >= typewriterLines.length) {
+        setTimeout(() => {
+          typewriterEl.textContent = '';
+          twLine = 0; twChar = 0; twWords = 0;
+          mcWordCount.textContent = '0';
+          typeStep();
+        }, 2400);
+        return;
+      }
+      const line = typewriterLines[twLine];
+      if (twChar <= line.length) {
+        typewriterEl.textContent = typewriterLines.slice(0, twLine).join(' ') + (twLine > 0 ? ' ' : '') + line.slice(0, twChar);
+        twWords = typewriterEl.textContent.trim().split(/\s+/).filter(Boolean).length;
+        mcWordCount.textContent = twWords;
+        twChar++;
+        setTimeout(typeStep, 22);
+      } else {
+        twLine++; twChar = 0;
+        setTimeout(typeStep, 260);
+      }
+    }
+    if (typewriterEl) typeStep();
+
+    /* scroll reveal */
+    const revealTargets = document.querySelectorAll('.split-cta-card');
+    revealTargets.forEach(el => el.classList.add('reveal'));
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealTargets.forEach(el => revealObserver.observe(el));
+
+    /* init */
+    renderTasks();
+    console.log('starhela marketplace UI ready.');
+  })();
+</script>
+</body>
+</html>

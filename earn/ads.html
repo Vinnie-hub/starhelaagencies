@@ -497,114 +497,6 @@
         font-size: 0.82rem;
         letter-spacing: 1.5px;
       }
-
-      /* Hero card (right col) */
-      .hero-card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 20px;
-        padding: 24px;
-        box-shadow: var(--shadow-md);
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-      }
-      .hero-card-title {
-        font-family: "Outfit", sans-serif;
-        font-weight: 800;
-        font-size: 1rem;
-        color: var(--g2);
-        margin-bottom: 2px;
-      }
-      .hero-stat-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-      .hstat {
-        background: var(--p-bg);
-        border: 1px solid var(--p-soft);
-        border-radius: 12px;
-        padding: 14px 16px;
-      }
-      .hstat-label {
-        font-size: 0.68rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-        color: var(--muted);
-        margin-bottom: 5px;
-      }
-      .hstat-val {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.6rem;
-        font-weight: 900;
-        color: var(--p);
-        line-height: 1;
-      }
-      .hstat-val.green {
-        color: #16a34a;
-      }
-      .hero-mini-ads {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .hma {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 12px;
-        border-radius: 10px;
-        background: var(--bg);
-        border: 1px solid var(--border);
-      }
-      .hma-thumb {
-        width: 40px;
-        height: 30px;
-        border-radius: 6px;
-        overflow: hidden;
-        flex-shrink: 0;
-        background: #e8e4f3;
-      }
-      .hma-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .hma-info {
-        flex: 1;
-        min-width: 0;
-      }
-      .hma-name {
-        font-size: 0.78rem;
-        font-weight: 600;
-        color: var(--g2);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .hma-dur {
-        font-size: 0.68rem;
-        color: var(--muted);
-      }
-      .hma-earn {
-        background: #f0fdf4;
-        color: #15803d;
-        border: 1px solid #bbf7d0;
-        padding: 3px 9px;
-        border-radius: 100px;
-        font-size: 0.7rem;
-        font-weight: 700;
-        white-space: nowrap;
-        flex-shrink: 0;
-      }
-      @media (max-width: 900px) {
-        .hero-card {
-          display: none;
-        }
-      }
-
       /* ─── SECTION HEADER ───────────────────────────── */
       .sect {
         padding: 8px 0 44px;
@@ -645,8 +537,12 @@
       /* ─── AD GRID ──────────────────────────────────── */
       .ad-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        /* Six campaigns stay balanced as two easy-to-scan rows. */
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 18px;
+      }
+      .ad-grid > .ad-card:nth-child(n + 7) {
+        display: none;
       }
       @media (max-width: 600px) {
         .ad-grid {
@@ -670,6 +566,14 @@
         position: relative;
         display: flex;
         flex-direction: column;
+      }
+      .ad-card.ad-card--switching {
+        opacity: 0;
+        transform: translateY(5px) scale(0.992);
+        transition:
+          opacity 0.48s ease,
+          transform 0.48s ease;
+        pointer-events: none;
       }
       .ad-card:hover {
         border-color: #c4b5fd;
@@ -1802,72 +1706,6 @@
                 </div>
               </div>
             </div>
-            <div class="hero-card" aria-hidden="true">
-              <div class="hero-card-title">📊 Live Earnings Snapshot</div>
-              <div class="hero-stat-row">
-                <div class="hstat">
-                  <div class="hstat-label">Paid Today</div>
-                  <div class="hstat-val green">$2.4K</div>
-                </div>
-                <div class="hstat">
-                  <div class="hstat-label">Active Earners</div>
-                  <div class="hstat-val">4,821</div>
-                </div>
-              </div>
-              <div
-                style="
-                  font-size: 0.75rem;
-                  font-weight: 700;
-                  text-transform: uppercase;
-                  letter-spacing: 0.06em;
-                  color: var(--muted);
-                  margin-top: 2px;
-                "
-              >
-                🔥 Top Ads Right Now
-              </div>
-              <div class="hero-mini-ads">
-                <div class="hma">
-                  <div class="hma-thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=120&h=80&fit=crop"
-                      alt=""
-                    />
-                  </div>
-                  <div class="hma-info">
-                    <div class="hma-name">Galaxy S25 — Samsung</div>
-                    <div class="hma-dur">30s video</div>
-                  </div>
-                  <div class="hma-earn">+$0.12</div>
-                </div>
-                <div class="hma">
-                  <div class="hma-thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?w=120&h=80&fit=crop"
-                      alt=""
-                    />
-                  </div>
-                  <div class="hma-info">
-                    <div class="hma-name">Send Money — M-Pesa</div>
-                    <div class="hma-dur">15s video</div>
-                  </div>
-                  <div class="hma-earn">+$0.22</div>
-                </div>
-                <div class="hma">
-                  <div class="hma-thumb">
-                    <img
-                      src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?w=120&h=80&fit=crop"
-                      alt=""
-                    />
-                  </div>
-                  <div class="hma-info">
-                    <div class="hma-name">Install App — Copia Kenya</div>
-                    <div class="hma-dur">Install campaign</div>
-                  </div>
-                  <div class="hma-earn">+$0.50</div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -2638,6 +2476,47 @@
     </nav>
 
     <script>
+      // Campaign carousel: retain six stable positions and quietly refresh one
+      // card at a time, so there is always more to discover without a grid jump.
+      (function () {
+        const grid = document.querySelector(".ad-grid");
+        if (!grid || window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+          return;
+
+        const allCards = Array.from(grid.querySelectorAll(".ad-card"));
+        if (allCards.length <= 6) return;
+
+        const campaigns = allCards.map((card) => card.innerHTML);
+        const slots = allCards.slice(0, 6);
+        allCards.slice(6).forEach((card) => card.remove());
+
+        let slotIndex = 0;
+        let campaignIndex = 6;
+        let paused = false;
+
+        function rotateCampaign() {
+          if (!paused && !document.hidden) {
+            const slot = slots[slotIndex];
+            slot.classList.add("ad-card--switching");
+            window.setTimeout(() => {
+              slot.innerHTML = campaigns[campaignIndex];
+              campaignIndex = (campaignIndex + 1) % campaigns.length;
+              slotIndex = (slotIndex + 1) % slots.length;
+              requestAnimationFrame(() =>
+                slot.classList.remove("ad-card--switching"),
+              );
+            }, 480);
+          }
+          window.setTimeout(rotateCampaign, 3200);
+        }
+
+        grid.addEventListener("mouseenter", () => (paused = true));
+        grid.addEventListener("mouseleave", () => (paused = false));
+        grid.addEventListener("focusin", () => (paused = true));
+        grid.addEventListener("focusout", () => (paused = false));
+        window.setTimeout(rotateCampaign, 4200);
+      })();
+
       // Pages
       const pgHome = document.getElementById("pgHome"),
         pgDash = document.getElementById("pgDash");
