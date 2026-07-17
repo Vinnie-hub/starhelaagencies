@@ -3,12 +3,15 @@
 
   /*   CONSTANTS  */
   const REG = "https://starhela.com/register.php?ref=sydney";
-  const profilesByCategory = {
-    "Work & Job Offers": [],
-    "Fun & Friendship": [],
-    "Romance & Dating": [],
-    "Business & Investment": [],
-  };
+  const DISPLAY_COUNT = 6;
+  
+  const PROFILE_GROUPS = [
+    { name: "Fun & Friendship", id: "fun-friendship" },
+    { name: "Romance & Dating", id: "romance-dating" },
+    { name: "Business & Investment", id: "business-investment" },
+    { name: "Work & Job Offers", id: "work-job-offers" },
+  ];
+
   const profiles = {
     "Work & Job Offers": [
       {
@@ -2043,15 +2046,15 @@
   let currentSearch = "";
   let currentSort = "recent";
   let currentCat = "all";
+  let currentStatus = "all"; // FIXED: Added missing state
   let drawerOpen = false;
   let modalOpen = false;
   let searchTimer = null;
-  const PROFILE_GROUPS = [
-    { name: "Fun & Friendship", id: "fun-friendship" },
-    { name: "Romance & Dating", id: "romance-dating" },
-    { name: "Business & Investment", id: "business-investment" },
-    { name: "Work & Job Offers", id: "work-job-offers" },
-  ];
+  
+  /*   INTERVAL TRACKING FOR CLEANUP  */
+  let rotationInterval = null;
+  let statsInterval = null;
+  let spInterval = null;
 
   /* Scroll-lock stack so drawer + modal don't fight */
   let scrollLocks = 0;
@@ -2082,7 +2085,6 @@
       .toUpperCase();
   }
   function profileImageUrl(a) {
-    // Pravatar provides a stable online portrait for each profile handle.
     return "https://i.pravatar.cc/150?u=" + encodeURIComponent(a.handle);
   }
   function statusHTML(s) {
@@ -2096,14 +2098,12 @@
   }
 
   /*   LIVE STATS                      */
-  /* Inflated starting values for strong social proof */
   let statSessions = 18247;
   let statMembers = 184320;
   let statRating = 4.9;
   let heroCount = 12547;
 
   function liveCount() {
-    /* Always show an impressively high number */
     return Math.floor(statSessions / 45);
   }
 
@@ -2143,7 +2143,7 @@
   }
 
   /* Growth simulation: stats tick up quickly */
-  setInterval(function () {
+  statsInterval = setInterval(function () {
     if (document.hidden) return;
     statSessions += Math.floor(Math.random() * 12) + 3;
     statMembers += Math.floor(Math.random() * 8) + 2;
@@ -2162,9 +2162,11 @@
         offline: ["offline", "available"],
       };
       const idx = Math.floor(Math.random() * foreigners.length);
-      const opts = flip[foreigners[idx].status] || ["online"];
-      foreigners[idx].status = opts[Math.floor(Math.random() * opts.length)];
-      renderCards();
+      if (foreigners[idx] && flip[foreigners[idx].status]) {
+        const opts = flip[foreigners[idx].status];
+        foreigners[idx].status = opts[Math.floor(Math.random() * opts.length)];
+        renderCards();
+      }
     } else {
       refreshStats();
     }
@@ -2175,9 +2177,8 @@
   pulseHeroCount();
 
   /*   PROFILE ROTATION (50 of 150 shown, swaps every 5s)   */
-  const DISPLAY_COUNT = 6;
   const rotationPools = Object.fromEntries(
-    PROFILE_GROUPS.map((group) => [group.name, []]),
+    PROFILE_GROUPS.map((group) => [group.name, []])
   );
 
   function shuffleArray(arr) {
@@ -2190,27 +2191,36 @@
   }
 
   function nextBatch() {
-    /* Refill the queue when too few profiles remain, preventing exact repeats. */
-    return PROFILE_GROUPS.flatMap((group) => {
-      const categoryProfiles = foreigners.filter(
-        (a) => a.category === group.name,
-      );
-      const pool = rotationPools[group.name];
-      while (pool.length < DISPLAY_COUNT) {
-        pool.push(...shuffleArray(categoryProfiles));
-      }
-      return pool.splice(0, DISPLAY_COUNT);
-    });
+    try {
+      return PROFILE_GROUPS.flatMap((group) => {
+        const categoryProfiles = foreigners.filter(
+          (a) => a.category === group.name
+        );
+        const pool = rotationPools[group.name];
+        while (pool.length < DISPLAY_COUNT) {
+          const shuffled = shuffleArray(categoryProfiles);
+          if (shuffled.length === 0) break;
+          pool.push(...shuffled);
+        }
+        return pool.splice(0, DISPLAY_COUNT);
+      });
+    } catch (error) {
+      console.error('Error generating profile batch:', error);
+      return [];
+    }
   }
 
   /* Visible slice: renderCards uses this instead of the full array. */
   let visibleforeigners = nextBatch();
 
   /* Rotate every five seconds for a seamless batch swap. */
-  setInterval(function () {
+  rotationInterval = setInterval(function () {
     if (document.hidden) return;
-    visibleforeigners = nextBatch();
-    renderCards();
+    const newBatch = nextBatch();
+    if (newBatch && newBatch.length > 0) {
+      visibleforeigners = newBatch;
+      renderCards();
+    }
   }, 5000);
 
   /*   LIVE TICKER                      */
@@ -2248,17 +2258,20 @@
   /*   RENDER CARDS                     */
   function renderCards() {
     let data = visibleforeigners.filter((a) => {
+      // Category filter
       const mC = currentCat === "all" || a.category === currentCat;
-      const mQ =
-        !currentSearch ||
+      
+      // Status filter - FIXED: Now using currentStatus
+      const mS = currentStatus === "all" || a.status === currentStatus;
+      
+      // Search filter
+      const mQ = !currentSearch ||
         a.name.toLowerCase().includes(currentSearch) ||
         a.bio.toLowerCase().includes(currentSearch) ||
-        a.category
-          .toLowerCase()
-          .replace(/&/g, "and")
-          .includes(currentSearch.replace(/&/g, "and")) ||
+        a.category.toLowerCase().replace(/&/g, "and").includes(currentSearch.replace(/&/g, "and")) ||
         a.tags.some((t) => t.toLowerCase().includes(currentSearch));
-      return mC && mQ;
+      
+      return mC && mS && mQ;
     });
 
     const statusOrder = { live: 0, online: 1, available: 2, offline: 3 };
@@ -2269,14 +2282,14 @@
       data.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
     else
       data.sort(
-        (a, b) => (statusOrder[a.status] ?? 3) - (statusOrder[b.status] ?? 3),
+        (a, b) => (statusOrder[a.status] ?? 3) - (statusOrder[b.status] ?? 3)
       );
 
     const groupFragments = Object.fromEntries(
       PROFILE_GROUPS.map((group) => [
         group.name,
         document.createDocumentFragment(),
-      ]),
+      ])
     );
 
     data.forEach((a) => {
@@ -2285,7 +2298,8 @@
       div.setAttribute("role", "button");
       div.setAttribute("tabindex", "0");
       div.setAttribute("aria-label", "View profile for " + a.name);
-      div.dataset.foreignersIdx = foreigners.indexOf(a);
+      const profileIndex = foreigners.indexOf(a);
+      div.dataset.foreignersIdx = profileIndex >= 0 ? profileIndex : 0;
 
       div.innerHTML =
         '<div class="card-header">' +
@@ -2350,7 +2364,8 @@
         '">Chat</button>' +
         "</div>";
 
-      groupFragments[a.category]?.appendChild(div);
+      const fragment = groupFragments[a.category];
+      if (fragment) fragment.appendChild(div);
     });
 
     PROFILE_GROUPS.forEach((group) => {
@@ -2371,7 +2386,9 @@
       const card = e.target.closest(".card");
       if (!card) return;
       const idx = parseInt(card.dataset.foreignersIdx, 10);
-      if (!isNaN(idx)) showModal(foreigners[idx]);
+      if (!isNaN(idx) && idx >= 0 && idx < foreigners.length) {
+        showModal(foreigners[idx]);
+      }
     });
   document
     .getElementById("profile-groups")
@@ -2381,12 +2398,15 @@
       if (!card) return;
       e.preventDefault();
       const idx = parseInt(card.dataset.foreignersIdx, 10);
-      if (!isNaN(idx)) showModal(foreigners[idx]);
+      if (!isNaN(idx) && idx >= 0 && idx < foreigners.length) {
+        showModal(foreigners[idx]);
+      }
     });
 
   /*   STATUS COUNTS                     */
   /*   FILTER DEFINITIONS                  */
   const categories = PROFILE_GROUPS.map((group) => group.name);
+  const statuses = ["all", "live", "online", "available", "offline"];
 
   /*   BUILD FILTER UI                    */
   function buildCatFilters(id) {
@@ -2405,15 +2425,35 @@
             id +
             '">' +
             esc(c) +
-            "</button>",
+            "</button>"
         )
         .join("");
   }
 
+  function buildStatusFilters(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = statuses
+      .map(
+        (s) =>
+          '<button class="filter-option' +
+          (s === "all" ? " active" : "") +
+          '" data-status="' +
+          esc(s) +
+          '" data-container="' +
+          id +
+          '">' +
+          (s === "all" ? "All statuses" : s.charAt(0).toUpperCase() + s.slice(1)) +
+          "</button>"
+      )
+      .join("");
+  }
+
   buildCatFilters("sidebar-cat-filters");
   buildCatFilters("drawer-cat-filters");
+  buildStatusFilters("sidebar-status-filters");
+  buildStatusFilters("drawer-status-filters");
 
-  /*   MOBILE CHIP BAR                    */
   /*   STATUS FILTER HANDLER                 */
   function onStatusFilterClick(e) {
     const btn = e.target.closest("[data-status]");
@@ -2424,6 +2464,8 @@
         b.classList.toggle("active", b.dataset.status === currentStatus);
       });
     });
+    // FIXED: Check if mobileBar exists before using
+    const mobileBar = document.querySelector('.mobile-chip-bar');
     if (mobileBar) {
       mobileBar.querySelectorAll(".chip").forEach((b) => {
         b.classList.toggle("active", b.dataset.mstatus === currentStatus);
@@ -2431,13 +2473,6 @@
     }
     renderCards();
     if (drawerOpen) closeDrawer();
-  }
-  function syncStatusUI(val) {
-    ["sidebar-status-filters", "drawer-status-filters"].forEach((id) => {
-      document.querySelectorAll("#" + id + " .filter-option").forEach((b) => {
-        b.classList.toggle("active", b.dataset.status === val);
-      });
-    });
   }
 
   /*   CAT FILTER HANDLER                  */
@@ -2551,6 +2586,7 @@
 
   /*   MODAL                         */
   function showModal(a) {
+    if (!a) return;
     const av = document.getElementById("modal-avatar");
     if (av) {
       av.style.background = a.color;
@@ -2571,13 +2607,13 @@
 
     const pill = document.getElementById("modal-status-pill");
     if (pill) {
+      pill.innerHTML = "";
       if (a.status === "live") {
         const dot = document.createElement("span");
         dot.className = "live-dot";
         dot.style.cssText =
           "width:6px;height:6px;border-radius:50%;background:#dc2626;display:inline-block;animation:pulse 1.4s infinite;margin-right:4px;";
         dot.setAttribute("aria-hidden", "true");
-        pill.innerHTML = "";
         pill.appendChild(dot);
         pill.appendChild(document.createTextNode("Live now"));
       } else if (a.status === "online") {
@@ -2590,6 +2626,25 @@
       pill.className = "modal-status-pill " + a.status;
     }
 
+    // Update modal bio
+    const bio = document.getElementById("modal-bio");
+    if (bio) bio.textContent = a.bio;
+    
+    // Update modal tags
+    const tagsContainer = document.getElementById("modal-tags");
+    if (tagsContainer) {
+      tagsContainer.innerHTML = a.tags
+        .map((t) => '<span class="tag">' + esc(t) + "</span>")
+        .join("");
+    }
+    
+    // Update modal stats
+    const price = document.getElementById("modal-price");
+    if (price) price.textContent = "$" + a.price + "/min";
+    
+    const rating = document.getElementById("modal-rating");
+    if (rating) rating.textContent = a.rating + " (" + a.reviews.toLocaleString() + " reviews)";
+
     const overlay = document.getElementById("modal-overlay");
     if (overlay) overlay.classList.add("open");
     modalOpen = true;
@@ -2597,6 +2652,7 @@
     const closeBtn = document.getElementById("modal-close");
     if (closeBtn) closeBtn.focus();
   }
+  
   function closeModal() {
     const overlay = document.getElementById("modal-overlay");
     if (overlay) overlay.classList.remove("open");
@@ -2650,6 +2706,7 @@
     if (!spW || spBusy || document.hidden) return;
     spBusy = true;
     let msg;
+    let attempts = 0;
     do {
       const n = spNames[Math.floor(Math.random() * spNames.length)];
       const a = spActs[Math.floor(Math.random() * spActs.length)];
@@ -2661,7 +2718,8 @@
         "</strong> " +
         a.t +
         "</span>";
-    } while (msg === lastSPMsg);
+      attempts++;
+    } while (msg === lastSPMsg && attempts < 10);
     lastSPMsg = msg;
     const el = document.createElement("div");
     el.className = "sp-item";
@@ -2678,11 +2736,21 @@
       }, 420);
     }, delay);
   }
+  
   function loopSP() {
     showSP();
-    setTimeout(loopSP, Math.floor(Math.random() * 7000) + 8000);
+    spInterval = setTimeout(loopSP, Math.floor(Math.random() * 7000) + 8000);
   }
   setTimeout(loopSP, 6000);
 
+  /*   CLEANUP ON PAGE UNLOAD  */
+  window.addEventListener('beforeunload', function() {
+    if (rotationInterval) clearInterval(rotationInterval);
+    if (statsInterval) clearInterval(statsInterval);
+    if (spInterval) clearTimeout(spInterval);
+    if (searchTimer) clearTimeout(searchTimer);
+  });
+
+  /*   INITIAL RENDER  */
   renderCards();
 })();

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://starhelaagencies.com/sitemap.xml
+Sitemap: https://www.starhelaagencies.com/sitemap.xml

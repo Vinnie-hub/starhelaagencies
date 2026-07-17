@@ -1,6 +1,15 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": false,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "starhelaagencies.com" }],
+      "destination": "https://www.starhelaagencies.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/earn/chatting", "destination": "/earn/chatting.html" },
     { "source": "/earn/videos", "destination": "/earn/videos.html" },
@@ -23,13 +32,13 @@
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
