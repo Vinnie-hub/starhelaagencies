@@ -141,20 +141,14 @@
     <script defer src="/js/starhela.js"></script>
   </head>
   <body>
-    <!-- PAGE LOADER -->
+    <!--$-->
     <div id="pageLoader" role="status" aria-label="Loading Starhela">
       <div class="loader-star"></div>
       <div class="loader-brand">STARHELA</div>
       <div class="loader-sub">Earn Money Online · Kenya & Africa</div>
       <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     </div>
-
-    <!-- CLICK LOADER -->
-    <div id="clickLoader" aria-hidden="true">
-      <div class="cl-spinner"></div>
-    </div>
-
-    <!-- PAGE TRANSITION -->
+    <div id="clickLoader" aria-hidden="true"><div class="cl-spinner"></div></div>
     <div id="page-transition" aria-hidden="true">
       <div class="pt-panel pt-panel-1"></div>
       <div class="pt-panel pt-panel-2"></div>
@@ -169,14 +163,7 @@
         </div>
       </div>
     </div>
-
-    <!-- OFFERWALL MODAL -->
-    <div
-      id="offerwallOv"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="owTitle"
-    >
+    <div id="offerwallOv" role="dialog" aria-modal="true" aria-labelledby="owTitle">
       <div class="ow-modal">
         <div class="ow-header">
           <div class="ow-header-orb"></div>
@@ -185,39 +172,24 @@
             <div class="ow-geo-dot"></div>
             <span>Detecting location…</span>
           </div>
-          <div
-            class="ow-country-badge"
-            id="owCountryBadge"
-            style="display: none"
-          >
+          <div class="ow-country-badge" id="owCountryBadge" style="display:none">
             <span class="ow-country-flag" id="owCountryFlag">🌍</span>
             <div>
               <div class="ow-country-name" id="owCountryName">Africa</div>
-              <div class="ow-country-detected" id="owCountryDetectedLabel">
-                Auto-detected
-              </div>
+              <div class="ow-country-detected" id="owCountryDetectedLabel">Auto-detected</div>
             </div>
           </div>
           <div class="ow-eyebrow">⭐ Official Registration</div>
-          <h2 class="ow-hd-title" id="owTitle">
-            Unlock Your<br />Earning Potential
-          </h2>
-          <p class="ow-hd-sub">
-            Complete your registration to start earning today. One-time fee,
-            lifetime access.
-          </p>
+          <h2 class="ow-hd-title" id="owTitle">Unlock Your<br/>Earning Potential</h2>
+          <p class="ow-hd-sub">Complete your registration to start earning today. One-time fee, lifetime access.</p>
         </div>
         <div class="ow-body">
           <div class="ow-fee-box">
             <div class="ow-fee-icon">🔓</div>
             <div>
-              <div class="ow-fee-label" id="owFeeLabel">
-                One-Time Activation
-              </div>
+              <div class="ow-fee-label" id="owFeeLabel">One-Time Activation</div>
               <div class="ow-fee-val" id="owFeeVal">$5</div>
-              <div class="ow-fee-sub" id="owFeeSub">
-                No monthly fees · No hidden charges · Lifetime access
-              </div>
+              <div class="ow-fee-sub" id="owFeeSub">No monthly fees · No hidden charges · Lifetime access</div>
             </div>
           </div>
           <div class="ow-payment-chips" id="owPaymentChips">
@@ -225,12 +197,8 @@
             <span class="ow-chip">🏦 Bank Transfer</span>
             <span class="ow-chip">📲 Airtel Money</span>
           </div>
-          <button
-            class="ow-cta-btn"
-            id="owProceedBtn"
-            aria-label="Register on Starhela now"
-          >
-            🚀 Register on Starhela Now <span style="margin-left: 4px">→</span>
+          <button class="ow-cta-btn" id="owProceedBtn" aria-label="Register on Starhela now">
+            🚀 Register on Starhela Now <span style="margin-left:4px">→</span>
           </button>
           <div class="ow-trust-strip">
             <div class="ow-trust-item">🔒 Secure</div>
@@ -241,1288 +209,381 @@
         </div>
       </div>
     </div>
-
-    <!-- WHATSAPP FLOAT -->
     <div class="float-wa-wrap">
       <span class="float-wa-label">💬 Join WhatsApp Community</span>
-      <a
-        href="https://chat.whatsapp.com/Ir5lbHCr9rPCLuvVzvHAyD"
-        class="float-wa"
-        target="_blank"
-        rel="noopener"
-        aria-label="Join our WhatsApp Community"
-      >
-        <svg
-          class="wa-icon"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.57 1.38 5.05L2 22l5.03-1.35C8.44 21.62 10.17 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"
-            fill="white"
-          />
-          <path
-            d="M12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8c-1.43 0-2.8-.38-4-.1l-2.8.75.75-2.8C5.38 16.8 5 15.43 5 14c0-4.42 3.58-8 8-8z"
-            fill="#25D366"
-          />
-          <path
-            d="M16.4 14.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.4.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1.1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.2 0-.3-.1-.4-.1-.1-.4-1-.5-1.3-.1-.3-.2-.3-.3-.3h-.3c-.1 0-.3.1-.5.2-.2.2-.7.6-.7 1.5 0 .9.6 1.7.7 1.8.1.1 1.2 1.9 2.9 2.6.4.2.7.3 1 .4.4.1.8.1 1.1.1.4 0 .7 0 1-.1.3-.1 1-.4 1.1-.8.1-.4.1-.7.1-.8 0-.1-.1-.2-.2-.2z"
-            fill="white"
-          />
+      <a href="https://chat.whatsapp.com/Ir5lbHCr9rPCLuvVzvHAyD" class="float-wa" target="_blank" rel="noopener" aria-label="Join our WhatsApp Community">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.57 1.38 5.05L2 22l5.03-1.35C8.44 21.62 10.17 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="white"></path>
+          <path d="M12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8c-1.43 0-2.8-.38-4-.1l-2.8.75.75-2.8C5.38 16.8 5 15.43 5 14c0-4.42 3.58-8 8-8z" fill="#25D366"></path>
+          <path d="M16.4 14.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.4.1-.1.2-.5.7-.6.8-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1.1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.2 0-.3-.1-.4-.1-.1-.4-1-.5-1.3-.1-.3-.2-.3-.3-.3h-.3c-.1 0-.3.1-.5.2-.2.2-.7.6-.7 1.5 0 .9.6 1.7.7 1.8.1.1 1.2 1.9 2.9 2.6.4.2.7.3 1 .4.4.1.8.1 1.1.1.4 0 .7 0 1-.1.3-.1 1-.4 1.1-.8.1-.4.1-.7.1-.8 0-.1-.1-.2-.2-.2z" fill="white"></path>
         </svg>
       </a>
     </div>
-
     <div class="overlay" id="overlay"></div>
-
-    <!-- MOBILE MENU -->
-    <div
-      class="mobile-menu"
-      id="mobileMenu"
-      role="navigation"
-      aria-label="Mobile navigation"
-    >
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
       <a href="#hero" class="mob-link active">🏠 Home</a>
       <a href="#chat" class="mob-link">💬 Chat with Foreigners</a>
       <a href="#activities" class="mob-link">⚡ Earning Activities</a>
       <a href="#countries" class="mob-link">🌍 Countries</a>
       <a href="#faq" class="mob-link">❓ FAQ</a>
       <div class="mob-divider"></div>
-      <a
-        href="https://starhela.com/c/U3lkbmV5"
-        target="_blank"
-        rel="noopener"
-        class="mob-link"
-        >🔑 Login</a
-      >
-      <a href=" https://www.appcreator24.com/app4103550-tzple8" class="mob-link"
-        >📱 Download App</a
-      >
-      <button class="mob-cta go-register">
-        🚀 Register Now — Start Earning Today
-      </button>
+      <a href="https://starhela.com/c/U3lkbmV5" target="_blank" rel="noopener" class="mob-link">🔑 Login</a>
+      <a href=" https://www.appcreator24.com/app4103550-tzple8" class="mob-link">📱 Download App</a>
+      <button class="mob-cta go-register">🚀 Register Now — Start Earning Today</button>
     </div>
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- NAV -->
-    <!-- ══════════════════════════════════════════ -->
     <nav class="site-nav" role="banner">
-  <div class="wrap nav-inner">
-    <a href="/" class="nav-logo" aria-label="Starhela Agencies Home">
-      <img
-        src="https://res.cloudinary.com/duccwuddw/image/upload/v1782576392/starhela-official-logo_q4ip2g_kw8szm.png"
-        alt="Starhela logo"
-        loading="eager"
-      />
-      <span class="nav-logo-name">STARHELA</span>
-    </a>
-    
-    <!-- Spacer element for better separation -->
-    <div class="nav-spacer"></div>
-    
-    <div class="nav-links">
-      <a href="#activities" class="nav-link">Earn</a>
-      <a href="#countries" class="nav-link">Countries</a>
-      <a
-        href="https://starhela.com/c/U3lkbmV5"
-        target="_blank"
-        rel="noopener"
-        class="nav-link"
-        >Login</a
-      >
-      <button class="nav-cta go-register" aria-label="Register on Starhela">
-        🚀 Register Now
-      </button>
+      <div class="wrap nav-inner">
+        <a href="/" class="nav-logo" aria-label="Starhela Agencies Home">
+          <img src="https://res.cloudinary.com/duccwuddw/image/upload/v1782576392/starhela-official-logo_q4ip2g_kw8szm.png" alt="Starhela logo" loading="eager"/>
+          <span class="nav-logo-name">STARHELA</span>
+        </a>
+        <div class="nav-spacer"></div>
+        <div class="nav-links">
+          <a href="#activities" class="nav-link">Earn</a>
+          <a href="#countries" class="nav-link">Countries</a>
+          <a href="https://starhela.com/c/U3lkbmV5" target="_blank" rel="noopener" class="nav-link">Login</a>
+          <button class="nav-cta go-register" aria-label="Register on Starhela">🚀 Register Now</button>
+        </div>
+        <div class="nav-right-controls">
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span class="hamburger-box">
+              <span class="hamburger-line line-top"></span>
+              <span class="hamburger-line line-mid"></span>
+              <span class="hamburger-line line-bot"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="sh-progress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+      <div class="sh-progress-fill" style="width:0%"></div>
     </div>
-    <div class="nav-right-controls">
-      <button
-        class="nav-icon-btn"
-        id="themeToggle"
-        aria-label="Toggle dark/light mode"
-      >
-        <svg
-          id="icon-moon"
-          width="15"
-          height="15"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path
-            d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
-          />
-        </svg>
-        <svg
-          id="icon-sun"
-          width="15"
-          height="15"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          style="display: none"
-        >
-          <path
-            d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"
-          />
-        </svg>
-      </button>
-      <button
-        class="hamburger"
-        id="hamburger"
-        aria-label="Open menu"
-        aria-expanded="false"
-      >
-        <span class="hamburger-box">
-          <span class="hamburger-line line-top"></span>
-          <span class="hamburger-line line-mid"></span>
-          <span class="hamburger-line line-bot"></span>
-        </span>
-      </button>
-    </div>
-  </div>
-</nav>
-    <!-- ══════════════════════════════════════════ -->
-    <!-- HERO -->
-    <!-- ══════════════════════════════════════════ -->
+    <nav class="sh-crumbs" aria-label="Breadcrumb">
+      <div class="wrap"><ol><li><a href="#hero" aria-current="page">Home</a></li></ol></div>
+    </nav>
     <section class="hero" id="hero" aria-labelledby="hero-h1">
       <div class="hero-bg" aria-hidden="true">
         <div class="hero-glow1"></div>
         <div class="hero-glow2"></div>
         <div class="hero-grid"></div>
       </div>
-      <div class="wrap" style="width: 100%">
+      <div class="wrap" style="width:100%">
         <div class="hero-inner">
-          <!-- Left -->
           <div class="hero-left">
-            <h1 id="hero-h1" class="hero-h1">
-              Earn money online<br />
-              <span class="accent">Across Africa and Worldwide.</span>
-            </h1>
-            <p class="hero-desc">
-              Chat with foreigners, complete micro tasks, and watch videos. Get
-              paid instantly to M-Pesa, Airtel Money, or MTN Mobile Money.
-            </p>
+            <h1 id="hero-h1" class="hero-h1">Earn money online<br/><span class="accent">Across Africa and Worldwide.</span></h1>
+            <p class="hero-desc">Chat with foreigners, watch videos, complete online writing tasks, teach local languages, train AI, answer trivia, click ads, spin to win, and earn through rewarding referrals—all in one place.</p>
             <div class="hero-feats" role="list">
-              <div class="hero-feat" role="listitem">
-                <div class="feat-check" aria-hidden="true">✓</div>
-                No experience needed — start in under 2 minutes
-              </div>
-              <div class="hero-feat" role="listitem">
-                <div class="feat-check" aria-hidden="true">✓</div>
-                Earn $2–$8 per hour on your own schedule
-              </div>
-              <div class="hero-feat" role="listitem">
-                <div class="feat-check" aria-hidden="true">✓</div>
-                Instant withdrawals via M-Pesa, MTN & Airtel
-              </div>
+              <div class="hero-feat" role="listitem"><div class="feat-check" aria-hidden="true">✓</div>No experience needed — start in under 2 minutes</div>
+              <div class="hero-feat" role="listitem"><div class="feat-check" aria-hidden="true">✓</div>Earn $2–$8 per hour on your own schedule</div>
+              <div class="hero-feat" role="listitem"><div class="feat-check" aria-hidden="true">✓</div>Instant withdrawals via M-Pesa, MTN & Airtel</div>
             </div>
             <div class="hero-cta-row">
-              <button class="btn-primary go-register">
-                🚀 Create Account →
-              </button>
-              <a href="/earn/chatting.html" class="btn-ghost"
-                >💬Start chatting</a
-              >
+              <button class="btn-primary go-register">🚀 Create Account →</button>
+              <a href="/earn/chatting.html" class="btn-ghost">💬 Start chatting</a>
             </div>
             <div class="hero-social-proof">
               <div class="hero-avatars" aria-hidden="true">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop&crop=faces"
-                  alt=""
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&fit=crop&crop=faces"
-                  alt=""
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=64&h=64&fit=crop&crop=faces"
-                  alt=""
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=faces"
-                  alt=""
-                />
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop&crop=faces" alt=""/>
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&fit=crop&crop=faces" alt=""/>
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=64&h=64&fit=crop&crop=faces" alt=""/>
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=faces" alt=""/>
               </div>
-              <div class="hero-proof-text">
-                <strong>12,400+ creators</strong> already earning on Starhela<br />
-                Average rating 4.9★ across all sessions
-              </div>
+              <div class="hero-proof-text"><strong>12,400+ creators</strong> already earning on Starhela<br/>Average rating 4.9★ across all sessions</div>
             </div>
           </div>
-          <!-- Right -->
           <div class="hero-right">
-            <div
-              class="hero-card"
-              role="region"
-              aria-label="Daily earnings breakdown"
-            >
+            <div class="hero-card" role="region" aria-label="Daily earnings breakdown">
               <div class="hcard-header">
                 <span class="hcard-title">Daily Earning Breakdown</span>
-                <div class="hcard-live">
-                  <div class="hcard-live-dot"></div>
-                  Estimates
-                </div>
+                <div class="hcard-live"><div class="hcard-live-dot"></div>Estimates</div>
               </div>
-              <p class="hcard-sub">
-  What you can earn in a typical day across all tasks
-</p>
-<div class="earn-rows">
-  <div class="earn-row">
-    <div class="er-icon">💬</div>
-    <div class="er-info">
-      <div class="er-name">Chat with Foreigners</div>
-      <div class="er-range">2–4 hrs/day · $2–$8/hr</div>
-    </div>
-    <div>
-      <span class="er-val">~$16</span
-      ><span class="er-tag">highest</span>
-    </div>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">🤖</div>
-    <div class="er-info">
-      <div class="er-name">AI Training Tasks</div>
-      <div class="er-range">1–2 hrs/day · $1.50–$3/hr</div>
-    </div>
-    <span class="er-val">~$5</span>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">📋</div>
-    <div class="er-info">
-      <div class="er-name">Paid Surveys</div>
-      <div class="er-range">30–60 min · $0.50–$2 each</div>
-    </div>
-    <span class="er-val">~$9</span>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">🎬</div>
-    <div class="er-info">
-      <div class="er-name">Watch & Post Videos</div>
-      <div class="er-range">30 min · passive rewards</div>
-    </div>
-    <span class="er-val">~$2</span>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">✍️</div>
-    <div class="er-info">
-      <div class="er-name">Online Writing</div>
-      <div class="er-range">1–2 hrs/day · $3–$6/article</div>
-    </div>
-    <span class="er-val">~$6</span>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">🎰</div>
-    <div class="er-info">
-      <div class="er-name">Spin & Earn</div>
-      <div class="er-range">20 min · $1.20/spin + bonuses</div>
-    </div>
-    <span class="er-val">~$3.50</span>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">🌟</div>
-    <div class="er-info">
-      <div class="er-name">Agent Referral Rewards</div>
-      <div class="er-range">Passive · per active referral</div>
-    </div>
-    <div>
-      <span class="er-val">~$3</span
-      ><span class="er-tag passive">passive</span>
-    </div>
-  </div>
-  <div class="earn-row">
-    <div class="er-icon">🎁</div>
-    <div class="er-info">
-      <div class="er-name">Daily Login & Bonuses</div>
-      <div class="er-range">1 min · streak rewards</div>
-    </div>
-    <span class="er-val">~$1.50</span>
-  </div>
-</div>
-<div class="hcard-total">
-  <div>
-    <div class="htotal-label">Estimated Daily Total</div>
-    <div class="htotal-note">all activities combined</div>
-  </div>
-  <div class="htotal-amount">~$46+</div>
-</div>
+              <p class="hcard-sub">What you can earn in a typical day across all tasks</p>
+              <div class="earn-rows">
+                <div class="earn-row featured">
+                  <div class="er-icon">💬</div>
+                  <div class="er-info"><div class="er-name">Chat with Foreigners ⭐</div><div class="er-range">2–4 hrs/day • Earn up to $16/day</div></div>
+                  <div><span class="er-val">$16+</span><span class="er-tag">Most Popular</span></div>
+                </div>
+                <div class="earn-row"><div class="er-icon">🤖</div><div class="er-info"><div class="er-name">AI Training Tasks</div><div class="er-range">Flexible • Help train AI models</div></div><span class="er-val">$6+</span></div>
+                <div class="earn-row"><div class="er-icon">🗣️</div><div class="er-info"><div class="er-name">Teach African Languages</div><div class="er-range">Share your language & culture</div></div><span class="er-val">$8+</span></div>
+                <div class="earn-row"><div class="er-icon">📋</div><div class="er-info"><div class="er-name">Paid Surveys</div><div class="er-range">Complete simple surveys</div></div><span class="er-val">$5+</span></div>
+                <div class="earn-row"><div class="er-icon">🎥</div><div class="er-info"><div class="er-name">Watch & Post Videos</div><div class="er-range">Earn daily rewards</div></div><span class="er-val">$3+</span></div>
+                <div class="earn-row"><div class="er-icon">✍️</div><div class="er-info"><div class="er-name">Online Writing</div><div class="er-range">Write articles & short content</div></div><span class="er-val">$7+</span></div>
+                <div class="earn-row"><div class="er-icon">🎰</div><div class="er-info"><div class="er-name">Spin & Earn</div><div class="er-range">Daily spins with bonus rewards</div></div><span class="er-val">$2+</span></div>
+                <div class="earn-row"><div class="er-icon">🤝</div><div class="er-info"><div class="er-name">Referral Rewards</div><div class="er-range">Earn commissions from active referrals</div></div><div><span class="er-val">Unlimited</span><span class="er-tag passive">Passive</span></div></div>
+                <div class="earn-row"><div class="er-icon">📢</div><div class="er-info"><div class="er-name">Click Ads</div><div class="er-range">Quick daily tasks</div></div><span class="er-val">$3+</span></div>
+              </div>
+              <div class="hcard-total">
+                <div><div class="htotal-label">Potential Daily Earnings</div><div class="htotal-note">Complete multiple activities to maximize your earnings</div></div>
+                <div class="htotal-amount">Up to $50+/day</div>
               </div>
               <div class="hcard-payouts">
                 <span class="pout-lbl">Pay out via:</span>
-                <span class="pout-pill">M-Pesa</span>
-                <span class="pout-pill">Airtel</span>
-                <span class="pout-pill">MTN</span>
-                <span class="pout-pill">Bank</span>
+                <span class="pout-pill">M-Pesa</span><span class="pout-pill">Airtel</span><span class="pout-pill">MTN</span><span class="pout-pill">Bank</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- QUICK START GUIDE -->
-    <!-- ══════════════════════════════════════════ -->
     <section class="section" id="quickstart" aria-labelledby="qs-h2">
       <div class="wrap">
         <p class="eyebrow-text">Getting Started</p>
-        <h2 id="qs-h2" class="sec-title">Your Path to Earning Starts Here</h2>
-        <p class="sec-sub">
-          Follow these simple steps to go from zero to your first withdrawal —
-          all within the same day.
-        </p>
+        <h2 id="qs-h2" class="sec-title">Start Earning in Just 3 Simple Steps</h2>
+        <p class="sec-sub">Create your account, activate once, and start earning from chatting, AI tasks, surveys, and more—all from your phone.</p>
         <div class="quickstart-grid">
-          <div class="qs-card reveal">
-            <div class="qs-num">1</div>
-            <div class="qs-icon">📝</div>
-            <h3 class="qs-title">Create Your Free Account</h3>
-            <p class="qs-desc">
-              Sign up with your phone number and email — no experience required,
-              takes just 1 minute.
-            </p>
-          </div>
-          <div class="qs-card reveal">
-            <div class="qs-num">2</div>
-            <div class="qs-icon">🔑</div>
-            <h3 class="qs-title">Activate with One-Time Fee</h3>
-            <p class="qs-desc">
-              Unlock all 12+ earning activities and instant withdrawal access
-              with a single payment. No monthly fees.
-            </p>
-          </div>
-          <div class="qs-card reveal">
-            <div class="qs-num">3</div>
-            <div class="qs-icon">💬</div>
-            <h3 class="qs-title">Start Chatting & Earning</h3>
-            <p class="qs-desc">
-              Chat with foreigners, complete tasks, and watch your earnings grow
-              — withdraw to M-Pesa anytime.
-            </p>
-          </div>
+          <div class="qs-card reveal"><div class="qs-num">1</div><div class="qs-icon">📝</div><h3 class="qs-title">Create Your Free Account</h3><p class="qs-desc">Register in under a minute using your phone number and email. No skills or experience required.</p></div>
+          <div class="qs-card reveal"><div class="qs-num">2</div><div class="qs-icon">🔓</div><h3 class="qs-title">Activate Your Account</h3><p class="qs-desc">Pay a one-time activation fee to unlock all earning opportunities and withdrawals. No monthly charges.</p></div>
+          <div class="qs-card reveal"><div class="qs-num">3</div><div class="qs-icon">💸</div><h3 class="qs-title">Earn & Withdraw</h3><p class="qs-desc">Chat with foreigners, complete AI tasks, answer surveys, refer friends, and withdraw your earnings to M-Pesa whenever you're ready.</p></div>
         </div>
       </div>
     </section>
-
-    <hr class="sec-divider" />
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- CHAT FEATURE -->
-    <!-- ══════════════════════════════════════════ -->
-    <section class="section" id="chat" aria-labelledby="chat-h2">
-      <div class="wrap">
-        <div class="chat-block reveal">
-          <div class="cb-glow" aria-hidden="true"></div>
-          <div class="cb-ribbon">
-            <div style="display: flex; align-items: center; gap: 10px">
-              <span class="cb-ribbon-badge">⭐ #1 Earning Method</span>
-              <span class="cb-ribbon-title"
-                >Chat with Foreigners — Highest-Paying Task on Starhela</span
-              >
-            </div>
-            <div class="cb-ribbon-live">
-              <div class="cb-ribbon-dot" aria-hidden="true"></div>
-              Live demand 24/7
-            </div>
-          </div>
-          <div class="cb-body">
-            <div class="cb-inner">
-              <div>
-                <div class="cb-eyebrow">
-                  💬 Most Popular · Highest Paying · No Experience Needed
-                </div>
-                <h2 id="chat-h2" class="cb-h2">
-                  Get Paid to <span>Chat</span> with<br />People Abroad
-                </h2>
-                <p class="cb-desc">
-                  Connect with lonely foreigners from UK, USA, Canada, Qatar and
-                  100+ countries through text chat — all from your phone. No
-                  video calls, no special skills. Just be friendly and earn
-                  money for every conversation.
-                </p>
-                <div class="cb-countries">
-                  <span class="cb-pill">🇬🇧 UK</span>
-                  <span class="cb-pill">🇺🇸 USA</span>
-                  <span class="cb-pill">🇨🇦 Canada</span>
-                  <span class="cb-pill">🇶🇦 Qatar</span>
-                  <span class="cb-pill">🇦🇺 Australia</span>
-                  <span class="cb-pill">🇩🇪 Germany</span>
-                  <span class="cb-pill">+100 more</span>
-                </div>
-              </div>
-              <div class="cb-earn-box">
-                <div class="ceb-lbl">Earn up to</div>
-                <div class="ceb-val">$20</div>
-                <div class="ceb-unit">per day</div>
-                <div class="ceb-div"></div>
-                <div class="ceb-stat">
-                  <div class="ceb-stat-val">$2–$8/hr</div>
-                  <div class="ceb-stat-lbl">Hourly rate</div>
-                </div>
-                <div class="ceb-stat">
-                  <div class="ceb-stat-val">120K+</div>
-                  <div class="ceb-stat-lbl">Active chatters</div>
-                </div>
-                <div class="ceb-stat">
-                  <div class="ceb-stat-val">24/7</div>
-                  <div class="ceb-stat-lbl">Demand available</div>
-                </div>
-              </div>
-            </div>
-            <div
-              style="
-                font-size: 0.6rem;
-                font-weight: 800;
-                color: rgba(255, 255, 255, 0.42);
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                margin-bottom: 9px;
-              "
-            >
-              5 WAYS TO EARN FROM CHATTING
-            </div>
-            <div class="cb-methods">
-              <div class="cb-method">
-                <div class="cbm-icon">⏱️</div>
-                <div class="cbm-title">Per Hour</div>
-                <div class="cbm-rate">$2–$8/hr</div>
-              </div>
-              <div class="cb-method">
-                <div class="cbm-icon">✉️</div>
-                <div class="cbm-title">Per Message</div>
-                <div class="cbm-rate">Credited</div>
-              </div>
-              <div class="cb-method">
-                <div class="cbm-icon">🤝</div>
-                <div class="cbm-title">Per Session</div>
-                <div class="cbm-rate">Bonus</div>
-              </div>
-              <div class="cb-method">
-                <div class="cbm-icon">💝</div>
-                <div class="cbm-title">Tips</div>
-                <div class="cbm-rate">From users</div>
-              </div>
-              <div class="cb-method">
-                <div class="cbm-icon">🎁</div>
-                <div class="cbm-title">Daily Rewards</div>
-                <div class="cbm-rate">Bonus</div>
-              </div>
-            </div>
-            <div class="cb-cta-row">
-              <button class="cb-btn-main go-register">
-                🚀 Register your account →
-              </button>
-              <a href="/earn/chatting" class="cb-btn-sec">💬 Start Chatting</a>
-            </div>
-            <div class="cb-trust">
-              <span class="cb-trust-item">🔒 Secure platform</span>
-              <span class="cb-trust-item">📱 Works on any phone</span>
-              <span class="cb-trust-item">⚡ Earnings credited instantly</span>
-              <span class="cb-trust-item">🌍 120,000+ active earners</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="sec-divider" />
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- HOW IT WORKS -->
-    <!-- ══════════════════════════════════════════ -->
-    <section class="section" id="how">
-      <div class="wrap">
-        <p class="eyebrow-text">How it works</p>
-        <h2 class="sec-title">Three steps to your first payment</h2>
-        <p class="sec-sub">
-          Quick setup in under 2 minutes. Register, activate, and start earning
-          the same day.
-        </p>
-        <div class="steps-wrap" role="list">
-          <div class="step reveal" role="listitem">
-            <div class="step-num" aria-hidden="true">01</div>
-            <h3>Create your account</h3>
-            <p>
-              Register with your phone number and email, then activate your
-              account with a one-time fee.
-            </p>
-          </div>
-          <div class="step reveal" role="listitem">
-            <div class="step-num" aria-hidden="true">02</div>
-            <h3>Pick your tasks</h3>
-            <p>
-              Chat, complete surveys, label AI data, watch videos — choose
-              whatever suits your schedule.
-            </p>
-          </div>
-          <div class="step reveal" role="listitem">
-            <div class="step-num" aria-hidden="true">03</div>
-            <h3>Withdraw your earnings</h3>
-            <p>
-              Once you reach $5, cash out instantly to M-Pesa, MTN Mobile Money,
-              or Airtel Money.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="sec-divider" />
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- OTHER ACTIVITIES -->
-    <!-- ══════════════════════════════════════════ -->
+    <hr class="sec-divider"/>
     <section class="section" id="activities" aria-labelledby="activities-h">
       <div class="wrap">
-        <p class="eyebrow-text">Ways to earn</p>
-        <h2 id="activities-h" class="sec-title">More Than Just Chatting</h2>
-        <p class="sec-sub">
-          Six income streams, all from your phone, on your own schedule.
-        </p>
+        <p class="eyebrow-text">Ways to Earn</p>
+        <h2 id="activities-h" class="sec-title">12+ Ways to Earn Online</h2>
+        <p class="sec-sub">Chat with foreigners, complete AI tasks, teach African languages, answer surveys, refer friends, and more—work whenever it suits you.</p>
+        <div class="sh-tabs" role="tablist" aria-label="Filter earning activities">
+          <button type="button" role="tab" aria-selected="true" class="sh-tab is-active">All Activities</button>
+          <button type="button" role="tab" aria-selected="false" class="sh-tab">Highest Paying</button>
+          <button type="button" role="tab" aria-selected="false" class="sh-tab">Most Popular</button>
+          <button type="button" role="tab" aria-selected="false" class="sh-tab">Beginner Friendly</button>
+        </div>
         <div class="acts-grid">
-          <article class="act-card reveal">
-            <div class="act-img-wrap">
-              <span class="act-badge bdg-hot">HOT</span>
-              <span class="act-earn-badge">$0.80/video</span>
-              <img
-                class="act-img"
-                src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400&q=70&fit=crop"
-                alt="Watch and share videos to earn money online"
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="act-foot">
-              <h3 class="act-name">Paid Videos</h3>
-              <div class="act-sub">Watch, Share & Earn — Top Rated</div>
-              <div class="act-earn">Earn up to $5.50/day</div>
-              <a href="/earn/videos" class="act-btn">▶️ Watch Videos</a>
-            </div>
-          </article>
-          <article class="act-card reveal">
-            <div class="act-img-wrap">
-              <span class="act-badge bdg-new">NEW</span>
-              <span class="act-earn-badge">$1–8/label</span>
-              <img
-                class="act-img"
-                src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=70&fit=crop"
-                alt="AI data labeling jobs online Africa"
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="act-foot">
-              <h3 class="act-name">AI Data Labeling</h3>
-              <div class="act-sub">Train AI & Earn — High Paying</div>
-              <div class="act-earn">Earn up to $5.00/day</div>
-              <a href="/earn/training-ai" class="act-btn">🤖 Train AI</a>
-            </div>
-          </article>
-          <article class="act-card reveal">
-            <div class="act-img-wrap">
-              <span class="act-badge bdg-free">FREE</span>
-              <span class="act-earn-badge">$2–5/survey</span>
-              <img
-                class="act-img"
-                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=70&fit=crop"
-                alt="Paid online surveys Kenya earn money"
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="act-foot">
-              <h3 class="act-name">Paid Surveys</h3>
-              <div class="act-sub">Answer & Earn — Beginner Friendly</div>
-              <div class="act-earn">Earn up to $3.50/day</div>
-              <a href="/earn/surveys" class="act-btn">📋 Do Surveys</a>
-            </div>
-          </article>
-          <article class="act-card reveal">
-            <div class="act-img-wrap">
-              <span class="act-badge bdg-new">NEW</span>
-              <span class="act-earn-badge">$0.80/reel</span>
-              <img
-                class="act-img"
-                src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&q=70&fit=crop"
-                alt="Earn money clicking ads online Africa"
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="act-foot">
-              <h3 class="act-name">Ad Clicking</h3>
-              <div class="act-sub">Click & Earn — Quick & Easy</div>
-              <div class="act-earn">Earn up to $4.50/day</div>
-              <a href="/earn/ads" class="act-btn">🎯 Click Ads</a>
-            </div>
-          </article>
-          <article class="act-card reveal">
-            <div class="act-img-wrap">
-              <span class="act-badge bdg-top">TOP</span>
-              <span class="act-earn-badge">$1.60/post</span>
-              <img
-                class="act-img"
-                src="https://images.unsplash.com/photo-1614680376739-414d95ff43df?w=400&q=70&fit=crop"
-                alt="Blog writing jobs online earn money Kenya"
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="act-foot">
-              <h3 class="act-name">Blog Writing</h3>
-              <div class="act-sub">Write & Earn — Creative Task</div>
-              <div class="act-earn">Earn up to $6.50/day</div>
-              <a href="/earn/blogging" class="act-btn">✍️ Start Blogging</a>
-            </div>
-          </article>
-          <article class="act-card reveal">
-  <div class="act-img-wrap">
-    <span class="act-badge bdg-top">TOP</span>
-    <span class="act-earn-badge">$1.20/spin</span>
-    <img
-      class="act-img"
-      src="https://media.istockphoto.com/id/482803657/photo/prize-wheel.jpg?b=1&s=612x612&w=0&k=20&c=QEBL0PE0q2LQFCu7TiYOHgD1wYWGMO7IO-Rn9EA9OGc="
-      alt="Spin and win earn money online Kenya"
-      loading="lazy"
-      decoding="async"
-      width="400"
-      height="300"
-    />
-  </div>
-  <div class="act-foot">
-    <h3 class="act-name">Spin & Earn</h3>
-    <div class="act-sub">Spin the Wheel — Win Real Cash</div>
-    <div class="act-earn">Earn up to $6.50/day</div>
-    <a href="/earn/spinandwin" class="act-btn">🎰 Start Spinning</a>
-  </div>
-</article>
-<article class="act-card reveal">
-  <div class="act-img-wrap">
-    <span class="act-badge bdg-top">TOP</span>
-    <span class="act-earn-badge">$1.20/500 words</span>
-    <img
-      class="act-img"
-      src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=70&fit=crop"
-      alt="Online writing jobs earn money Kenya freelance"
-      loading="lazy"
-      decoding="async"
-      width="400"
-      height="300"
-    />
-  </div>
-  <div class="act-foot">
-    <h3 class="act-name">Online Writing</h3>
-    <div class="act-sub">Write Articles — Get Paid Per Word</div>
-    <div class="act-earn">Earn up to $15.00/day</div>
-    <a href="/earn/online-writing" class="act-btn">📝 Start Writing</a>
-  </div>
-</article>
-          <article class="act-card reveal">
-            <div class="act-img-wrap">
-              <span class="act-badge bdg-hot">TOP</span>
-              <span class="act-earn-badge">$5/referral</span>
-              <img
-                class="act-img"
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=70&fit=crop"
-                alt="Agent referral program earn passive income"
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="300"
-              />
-            </div>
-            <div class="act-foot">
-              <h3 class="act-name">Agent Referrals</h3>
-              <div class="act-sub">Refer & Earn — Passive Income</div>
-              <div class="act-earn">Earn up to $10+/day</div>
-              <a href="/bonus" class="act-btn">🌟 Be an Agent</a>
-            </div>
-          </article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-new">MOST POPULAR</span><span class="act-earn-badge">Highest Paying</span><img class="act-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=70&fit=crop" alt="Chat with foreigners and earn online" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Chat with Foreigners</h3><div class="act-sub">StarHela's Highest-Paying Task</div><div class="act-earn">Earn up to $20/day</div><a href="/earn/chat-with-foreigners" class="act-btn">💬 Start Chatting</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-hot">HOT</span><span class="act-earn-badge">$0.80/video</span><img class="act-img" src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=400&q=70&fit=crop" alt="Watch and share videos to earn money online" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Paid Videos</h3><div class="act-sub">Watch, Share & Earn — Top Rated</div><div class="act-earn">Earn up to $5.50/day</div><a href="/earn/videos" class="act-btn">▶️ Watch Videos</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-new">NEW</span><span class="act-earn-badge">$1–8/label</span><img class="act-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=70&fit=crop" alt="AI data labeling jobs online Africa" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">AI Data Labeling</h3><div class="act-sub">Train AI & Earn — High Paying</div><div class="act-earn">Earn up to $5.00/day</div><a href="/earn/training-ai" class="act-btn">🤖 Train AI</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-new">POPULAR</span><span class="act-earn-badge">Teach & Earn</span><img class="act-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=70&fit=crop" alt="Teach African languages and culture online" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Teach A Language</h3><div class="act-sub">Share Your Language With Global Learners</div><div class="act-earn">Earn up to $4.00/day</div><a href="/earn/teach-african-languages" class="act-btn">🌍 Start Teaching</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-free">FREE</span><span class="act-earn-badge">$2–5/survey</span><img class="act-img" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=70&fit=crop" alt="Paid online surveys Kenya earn money" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Paid Surveys</h3><div class="act-sub">Answer & Earn — Beginner Friendly</div><div class="act-earn">Earn up to $3.50/day</div><a href="/earn/surveys" class="act-btn">📋 Do Surveys</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-new">NEW</span><span class="act-earn-badge">$0.80/reel</span><img class="act-img" src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&q=70&fit=crop" alt="Earn money clicking ads online Africa" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Ad Clicking</h3><div class="act-sub">Click & Earn — Quick & Easy</div><div class="act-earn">Earn up to $4.50/day</div><a href="/earn/ads" class="act-btn">🎯 Click Ads</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-top">TOP</span><span class="act-earn-badge">$1.20/spin</span><img class="act-img" src="https://media.istockphoto.com/id/482803657/photo/prize-wheel.jpg?b=1&s=612x612&w=0&k=20&c=QEBL0PE0q2LQFCu7TiYOHgD1wYWGMO7IO-Rn9EA9OGc=" alt="Spin and win earn money online Kenya" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Spin & Earn</h3><div class="act-sub">Spin the Wheel — Win Real Cash</div><div class="act-earn">Earn up to $6.50/day</div><a href="/earn/spinandwin" class="act-btn">🎰 Start Spinning</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-top">TOP</span><span class="act-earn-badge">$1.20/500 words</span><img class="act-img" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&q=70&fit=crop" alt="Online writing jobs earn money Kenya freelance" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Online Writing</h3><div class="act-sub">Write Articles — Get Paid Per Word</div><div class="act-earn">Earn up to $15.00/day</div><a href="/earn/online-writing" class="act-btn">📝 Start Writing</a></div></article>
+          <article class="act-card reveal"><div class="act-img-wrap"><span class="act-badge bdg-hot">TOP</span><span class="act-earn-badge">$5/referral</span><img class="act-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=70&fit=crop" alt="Agent referral program earn passive income" loading="lazy" decoding="async" width="400" height="300"/></div><div class="act-foot"><h3 class="act-name">Agent Referrals</h3><div class="act-sub">Refer & Earn — Passive Income</div><div class="act-earn">Earn up to $10+/day</div><a href="/bonus" class="act-btn">🌟 Become an Agent</a></div></article>
         </div>
       </div>
     </section>
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- PAYOUT STRIP -->
-    <!-- ══════════════════════════════════════════ -->
     <div class="payout-strip">
       <div class="wrap">
         <div class="payout-inner">
-          <div class="payout-copy">
-            <h2>Get paid the way you prefer</h2>
-            <p>Zero withdrawal fees · Processed within minutes to hours</p>
-          </div>
+          <div class="payout-copy"><h2>Get paid the way you prefer</h2><p>Zero withdrawal fees · Processed within minutes to hours</p></div>
           <div class="payout-methods-row">
-            <div class="pay-chip">📱 M-Pesa</div>
-            <div class="pay-chip">📲 Airtel Money</div>
-            <div class="pay-chip">📶 MTN Money</div>
-            <div class="pay-chip">🏦 Bank Transfer</div>
-            <div class="pay-chip">📞 Tigo</div>
-            <div class="pay-chip">🟧 Orange Money</div>
+            <div class="pay-chip">📱 M-Pesa</div><div class="pay-chip">📲 Airtel Money</div><div class="pay-chip">📶 MTN Money</div><div class="pay-chip">🏦 Bank Transfer</div><div class="pay-chip">📞 Tigo</div><div class="pay-chip">🟧 Orange Money</div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- COUNTRIES -->
-    <!-- ══════════════════════════════════════════ -->
     <section class="section" id="countries" aria-labelledby="countries-h">
       <div class="wrap">
         <p class="eyebrow-text">🌍 Supported Countries</p>
-        <h2 id="countries-h" class="sec-title">
-          Earn Online From Anywhere in Africa
-        </h2>
-        <p class="sec-sub">
-          Select your country below to see your activation fee and available
-          payment methods.
-        </p>
+        <h2 id="countries-h" class="sec-title">Earn Online From Anywhere in Africa</h2>
+        <p class="sec-sub">Select your country below to see your activation fee and available payment methods.</p>
         <div class="countries-grid">
-          <a href="/countries/kenya" class="country-card featured reveal"
-            ><span class="cc-flag">🇰🇪</span>
-            <div class="cc-info">
-              <div class="cc-name">Kenya</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">KSH 550</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/uganda" class="country-card reveal"
-            ><span class="cc-flag">🇺🇬</span>
-            <div class="cc-info">
-              <div class="cc-name">Uganda</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">UGX 19,500</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/nigeria" class="country-card reveal"
-            ><span class="cc-flag">🇳🇬</span>
-            <div class="cc-info">
-              <div class="cc-name">Nigeria</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">₦9,000</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/tanzania" class="country-card reveal"
-            ><span class="cc-flag">🇹🇿</span>
-            <div class="cc-info">
-              <div class="cc-name">Tanzania</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">TZS 11,000</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/ghana" class="country-card reveal"
-            ><span class="cc-flag">🇬🇭</span>
-            <div class="cc-info">
-              <div class="cc-name">Ghana</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">GH₵ 95</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/cameroon" class="country-card reveal"
-            ><span class="cc-flag">🇨🇲</span>
-            <div class="cc-info">
-              <div class="cc-name">Cameroon</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">XAF 4,500</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇿🇦</span>
-            <div class="cc-info">
-              <div class="cc-name">South Africa</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">ZAR 70</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇷🇼</span>
-            <div class="cc-info">
-              <div class="cc-name">Rwanda</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">RWF 6,500</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/zambia" class="country-card reveal"
-            ><span class="cc-flag">🇿🇲</span>
-            <div class="cc-info">
-              <div class="cc-name">Zambia</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">ZK 130</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇧🇼</span>
-            <div class="cc-info">
-              <div class="cc-name">Botswana</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">BWP 100</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇲🇼</span>
-            <div class="cc-info">
-              <div class="cc-name">Malawi</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">MWK 26,000</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="/countries/burundi" class="country-card reveal"
-            ><span class="cc-flag">🇧🇮</span>
-            <div class="cc-info">
-              <div class="cc-name">Burundi</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">BIF 30,000</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇨🇮</span>
-            <div class="cc-info">
-              <div class="cc-name">Ivory Coast</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">XOF 4,500</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇸🇳</span>
-            <div class="cc-info">
-              <div class="cc-name">Senegal</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">XOF 4,500</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🇸🇸</span>
-            <div class="cc-info">
-              <div class="cc-name">South Sudan</div>
-              <div class="cc-label">Activation fee</div>
-            </div>
-            <div class="cc-fee">SSP 20,000</div>
-            <span class="cc-arrow">›</span></a
-          >
-          <a href="#" class="country-card go-register reveal"
-            ><span class="cc-flag">🌍</span>
-            <div class="cc-info">
-              <div class="cc-name">Other Countries</div>
-              <div class="cc-label">International</div>
-            </div>
-            <div class="cc-fee">$10.00</div>
-            <span class="cc-arrow">›</span></a
-          >
+          <a href="/countries/kenya" class="country-card featured reveal"><span class="cc-flag">🇰🇪</span><div class="cc-info"><div class="cc-name">Kenya</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">KSH 550</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/uganda" class="country-card reveal"><span class="cc-flag">🇺🇬</span><div class="cc-info"><div class="cc-name">Uganda</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">UGX 19,500</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/nigeria" class="country-card reveal"><span class="cc-flag">🇳🇬</span><div class="cc-info"><div class="cc-name">Nigeria</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">₦9,000</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/tanzania" class="country-card reveal"><span class="cc-flag">🇹🇿</span><div class="cc-info"><div class="cc-name">Tanzania</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">TZS 11,000</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/ghana" class="country-card reveal"><span class="cc-flag">🇬🇭</span><div class="cc-info"><div class="cc-name">Ghana</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">GH₵ 95</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/cameroon" class="country-card reveal"><span class="cc-flag">🇨🇲</span><div class="cc-info"><div class="cc-name">Cameroon</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">XAF 4,500</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇿🇦</span><div class="cc-info"><div class="cc-name">South Africa</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">ZAR 70</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇷🇼</span><div class="cc-info"><div class="cc-name">Rwanda</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">RWF 6,500</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/zambia" class="country-card reveal"><span class="cc-flag">🇿🇲</span><div class="cc-info"><div class="cc-name">Zambia</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">ZK 130</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇧🇼</span><div class="cc-info"><div class="cc-name">Botswana</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">BWP 100</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇲🇼</span><div class="cc-info"><div class="cc-name">Malawi</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">MWK 26,000</div><span class="cc-arrow">›</span></a>
+          <a href="/countries/burundi" class="country-card reveal"><span class="cc-flag">🇧🇮</span><div class="cc-info"><div class="cc-name">Burundi</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">BIF 30,000</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇨🇮</span><div class="cc-info"><div class="cc-name">Ivory Coast</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">XOF 4,500</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇸🇳</span><div class="cc-info"><div class="cc-name">Senegal</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">XOF 4,500</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🇸🇸</span><div class="cc-info"><div class="cc-name">South Sudan</div><div class="cc-label">Activation fee</div></div><div class="cc-fee">SSP 20,000</div><span class="cc-arrow">›</span></a>
+          <a href="#" class="country-card go-register reveal"><span class="cc-flag">🌍</span><div class="cc-info"><div class="cc-name">Other Countries</div><div class="cc-label">International</div></div><div class="cc-fee">$10.00</div><span class="cc-arrow">›</span></a>
         </div>
         <div class="countries-note reveal">
           <div class="cn-icon">🛡️</div>
-          <div class="cn-text">
-            <div class="cn-title">Instant Account Activation — No Waiting</div>
-            <div class="cn-sub">
-              Pay your one-time activation fee and start chatting & earning the
-              same day.
-            </div>
-          </div>
+          <div class="cn-text"><div class="cn-title">Instant Account Activation — No Waiting</div><div class="cn-sub">Pay your one-time activation fee and start chatting & earning the same day.</div></div>
           <button class="cn-cta go-register">Activate Now →</button>
         </div>
       </div>
     </section>
-
-    <hr class="sec-divider" />
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- WHY STARHELA -->
-    <!-- ══════════════════════════════════════════ -->
+    <hr class="sec-divider"/>
     <section class="section" id="why" aria-labelledby="why-h">
       <div class="wrap">
         <p class="eyebrow-text">Why Starhela</p>
         <h2 id="why-h" class="sec-title">We Support You Every Step</h2>
-        <p class="sec-sub">
-          We don't just share a link — we guide you from registration to your
-          first withdrawal.
-        </p>
+        <p class="sec-sub">We don't just share a link — we guide you from registration to your first withdrawal.</p>
         <div class="why-grid">
-          <div class="why-card reveal">
-            <div class="why-icon">🤝</div>
-            <div>
-              <h3 class="why-card-title">Dedicated Agent Support</h3>
-              <p class="why-card-desc">
-                Get direct WhatsApp and email support from our team. We help you
-                set up, guide you on chatting opportunities, and maximize your
-                earnings from day one.
-              </p>
+          <div class="why-card reveal"><div class="why-icon">🤝</div><div><h3 class="why-card-title">Dedicated Agent Support</h3><p class="why-card-desc">Get direct WhatsApp and email support from our team. We help you set up, guide you on chatting opportunities, and maximize your earnings from day one.</p></div></div>
+          <div class="why-card reveal"><div class="why-icon">📚</div><div><h3 class="why-card-title">Free Onboarding Guides</h3><p class="why-card-desc">Step-by-step guides for every earning activity are sent to new members — so you know exactly what to do after registration, even if it's your first time earning online.</p></div></div>
+          <div class="why-card reveal"><div class="why-icon">🏆</div><div><h3 class="why-card-title">Active Earners Community</h3><p class="why-card-desc">Join our WhatsApp community of Starhela earners across Kenya, Uganda, and Nigeria. Share tips, get motivated, and never feel alone on your journey.</p></div></div>
+          <div class="why-card reveal"><div class="why-icon">⚡</div><div><h3 class="why-card-title">Same-Day Registration Help</h3><p class="why-card-desc">Our guided registration process means zero confusion. We've helped hundreds across Africa get set up quickly and start earning the same day.</p></div></div>
+        </div>
+      </div>
+    </section>
+    <hr class="sec-divider"/>
+    <section class="sh-trust" aria-label="Trust and security badges">
+      <div class="wrap sh-trust-row">
+        <div class="sh-trust-badge"><span class="sh-trust-icon" aria-hidden="true">🔒</span><span><strong>SSL Secured</strong><em>256-bit encryption</em></span></div>
+        <div class="sh-trust-badge"><span class="sh-trust-icon" aria-hidden="true">✅</span><span><strong>Verified Platform</strong><em>Since 2021</em></span></div>
+        <div class="sh-trust-badge"><span class="sh-trust-icon" aria-hidden="true">📱</span><span><strong>M-Pesa · MTN · Airtel</strong><em>Instant payouts</em></span></div>
+        <div class="sh-trust-badge"><span class="sh-trust-icon" aria-hidden="true">🛡️</span><span><strong>100% Legit</strong><em>120,000+ members</em></span></div>
+        <div class="sh-trust-badge"><span class="sh-trust-icon" aria-hidden="true">⚡</span><span><strong>Same-Day Withdrawals</strong><em>From KSH 100</em></span></div>
+      </div>
+    </section>
+    <section class="section sh-stories" id="stories" aria-labelledby="stories-h">
+      <div class="wrap">
+        <p class="eyebrow-text">Success Stories</p>
+        <h2 id="stories-h" class="sec-title">Real Earners, Real Withdrawals</h2>
+        <p class="sec-sub">Members across Africa share what they earned and how they did it. Amounts are self-reported by verified accounts.</p>
+        <div class="sh-carousel" aria-roledescription="carousel" aria-live="polite">
+          <article class="sh-story">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=160&h=160&fit=crop&crop=faces" alt="Amina Wanjiru, Starhela member" loading="lazy" decoding="async" width="72" height="72"/>
+            <div class="sh-story-body">
+              <p class="sh-story-quote">"I started chatting after my morning shift. The first withdrawal hit my M-Pesa in under five minutes and I have not missed a week since."</p>
+              <div class="sh-story-meta"><strong>Amina Wanjiru</strong><span>🇰🇪 Nairobi, Kenya</span><span class="sh-story-earned">💰 KSH 48,200 in 3 months</span></div>
             </div>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon">📚</div>
-            <div>
-              <h3 class="why-card-title">Free Onboarding Guides</h3>
-              <p class="why-card-desc">
-                Step-by-step guides for every earning activity are sent to new
-                members — so you know exactly what to do after registration,
-                even if it's your first time earning online.
-              </p>
+          </article>
+          <div class="sh-carousel-ctrls">
+            <button type="button" aria-label="Previous story">‹</button>
+            <div class="sh-dots" role="tablist" aria-label="Choose story">
+              <button type="button" role="tab" aria-selected="true" aria-label="Story 1: Amina Wanjiru" class="is-active"></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="Story 2: Emmanuel Okoro" class=""></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="Story 3: Sarah Nakato" class=""></button>
+              <button type="button" role="tab" aria-selected="false" aria-label="Story 4: Kwame Mensah" class=""></button>
             </div>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon">🏆</div>
-            <div>
-              <h3 class="why-card-title">Active Earners Community</h3>
-              <p class="why-card-desc">
-                Join our WhatsApp community of Starhela earners across Kenya,
-                Uganda, and Nigeria. Share tips, get motivated, and never feel
-                alone on your journey.
-              </p>
-            </div>
-          </div>
-          <div class="why-card reveal">
-            <div class="why-icon">⚡</div>
-            <div>
-              <h3 class="why-card-title">Same-Day Registration Help</h3>
-              <p class="why-card-desc">
-                Our guided registration process means zero confusion. We've
-                helped hundreds across Africa get set up quickly and start
-                earning the same day.
-              </p>
-            </div>
+            <button type="button" aria-label="Next story">›</button>
           </div>
         </div>
       </div>
     </section>
-
-    <hr class="sec-divider" />
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- FAQ -->
-    <!-- ══════════════════════════════════════════ -->
+    <section class="section sh-calc-sec" id="calculator" aria-labelledby="calc-h">
+      <div class="wrap">
+        <p class="eyebrow-text">Earnings Simulator</p>
+        <h2 id="calc-h" class="sec-title">Estimate What You Could Earn</h2>
+        <p class="sec-sub">Pick the activities you want to do, set your hours, and see an estimate in your own currency. Estimates only — actual earnings depend on task availability and effort.</p>
+        <div class="sh-calc">
+          <div class="sh-calc-controls">
+            <fieldset class="sh-calc-field"><legend>Activities</legend>
+              <div class="sh-calc-chips">
+                <button type="button" aria-pressed="true" class="sh-calc-chip is-on"><span aria-hidden="true">✓</span>Chat with Foreigners</button>
+                <button type="button" aria-pressed="false" class="sh-calc-chip"><span aria-hidden="true">+</span>AI Training Tasks</button>
+                <button type="button" aria-pressed="false" class="sh-calc-chip"><span aria-hidden="true">+</span>Teach a Language</button>
+                <button type="button" aria-pressed="false" class="sh-calc-chip"><span aria-hidden="true">+</span>Paid Surveys</button>
+                <button type="button" aria-pressed="false" class="sh-calc-chip"><span aria-hidden="true">+</span>Watch & Post Videos</button>
+                <button type="button" aria-pressed="false" class="sh-calc-chip"><span aria-hidden="true">+</span>Online Writing</button>
+              </div>
+            </fieldset>
+            <div class="sh-calc-field"><label for="calc-hours">Hours per day: <strong>3h</strong></label><input id="calc-hours" type="range" min="1" max="10" step="1" value="3"/></div>
+            <div class="sh-calc-field"><label for="calc-days">Days per week: <strong>5</strong></label><input id="calc-days" type="range" min="1" max="7" step="1" value="5"/></div>
+            <div class="sh-calc-field"><label for="calc-cur">Show earnings in</label><select id="calc-cur"><option value="USD">$ USD</option><option value="KES" selected="">KSH Kenya</option><option value="UGX">UGX Uganda</option><option value="NGN">₦ Nigeria</option><option value="GHS">GH₵ Ghana</option><option value="TZS">TZS Tanzania</option></select></div>
+          </div>
+          <div class="sh-calc-result" aria-live="polite">
+            <div class="sh-calc-line"><span>Per day</span><strong>1,548 KES</strong></div>
+            <div class="sh-calc-line sh-calc-line-big"><span>Per month</span><strong>33,514 KES</strong></div>
+            <p class="sh-calc-note">Based on 1 selected activity at an average of $4.00/hour.</p>
+            <button type="button" class="btn-primary">🚀 Start Earning This Much</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section sh-withdraw" id="withdrawals" aria-labelledby="wd-h">
+      <div class="wrap">
+        <p class="eyebrow-text">Getting Paid</p>
+        <h2 id="wd-h" class="sec-title">How M-Pesa Withdrawals Work</h2>
+        <p class="sec-sub">Four steps from balance to cash in hand — no agent, no waiting period.</p>
+        <ol class="sh-wd-steps">
+          <li class="sh-wd-step is-active"><span class="sh-wd-icon" aria-hidden="true">👛</span><span class="sh-wd-num">Step 1</span><h3>Open your wallet</h3><p>Log in to Starhela and tap Wallet. Your available balance updates the moment a task is approved.</p></li>
+          <li class="sh-wd-step"><span class="sh-wd-icon" aria-hidden="true">📲</span><span class="sh-wd-num">Step 2</span><h3>Choose Mobile Money</h3><p>Select M-Pesa, MTN MoMo or Airtel Money and enter the phone number registered in your name.</p></li>
+          <li class="sh-wd-step"><span class="sh-wd-icon" aria-hidden="true">🔢</span><span class="sh-wd-num">Step 3</span><h3>Enter the amount</h3><p>Withdraw from as little as KSH 100. Confirm with the PIN you set when you activated your account.</p></li>
+          <li class="sh-wd-step"><span class="sh-wd-icon" aria-hidden="true">✅</span><span class="sh-wd-num">Step 4</span><h3>Get paid</h3><p>Most payouts land within 5 minutes. You get an SMS confirmation from your mobile money provider.</p></li>
+        </ol>
+      </div>
+    </section>
     <section class="section" id="faq" aria-labelledby="faq-h">
       <div class="wrap">
         <p class="eyebrow-text">Common Questions</p>
         <h2 id="faq-h" class="sec-title">Starhela FAQ</h2>
-        <p class="sec-sub">
-          Everything you need to know before registering. Still have questions?
-          <a
-            href="https://wa.me/254729743223"
-            target="_blank"
-            rel="noopener"
-            style="color: var(--brand-lt); font-weight: 700"
-            >WhatsApp us</a
-          >.
-        </p>
+        <p class="sec-sub">Everything you need to know before registering. Still have questions? <a href="https://wa.me/254729743223" target="_blank" rel="noopener" style="color:var(--brand-lt);font-weight:700">WhatsApp us</a>.</p>
         <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
-              <span>Is Starhela legit? Is it a real earning platform?</span
-              ><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner">
-                Yes — Starhela is a registered digital earning platform that has
-                paid out to thousands of users across Africa including Kenya,
-                Uganda, Nigeria, and Tanzania. Payments are processed through
-                official channels including M-Pesa, Airtel Money, MTN, and bank
-                transfer.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
-              <span>How does chatting with foreigners work on Starhela?</span
-              ><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner">
-                Once your account is activated, log in and open the Chat
-                section. You'll be matched with people from countries like UK,
-                USA, Canada, Qatar who want to talk. You chat via text and earn
-                money for every hour spent chatting, per message, per session,
-                and through tips. No video calls — just text chat from your
-                phone.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
-              <span>How much does Starhela registration cost in Kenya?</span
-              ><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner">
-                Starhela registration is free. There is a one-time account
-                activation fee of $5 (KSH 550). This unlocks your full account —
-                all 12+ earning activities including chat with foreigners,
-                instant withdrawals. You pay once and the account is yours for
-                life. No monthly fees or hidden charges.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
-              <span>How do I withdraw my Starhela earnings via M-Pesa?</span
-              ><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner">
-                Earnings are credited to your Starhela wallet as you complete
-                tasks. You can request a withdrawal at any time. Withdrawals are
-                processed within minutes to hours via M-Pesa, Airtel Money, MTN
-                Mobile Money, and bank transfer.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
-              <span>Do I need special skills to chat with foreigners?</span
-              ><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner">
-                No special skills required. You just need basic English, a
-                smartphone, and an internet connection. The foreigners you chat
-                with are looking for friendly conversation — just be yourself
-                and you'll earn. Starhela provides guidelines to help you chat
-                effectively and maximize your earnings.
-              </div>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
-              <span>How much can I earn per month on Starhela?</span
-              ><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                />
-              </svg>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner">
-                Earnings depend on your activity level. Active Starhela members
-                in Kenya earn between KSH 50,000 and KSH 105,000 per month. The
-                chat task is the highest paying, with top earners making up to
-                $20/day. The more time you spend chatting, the more you earn.
-              </div>
-            </div>
-          </div>
+          <div class="faq-item"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span>Is Starhela legit? Is it a real earning platform?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="faq-a"><div class="faq-a-inner">Yes — Starhela is a registered digital earning platform that has paid out to thousands of users across Africa including Kenya, Uganda, Nigeria, and Tanzania. Payments are processed through official channels including M-Pesa, Airtel Money, MTN, and bank transfer.</div></div></div>
+          <div class="faq-item"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span>How does chatting with foreigners work on Starhela?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="faq-a"><div class="faq-a-inner">Once your account is activated, log in and open the Chat section. You'll be matched with people from countries like UK, USA, Canada, Qatar who want to talk. You chat via text and earn money for every hour spent chatting, per message, per session, and through tips. No video calls — just text chat from your phone.</div></div></div>
+          <div class="faq-item"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span>How much does Starhela registration cost in Kenya?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="faq-a"><div class="faq-a-inner">Starhela registration is free. There is a one-time account activation fee of $5 (KSH 550). This unlocks your full account — all 12+ earning activities including chat with foreigners, instant withdrawals. You pay once and the account is yours for life. No monthly fees or hidden charges.</div></div></div>
+          <div class="faq-item"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span>How do I withdraw my Starhela earnings via M-Pesa?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="faq-a"><div class="faq-a-inner">Earnings are credited to your Starhela wallet as you complete tasks. You can request a withdrawal at any time. Withdrawals are processed within minutes to hours via M-Pesa, Airtel Money, MTN Mobile Money, and bank transfer.</div></div></div>
+          <div class="faq-item"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span>Do I need special skills to chat with foreigners?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="faq-a"><div class="faq-a-inner">No special skills required. You just need basic English, a smartphone, and an internet connection. The foreigners you chat with are looking for friendly conversation — just be yourself and you'll earn. Starhela provides guidelines to help you chat effectively and maximize your earnings.</div></div></div>
+          <div class="faq-item"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span>How much can I earn per month on Starhela?</span><svg class="faq-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="faq-a"><div class="faq-a-inner">Earnings depend on your activity level. Active Starhela members in Kenya earn between KSH 50,000 and KSH 105,000 per month. The chat task is the highest paying, with top earners making up to $20/day. The more time you spend chatting, the more you earn.</div></div></div>
         </div>
       </div>
     </section>
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- BOTTOM CTA -->
-    <!-- ══════════════════════════════════════════ -->
     <section class="section" aria-label="Register on Starhela">
       <div class="wrap">
         <div class="bottom-cta reveal">
-          <h2 class="bcta-title">Ready to Start Chatting & Earning?</h2>
-          <p class="bcta-sub">
-            Join 120,000+ members across Kenya and Africa. Register now,
-            activate your account, and start chatting with foreigners to earn up
-            to $20/day — withdraw via M-Pesa instantly.
-          </p>
-          <button
-            class="bcta-btn go-register"
-            aria-label="Register on Starhela today"
-          >
-            🚀 Register & Start Earning Today →
-          </button>
-          <div class="bcta-note">
-            🔒 Secure payment · ⚡ Instant access · 💬 Start chatting same day ·
-            📱 M-Pesa supported
-          </div>
+          <h2 class="bcta-title">Ready to Start Earning?</h2>
+          <p class="bcta-sub">Join 120,000+ members across Kenya and Africa. Register now, activate your account, and start chatting with foreigners to earn up to $20/day — withdraw via M-Pesa instantly.</p>
+          <button class="bcta-btn go-register" aria-label="Register on Starhela today">🚀 Register & Start Earning Today →</button>
+          <div class="bcta-note">🔒 Secure payment · ⚡ Instant access · 💬 Start chatting same day · 📱 M-Pesa supported</div>
         </div>
       </div>
     </section>
-
-    <!-- ══════════════════════════════════════════ -->
-    <!-- FOOTER -->
-    <!-- ══════════════════════════════════════════ -->
     <footer class="site-footer" role="contentinfo">
       <div class="wrap">
         <div class="footer-grid">
           <div>
-            <div class="f-brand-logo">
-              <img
-                src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png"
-                alt="Starhela logo"
-                loading="lazy"
-              />
-              <span class="f-brand-name">STARHELA AGENCIES</span>
-            </div>
-            <p class="f-desc">
-              <strong>Starhela Agencies</strong> — Africa's #1 trusted online
-              earning platform. The easiest way to earn:
-              <strong>chat with foreigners</strong> from UK, USA & 100+
-              countries. Earn up to $20/day from your phone.
-            </p>
-            <div class="f-contact">
-              <span>📞</span><a href="tel:+254729743223">+254 729 743 223</a>
-            </div>
-            <div class="f-contact">
-              <span>✉️</span
-              ><a href="mailto:starhelaofficials@gmail.com"
-                >starhelaofficials@gmail.com</a
-              >
-            </div>
-            <div class="f-contact">
-              <span>💬</span
-              ><a
-                href="https://wa.me/254729743223"
-                target="_blank"
-                rel="noopener"
-                >WhatsApp Support</a
-              >
-            </div>
+            <div class="f-brand-logo"><img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="Starhela logo" loading="lazy"/><span class="f-brand-name">STARHELA AGENCIES</span></div>
+            <p class="f-desc"><strong>Starhela Agencies</strong> is Africa's trusted online earning platform. <strong>Chat with foreigners</strong>, complete AI tasks, teach African languages, answer surveys, refer friends, and more. Work from your phone, on your own schedule, with the potential to earn up to <strong>$50/day</strong>.</p>
+            <div class="f-contact"><span>📞</span><a href="tel:+254729743223">+254 729 743 223</a></div>
+            <div class="f-contact"><span>✉️</span><a href="mailto:starhelaofficials@gmail.com">starhelaofficials@gmail.com</a></div>
+            <div class="f-contact"><span>💬</span><a href="https://wa.me/254729743223" target="_blank" rel="noopener">WhatsApp Support</a></div>
             <div class="f-social">
-              <a
-                href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16"
-                target="_blank"
-                rel="noopener"
-                class="f-social-btn"
-                aria-label="Join WhatsApp Channel"
-                >📣</a
-              >
-              <a
-                href="https://wa.me/254729743223"
-                target="_blank"
-                rel="noopener"
-                class="f-social-btn"
-                aria-label="WhatsApp Chat"
-                >💬</a
-              >
-              <a
-                href="mailto:starhelaofficials@gmail.com"
-                class="f-social-btn"
-                aria-label="Email Starhela"
-                >✉️</a
-              >
+              <a href="https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16" target="_blank" rel="noopener" class="f-social-btn" aria-label="Join WhatsApp Channel">📣</a>
+              <a href="https://wa.me/254729743223" target="_blank" rel="noopener" class="f-social-btn" aria-label="WhatsApp Chat">💬</a>
+              <a href="mailto:starhelaofficials@gmail.com" class="f-social-btn" aria-label="Email Starhela">✉️</a>
             </div>
           </div>
           <div>
             <div class="f-col-title">Quick Links</div>
             <div class="f-links">
-              <a href="#hero">Home</a>
-              <a href="#chat">💬 Chat with Foreigners</a>
-              <a href="#activities">Earning Activities</a>
-              <a href="#countries">All Countries</a>
-              <a href="#faq">FAQ</a>
-              <a href="#" class="go-register">Register on Starhela</a>
-              <a
-                href="https://starhela.com/c/U3lkbmV5"
-                target="_blank"
-                rel="noopener"
-                >Login to Starhela</a
-              >
-              <a href=" https://www.appcreator24.com/app4103550-tzple8"
-                >Download the App</a
-              >
-              <a href="/bonus">Agent Bonus Program</a>
+              <a href="#hero">Home</a><a href="#chat">Chat with Foreigners</a><a href="#activities">Earning Activities</a><a href="#countries">All Countries</a><a href="#faq">FAQ</a><a href="#" class="go-register">Register on Starhela</a><a href="https://starhela.com/c/U3lkbmV5" target="_blank" rel="noopener">Login to Starhela</a><a href=" https://www.appcreator24.com/app4103550-tzple8">Download the App</a><a href="/bonus">Agent Bonus Program</a>
+            </div>
+          </div>
+          <div>
+            <div class="f-col-title">Earning Activities</div>
+            <div class="f-links">
+              <a href="/earn/chatting">Chat with Foreigners</a><a href="/earn/surveys">Surveys</a><a href="/earn/training-ai.html">AI Training Tasks</a><a href="/earn/teaching-language">Teach a Language</a><a href="/earn/videos">Watch & Post Videos</a><a href="/earn/online-writing">Online Writing</a><a href="/bonus">Agent bonus</a><a href="/earn/spinandwin">Spin and Win</a>
             </div>
           </div>
           <div>
             <div class="f-col-title">Countries</div>
             <div class="f-links">
-              <a href="/countries/kenya">🇰🇪 Kenya</a>
-              <a href="/countries/uganda">🇺🇬 Uganda</a>
-              <a href="/countries/nigeria">🇳🇬 Nigeria</a>
-              <a href="/countries/tanzania">🇹🇿 Tanzania</a>
-              <a href="/countries/ghana">🇬🇭 Ghana</a>
-              <a href="/countries/cameroon">🇨🇲 Cameroon</a>
-              <a href="/countries/zambia">🇿🇲 Zambia</a>
-              <a href="/countries/burundi">🇧🇮 Burundi</a>
+              <a href="/countries/kenya">🇰🇪 Kenya</a><a href="/countries/uganda">🇺🇬 Uganda</a><a href="/countries/nigeria">🇳🇬 Nigeria</a><a href="/countries/tanzania">🇹🇿 Tanzania</a><a href="/countries/ghana">🇬🇭 Ghana</a><a href="/countries/cameroon">🇨🇲 Cameroon</a><a href="/countries/zambia">🇿🇲 Zambia</a><a href="/countries/burundi">🇧🇮 Burundi</a>
             </div>
           </div>
         </div>
         <div class="f-bottom">
-          <div class="f-copy">
-            © 2026 Starhela Agencies · All rights reserved ·
-            <a href="#" class="go-register">Register</a> ·
-            <a
-              href="https://starhela.com/c/U3lkbmV5"
-              target="_blank"
-              rel="noopener"
-              >Login</a
-            >
-          </div>
-          <div class="f-badge">
-            <span>ℹ️</span> Starhela Agencies · 🌍 Kenya & Africa
-          </div>
+          <div class="f-copy">© 2026 Starhela Agencies · All rights reserved · <a href="#" class="go-register">Register</a> · <a href="https://starhela.com/c/U3lkbmV5" target="_blank" rel="noopener">Login</a></div>
+          <div class="f-badge"><span>ℹ️</span>Starhela Agencies · 🌍 Africa & Worldwide</div>
         </div>
       </div>
     </footer>
-
-    <!-- MOBILE BOTTOM NAV -->
     <nav class="mobile-nav" aria-label="Mobile navigation">
       <div class="mbn-inner">
-        <a href="#hero" class="mbn-item active">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" /></svg
-          >Home
-        </a>
-        <a href="#chat" class="mbn-item">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
-            /></svg
-          >Chat
-        </a>
-        <a href="#activities" class="mbn-item">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-            /></svg
-          >Earn
-        </a>
-        <a href="https://www.appcreator24.com/app4103550-tzple8" class="mbn-item">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-  <path d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14zm-5 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
-</svg>APP
-        </a>
-        <button
-          class="mbn-item go-register"
-          style="font-family: var(--font-body); color: var(--brand-lt)"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-            /></svg
-          >Join
-        </button>
+        <a href="#hero" class="mbn-item active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>Home</a>
+        <a href="#chat" class="mbn-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path></svg>Chat</a>
+        <a href="#activities" class="mbn-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>Earn</a>
+        <a href="https://www.appcreator24.com/app4103550-tzple8" class="mbn-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14zm-5 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"></path></svg>APP</a>
+        <button class="mbn-item go-register" style="font-family:var(--font-body);color:var(--brand-lt)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>Join</button>
+      </div>
+    </nav>
+    <div class="sh-quick">
+      <div class="sh-quick-items" role="menu" aria-hidden="true">
+        <button type="button" role="menuitem" tabindex="-1">🚀 <span>Register</span></button>
+        <a role="menuitem" href="https://starhela.com/c/U3lkbmV5" target="_blank" rel="noopener" tabindex="-1">🔑 <span>Login</span></a>
+        <a role="menuitem" href="https://www.appcreator24.com/app4103550-tzple8" target="_blank" rel="noopener" tabindex="-1">📱 <span>Get the App</span></a>
+        <a role="menuitem" href="https://wa.me/254729743223" target="_blank" rel="noopener" tabindex="-1">💬 <span>WhatsApp</span></a>
+      </div>
+      <button type="button" class="sh-quick-fab" aria-expanded="false" aria-label="Open quick access menu">⚡</button>
+    </div>
+    <div class="sh-bonus" role="region" aria-label="Limited-time welcome bonus">
+      <span class="sh-bonus-text">🎁 Register in the next <strong aria-live="off">10:00</strong> and claim your free welcome bonus</span>
+      <button type="button" class="sh-bonus-cta">Claim bonus</button>
+      <button type="button" class="sh-bonus-x" aria-label="Dismiss bonus banner">✕</button>
+    </div>
       </div>
     </nav>
   </body>
