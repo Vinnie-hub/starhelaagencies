@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starhela — Teach African Languages & Culture</title>
+  <meta name="description" content="Join thousands of learners and teachers across Africa. Teach African languages, discover African cultures, and earn by teaching your native language on Starhela.">
+  <meta name="keywords" content="African languages, Teach African languages, African culture, language tutors, teach languages online, Starhela">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Starhela — Teach African Languages & Culture">
+  <meta property="og:description" content="Teach African languages, explore African cultures, and connect with native teachers across Africa.">
+  <meta property="og:url" content="https://www.starhelaagencies.com/earn/teaching-language">
+  <meta property="og:image" content="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/YOUR_SOCIAL_IMAGE.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Starhela — Teach African Languages & Culture">
+  <meta name="twitter:description" content="Teach African languages and culture from native speakers.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/YOUR_SOCIAL_IMAGE.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Starhela",
+      "url": "https://www.starhelaagencies.com",
+      "logo": "https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png",
+      "description": "An African platform for learning languages and culture."
+    }
+  </script>
+  <link rel="stylesheet" href="/css/teaching-language.css">
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" onclick="showPage('home')" role="button" tabindex="0">
+        <img
+        src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png"
+        alt="Starhela"
+        class="logo-img"
+        onerror="this.style.display = 'none'" />
+        <span class="logo-wm">STAR<em>HELA</em></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#/" data-nav="home">Home</a>
+        <a href="#/browse" data-nav="browse">Find Teachers</a>
+        <a href="#/cultures" data-nav="cultures">Explore Cultures</a>
+        <a href="#/apply" data-nav="apply">Teach &amp; Earn</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://starhela.com/c/U3lkbmV5" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="nav-burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/browse" data-nav="browse">Find Teachers</a>
+      <a href="#/cultures" data-nav="cultures">Explore Cultures</a>
+      <a href="#/apply" data-nav="apply">Teach &amp; Earn</a>
+      <div class="nav-actions">
+        <a href="https://starhela.com/c/U3lkbmV5" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HOME PAGE ===== -->
+  <main id="page-home" class="page active">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="eyebrow">54 African nations · 2,400+ verified teachers</span>
+          <h1>Learn <em>African</em> Languages and Their Cultures. Earn by <span class="hl-green">Teaching Yours</span>.</h1>
+          <p class="hero-sub">Turn your native language and culture into income. Teach, inspire, and earn—all from the comfort of your home.</p>
+          <div class="search-bar" role="search">
+            <div class="search-field">
+              <label for="searchLang">I want to learn</label>
+              <select id="searchLang">
+                <option>Swahili</option><option>Yoruba</option><option>Amharic</option><option>Zulu</option><option>Hausa</option><option>French</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="searchFormat">Format</label>
+              <select id="searchFormat">
+                <option>1-on-1 live lesson</option><option>Cultural workshop</option><option>Conversation practice</option>
+              </select>
+            </div>
+            <button class="search-btn" aria-label="Search teachers" onclick="location.hash='#/browse'">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.2"/>
+                <path d="M21 21l-4.3-4.3" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="hero-cta-row" style="margin-top:22px">
+            <a href="#/browse" class="btn btn-primary">Find a teacher</a>
+            <a href="#/apply" class="btn btn-ghost">Teach your language &amp; earn</a>
+          </div>
+          <div class="hero-trust">
+            <div><b>4.9/5</b><span>Average rating</span></div>
+            <div><b>310k+</b><span>Lessons booked monthly</span></div>
+            <div><b>40+</b><span>African languages</span></div>
+            <div><b>$3.1M+</b><span>Paid to teachers</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-card-photo p1" src="https://plus.unsplash.com/premium_photo-1734605086244-1b55bfd9e076?w=700&q=80" alt="Teacher smiling" />
+          <img class="hero-card-photo p2" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&q=80" alt="Student cooking" />
+          <div class="floating-chip c1"><span class="dot"></span> Lesson starting in 4 min</div>
+          <div class="floating-chip c2">⭐ 5.0 · "Best jollof rice lesson ever"</div>
+        </div>
+      </div>
+      <div class="ticker-wrap">
+        <div class="ticker-label"><span>●</span> Live right now</div>
+        <div class="ticker-track" id="tickerTrack"></div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="pan-divider"></section>
+    <section class="trust-strip">
+      <div class="wrap">
+        <div class="trust-item">
+          <div class="ic-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round"/><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="#fbbf24" stroke-width="2"/></svg></div>
+          <div><b>ID verified</b><span>Every teacher confirms a government-issued ID</span></div>
+        </div>
+        <div class="trust-item">
+          <div class="ic-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12s3-7 8-7 8 7 8 7-3 7-8 7-8-7-8-7z" stroke="#fbbf24" stroke-width="2"/><circle cx="12" cy="12" r="2.6" stroke="#fbbf24" stroke-width="2"/></svg></div>
+          <div><b>Background checked</b><span>Independent screening before going live</span></div>
+        </div>
+        <div class="trust-item">
+          <div class="ic-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h10" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div><b>Native-speaker confirmed</b><span>Language and origin verified at signup</span></div>
+        </div>
+        <div class="trust-item">
+          <div class="ic-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#fbbf24" stroke-width="2"/><path d="M3 10h18" stroke="#fbbf24" stroke-width="2"/></svg></div>
+          <div><b>Secure payments</b><span>Pay only after a lesson is confirmed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK TABS + LANGUAGES -->
+    <section class="section-tight">
+      <div class="wrap">
+        <div class="quick-tabs">
+          <a href="#/browse" class="quick-tab blue"><div class="arrow">→</div><h3>Learn an African language</h3><p>From your first greeting to fluent conversation — with a real person, not an app.</p></a>
+          <a href="#/cultures" class="quick-tab green"><div class="arrow">→</div><h3>Explore a culture</h3><p>Cooking, music, festivals and history, taught by people who live the tradition daily.</p></a>
+        </div>
+        <div class="lang-grid" id="langGrid"></div>
+      </div>
+    </section>
+
+    <!-- TEACHERS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Handpicked for you</span>
+          <h2>Popular teachers this week</h2>
+          <p>Highly-rated, verified educators who are actively taking new students right now.</p>
+        </div>
+        <div class="teacher-grid fade-swap" id="homeTeacherGrid"></div>
+        <div class="live-counter"><span class="dot"></span><span id="liveOnlineCount">—</span> teachers online right now across 54 countries</div>
+        <div style="text-align:center;margin-top:36px"><a href="#/browse" class="btn btn-ghost">View all 42,000+ teachers</a></div>
+      </div>
+    </section>
+
+    <!-- COUNTRIES -->
+    <section class="section" style="background:#f8fafc">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where in the world</span>
+          <h2>Featured cultures &amp; countries</h2>
+          <p>From Lagos to Nairobi to Addis Ababa — every country has a story worth learning.</p>
+        </div>
+        <div class="country-scroll" id="countryGrid"></div>
+      </div>
+    </section>
+
+    <!-- LESSONS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Beyond the textbook</span>
+          <h2>Popular lessons &amp; workshops</h2>
+          <p>Bite-sized cultural experiences you can book in a single sitting.</p>
+        </div>
+        <div class="lesson-grid" id="lessonGrid"></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" style="background:#f8fafc">
+      <div class="wrap">
+        <div class="section-head center reveal" style="margin-bottom:40px">
+          <span class="eyebrow">Student stories</span>
+          <h2>Loved by learners in 140+ countries</h2>
+        </div>
+        <div class="testi-row" id="testiRow"></div>
+      </div>
+    </section>
+
+    <!-- EARN SECTION -->
+    <section class="earn-section">
+      <div class="wrap earn-grid">
+        <div>
+          <span class="eyebrow" style="color:#fbbf24">Your language is somebody's dream</span>
+          <h2 style="color:#fff;font-size:clamp(26px,3.4vw,38px);margin-top:12px;">Get paid to teach your native language and culture</h2>
+          <p style="color:#94a3b8;margin-top:14px;font-size:16px;max-width:480px;line-height:1.7;">Thousands of teachers across Nigeria, Kenya, Ethiopia, Ghana, South Africa and beyond are already earning a real income sharing what they grew up knowing. Set your own price, your own hours, and teach students from anywhere.</p>
+          <div class="earn-stats">
+            <div class="earn-stat"><b>85%</b><span>kept by teachers on every lesson</span></div>
+            <div class="earn-stat"><b>2,400+</b><span>verified African teachers earning today</span></div>
+            <div class="earn-stat"><b>$3.1M+</b><span>paid out to African teachers to date</span></div>
+            <div class="earn-stat"><b>Weekly</b><span>payouts to your bank or mobile money</span></div>
+          </div>
+          <a href="#/apply" class="btn btn-white" style="margin-top:28px;">Start your teacher application</a>
+        </div>
+        <div>
+          <div class="earn-card"><b>"I taught Yoruba part-time and it became my main income."</b><span>— Emeka O., Lagos, Nigeria</span></div>
+          <div class="earn-card"><b>"Sharing Swahili and coastal culture pays my university fees."</b><span>— Wanjiru K., Nairobi, Kenya</span></div>
+          <div class="earn-card"><b>"Students want more than words — they want our stories."</b><span>— Fatima Z., Casablanca, Morocco</span></div>
+        </div>
+      </div>
+    </section>
+    <div id="footerHome"></div>
+  </main>
+
+  <!-- ===== BROWSE PAGE ===== -->
+  <main id="page-browse" class="page">
+    <div class="browse-header">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="#/">Home</a> / <b>Find teachers</b></div>
+        <div class="browse-title-row">
+          <div><h1 style="font-size:28px;">Find your teacher</h1></div>
+          <div class="search-bar" style="max-width:460px;padding:5px">
+            <div class="search-field" style="padding:6px 14px"><label>Search</label><input type="text" id="browseSearchInput" placeholder="Search by name or language" /></div>
+            <button class="search-btn" style="width:44px;height:44px" aria-label="Search" onclick="renderBrowse()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.2"/><path d="M21 21l-4.3-4.3" stroke="white" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap browse-layout">
+      <div>
+        <h4 style="margin-bottom:12px;">Filters</h4>
+        <div class="chip-set" id="filterChips">
+          <span class="chip-opt selected" data-filter="all" onclick="setFilter('all',this)">All</span>
+          <span class="chip-opt" data-filter="african" onclick="setFilter('african',this)">African languages</span>
+          <span class="chip-opt" data-filter="language" onclick="setFilter('language',this)">Language</span>
+          <span class="chip-opt" data-filter="culture" onclick="setFilter('culture',this)">Culture</span>
+          <span class="chip-opt" data-filter="cooking" onclick="setFilter('cooking',this)">Cooking</span>
+          <span class="chip-opt" data-filter="verified" onclick="setFilter('verified',this)">✓ Verified only</span>
+        </div>
+        <div style="margin-top:16px">
+          <label style="font-weight:700;font-size:13px;">Max price: $<span id="priceLabel">50</span></label>
+          <input type="range" min="5" max="50" value="50" id="priceRange" oninput="document.getElementById('priceLabel').textContent=this.value; renderBrowse();" style="width:100%;" />
+        </div>
+      </div>
+      <div>
+        <div class="results-toolbar">
+          <div class="results-badge">⭐ Create your account to view all teachers</div>
+          <select class="sort-select" id="sortSelect" onchange="renderBrowse()">
+            <option value="rating">Top rated</option><option value="students">Most popular</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option>
+          </select>
+        </div>
+        <div class="browse-grid" id="browseGrid"></div>
+        <div class="empty-state" id="browseEmpty" style="display:none"><h3>No teachers found</h3><p>Try adjusting your filters.</p></div>
+      </div>
+    </div>
+    <div id="footerBrowse"></div>
+  </main>
+
+  <!-- ===== CULTURES PAGE ===== -->
+  <main id="page-cultures" class="page">
+    <div class="browse-header" style="background:linear-gradient(135deg,#f8fafc,#f1f5f9)">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="#/">Home</a> / <b>Explore Cultures</b></div>
+        <div class="browse-title-row">
+          <div><h1 style="font-size:28px;">Explore Cultures</h1></div>
+          <div class="search-bar" style="max-width:400px;padding:5px">
+            <div class="search-field" style="padding:6px 14px"><label>Search</label><input type="text" id="cultureSearchInput" placeholder="Search culture or country" /></div>
+            <button class="search-btn" style="width:44px;height:44px" aria-label="Search" onclick="renderCultures()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2.2"/><path d="M21 21l-4.3-4.3" stroke="white" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap" style="padding:40px 32px 80px">
+      <div class="section-head reveal" style="margin-bottom:40px">
+        <p>Discover traditions, cuisine, music, and history through immersive experiences led by local experts — with a special spotlight on Africa's rich and varied heritage.</p>
+      </div>
+      <div class="culture-explore-grid" id="cultureExploreGrid"></div>
+    </div>
+    <div id="footerCultures"></div>
+  </main>
+
+  <!-- ===== PROFILE PAGE ===== -->
+  <main id="page-profile" class="page">
+    <div class="profile-cover"><img id="profCover" src="" alt="" /></div>
+    <div class="profile-head">
+      <div class="profile-id">
+        <img class="profile-avatar" id="profAvatar" src="" alt="" />
+        <div class="profile-id-info">
+          <h1 id="profName"></h1>
+          <div class="profile-id-meta">
+            <span id="profFlagCountry"></span><span id="profVerifiedBadge"></span><span>·</span><span class="stars" id="profStars"></span><span id="profReviewCount"></span><span>·</span><span id="profStudentCount"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap profile-layout">
+      <div>
+        <div class="profile-tabs">
+          <div class="profile-tab active" data-tab="about">About</div>
+          <div class="profile-tab" data-tab="video">Introduction</div>
+          <div class="profile-tab" data-tab="culture">Cultural specialties</div>
+          <div class="profile-tab" data-tab="reviews">Reviews</div>
+          <div class="profile-tab" data-tab="certs">Certifications</div>
+        </div>
+        <div id="tab-about" class="tab-pane">
+          <div class="profile-section"><h3>About me</h3><p id="profBio"></p></div>
+          <div class="profile-section"><h3>Languages</h3><div class="lang-tags" id="profLangTags"></div></div>
+        </div>
+        <div id="tab-video" class="tab-pane" style="display:none">
+          <div class="profile-section"><h3>Introduction video</h3>
+            <div class="video-placeholder"><img id="profVideoThumb" src="" alt="" /><div class="play-btn"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#2563EB" /></svg></div><div class="video-caption" id="profVideoCaption"></div></div>
+          </div>
+        </div>
+        <div id="tab-culture" class="tab-pane" style="display:none">
+          <div class="profile-section"><h3>Cultural specialties</h3><div class="culture-grid" id="profCultureGrid"></div></div>
+        </div>
+        <div id="tab-reviews" class="tab-pane" style="display:none">
+          <div class="profile-section"><h3>Student reviews</h3><div id="profReviewsList"></div></div>
+        </div>
+        <div id="tab-certs" class="tab-pane" style="display:none">
+          <div class="profile-section"><h3>Certifications</h3><div class="cert-row" id="profCertRow"></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="booking-card">
+          <div class="booking-price"><b id="profPrice"></b><span>/ 60-min lesson</span></div>
+          <div class="pill pill-green" style="margin-top:6px">Usually responds within 2 hours</div>
+          <div class="pkg-list" id="profPackages"></div>
+          <h5 style="font-size:13px;margin:16px 0 4px;">Pick a day</h5>
+          <div class="cal-grid" id="profCalendar"></div>
+          <h5 style="font-size:13px;margin:6px 0 4px;">Available times</h5>
+          <div class="time-slots" id="profTimeSlots"></div>
+          <button class="btn btn-primary btn-block" style="margin-top:14px;" id="profBookBtn">Book lesson</button>
+        </div>
+      </div>
+    </div>
+    <div id="footerProfile"></div>
+  </main>
+
+
+  <!-- ===== APPLY PAGE ===== -->
+  <main id="page-apply" class="page">
+    <div class="wizard-shell">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:28px">
+          <span class="eyebrow">Teach on Starhela</span>
+          <h2>Become a tutor and earn from your language</h2>
+          <p>Share your language and culture with students worldwide. Teachers keep up to 85% of every lesson, paid weekly. It takes about 12 minutes to apply.</p>
+        </div>
+        <div class="wizard-grid">
+          <div class="wizard-steps" id="wizardSteps"></div>
+          <div class="wizard-panel">
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="wizardContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/teaching-language.js"></script>
+</body>
+</html>
