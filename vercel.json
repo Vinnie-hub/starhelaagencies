@@ -15,7 +15,6 @@
     { "source": "/earn/videos", "destination": "/earn/videos.html" },
     { "source": "/earn/ads", "destination": "/earn/ads.html" },
     { "source": "/earn/surveys", "destination": "/earn/surveys.html" },
-    { "source": "/earn/blogging", "destination": "/earn/blogging.html" },
     { "source": "/earn/training-ai", "destination": "/earn/training-ai.html" },
     { "source": "/bonus", "destination": "/bonus.html" },
     { "source": "/countries/:name", "destination": "/countries/:name.html" }
