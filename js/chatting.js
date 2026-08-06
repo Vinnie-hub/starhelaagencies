@@ -2498,55 +2498,7 @@
     if (el) el.addEventListener("click", onCatFilterClick);
   });
 
-  /*   SEARCH                        */
-  const searchInput = document.getElementById("search-input");
-  const searchBtn = document.getElementById("search-btn");
-
-  function getSearchedProfileGroup(query) {
-    const normalizedQuery = query
-      .replace(/&/g, "and")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (!normalizedQuery) return null;
-    return PROFILE_GROUPS.find((group) => {
-      const normalizedName = group.name.replace(/&/g, "and").toLowerCase();
-      return (
-        normalizedName.includes(normalizedQuery) ||
-        normalizedQuery.includes(normalizedName)
-      );
-    });
-  }
-
-  function applySearch(navigateToGroup) {
-    clearTimeout(searchTimer);
-    currentSearch = (searchInput ? searchInput.value : "").toLowerCase().trim();
-    renderCards();
-    const group = navigateToGroup && getSearchedProfileGroup(currentSearch);
-    if (group) {
-      document
-        .getElementById(group.id)
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
-  if (searchInput) {
-    searchInput.addEventListener("input", function () {
-      clearTimeout(searchTimer);
-      const val = this.value;
-      searchTimer = setTimeout(function () {
-        currentSearch = val.toLowerCase().trim();
-        renderCards();
-      }, 200);
-    });
-    searchInput.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") applySearch(true);
-    });
-  }
-  if (searchBtn) {
-    searchBtn.addEventListener("click", function () {
-      applySearch(true);
-    });
-  }
-
+ 
   /*   DRAWER                        */
   function openDrawer() {
     drawerOpen = true;

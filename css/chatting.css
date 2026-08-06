@@ -486,47 +486,36 @@ nav {
   color: var(--accent-text);
   font-weight: 700;
 }
-.search-bar {
+.hero-signup {
   display: flex;
-  max-width: 520px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow:
-    0 14px 30px rgba(47, 107, 255, 0.13),
-    0 2px 5px rgba(26, 25, 22, 0.05);
+  justify-content: center;
 }
-.search-bar input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 14px 16px;
-  font-size: 14px;
-  background: transparent;
-  min-width: 0;
-  font-family: var(--font);
-}
-.search-bar button {
-  margin: 5px;
-  padding: 0 20px;
-  border-radius: 9px;
-  background: linear-gradient(135deg, var(--accent), #6c4df6);
+.hero-signup .btn-reg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #7c5cff);
+  box-shadow: 0 10px 22px rgba(47, 107, 255, 0.26);
   color: #fff;
-  border: none;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  flex-shrink: 0;
-  font-family: var(--font);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
-.search-bar button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 12px rgba(47, 107, 255, 0.25);
+.hero-signup .btn-reg:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(47, 107, 255, 0.34);
+}
+.hero-signup .btn-reg:active {
+  transform: translateY(0);
+}
+.hero-signup .btn-reg:focus-visible {
+  outline: 3px solid rgba(108, 77, 246, 0.35);
+  outline-offset: 4px;
 }
 
 /*    MOBILE FILTER CHIPS BAR                 */
@@ -1455,14 +1444,6 @@ nav {
   .hero p {
     font-size: 13px;
     margin-bottom: 16px;
-  }
-  .search-bar input {
-    padding: 10px 12px;
-    font-size: 13px;
-  }
-  .search-bar button {
-    padding: 0 14px;
-    font-size: 12px;
   }
   .card-header {
     padding: 10px 10px 6px;
