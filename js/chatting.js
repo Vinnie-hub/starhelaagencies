@@ -2,7 +2,7 @@
   "use strict";
 
   /*   CONSTANTS  */
-  const REG = "https://starhela.com/register.php?ref=sydney";
+  const REG = "https://starhela.com/register.php?ref=Agent";
   const DISPLAY_COUNT = 6;
   
   const PROFILE_GROUPS = [

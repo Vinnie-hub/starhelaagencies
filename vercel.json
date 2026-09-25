@@ -11,11 +11,7 @@
     }
   ],
   "rewrites": [
-    { "source": "/earn/chatting", "destination": "/earn/chatting.html" },
-    { "source": "/earn/videos", "destination": "/earn/videos.html" },
-    { "source": "/earn/ads", "destination": "/earn/ads.html" },
-    { "source": "/earn/surveys", "destination": "/earn/surveys.html" },
-    { "source": "/earn/training-ai", "destination": "/earn/training-ai.html" },
+    { "source": "/earn/:name", "destination": "/earn/:name.html" },
     { "source": "/bonus", "destination": "/bonus.html" },
     { "source": "/countries/:name", "destination": "/countries/:name.html" }
   ],

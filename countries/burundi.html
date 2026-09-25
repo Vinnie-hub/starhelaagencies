@@ -1078,8 +1078,72 @@
         }
       }
     </style>
-  </head>
+    <link rel="manifest" href="/manifest.json">
+
+  
+    <style>.icon{display:inline-block;width:1em;height:1em;vertical-align:-0.15em;flex-shrink:0;color:currentColor;fill:currentColor}.icon use{color:inherit}
+.step-icon .icon, .task-icon .icon, .way-icon .icon, .trust-ico .icon, .pc-method .icon, .er-icon .icon, .ld-ico .icon, .up-empty-icon .icon, .bn-icon .icon, .earn-icon .icon, .modal-icon .icon, .loader-icon .icon, .w-ico .icon, .feed-tag .icon, .ico-wrap .icon{color:var(--bi-green, #10b981)}
+</style>
+</head>
   <body>
+    <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="icon-home" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></symbol>
+        <symbol id="icon-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+        <symbol id="icon-help-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5 .8c0 1.9-2.5 2.1-2.5 3.9"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="3.3"/><path d="M10.3 12.6 18 5l2 2-1.7 1.7M16.2 6.7l1.8 1.8"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11"/><path d="M8 10l4 4 4-4"/><path d="M5 19h14"/></symbol>
+        <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M12 2c3 1.2 5 5.2 5 9 0 2-.9 3.9-2 5l-3 3-3-3c-1.1-1.1-2-3-2-5 0-3.8 2-7.8 5-9z"/><circle cx="12" cy="10" r="1.6" fill="#fff"/><path d="M9 16.3 6 21l5-2z"/><path d="M15 16.3 18 21l-5-2z"/></symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3.3l2.5 5.4 5.8.6-4.3 4 1.2 5.7L12 16l-5.2 3 1.2-5.7-4.3-4 5.8-.6z"/></symbol>
+        <symbol id="icon-unlock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8.3 11V8a3.7 3.7 0 0 1 7-1.6"/><circle cx="12" cy="15.4" r="1.2" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></symbol>
+        <symbol id="icon-call" viewBox="0 0 24 24"><path d="M6.6 4c1 0 2.3.4 2.8 1.5.5 1-.1 2-1 2.7-.3.3-.4.6-.2 1 .9 1.8 2.3 3.2 4.1 4.1.4.2.7.1 1-.2.7-.9 1.7-1.5 2.7-1 1.1.5 1.5 1.8 1.5 2.8 0 1.5-1.3 2.9-2.8 2.7C8.5 16.7 4.3 12.5 3.5 6.8 3.3 5.3 5.1 4 6.6 4z"/></symbol>
+        <symbol id="icon-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 8H3z"/><line x1="5" y1="10" x2="5" y2="18"/><line x1="9.5" y1="10" x2="9.5" y2="18"/><line x1="14.5" y1="10" x2="14.5" y2="18"/><line x1="19" y1="10" x2="19" y2="18"/><line x1="3" y1="20" x2="21" y2="20"/></symbol>
+        <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/><circle cx="12" cy="15.4" r="1.2" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4.3"/></symbol>
+        <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9A1.5 1.5 0 0 1 18.5 16H10l-4.5 4v-4H5.5A1.5 1.5 0 0 1 4 14.5z"/></symbol>
+        <symbol id="icon-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2"/><circle cx="9" cy="13" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.1" fill="currentColor" stroke="none"/><path d="M12 8V5M9.5 5h5"/><path d="M3 12.5v3M21 12.5v3"/></symbol>
+        <symbol id="icon-language" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h9M8.5 3.5v2M4 8.5c1.4 3 3.9 5.2 6.4 6.3M11 8.5c-1 3-2.9 5.6-5.8 7.3"/><path d="M14 21l4-9.5 4 9.5M15.4 17.6h5.2"/></symbol>
+        <symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2.4" width="6" height="3" rx="1"/><line x1="9" y1="10.2" x2="15" y2="10.2"/><line x1="9" y1="13.6" x2="15" y2="13.6"/><line x1="9" y1="17" x2="13" y2="17"/></symbol>
+        <symbol id="icon-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.3l5-3v9.4l-5-3z"/></symbol>
+        <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L15.5 5.5l3 3L8 19z"/><path d="M13.7 6.8l3 3"/></symbol>
+        <symbol id="icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12a7.5 7.5 0 0 1 13-5"/><path d="M19.5 12a7.5 7.5 0 0 1-13 5"/><path d="M17 3.7V7h-3.3M7 20.3V17h3.3"/></symbol>
+        <symbol id="icon-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M4 20c0-3.1 2.2-5 5-5s5 1.9 5 5"/><circle cx="17" cy="9.2" r="2.4"/><path d="M14.7 20c.1-2.4 1.6-4.1 3.6-4.4"/></symbol>
+        <symbol id="icon-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h3l9 4.2V5.8L6 10z"/><path d="M15.3 9a4.2 4.2 0 0 1 0 6"/></symbol>
+        <symbol id="icon-cash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.6c0-1.1 1.1-2 2.8-2s2.8.8 2.8 1.8-1.1 1.3-2.8 1.6-2.8.7-2.8 1.8 1.1 2 2.8 2 2.8-.7 2.8-1.8"/><line x1="12" y1="6.3" x2="12" y2="17.7"/></symbol>
+        <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></symbol>
+        <symbol id="icon-signal" viewBox="0 0 24 24"><rect x="3" y="15" width="3.4" height="5"/><rect x="8.3" y="11" width="3.4" height="9"/><rect x="13.6" y="7" width="3.4" height="13"/><rect x="18.9" y="3" width="3.4" height="17"/></symbol>
+        <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.7 2.7 5.3-6"/></symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5 11-11"/></symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+        <symbol id="icon-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.3" y="5.5" width="17.4" height="13" rx="2"/><path d="M4 6.6l8 6.4 8-6.4"/></symbol>
+        <symbol id="icon-book" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 0 1 6 4h5v16H6a2 2 0 0 0-2 1.5z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v16h5a2 2 0 0 1 2 1.5z" opacity="0.7"/></symbol>
+        <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a4 4 0 0 0 3.6 4M17 6h3v1a4 4 0 0 1-3.6 4"/><path d="M12 13v3M9 20h6M10 17h4v3h-4z"/></symbol>
+        <symbol id="icon-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.7A2 2 0 0 1 6 5.7h11a2 2 0 0 1 2 2V8H6a2 2 0 0 1-2-2.3z"/><rect x="3" y="8" width="18" height="11" rx="2"/><circle cx="16.5" cy="13.5" r="1.2" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-hash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 16h14M9.5 4l-2 16M17 4l-2 16"/></symbol>
+        <symbol id="icon-info-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16.3"/><circle cx="12" cy="7.9" r="1" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="1"/><rect x="3" y="7" width="18" height="4" rx="1"/><line x1="12" y1="7" x2="12" y2="20"/><path d="M12 7c-1-4-6-4-6-.7S9 7 12 7zm0 0c1-4 6-4 6-.7S15 7 12 7z"/></symbol>
+              <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></symbol>
+        <symbol id="icon-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-1 5.8A3 3 0 0 0 7.7 18H9a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/><path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 1 5.8A3 3 0 0 1 16.3 18H15a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z"/></symbol>
+        <symbol id="icon-graduation" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5z"/><path d="M6 10.5V15c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="22" y1="8" x2="22" y2="13.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+        <symbol id="icon-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2.2"/><line x1="2.5" y1="9.7" x2="21.5" y2="9.7"/><line x1="5.5" y1="15" x2="10" y2="15"/></symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></symbol>
+        <symbol id="icon-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V10"/><path d="M8 13.5 12 9.5l4 4"/><path d="M5 19h14"/></symbol>
+        <symbol id="icon-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+        <symbol id="icon-fire" viewBox="0 0 24 24"><path d="M12 2c1 3-3 4-3 7.5A3 3 0 0 0 12 13a3 3 0 0 0 3-3.5c1.2.9 2 2.4 2 4.2 0 3.3-2.7 6-5 6.3-3.3.4-7-2.2-7-6.3C5 8.8 9 6.5 12 2z"/></symbol>
+        <symbol id="icon-crown" viewBox="0 0 24 24"><path d="M3 8l4 3 5-6 5 6 4-3-1.7 9.5H4.7z"/></symbol>
+        <symbol id="icon-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 9 8 3h8l4 6-10 12z"/><path d="M4 9h16M9 3l-1 6 4 12 4-12-1-6"/></symbol>
+        <symbol id="icon-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><line x1="14" y1="6.5" x2="14" y2="17.5" stroke-width="1.3" stroke-dasharray="2 2"/></symbol>
+        <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 1 14-4 14-14-9 0-14 5-14 14z"/><path d="M5 19c2-5 5-8 9-10"/></symbol>
+        <symbol id="icon-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5v-3l1.6-4A2 2 0 0 1 7.5 8h9a2 2 0 0 1 1.9 1.5l1.6 4v3"/><path d="M3 16.5h18" stroke-linecap="round"/><circle cx="7.5" cy="17.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="16.5" cy="17.5" r="1.4" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" stroke="none"/><path d="M3 16l5-5 4 4 3-3 6 6"/></symbol>
+        <symbol id="icon-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="2.5" y="14" width="4" height="6" rx="1.5"/><rect x="17.5" y="14" width="4" height="6" rx="1.5"/></symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.7-9.3C.7 7.8 2.6 4.5 6 4c2.2-.3 4 .8 6 3 2-2.2 3.8-3.3 6-3 3.4.5 5.3 3.8 3.7 7.2C19.5 15.9 12 20.5 12 20.5z"/></symbol>
+      </defs>
+    </svg>
     <div
       id="reg-overlay"
       role="dialog"
@@ -1087,8 +1151,8 @@
       style="position: fixed; inset: 0; z-index: 10020; background: rgba(8,5,26,0.82); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 16px;"
     >
       <div style="background: #0f1a12; border-radius: 28px; max-width: 460px; width: 100%; padding: 32px 28px; color: #fff; text-align: center; border: 1px solid rgba(26,138,58,0.3); position: relative;">
-        <button id="rm-close" style="position: absolute; top: 14px; right: 14px; background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;">✕</button>
-        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: #a3d8b0; margin-bottom: 12px;">⭐ IYANDIKISHA RIMWE</div>
+        <button id="rm-close" style="position: absolute; top: 14px; right: 14px; background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;"><svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: #a3d8b0; margin-bottom: 12px;"><svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg> IYANDIKISHA RIMWE</div>
         <h2 style="font-family: var(--fh); font-size: 1.8rem; font-weight: 800; margin-bottom: 8px;">Tangira kwungukira mu Burundi</h2>
         <p style="color: rgba(255,255,255,0.75); margin-bottom: 24px;">Injira mu 120,000+ bungukiye muri Afrika. Kwishyura rimwe. Kugira uburenganzira buhoraho.</p>
         <div style="background: rgba(26,138,58,0.18); border-radius: 16px; padding: 18px; margin-bottom: 24px; display: flex; align-items: center; gap: 14px; border: 1px solid rgba(26,138,58,0.3);">
@@ -1100,7 +1164,7 @@
           </div>
         </div>
         <button onclick="window.open('https://starhela.com/register.php?ref=sydney','_blank')" style="width: 100%; padding: 17px; background: linear-gradient(90deg, #1a8a3a, #0f5a2a); color: #fff; border: none; border-radius: 99px; font-family: var(--fh); font-size: 1rem; font-weight: 800; cursor: pointer; box-shadow: 0 10px 28px rgba(26,138,58,0.45);">
-          🚀 Iyandikisha kuri StarHela →
+          <svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg> Iyandikisha kuri StarHela →
         </button>
       </div>
     </div>
@@ -1133,7 +1197,7 @@
       <a href="#how-it-works">Nigute bikora</a>
       <a href="#eight-ways">Uburyo bwo kwungukira</a>
       <a href="#faq">IBIBUZO</a>
-      <a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="mob-cta">🚀 Injira — 30,000 BIF</a>
+      <a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="mob-cta"><svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg> Injira — 30,000 BIF</a>
     </div>
 
     <section class="hero">
@@ -1155,12 +1219,12 @@
               <span class="lbl">· Uburenganzira buhoraho</span>
             </div>
             <div class="feat-list">
-              <div class="feat-item"><div class="feat-icon">✓</div>Nta buhanga bukenewe — tangira kwungukira umusi umwe</div>
-              <div class="feat-item"><div class="feat-icon">✓</div>Wungukira gushika 150,000 BIF/umusi mu kuganira + imirimo</div>
-              <div class="feat-item"><div class="feat-icon">✓</div>Kwishyura ako kanya kuri M-Pesa, Airtel Money &amp; Lumicash</div>
+              <div class="feat-item"><div class="feat-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div>Nta buhanga bukenewe — tangira kwungukira umusi umwe</div>
+              <div class="feat-item"><div class="feat-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div>Wungukira gushika 150,000 BIF/umusi mu kuganira + imirimo</div>
+              <div class="feat-item"><div class="feat-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div>Kwishyura ako kanya kuri M-Pesa, Airtel Money &amp; Lumicash</div>
             </div>
             <div class="cta-row">
-              <a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="btn-primary">🚀 Iyandikisha & Tangira kwungukira</a>
+              <a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="btn-primary"><svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg> Iyandikisha & Tangira kwungukira</a>
               <a href="#eight-ways" class="btn-ghost">Ibiruhuza →</a>
             </div>
             <div class="hero-stats">
@@ -1174,7 +1238,7 @@
     </section>
 
     <div class="trust-strip">
-      <div class="wrap"><div class="trust-inner"><div class="trust-item reveal"><div class="trust-ico">🔒</div><div><strong>Rubuga rwifishe</strong><span style="display:block;font-size:0.7rem;">SSL Encrypted</span></div></div><div class="trust-item reveal"><div class="trust-ico">💬</div><div><strong>Ibiganiro nyakuri</strong><span style="display:block;font-size:0.7rem;">Abantu kw'isi yose</span></div></div><div class="trust-item reveal"><div class="trust-ico">⚡</div><div><strong>Kwishyura ako kanya</strong><span style="display:block;font-size:0.7rem;">M-Pesa, Airtel, Lumicash</span></div></div><div class="trust-item reveal"><div class="trust-ico">📱</div><div><strong>Bikorwa kuri telefone</strong><span style="display:block;font-size:0.7rem;">Smartphone iyo ari yo yose</span></div></div></div></div>
+      <div class="wrap"><div class="trust-inner"><div class="trust-item reveal"><div class="trust-ico"><svg class="icon" aria-hidden="true"><use href="#icon-lock"></use></svg></div><div><strong>Rubuga rwifishe</strong><span style="display:block;font-size:0.7rem;">SSL Encrypted</span></div></div><div class="trust-item reveal"><div class="trust-ico"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg></div><div><strong>Ibiganiro nyakuri</strong><span style="display:block;font-size:0.7rem;">Abantu kw'isi yose</span></div></div><div class="trust-item reveal"><div class="trust-ico"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"></use></svg></div><div><strong>Kwishyura ako kanya</strong><span style="display:block;font-size:0.7rem;">M-Pesa, Airtel, Lumicash</span></div></div><div class="trust-item reveal"><div class="trust-ico"><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg></div><div><strong>Bikorwa kuri telefone</strong><span style="display:block;font-size:0.7rem;">Smartphone iyo ari yo yose</span></div></div></div></div>
     </div>
 
     <section id="how-it-works" class="section bg-white">
@@ -1185,30 +1249,30 @@
         <div class="steps-grid">
           <div class="step-card reveal">
             <span class="step-number">Intambwe 01</span>
-            <span class="step-icon">📝</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span>
             <h3>Iyandikisha ku buntu</h3>
             <p>Kora konti yawe ku buntu ukoresheje izina ryawe, numero ya telefone ya Burundi, na email.</p>
           </div>
           <div class="step-card reveal">
             <span class="step-number">Intambwe 02</span>
-            <span class="step-icon">💳</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-card"></use></svg></span>
             <h3>Kwirarika 30,000 BIF</h3>
             <p>Kwishyura rimwe gusa kuri M-Pesa, Airtel Money cyangwa Lumicash. Nta ya buri kwezi.</p>
           </div>
           <div class="step-card reveal">
             <span class="step-number">Intambwe 03</span>
-            <span class="step-icon">💬</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg></span>
             <h3>Tangira kwungukira</h3>
             <p>Injira ku rubuga rwawe ugatangira kuganira n’abanyamahanga bo muri USA, UK, Burayi.</p>
           </div>
           <div class="step-card reveal">
             <span class="step-number">Intambwe 04</span>
-            <span class="step-icon">💰</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cash"></use></svg></span>
             <h3>Kura ako kanya</h3>
             <p>Ugere ku 30,000 BIF (muri masaha make) hanyuma ukure ako kanya kuri M-Pesa, Airtel cyangwa Lumicash.</p>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 44px;" class="reveal"><a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="btn-primary">👤 Iyandikisha ku buntu & Tangira kwungukira</a></div>
+        <div style="text-align: center; margin-top: 44px;" class="reveal"><a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="btn-primary"><svg class="icon" aria-hidden="true"><use href="#icon-user"></use></svg> Iyandikisha ku buntu & Tangira kwungukira</a></div>
       </div>
     </section>
 
@@ -1218,21 +1282,21 @@
         <h2 class="sec-h2 reveal">Uburyo 8 bwo kwungukira online mu Burundi</h2>
         <p class="sec-p reveal">Koresha uburyo butandukanye bwo kwungukira. Kuva mu kuganira kugeza ku mirimo ya AI, hari ikintu kuri buri muntu.</p>
         <div class="eight-grid">
-          <div class="way-card reveal"><div class="way-icon">💬</div><h3>1. Ganira n’abanyamahanga</h3><p>Ibiganiro nyakuri n’abantu kw’isi yose. Wungukira kuri buri butumwa na session.</p><span class="way-rate">Gushika 75,000 BIF/umusi</span></div>
-          <div class="way-card reveal"><div class="way-icon">🤖</div><h3>2. AI Data Labeling</h3><p>Fasha gutozwa AI mu gushyiramo ibimenyetso ku mashusho, inyandiko n’amajwi.</p><span class="way-rate">Gushika 37,500 BIF/umusi</span></div>
-          <div class="way-card reveal"><div class="way-icon">📋</div><h3>3. Ibibazo bishyurwa</h3><p>Tangira icyo utekereza ku bucuruzi bw’isi. Ibibazo bishya buri ndwi.</p><span class="way-rate">Gushika 26,250 BIF/umusi</span></div>
-          <div class="way-card reveal"><div class="way-icon">🎬</div><h3>4. Reba amavidewo</h3><p>Reba amavidewo make ya YouTube kandi ungukire kuri buri kureba. Hinda umwanya mu mafaranga.</p><span class="way-rate">Gushika 41,250 BIF/umusi</span></div>
-          <div class="way-card reveal"><div class="way-icon">⚡</div><h3>5. Kanda & Reba amatangazo</h3><p>Reba amatangazo make kandi ukande kugira ngo ungukire buri musi.</p><span class="way-rate">Gushika 33,750 BIF/umusi</span></div>
-          <div class="way-card reveal"><div class="way-icon">✍️</div><h3>6. Imirimo yo kwandika</h3><p>Gukoporanya, gusuzuma amakuru, no gutandukanya ibintu. Mu buryo bworoshye ku telefone.</p><span class="way-rate">500–1,800 BIF ku murimo</span></div>
-          <div class="way-card reveal"><div class="way-icon">🎰</div><h3>7. Zunguza & Ungukire</h3><p>Zunguza uruziga rwa buri musi ugashobora guhabwa amafaranga ako kanya.</p><span class="way-rate">Inyungu nyinshi</span></div>
-          <div class="way-card reveal"><div class="way-icon">🌟</div><h3>8. Inyungu zo kugarura</h3><p>Garura incuti zanyu kandi ungukire 50% ku kwishyura kwazo + 8% ku nzira y’inyungu.</p><span class="way-rate">Nta kugabanya</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg></div><h3>1. Ganira n’abanyamahanga</h3><p>Ibiganiro nyakuri n’abantu kw’isi yose. Wungukira kuri buri butumwa na session.</p><span class="way-rate">Gushika 75,000 BIF/umusi</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-robot"></use></svg></div><h3>2. AI Data Labeling</h3><p>Fasha gutozwa AI mu gushyiramo ibimenyetso ku mashusho, inyandiko n’amajwi.</p><span class="way-rate">Gushika 37,500 BIF/umusi</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-clipboard"></use></svg></div><h3>3. Ibibazo bishyurwa</h3><p>Tangira icyo utekereza ku bucuruzi bw’isi. Ibibazo bishya buri ndwi.</p><span class="way-rate">Gushika 26,250 BIF/umusi</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-video"></use></svg></div><h3>4. Reba amavidewo</h3><p>Reba amavidewo make ya YouTube kandi ungukire kuri buri kureba. Hinda umwanya mu mafaranga.</p><span class="way-rate">Gushika 41,250 BIF/umusi</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"></use></svg></div><h3>5. Kanda & Reba amatangazo</h3><p>Reba amatangazo make kandi ukande kugira ngo ungukire buri musi.</p><span class="way-rate">Gushika 33,750 BIF/umusi</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></div><h3>6. Imirimo yo kwandika</h3><p>Gukoporanya, gusuzuma amakuru, no gutandukanya ibintu. Mu buryo bworoshye ku telefone.</p><span class="way-rate">500–1,800 BIF ku murimo</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-spin"></use></svg></div><h3>7. Zunguza & Ungukire</h3><p>Zunguza uruziga rwa buri musi ugashobora guhabwa amafaranga ako kanya.</p><span class="way-rate">Inyungu nyinshi</span></div>
+          <div class="way-card reveal"><div class="way-icon"><svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg></div><h3>8. Inyungu zo kugarura</h3><p>Garura incuti zanyu kandi ungukire 50% ku kwishyura kwazo + 8% ku nzira y’inyungu.</p><span class="way-rate">Nta kugabanya</span></div>
         </div>
-        <div style="text-align: center; margin-top: 40px;" class="reveal"><a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="btn-primary">🚀 Fungura uburyo bwose bwo kwungukira</a></div>
+        <div style="text-align: center; margin-top: 40px;" class="reveal"><a href="https://starhela.com/register.php?ref=sydney" target="_blank" class="btn-primary"><svg class="icon" aria-hidden="true"><use href="#icon-rocket"></use></svg> Fungura uburyo bwose bwo kwungukira</a></div>
       </div>
     </section>
 
     <section class="section bg-white">
-      <div class="wrap"><div class="withdraw-grid"><div class="reveal"><h2 class="w-h2">Kwishyura ako kanya kuri 🇧🇮 M-Pesa, Airtel Money &amp; Lumicash</h2><ul class="w-list"><li><div class="w-ico">✓</div><div><strong>Icashirwa nkeya :</strong> 30,000 BIF — ushobora kugeraho mu masaha make</div></li><li><div class="w-ico">✓</div><div><strong>Inzira zishyurwa :</strong> M-Pesa, Airtel Money, Lumicash</div></li><li><div class="w-ico">✓</div><div><strong>Igihe :</strong> Ako kanya — munsi y’iminota 2 ku konti yawe</div></li><li><div class="w-ico">✓</div><div>Nta ada y’ishyurwa — 100% by’inyungu zawe zishyurwa</div></li></ul></div><div class="reveal"><div class="payout-card"><div style="font-weight:800; margin-bottom:20px;">Uburyo bwo kwishyura</div><div class="pc-method"><span style="font-size:2rem;">📱</span><div><strong>M-Pesa</strong><span style="display:block; font-size:0.8rem;">Kwishyura ako kanya</span></div></div><div class="pc-method"><span style="font-size:2rem;">📲</span><div><strong>Airtel Money</strong><span style="display:block; font-size:0.8rem;">Kwishyura ako kanya</span></div></div><div class="pc-method"><span style="font-size:2rem;">💳</span><div><strong>Lumicash</strong><span style="display:block; font-size:0.8rem;">Kwishyura ako kanya</span></div></div></div></div></div></div>
+      <div class="wrap"><div class="withdraw-grid"><div class="reveal"><h2 class="w-h2">Kwishyura ako kanya kuri 🇧🇮 M-Pesa, Airtel Money &amp; Lumicash</h2><ul class="w-list"><li><div class="w-ico"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div><div><strong>Icashirwa nkeya :</strong> 30,000 BIF — ushobora kugeraho mu masaha make</div></li><li><div class="w-ico"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div><div><strong>Inzira zishyurwa :</strong> M-Pesa, Airtel Money, Lumicash</div></li><li><div class="w-ico"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div><div><strong>Igihe :</strong> Ako kanya — munsi y’iminota 2 ku konti yawe</div></li><li><div class="w-ico"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></div><div>Nta ada y’ishyurwa — 100% by’inyungu zawe zishyurwa</div></li></ul></div><div class="reveal"><div class="payout-card"><div style="font-weight:800; margin-bottom:20px;">Uburyo bwo kwishyura</div><div class="pc-method"><span style="font-size:2rem;"><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg></span><div><strong>M-Pesa</strong><span style="display:block; font-size:0.8rem;">Kwishyura ako kanya</span></div></div><div class="pc-method"><span style="font-size:2rem;"><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg></span><div><strong>Airtel Money</strong><span style="display:block; font-size:0.8rem;">Kwishyura ako kanya</span></div></div><div class="pc-method"><span style="font-size:2rem;"><svg class="icon" aria-hidden="true"><use href="#icon-card"></use></svg></span><div><strong>Lumicash</strong><span style="display:block; font-size:0.8rem;">Kwishyura ako kanya</span></div></div></div></div></div></div>
     </section>
 
     <section class="section bg-tint">
@@ -1243,9 +1307,9 @@
       <div class="wrap"><span class="eyebrow reveal">IBIBUZO</span><h2 class="sec-h2 reveal">Ibibazo bikunze kubazwa</h2><div class="faq-list"><div class="faq-item reveal"><button class="faq-btn" onclick="toggleFaq(this)">StarHela ni iki kandi igakora ite mu Burundi?<span>▾</span></button><div class="faq-body"><p>StarHela ni urubuga rwo kwungukira online ruhuza abanyaburundi n’abanyamahanga bashaka ibiganiro nyakuri. Wungukira kuri buri gihe ugira ibiganiro, kandi ushobora no gusubiza ibibazo, gukora imirimo ya AI, kureba amavidewo n’ibindi kugira ngo wongere inyungu zawe.</p></div></div><div class="faq-item reveal"><button class="faq-btn" onclick="toggleFaq(this)">30,000 BIF zo kwishyura rimwe ni ikibonezamirongo iki?<span>▾</span></button><div class="faq-body"><p>Ni ikiguzi kimwe gusa cyo gufungura uburenganzira buhoraho ku rubuga: kuganira n’abanyamahanga, imirimo yose, ibibazo, no gushobora gukura amafaranga yawe. Nta giciro cya buri kwezi cyangwa ibindi bishyurwa — wirarike rimwe, ungukire ubuzima bwose.</p></div></div><div class="faq-item reveal"><button class="faq-btn" onclick="toggleFaq(this)">Mbega nshobora gukura ako kanya nyuma yo kwiyandikisha?<span>▾</span></button><div class="faq-body"><p>Igihe konti yawe igereye ku 30,000 BIF — ubusanzwe mu masaha 2–4 yo kuganira no gukora imirimo — ushobora gukura ako kanya kuri M-Pesa, Airtel Money cyangwa Lumicash, amasaha 24 ku munsi. Abenshi bakura amafaranga yabo mu musi wabo wa mbere.</p></div></div></div></div>
     </section>
 
-    <section class="final-cta"><div class="wrap reveal"><h2 style="font-family:var(--fh); font-size:2.2rem; font-weight:800; margin-bottom:16px;">Tangira kuganira no kwungukira mu Burundi uno musi ! 🇧🇮</h2><p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Abanyaburundi barenga 4,000 barimo bakora amafaranga nyakuri mu biganiro bya buri musi — injira nawe kuri 30,000 BIF gusa, rimwe.</p><a href="https://starhela.com/register.php?ref=sydney" target="_blank" style="background:linear-gradient(90deg, #1a8a3a, #0f5a2a); color:#fff; padding:16px 36px; border-radius:99px; font-weight:800; font-size:1rem; display:inline-block;">💬 Iyandikisha — 30,000 BIF</a></div></section>
+    <section class="final-cta"><div class="wrap reveal"><h2 style="font-family:var(--fh); font-size:2.2rem; font-weight:800; margin-bottom:16px;">Tangira kuganira no kwungukira mu Burundi uno musi ! 🇧🇮</h2><p style="color:rgba(255,255,255,0.8); margin-bottom:32px;">Abanyaburundi barenga 4,000 barimo bakora amafaranga nyakuri mu biganiro bya buri musi — injira nawe kuri 30,000 BIF gusa, rimwe.</p><a href="https://starhela.com/register.php?ref=sydney" target="_blank" style="background:linear-gradient(90deg, #1a8a3a, #0f5a2a); color:#fff; padding:16px 36px; border-radius:99px; font-weight:800; font-size:1rem; display:inline-block;"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg> Iyandikisha — 30,000 BIF</a></div></section>
 
-    <footer><div class="wrap"><div class="foot-grid"><div><div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;"><img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="logo" class="foot-logo-img" loading="lazy" /><span class="foot-brand-name">STARHELA AGENCIES</span></div><p style="font-size:0.8rem; margin-bottom:14px;">Urubuga rwizewe rwo kwungukira online muri Afrika. Ganira n’abanyamahanga, kora imirimo, kandi ungukire amafaranga nyakuri buri musi.</p><p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/254729743223" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">+254 729 743 223</a></p><p>✉️ <a href="mailto:starhelaofficials@gmail.com" style="color:inherit;">starhelaofficials@gmail.com</a></p></div><div><div style="font-weight:800; letter-spacing:0.1em; font-size:0.7rem; margin-bottom:14px; color:rgba(255,255,255,0.4);">IBIYOBWE</div><div style="display:flex; flex-direction:column; gap:8px;"><a href="#how-it-works" style="color:inherit;">Nigute bikora</a><a href="#eight-ways" style="color:inherit;">Uburyo bwo kwungukira</a><a href="#faq" style="color:inherit;">IBIBUZO</a></div></div><div><div style="font-weight:800; letter-spacing:0.1em; font-size:0.7rem; margin-bottom:14px; color:rgba(255,255,255,0.4);">IBIHUGI</div><div style="display:flex; flex-direction:column; gap:8px;"><a href="/countries/kenya" style="color:inherit;">Kenya</a><a href="/countries/uganda" style="color:inherit;">Uganda</a><a href="/countries/nigeria" style="color:inherit;">Nigeria</a><a href="/countries/burundi" style="color:inherit;">Burundi</a></div></div></div><div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; text-align:center; font-size:0.7rem;">© 2025 StarHela Agencies · Uburenganzira bwose buzarindwa · <a href="https://starhela.com/register.php?ref=sydney" target="_blank" style="color:inherit;">Iyandikisha</a> · <a href="https://starhela.com/c/U3lkbmV5" target="_blank" style="color:inherit;">Injira</a></div></div></footer>
+    <footer><div class="wrap"><div class="foot-grid"><div><div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;"><img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="logo" class="foot-logo-img" loading="lazy" /><span class="foot-brand-name">STARHELA AGENCIES</span></div><p style="font-size:0.8rem; margin-bottom:14px;">Urubuga rwizewe rwo kwungukira online muri Afrika. Ganira n’abanyamahanga, kora imirimo, kandi ungukire amafaranga nyakuri buri musi.</p><p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/254745656143" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">+254 745 656 143</a></p><p><svg class="icon" aria-hidden="true"><use href="#icon-envelope"></use></svg> <a href="mailto:starhelaofficials@gmail.com" style="color:inherit;">starhelaofficials@gmail.com</a></p></div><div><div style="font-weight:800; letter-spacing:0.1em; font-size:0.7rem; margin-bottom:14px; color:rgba(255,255,255,0.4);">IBIYOBWE</div><div style="display:flex; flex-direction:column; gap:8px;"><a href="#how-it-works" style="color:inherit;">Nigute bikora</a><a href="#eight-ways" style="color:inherit;">Uburyo bwo kwungukira</a><a href="#faq" style="color:inherit;">IBIBUZO</a></div></div><div><div style="font-weight:800; letter-spacing:0.1em; font-size:0.7rem; margin-bottom:14px; color:rgba(255,255,255,0.4);">IBIHUGI</div><div style="display:flex; flex-direction:column; gap:8px;"><a href="/countries/kenya" style="color:inherit;">Kenya</a><a href="/countries/uganda" style="color:inherit;">Uganda</a><a href="/countries/nigeria" style="color:inherit;">Nigeria</a><a href="/countries/burundi" style="color:inherit;">Burundi</a></div></div></div><div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; text-align:center; font-size:0.7rem;">© 2025 StarHela Agencies · Uburenganzira bwose buzarindwa · <a href="https://starhela.com/register.php?ref=sydney" target="_blank" style="color:inherit;">Iyandikisha</a> · <a href="https://starhela.com/c/U3lkbmV5" target="_blank" style="color:inherit;">Injira</a></div></div></footer>
 
     <script>
       const nav = document.getElementById("top-nav");
@@ -1276,5 +1340,13 @@
       document.querySelectorAll(".reveal").forEach(el => revObs.observe(el));
       
     </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(() => {});
+        });
+      }
+    </script>
+
   </body>
 </html>

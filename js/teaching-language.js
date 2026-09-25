@@ -127,7 +127,7 @@
     }
 
     function redirectToRegister() {
-      window.location.href = "https://starhela.com/c/U3lkbmV5";
+      window.location.href = "https://starhela.com/register.php?ref=Agent";
     }
 
     // ============================================================
@@ -258,7 +258,7 @@
               <div class="ft-contact">
                 💬
                 <a
-                  href="https://wa.me/254729743223"
+                  href="https://wa.me/254745656143"
                   target="_blank"
                   rel="noopener noreferrer">
                   WhatsApp Support
@@ -282,7 +282,7 @@
           <div class="ft-copy">
             © 2025 Starhela Agencies · All rights reserved ·
             <a
-              href="https://starhela.com/register.php?ref=sydney"
+              href="https://starhela.com/register.php?ref=Agent"
               target="_blank"
               rel="noopener noreferrer">
               Register
@@ -717,7 +717,7 @@
           <p style="color:#64748b;margin-top:10px;max-width:420px;margin-left:auto;margin-right:auto;">
             Hello, ${wizardState.data.name || "friend"}! You don't have an account yet. Complete your registration to submit your application.
           </p>
-          <a href="https://starhela.com/c/U3lkbmV5" class="btn btn-primary" style="margin-top:28px;">Register Your Account</a>
+          <a href="https://starhela.com/register.php?ref=Agent" class="btn btn-primary" style="margin-top:28px;">Register Your Account</a>
         </div>`;
     }
 

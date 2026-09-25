@@ -1,4 +1,4 @@
-const REG_URL = "https://starhela.com/register.php?ref=sydney";
+const REG_URL = "https://starhela.com/register.php?ref=Agent";
       const SEED = [
         {
           id: 1,
@@ -441,7 +441,7 @@ const REG_URL = "https://starhela.com/register.php?ref=sydney";
                 <strong>Want to browse more videos?</strong>
                 <span>Create an account to unlock the full video library.</span>
               </div>
-              <a class="browse-more-link" href="https://starhela.com/register.php?ref=sydney" id="browseMore" target="_blank" rel="noopener">
+              <a class="browse-more-link" href="https://starhela.com/register.php?ref=Agent" id="browseMore" target="_blank" rel="noopener">
                 Sign up
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>

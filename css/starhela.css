@@ -68,10 +68,13 @@
         --dark-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         --dark-shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
         --dark-shadow-glow: 0 0 0 1px rgba(167, 139, 250, 0.18), 0 20px 60px -12px rgba(124, 58, 237, 0.45);
-        --nav-bg: rgba(255, 255, 255, 0.88);
+        --nav-bg: rgba(9, 7, 26, 0.72);
         --grad-brand: linear-gradient(135deg, #7c3aed 0%, #a855f7 45%, #ec4899 100%);
         --grad-brand-soft: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(236, 72, 153, 0.1));
         --grad-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
+        --grad-cta: linear-gradient(135deg, #ffd166 0%, #f5a623 55%, #ea8600 100%);
+        --cta-text: #2b1400;
+        --cta-glow: rgba(245, 166, 35, 0.55);
         --grad-green: linear-gradient(135deg, #059669, #10b981);
         --grad-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
         --focus: 0 0 0 3px rgba(167, 139, 250, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.7);
@@ -140,13 +143,31 @@
       .wrap { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: clamp(16px, 4vw, 48px); }
       .text-center { text-align: center; }
 
+      /* ── ICON SYSTEM ──────────────────────────── */
+      .icon { display: inline-block; width: 1.15em; height: 1.15em; vertical-align: -0.2em; flex-shrink: 0; color: currentColor; fill: currentColor; }
+      .icon use { color: inherit; }
+      .er-icon .icon, .why-icon .icon, .qs-icon .icon, .sh-wd-icon .icon, .cn-icon .icon, .sh-trust-icon .icon { width: 1.6em; height: 1.6em; vertical-align: middle; }
+      /* Reset native <button> chrome so the install triggers inherit
+         whatever surrounding component class they're paired with
+         (.mob-link, .f-links a, .mbn-item) instead of looking like a
+         plain browser button. */
+      .install-link, .footer-install-link, #installBtnTabbar.mbn-item {
+        background: none; border: none; cursor: pointer; font: inherit; color: inherit;
+        text-align: left; width: 100%;
+      }
+      .footer-install-link { display: inline-flex; align-items: center; gap: 6px; width: auto; }
+
       /* ── NAVIGATION ─────────────────────────── */
       .site-nav {
         position: fixed; inset: 0 0 auto; z-index: 800; height: var(--nav-h);
-        background: color-mix(in oklab, var(--nav-bg) 88%, transparent);
-        border-bottom: 1px solid var(--border);
-        backdrop-filter: saturate(1.4) blur(18px); -webkit-backdrop-filter: saturate(1.4) blur(18px);
-        box-shadow: 0 1px 0 rgba(255,255,255,0.02);
+        background: var(--nav-bg);
+        border-bottom: 1px solid rgba(167,139,250,0.16);
+        backdrop-filter: saturate(1.5) blur(18px); -webkit-backdrop-filter: saturate(1.5) blur(18px);
+        box-shadow: 0 8px 32px -12px rgba(0,0,0,0.45);
+      }
+      .site-nav::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(168,85,247,0.55), rgba(236,72,153,0.35), transparent);
       }
       .nav-inner { display: flex; align-items: center; height: 100%; gap: 20px; padding-block: 14px; }
       .nav-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; padding: 6px 0; }
@@ -157,18 +178,18 @@
       .nav-links { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
       .nav-right-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
       
-      .nav-link { position: relative; font-size: 0.95rem; font-weight: 500; color: var(--txt-2); padding: 8px 4px; border-radius: 10px; }
-      .nav-link::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 2px; height: 2px; background: var(--grad-brand); border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
-      .nav-link:hover { color: var(--txt); }
+      .nav-link { position: relative; font-size: 0.95rem; font-weight: 600; color: var(--dark-txt-2); padding: 8px 4px; border-radius: 10px; }
+      .nav-link::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 2px; height: 2px; background: var(--grad-cta); border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform var(--t); }
+      .nav-link:hover { color: var(--dark-txt); }
       .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
       
       .nav-cta {
-        background: var(--grad-brand); color: #fff; padding: 10px 20px; border-radius: 999px;
-        font-size: 0.88rem; font-weight: 600; font-family: var(--font-body); border: none;
-        cursor: pointer; transition: all var(--t); box-shadow: 0 8px 22px -8px rgba(124,58,237,0.7), inset 0 1px 0 rgba(255,255,255,0.18);
+        background: var(--grad-cta); color: var(--cta-text); padding: 10px 22px; border-radius: 999px;
+        font-size: 0.88rem; font-weight: 800; font-family: var(--font-body); border: none;
+        cursor: pointer; transition: all var(--t); box-shadow: 0 8px 22px -8px var(--cta-glow), inset 0 1px 0 rgba(255,255,255,0.5);
         letter-spacing: 0.01em; display: flex; align-items: center; gap: 6px; white-space: nowrap;
       }
-      .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -10px rgba(124,58,237,0.85); }
+      .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -10px var(--cta-glow); }
       
       .nav-icon-btn { width: 40px; height: 40px; background: linear-gradient(160deg, var(--bg-4), var(--bg-3)); border: 1px solid var(--border-2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--txt-2); transition: all var(--t); flex-shrink: 0; }
       .nav-icon-btn:hover { background: var(--brand-soft); border-color: var(--brand-lt); color: var(--brand); transform: translateY(-1px); }
@@ -307,25 +328,32 @@
 
       /* ── BUTTONS ─────────────────────────────── */
       .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); cursor: pointer; border: none; transition: all 0.25s; position: relative; overflow: hidden; }
-      .btn-primary { background: var(--grad-brand); color: #fff; padding: 18px 38px; border-radius: 14px; font-family: var(--font-head); font-size: 1rem; font-weight: 800; letter-spacing: -0.005em; box-shadow: 0 16px 40px -6px rgba(124,58,237,0.7); border: 1px solid rgba(255,255,255,0.1); }
-      .btn-primary::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.28) 50%, transparent 70%); transform: translateX(-120%); transition: transform 0.7s var(--ease-out); pointer-events: none; }
+      .btn-primary { background: var(--grad-cta); color: var(--cta-text); padding: 18px 38px; border-radius: 14px; font-family: var(--font-head); font-size: 1rem; font-weight: 800; letter-spacing: -0.005em; box-shadow: 0 16px 40px -6px var(--cta-glow); border: 1px solid rgba(255,255,255,0.35); animation: ctaPulse 2.6s ease-in-out infinite; }
+      .btn-primary::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); transform: translateX(-120%); transition: transform 0.7s var(--ease-out); pointer-events: none; }
       .btn-primary:hover::before { transform: translateX(120%); }
-      .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 24px 48px -6px rgba(124,58,237,0.9); }
-      .btn-ghost { background: color-mix(in oklab, var(--surface) 60%, transparent); border: 1px solid var(--border-strong); color: var(--txt); padding: 16px 28px; border-radius: 14px; font-size: 0.92rem; font-weight: 700; backdrop-filter: blur(8px); }
-      .btn-ghost:hover { border-color: var(--brand-lt); background: var(--brand-soft); color: var(--dark-txt); transform: translateY(-2px); }
+      .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 24px 48px -6px var(--cta-glow); animation-play-state: paused; }
+      @keyframes ctaPulse { 0%, 100% { box-shadow: 0 16px 40px -6px var(--cta-glow); } 50% { box-shadow: 0 16px 46px 2px var(--cta-glow); } }
+      @media (prefers-reduced-motion: reduce) { .btn-primary { animation: none; } }
+      .btn-ghost { background: color-mix(in oklab, var(--dark-surface) 65%, transparent); border: 1px solid var(--dark-border); color: var(--dark-txt); padding: 16px 28px; border-radius: 14px; font-size: 0.92rem; font-weight: 700; backdrop-filter: blur(8px); }
+      .btn-ghost:hover { border-color: var(--brand-lt); background: rgba(167,139,250,0.12); color: var(--dark-txt); transform: translateY(-2px); }
       .btn-green { background: var(--grad-green); color: #fff; padding: 13px 28px; border-radius: 50px; font-size: 0.92rem; font-weight: 800; box-shadow: 0 8px 28px rgba(16,185,129,0.4); }
       .btn-green:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(16,185,129,0.55); }
 
       /* ── HERO (DARK SECTION) ─────────────────── */
-      .hero { min-height: 100dvh; padding-top: calc(var(--nav-h) + 50px); padding-bottom: 80px; display: flex; align-items: center; position: relative; overflow: hidden; background: var(--dark-bg); color: var(--dark-txt); }
+      .hero { min-height: 100dvh; padding-top: calc(var(--nav-h) + 50px); padding-bottom: 80px; display: flex; align-items: center; position: relative; overflow: hidden; background: radial-gradient(120% 90% at 15% 0%, #180e3d 0%, transparent 55%), radial-gradient(110% 80% at 100% 100%, #2a0e3f 0%, transparent 55%), var(--dark-bg); color: var(--dark-txt); }
       .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-      .hero-glow1 { position: absolute; top: -15%; left: 50%; transform: translateX(-50%); width: 1000px; height: 650px; background: radial-gradient(ellipse at center, rgba(109,40,217,0.25) 0%, transparent 70%); filter: blur(90px); opacity: 0.55; }
-      .hero-glow2 { position: absolute; bottom: 0; right: -5%; width: 550px; height: 550px; background: radial-gradient(ellipse at center, rgba(147,51,234,0.1) 0%, transparent 70%); filter: blur(90px); opacity: 0.55; }
-      .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(120,60,220,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(120,60,220,0.04) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 75% 60% at 50% 30%, black 0%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 30%, black 0%, transparent 80%); }
+      .hero-glow1 { position: absolute; top: -15%; left: 50%; transform: translateX(-50%); width: 1000px; height: 650px; background: radial-gradient(ellipse at center, rgba(124,58,237,0.32) 0%, transparent 70%); filter: blur(90px); opacity: 0.65; animation: heroGlowDrift 12s ease-in-out infinite alternate; }
+      .hero-glow2 { position: absolute; bottom: 0; right: -5%; width: 550px; height: 550px; background: radial-gradient(ellipse at center, rgba(236,72,153,0.16) 0%, transparent 70%); filter: blur(90px); opacity: 0.6; }
+      .hero-glow3 { position: absolute; bottom: -10%; left: -8%; width: 480px; height: 480px; background: radial-gradient(ellipse at center, rgba(245,166,35,0.14) 0%, transparent 70%); filter: blur(100px); opacity: 0.7; }
+      .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(168,110,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(168,110,255,0.06) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 75% 60% at 50% 30%, black 0%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 30%, black 0%, transparent 80%); }
+      @keyframes heroGlowDrift { from { transform: translateX(-50%) translateY(0); } to { transform: translateX(-46%) translateY(18px); } }
       .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 460px; gap: 56px; align-items: center; width: 100%; animation: riseIn 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+      .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px; background: rgba(245,166,35,0.12); border: 1px solid rgba(245,166,35,0.35); color: #ffcf7d; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 18px; }
+      .hero-eyebrow .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: #f5a623; box-shadow: 0 0 0 0 rgba(245,166,35,0.6); animation: dotPulse 1.8s infinite; }
+      @keyframes dotPulse { 0% { box-shadow: 0 0 0 0 rgba(245,166,35,0.55); } 70% { box-shadow: 0 0 0 8px rgba(245,166,35,0); } 100% { box-shadow: 0 0 0 0 rgba(245,166,35,0); } }
       @keyframes riseIn { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
       .hero-h1 { font-family: var(--font-head); font-size: clamp(2.25rem, 1.4rem + 4.5vw, 4.5rem); font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 24px; color: var(--dark-txt); }
-      .hero-h1 .accent { background: linear-gradient(100deg, #d8b4fe 0%, #a855f7 45%, #7c3aed 75%, #c084fc 100%); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; filter: drop-shadow(0 0 30px rgba(168,85,247,0.5)); }
+      .hero-h1 .accent { background: linear-gradient(100deg, #ffd166 0%, #f5a623 30%, #d8b4fe 55%, #a855f7 80%, #c084fc 100%); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; filter: drop-shadow(0 0 30px rgba(168,85,247,0.5)); }
       .hero-desc { font-size: clamp(1rem, 1.6vw, 1.15rem); font-weight: 500; color: var(--dark-txt-2); max-width: 480px; margin-bottom: var(--sp-4); line-height: 1.8; }
       .hero-cta-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: var(--sp-5); }
       .hero-feats { display: flex; flex-direction: column; gap: 10px; margin-bottom: 34px; }
@@ -440,10 +468,10 @@
       .bottom-cta::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 24px 24px; pointer-events: none; }
       .bcta-title { font-family: var(--font-head); font-size: clamp(1.5rem, 3.4vw, 2.4rem); font-weight: 800; color: #fff; margin-bottom: 12px; position: relative; z-index: 2; }
       .bcta-sub { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin-bottom: 26px; position: relative; z-index: 2; max-width: 500px; margin-inline: auto; line-height: 1.7; }
-      .bcta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--grad-brand); color: #fff; padding: 16px 40px; border-radius: 14px; font-size: 0.98rem; font-weight: 800; cursor: pointer; transition: all 0.25s; box-shadow: 0 10px 28px -12px rgba(124,58,237,0.75), inset 0 1px 0 rgba(255,255,255,0.16); border: none; font-family: var(--font-body); position: relative; z-index: 2; letter-spacing: 0.04em; text-transform: uppercase; overflow: hidden; }
-      .bcta-btn::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.28) 50%, transparent 70%); transform: translateX(-120%); transition: transform 0.7s var(--ease-out); pointer-events: none; }
+      .bcta-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--grad-cta); color: var(--cta-text); padding: 16px 40px; border-radius: 14px; font-size: 0.98rem; font-weight: 800; cursor: pointer; transition: all 0.25s; box-shadow: 0 10px 28px -12px var(--cta-glow), inset 0 1px 0 rgba(255,255,255,0.5); border: none; font-family: var(--font-body); position: relative; z-index: 2; letter-spacing: 0.04em; text-transform: uppercase; overflow: hidden; }
+      .bcta-btn::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); transform: translateX(-120%); transition: transform 0.7s var(--ease-out); pointer-events: none; }
       .bcta-btn:hover::before { transform: translateX(120%); }
-      .bcta-btn:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -14px rgba(124,58,237,0.9), inset 0 1px 0 rgba(255,255,255,0.22); }
+      .bcta-btn:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -14px var(--cta-glow), inset 0 1px 0 rgba(255,255,255,0.55); }
       .bcta-note { font-size: 0.65rem; color: rgba(255,255,255,0.48); margin-top: 14px; position: relative; z-index: 2; }
 
       /* ── FOOTER (DARK SECTION) ──────────────── */
@@ -461,8 +489,8 @@
       .f-social-btn:hover { border-color: var(--brand-lt); background: var(--brand-soft); transform: translateY(-2px); color: var(--brand-lt); }
       .f-col-title { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark-txt-3); margin-bottom: 12px; }
       .f-links { display: flex; flex-direction: column; gap: 7px; }
-      .f-links a { font-size: 0.75rem; color: var(--dark-txt-2); transition: color var(--t); cursor: pointer; }
-      .f-links a:hover { color: var(--brand-lt); }
+      .f-links a, .f-links .footer-install-link { font-size: 0.75rem; color: var(--dark-txt-2); transition: color var(--t); cursor: pointer; }
+      .f-links a:hover, .f-links .footer-install-link:hover { color: var(--brand-lt); }
       .f-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid var(--dark-border-2); }
       .f-copy { font-size: 0.62rem; color: var(--dark-txt-3); }
       .f-copy a { color: var(--dark-txt-3); transition: color var(--t); }
@@ -560,14 +588,17 @@
       .sh-crumbs a:hover { color: var(--brand); }
       .sh-crumbs a[aria-current="page"] { color: var(--txt); font-weight: 600; }
 
-      /* ── SH-QUICK ───────────────────────────── */
-      .sh-quick { position: fixed; bottom: 174px; right: 1.6rem; z-index: 998; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-      .sh-quick-items { display: none; flex-direction: column; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px; box-shadow: var(--shadow-lg); }
-      .sh-quick-items.is-open { display: flex; }
-      .sh-quick-items button, .sh-quick-items a { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; font-size: 0.82rem; font-weight: 600; color: var(--txt); text-decoration: none; transition: all var(--t); white-space: nowrap; }
-      .sh-quick-items button:hover, .sh-quick-items a:hover { background: var(--brand-soft); color: var(--brand); }
-      .sh-quick-fab { width: 48px; height: 48px; border-radius: 50%; background: var(--grad-brand); color: #fff; font-size: 1.3rem; cursor: pointer; box-shadow: var(--shadow-lg); border: none; transition: all var(--t); }
-      .sh-quick-fab:hover { transform: scale(1.1); }
+      /* ── install-btn ───────────────────────────── */
+      .install-btn { position: fixed; bottom: 174px; right: 1.6rem; z-index: 998; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+      #installBtnFloating { display: flex; align-items: center; gap: 8px; padding: 12px 18px 12px 12px; border: none; border-radius: 50px; background: var(--grad-brand, linear-gradient(135deg, #7c3aed, #4a1abf)); color: #fff; font-family: var(--font-body, inherit); font-size: 0.85rem; font-weight: 700; line-height: 1; cursor: pointer; box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4); transition: transform var(--t, 0.2s ease), box-shadow var(--t, 0.2s ease); white-space: nowrap; }
+      #installBtnFloating:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(124, 58, 237, 0.5); }
+      #installBtnFloating:active { transform: translateY(-1px); }
+      #installBtnFloating:focus-visible { outline: 3px solid rgba(216, 180, 254, 0.9); outline-offset: 3px; }
+      #installBtnFloating[hidden] { display: none; }
+      #installBtnFloating img { width: 24px; height: 24px; border-radius: 50%; object-fit: contain; background: #fff; padding: 2px; flex-shrink: 0; }
+      .install-hint { max-width: 220px; text-align: right; font-size: 0.72rem; font-weight: 500; color: var(--txt-2, #cbd5e1); background: var(--surface, rgba(20,20,30,0.85)); border: 1px solid var(--border, rgba(255,255,255,0.1)); border-radius: 12px; padding: 6px 10px; box-shadow: var(--shadow, 0 4px 16px rgba(0,0,0,0.25)); }
+      .install-hint:empty { display: none; }
+
 
       /* ── SH-BONUS ───────────────────────────── */
       .sh-bonus { position: fixed; bottom: 0; left: 0; right: 0; z-index: 997; background: linear-gradient(135deg, #2d0b70, #4a1abf); color: #fff; padding: 12px 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; border-top: 1px solid rgba(167,139,250,0.2); }
@@ -637,7 +668,11 @@
         .nav-cta { padding: 9px 16px; }
         .acts-grid { grid-template-columns: repeat(2, 1fr); }
         .sh-wd-steps { grid-template-columns: 1fr; }
-        .sh-quick { bottom: calc(154px + env(safe-area-inset-bottom)); left: 1rem; right: auto; align-items: flex-start; }
+        .install-btn { bottom: calc(154px + env(safe-area-inset-bottom)); left: 1rem; right: auto; align-items: flex-start; }
+        .install-btn .install-hint { text-align: left; }
+        #installBtnFloating span:last-child { display: none; }
+        #installBtnFloating { padding: 10px; border-radius: 50%; }
+        #installBtnFloating img { width: 26px; height: 26px; }
       }
       @media (max-width: 480px) {
         .hero-inner { grid-template-columns: 1fr; animation: none; opacity: 1; }
@@ -713,3 +748,26 @@
         #pageLoader, nav, footer, .no-print { display: none !important; }
         body { background: #fff; color: #000; }
       }
+      /* ── PREMIUM ICON BADGES ─────────────────────
+         Wraps standalone icons (why-us, quickstart, trust
+         strip, withdraw steps, countries note) in a soft
+         tinted rounded chip instead of a bare glyph, so they
+         read as a deliberate icon system rather than loose
+         symbols. Placed last on purpose so it wins over the
+         earlier plain font-size-only rules. Purely additive —
+         no markup changes required. */
+      .why-icon, .qs-icon, .sh-wd-icon, .sh-trust-icon, .cn-icon {
+        display: flex !important; align-items: center; justify-content: center;
+        background: rgba(124, 58, 237, 0.12);
+        color: var(--brand-lt);
+        border-radius: var(--r-sm);
+        transition: transform var(--t), background var(--t), color var(--t);
+      }
+      .why-icon { width: 44px; height: 44px; font-size: 1.3rem !important; margin-top: 0 !important; }
+      .qs-icon { width: 56px; height: 56px; font-size: 1.55rem !important; margin: 0 auto 16px !important; border-radius: var(--r); }
+      .sh-wd-icon { width: 52px; height: 52px; font-size: 1.4rem !important; margin: 0 auto 14px !important; }
+      .sh-trust-icon { width: 40px; height: 40px; font-size: 1.05rem !important; border-radius: 12px; }
+      .cn-icon { width: 40px; height: 40px; font-size: 1rem !important; border-radius: 12px; background: rgba(16,185,129,0.14); color: var(--green); }
+      .why-card:hover .why-icon,
+      .qs-card:hover .qs-icon,
+      .sh-wd-step:hover .sh-wd-icon { transform: scale(1.08) rotate(-3deg); background: rgba(124, 58, 237, 0.2); }

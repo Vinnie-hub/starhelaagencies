@@ -120,7 +120,7 @@
     if (owProceedBtn) {
       owProceedBtn.addEventListener('click', function() {
         // Redirect to registration
-        window.open('https://starhela.com/c/U3lkbmV5', '_blank');
+        window.open('https://starhela.com/register.php?ref=Agent', '_blank');
         closeOfferwall();
       });
     }
@@ -303,32 +303,67 @@
         });
       });
     });
+ // =============== PWA INSTALL ===============
+        // There are several install triggers on the page (floating button,
+        // mobile menu, footer link, bottom tab bar) — each has its own
+        // unique id but shares the "js-install-btn" class, so we drive
+        // all of them from one place instead of a single getElementById.
+        const installButtons = Array.from(document.querySelectorAll('.js-install-btn'));
+        const installHint = document.getElementById('installAppHint');
+        let deferredInstallPrompt;
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+        const isIos = /iphone|ipad|ipod/i.test(window.navigator.userAgent);
 
-    // ── QUICK ACCESS FAB ───────────────────────
-    const quickFab = document.querySelector('.sh-quick-fab');
-    const quickItems = document.querySelector('.sh-quick-items');
-
-    if (quickFab && quickItems) {
-      quickFab.addEventListener('click', function() {
-        const isOpen = quickItems.classList.contains('is-open');
-        if (isOpen) {
-          quickItems.classList.remove('is-open');
-          this.setAttribute('aria-expanded', 'false');
-        } else {
-          quickItems.classList.add('is-open');
-          this.setAttribute('aria-expanded', 'true');
+        function setInstallMessage(message) {
+          if (installHint) installHint.textContent = message;
         }
-      });
 
-      // Close when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!quickFab.contains(e.target) && !quickItems.contains(e.target)) {
-          quickItems.classList.remove('is-open');
-          quickFab.setAttribute('aria-expanded', 'false');
+        function showInstallButtons(show) {
+          installButtons.forEach((btn) => { btn.hidden = !show; });
         }
-      });
-    }
 
+        if (isStandalone) {
+          showInstallButtons(false);
+          setInstallMessage('Starhela is installed on this device.');
+        } else if (isIos) {
+          // iOS Safari never fires beforeinstallprompt, so show the buttons
+          // and let the click handler explain the manual "Add to Home Screen" step.
+          showInstallButtons(true);
+        }
+
+        window.addEventListener('beforeinstallprompt', (event) => {
+          event.preventDefault();
+          deferredInstallPrompt = event;
+          showInstallButtons(true);
+        });
+
+        installButtons.forEach((btn) => {
+          btn.addEventListener('click', async () => {
+            if (deferredInstallPrompt) {
+              deferredInstallPrompt.prompt();
+              const { outcome } = await deferredInstallPrompt.userChoice;
+              deferredInstallPrompt = null;
+              setInstallMessage(outcome === 'accepted' ? 'Installing Starhela…' : 'Install Starhela whenever you are ready.');
+              if (outcome === 'accepted') showInstallButtons(false);
+              return;
+            }
+
+            setInstallMessage(isIos ? 'In Safari, tap Share, then choose “Add to Home Screen”.' : 'Open your browser menu and choose “Install app” or “Add to home screen”.');
+          });
+        });
+
+        window.addEventListener('appinstalled', () => {
+          showInstallButtons(false);
+          setInstallMessage('Starhela is installed on this device.');
+        });
+
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch(() => {
+              setInstallMessage('Install is available when Starhela is opened over a secure connection.');
+            });
+          });
+        }
     // ── BONUS BANNER ───────────────────────────
     const bonusBanner = document.querySelector('.sh-bonus');
     const bonusClose = document.querySelector('.sh-bonus-x');
@@ -346,21 +381,41 @@
       });
     }
 
-    // ── BONUS TIMER ────────────────────────────
+    // ── BONUS TIMER ─────────────────────────────
+    // Genuine mm:ss countdown from 10:00. The end time is stored per
+    // browser session so it stays consistent across page navigations
+    // instead of resetting (or silently drifting) on every reload.
     const timerElement = document.querySelector('.sh-bonus-text strong');
     if (timerElement) {
-      function updateTimer() {
-        const now = new Date();
-        const endOfDay = new Date();
-        endOfDay.setHours(23, 59, 59, 999);
-        const diff = endOfDay - now;
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        timerElement.textContent = `${hours}:${minutes.toString().padStart(2, '0')}`;
+      const BONUS_DURATION_MS = 10 * 60 * 1000; // 10 minutes
+      const STORAGE_KEY = 'sh_bonus_deadline';
+      let deadline = Number(sessionStorage.getItem(STORAGE_KEY));
+
+      if (!deadline || deadline <= Date.now()) {
+        deadline = Date.now() + BONUS_DURATION_MS;
+        try { sessionStorage.setItem(STORAGE_KEY, String(deadline)); } catch (e) {}
       }
 
-      updateTimer();
-      setInterval(updateTimer, 60000); // Update every minute
+      let bonusTimerInterval;
+
+      function renderTimer() {
+        const diff = deadline - Date.now();
+
+        if (diff <= 0) {
+          clearInterval(bonusTimerInterval);
+          timerElement.textContent = '0:00';
+          if (bonusBanner) bonusBanner.style.display = 'none';
+          return;
+        }
+
+        const totalSeconds = Math.floor(diff / 1000);
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      }
+
+      renderTimer();
+      bonusTimerInterval = setInterval(renderTimer, 1000); // tick every second
     }
 
     // ── CAROUSEL (Simplified) ──────────────────

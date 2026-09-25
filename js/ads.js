@@ -108,7 +108,7 @@
           type === "earn"
             ? "Checking campaign details and your account status."
             : "Setting up your advertiser account. Just a moment.";
-        ldCta.href = "https://starhela.com/register.php?ref=sydney";
+        ldCta.href = "https://starhela.com/register.php?ref=Agent";
         ldCta.textContent =
           type === "earn"
             ? "Create Account to Start Earning →"
