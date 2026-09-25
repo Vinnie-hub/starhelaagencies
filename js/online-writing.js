@@ -491,7 +491,7 @@
       showToast("Sign up to submit a finished draft.", "fa-lock");
       setTimeout(() => {
         window.location.href =
-          "https://www.starhela.com/register.php?ref=sydney";
+          "https://www.starhela.com/register.php?ref=Agent";
       }, 1200);
     }
   });
@@ -501,7 +501,7 @@
     e.preventDefault();
     showToast("Please sign up to post a brief.", "fa-user-plus");
     setTimeout(() => {
-      window.location.href = "https://www.starhela.com/register.php?ref=sydney";
+      window.location.href = "https://www.starhela.com/register.php?ref=Agent";
     }, 1200);
   }
   document

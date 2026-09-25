@@ -160,8 +160,11 @@
       /* ── NAVIGATION ─────────────────────────── */
       .site-nav {
         position: fixed; inset: 0 0 auto; z-index: 800; height: var(--nav-h);
-        background: var(--nav-bg);
-        border-bottom: 1px solid rgba(167,139,250,0.16);
+        /* Solid tint first so the bar reads clearly even where backdrop-filter
+           isn't supported or doesn't render (some mobile browsers on scroll);
+           the blur layers on top as an enhancement, not a requirement. */
+        background: rgba(9, 7, 26, 0.94);
+        border-bottom: 1px solid rgba(167,139,250,0.22);
         backdrop-filter: saturate(1.5) blur(18px); -webkit-backdrop-filter: saturate(1.5) blur(18px);
         box-shadow: 0 8px 32px -12px rgba(0,0,0,0.45);
       }
@@ -222,12 +225,20 @@
       .overlay.show { opacity: 1; pointer-events: all; }
 
       /* ── MOBILE BOTTOM NAV ───────────────────── */
-      .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250; background: color-mix(in oklab, var(--nav-bg) 82%, transparent); border-top: 1px solid var(--border); backdrop-filter: saturate(1.4) blur(20px); -webkit-backdrop-filter: saturate(1.4) blur(20px); box-shadow: 0 -8px 30px rgba(0,0,0,0.1); padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); }
+      /* Solid, high-opacity tint (not just color-mix over transparent) so labels
+         stay legible even on devices/scroll states where the blur doesn't render
+         and page content would otherwise show straight through the bar. */
+      .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 850; background: rgba(9, 7, 26, 0.97); border-top: 1px solid rgba(167,139,250,0.22); backdrop-filter: saturate(1.4) blur(20px); -webkit-backdrop-filter: saturate(1.4) blur(20px); box-shadow: 0 -8px 30px rgba(0,0,0,0.35); padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); }
       .mbn-inner { display: flex; align-items: center; justify-content: space-around; }
-      .mbn-item { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 4px 8px; border-radius: 12px; color: var(--txt-3); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; transition: color var(--t), background var(--t), transform var(--t); flex: 1; max-width: 72px; cursor: pointer; text-decoration: none; border: none; background: none; font-family: var(--font-body); }
-      .mbn-item svg { width: 22px; height: 22px; flex-shrink: 0; }
+      .mbn-item { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 8px; border-radius: 12px; color: var(--dark-txt-3); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; transition: color var(--t), background var(--t), transform var(--t); flex: 1; max-width: 72px; cursor: pointer; text-decoration: none; border: none; background: none; font-family: var(--font-body); }
+      .mbn-item svg { width: 23px; height: 23px; flex-shrink: 0; }
       .mbn-item:hover { color: var(--brand-lt); }
       .mbn-item.active { color: var(--brand-lt); background: var(--brand-soft); }
+      /* Keep the install-prompt items fully hidden until JS clears the [hidden]
+         attribute — .mbn-item/.mob-link's own display:flex would otherwise win
+         the cascade over the browser's default [hidden]{display:none} and the
+         button would sit in the bar/menu, unstyled, before it's actually usable. */
+      #installBtnTabbar[hidden], #installBtnMenu[hidden] { display: none !important; }
 
       /* ── REVEAL ANIMATION ───────────────────── */
       .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }

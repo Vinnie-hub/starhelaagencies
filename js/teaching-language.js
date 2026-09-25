@@ -74,7 +74,7 @@
       "Kwabena is walking Daniel through Kente weaving live from Kumasi",
       "Fatima is teaching Moroccan Darija to Chris in Austin",
       "Thandiwe just booked her 40th Zulu conversation lesson with Grace",
-      "Amara is teaching Igbo greetings to Noah in Sydney",
+      "Amara is teaching Igbo greetings to Noah in Agent",
       "Aisha is hosting a Hausa class for 3 students in Dubai",
       "Kojo is teaching Twi to Sofia in Amsterdam",
       "Nadia is walking students through Egyptian hieroglyphics from Cairo",
