@@ -618,6 +618,12 @@
       .sh-bonus-cta { padding: 6px 16px; border-radius: 50px; background: #fff; color: #2d0b70; font-weight: 700; font-size: 0.78rem; cursor: pointer; border: none; }
       .sh-bonus-cta:hover { transform: scale(1.05); }
       .sh-bonus-x { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.15); color: #fff; font-size: 0.8rem; cursor: pointer; border: none; flex-shrink: 0; }
+      .sh-bonus[hidden] { display: none; }
+      .sh-bonus { animation: sh-bonus-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .sh-bonus-text strong { font-variant-numeric: tabular-nums; font-family: var(--font-mono, ui-monospace, monospace); background: rgba(255,255,255,0.16); padding: 1px 8px; border-radius: 6px; }
+      .sh-bonus-x:focus-visible, .sh-bonus-cta:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+      @keyframes sh-bonus-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .sh-bonus { animation: none; } }
 
       /* ── RESPONSIVE ──────────────────────────── */
       @media (min-width: 769px) {
@@ -782,3 +788,12 @@
       .why-card:hover .why-icon,
       .qs-card:hover .qs-icon,
       .sh-wd-step:hover .sh-wd-icon { transform: scale(1.08) rotate(-3deg); background: rgba(124, 58, 237, 0.2); }
+
+a.earn-row {
+  color: inherit;
+  text-decoration: none;
+}
+a.earn-row:hover {
+  border-color: rgba(167, 139, 250, 0.55);
+  transform: translateY(-1px);
+}

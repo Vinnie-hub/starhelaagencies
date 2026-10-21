@@ -17,16 +17,20 @@ Options -MultiViews
 # ── Canonical: non-www → www (or www → non-www) ──
 # Uncomment ONE of the two blocks below depending on your preference.
 
-# Option A: Force www (recommended for SEO)
+# Every canonical URL, the sitemap and the structured data use https://www.starhelaagencies.com,
+# so Option A is the one to enable on Apache. (On Vercel, vercel.json already does this.)
+# Option A: Force www
 # RewriteCond %{HTTP_HOST} !^www\. [NC]
 # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L,NE]
 
-# Option B: Force non-www (currently active — no redirect)
-# (No rule needed; your canonical URLs are non-www)
 
 # ── Force HTTPS (uncomment when SSL is active) ──
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L,NE]
+
+# ── Retired / misspelled URLs → Virtual Assistance ──
+RewriteRule ^earn/videos/?$ /earn/hotel-reviews [R=301,L,NE]
+RewriteRule ^earn/(spinandwin|virtual-assitance)/?$ /earn/virtual-assistance [R=301,L,NE]
 
 # ── Redirect old .html URLs to clean URLs (301 for SEO) ──
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
@@ -39,7 +43,7 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 # ── Custom error pages ──
-# ErrorDocument 404 /404.html
+ErrorDocument 404 /404.html
 # ErrorDocument 403 /403.html
 # ErrorDocument 500 /500.html
 

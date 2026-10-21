@@ -2,7 +2,6 @@
   "use strict";
 
   /*   CONSTANTS  */
-  const REG = "https://starhela.com/register.php?ref=Agent";
   const DISPLAY_COUNT = 6;
   
   const PROFILE_GROUPS = [
@@ -2048,7 +2047,6 @@
   let currentCat = "all";
   let currentStatus = "all"; // FIXED: Added missing state
   let drawerOpen = false;
-  let modalOpen = false;
   let searchTimer = null;
   
   /*   INTERVAL TRACKING FOR CLEANUP  */
@@ -2536,109 +2534,14 @@
     if (drawerNav) drawerNav.addEventListener("click", closeDrawer);
   }
 
-  /*   MODAL                         */
+  /*   SIGN-UP GATE: opening a profile uses the shared modal (js/shared.js)   */
   function showModal(a) {
-    if (!a) return;
-    const av = document.getElementById("modal-avatar");
-    if (av) {
-      av.style.background = a.color;
-      av.innerHTML =
-        '<span class="avatar-fallback">' +
-        esc(getInitials(a.name)) +
-        "</span>" +
-        '<img class="avatar-image" src="' +
-        esc(profileImageUrl(a)) +
-        '" alt="" onerror="this.style.display=\'none\'">';
-    }
-    const mn = document.getElementById("modal-name");
-    if (mn) mn.textContent = a.name;
-    const mh = document.getElementById("modal-handle");
-    if (mh) mh.textContent = a.handle;
-    const me = document.getElementById("modal-expert-name");
-    if (me) me.textContent = a.name;
-
-    const pill = document.getElementById("modal-status-pill");
-    if (pill) {
-      pill.innerHTML = "";
-      if (a.status === "live") {
-        const dot = document.createElement("span");
-        dot.className = "live-dot";
-        dot.style.cssText =
-          "width:6px;height:6px;border-radius:50%;background:#dc2626;display:inline-block;animation:pulse 1.4s infinite;margin-right:4px;";
-        dot.setAttribute("aria-hidden", "true");
-        pill.appendChild(dot);
-        pill.appendChild(document.createTextNode("Live now"));
-      } else if (a.status === "online") {
-        pill.textContent = "Online";
-      } else if (a.status === "available") {
-        pill.textContent = "Available";
-      } else {
-        pill.textContent = "Offline";
-      }
-      pill.className = "modal-status-pill " + a.status;
-    }
-
-    // Update modal bio
-    const bio = document.getElementById("modal-bio");
-    if (bio) bio.textContent = a.bio;
-    
-    // Update modal tags
-    const tagsContainer = document.getElementById("modal-tags");
-    if (tagsContainer) {
-      tagsContainer.innerHTML = a.tags
-        .map((t) => '<span class="tag">' + esc(t) + "</span>")
-        .join("");
-    }
-    
-    // Update modal stats
-    const price = document.getElementById("modal-price");
-    if (price) price.textContent = "$" + a.price + "/min";
-    
-    const rating = document.getElementById("modal-rating");
-    if (rating) rating.textContent = a.rating + " (" + a.reviews.toLocaleString() + " reviews)";
-
-    const overlay = document.getElementById("modal-overlay");
-    if (overlay) overlay.classList.add("open");
-    modalOpen = true;
-    lockScroll();
-    const closeBtn = document.getElementById("modal-close");
-    if (closeBtn) closeBtn.focus();
-  }
-  
-  function closeModal() {
-    const overlay = document.getElementById("modal-overlay");
-    if (overlay) overlay.classList.remove("open");
-    if (modalOpen) {
-      modalOpen = false;
-      unlockScroll();
-    }
+    if (a && window.StarhelaGate) window.StarhelaGate.open("chat");
   }
 
-  const modalOverlay = document.getElementById("modal-overlay");
-  if (modalOverlay)
-    modalOverlay.addEventListener("click", function (e) {
-      if (e.target === this) closeModal();
-    });
-  const modalClose = document.getElementById("modal-close");
-  if (modalClose) modalClose.addEventListener("click", closeModal);
-  const laterBtn = document.getElementById("modal-later-btn");
-  if (laterBtn) laterBtn.addEventListener("click", closeModal);
-
-  /* Escape key */
   document.addEventListener("keydown", function (e) {
-    if (e.key !== "Escape") return;
-    if (modalOpen) closeModal();
-    else if (drawerOpen) closeDrawer();
+    if (e.key === "Escape" && drawerOpen) closeDrawer();
   });
-
-  /*   AUTH  */
-  function goRegister() {
-    closeModal();
-    window.location.href = REG;
-  }
-
-  const regBtn = document.getElementById("modal-register-btn");
-  if (regBtn) regBtn.addEventListener("click", goRegister);
 
   /*  CLIENTS ONLINE  */
   const spNames = foreigners.map(function (a) {

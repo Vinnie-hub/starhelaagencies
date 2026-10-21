@@ -47,6 +47,14 @@ app.use((_req, res, next) => {
   next();
 });
 
+/* ── Middleware: retired / misspelled URLs → Virtual Assistance ── */
+app.get(/^\/earn\/videos(\.html)?\/?$/, (_req, res) =>
+  res.redirect(301, "/earn/hotel-reviews"),
+);
+app.get(/^\/earn\/(spinandwin|virtual-assitance)(\.html)?\/?$/, (_req, res) =>
+  res.redirect(301, "/earn/virtual-assistance"),
+);
+
 /* ── Middleware: 301 redirect .html URLs to clean URLs ── */
 app.use((req, res, next) => {
   const url = req.path;
@@ -122,25 +130,9 @@ app.use(
   }),
 );
 
-/* ── 404 fallback ────────────────────────────────── */
+/* ── 404 fallback (same page Vercel / Apache serve) ── */
 app.use((_req, res) => {
-  res.status(404).send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head><meta charset="utf-8"><title>404 — Starhela</title>
-    <style>
-      body{font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#fafaf8;color:#1a1a18;text-align:center;padding:24px}
-      h1{font-size:4rem;margin:0;color:#1d52cc} p{font-size:1.1rem;color:#4b4b47}
-      a{color:#1d52cc;text-decoration:underline}
-    </style>
-    </head>
-    <body>
-      <h1>404</h1>
-      <p>Page not found</p>
-      <p><a href="/">← Back to Starhela</a></p>
-    </body>
-    </html>
-  `);
+  res.status(404).sendFile(path.join(ROOT, "404.html"));
 });
 
 /* ── Start ───────────────────────────────────────── */

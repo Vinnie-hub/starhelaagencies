@@ -1548,7 +1548,7 @@
     .profile-id-info {
       padding-bottom: 8px;
     }
-    .profile-id-info h1 {
+    .profile-id-info h2 {
       font-size: 30px;
     }
     .profile-id-meta {
@@ -1895,7 +1895,7 @@
         height: 96px;
         border-radius: 18px;
       }
-      .profile-id-info h1 {
+      .profile-id-info h2 {
         font-size: 24px;
       }
       .booking-card {
@@ -2256,7 +2256,7 @@
       .quick-tab h3 {
         font-size: 20px;
       }
-      .profile-id-info h1 {
+      .profile-id-info h2 {
         font-size: 20px;
       }
       .profile-id-meta {
@@ -2275,7 +2275,14 @@
       .section {
         padding: 48px 0;
       }
-      .browse-title-row h1 {
+      .browse-title-row h2 {
         font-size: 22px !important;
       }
+    }
+    .lesson-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #5b34d6;
     }

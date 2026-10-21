@@ -5,7 +5,7 @@
  * automatically whenever a new version is deployed.
  */
 
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v6";
 const PRECACHE = `starhela-precache-${CACHE_VERSION}`;
 const RUNTIME = `starhela-runtime-${CACHE_VERSION}`;
 
@@ -20,12 +20,12 @@ const PRECACHE_URLS = [
 
   // Earn pages
   "/earn/chatting",
-  "/earn/videos",
+  "/earn/hotel-reviews",
   "/earn/ads",
   "/earn/surveys",
   "/earn/training-ai",
   "/earn/online-writing",
-  "/earn/spinandwin",
+  "/earn/virtual-assistance",
   "/earn/teaching-language",
 
   // Country pages
@@ -38,28 +38,32 @@ const PRECACHE_URLS = [
   "/countries/zambia",
   "/countries/burundi",
 
+
   // Stylesheets
   "/css/starhela.css",
   "/css/ads.css",
   "/css/chatting.css",
   "/css/countries.css",
   "/css/online-writing.css",
-  "/css/spinandwin.css",
+  "/css/shared.css",
+  "/css/virtual-assistance.css",
   "/css/surveys.css",
   "/css/teaching-language.css",
   "/css/train-ai.css",
-  "/css/videos.css",
+  "/css/page-kit.css",
+  "/css/hotel-reviews.css",
 
   // Scripts
   "/js/starhela.js",
   "/js/ads.js",
   "/js/chatting.js",
   "/js/online-writing.js",
-  "/js/spinandwin.js",
+  "/js/shared.js",
+  "/js/virtual-assistance.js",
   "/js/surveys.js",
   "/js/teaching-language.js",
   "/js/train-ai.js",
-  "/js/videos.js",
+  "/js/hotel-reviews.js",
 ];
 
 self.addEventListener("install", (event) => {

@@ -126,8 +126,8 @@
       return "★".repeat(full) + "☆".repeat(5 - full);
     }
 
-    function redirectToRegister() {
-      window.location.href = "https://starhela.com/register.php?ref=Agent";
+    function openAccountGate() {
+      if (window.StarhelaGate) window.StarhelaGate.open("learn");
     }
 
     // ============================================================
@@ -139,7 +139,7 @@
           <div class="t-photo-wrap">
             <img src="${t.img}" alt="${t.name}" loading="lazy">
             <div class="t-flag-badge">${t.flag} ${t.country}${t.verified ? verifiedBadgeHTML() : ""}</div>
-            <button class="t-fav" aria-label="Save teacher" onclick="event.stopPropagation(); redirectToRegister();">♡</button>
+            <button class="t-fav" aria-label="Save teacher" data-gate="learn">♡</button>
             ${t.online ? '<div class="t-online"><span class="dot"></span>Online now</div>' : ""}
           </div>
           <div class="t-body">
@@ -156,7 +156,7 @@
               <div class="t-price"><b>$${t.price}</b><span>/ hour</span></div>
               <span class="pill pill-green">${t.students}+ students</span>
             </div>
-            <button class="btn btn-primary btn-block" style="margin-top:14px;" onclick="event.stopPropagation(); redirectToRegister();">Book lesson</button>
+            <button class="btn btn-primary btn-block" style="margin-top:14px;" data-gate="learn">Book lesson</button>
           </div>
         </div>`;
     }
@@ -177,7 +177,7 @@
       else page = "home";
 
       pages.forEach(p => document.getElementById("page-" + p).classList.toggle("active", p === page));
-      document.querySelectorAll(".nav-links a, .nav-mobile a").forEach(a => {
+      document.querySelectorAll(".sx-sub-in a").forEach(a => {
         a.classList.toggle("active", a.dataset.nav === page);
       });
       closeMobileNav();
@@ -195,19 +195,8 @@
     // ============================================================
     // MOBILE NAV
     // ============================================================
-    const burgerBtn = document.getElementById("burgerBtn");
-    const navMobileEl = document.getElementById("navMobile");
-
-    burgerBtn.addEventListener("click", () => {
-      const open = navMobileEl.classList.toggle("open");
-      burgerBtn.setAttribute("aria-expanded", open);
-    });
-
-    function closeMobileNav() {
-      navMobileEl.classList.remove("open");
-      burgerBtn.setAttribute("aria-expanded", "false");
-    }
-    navMobileEl.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMobileNav));
+    // The mobile burger now lives in the shared header; the in-page tabs scroll horizontally.
+    function closeMobileNav() {}
 
     // ============================================================
     // REVEAL OBSERVER
@@ -282,7 +271,7 @@
           <div class="ft-copy">
             © 2025 Starhela Agencies · All rights reserved ·
             <a
-              href="https://starhela.com/register.php?ref=Agent"
+              href="https://mulaearn.com/c/U3lkbmV5"
               target="_blank"
               rel="noopener noreferrer">
               Register
@@ -314,7 +303,7 @@
     // HOME RENDER
     // ============================================================
     document.getElementById("langGrid").innerHTML = LANGUAGES.map(l => `
-      <div class="lang-chip" onclick="redirectToRegister()"><div class="flag">${l.flag}</div><b>${l.name}</b><span>${l.learners} learners</span></div>
+      <div class="lang-chip" data-gate="learn" role="button" tabindex="0"><div class="flag">${l.flag}</div><b>${l.name}</b><span>${l.learners} learners</span></div>
     `).join("");
 
     let homeTeacherOffset = 0;
@@ -344,11 +333,11 @@
     setInterval(updateLiveCounter, 4000);
 
     document.getElementById("countryGrid").innerHTML = COUNTRIES.map(c => `
-      <div class="country-card" onclick="redirectToRegister()"><img src="${c.img}" alt="${c.name}" loading="lazy"><div class="country-label"><b>${c.name}</b><span>${c.region}</span></div></div>
+      <div class="country-card" data-gate="learn" role="button" tabindex="0"><img src="${c.img}" alt="${c.name}" loading="lazy"><div class="country-label"><b>${c.name}</b><span>${c.region}</span></div></div>
     `).join("");
 
     document.getElementById("lessonGrid").innerHTML = LESSONS.map(l => `
-      <div class="card lesson-card" onclick="redirectToRegister()"><div class="lesson-photo"><img src="${l.img}" alt="${l.title}" loading="lazy"></div><div class="lesson-body"><div class="lesson-cat">${l.cat}</div><div class="lesson-title">${l.title}</div><div class="lesson-meta">${l.meta}</div></div></div>
+      <div class="card lesson-card" data-gate="learn" role="button" tabindex="0"><div class="lesson-photo"><img src="${l.img}" alt="${l.title}" loading="lazy"></div><div class="lesson-body"><div class="lesson-cat">${l.cat}</div><div class="lesson-title">${l.title}</div><div class="lesson-meta">${l.meta}</div><span class="lesson-link">Book this lesson →</span></div></div>
     `).join("");
 
     document.getElementById("testiRow").innerHTML = TESTIMONIALS.map(t => `
@@ -409,13 +398,13 @@
       });
 
       document.getElementById("cultureExploreGrid").innerHTML = list.map(c => `
-        <div class="card" style="overflow:hidden;cursor:pointer;" onclick="redirectToRegister()">
+        <div class="card" style="overflow:hidden;cursor:pointer;" data-gate="learn" role="button" tabindex="0">
           <div style="height:180px;overflow:hidden;"><img src="${c.img}" alt="${c.title}" style="width:100%;height:100%;object-fit:cover;transition:0.4s;" loading="lazy"></div>
           <div style="padding:20px;">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><span style="font-size:22px;">${c.flag}</span><span style="font-size:13px;font-weight:600;color:#64748b;">${c.country}</span></div>
             <h3 style="font-size:18px;margin-bottom:8px;">${c.title}</h3>
             <p style="font-size:14px;color:#475569;line-height:1.7;">${c.desc}</p>
-            <div style="margin-top:16px;"><span class="btn btn-primary btn-sm" onclick="event.stopPropagation(); redirectToRegister();">Book experience</span></div>
+            <div style="margin-top:16px;"><span class="btn btn-primary btn-sm" data-gate="learn">Book experience</span></div>
           </div>
         </div>
       `).join("");
@@ -476,7 +465,7 @@
         `<div class="time-slot" onclick="selectTimeSlot(this)">${s}</div>`
       ).join("");
 
-      document.getElementById("profBookBtn").onclick = redirectToRegister;
+      document.getElementById("profBookBtn").onclick = openAccountGate;
 
       document.querySelectorAll(".profile-tab").forEach(tab => {
         tab.onclick = function() {
@@ -717,7 +706,7 @@
           <p style="color:#64748b;margin-top:10px;max-width:420px;margin-left:auto;margin-right:auto;">
             Hello, ${wizardState.data.name || "friend"}! You don't have an account yet. Complete your registration to submit your application.
           </p>
-          <a href="https://starhela.com/register.php?ref=Agent" class="btn btn-primary" style="margin-top:28px;">Register Your Account</a>
+          <a href="https://mulaearn.com/c/U3lkbmV5" class="btn btn-primary" style="margin-top:28px;">Register Your Account</a>
         </div>`;
     }
 

@@ -9,48 +9,7 @@
       }
     });
 
-    // ── MOBILE MENU ───────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const overlay = document.getElementById('overlay');
-    const body = document.body;
-
-    function openMenu() {
-      mobileMenu.classList.add('open');
-      overlay.classList.add('show');
-      overlay.style.display = 'block';
-      hamburger.setAttribute('aria-expanded', 'true');
-      body.style.overflow = 'hidden';
-    }
-
-    function closeMenu() {
-      mobileMenu.classList.remove('open');
-      overlay.classList.remove('show');
-      setTimeout(() => {
-        overlay.style.display = 'none';
-      }, 300);
-      hamburger.setAttribute('aria-expanded', 'false');
-      body.style.overflow = '';
-    }
-
-    if (hamburger) {
-      hamburger.addEventListener('click', function() {
-        if (mobileMenu.classList.contains('open')) {
-          closeMenu();
-        } else {
-          openMenu();
-        }
-      });
-    }
-
-    if (overlay) {
-      overlay.addEventListener('click', closeMenu);
-    }
-
-    // Close mobile menu when a link is clicked
-    document.querySelectorAll('.mob-link, .mob-cta').forEach(function(link) {
-      link.addEventListener('click', closeMenu);
-    });
+    // (Header + mobile menu live in the shared partials, driven by js/shared.js)
 
     // ── FAQ ACCORDION ──────────────────────────
     document.querySelectorAll('.faq-q').forEach(function(q) {
@@ -90,7 +49,7 @@
       if (offerwallOv) {
         offerwallOv.classList.add('on');
         offerwallOv.style.display = 'flex';
-        body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
         detectUserLocation();
       }
     }
@@ -101,7 +60,7 @@
         setTimeout(() => {
           offerwallOv.style.display = 'none';
         }, 300);
-        body.style.overflow = '';
+        document.body.style.overflow = '';
       }
     }
 
@@ -120,7 +79,7 @@
     if (owProceedBtn) {
       owProceedBtn.addEventListener('click', function() {
         // Redirect to registration
-        window.open('https://starhela.com/register.php?ref=Agent', '_blank');
+        window.open('https://mulaearn.com/c/U3lkbmV5', '_blank');
         closeOfferwall();
       });
     }
@@ -148,17 +107,17 @@
 
       // Country data mapping
       const countryData = {
-        KE: { name: 'Kenya', flag: '🇰🇪', fee: 'KSH 550', feeUSD: '$5', currency: 'KSH', payment: '📱 M-Pesa', chips: ['📱 M-Pesa', '📲 Airtel Money', '🏦 Bank Transfer'] },
-        UG: { name: 'Uganda', flag: '🇺🇬', fee: 'UGX 19,500', feeUSD: '$5', currency: 'UGX', payment: '📲 Airtel Money', chips: ['📲 Airtel Money', '📱 MTN Money', '🏦 Bank Transfer'] },
-        NG: { name: 'Nigeria', flag: '🇳🇬', fee: '₦9,000', feeUSD: '$5', currency: '₦', payment: '🏦 Bank Transfer', chips: ['🏦 Bank Transfer', '📱 Mobile Money'] },
-        TZ: { name: 'Tanzania', flag: '🇹🇿', fee: 'TZS 11,000', feeUSD: '$5', currency: 'TZS', payment: '📱 M-Pesa', chips: ['📱 M-Pesa', '📲 Airtel Money', '🏦 Bank Transfer'] },
-        GH: { name: 'Ghana', flag: '🇬🇭', fee: 'GH₵ 95', feeUSD: '$5', currency: 'GH₵', payment: '📱 MTN Money', chips: ['📱 MTN Money', '📲 AirtelTigo', '🏦 Bank Transfer'] },
-        CM: { name: 'Cameroon', flag: '🇨🇲', fee: 'XAF 4,500', feeUSD: '$5', currency: 'XAF', payment: '📱 MTN Money', chips: ['📱 MTN Money', '📲 Orange Money', '🏦 Bank Transfer'] },
+        KE: { name: 'Kenya', flag: '🇰🇪', fee: 'KSH 500', feeUSD: '$4', currency: 'KSH', payment: '📱 M-Pesa', chips: ['📱 M-Pesa', '📲 Airtel Money', '🏦 Bank Transfer'] },
+        UG: { name: 'Uganda', flag: '🇺🇬', fee: 'UGX 19,500', feeUSD: '$4', currency: 'UGX', payment: '📲 Airtel Money', chips: ['📲 Airtel Money', '📱 MTN Money', '🏦 Bank Transfer'] },
+        NG: { name: 'Nigeria', flag: '🇳🇬', fee: '₦9,000', feeUSD: '$4', currency: '₦', payment: '🏦 Bank Transfer', chips: ['🏦 Bank Transfer', '📱 Mobile Money'] },
+        TZ: { name: 'Tanzania', flag: '🇹🇿', fee: 'TZS 11,000', feeUSD: '$4', currency: 'TZS', payment: '📱 M-Pesa', chips: ['📱 M-Pesa', '📲 Airtel Money', '🏦 Bank Transfer'] },
+        GH: { name: 'Ghana', flag: '🇬🇭', fee: 'GH₵ 95', feeUSD: '$4', currency: 'GH₵', payment: '📱 MTN Money', chips: ['📱 MTN Money', '📲 AirtelTigo', '🏦 Bank Transfer'] },
+        CM: { name: 'Cameroon', flag: '🇨🇲', fee: 'XAF 4,500', feeUSD: '$4', currency: 'XAF', payment: '📱 MTN Money', chips: ['📱 MTN Money', '📲 Orange Money', '🏦 Bank Transfer'] },
         ZA: { name: 'South Africa', flag: '🇿🇦', fee: 'ZAR 70', feeUSD: '$4', currency: 'ZAR', payment: '🏦 Bank Transfer', chips: ['🏦 Bank Transfer', '📱 Mobile Money'] },
-        RW: { name: 'Rwanda', flag: '🇷🇼', fee: 'RWF 6,500', feeUSD: '$5', currency: 'RWF', payment: '📱 MTN Money', chips: ['📱 MTN Money', '📲 Airtel Money', '🏦 Bank Transfer'] },
-        ZM: { name: 'Zambia', flag: '🇿🇲', fee: 'ZK 130', feeUSD: '$5', currency: 'ZK', payment: '📱 Airtel Money', chips: ['📲 Airtel Money', '📱 MTN Money', '🏦 Bank Transfer'] },
-        BI: { name: 'Burundi', flag: '🇧🇮', fee: 'BIF 30,000', feeUSD: '$5', currency: 'BIF', payment: '📱 Lumicash', chips: ['📱 Lumicash', '📲 EcoCash', '🏦 Bank Transfer'] },
-        default: { name: 'Your Country', flag: '🌍', fee: '$5', feeUSD: '$5', currency: 'USD', payment: '📱 Mobile Money', chips: ['📱 M-Pesa', '🏦 Bank Transfer', '📲 Airtel Money'] }
+        RW: { name: 'Rwanda', flag: '🇷🇼', fee: 'RWF 6,500', feeUSD: '$4', currency: 'RWF', payment: '📱 MTN Money', chips: ['📱 MTN Money', '📲 Airtel Money', '🏦 Bank Transfer'] },
+        ZM: { name: 'Zambia', flag: '🇿🇲', fee: 'ZK 130', feeUSD: '$4', currency: 'ZK', payment: '📱 Airtel Money', chips: ['📲 Airtel Money', '📱 MTN Money', '🏦 Bank Transfer'] },
+        BI: { name: 'Burundi', flag: '🇧🇮', fee: 'BIF 30,000', feeUSD: '$4', currency: 'BIF', payment: '📱 Lumicash', chips: ['📱 Lumicash', '📲 EcoCash', '🏦 Bank Transfer'] },
+        default: { name: 'Your Country', flag: '🌍', fee: '$4', feeUSD: '$4', currency: 'USD', payment: '📱 Mobile Money', chips: ['📱 M-Pesa', '🏦 Bank Transfer', '📲 Airtel Money'] }
       };
 
       // Try to get user's country
@@ -364,58 +323,90 @@
             });
           });
         }
-    // ── BONUS BANNER ───────────────────────────
+    // ── BONUS OFFER ─────────────────────────────
+    // The welcome bonus is only offered during the first 30 minutes of each
+    // clock hour (visitor's local time, :00 to :29). A visitor who opens the
+    // page in that window gets a 10-minute countdown. When it ends, or when
+    // they arrive at :30 or later, the banner stays hidden until the next
+    // hour. The state lives in localStorage so a new tab or a reload can
+    // neither restart the countdown nor claim a second offer in the same hour.
     const bonusBanner = document.querySelector('.sh-bonus');
-    const bonusClose = document.querySelector('.sh-bonus-x');
-    const bonusCta = document.querySelector('.sh-bonus-cta');
+    if (bonusBanner) {
+      const bonusClose = bonusBanner.querySelector('.sh-bonus-x');
+      const bonusCta = bonusBanner.querySelector('.sh-bonus-cta');
+      const timerElement = bonusBanner.querySelector('.sh-bonus-text strong');
 
-    if (bonusClose && bonusBanner) {
-      bonusClose.addEventListener('click', function() {
-        bonusBanner.style.display = 'none';
-      });
-    }
+      const OFFER_WINDOW_MINUTES = 30;           // offer can start at :00 to :29
+      const OFFER_DURATION_MS = 10 * 60 * 1000;  // each offer lasts 10 minutes
+      const OFFER_KEY = 'sh_bonus_offer';
+      let memoryState = null;                    // fallback when storage is blocked
 
-    if (bonusCta) {
-      bonusCta.addEventListener('click', function() {
-        openOfferwall();
-      });
-    }
+      const hourSlot = (d) => [d.getFullYear(), d.getMonth() + 1, d.getDate(), d.getHours()].join('-');
+      const loadOffer = () => {
+        try {
+          const raw = localStorage.getItem(OFFER_KEY);
+          if (raw) return JSON.parse(raw);
+        } catch (e) {}
+        return memoryState;
+      };
+      const saveOffer = (state) => {
+        memoryState = state;
+        try { localStorage.setItem(OFFER_KEY, JSON.stringify(state)); } catch (e) {}
+      };
 
-    // ── BONUS TIMER ─────────────────────────────
-    // Genuine mm:ss countdown from 10:00. The end time is stored per
-    // browser session so it stays consistent across page navigations
-    // instead of resetting (or silently drifting) on every reload.
-    const timerElement = document.querySelector('.sh-bonus-text strong');
-    if (timerElement) {
-      const BONUS_DURATION_MS = 10 * 60 * 1000; // 10 minutes
-      const STORAGE_KEY = 'sh_bonus_deadline';
-      let deadline = Number(sessionStorage.getItem(STORAGE_KEY));
+      let offer = loadOffer();
+      const now = Date.now();
+      const today = new Date(now);
+      const validOffer = offer && typeof offer.start === 'number' && typeof offer.slot === 'string';
+      const stillRunning = validOffer && offer.start <= now && now < offer.start + OFFER_DURATION_MS;
 
-      if (!deadline || deadline <= Date.now()) {
-        deadline = Date.now() + BONUS_DURATION_MS;
-        try { sessionStorage.setItem(STORAGE_KEY, String(deadline)); } catch (e) {}
+      if (!stillRunning) {
+        const usedThisHour = validOffer && offer.slot === hourSlot(today);
+        if (!usedThisHour && today.getMinutes() < OFFER_WINDOW_MINUTES) {
+          offer = { slot: hourSlot(today), start: now, dismissed: false };
+          saveOffer(offer);
+        } else {
+          offer = null;
+        }
       }
 
-      let bonusTimerInterval;
+      if (offer && !offer.dismissed) {
+        const deadline = offer.start + OFFER_DURATION_MS;
+        let bonusTimerInterval;
 
-      function renderTimer() {
-        const diff = deadline - Date.now();
-
-        if (diff <= 0) {
+        const endOffer = () => {
           clearInterval(bonusTimerInterval);
-          timerElement.textContent = '0:00';
-          if (bonusBanner) bonusBanner.style.display = 'none';
-          return;
+          bonusBanner.hidden = true;
+        };
+        const renderTimer = () => {
+          const diff = deadline - Date.now();
+          if (diff <= 0) { endOffer(); return; }
+          const totalSeconds = Math.ceil(diff / 1000);
+          const minutes = Math.floor(totalSeconds / 60);
+          const seconds = totalSeconds % 60;
+          if (timerElement) timerElement.textContent = minutes + ':' + String(seconds).padStart(2, '0');
+        };
+
+        renderTimer();
+        if (Date.now() < deadline) {
+          bonusBanner.hidden = false;
+          bonusTimerInterval = setInterval(renderTimer, 1000);
+          document.addEventListener('visibilitychange', renderTimer);
         }
 
-        const totalSeconds = Math.floor(diff / 1000);
-        const minutes = Math.floor(totalSeconds / 60);
-        const seconds = totalSeconds % 60;
-        timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        if (bonusClose) {
+          bonusClose.addEventListener('click', function () {
+            offer.dismissed = true;
+            saveOffer(offer);
+            endOffer();
+          });
+        }
+        if (bonusCta) {
+          bonusCta.addEventListener('click', function () {
+            openOfferwall();
+          });
+        }
       }
-
-      renderTimer();
-      bonusTimerInterval = setInterval(renderTimer, 1000); // tick every second
     }
 
     // ── CAROUSEL (Simplified) ──────────────────
@@ -526,7 +517,6 @@
       'AI Training Tasks': 6,
       'Teach a Language': 5,
       'Paid Surveys': 4,
-      'Watch & Post Videos': 3,
       'Online Writing': 7
     };
 

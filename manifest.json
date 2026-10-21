@@ -1,25 +1,33 @@
 {
   "name": "Starhela Agencies",
-  "short_name": "starhela",
-  "description": "Connect and chat online and earn money",
+  "short_name": "Starhela",
+  "description": "Earn money online across Africa: chat with foreigners, review hotels, train AI and more.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#0f766e",
+  "background_color": "#0d0a24",
+  "theme_color": "#0d0a24",
   "icons": [
     {
-      "src": "https://res.cloudinary.com/duccwuddw/image/upload/v1782576392/starhela-official-logo_q4ip2g_kw8szm.png",
+      "src": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792560907/starhela_logo_h5wbhk.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "https://res.cloudinary.com/duccwuddw/image/upload/v1782576392/starhela-official-logo_q4ip2g_kw8szm.png",
+      "src": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792560907/starhela_logo_h5wbhk.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
+  ],
+  "id": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "finance",
+    "productivity"
   ]
 }

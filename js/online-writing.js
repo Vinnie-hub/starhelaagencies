@@ -324,22 +324,7 @@
   const taskFeed = document.getElementById("taskFeed");
   const taskSearch = document.getElementById("taskSearch");
   const filterTabs = document.getElementById("filterTabs");
-  const workspaceModal = document.getElementById("workspaceModal");
-  const editorArea = document.getElementById("editorArea");
-  const taskTitleModal = document.getElementById("taskTitleModal");
-  const taskWordGoal = document.getElementById("taskWordGoal");
-  const wordGoalDisplay = document.getElementById("wordGoalDisplay");
-  const wordCountDisplay = document.getElementById("wordCountDisplay");
-  const progressFill = document.getElementById("progressFill");
-  const submitBtn = document.getElementById("submitBtn");
-  const closeModalBtn = document.getElementById("closeModalBtn");
-  const saveDraftBtn = document.getElementById("saveDraftBtn");
-  const toast = document.getElementById("toast");
-
   let activeFilter = "all";
-  let currentTask = { id: null, title: "", wordGoal: 0 };
-  const draftStore = {};
-
   /* render */
   function renderTasks() {
     const query = taskSearch.value.trim().toLowerCase();
@@ -372,7 +357,7 @@
           </div>
           <div class="card-bottom">
             <div class="task-price">$${t.price} <small>fixed</small></div>
-            <button class="btn-take" data-id="${t.id}">Claim brief</button>
+            <button class="btn-take" type="button" data-gate="earn">Claim brief</button>
           </div>
         </div>
       `,
@@ -397,119 +382,6 @@
     clearTimeout(searchDebounce);
     searchDebounce = setTimeout(renderTasks, 150);
   });
-
-  /* open workspace */
-  function openWorkspace(task) {
-    currentTask = { id: task.id, title: task.title, wordGoal: task.words };
-    taskTitleModal.textContent = task.title;
-    taskWordGoal.textContent = `Goal: ${task.words.toLocaleString()} words`;
-    wordGoalDisplay.textContent = task.words.toLocaleString();
-
-    editorArea.value = draftStore[task.id] || "";
-    updateWordCount();
-
-    if (draftStore[task.id]) {
-      showToast("Draft restored from this session.", "fa-clock-rotate-left");
-    }
-
-    workspaceModal.classList.add("show");
-    document.body.style.overflow = "hidden";
-    editorArea.focus();
-
-    submitBtn.disabled = true;
-    submitBtn.classList.remove("active");
-  }
-
-  function closeWorkspace() {
-    workspaceModal.classList.remove("show");
-    document.body.style.overflow = "";
-    if (editorArea.value.trim().length > 10 && currentTask.id != null) {
-      draftStore[currentTask.id] = editorArea.value;
-    }
-  }
-
-  function updateWordCount() {
-    const text = editorArea.value.trim();
-    const words = text === "" ? 0 : text.split(/\s+/).length;
-    wordCountDisplay.textContent = words.toLocaleString();
-    const pct =
-      Math.min(100, Math.round((words / currentTask.wordGoal) * 100)) || 0;
-    progressFill.style.width = pct + "%";
-  }
-
-  /* toast */
-  let toastTimer;
-  function showToast(message, icon = "fa-circle-check") {
-    toast.innerHTML = `<i class="fa-solid ${icon}"></i> ${message}`;
-    toast.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
-  }
-
-  /* event listeners */
-  taskFeed.addEventListener("click", (e) => {
-    const btn = e.target.closest(".btn-take");
-    if (!btn) return;
-    const task = TASKS.find((t) => t.id === Number(btn.dataset.id));
-    if (task) openWorkspace(task);
-  });
-
-  closeModalBtn.addEventListener("click", closeWorkspace);
-  workspaceModal.addEventListener("click", (e) => {
-    if (e.target === workspaceModal) closeWorkspace();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && workspaceModal.classList.contains("show"))
-      closeWorkspace();
-    if (
-      (e.ctrlKey || e.metaKey) &&
-      e.key === "s" &&
-      workspaceModal.classList.contains("show")
-    ) {
-      e.preventDefault();
-      saveDraftBtn.click();
-    }
-  });
-
-  editorArea.addEventListener("input", updateWordCount);
-
-  saveDraftBtn.addEventListener("click", () => {
-    const text = editorArea.value;
-    if (text.trim().length < 5) {
-      showToast(
-        "Write a few words before saving a draft.",
-        "fa-triangle-exclamation",
-      );
-      return;
-    }
-    if (currentTask.id != null) draftStore[currentTask.id] = text;
-    showToast("Draft saved for this session.", "fa-circle-check");
-  });
-
-  submitBtn.addEventListener("click", () => {
-    if (submitBtn.disabled) {
-      showToast("Sign up to submit a finished draft.", "fa-lock");
-      setTimeout(() => {
-        window.location.href =
-          "https://www.starhela.com/register.php?ref=Agent";
-      }, 1200);
-    }
-  });
-
-  /* "Post a brief" buttons – redirect to sign-up */
-  function handlePostBrief(e) {
-    e.preventDefault();
-    showToast("Please sign up to post a brief.", "fa-user-plus");
-    setTimeout(() => {
-      window.location.href = "https://www.starhela.com/register.php?ref=Agent";
-    }, 1200);
-  }
-  document
-    .getElementById("postBriefBtn")
-    .addEventListener("click", handlePostBrief);
-  document
-    .getElementById("ctaPostBrief")
-    .addEventListener("click", handlePostBrief);
 
   /* typewriter */
   const typewriterEl = document.getElementById("typewriterText");

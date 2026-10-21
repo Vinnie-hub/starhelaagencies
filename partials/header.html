@@ -1,0 +1,58 @@
+<header class="sx-header" id="sxHeader">
+  <div class="sx-bar">
+    <a class="sx-logo" href="/" aria-label="Starhela Agencies home">
+      <img src="{{logo}}" alt="" width="34" height="34" onerror="this.style.display='none'" />
+      <span class="sx-logo-word">STAR<b>HELA</b></span>{{#if country}}
+      <span class="sx-country">{{flag}} {{country}}</span>{{/if}}
+    </a>
+
+    <div class="sx-nav" role="navigation" aria-label="Main">
+      <div class="sx-dd">
+        <button class="sx-dd-btn" type="button" aria-expanded="false" aria-controls="sxEarn">Ways to earn <svg class="sx-chev" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></button>
+        <div class="sx-panel sx-panel-earn" id="sxEarn" hidden>
+          <div class="sx-panel-grid">
+{{#each activities}}            <a class="sx-item" href="/earn/{{slug}}"><span class="sx-item-ico"><svg class="sx-ico" aria-hidden="true"><use href="#icon-{{icon}}"></use></svg></span><span class="sx-item-txt"><span class="sx-item-name">{{name}}{{#if badge}} <i class="sx-tag">{{badge}}</i>{{/if}}</span><span class="sx-item-sub">{{short}}</span></span></a>
+{{/each}}          </div>
+          <a class="sx-panel-foot" href="/#activities">See every activity <svg class="sx-ico" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="sx-dd">
+        <button class="sx-dd-btn" type="button" aria-expanded="false" aria-controls="sxCountries">Countries <svg class="sx-chev" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></button>
+        <div class="sx-panel sx-panel-countries" id="sxCountries" hidden>
+          <div class="sx-panel-grid">
+{{#each countries}}            <a class="sx-item sx-item-flag" href="/countries/{{slug}}"><span class="sx-flag" aria-hidden="true">{{flag}}</span><span class="sx-item-name">{{name}}</span></a>
+{{/each}}          </div>
+        </div>
+      </div>
+
+      <a class="sx-link" href="/bonus">Agent bonus</a>
+    </div>
+
+    <div class="sx-actions">
+      <a class="sx-login" href="{{loginUrl}}" target="_blank" rel="noopener">Log in</a>
+      <a class="sx-cta go-register" href="{{registerUrl}}" target="_blank" rel="noopener">Register</a>
+      <button class="sx-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sxDrawer"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+
+</header>
+
+<div class="sx-drawer" id="sxDrawer" hidden>
+    <div class="sx-drawer-sec">
+      <div class="sx-drawer-title">Ways to earn</div>
+{{#each activities}}      <a class="sx-drawer-link" href="/earn/{{slug}}"><svg class="sx-ico" aria-hidden="true"><use href="#icon-{{icon}}"></use></svg><span>{{name}}</span>{{#if badge}}<i class="sx-tag">{{badge}}</i>{{/if}}</a>
+{{/each}}    </div>
+    <div class="sx-drawer-sec">
+      <div class="sx-drawer-title">Countries</div>
+      <div class="sx-drawer-chips">
+{{#each countries}}        <a class="sx-chip" href="/countries/{{slug}}"><span aria-hidden="true">{{flag}}</span> {{name}}</a>
+{{/each}}      </div>
+    </div>
+    <div class="sx-drawer-sec">
+      <a class="sx-drawer-link" href="/bonus"><svg class="sx-ico" aria-hidden="true"><use href="#icon-gift"></use></svg><span>Agent bonus program</span></a>
+      <a class="sx-drawer-link" href="{{loginUrl}}" target="_blank" rel="noopener"><svg class="sx-ico" aria-hidden="true"><use href="#icon-user"></use></svg><span>Log in</span></a>
+      <button class="sx-drawer-link js-install-btn" type="button" aria-label="Install Starhela app" hidden><svg class="sx-ico" aria-hidden="true"><use href="#icon-download"></use></svg><span>Install app</span></button>
+    </div>
+    <a class="sx-cta sx-cta-block go-register" href="{{registerUrl}}" target="_blank" rel="noopener">Register and start earning</a>
+  </div>

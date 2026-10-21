@@ -1,55 +1,4 @@
-// LOADER
-      window.addEventListener("load", () => {
-        setTimeout(
-          () => document.getElementById("loader").classList.add("hide"),
-          2000,
-        );
-      });
-
-      // MOBILE MENU
-      const ham = document.getElementById("ham"),
-        mobNav = document.getElementById("mobNav");
-      if (ham && mobNav) {
-        ham.addEventListener("click", () => {
-          const o = mobNav.classList.toggle("open");
-          ham.setAttribute("aria-expanded", o);
-        });
-        mobNav.querySelectorAll("a").forEach((a) =>
-          a.addEventListener("click", () => {
-            mobNav.classList.remove("open");
-            ham.setAttribute("aria-expanded", "false");
-          }),
-        );
-      }
-
-      // MODAL
-      function openModal() {
-        const m = document.getElementById("surveyModal"),
-          inner = m.querySelector(".modal-inner");
-        m.style.opacity = "1";
-        m.style.visibility = "visible";
-        inner.style.transform = "scale(1) translateY(0)";
-        document.body.style.overflow = "hidden";
-      }
-      function closeModal() {
-        const m = document.getElementById("surveyModal"),
-          inner = m.querySelector(".modal-inner");
-        m.style.opacity = "0";
-        m.style.visibility = "hidden";
-        inner.style.transform = "scale(.96) translateY(10px)";
-        document.body.style.overflow = "";
-      }
-      document
-        .getElementById("modalClose")
-        .addEventListener("click", closeModal);
-      document.getElementById("surveyModal").addEventListener("click", (e) => {
-        if (e.target === e.currentTarget) closeModal();
-      });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
-
-      // SURVEY DATA
+// SURVEY DATA
       const allSurveys = [
         {
           cat: "shopping",
@@ -254,7 +203,7 @@
         grid.innerHTML = toShow
           .map(
             (s) => `
-          <article class="survey-card" onclick="openModal()">
+          <article class="survey-card" data-gate="earn">
             <div class="sc-top">
               <div class="sc-icon" style="background:${s.iconBg};color:${s.iconColor}"><i class="${s.icon}"></i></div>
               <span class="sc-badge ${s.badgeClass}">${s.badge}</span>
@@ -269,7 +218,7 @@
               <div class="sc-meta-item"><i class="fas fa-bolt"></i> ${s.payout}</div>
             </div>
             <div class="sc-spots">Only <span>${s.spots} spots left</span> — fills fast</div>
-            <button class="btn-survey">Take Survey <i class="fas fa-arrow-right"></i></button>
+            <button class="btn-survey" type="button">Take Survey <i class="fas fa-arrow-right"></i></button>
           </article>`,
           )
           .join("");
@@ -468,12 +417,4 @@
       );
       document.querySelectorAll(".fade-up").forEach((el) => obs.observe(el));
 
-      // NAVBAR SCROLL
-      window.addEventListener(
-        "scroll",
-        () => {
-          document.querySelector(".navbar").style.boxShadow =
-            window.scrollY > 30 ? "0 2px 12px rgba(0,0,0,.1)" : "var(--sh-xs)";
-        },
-        { passive: true },
-      );
+      // (navbar shadow is handled by the shared header in js/shared.js)

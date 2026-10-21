@@ -1,0 +1,431 @@
+/* ═══════════════════════════════════════════════════════
+   Hotel reviews page. Layout primitives come from css/page-kit.css,
+   header/footer/topbar/loader from css/shared.css.
+   ═══════════════════════════════════════════════════════ */
+.hr .sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.hr .stars {
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.hr .stars b {
+  margin-left: 4px;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+/* hero */
+.hr .hero {
+  padding: 56px 0 80px;
+}
+.hr .hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hr .hero h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  line-height: 1.1;
+  max-width: 15ch;
+}
+.hr .stats {
+  display: flex;
+  gap: clamp(24px, 4vw, 44px);
+  margin: 36px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.hr .stats dt {
+  order: 2;
+  font-size: 0.82rem;
+  color: var(--mute);
+}
+.hr .stats dd {
+  order: 1;
+  margin: 0;
+  font-family: "Sora", system-ui, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.hr .stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hr .hero-visual {
+  position: relative;
+}
+.hr .hero-photo {
+  position: relative;
+  aspect-ratio: 5 / 4.4;
+  overflow: hidden;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #2a1a6e, #5b34d6 60%, #8b5cf6);
+  box-shadow: 0 30px 60px -30px rgba(21, 17, 46, 0.6);
+}
+.hr .hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hr .hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(21, 17, 46, 0.5));
+}
+.hr .feature {
+  position: absolute;
+  left: 20px;
+  bottom: -22px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 20px;
+  min-width: 230px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 20px 40px -20px rgba(21, 17, 46, 0.5);
+}
+.hr .feature-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--mute);
+}
+.hr .feature strong {
+  font-family: "Sora", system-ui, sans-serif;
+  font-size: 1.1rem;
+}
+.hr .feature-meta {
+  font-size: 0.86rem;
+  color: var(--mute);
+}
+.hr .feature-meta .ico {
+  color: var(--violet);
+}
+
+/* directory toolbar */
+.hr .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.hr .search {
+  position: relative;
+  flex: 1 1 240px;
+  max-width: 340px;
+}
+.hr .search .ico {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mute);
+  pointer-events: none;
+}
+.hr .search input,
+.hr .sort select {
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid #d9d4ec;
+  border-radius: 999px;
+  background: #fff;
+  font: inherit;
+  font-size: 0.94rem;
+  color: var(--ink);
+}
+.hr .search input {
+  padding: 0 16px 0 40px;
+}
+.hr .sort select {
+  padding: 0 16px;
+}
+.hr .search input:focus,
+.hr .sort select:focus {
+  border-color: var(--violet);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(91, 52, 214, 0.18);
+}
+.hr .chips {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid #d9d4ec;
+  border-radius: 999px;
+  background: #fff;
+}
+.hr .chip {
+  height: 34px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--mute);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.hr .chip:hover {
+  color: var(--ink);
+}
+.hr .chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff;
+}
+.hr .sort {
+  margin-left: auto;
+}
+.hr .count {
+  margin: 22px 0 16px;
+  font-size: 0.9rem;
+  color: var(--mute);
+}
+.hr .empty {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--mute);
+}
+
+/* lodge cards */
+.hr .lodge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.hr .lodge {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.hr .lodge:hover {
+  transform: translateY(-3px);
+  border-color: #cfc3fa;
+  box-shadow: 0 24px 40px -28px rgba(21, 17, 46, 0.5);
+}
+.hr .lodge-media {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, #2a1a6e, #5b34d6);
+}
+.hr .lodge-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hr .pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+.hr .lodge-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+.hr .lodge-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.hr .lodge h3 {
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+.hr .rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 8px;
+  background: #fff7e0;
+  font-size: 0.84rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #8a5a00;
+}
+.hr .rate::before {
+  content: "★";
+  color: var(--gold);
+}
+.hr .where {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: var(--mute);
+}
+.hr .where .ico {
+  color: var(--violet);
+}
+.hr .lodge p {
+  margin: 12px 0 18px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--mute);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hr .lodge .btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 11px 18px;
+  font-size: 0.92rem;
+}
+
+/* examples + guide */
+.hr .examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.hr .example {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+}
+.hr .example-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.hr .tagline {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #efe9ff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--violet);
+}
+.hr .example p {
+  flex: 1;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+.hr .lodge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--mute);
+}
+.hr .lodge-tag .ico {
+  color: var(--violet);
+}
+.hr .guide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #d9d4ec;
+}
+.hr .guide h3 {
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+.hr .ticks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hr .ticks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 0.95rem;
+}
+.hr .ticks .ico {
+  margin-top: 2px;
+  color: #0f9d76;
+}
+.hr .ticks.no .ico {
+  color: #c2410c;
+}
+
+@media (max-width: 960px) {
+  .hr .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .hr .hero {
+    padding: 40px 0 72px;
+  }
+  .hr .lodge-grid,
+  .hr .examples {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hr .guide {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .hr .lodge-grid,
+  .hr .examples {
+    grid-template-columns: 1fr;
+  }
+  .hr .search {
+    max-width: none;
+    flex-basis: 100%;
+  }
+  .hr .chips {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .hr .sort {
+    margin-left: 0;
+    flex: 1;
+  }
+  .hr .feature {
+    left: 14px;
+    right: 14px;
+    min-width: 0;
+  }
+  .hr .stats {
+    gap: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hr .lodge {
+    transition: none;
+    animation: none;
+  }
+}

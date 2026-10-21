@@ -1,0 +1,17 @@
+<div class="sx-gate" id="sxGate" role="dialog" aria-modal="true" aria-labelledby="sxGateTitle" hidden>
+  <div class="sx-gate-box" tabindex="-1">
+    <button class="sx-gate-x" type="button" aria-label="Close" data-gate-close><svg class="sx-ico" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+    <div class="sx-gate-spin" id="sxGateSpin" aria-hidden="true"></div>
+    <div class="sx-gate-emoji" id="sxGateEmoji" aria-hidden="true" hidden></div>
+    <h2 class="sx-gate-title" id="sxGateTitle">Loading…</h2>
+    <p class="sx-gate-msg" id="sxGateMsg"></p>
+    <div class="sx-gate-prog" aria-hidden="true"><i id="sxGateBar"></i></div>
+    <ul class="sx-gate-steps" id="sxGateSteps">
+      <li><span class="sx-gate-dot"><svg class="sx-ico" aria-hidden="true"><use href="#icon-check"></use></svg></span>Verifying the task</li>
+      <li><span class="sx-gate-dot"><svg class="sx-ico" aria-hidden="true"><use href="#icon-check"></use></svg></span>Checking account status</li>
+      <li><span class="sx-gate-dot"><svg class="sx-ico" aria-hidden="true"><use href="#icon-check"></use></svg></span>Preparing your reward</li>
+    </ul>
+    <a class="sx-gate-cta" id="sxGateCta" href="{{registerUrl}}" target="_blank" rel="noopener" hidden>Create account</a>
+    <button class="sx-gate-skip" id="sxGateSkip" type="button" data-gate-close hidden>Maybe later</button>
+  </div>
+</div>

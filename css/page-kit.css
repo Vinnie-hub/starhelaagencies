@@ -1,0 +1,268 @@
+/* ═══════════════════════════════════════════════════════
+   STARHELA — page kit
+   Shared building blocks for the newer earn pages (virtual
+   assistance, hotel reviews): tokens, layout, buttons, section
+   heads, steps, FAQ and call to action. Add class "pk" to <main>.
+   Header, footer, topbar and loader come from css/shared.css.
+   ═══════════════════════════════════════════════════════ */
+.pk {
+  --paper: #f7f6fb;
+  --tint: #eeebf8;
+  --ink: #15112e;
+  --mute: #5d5880;
+  --line: #e2dff0;
+  --violet: #5b34d6;
+  --violet-2: #8b5cf6;
+  --gold: #f5b324;
+  --mint: #2fd3a1;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+html,
+body {
+  margin: 0;
+}
+.pk *,
+.pk *::before,
+.pk *::after {
+  box-sizing: border-box;
+}
+:where(.pk) h1,
+:where(.pk) h2,
+:where(.pk) h3 {
+  font-family: "Sora", "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: inherit;
+}
+:where(.pk) p {
+  margin: 0;
+}
+:where(.pk) a {
+  color: inherit;
+}
+.pk :focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 3px;
+}
+.pk .wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.pk .wrap.narrow {
+  max-width: 800px;
+}
+.pk .ico {
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+  fill: currentColor;
+  vertical-align: -0.2em;
+}
+
+/* buttons */
+.pk .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  background: none;
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.pk .btn-primary {
+  background: var(--violet);
+  color: #fff;
+}
+.pk .btn-primary:hover {
+  background: #4a27b8;
+}
+.pk .btn-ghost {
+  border-color: #cfc9ee;
+  color: var(--ink);
+}
+.pk .btn-ghost:hover {
+  border-color: var(--violet);
+  color: var(--violet);
+}
+.pk .btn-soft {
+  background: #efe9ff;
+  color: var(--violet);
+}
+.pk .btn-soft:hover {
+  background: #e2d8ff;
+}
+.pk .btn-gold {
+  background: linear-gradient(180deg, #ffcf5c, var(--gold));
+  color: #1a1033;
+}
+.pk .btn-gold:hover {
+  filter: brightness(1.06);
+}
+
+/* hero parts */
+.pk .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--violet);
+}
+.pk .lede {
+  margin-top: 20px;
+  max-width: 50ch;
+  font-size: 1.08rem;
+  color: var(--mute);
+}
+.pk .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.pk .fine {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--mute);
+}
+
+/* sections */
+.pk .section {
+  padding: 88px 0;
+}
+.pk .section-tint {
+  background: var(--tint);
+}
+.pk .section-head {
+  max-width: 62ch;
+  margin-bottom: 40px;
+}
+.pk .section-head h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+.pk .section-head p {
+  margin-top: 12px;
+  color: var(--mute);
+}
+
+/* numbered steps */
+.pk .steps {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.pk .steps li {
+  padding-top: 18px;
+  border-top: 2px solid var(--violet);
+  counter-increment: step;
+}
+.pk .steps li::before {
+  content: counter(step);
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Sora", system-ui, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--violet-2);
+}
+.pk .steps h3 {
+  font-size: 1.05rem;
+}
+.pk .steps p {
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: var(--mute);
+}
+
+/* faq */
+.pk .faq details {
+  border-bottom: 1px solid var(--line);
+}
+.pk .faq summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  font-size: 1.02rem;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+.pk .faq summary::-webkit-details-marker {
+  display: none;
+}
+.pk .faq summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--violet);
+}
+.pk .faq details[open] summary::after {
+  content: "−";
+}
+.pk .faq details p {
+  padding: 0 40px 22px 0;
+  color: var(--mute);
+}
+
+/* closing call to action */
+.pk .cta {
+  padding: 84px 0;
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+}
+.pk .cta h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+}
+.pk .cta p {
+  margin: 12px auto 26px;
+  max-width: 48ch;
+  color: #cfc9ee;
+}
+.pk .cta .fine {
+  margin: 14px auto 0;
+  color: #a8a2cf;
+}
+
+@media (max-width: 960px) {
+  .pk .section {
+    padding: 64px 0;
+  }
+  .pk .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .pk .steps {
+    grid-template-columns: 1fr;
+  }
+  .pk .hero-actions .btn {
+    flex: 1 1 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pk .btn {
+    transition: none;
+  }
+}

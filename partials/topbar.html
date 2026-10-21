@@ -1,0 +1,6 @@
+<div class="sx-topbar" id="sxTopbar" role="region" aria-label="Latest on Starhela">
+  <div class="sx-topbar-stage">
+{{#each announcements}}    <p class="sx-topbar-item"><svg class="sx-ico" aria-hidden="true"><use href="#icon-{{icon}}"></use></svg>{{#if tag}}<i class="sx-tag">{{tag}}</i>{{/if}}<span class="sx-topbar-msg">{{text}}</span><a href="{{linkHref}}">{{linkText}}</a></p>
+{{/each}}  </div>
+  <button class="sx-topbar-x" type="button" aria-label="Dismiss announcements"><svg class="sx-ico" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+</div>

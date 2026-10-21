@@ -1,0 +1,49 @@
+<footer class="sx-footer">
+  <div class="sx-f-inner">
+    <div class="sx-f-top">
+      <div class="sx-f-brand">
+        <a class="sx-logo" href="/" aria-label="Starhela Agencies home">
+          <img src="{{logo}}" alt="" width="34" height="34" loading="lazy" onerror="this.style.display='none'" />
+          <span class="sx-logo-word">STAR<b>HELA</b></span>
+        </a>
+        <p class="sx-f-blurb">Africa's online earning platform. Chat with foreigners, train AI, teach a language, work as a virtual assistant and more, from your phone or laptop and on your own schedule.</p>
+        <ul class="sx-f-contact">
+          <li><svg class="sx-ico" aria-hidden="true"><use href="#icon-call"></use></svg><a href="tel:{{phoneHref}}">{{phone}}</a></li>
+          <li><svg class="sx-ico" aria-hidden="true"><use href="#icon-envelope"></use></svg><a href="mailto:{{email}}">{{email}}</a></li>
+          <li><svg class="sx-ico" aria-hidden="true"><use href="#icon-chat"></use></svg><a href="{{whatsapp}}" target="_blank" rel="noopener">WhatsApp support</a></li>
+          <li><svg class="sx-ico" aria-hidden="true"><use href="#icon-megaphone"></use></svg><a href="{{whatsappChannel}}" target="_blank" rel="noopener">Join our WhatsApp channel</a></li>
+        </ul>
+      </div>
+
+      <div class="sx-f-col">
+        <div class="sx-f-title" role="heading" aria-level="2">Ways to earn</div>
+        <ul class="sx-f-list">
+{{#each activities}}          <li><a href="/earn/{{slug}}">{{name}}</a>{{#if badge}} <i class="sx-tag">{{badge}}</i>{{/if}}</li>
+{{/each}}        </ul>
+      </div>
+
+      <div class="sx-f-col">
+        <div class="sx-f-title" role="heading" aria-level="2">Countries</div>
+        <ul class="sx-f-list">
+{{#each countries}}          <li><a href="/countries/{{slug}}"><span aria-hidden="true">{{flag}}</span> {{name}}</a></li>
+{{/each}}        </ul>
+      </div>
+
+      <div class="sx-f-col">
+        <div class="sx-f-title" role="heading" aria-level="2">Starhela</div>
+        <ul class="sx-f-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/bonus">Agent bonus program</a></li>
+          <li><a href="{{registerUrl}}" class="go-register" target="_blank" rel="noopener">Register</a></li>
+          <li><a href="{{loginUrl}}" target="_blank" rel="noopener">Log in</a></li>
+          <li><button class="sx-f-install js-install-btn" type="button" aria-label="Install Starhela app" hidden>Install app</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sx-f-bottom">
+      <p>© {{year}} Starhela Agencies. All rights reserved.</p>
+      <p class="sx-f-badge"><svg class="sx-ico" aria-hidden="true"><use href="#icon-info-circle"></use></svg><span>Earnings shown across this site are estimates, not guarantees. They vary with activity, effort and country.</span></p>
+    </div>
+  </div>
+</footer>

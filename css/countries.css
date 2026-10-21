@@ -2598,3 +2598,7 @@ footer {
     padding: 2rem;
   }
 }
+
+.way-card .act-link {
+  --act-link: #15803d;
+}

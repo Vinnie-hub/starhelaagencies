@@ -2,7 +2,7 @@
     function showPage(name) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById('page-' + name).classList.add('active');
-      document.querySelectorAll('.nav-links a[id^=nav]').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.sx-sub-in a[id^=nav]').forEach(a => a.classList.remove('active'));
       const navEl = document.getElementById('nav-' + name);
       if (navEl) navEl.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,51 +44,6 @@
     }
     initReveals();
 
-    // ── MODAL LOADER ──
-    const ld = document.getElementById('ldOverlay');
-    const ldTitle = document.getElementById('ldTitle');
-    const ldMsg = document.getElementById('ldMsg');
-    const ldBar = document.getElementById('ldBar');
-    const ldCta = document.getElementById('ldCta');
-    const ldSkip = document.getElementById('ldSkip');
-    const ldSpinner = document.getElementById('ldSpinner');
-    const ldIco = document.getElementById('ldIco');
-    const ls = [document.getElementById('ls1'), document.getElementById('ls2'), document.getElementById('ls3')];
-
-    function runLoader() {
-      ldBar.style.width = '0%';
-      ldCta.style.display = 'none';
-      ldSkip.style.display = 'none';
-      ldSpinner.style.display = 'block';
-      ldIco.style.display = 'none';
-      ls.forEach(s => s.className = 'ld-step');
-      ldTitle.textContent = 'Checking availability…';
-      ldMsg.textContent = 'Verifying task slots and account eligibility.';
-      ld.classList.add('show');
-      let pct = 0, step = 0;
-      const stepTimes = [28, 58, 85];
-      const iv = setInterval(() => {
-        pct += Math.random() * 9 + 3;
-        if (pct > 100) pct = 100;
-        ldBar.style.width = pct + '%';
-        stepTimes.forEach((t, i) => { if (pct >= t && step <= i) { ls[i].classList.add('active'); step = i + 1; } });
-        if (pct >= 100) { clearInterval(iv); setTimeout(showResult, 340); }
-      }, 110);
-    }
-
-    function showResult() {
-      ls.forEach(s => s.classList.add('done'));
-      ldSpinner.style.display = 'none';
-      ldIco.style.display = 'block';
-      ldTitle.textContent = "You don't have an account yet";
-      ldMsg.textContent = 'Create your account to unlock all tasks and start earning on Starhela.';
-      ldCta.style.display = 'block';
-      ldSkip.style.display = 'block';
-    }
-
-    function closeLoader() { ld.classList.remove('show'); }
-    document.getElementById('ldSkip').onclick = closeLoader;
-    ld.addEventListener('click', (e) => { if (e.target === ld) closeLoader(); });
 
     // ── TASKS DATA ──
     const TASKS = [
@@ -137,7 +92,7 @@
     }
 
     function taskCardMarkup(t) {
-      return `<div class="task-card"><div class="tc-top"><div class="tc-icon">${t.icon}</div><div class="tc-badge">$${t.minRate.toFixed(2)}–$${t.maxRate.toFixed(2)}</div></div><div class="tc-title">${t.title}</div><div class="tc-desc">${t.desc}</div><div class="tc-meta">${diffMap[t.difficulty]}<span class="tc-tag">⏱ ${t.time}</span><span class="tc-tag">${typeLabel[t.type]}</span><span class="tc-tag">${t.slots}</span>${t.hot ? '<span class="tc-tag hot">🔥 Bonus Active</span>' : ''}</div><div class="tc-footer"><div class="tc-rate">$${t.minRate.toFixed(2)} – $${t.maxRate.toFixed(2)}</div><button class="tc-start" onclick="runLoader()"><i class="fas fa-lock" style="font-size:.6rem"></i> Unlock & Start</button></div></div>`;
+      return `<div class="task-card"><div class="tc-top"><div class="tc-icon">${t.icon}</div><div class="tc-badge">$${t.minRate.toFixed(2)}–$${t.maxRate.toFixed(2)}</div></div><div class="tc-title">${t.title}</div><div class="tc-desc">${t.desc}</div><div class="tc-meta">${diffMap[t.difficulty]}<span class="tc-tag">⏱ ${t.time}</span><span class="tc-tag">${typeLabel[t.type]}</span><span class="tc-tag">${t.slots}</span>${t.hot ? '<span class="tc-tag hot">🔥 Bonus Active</span>' : ''}</div><div class="tc-footer"><div class="tc-rate">$${t.minRate.toFixed(2)} – $${t.maxRate.toFixed(2)}</div><button class="tc-start" data-gate="apply"><i class="fas fa-lock" style="font-size:.6rem"></i> Unlock & Start</button></div></div>`;
     }
 
     function filterTasks(type, selectedButton) {

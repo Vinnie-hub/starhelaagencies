@@ -4,36 +4,88 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/earn/videos",
+      "destination": "/earn/hotel-reviews",
+      "permanent": true
+    },
+    {
+      "source": "/earn/:old(spinandwin|virtual-assitance)",
+      "destination": "/earn/virtual-assistance",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "starhelaagencies.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "starhelaagencies.com"
+        }
+      ],
       "destination": "https://www.starhelaagencies.com/:path*",
       "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/earn/:name", "destination": "/earn/:name.html" },
-    { "source": "/bonus", "destination": "/bonus.html" },
-    { "source": "/countries/:name", "destination": "/countries/:name.html" }
+    {
+      "source": "/earn/:name",
+      "destination": "/earn/:name.html"
+    },
+    {
+      "source": "/bonus",
+      "destination": "/bonus.html"
+    },
+    {
+      "source": "/countries/:name",
+      "destination": "/countries/:name.html"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(self)"
+        }
+      ]
+    },
+    {
+      "source": "/(partials|scripts)/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
       ]
     },
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     },
     {

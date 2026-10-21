@@ -1,0 +1,277 @@
+{
+  "registerUrl": "https://mulaearn.com/c/U3lkbmV5",
+  "loginUrl": "https://mulaearn.com/login.php",
+  "phone": "+254 745 656 143",
+  "phoneHref": "+254745656143",
+  "email": "starhelaofficials@gmail.com",
+  "whatsapp": "https://wa.me/254745656143",
+  "whatsappChannel": "https://whatsapp.com/channel/0029VbD0NZf0VycJyk85mq16",
+  "logo": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792560907/starhela_logo_h5wbhk.png",
+  "favicon": "https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779332678/starhela-favicon_zxxpkq.png",
+  "activities": [
+    {
+      "slug": "chatting",
+      "name": "Chat with foreigners",
+      "short": "Paid conversations with people worldwide",
+      "icon": "chat"
+    },
+    {
+      "slug": "virtual-assistance",
+      "name": "Virtual assistance",
+      "short": "Email, scheduling and research for global clients",
+      "icon": "briefcase",
+      "badge": "New"
+    },
+    {
+      "slug": "training-ai",
+      "name": "AI training tasks",
+      "short": "Label images, text and audio",
+      "icon": "robot"
+    },
+    {
+      "slug": "online-writing",
+      "name": "Online writing",
+      "short": "Articles and short content for clients",
+      "icon": "pencil"
+    },
+    {
+      "slug": "teaching-language",
+      "name": "Teach a language",
+      "short": "Share your language and culture",
+      "icon": "language"
+    },
+    {
+      "slug": "surveys",
+      "name": "Paid surveys",
+      "short": "Give your opinion, get rewarded",
+      "icon": "clipboard"
+    },
+    {
+      "slug": "hotel-reviews",
+      "name": "Hotel reviews",
+      "short": "Review lodges in the US and UAE",
+      "icon": "hotel"
+    },
+    {
+      "slug": "ads",
+      "name": "Watch ads",
+      "short": "Short sponsor tasks, quick payouts",
+      "icon": "megaphone"
+    }
+  ],
+  "countries": [
+    {
+      "slug": "kenya",
+      "name": "Kenya",
+      "flag": "🇰🇪"
+    },
+    {
+      "slug": "uganda",
+      "name": "Uganda",
+      "flag": "🇺🇬"
+    },
+    {
+      "slug": "nigeria",
+      "name": "Nigeria",
+      "flag": "🇳🇬"
+    },
+    {
+      "slug": "tanzania",
+      "name": "Tanzania",
+      "flag": "🇹🇿"
+    },
+    {
+      "slug": "ghana",
+      "name": "Ghana",
+      "flag": "🇬🇭"
+    },
+    {
+      "slug": "cameroon",
+      "name": "Cameroon",
+      "flag": "🇨🇲"
+    },
+    {
+      "slug": "zambia",
+      "name": "Zambia",
+      "flag": "🇿🇲"
+    },
+    {
+      "slug": "burundi",
+      "name": "Burundi",
+      "flag": "🇧🇮"
+    }
+  ],
+  "siteUrl": "https://www.starhelaagencies.com",
+  "siteName": "Starhela Agencies",
+  "defaultImage": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1777814668/starheladesign_pc7nvp.jpg",
+  "announcements": [
+    {
+      "slug": "virtual-assistance",
+      "icon": "briefcase",
+      "tag": "New",
+      "text": "Virtual assistance is open. Work for clients abroad.",
+      "linkText": "See how it works",
+      "linkHref": "/earn/virtual-assistance"
+    },
+    {
+      "slug": "hotel-reviews",
+      "icon": "hotel",
+      "text": "Hotel reviews: write honest reviews of lodges in the US and UAE.",
+      "linkText": "Start reviewing",
+      "linkHref": "/earn/hotel-reviews"
+    },
+    {
+      "slug": "chatting",
+      "icon": "chat",
+      "text": "Chat with foreigners from anywhere and get paid for your conversations.",
+      "linkText": "Start chatting",
+      "linkHref": "/earn/chatting"
+    }
+  ],
+  "pages": {
+    "index": {
+      "title": "Starhela Agencies | Earn Money Online in Africa",
+      "description": "Earn money online across Africa with Starhela. Chat with foreigners, review hotels, train AI and more, then withdraw to M-Pesa, Airtel Money or MTN.",
+      "crumb": "Home",
+      "locale": "en_KE",
+      "updated": "2026-10-21",
+      "type": "home"
+    },
+    "bonus": {
+      "title": "Agent Bonus Program: Earn Referral Rewards | Starhela",
+      "description": "Become a Starhela Agent and earn bonuses across 3 network levels as people you refer join and earn. Completely optional. Available in 54+ African countries.",
+      "crumb": "Agent bonus",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/chatting": {
+      "title": "Get Paid to Chat With Foreigners Online | Starhela",
+      "description": "Chat with people from the UK, USA, Canada and Qatar and get paid for your conversations. Withdraw to M-Pesa, Airtel Money or MTN with Starhela.",
+      "crumb": "Chat with foreigners",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/hotel-reviews": {
+      "title": "Hotel Reviews: Review Lodges in the US & UAE | Starhela",
+      "description": "Browse lodge profiles across the United States and the UAE and write honest reviews of places you have stayed at, with Starhela.",
+      "crumb": "Hotel reviews",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/virtual-assistance": {
+      "title": "Virtual Assistant Jobs: Work for Clients Abroad | Starhela",
+      "description": "Work as a virtual assistant for business owners in the UK, USA, Canada and Australia. Handle email, scheduling, research and support from Africa.",
+      "crumb": "Virtual assistance",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/training-ai": {
+      "title": "Train AI & Earn Money Across Africa | Starhela",
+      "description": "Join 120,000+ Africans earning real money labeling images, classifying text and annotating audio for AI companies. Withdraw via M-Pesa, Airtel Money & MTN.",
+      "crumb": "AI training tasks",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/online-writing": {
+      "title": "Online Writing Jobs for African Writers | Starhela",
+      "description": "Starhela connects businesses with vetted freelance writers for blog posts, guides, whitepapers and more. Apply as a writer and start earning.",
+      "crumb": "Online writing",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/surveys": {
+      "title": "Paid Surveys: Get Rewarded for Your Opinion | Starhela",
+      "description": "Complete paid surveys and earn real money via M-Pesa, Airtel Money, MTN and Orange Money. Join 120,000+ Africans already earning with Starhela.",
+      "crumb": "Paid surveys",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/teaching-language": {
+      "title": "Teach African Languages & Culture | Starhela",
+      "description": "Teach African languages, share your culture and earn by teaching your native language, or learn from native teachers across Africa, on Starhela.",
+      "crumb": "Teach a language",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "earn/ads": {
+      "title": "Watch Ads & Earn Daily | Starhela",
+      "description": "Earn up to $2.5 daily by watching and clicking Instagram and Facebook ads. Short sponsor tasks with quick mobile money payouts on Starhela.",
+      "crumb": "Watch ads",
+      "locale": "en_KE",
+      "updated": "2026-10-21"
+    },
+    "countries/kenya": {
+      "title": "StarHela Kenya | Earn Online & Chat With Foreigners",
+      "description": "Join StarHela Kenya. One-time activation KSh 500. Chat with foreigners, AI labeling, surveys, ads & more. Withdraw to M-Pesa & Airtel Money.",
+      "crumb": "Kenya",
+      "locale": "en_KE",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785155876/starhela_kenya_capqei.png"
+    },
+    "countries/uganda": {
+      "title": "StarHela Uganda | Earn Online & Chat With Foreigners",
+      "description": "Join StarHela Uganda. One-time activation 19,500 UGX. Chat with foreigners, AI labeling, surveys, ads & more. Withdraw to Airtel Money & MTN.",
+      "crumb": "Uganda",
+      "locale": "en_UG",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785151648/starhela_uganda_fs9td2.png"
+    },
+    "countries/nigeria": {
+      "title": "StarHela Nigeria | Earn Online & Chat With Foreigners",
+      "description": "Join StarHela Nigeria. One-time activation ₦9,000. Chat with foreigners, AI labeling, surveys, ads & more. Withdraw to bank, OPay, Palmpay or Moniepoint.",
+      "crumb": "Nigeria",
+      "locale": "en_NG",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785155598/starhela_nigeria_ts5xks.png"
+    },
+    "countries/ghana": {
+      "title": "StarHela Ghana | Earn Online & Chat With Foreigners",
+      "description": "Join StarHela Ghana. One-time activation GHS 95. Chat with foreigners, AI labeling, surveys, ads & more. Withdraw to MTN, Vodafone Cash & AirtelTigo.",
+      "crumb": "Ghana",
+      "locale": "en_GH",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785156882/starhela_ghana_jdosxo.png"
+    },
+    "countries/zambia": {
+      "title": "StarHela Zambia | Earn Online & Chat With Foreigners",
+      "description": "Join StarHela Zambia. One-time activation 130 ZMW. Chat with foreigners, AI labeling, surveys, ads & more. Withdraw to Airtel Money & MTN.",
+      "crumb": "Zambia",
+      "locale": "en_ZM",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785142083/zambia-starhela_yaxw55.png"
+    },
+    "countries/tanzania": {
+      "title": "StarHela Tanzania | Njia Nyingi za Kupata Pesa Mtandaoni",
+      "description": "Jiunge na StarHela Tanzania. Ada ya mara moja TZS 11,000. Ongea na wageni, AI labeling, surveys na matangazo. Toa pesa kwa Halopesa, Airtel Money, Vodacom au Tigo Pesa.",
+      "crumb": "Tanzania",
+      "locale": "sw_TZ",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785151648/starhela_tanzania_fs9td2.png",
+      "lang": "sw"
+    },
+    "countries/cameroon": {
+      "title": "StarHela Cameroun | Gagnez de l'argent en ligne",
+      "description": "Rejoignez StarHela Cameroun. Activation unique 4 500 FCFA. Discutez avec des étrangers, étiquetage IA, sondages et publicités. Retrait sur MTN MoMo ou Orange Money.",
+      "crumb": "Cameroon",
+      "locale": "fr_CM",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785157797/starhela_cameroon_das0bz.png",
+      "lang": "fr"
+    },
+    "countries/burundi": {
+      "title": "StarHela Burundi | Kora amafaranga online",
+      "description": "Injira StarHela Burundi. Kwishyura rimwe 30,000 BIF. Ganira n’abanyamahanga, gukora imirimo ya AI, ibibazo & amatangazo. Kwishyura kuri M-Pesa, Airtel Money & Lumicash.",
+      "crumb": "Burundi",
+      "locale": "rn_BI",
+      "updated": "2026-10-21",
+      "image": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1785158578/starhela_burundi_cqfthu.png",
+      "lang": "rn"
+    },
+    "404": {
+      "title": "Page not found | Starhela Agencies",
+      "description": "This page could not be found.",
+      "noindex": true,
+      "updated": "2026-10-21"
+    }
+  }
+}
