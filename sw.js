@@ -5,7 +5,7 @@
  * automatically whenever a new version is deployed.
  */
 
-const CACHE_VERSION = "v7";
+const CACHE_VERSION = "v8";
 const PRECACHE = `starhela-precache-${CACHE_VERSION}`;
 const RUNTIME = `starhela-runtime-${CACHE_VERSION}`;
 
@@ -128,20 +128,21 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Same-origin static assets: cache-first for speed, refreshing the cache
-  // in the background so the next visit picks up any changes.
+  // Same-origin static assets (CSS, JS, images): network-first so a deploy
+  // is picked up on the very first visit (cache-first served stale CSS once,
+  // which made new layout changes such as the logo look wrong until a
+  // refresh). Falls back to the cache when offline or the network fails.
   if (url.origin === self.location.origin) {
     event.respondWith(
-      caches.match(request).then((cached) => {
-        const network = fetch(request)
-          .then((response) => {
+      fetch(request)
+        .then((response) => {
+          if (response.ok) {
             const copy = response.clone();
             caches.open(PRECACHE).then((cache) => cache.put(request, copy));
-            return response;
-          })
-          .catch(() => cached);
-        return cached || network;
-      }),
+          }
+          return response;
+        })
+        .catch(() => caches.match(request)),
     );
     return;
   }

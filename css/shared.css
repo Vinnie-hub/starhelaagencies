@@ -89,14 +89,14 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  min-width: 0;
   color: #fff;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 .sx-logo-img {
   display: block;
   height: 46px;
   width: auto;
+  min-width: 120px; /* reserve space until the image has loaded */
   max-width: min(220px, 52vw);
   object-fit: contain;
   object-position: left center;
@@ -113,6 +113,7 @@ html {
 @media (max-width: 520px) {
   .sx-logo-img {
     height: 38px;
+    min-width: 100px;
     max-width: min(170px, 44vw);
   }
   .sx-logo-foot .sx-logo-img {
