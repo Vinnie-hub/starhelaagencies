@@ -171,8 +171,7 @@
 <!-- @end:sprite -->
     <!-- @shared:loader -->
 <div class="sx-loader" id="sxLoader" role="status" aria-label="Loading Starhela">
-  <img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="" width="56" height="56" onerror="this.style.display='none'" />
-  <div class="sx-loader-word">STAR<b>HELA</b></div>
+  <img class="sx-loader-logo" src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1792674480/starhela_logo_h5wbhk.png" alt="Starhela Agencies" decoding="async" />
   <div class="sx-loader-bar"><i></i></div>
 </div>
 <!-- @end:loader -->
@@ -201,8 +200,8 @@
 <div class="sx-topbar" id="sxTopbar" role="region" aria-label="Latest on Starhela">
   <div class="sx-topbar-stage">
     <p class="sx-topbar-item"><svg class="sx-ico" aria-hidden="true"><use href="#icon-briefcase"></use></svg><i class="sx-tag">New</i><span class="sx-topbar-msg">Virtual assistance is open. Work for clients abroad.</span><a href="/earn/virtual-assistance">See how it works</a></p>
-    <p class="sx-topbar-item"><svg class="sx-ico" aria-hidden="true"><use href="#icon-hotel"></use></svg><span class="sx-topbar-msg">Hotel reviews: write reviews of lodges in the US and UAE.</span><a href="/earn/hotel-reviews">Start reviewing</a></p>
-    <p class="sx-topbar-item"><svg class="sx-ico" aria-hidden="true"><use href="#icon-chat"></use></svg><span class="sx-topbar-msg">Chat with foreigners and get paid for your conversations.</span><a href="/earn/chatting">Start chatting</a></p>
+    <p class="sx-topbar-item"><svg class="sx-ico" aria-hidden="true"><use href="#icon-hotel"></use></svg><span class="sx-topbar-msg">Hotel reviews: write honest reviews of lodges in the US and UAE.</span><a href="/earn/hotel-reviews">Start reviewing</a></p>
+    <p class="sx-topbar-item"><svg class="sx-ico" aria-hidden="true"><use href="#icon-chat"></use></svg><span class="sx-topbar-msg">Chat with foreigners from anywhere and get paid for your conversations.</span><a href="/earn/chatting">Start chatting</a></p>
   </div>
   <button class="sx-topbar-x" type="button" aria-label="Dismiss announcements"><svg class="sx-ico" aria-hidden="true"><use href="#icon-close"></use></svg></button>
 </div>
@@ -211,8 +210,7 @@
 <header class="sx-header" id="sxHeader">
   <div class="sx-bar">
     <a class="sx-logo" href="/" aria-label="Starhela Agencies home">
-      <img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="" width="34" height="34" onerror="this.style.display='none'" />
-      <span class="sx-logo-word">STAR<b>HELA</b></span>
+      <img class="sx-logo-img" src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1792674480/starhela_logo_h5wbhk.png" alt="Starhela Agencies" decoding="async" fetchpriority="high" />
     </a>
 
     <div class="sx-nav" role="navigation" aria-label="Main">
@@ -294,62 +292,7 @@
     <a class="sx-cta sx-cta-block go-register" href="https://mulaearn.com/c/U3lkbmV5" target="_blank" rel="noopener">Register and start earning</a>
   </div>
 <!-- @end:header -->
-    <div class="sx-sub"><div class="sx-sub-in" aria-label="Page sections"><a role="button" tabindex="0" id="nav-home" class="active" onclick="showPage('home')">Home</a><a role="button" tabindex="0" id="nav-tasks" onclick="showPage('tasks')">Tasks</a><a role="button" tabindex="0" id="nav-earnings" onclick=" showPage('home'); setTimeout( () => document .getElementById('earnings') .scrollIntoView({ behavior: 'smooth' }), 50, ); " >Earnings</a ></div></div>
 
-    <!-- MOBILE BOTTOM NAV -->
-    <nav class="mob-nav" id="mobNav" aria-label="Mobile navigation">
-      <div class="mob-nav-inner">
-        <button
-          class="mob-nav-item active"
-          id="mnHome"
-          onclick="
-            showPage('home');
-            setMobActive('mnHome');
-          "
-          aria-label="Home">
-          <div class="mni-icon"><i class="fas fa-home"></i></div>
-          <span>Home</span>
-        </button>
-        <button
-          class="mob-nav-item"
-          id="mnTasks"
-          onclick="
-            showPage('tasks');
-            setMobActive('mnTasks');
-          "
-          aria-label="Tasks">
-          <div class="mni-icon"><i class="fas fa-tasks"></i></div>
-          <span>Tasks</span>
-        </button>
-        <button
-          class="mob-nav-item"
-          id="mnEarn"
-          onclick="
-            showPage('home');
-            setTimeout(
-              () =>
-                document
-                  .getElementById('earnings')
-                  .scrollIntoView({ behavior: 'smooth' }),
-              50,
-            );
-            setMobActive('mnEarn');
-          "
-          aria-label="Earnings">
-          <div class="mni-icon"><i class="fas fa-chart-line"></i></div>
-          <span>Earn</span>
-        </button>
-        <a
-          class="mob-nav-item"
-          href="https://wa.me/254745656143"
-          target="_blank"
-          rel="noopener"
-          aria-label="Support">
-          <div class="mni-icon"><i class="fab fa-whatsapp"></i></div>
-          <span>Support</span>
-        </a>
-      </div>
-    </nav>
 
     <!-- TICKER -->
     <div class="ticker">
@@ -454,10 +397,6 @@
               <div class="task-preview-card">
                 <div class="tpc-head">
                   <div class="tpc-title">
-                    <img
-                      src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1792560907/starhela_logo_h5wbhk.png"
-                      alt="Starhela"
-                      onerror="this.style.display = 'none'" />
                     Available Tasks
                   </div>
                   <div class="tpc-live">
@@ -501,6 +440,12 @@
             </div>
           </div>
         </div>
+      <div class="sx-hero-banner">
+  <a class="sx-hero-img" href="https://mulaearn.com/c/U3lkbmV5" data-gate="apply" aria-label="Apply and start earning →">
+    <img src="https://res.cloudinary.com/dovhxt8ye/image/upload/f_auto,q_auto,w_1200/ai_data_labelling-starhela_jchq2n.png" alt="Train AI and get paid with Starhela" width="1200" decoding="async" fetchpriority="high" onerror="this.closest('.sx-hero-banner').remove()" />
+    <span class="sx-hero-img-cta">Apply and start earning →</span>
+  </a>
+</div>
       </section>
 
       <!-- PRESS -->
@@ -729,6 +674,7 @@
         <div class="container">
           <div class="page-hero-inner">
             <div>
+              <button type="button" class="ph-back" onclick="showPage(\'home\')">← Back to overview</button>
               <div class="ph-badge">
                 <span class="badge-pulse"></span> Tasks Updated Live
               </div>
@@ -828,9 +774,8 @@
   <div class="sx-f-inner">
     <div class="sx-f-top">
       <div class="sx-f-brand">
-        <a class="sx-logo" href="/" aria-label="Starhela Agencies home">
-          <img src="https://res.cloudinary.com/duccwuddw/image/upload/q_auto/f_auto/v1779444890/starhela-official-logo_q4ip2g.png" alt="" width="34" height="34" loading="lazy" onerror="this.style.display='none'" />
-          <span class="sx-logo-word">STAR<b>HELA</b></span>
+        <a class="sx-logo sx-logo-foot" href="/" aria-label="Starhela Agencies home">
+          <img class="sx-logo-img" src="https://res.cloudinary.com/dovhxt8ye/image/upload/v1792674480/starhela_logo_h5wbhk.png" alt="Starhela Agencies" loading="lazy" decoding="async" />
         </a>
         <p class="sx-f-blurb">Africa's online earning platform. Chat with foreigners, train AI, teach a language, work as a virtual assistant and more, from your phone or laptop and on your own schedule.</p>
         <ul class="sx-f-contact">

@@ -10,13 +10,13 @@
   "theme_color": "#0d0a24",
   "icons": [
     {
-      "src": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792560907/starhela_logo_h5wbhk.png",
+      "src": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792674480/starhela_logo_h5wbhk.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792560907/starhela_logo_h5wbhk.png",
+      "src": "https://res.cloudinary.com/dovhxt8ye/image/upload/v1792674480/starhela_logo_h5wbhk.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

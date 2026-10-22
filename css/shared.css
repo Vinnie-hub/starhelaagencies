@@ -82,30 +82,49 @@ html {
 }
 
 /* ── Logo ─────────────────────────────────────────── */
+/* The logo image already contains the name, so it is sized by height and
+   keeps its own aspect ratio (width:auto). max-width stops it crowding the
+   Register button and burger on narrow phones. */
 .sx-logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   color: #fff;
-  flex: none;
+  flex: 0 1 auto;
 }
-.sx-logo img {
+.sx-logo-img {
   display: block;
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
+  height: 46px;
+  width: auto;
+  max-width: min(220px, 52vw);
   object-fit: contain;
+  object-position: left center;
 }
-.sx-logo-word {
-  font-family: "Sora", "Plus Jakarta Sans", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 1.12rem;
-  letter-spacing: 0.04em;
-  color: #fff;
+.sx-logo-foot .sx-logo-img {
+  height: 52px;
+  max-width: min(260px, 80vw);
 }
-.sx-logo-word b {
-  font-weight: 700;
-  color: var(--sx-gold);
+@media (max-width: 920px) {
+  .sx-logo-img {
+    height: 42px;
+  }
+}
+@media (max-width: 520px) {
+  .sx-logo-img {
+    height: 38px;
+    max-width: min(170px, 44vw);
+  }
+  .sx-logo-foot .sx-logo-img {
+    height: 46px;
+    max-width: 70vw;
+  }
+}
+@media (max-width: 360px) {
+  .sx-logo-img {
+    height: 34px;
+    max-width: 40vw;
+  }
 }
 .sx-country {
   font-size: 0.78rem;
@@ -794,20 +813,17 @@ html.sx-loading .sx-loader.is-done {
   opacity: 0;
   visibility: hidden;
 }
-.sx-loader img {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+.sx-loader-logo {
+  display: block;
+  height: 84px;
+  width: auto;
+  max-width: min(320px, 78vw);
   object-fit: contain;
 }
-.sx-loader-word {
-  font-family: "Sora", "Plus Jakarta Sans", system-ui, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-.sx-loader-word b {
-  color: var(--sx-gold);
+@media (max-width: 520px) {
+  .sx-loader-logo {
+    height: 64px;
+  }
 }
 .sx-loader-bar {
   width: 140px;
@@ -1147,4 +1163,76 @@ html.sx-loading .sx-loader.is-done {
 .act-link:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* ── Hero image (clickable: opens the register modal or the register link) ── */
+.sx-hero-banner {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+}
+.sx-hero-img {
+  position: relative;
+  display: block;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -28px rgba(13, 10, 36, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.sx-hero-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  background: rgba(124, 58, 237, 0.06);
+}
+.sx-hero-img:hover,
+.sx-hero-img:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 30px 70px -26px rgba(13, 10, 36, 0.65);
+}
+.sx-hero-img-cta {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--sx-gold, #f5b324);
+  color: #1a1033;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+/* overlay link for pages whose hero already has a photo */
+.sx-hero-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: block;
+  border-radius: inherit;
+}
+.sx-hero-hit:focus-visible {
+  outline: 3px solid var(--sx-gold, #f5b324);
+  outline-offset: -3px;
+}
+@media (max-width: 520px) {
+  .sx-hero-banner {
+    margin-top: 20px;
+    padding: 0 14px;
+  }
+  .sx-hero-img {
+    border-radius: 16px;
+  }
+  .sx-hero-img-cta {
+    left: 10px;
+    bottom: 10px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
 }

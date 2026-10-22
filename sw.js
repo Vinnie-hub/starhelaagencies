@@ -5,7 +5,7 @@
  * automatically whenever a new version is deployed.
  */
 
-const CACHE_VERSION = "v6";
+const CACHE_VERSION = "v7";
 const PRECACHE = `starhela-precache-${CACHE_VERSION}`;
 const RUNTIME = `starhela-runtime-${CACHE_VERSION}`;
 
